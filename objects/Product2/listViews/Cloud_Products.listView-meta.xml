@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cloud_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>Deployment_Method__c</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Product_Type__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>TaaS</value>
+    </filters>
+    <label>Cloud Products</label>
+</ListView>

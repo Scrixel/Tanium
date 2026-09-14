@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_POC_Module_Values</name>
+        <label>Assign POC Module Values</label>
+        <locationX>1331</locationX>
+        <locationY>472</locationY>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_POC_Request.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.POC_Request__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_POC_Request.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.Module__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Through_Modules.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.UniqueId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_UniqueId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_to_Create_Collection</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_to_Create_Collection</name>
+        <label>Assign to Create Collection</label>
+        <locationX>1253</locationX>
+        <locationY>625</locationY>
+        <assignmentItems>
+            <assignToReference>POCModulestoCreate</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>newPOCModuleRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Through_Modules</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <name>Filter_Modules</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Filter Modules</label>
+        <locationX>808</locationX>
+        <locationY>424</locationY>
+        <assignNextValueToReference>currentItem_Filter_Modules</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Modules</collectionReference>
+        <conditionLogic>or</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_AutomateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_BenchmarkTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CertificateManagerTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ComplyTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CoreTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DeployTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DiscoverTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EnforceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EngageTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ImpactTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_IntegrityMonitorTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_InvestigateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_MapTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_PatchTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_PerformanceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ProvisionTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_RevealTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_SBOMTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ThreatResponseTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DeepInstinctTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ScreenSharingTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_IntuneTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_JumpGateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CoreforOperationalTechnologyTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EndpointManagementforMobileTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ExposureManagementforOperationalTechTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ExternalAttackSurfaceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CloudEntityTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Select_Modules_to_Link_to_POC_Request</targetReference>
+        </connector>
+    </collectionProcessors>
+    <description>8/31/26: Commenting out this resource on 8/31/26 as part of SS-13927. Asset should not be created as a POC Module. 
+7/29/26: SS-13737 addition of Cloud Entity module formula
+6/17/26: SS-13464 addition of of External Attack Surface module formula
+11/21/25: SS-12131 Create new formula for new Solutions (Core for Operational Technology, Exposure Management for Operational Technology, Endpoint Management for Mobile)
+10/28/25: SS-11967 Create new formula to include Jump Gate in Core Plus
+9/4/25: SS-11642 Update formula_IntuneTrue (Patch , Deploy &amp; Performance are selected, Intune is TRUE)
+8/19/25: SS-11552 Adding formula to add Intune Module to Endpoint Solutions
+4/24/25: SS-10645 Updating formulas to account for new AEM Solutions
+Screen Flow triggered by the Link Modules button on the POC Request object that will link the POC Request with Modules, creating POC Modules records.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_AutomateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Automate__c} = TRUE,&apos;Automate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_BenchmarkTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Risk__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE),
+&apos;Benchmark&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CertificateManagerTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Certificate_Manager__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE),
+&apos;Certificate Manager&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CloudEntityTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Tanium_EASM_Solution_Censys__c}= TRUE,
+&apos;Cloud Entity&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ComplyTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Comply__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Standard__c} = TRUE,
+{!Get_POC_Request.Exposure_Management_for_Operational_Tech__c} = TRUE), 
+&apos;Comply&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CoreforOperationalTechnologyTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Core_for_Operational_Technology__c} = TRUE, 
+&apos;Core for Operational Technology&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CoreTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Core__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE),
+&apos;Core&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DeepInstinctTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Deep_Instinct__c} = TRUE,&apos;Deep Instinct&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DeployTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Deploy__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Deploy&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DiscoverTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Discover__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE),
+&apos;Discover&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EndpointManagementforMobileTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE,
+&apos;Endpoint Management for Mobile&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EnforceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Enforce__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE),
+&apos;Enforce&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EngageTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Engage__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE),
+&apos;Engage&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExposureManagementforOperationalTechTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Exposure_Management_for_Operational_Tech__c} = TRUE, 
+&apos;Exposure Management for Operational Technology&apos;, Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExternalAttackSurfaceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Tanium_EASM_Solution_Censys__c}= TRUE,
+&apos;External Attack Surface&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ImpactTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Impact__c} = TRUE,
+{!Get_POC_Request.Incident_Response__c} = TRUE),
+&apos;Impact&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IntegrityMonitorTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Integrity_Monitor__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE),
+&apos;Integrity-Monitor&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IntuneTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE,
+AND({!Get_POC_Request.Deploy__c} = TRUE,
+{!Get_POC_Request.Patch__c} = TRUE,
+{!Get_POC_Request.Performance__c} = TRUE)),
+&apos;Tanium Connector for Microsoft Intune&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_InvestigateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Investigate__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE),
+&apos;Investigate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_JumpGateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Core_Plus__c} = TRUE,
+&apos;Jump Gate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_MapTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Map__c} = TRUE,&apos;Map&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PatchTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Patch__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Patch&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PerformanceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Performance__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Performance&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ProvisionTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Provision__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE),
+&apos;Provision&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_RevealTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Reveal__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE),
+&apos;Reveal&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SBOMTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Asset_SBOM__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Standard__c} = TRUE), 
+&apos;SBOM&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ScreenSharingTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Screen_Sharing__c} = TRUE,&apos;Screen Sharing&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ThreatResponseTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Threat_Response__c}= TRUE,
+{!Get_POC_Request.Incident_Response__c} = TRUE),
+&apos;Threat Response&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_UniqueId</name>
+        <dataType>String</dataType>
+        <expression>{!recordId}&amp;{!Loop_Through_Modules.Id}</expression>
+    </formulas>
+    <interviewLabel>POC Request - Link Modules - Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>POC Request - Link Modules - Screen Flow</label>
+    <loops>
+        <name>Loop_Through_Modules</name>
+        <label>Loop Through Modules</label>
+        <locationX>1156</locationX>
+        <locationY>476</locationY>
+        <collectionReference>ModulestoSelectFrom.selectedRows</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_POC_Module_Values</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_POC_Modules</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_POC_Modules</name>
+        <label>Create POC Modules</label>
+        <locationX>994</locationX>
+        <locationY>705</locationY>
+        <connector>
+            <targetReference>Update_POC_Request</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Message</targetReference>
+        </faultConnector>
+        <inputReference>POCModulestoCreate</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Modules</name>
+        <label>Get Modules</label>
+        <locationX>984</locationX>
+        <locationY>336</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Filter_Modules</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>formula_AutomateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_BenchmarkTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CertificateManagerTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CoreTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ComplyTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_DeployTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_DiscoverTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EnforceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EngageTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ImpactTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_IntegrityMonitorTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_InvestigateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_MapTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_PatchTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_PerformanceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ProvisionTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_RevealTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_SBOMTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ThreatResponseTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_IntuneTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_JumpGateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CoreforOperationalTechnologyTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ExposureManagementforOperationalTechTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EndpointManagementforMobileTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ExternalAttackSurfaceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CloudEntityTrue</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Module__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_POC_Modules</name>
+        <label>Get POC Modules</label>
+        <locationX>1149</locationX>
+        <locationY>871</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Product_Modules</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>POC_Request__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>POC_Module__c</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_POC_Request</name>
+        <label>Get POC Request</label>
+        <locationX>985</locationX>
+        <locationY>199</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Modules</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>POC_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_POC_Request</name>
+        <label>Update POC Request</label>
+        <locationX>996</locationX>
+        <locationY>871</locationY>
+        <connector>
+            <targetReference>Get_POC_Modules</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Modules_Linked_Manually__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>POC_Request__c</object>
+    </recordUpdates>
+    <screens>
+        <description>Can not create a new POC Module, for the same POC Request and Module record</description>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>762</locationX>
+        <locationY>703</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorMessageTest</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(240, 7, 7);&quot;&gt;You can not link POC Requests to the same Module twice. One or more of these Modules is linked to thisPOC Request already. Please select a different POC Request to link the Modules to. &lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Product_Modules</name>
+        <label>Product Modules</label>
+        <locationX>1326</locationX>
+        <locationY>871</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Product_Modules_Created</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>POC_Module__c</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Product Modules Created</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectionMode</name>
+                <value>
+                    <stringValue>NO_SELECTION</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>minRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>shouldDisplayLabel</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>Get_POC_Modules</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isShowSearchBar</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>maxRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-bd0e&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;POC Module&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Quantity__c&quot;,&quot;guid&quot;:&quot;column-c46b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Quantity&quot;,&quot;type&quot;:&quot;number&quot;},{&quot;apiName&quot;:&quot;POC_Request_Name__c&quot;,&quot;guid&quot;:&quot;column-c907&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;POC Request Name&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;Module_Name__c&quot;,&quot;guid&quot;:&quot;column-c5b8&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Module Name&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;CreatedDate&quot;,&quot;guid&quot;:&quot;column-1636&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Created Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Select_Modules_to_Link_to_POC_Request</name>
+        <label>Select Modules to Link to POC Request</label>
+        <locationX>986</locationX>
+        <locationY>476</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Loop_Through_Modules</targetReference>
+        </connector>
+        <fields>
+            <name>ModulestoSelectFrom</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>Module__c</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Modules to Select From</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectionMode</name>
+                <value>
+                    <stringValue>MULTI_SELECT</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>minRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>shouldDisplayLabel</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>Filter_Modules</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isShowSearchBar</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-e8b5&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Name&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Module Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;POC_Eligible__c&quot;,&quot;guid&quot;:&quot;column-1bd6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;POC Eligible&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Third_Party_Product__c&quot;,&quot;guid&quot;:&quot;column-7b86&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Third Party Product&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;Provisioner_Code__c&quot;,&quot;guid&quot;:&quot;column-b537&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Provisioner Code&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectedRows</name>
+                <value>
+                    <elementReference>Filter_Modules</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>859</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_POC_Request</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>currentItem_Filter_Modules</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Module__c</objectType>
+    </variables>
+    <variables>
+        <name>currentItemFromSourceCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Module__c</objectType>
+    </variables>
+    <variables>
+        <name>newPOCModuleRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>POC_Module__c</objectType>
+    </variables>
+    <variables>
+        <name>POCModulestoCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>POC_Module__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

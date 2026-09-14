@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Subscription Service-Now Outbound Msg</description>
+        <name>Subscription_Service_Now_Outbound_Msg</name>
+        <label>Subscription Service-Now Outbound Msg</label>
+        <locationX>934</locationX>
+        <locationY>634</locationY>
+        <actionName>SBQQ__Subscription__c.Subscription_Service_Now_Outbound_Msg</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>SBQQ__Subscription__c.Subscription_Service_Now_Outbound_Msg</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Update to Subscription record is eligible to be sent as outbound message</description>
+        <name>Is_Eligible_For_Outbound_Msg</name>
+        <label>Is Eligible For Outbound Msg?</label>
+        <locationX>1213</locationX>
+        <locationY>516</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Is_Eligible_For_Outbound_Msg</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__QuoteLine__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.SBQQ__QuoteLine__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__ProductName__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.SBQQ__ProductName__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Quantity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.SBQQ__Quantity__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Number__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.SBQQ__Number__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Status__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Subscription_Service_Now_Outbound_Msg</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is a New Subscription record OR an Updated Subscription record</description>
+        <name>Is_New_Subscription</name>
+        <label>Is New Subscription?</label>
+        <locationX>928</locationX>
+        <locationY>402</locationY>
+        <defaultConnector>
+            <targetReference>Is_Eligible_For_Outbound_Msg</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Is_New_Subscription</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNewSubscription</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Subscription_Service_Now_Outbound_Msg</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Sends outbound message to service now for new subscriptions and subscriptions that are updated where field updated is in the outbound message.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula Is New Subscription</description>
+        <name>formula_IsNewSubscription</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Subscription - After Save - On Create or Update - ServiceNow Outbound Msg {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Subscription - After Save - On Create or Update - ServiceNow Outbound Msg</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>810</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Is_New_Subscription</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>SBQQ__Subscription__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>SS-11545: Automate deactivation of Community Users when associated Account has moved to Former Customer with User Audit Trail udpates from CAB conversation on 1/14/26.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_UserAuditDetails</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!$Record.User_Audit_Trail__c}), &quot;User was deactivated on &quot; + TEXT({!$Flow.CurrentDate}) + &quot; from Scheduled Community User Deactivation flow&quot;, &quot;User was deactivated on &quot; + TEXT({!$Flow.CurrentDate}) + &quot; from Scheduled Community User Deactivation flow&quot; + &quot;; &quot; + {!$Record.User_Audit_Trail__c})</expression>
+    </formulas>
+    <interviewLabel>Scheduled Flow - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Scheduled Flow - Deactivate Community Users on Former Customer Accounts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_User_Fields</name>
+        <label>Update User Fields</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>IsActive</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPortalEnabled</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>User_Audit_Trail__c</field>
+            <value>
+                <elementReference>formula_UserAuditDetails</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_User_Fields</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Community_User_to_Deactivate__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>User</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2026-01-16</startDate>
+            <startTime>01:30:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

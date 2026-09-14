@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Newly_Created_Karlo</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Exclude_from_Addl_Disc_Calc__c</columns>
+    <columns>Product_Line__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>11/18/2025 12:00 AM</value>
+    </filters>
+    <label>Newly Created - Karlo</label>
+</ListView>

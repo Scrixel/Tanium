@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Add_Log_Entry_for_Failed_Create_of_POC_Modules</name>
+        <label>Add Log Entry for Failed Create of POC Modules</label>
+        <locationX>1130</locationX>
+        <locationY>1615</locationY>
+        <actionName>FlowRecordLogEntry</actionName>
+        <actionType>apex</actionType>
+        <dataTypeMappings>
+            <typeName>T__record</typeName>
+            <typeValue>POC_Request__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>flowName</name>
+            <value>
+                <stringValue>POC_Request_After_Insert</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>formula_ErrorMessage_CreatePOCModules</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>record</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>saveLog</name>
+        </inputParameters>
+        <nameSegment>FlowRecordLogEntry</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Generate_Licensing_Event</name>
+        <label>Generate Licensing Event</label>
+        <locationX>1454</locationX>
+        <locationY>1616</locationY>
+        <actionName>ServerDeploymentController</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>pocRequests</name>
+            <value>
+                <elementReference>Get_POC_Request</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ServerDeploymentController</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>POC_License_Created_Cloud</name>
+        <label>POC License Created - Cloud</label>
+        <locationX>1457</locationX>
+        <locationY>1135</locationY>
+        <actionName>POC_Request__c.POC_License_Created_Cloud</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>POC_Request__c.POC_License_Created_Cloud</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>POC_License_Created_On_Prem</name>
+        <label>POC License Created - On Prem</label>
+        <locationX>1212</locationX>
+        <locationY>940</locationY>
+        <actionName>POC_Request__c.POC_License_Created_On_Prem</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>POC_Request__c.POC_License_Created_On_Prem</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_POC_Module_Values</name>
+        <label>Assign POC Module Values</label>
+        <locationX>1446</locationX>
+        <locationY>1444</locationY>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_POC_Request.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.POC_Request__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_POC_Request.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.Module__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Through_Modules.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newPOCModuleRecord.UniqueId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_UniqueId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_to_Create_Collection</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_to_Create_Collection</name>
+        <label>Assign to Create Collection</label>
+        <locationX>1364</locationX>
+        <locationY>1299</locationY>
+        <assignmentItems>
+            <assignToReference>POCModulestoCreate</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>newPOCModuleRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Through_Modules</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_User_Lookups</name>
+        <label>Assign User Lookups</label>
+        <locationX>988</locationX>
+        <locationY>707</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Solution_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SolutionEngineer</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Solution_Engineer_RVP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SolutionEngieerRVP</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Customer_Success_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_CustomerSuccess</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Customer_Success_RVP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_CustomerSuccessRVP</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Contract_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_ContractOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Account_RVP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_AccountRVP</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Account_VP__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_AccountVP</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Cloned</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Nullify_Order_Details</name>
+        <label>Nullify Order Details</label>
+        <locationX>825</locationX>
+        <locationY>940</locationY>
+        <assignmentItems>
+            <assignToReference>Get_POC_Request.Approved__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_POC_Request.License_Delivered__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_POC_Request.Order_Ops_Comments__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_POC_Request.Processed_by__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>null</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_POC_Request.Processed_by__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_POC</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <name>Filter_Modules</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Filter Modules</label>
+        <locationX>1136</locationX>
+        <locationY>1440</locationY>
+        <assignNextValueToReference>currentItem_Filter_Modules</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Modules</collectionReference>
+        <conditionLogic>or</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_AutomateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_BenchmarkTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CertificateManagerTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ComplyTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CoreTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DeployTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DiscoverTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EnforceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EngageTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ImpactTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_IntegrityMonitorTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_InvestigateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_MapTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_PatchTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_PerformanceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ProvisionTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_RevealTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_SBOMTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ThreatResponseTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_DeepInstinctTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ScreenSharingTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_IntuneTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_JumpGateTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CoreforOperationalTechnologyTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ExposureManagementforOperationalTechTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_EndpointManagementforMobileTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_ExternalAttackSurfaceTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Modules.Name</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>formula_CloudEntityTrue</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Loop_Through_Modules</targetReference>
+        </connector>
+    </collectionProcessors>
+    <decisions>
+        <name>Is_Cloned</name>
+        <label>Is Cloned?</label>
+        <locationX>984</locationX>
+        <locationY>861</locationY>
+        <defaultConnector>
+            <targetReference>Update_POC</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsCloned</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer: On-Prem</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer: Tanium Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Nullify_Order_Details</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>License_ID_Changed</name>
+        <label>License ID Changed? On-Prem or Cloud?</label>
+        <locationX>1211</locationX>
+        <locationY>1147</locationY>
+        <defaultConnector>
+            <targetReference>Update_POC_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No - Update POC Request Fields</defaultConnectorLabel>
+        <rules>
+            <name>Changed_and_On_Prem</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reference_License_ID__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reference_License_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Server_Deployment_Infrastructure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On-Prem</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Modules_Linked_Manually__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>POC_License_Created_On_Prem</targetReference>
+            </connector>
+            <label>Changed and On-Prem</label>
+        </rules>
+        <rules>
+            <name>Changed_and_Cloud</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reference_License_ID__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reference_License_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Server_Deployment_Infrastructure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tanium as a Service</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Modules_Linked_Manually__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>POC_License_Created_Cloud</targetReference>
+            </connector>
+            <label>Changed and Cloud</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Moved_to_Fully_Approved_Prospect_Account</name>
+        <label>Moved to Fully Approved Prospect Account</label>
+        <locationX>989</locationX>
+        <locationY>1143</locationY>
+        <defaultConnector>
+            <targetReference>License_ID_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes1</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Approval_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fully Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account__r.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospect</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Tanium_Infrastructure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On-Prem</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Approval_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Modules</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>POC Request flow to run after Insert on create or update
+8/31/26: Commenting out this resource on 8/31/26 as part of SS-13927. Asset should not be created as a POC Module. 
+7/29/26: SS-13737 addition of Cloud Entity module formula
+6/17/26: SS-13464 addition of of External Attack Surface module formula
+05/04.26: Added the 3 missing modules to the Get and Filter Elements
+11/21/25: SS-12131 Create new formula for new Solutions (Core for Operational Technology, Exposure Management for Operational Technology, Endpoint Management for Mobile)
+10/28/25: SS-11967 Create new formula to include Jump Gate in Core Plus
+9/4/25: SS-11642 Update formula_IntuneTrue (Patch , Deploy &amp; Performance are selected, Intune is TRUE)
+8/26/25: SS-10482 Create Account Entitlements in POC Request Approval
+8/19/25: SS-11552 Updating formula for Intune and Endpoint AME Solutions (removed Account Entitlement Action)
+5/28/25: SS-10482 Create Account Entitlements in POC Request Approval
+4/25/25: SS-10645 Formula Updates for the AEM SKUs
+4/9/25: SS-10632 Simplifying the decision for populating the SE and CS from either the Account or Opp
+3/19/25: SS-10472 Convert POC Approvers Update Process Builder to Flow
+12/10/24: Added ISCHANGED check to Approval Stage update element
+11/08/24: Adding to decision for email to not send if the POC Modules were manually created. 
+10/13/24: Add element to update the POC Record on changes
+9/10/24: Automation added to generate licensing even through apex action</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_AccountRVP</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  OR(
+    CONTAINS(TEXT({!$Record.Account__r.Sub_Region__c}), &quot;LATAM&quot;),
+    CONTAINS(TEXT({!$Record.Account__r.Sub_Region__c}), &quot;Global MSP&quot;),
+    CONTAINS(TEXT({!$Record.Account__r.Sub_Region__c}), &quot;GSI&quot;)
+  ),
+  IF(
+    ISPICKVAL({!$Record.Account__r.Owner.Role_Category__c}, &quot;RVP&quot;),
+    {!$Record.Account__r.Owner.Id},
+    {!$Record.Account__r.Owner.Manager.Id}
+  ),
+  {!$Record.Account__r.Owner.Manager.Id}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_AccountVP</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})),
+NOT(ISBLANK({!$Record.Opportunity__r.AreaVP__c}))),
+{!$Record.Opportunity__r.AreaVP__c}, {!$Record.Account__r.Area_VP__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_AutomateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Automate__c} = TRUE,&apos;Automate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_BenchmarkTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Risk__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE),
+&apos;Benchmark&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CertificateManagerTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Certificate_Manager__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE),
+&apos;Certificate Manager&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CloudEntityTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Tanium_EASM_Solution_Censys__c}= TRUE,
+&apos;Cloud Entity&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ComplyTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Comply__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Standard__c} = TRUE,
+{!Get_POC_Request.Exposure_Management_for_Operational_Tech__c} = TRUE),  
+&apos;Comply&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ContractOwner</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})),
+NOT(ISBLANK({!$Record.Opportunity__r.Contract_Owner__c}))),
+{!$Record.Opportunity__r.Contract_Owner__c}, {!$Record.Account__r.Contract_Owner__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CoreforOperationalTechnologyTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Core_for_Operational_Technology__c} = TRUE, 
+&apos;Core for Operational Technology&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CoreTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Core__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE),
+&apos;Core&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CustomerSuccess</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})),
+NOT(ISBLANK({!$Record.Opportunity__r.CSM_Account_Owner__c}))),
+{!$Record.Opportunity__r.CSM_Account_Owner__c}, {!$Record.Account__r.CSM__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_CustomerSuccessRVP</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})),
+NOT(ISBLANK({!$Record.Opportunity__r.Customer_Success_RVP__c}))),
+{!$Record.Opportunity__r.Customer_Success_RVP__c}, {!$Record.Account__r.Customer_Success_RVP__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DeepInstinctTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Deep_Instinct__c} = TRUE,&apos;Deep Instinct&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DeployTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Deploy__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Deploy&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_DiscoverTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Discover__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE),
+&apos;Discover&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EndpointManagementforMobileTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE,
+&apos;Endpoint Management for Mobile&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EnforceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Enforce__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_for_Mobile__c} = TRUE),
+&apos;Enforce&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EngageTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Engage__c} = TRUE,
+{!Get_POC_Request.Core_Plus__c} = TRUE,
+{!Get_POC_Request.Core_Standard__c} = TRUE),
+&apos;Engage&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ErrorMessage_CreatePOCModules</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the Create POC Modules element&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExposureManagementforOperationalTechTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Exposure_Management_for_Operational_Tech__c} = TRUE, 
+&apos;Exposure Management for Operational Technology&apos;, Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExternalAttackSurfaceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Tanium_EASM_Solution_Censys__c}= TRUE,
+&apos;External Attack Surface&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ImpactTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Impact__c} = TRUE,
+{!Get_POC_Request.Incident_Response__c} = TRUE),
+&apos;Impact&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IntegrityMonitorTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Integrity_Monitor__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE),
+&apos;Integrity-Monitor&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IntuneTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE,
+AND({!Get_POC_Request.Deploy__c} = TRUE,
+{!Get_POC_Request.Patch__c} = TRUE,
+{!Get_POC_Request.Performance__c} = TRUE)),
+&apos;Tanium Connector for Microsoft Intune&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_InvestigateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Investigate__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE),
+&apos;Investigate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsCloned</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCLONE()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_JumpGateTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Core_Plus__c} = TRUE,
+&apos;Jump Gate&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_MapTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Map__c} = TRUE,&apos;Map&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PatchTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Patch__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Patch&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PerformanceTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Performance__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Standard__c} = TRUE),
+&apos;Performance&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ProvisionTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Provision__c} = TRUE,
+{!Get_POC_Request.Endpoint_Management_Plus__c} = TRUE),
+&apos;Provision&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_RevealTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Reveal__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE),
+&apos;Reveal&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SBOMTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Asset_SBOM__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Plus__c} = TRUE,
+{!Get_POC_Request.Risk_Compliance_Standard__c} = TRUE), 
+&apos;SBOM&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ScreenSharingTrue</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_POC_Request.Screen_Sharing__c} = TRUE,&apos;Screen Sharing&apos;,Null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SolutionEngieerRVP</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})), 
+NOT(ISBLANK({!$Record.Opportunity__r.Secondary_TAM_GS__c}))),
+{!$Record.Opportunity__r.Secondary_TAM_GS__c}, {!$Record.Account__r.Solution_Engineer_RVP__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SolutionEngineer</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(NOT(ISBLANK({!$Record.Opportunity__c})),
+NOT(ISBLAnk({!$Record.Opportunity__r.TAM_Sales_SME_Owner__c}))),
+{!$Record.Opportunity__r.TAM_Sales_SME_Owner__c}, {!$Record.Account__r.TAM_Sales_SME__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ThreatResponseTrue</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!Get_POC_Request.Threat_Response__c}= TRUE,
+{!Get_POC_Request.Incident_Response__c} = TRUE),
+&apos;Threat Response&apos;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_UniqueId</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Id}&amp;{!Loop_Through_Modules.Id}</expression>
+    </formulas>
+    <interviewLabel>POC Request - After Insert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>POC Request - After Insert</label>
+    <loops>
+        <name>Loop_Through_Modules</name>
+        <label>Loop Through Modules</label>
+        <locationX>1282</locationX>
+        <locationY>1440</locationY>
+        <collectionReference>Filter_Modules</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_POC_Module_Values</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_POC_Modules</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_POC_Modules</name>
+        <label>Create POC Modules</label>
+        <locationX>1285</locationX>
+        <locationY>1616</locationY>
+        <connector>
+            <targetReference>Generate_Licensing_Event</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Add_Log_Entry_for_Failed_Create_of_POC_Modules</targetReference>
+        </faultConnector>
+        <inputReference>POCModulestoCreate</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Modules</name>
+        <label>Get Modules</label>
+        <locationX>994</locationX>
+        <locationY>1439</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Filter_Modules</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>formula_AutomateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_BenchmarkTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CertificateManagerTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CoreTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ComplyTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_DeployTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_DiscoverTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EnforceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EngageTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ImpactTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_IntegrityMonitorTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_InvestigateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_MapTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_PatchTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_PerformanceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ProvisionTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_RevealTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_SBOMTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ThreatResponseTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_IntuneTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_JumpGateTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CoreforOperationalTechnologyTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ExposureManagementforOperationalTechTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_EndpointManagementforMobileTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_ExternalAttackSurfaceTrue</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CloudEntityTrue</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Module__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_POC_Request</name>
+        <label>Get POC Request</label>
+        <locationX>989</locationX>
+        <locationY>561</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_User_Lookups</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>POC_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_POC</name>
+        <label>Update POC</label>
+        <locationX>989</locationX>
+        <locationY>1015</locationY>
+        <connector>
+            <targetReference>Moved_to_Fully_Approved_Prospect_Account</targetReference>
+        </connector>
+        <inputReference>Get_POC_Request</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_POC_Record</name>
+        <label>Update POC Record</label>
+        <locationX>1136</locationX>
+        <locationY>1288</locationY>
+        <inputAssignments>
+            <field>Server_Hostnames__c</field>
+            <value>
+                <elementReference>$Record.Server_Deployment__r.Server_Hostnames__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>865</locationX>
+        <locationY>210</locationY>
+        <connector>
+            <targetReference>Get_POC_Request</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>POC_Request__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>currentItem_Filter_Modules</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Module__c</objectType>
+    </variables>
+    <variables>
+        <name>currentItemFromSourceCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Module__c</objectType>
+    </variables>
+    <variables>
+        <name>newPOCModuleRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>POC_Module__c</objectType>
+    </variables>
+    <variables>
+        <name>POCModulestoCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>POC_Module__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Log_Entry_Action_Required</name>
+        <label>Log Entry - Action Required</label>
+        <locationX>883</locationX>
+        <locationY>928</locationY>
+        <actionName>FlowLogEntry</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>flowName</name>
+            <value>
+                <stringValue>OppReg_ACCT_MGR_PDD_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>formula_ActionRequiredLogEntryMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>saveLog</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>tagsString</name>
+            <value>
+                <stringValue>Email Action Alert</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>FlowLogEntry</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Log_Entry_Expiry</name>
+        <label>Log Entry - Expiry</label>
+        <locationX>534</locationX>
+        <locationY>710</locationY>
+        <actionName>FlowLogEntry</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>flowName</name>
+            <value>
+                <stringValue>OppReg_ACCT_MGR_PDD_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>formula_ExpiryLogEntryMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>saveLog</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>tagsString</name>
+            <value>
+                <stringValue>Email Action Alert</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>FlowLogEntry</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Log_Entry_Extension_Pending</name>
+        <label>Log Entry - Extension Pending</label>
+        <locationX>496</locationX>
+        <locationY>479</locationY>
+        <actionName>FlowLogEntry</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>flowName</name>
+            <value>
+                <stringValue>OppReg_ACCT_MGR_PDD_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>formula_ExtensionLogEntryMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>saveLog</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>tagsString</name>
+            <value>
+                <stringValue>Email Action Alert</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>FlowLogEntry</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Log_Entry_Pre_Expiry</name>
+        <label>Log Entry - Pre-Expiry</label>
+        <locationX>1287</locationX>
+        <locationY>570</locationY>
+        <actionName>FlowLogEntry</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>flowName</name>
+            <value>
+                <stringValue>OppReg_ACCT_MGR_PDD_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>formula_PreExpiryLogEntryMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>saveLog</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>tagsString</name>
+            <value>
+                <stringValue>Email Action Alert</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>FlowLogEntry</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Template Name-	OppReg PDD Expiry</description>
+        <name>Send_Email_Action_Required</name>
+        <label>Send Email - Action Required</label>
+        <locationX>886</locationX>
+        <locationY>779</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Log_Entry_Action_Required</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>formula_EmailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>ACTION REQUIRED: New OppReg Request - {!$Record.Account__r.Name} - {!$Record.wi_WebinfinityId__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>template_ActionRequired</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Template Name	OppReg PDD Expiry
+https://tanium--build.lightning.force.com/lightning/setup/CommunicationTemplatesEmail/page?address=%2F00X0e0000051IQa</description>
+        <name>Send_Email_Expiry</name>
+        <label>Send Email - Expiry</label>
+        <locationX>680</locationX>
+        <locationY>710</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Log_Entry_Expiry</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>formula_EmailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>ACTION REQUIRED: OppReg Expired -{!$Record.Account__r.Name} - {!$Record.wi_WebinfinityId__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>template_Expiry</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Email Template Name-	OppReg PDD Extension Request</description>
+        <name>Send_Email_Extension_Pending</name>
+        <label>Send Email - Extension Pending</label>
+        <locationX>647</locationX>
+        <locationY>479</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Log_Entry_Extension_Pending</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>formula_EmailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>ACTION REQUIRED: OppReg Extension Request - {!$Record.wi_Associated_Partner__r.Name} - {!$Record.wi_WebinfinityId__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>template_ExtensionRequest</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Template Unique Name	OppReg_OppReg_PDD_Pre_Expiry:
+https://tanium--build.lightning.force.com/lightning/setup/CommunicationTemplatesEmail/page?address=%2F00X0e0000051IQcEAM%3FretURL%3D%252Fsetup%252Fhome</description>
+        <name>Send_Email_Pre_Expiry</name>
+        <label>Send Email - Pre-Expiry</label>
+        <locationX>1135</locationX>
+        <locationY>570</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Log_Entry_Pre_Expiry</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>formula_EmailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>ACTION REQUIRED: OppReg Expiring in 10 Days - {!$Record.Account__r.Name}- {!$Record.wi_WebinfinityId__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>template_PreExpiry</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>SS:5105
+&apos;Failed Renewal&apos;=  110,
+Prospecting&apos;=  1,
+Failed&apos; = 10,
+&apos;CLOSED WON&apos;= 9,</description>
+        <name>Valid_Mapped_Opportunity</name>
+        <label>Valid Mapped Opportunity?</label>
+        <locationX>871</locationX>
+        <locationY>371</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Valid_Mapped_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mapped_Opportunity__r.StageNumber__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>10.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Mapped_Opportunity__r.StageNumber__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Mapped_Opportunity__r.StageNumber__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>110.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.ProfileId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.API_Only_Integrartion_Profile_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.ProfileId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.API_Only_Integration_Admin_Profile_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Mapped_Opportunity__r.StageNumber__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Which_notification</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Which_notification</name>
+        <label>Which notification?</label>
+        <locationX>877</locationX>
+        <locationY>565</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Notification_Expired</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.or_Opp_Reg_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.or_Opportunity_Registration_Expiry_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>formula_Today</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_EmailRecipients</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Expiry</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Expired</label>
+        </rules>
+        <rules>
+            <name>Notification_ExtensionPending</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.or_Opp_Reg_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.or_Opp_Reg_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Extension Pending</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_EmailRecipients</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Extension_Pending</targetReference>
+            </connector>
+            <label>Extension Pending</label>
+        </rules>
+        <rules>
+            <name>Notification_ActionRequired</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.or_Opp_Reg_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_EmailRecipients</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Action_Required</targetReference>
+            </connector>
+            <label>Action Required</label>
+        </rules>
+        <rules>
+            <name>Notification_Pre_Expiry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PreExpiry_Email_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_EmailRecipients</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Pre_Expiry</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Pre-Expiry</label>
+        </rules>
+    </decisions>
+    <description>7/9/26 - SS-13266 - Notify Primary PFS Territory Owner on Deal Registration Status Changes. 
+6/15/26  : SS-13259  - Removed Owner:User.Level_2__c and Owner:User.Level_3__c reference in the Flow.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_ActionRequiredLogEntryMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the &quot;OppReg_Acct_MGR_Expiry_Email_Notification11&quot; Email element&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Removed reference of Level 2 and Level 3 as part of field deprecation in SS-13259. 
+Email notifications should always be sent to ChannelOps@tanium.com, Owner, and the Primary PFS Territory Owner on the Deal Registration record. This formula update also handles cases where the owner fields are blank. SS-13266</description>
+        <name>formula_EmailRecipients</name>
+        <dataType>String</dataType>
+        <expression>&apos;ChannelOps@tanium.com&apos; &amp;
+IF(
+    NOT(ISBLANK({!$Record.Owner:User.Email})), 
+    &apos;,&apos; &amp; {!$Record.Owner:User.Email},
+    &apos;&apos;
+) &amp;
+IF(
+    NOT(ISBLANK({!$Record.Primary_PFS_Territory_Owner__r.Email})), 
+    &apos;,&apos; &amp; {!$Record.Primary_PFS_Territory_Owner__r.Email},
+    &apos;&apos;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExpiryLogEntryMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the &quot;OppReg_Acct_MGR_Expiry_Email_Notification111&quot; Email element&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ExtensionLogEntryMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the &quot;ACCT_MGR_Extension_Pending_Non_AVP_RVP&quot; Email element&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PreExpiryLogEntryMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the &quot;X4_OppReg_OppReg_PDD_Pre_Expiry&quot; Email element&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_RecordLink</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.SalesforceURL}&amp;&quot;/&quot;&amp;{!$Record.Id}</expression>
+    </formulas>
+    <formulas>
+        <name>formula_Today</name>
+        <dataType>Date</dataType>
+        <expression>Today()</expression>
+    </formulas>
+    <interviewLabel>Deal Registration - After Save - Email Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Deal Registration - After Save - Email Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>752</locationX>
+        <locationY>46</locationY>
+        <connector>
+            <targetReference>Valid_Mapped_Opportunity</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Deal_Registration__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>template_ActionRequired</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,&lt;br&gt;
+&lt;br&gt;
+You received a new Opportunity Registration.&lt;br&gt;
+ &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Record Link:&lt;/strong&gt; {!formula_RecordLink}&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Customer Name:&lt;/strong&gt; {!$Record.Account__r.Name}&lt;br&gt;
+&lt;strong&gt;Partner Name: &lt;/strong&gt;{!$Record.wi_Associated_Partner__r.Name}&lt;br&gt;
+&lt;strong&gt;Account Owner&lt;/strong&gt;: {!$Record.Account__r.Owner.Full_Name__c}&lt;br&gt;
+&lt;br&gt;
+&lt;p class=&quot;ql-indent-1&quot;&gt;1.Review the OppReg.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;2.Take one of the below actions, then click “Save”:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Select “Create Opportunity upon Approval?” if an Opportunity does not already exist; or&lt;/li&gt;&lt;li&gt;Map an existing Opportunity&lt;/li&gt;&lt;/ul&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;
+&lt;p class=&quot;ql-indent-1&quot;&gt;3.Click &quot;Submit for Approval.&quot;.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;
+&lt;br&gt;
+Please see the &lt;a href=&quot;https://tanium.sharepoint.com/sites/GTMHub-Tanium%20Partner%20Advantage/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops%2FOpportunity%20Registration%20Channel%20Enablement%20Guide%2Epdf&amp;amp;parent=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;OppReg Process Guide &lt;/a&gt; for additional Information.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;
+
+Thanks,&lt;br&gt;
+Tanium Partner Advantage Team&lt;br&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Email Template Name	OppReg PDD Expiry	
+Template Unique Name	OppReg_PDD_Expiry
+https://tanium--build.lightning.force.com/lightning/setup/CommunicationTemplatesEmail/page?address=%2F00X0e0000051IQa</description>
+        <name>template_Expiry</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,&lt;br&gt;
+&lt;br&gt;
+The below OppReg has expired.&lt;br&gt;
+ &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Record Link:&lt;/strong&gt; {!formula_RecordLink}&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Customer Name:&lt;/strong&gt; {!$Record.Account__r.Name}&lt;br&gt;
+&lt;strong&gt;Partner Name: &lt;/strong&gt;{!$Record.wi_Associated_Partner__r.Name}&lt;br&gt;
+&lt;strong&gt;Opportunity Name&lt;/strong&gt;: {!$Record.Mapped_Opportunity__r.Name}&lt;br&gt;
+&lt;strong&gt;Account Owner&lt;/strong&gt;: {!$Record.Account__r.Owner.Full_Name__c} &lt;br&gt;
+&lt;br&gt;
+Please see the &lt;a href=&quot;https://tanium.sharepoint.com/sites/GTMHub-Tanium%20Partner%20Advantage/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops%2FOpportunity%20Registration%20Channel%20Enablement%20Guide%2Epdf&amp;amp;parent=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;OppReg Process Guide &lt;/a&gt;for details on requesting an extension.&lt;br&gt;
+&lt;br&gt;
+Thanks,&lt;br&gt;
+
+Tanium Partner Advantage Team&lt;br&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>template_ExtensionRequest</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,&lt;br&gt;
+&lt;br&gt;
+You received an OppReg Extension Request&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Customer Name:&lt;/strong&gt; {!$Record.Account__r.Name}&lt;br&gt;
+&lt;strong&gt;Partner Name: &lt;/strong&gt;{!$Record.wi_Associated_Partner__r.Name}&lt;br&gt;
+&lt;strong&gt;Opportunity Name&lt;/strong&gt;: {!$Record.Mapped_Opportunity__r.Name}&lt;br&gt;
+&lt;strong&gt;Account Owner&lt;/strong&gt;: {!$Record.Account__r.Owner.Full_Name__c} &lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Please navigate to the below OppReg and Click &quot;Submit for Approval&quot;.&lt;/strong&gt;
+&lt;br&gt;
+&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Record Link:&lt;/strong&gt; {!formula_RecordLink}&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+Thanks,&lt;br&gt;
+Tanium Partner Advantage Team&lt;br&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>template_PreExpiry</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,&lt;br&gt;
+&lt;br&gt;
+The below OppReg will expire in 10 days.&lt;br&gt;
+ &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Record Link:&lt;/strong&gt; {!formula_RecordLink}&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Customer Name:&lt;/strong&gt; {!$Record.Account__r.Name}&lt;br&gt;
+&lt;strong&gt;Partner Name: &lt;/strong&gt;{!$Record.wi_Associated_Partner__r.Name}&lt;br&gt;
+&lt;strong&gt;Opportunity Name&lt;/strong&gt;: {!$Record.Mapped_Opportunity__r.Name}&lt;br&gt;
+&lt;strong&gt;Account Owner&lt;/strong&gt;: {!$Record.Account__r.Owner.Full_Name__c} &lt;br&gt;
+&lt;br&gt;
+Please see the &lt;a href=&quot;https://tanium.sharepoint.com/sites/GTMHub-Tanium%20Partner%20Advantage/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops%2FOpportunity%20Registration%20Channel%20Enablement%20Guide%2Epdf&amp;amp;parent=%2Fsites%2FGTMHub%2DTanium%20Partner%20Advantage%2FShared%20Documents%2FPartner%20Ops&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;OppReg Process&lt;/a&gt; Guide  for details on requesting an extension.&lt;br&gt;
+&lt;br&gt;
+Thanks,&lt;br&gt;
+Tanium Partner Advantage Team</text>
+    </textTemplates>
+</Flow>
