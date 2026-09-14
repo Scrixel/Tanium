@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__IsShippingAddressSameAsBilling__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates if Shipping Address is the same as Billing Address.</description>
+    <inlineHelpText>Indicates if Shipping Address is the same as Billing Address.</inlineHelpText>
+    <label>Same as Billing Address</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

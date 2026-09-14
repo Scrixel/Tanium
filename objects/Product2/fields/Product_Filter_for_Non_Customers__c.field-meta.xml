@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Filter_for_Non_Customers__c</fullName>
+    <description>Reference in Product Search.</description>
+    <formula>IF(
+OR(
+AEM_Solution__c ,
+ISPICKVAL( Product_Line__c ,&quot;OT - Core&quot;), 
+ISPICKVAL( Product_Line__c ,&quot;OT - Exposure Management&quot;), 
+ISPICKVAL( Product_Line__c ,&quot;Mobile - Endpoint Management&quot;), 
+ISPICKVAL( Product_Group__c , &quot;Third Party Software&quot;),
+ISPICKVAL( Product_Type__c , &quot;Training&quot;),
+ISPICKVAL( Product_Type__c , &quot;Support&quot;),
+ISPICKVAL( Product_Type__c , &quot;Conference&quot;),
+ISPICKVAL( Product_Type__c , &quot;Hardware&quot;),
+ISPICKVAL( Product_Type__c , &quot;Perpetual&quot;)
+),True,
+False
+)</formula>
+    <label>Product Filter for Non-Customers</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

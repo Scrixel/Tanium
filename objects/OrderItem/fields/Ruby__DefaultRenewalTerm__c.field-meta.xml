@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__DefaultRenewalTerm__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Renewal Term determines how long the subscription generated from the order product is going to be renewed.  The value defaults from the Default Renewal Term of the product or service.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Renewal Term determines how long the subscription generated from the order product is going to be renewed.  The value defaults from the Default Renewal Term of the product or service.</inlineHelpText>
+    <label>Renewal Term</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>11</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

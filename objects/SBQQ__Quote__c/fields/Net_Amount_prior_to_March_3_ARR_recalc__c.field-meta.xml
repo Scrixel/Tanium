@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_Amount_prior_to_March_3_ARR_recalc__c</fullName>
+    <defaultValue>(0)</defaultValue>
+    <description>A temporary field to be used for data analysis following the recalculation of quotes for ARR purposes on March 3, 2023.
+
+This field can be deleted after 14 days (March 17, 2023)</description>
+    <inlineHelpText>The value in this field is the Net Amount of the quote prior running the ARR recalculation on March 3, 2023</inlineHelpText>
+    <label>Net Amount prior to March 3 ARR recalc</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

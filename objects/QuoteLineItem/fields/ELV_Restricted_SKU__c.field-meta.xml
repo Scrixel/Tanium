@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Restricted_SKU__c</fullName>
+    <formula>Product2.Restricted_SKU__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Restricted SKU</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

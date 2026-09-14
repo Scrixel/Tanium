@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reveal_Products_On_the_Quote__c</fullName>
+    <description>This field is populated via Dec Rollup For Reveal Definition on the Template</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated via Dec Rollup For Reveal Definition on the Template</inlineHelpText>
+    <label>Reveal Products On the Quote</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

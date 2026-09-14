@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Fixed_Pricing__c</fullName>
+    <inlineHelpText>Max percent increase upon next renewal. Annualized Unit Sales Price for the Products may be increased by no more than ___%, year-over-year, provided that Customer’s purchase is in the same or greater quantities</inlineHelpText>
+    <label>Next Renewal Price Cap %</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

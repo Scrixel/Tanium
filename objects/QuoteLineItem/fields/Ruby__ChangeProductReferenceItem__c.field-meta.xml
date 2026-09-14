@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__ChangeProductReferenceItem__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The quote line item this product change item is associated with</description>
+    <label>Change Product Reference Item</label>
+    <referenceTo>QuoteLineItem</referenceTo>
+    <relationshipLabel>Change Product Reference Item</relationshipLabel>
+    <relationshipName>ChangeProductReferenceItem</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

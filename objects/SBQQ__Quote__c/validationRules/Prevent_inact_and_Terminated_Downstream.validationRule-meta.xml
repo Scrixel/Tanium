@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_inact_and_Terminated_Downstream</fullName>
+    <active>true</active>
+    <description>Limit users from Quoting inactive or terminated Dowstream Partners.</description>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Downstream_Reseller__r.Partner_Maturity__c, &apos;Inactive&apos;),
+        ISPICKVAL(Downstream_Reseller__r.Partner_Maturity__c, &apos;Terminated&apos;),
+        Downstream_Reseller__r.Active_Account__c = FALSE
+    ),
+    NOT(ISPICKVAL(SBQQ__Opportunity2__r.StageName, &apos;CLOSED WON&apos;)),
+    NOT(ISCLONE()),
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Downstream_Reseller__c</errorDisplayField>
+    <errorMessage>The “Downstream Partner” selected is not an authorized Tanium Partner. Please reach out to PartnerOnboarding@tanium.com to verify what is needed to allow this partner to quote.</errorMessage>
+</ValidationRule>

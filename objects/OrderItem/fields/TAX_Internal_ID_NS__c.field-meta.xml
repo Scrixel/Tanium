@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAX_Internal_ID_NS__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Tax_Code_NS__c = &quot;AVATAX&quot;, &quot;432&quot;,
+IF(Tax_Code_NS__c= &quot;CA-Zero&quot;, &quot;18&quot;,
+IF(Tax_Code_NS__c = &quot;AVATAX-CAN&quot;, &quot;4519&quot;,
+IF(Tax_Code_NS__c= &quot;VAT:UNDEF-MT&quot;, &quot;111&quot;,
+IF(Tax_Code_NS__c= &quot;VAT:UNDEF-NL&quot;, &quot;439&quot;,
+IF(Tax_Code_NS__c= &quot;VAT:S-GB&quot;, &quot;315&quot;,
+&quot;327&quot;))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Do not delete, Mapped in Boomi Process</inlineHelpText>
+    <label>TAX Internal ID NS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

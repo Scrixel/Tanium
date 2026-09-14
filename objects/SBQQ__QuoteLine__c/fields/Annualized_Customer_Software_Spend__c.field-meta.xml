@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annualized_Customer_Software_Spend__c</fullName>
+    <description>Annualized Software Spend excluding Third Party Software</description>
+    <formula>IF(
+  TEXT(SBQQ__Product__r.Product_Group__c) = &quot;Software&quot;,
+  IF(
+    ISBLANK(SBQQ__ProrateMultiplier__c) || SBQQ__ProrateMultiplier__c = 1,
+    SBQQ__NetTotal__c / SBQQ__SubscriptionTerm__c * 12,
+    SBQQ__NetTotal__c / (SBQQ__SubscriptionTerm__c * SBQQ__ProrateMultiplier__c) * 12
+  ),
+  0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Annualized Customer Software Spend</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

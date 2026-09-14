@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__Credit_Pool_Needs_A_Credit_Conversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>( ISPICKVAL( Ruby__PriceModel__c ,&apos;Usage&apos;)  ||  ISPICKVAL( Ruby__PriceModel__c ,&apos;PAYG&apos;)  )  
+        &amp;&amp; 
+        (
+          ( NOT(ISNULL( Ruby__CreditPoolId__c )) &amp;&amp; NOT(ISBLANK( Ruby__CreditPoolId__c )) &amp;&amp; ISPICKVAL( Ruby__CreditPoolId__r.Ruby__CreditType__r.Ruby__Category__c, &apos;Credit&apos; ) &amp;&amp; (ISNULL( Ruby__CreditConversionId__c ) || (ISBLANK( Ruby__CreditConversionId__c ))))
+          ||
+          ( NOT(ISNULL( Ruby__OriginalProduct__c )) &amp;&amp; NOT(ISNULL(Ruby__OriginalProduct__c)) &amp;&amp; ISPICKVAL( Ruby__OriginalProduct__r.Ruby__CreditPoolId__r.Ruby__CreditType__r.Ruby__Category__c, &apos;Credit&apos; ) &amp;&amp; (ISNULL(Ruby__OriginalProduct__r.Ruby__CreditConversionId__c) || ISBLANK(Ruby__OriginalProduct__r.Ruby__CreditConversionId__c)))
+        
+        )</errorConditionFormula>
+    <errorMessage>Credit Pool must have a Credit Conversion.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_NonDiscountable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marks the quote line as non-discountable. Used by product rule #17 to block partner discretionary discounts on non-discountable products.</description>
+    <inlineHelpText>If checked, this product cannot receive a partner discretionary discount.</inlineHelpText>
+    <label>Non-Discountable</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

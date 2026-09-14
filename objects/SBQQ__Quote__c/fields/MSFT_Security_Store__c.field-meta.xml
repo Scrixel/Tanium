@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSFT_Security_Store__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicate deals processed through the Microsoft Security Store. SS-12244</description>
+    <label>MSFT Security Store</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

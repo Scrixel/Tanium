@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Type_On_the_Quote__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When Checked it adds Type Column on the Quote Table. 
+This field is unchecked for New, Add-on, Renewal and Upsell opportunities.</inlineHelpText>
+    <label>Add Type On the Quote</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

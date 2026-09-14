@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__ProductRelationship__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The product relationship that creates this quote line item</description>
+    <label>Product Relationship</label>
+    <referenceTo>Ruby__ProductRelationship__c</referenceTo>
+    <relationshipLabel>Quote Line Items</relationshipLabel>
+    <relationshipName>QuoteLineItems</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

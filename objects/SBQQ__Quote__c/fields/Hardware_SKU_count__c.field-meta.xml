@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hardware_SKU_count__c</fullName>
+    <description>03/02/2021 Didnot find how this field is populated. 
+Reports show this field is not been populated on Quotes. Ok to delete
+Creating an alternate field &quot;Hardware Product Count&quot;.</description>
+    <externalId>false</externalId>
+    <formula>ApplianceSKUs__c - HardwareSupport__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DEPRECATED - Hardware SKU count TBD</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

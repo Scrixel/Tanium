@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Marketplace_Day_1_ARR_Impact__c</fullName>
+    <description>TNCI-139 / ELV-CPQ-036. REVERTED 2026-08-20 to the original CPQ-equivalent arithmetic. A /100 divisor was added on 2026-08-19 in the belief that a Percent field is read by a formula as its displayed number; that belief is wrong. Salesforce evaluates a Percent field in a formula as a fraction, proven in this org by Opportunity.Incoming_ARR_after_Split__c, where 1,862,230.75 * Split_Percent__c of 50 yields 931,115.38. The divisor therefore understated the impact by 100x and has been removed. This field now matches CPQ Marketplace_Day_1_ARR_Impact__c verbatim, as it did originally.</description>
+    <formula>ELV_Day_1_ARR_Unadjusted_Rollup__c * ELV_Marketplace_ARR_Impact_Percent__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marketplace Sales ARR Impact</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

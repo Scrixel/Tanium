@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_Burst_Term_Rollup__c</fullName>
+    <description>Term of Products on Quote that have Promo Code &quot;Trial&quot;</description>
+    <inlineHelpText>Term of Products on Quote that have Promo Code &quot;Trial&quot;</inlineHelpText>
+    <label>Max Burst Term Rollup</label>
+    <summarizedField>SBQQ__QuoteLine__c.Line_Item_Term__c</summarizedField>
+    <summaryFilterItems>
+        <field>SBQQ__QuoteLine__c.Product_Promotion__c</field>
+        <operation>equals</operation>
+        <value>a0V7V00000J6Fnt</value>
+    </summaryFilterItems>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

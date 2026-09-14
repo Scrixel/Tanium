@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hardware_QL_and_Asset_Lookups_Both_Exist</fullName>
+    <active>true</active>
+    <description>Prevent the Quote Line from having both the Supported Hardware (Quote Line) and Supported Hardware (Asset) lookups populated</description>
+    <errorConditionFormula>AND(
+    NOT($Permission.DisableValidationRules),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+    $Profile.Name &lt;&gt; &quot;Tanium System Administrator&quot;,
+    NOT(ISBLANK(ELV_Supported_Hardware_Line__c)),
+    NOT(ISBLANK(ELV_Supported_Hardware_Line_Asset__c))
+)</errorConditionFormula>
+    <errorDisplayField>ELV_Supported_Hardware_Line__c</errorDisplayField>
+    <errorMessage>Populate either Supported Hardware Line or Supported Hardware Line Asset, not both.</errorMessage>
+</ValidationRule>

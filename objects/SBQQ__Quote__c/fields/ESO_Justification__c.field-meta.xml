@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Justification__c</fullName>
+    <description>Ref: INC0130413</description>
+    <inlineHelpText>What specifically will satisfy the Customer’s objectives? E.g. This customer is willing to pay for a resource because they need to assure that they can run their vulnerability scanning and patch management workflow using Tanium</inlineHelpText>
+    <label>ESO Justification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

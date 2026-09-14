@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Uplift_Amount__c</fullName>
+    <formula>/*Non Renewal Quote Line will be blank*/
+IF( 
+ ISBLANK( SBQQ__RenewedSubscription__c ),Null, 
+
+/* When Prior discount is greater than programmatic discount or Tanium Partner Discount is not blank */
+ IF( AND( SBQQ__RenewedSubscription__r.SBQQ__PartnerDiscount__c &gt; Tanium_Partner_Discount__r.Total_Discount__c,   NOT(ISBLANK(Tanium_Partner_Discount__c))), 
+
+(( SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c )*
+
+(( $CustomMetadata.Uplift_Approval__mdt.Deal_Desk_Approval.Adjusted_Approval_Percent__c ) + 
+(SBQQ__RenewedSubscription__r.SBQQ__PartnerDiscount__c  -  Tanium_Partner_Discount__r.Total_Discount__c )) + 
+
+SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c )*SBQQ__EffectiveQuantity__c, 
+
+/* Default calculation Last years Net Price plus adjusted uplift percent */
+((SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c ) *
+ ( $CustomMetadata.Uplift_Approval__mdt.Deal_Desk_Approval.Adjusted_Approval_Percent__c ) 
++ (SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c)) * SBQQ__EffectiveQuantity__c  
+
+)
+)</formula>
+    <label>Renewal Uplift Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Has_Tanium_Pricing_Schedule__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-139 / ELV-CPQ-036. Stored line-local indicator that ELV_Tanium_Pricing_Schedule__c is populated. Maintained by ELV_QuoteLineTriggerUtility and historical backfill so ARR formulas remain deterministic and roll-up compatible.</description>
+    <inlineHelpText>System-maintained indicator that a Tanium Pricing Schedule is attached.</inlineHelpText>
+    <label>Has Tanium Pricing Schedule</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

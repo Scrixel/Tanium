@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__ListPrice__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The list price of the line item, determined by the Price Book Entry.
+
+Please note that Salesforce also populates its own standard field ‘List Price (ListPrice)’ as the list price of the line item.</description>
+    <inlineHelpText>The list price of the line item, determined by the Price Book Entry.
+
+Please note that Salesforce also populates its own standard field ‘List Price (ListPrice)’ as the list price of the line item.</inlineHelpText>
+    <label>List Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

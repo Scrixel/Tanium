@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__AnnualContractValue__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Annual Contract Value (ACV) is the annual average of Total Contract Value (TCV)</description>
+    <formula>NULLVALUE( Ruby__OrderMetricsExtension__r.Ruby__ACV__c , IF(Ruby__SubscriptionTerm__c == 0, 0, IF(ISPICKVAL(Ruby__SubscriptionTermDimension__c, &apos;Year&apos;), Ruby__TCV__c/Ruby__SubscriptionTerm__c , Ruby__TCV__c/(Ruby__SubscriptionTerm__c/12))))</formula>
+    <inlineHelpText>Annual Contract Value (ACV) is the annual average of Total Contract Value (TCV)</inlineHelpText>
+    <label>ACV</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

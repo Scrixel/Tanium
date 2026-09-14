@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_Products_Term__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>&quot;Free Product Period&quot; is the term the &quot;Trial Product&quot; is offered and is stated as the number of months from the order expiration date that the &quot;Free Products&quot; will deploy.</inlineHelpText>
+    <label>Free Products Term</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

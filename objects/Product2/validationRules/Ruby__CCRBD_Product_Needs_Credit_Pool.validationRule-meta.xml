@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__CCRBD_Product_Needs_Credit_Pool</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Ruby__PriceModel__c , &apos;CCRBD&apos;)  
+      &amp;&amp;  
+      ( 
+        ( (ISNULL(Ruby__OriginalProduct__c) || ISBLANK( Ruby__OriginalProduct__c )) &amp;&amp; (ISNULL( Ruby__CreditPoolId__c ) || ISBLANK(Ruby__CreditPoolId__c) ) )  
+        || 
+        ( NOT(ISNULL( Ruby__OriginalProduct__c ))  &amp;&amp;  NOT( ISBLANK( Ruby__OriginalProduct__c ) )  &amp;&amp;  (  ISNULL( Ruby__OriginalProduct__r.Ruby__CreditPoolId__c )   ||  ISBLANK( Ruby__OriginalProduct__r.Ruby__CreditPoolId__c )  )  ) 
+      )</errorConditionFormula>
+    <errorMessage>The Commit Burndown product must have a credit pool.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Uncalculated__c</fullName>
+    <formula>( NOT( ISNULL( ELV_LastCalculatedOn__c ) ) &amp;&amp; ELV_LastSavedOn__c &gt; ELV_LastCalculatedOn__c ) || ( NOT ( ISNULL ( ELV_LastSavedOn__c) ) &amp;&amp; ISNULL ( ELV_LastCalculatedOn__c ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Uncalculated</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type__c</fullName>
+    <description>This field is use to filter products listed in CPQ from the Product Selection Page.  The reference is &quot;Type&quot; field on Account.
+This product can only be sold to accounts where Type on the Account match Account Type set here.</description>
+    <label>Account Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alliance partner</fullName>
+                <default>false</default>
+                <label>Alliance partner</label>
+            </value>
+            <value>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+                <label>Analyst</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Consulting partner</fullName>
+                <default>false</default>
+                <label>Consulting partner</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Former Customer</fullName>
+                <default>false</default>
+                <label>Former Customer</label>
+            </value>
+            <value>
+                <fullName>Integrator</fullName>
+                <default>false</default>
+                <label>Integrator</label>
+            </value>
+            <value>
+                <fullName>Investor</fullName>
+                <default>false</default>
+                <label>Investor</label>
+            </value>
+            <value>
+                <fullName>MSP partner</fullName>
+                <default>false</default>
+                <label>MSP partner</label>
+            </value>
+            <value>
+                <fullName>OEM partner</fullName>
+                <default>false</default>
+                <label>OEM partner</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Press</fullName>
+                <default>false</default>
+                <label>Press</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Protected</fullName>
+                <default>false</default>
+                <label>Protected</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <label>Reseller</label>
+            </value>
+            <value>
+                <fullName>Reseller (channel partner, VAR, LAR, etc)</fullName>
+                <default>false</default>
+                <label>Reseller (channel partner, VAR, LAR, etc)</label>
+            </value>
+            <value>
+                <fullName>System Integrator</fullName>
+                <default>false</default>
+                <label>System Integrator</label>
+            </value>
+            <value>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+                <label>Vendor</label>
+            </value>
+            <value>
+                <fullName>MSP End User</fullName>
+                <default>false</default>
+                <label>MSP End User</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

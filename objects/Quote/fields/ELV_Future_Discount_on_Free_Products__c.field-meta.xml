@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Future_Discount_on_Free_Products__c</fullName>
+    <inlineHelpText>To guarantee pricing on modules not yet purchased. You MUST Modify Quote Terms to insert Product names. Customer may purchase the following Tanium Products at a __% discount off MSRP.</inlineHelpText>
+    <label>DEPRECATED - Future Module Price Disc %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

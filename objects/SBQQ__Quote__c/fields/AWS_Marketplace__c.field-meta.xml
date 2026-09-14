@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AWS_Marketplace__c</fullName>
+    <description>This box will be checked when Amazon is the partner</description>
+    <formula>IF(SBQQ__Partner__r.Name = $Label.AWS_Marketplace_Partner_Name, TRUE, FALSE)</formula>
+    <inlineHelpText>This box will be checked when Amazon is the partner</inlineHelpText>
+    <label>AWS Marketplace</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

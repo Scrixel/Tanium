@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_to_COE_Queue</name>
+        <label>Send Email to COE Queue</label>
+        <locationX>713</locationX>
+        <locationY>616</locationY>
+        <actionName>sbaa__Approval__c.SBAA_Requested_Email_Alert_v2</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>sbaa__Approval__c.SBAA_Requested_Email_Alert_v2</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>is_COE_Approval</name>
+        <label>is COE Approval?</label>
+        <locationX>872</locationX>
+        <locationY>454</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.sbaa__Approver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>a7N7V000000AkpOUAS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sbaa__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Requested</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_to_COE_Queue</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>SS-1539 Route COE Approvals to COE Queue email</description>
+    <environments>Default</environments>
+    <interviewLabel>Advance Approvals Queue Email - On Create - After Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Advance Approvals Queue Email - On Create - After Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>756</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>is_COE_Approval</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>sbaa__Approval__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

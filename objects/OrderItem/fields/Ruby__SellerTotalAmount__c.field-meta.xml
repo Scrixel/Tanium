@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__SellerTotalAmount__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total Revenue received before Tax at Line Level. Goes into ACV ARR TCV calculation.</description>
+    <inlineHelpText>Total Revenue received before Tax at Line Level. Goes into ACV ARR TCV calculation.</inlineHelpText>
+    <label>Net Seller Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

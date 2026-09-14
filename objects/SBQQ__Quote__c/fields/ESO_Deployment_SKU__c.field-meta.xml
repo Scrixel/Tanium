@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Deployment_SKU__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Updated by the WFR if the Primary quote has an ESO Deployment SKU</description>
+    <label>ESO Deployment SKU</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

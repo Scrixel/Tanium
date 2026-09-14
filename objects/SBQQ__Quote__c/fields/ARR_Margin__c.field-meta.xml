@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ARR_Margin__c</fullName>
+    <description>Implemented as a part of the MSP Simplification project to display the ARR Margin % based on the FY25 MSP Margin Calculator</description>
+    <formula>IF(Business_Motion_Oppty__c = &apos;MSP&apos;, (Day_1_ARR__c - Total_COGS__c)/Day_1_ARR__c, null)</formula>
+    <label>Sales ARR Margin %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

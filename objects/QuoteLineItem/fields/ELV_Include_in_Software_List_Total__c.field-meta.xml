@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Include_in_Software_List_Total__c</fullName>
+    <formula>IF( AND( NOT( ELV_Exclude_from_Addl_Disc_Calc__c ), ELV_Product_Group__c = &quot;Software&quot;), True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Include in Software List Total</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

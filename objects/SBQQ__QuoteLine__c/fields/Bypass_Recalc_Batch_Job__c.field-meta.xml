@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_Recalc_Batch_Job__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Exclude products from the being recalculated via SBQQ_QuoteRenewal_Async.  Twin Field from Product.</description>
+    <label>Bypass Recalc Batch Job</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

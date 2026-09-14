@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Renewal_ARR_Total__c</fullName>
+    <description>Former value is PremiumProductDiscounted. This is being reused for SS-9985.</description>
+    <inlineHelpText>Sum the Quote Line ARR Amount where Amount Type = Renewal and has the Latest End Date.</inlineHelpText>
+    <label>TypeRenewal - ARR Total</label>
+    <summarizedField>SBQQ__QuoteLine__c.ARR_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>SBQQ__QuoteLine__c.Transaction_Type__c</field>
+        <operation>equals</operation>
+        <value>Renewal</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>SBQQ__QuoteLine__c.Include_in_Exit_ARR__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

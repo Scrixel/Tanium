@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This email alert goes out to Customers and Tanium Internal users.</description>
+        <name>Renewal_Notification_to_Customer_and_Tanium</name>
+        <label>Renewal Notification to Customer and Tanium</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>Recipients_with_Null_Check</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>Email_Subject_Customers_and_TaniumInternal</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyCustomer</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Get_Latest_Contract.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Notification to Opportunity Owner.</description>
+        <name>Renewal_Notification_to_Opportunity_Owner1</name>
+        <label>Renewal Notification to Opportunity Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Latest_Contract_Same_With_Current_Contract_90_60_30</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>Opportunity_Owner</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>sender@tanium.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>Email_Subject_Opportuntiy_Owner_Notification</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Renewal_Notification_Opportunity_Owner</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Get_Latest_Contract.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Determines if the contract includes renewable subscription products before sending notifications. SS-9566</description>
+        <name>Contract_Has_Renewable_Products</name>
+        <label>Contract_Has_Renewable_Products?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_HasRenewableProducts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Renewable_Subscriptions</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Latest_Contract_Same_With_Current_Contract_104_74_44_180</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>DisableFlows</name>
+        <label>DisableFlows?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Permission.DisableFlows</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Include_Customer_Notification</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Found_Record</name>
+        <label>Found Record?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Found_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Renewable_Subscriptions</targetReference>
+            </connector>
+            <label>Found Record?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Include_Customer_Notification</name>
+        <label>Include Customer Notification?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Include_Customer_Notification1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Exclude_from_Renewal_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Latest_Contract</targetReference>
+            </connector>
+            <label>Include Customer Notification?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Latest_Contract_Same_With_Current_Contract_104_74_44_180</name>
+        <label>Latest Contract Same With Current Contract-104,74,44,180</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Latest_Contract_Same_With_Current_Contract_90_60_30</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Latest_Contract_Same_With_Current_Contract</name>
+            <conditionLogic>( 1 OR 2 OR 3 OR 6) AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>104.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>74.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>44.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_SendInternalEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>180.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Renewal_Notification_to_Opportunity_Owner1</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Latest_Contract_Same_With_Current_Contract_90_60_30</name>
+        <label>Latest Contract Same With Current Contract-90.60,30</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Latest_Contract_Same_With_Current_Contract_90_60_30</name>
+            <conditionLogic>4 AND (1 OR 2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>30.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>60.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Latest_Contract.Contract_Days_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>90.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_SendExternalEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Renewal_Notification_to_Customer_and_Tanium</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>7.24.26 : SS-9566 - Add a filter condition to check if the Product in Subscription is Included in ARR, If yes then send the Tanium Expiration Notice. 
+6.25.26 : SS-9566 - The &quot;Tanium Expiration Notice&quot; email is sent only when the contract has at least one renewable subscription and not when it contains only one-time subscriptions.
+04.20.26: SS-13069 Updated Recipients_with_Null_Check formula with new Primary Opportunity Contact field, removing dependencies to uninstalled managed package.
+Migrated from Renewal Notification email to Custom and Tanium Flow
+03.04.26 AT: SS-12399: Removing commented-out recipients in Recipients_with_Null_Check formula.
+07.14.25 AT: Updates to Recipients with Null Check formula SS-11293</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Contract_RecordLink_Formula</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_550}, FIND(&apos;/services&apos;,{!$Api.Enterprise_Server_URL_550}))&amp;&quot;/lightning/r/Lead/&quot;&amp;{!Get_Latest_Contract.Id}&amp;&quot;/view&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_180_MEDDPICC</name>
+        <dataType>String</dataType>
+        <expression>IF({!Get_Latest_Contract.Contract_Days_Remaining__c} == 180, {!TextTemplate_180_MEDDPICC_Reminders}, null)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SendExternalEmail</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Label.Renewal_Notifications_Send_External_Email} = &apos;TRUE&apos;, TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SendInternalEmail</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Label.Renewal_Notifications_Send_Internal_Email} = &apos;TRUE&apos;, TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>Opportunity_Owner</name>
+        <dataType>String</dataType>
+        <expression>$Record.Owner.Email+&quot;,&quot;+ &quot;angela.pearce@tanium.com&quot;
+/*Angela P&apos;s email address added as per her request on 09/14/2023&quot;.*/</expression>
+    </formulas>
+    <formulas>
+        <name>Oppty_RecordLink_Formula</name>
+        <dataType>String</dataType>
+        <expression>LEFT($Api.Enterprise_Server_URL_550, FIND(&apos;/services&apos;,$Api.Enterprise_Server_URL_550))&amp;&quot;/lightning/r/Lead/&quot;&amp;{!$Record.Id}&amp;&quot;/view&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>Recipients_with_Null_Check</name>
+        <dataType>String</dataType>
+        <expression>/* Customer Success Owner*/
+IF
+((ISNULL({!$Record.CSM_Account_Owner__r.Email}) || 
+{!$Record.CSM_Account_Owner__r.IsActive}=FALSE),&quot;&quot;,
+{!$Record.CSM_Account_Owner__r.Email})
++&quot;,&quot;+
+/* Economic Buyer*/
+IF
+((ISNULL({!$Record.Economic_Buyer_Lookup__r.Email}) ||
+{!$Record.Economic_Buyer_Lookup__r.HasOptedOutOfEmail}=TRUE),&quot;&quot;,
+{!$Record.Economic_Buyer_Lookup__r.Email})
++&quot;,&quot;+
+/* Opportunity Owner*/
+IF
+((ISNULL({!$Record.Owner.Email}) || 
+{!$Record.Owner.IsActive}=FALSE),&quot;&quot;,
+{!$Record.Owner.Email})
++&quot;,&quot;+
+/*Primary Opportunity Contact*/
+IF
+((ISNULL({!$Record.Primary_Opportunity_Contact__r.Email})||{!$Record.Primary_Opportunity_Contact__r.HasOptedOutOfEmail}=TRUE),&quot;&quot;,
+{!$Record.Primary_Opportunity_Contact__r.Email})
++&quot;,&quot;+
+/*Procurement Contact*/
+IF
+((ISNULL({!$Record.Procurement_Contact__r.Email}) || 
+{!$Record.Procurement_Contact__r.HasOptedOutOfEmail}=TRUE),&quot;&quot;,
+{!$Record.Procurement_Contact__r.Email})</expression>
+    </formulas>
+    <formulas>
+        <name>TestOptOut</name>
+        <dataType>String</dataType>
+        <expression>IF
+((ISNULL({!$Record.Procurement_Contact__r.Email})&amp;&amp;{!$Record.Procurement_Contact__r.HasOptedOutOfEmail}=FALSE)
+,&quot;&quot;,
+{!$Record.Procurement_Contact__r.Email})
+
+/*
+IF
+(ISNULL({!$Record.Procurement_Contact__r.Email}),&quot;&quot;,
+{!$Record.Procurement_Contact__r.Email})
+*/</expression>
+    </formulas>
+    <interviewLabel>Opportunity - Scheduled Flow - Renewal Notification Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Scheduled Flow - Renewal Notification Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Latest_Contract</name>
+        <label>Get Latest Contract</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_Record</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND(3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9)</filterLogic>
+        <filters>
+            <field>Contract_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SBQQ__RenewalOpportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>104.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>74.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>44.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>60.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>90.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Days_Remaining__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>180.0</numberValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contract</object>
+        <sortField>SBQQ__ExpirationDate__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves at least one renewable (non one-time) subscription associated with the contract. SS-9566</description>
+        <name>Get_Renewable_Subscriptions</name>
+        <label>Get_Renewable_Subscriptions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Contract_Has_Renewable_Products</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SBQQ__Contract__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Latest_Contract.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Exclude_from_ARR__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SBQQ__SubscriptionType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Renewable</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SBQQ__Subscription__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DisableFlows</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND 4</filterLogic>
+        <filters>
+            <field>Incoming_ARR__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageNumber__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <numberValue>7.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Pricebook2Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>01s7V000000NyMZQA0</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Business_Motion__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>MSP</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <schedule>
+            <dayOfMonthToRun>0</dayOfMonthToRun>
+            <frequency>Daily</frequency>
+            <frequencyNumber>0</frequencyNumber>
+            <startDate>2025-08-05</startDate>
+            <startTime>20:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Email_Subject_Customers_and_TaniumInternal</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Tanium Expiration Notice</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Email_Subject_Opportuntiy_Owner_Notification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Opportunity Owner Notification for Contract Expiration Notice: {!$Record.Name} for Contract Number: {!Get_Latest_Contract.ContractNumber}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyCustomer</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;img src=&quot;https://tanium--c.documentforce.com/servlet/servlet.ImageServer?id=0157V000003xkJW&amp;oid=00DRL000006Bjcf&amp;lastMod=1694729105000&quot; alt=&quot;Tanium Logo for Emails.png&quot;&lt;br&gt;&lt;br&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+Dear {!$Record.Account.Name},&lt;br&gt;
+&lt;br&gt;
+This is a friendly reminder that your Tanium software license or support entitlement is expiring on  {!Get_Latest_Contract.EndDate}.&lt;br&gt;
+&lt;br&gt;
+If you are already working on your renewal with your Account Manager and/or Tanium authorized partner, no further action is required.&lt;br&gt;
+&lt;br&gt;
+To continue using Tanium and/or receiving support without any interruption, please contact your Account Manager (included on this email) as soon as possible but no later than the expiration date of your current software license or support entitlement noted above.&lt;br&gt;
+&lt;br&gt;
+If you elect to purchase Tanium’s products and services indirectly through a Tanium authorized partner, please work with your partner to facilitate your renewal order. Otherwise, your Account Manager will be able to address any questions or concerns about the renewal process and assist you with any issues that you may encounter.&lt;br&gt;
+&lt;br&gt;
+Thank you for being a valued customer of Tanium. We appreciate your business and look forward to hearing from you.
+&lt;br&gt;
+&lt;br&gt;
+Regards,&lt;br&gt;
+Tanium Licensing</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Renewal_Notification_Opportunity_Owner</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Your Customer, {!$Record.Account.Name}, has Tanium software license or support entitlements expiring on {!Get_Latest_Contract.EndDate}.&lt;br&gt;
+&lt;br&gt;
+You will be included on an automated email sent to the Customer reminding them of their upcoming license expiration. They will be reminded up to 3 times – 30, 60, and 90 days before the license expiration.&lt;br&gt;
+&lt;br&gt;
+ACTION ITEMS:&lt;br&gt;
+Please review the following fields on the renewal opportunity (link provided below) and ensure these contacts are accurate and connected to valid email addresses:&lt;br&gt;
+
+• Primary Opportunity Contact&lt;br&gt;
+• Procurement Contact&lt;br&gt;
+• Economic Buyer&lt;br&gt;
+&lt;br&gt;
+Please also review the Opportunity Team section of your opportunity so the correct people are included in the notification. For more information, please see the &lt;a href=&quot;https://tanium.sharepoint.com/sites/GTMHub-Center%20of%20Excellence/SitePages/Renewals.aspx&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Renewals page&lt;/a&gt; on the COE SharePoint.&lt;br&gt;
+&lt;br&gt;
+
+Opportunity Name: &lt;a href=&quot;{!Oppty_RecordLink_Formula}&quot;&gt;{!$Record.Name}&lt;/a&gt;
+&lt;br&gt;
+Contract Number: &lt;a href=&quot;{!Contract_RecordLink_Formula}&quot;&gt;{!Get_Latest_Contract.ContractNumber}&lt;/a&gt;
+&lt;br&gt;
+{!formula_180_MEDDPICC}
+&lt;br&gt;
+Thank you!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>TextTemplate_180_MEDDPICC_Reminders</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;As a reminder, we significantly increase our customer retention rate when a health check is performed on the opportunity and account prior to renewal. Risk mitigation can be successfully addressed by leveraging MEDDPICC as a part of the opportunity renewal process.&lt;/p&gt;&lt;p&gt;Our process requires that renewals with Day 1 ARR greater than $100k have the MEDDPICC fields completed on the renewal opportunity by the DSA, with input from the TAM. Additionally the RVP will need to review the opportunity and check the MEDDPICC Validated field before the opportunity can be moved to Signed - Paperwork Received. Ideally this process will be performed by the account team--led by the TAM working with the DSA--at least 6 months prior to the renewal date to allow sufficient time to identify and address risk to ensure we are able to secure the upcoming renewal.&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>Latest_Contract</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contract</objectType>
+    </variables>
+    <variables>
+        <name>testsg_Contaractid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Var_Contract_Expiration_Date</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Var_Latest_Contract</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

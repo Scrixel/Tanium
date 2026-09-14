@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volume_Discount__c</fullName>
+    <description>Display Discount from Discount Schedule.</description>
+    <formula>IF(
+AND(
+NOT(SBQQ__Bundled__c),
+TEXT(SBQQ__Quote__r.SBQQ__Opportunity2__r.Business_Motion__c) &lt;&gt; &apos;MSP&apos;,
+SBQQ__Quote__r.Apply_Volume_Discount__c = False),0,
+IF( NOT(ISNULL(SBQQ__DiscountTier__r.SBQQ__Discount__c)), SBQQ__DiscountTier__r.SBQQ__Discount__c, 0
+))
+
+/*IF( AND( !SBQQ__Bundled__c, TEXT(SBQQ__Quote__r.SBQQ__Opportunity2__r.Business_Motion__c) &lt;&gt; &apos;MSP&apos;),SBQQ__DiscountTier__r.SBQQ__Discount__c,0
+
+----
+
+IF(
+AND(
+NOT(SBQQ__Bundled__c),
+TEXT(SBQQ__Quote__r.SBQQ__Opportunity2__r.Business_Motion__c) &lt;&gt; &apos;MSP&apos; ),
+IF( NOT(ISNULL(SBQQ__DiscountTier__r.SBQQ__Discount__c)), SBQQ__DiscountTier__r.SBQQ__Discount__c, Volume_Size_Discount__c
+), Volume_Size_Discount__c
+)
+*/</formula>
+    <label>Volume Discount %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

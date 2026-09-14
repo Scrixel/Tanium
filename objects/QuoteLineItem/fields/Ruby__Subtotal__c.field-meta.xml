@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__Subtotal__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The subtotal of the line item, calculated as List Total - System Discount Amount</description>
+    <inlineHelpText>The subtotal of the line item, calculated as List Total - System Discount Amount</inlineHelpText>
+    <label>Subtotal</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

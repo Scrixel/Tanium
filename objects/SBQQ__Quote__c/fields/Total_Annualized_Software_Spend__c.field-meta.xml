@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Annualized_Software_Spend__c</fullName>
+    <formula>IF(
+OR(
+SBQQ__Account__r.Annualized_Software_Spend__c = 0,
+ISBLANK(SBQQ__Account__r.Annualized_Software_Spend__c)
+),
+New_Business_Annualized_Software_Spend__c,
+IF(
+AND(
+SBQQ__Account__r.Annualized_Software_Spend__c &gt; 0,
+OR(Upsell_Annualized_Software_Spend__c = 0, ISBLANK(Upsell_Annualized_Software_Spend__c)),
+Renewal_Annualized_Software_Spend__c &gt; 0
+),
+Renewal_Annualized_Software_Spend__c,
+IF(
+AND(
+SBQQ__Account__r.Annualized_Software_Spend__c &gt; 0,
+OR(Renewal_Annualized_Software_Spend__c = 0, ISBLANK(Renewal_Annualized_Software_Spend__c)),
+Upsell_Annualized_Software_Spend__c &gt; 0
+),
+Upsell_Annualized_Software_Spend__c +
+SBQQ__Account__r.Annualized_Software_Spend__c,
+IF(
+AND(
+SBQQ__Account__r.Annualized_Software_Spend__c &gt; 0,
+Renewal_Annualized_Software_Spend__c &gt; 0,
+Upsell_Annualized_Software_Spend__c &gt; 0
+),
+IF(
+(Upsell_Annualized_Software_Spend__c + Renewal_Annualized_Software_Spend__c) &gt;=
+SBQQ__Account__r.Annualized_Software_Spend__c,
+Upsell_Annualized_Software_Spend__c + Renewal_Annualized_Software_Spend__c,
+(2 * SBQQ__Account__r.Annualized_Software_Spend__c) -
+(Upsell_Annualized_Software_Spend__c + Renewal_Annualized_Software_Spend__c)
+),
+New_Business_Annualized_Software_Spend__c
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Annualized Software Spend</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

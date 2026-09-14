@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Software_Price__c</fullName>
+    <formula>IF(
+  AND(
+    NOT(
+      OR(
+        SBQQ__ProductFamily__c = &quot;Premium Support&quot;,
+        SBQQ__ProductFamily__c = &quot;Training&quot;,
+        SBQQ__ProductFamily__c = &quot;Hardware&quot;,
+        SBQQ__ProductFamily__c = &quot;Marketing&quot;
+      )
+    ),
+    NOT( ISBLANK( SBQQ__ProductFamily__c ) )
+  ),
+  SBQQ__NetPrice__c / SBQQ__ProrateMultiplier__c,
+  0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Annual Software Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

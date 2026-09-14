@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Quantity__c</fullName>
+    <description>Core Quantity - for Footprint computation - Quote Score</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Core Quantity in Quote. It is added to the seats previously purchased to date to produce the &quot;Seats Purchased&quot; quantity</inlineHelpText>
+    <label>Core Quantity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

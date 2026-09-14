@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Renewal_Latest_Start_Date__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Nue port of CPQ price rule summary variable Get Latest Start Date for Renewals (Max SBQQ__StartDate__c where Eligible_for_Renewal_ARR__c = True). Feeds the ELV Day 1 ARR Start Date cascade renewal branch.</description>
+    <inlineHelpText>Latest subscription start date across renewal-eligible lines.</inlineHelpText>
+    <label>Renewal Latest Start Date</label>
+    <summarizedField>QuoteLineItem.Ruby__SubscriptionStartDate__c</summarizedField>
+    <summaryFilterItems>
+        <field>QuoteLineItem.ELV_Eligible_for_Renewal_ARR_Calc__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Uplift_Amount_Below_Goal__c</fullName>
+    <description>This field is used in Advance Approval.</description>
+    <formula>IF( 
+ AND( 
+      Account_Segment__c == &quot;Emerging Enterprise&quot;, 
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;), 
+      Customer_Price_ARR__c &gt;0, 
+ Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Emerging_Enterprise.Approval_Uplift_Percent__c)&gt;= 
+ Customer_Price_ARR__c), True, 
+ IF( 
+  AND( 
+      Account_Segment__c == &quot;Commercial&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+  Pre_Uplift_Amount__c *(1+ $CustomMetadata.Renewal_Uplift_Percent__mdt.Commercial.Approval_Uplift_Percent__c)&gt;= 
+  Customer_Price_ARR__c), True, 
+  IF( 
+  AND( 
+      Account_Segment__c == &quot;Enterprise&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+  Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Enterprise.Approval_Uplift_Percent__c)&gt;= 
+  Customer_Price_ARR__c), True, 
+   IF( 
+   AND( 
+      Account_Segment__c == &quot;Undetermined&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Undetermined.Approval_Uplift_Percent__c)&gt;= 
+   Customer_Price_ARR__c), True, 
+  IF( 
+   AND( 
+      Account_Segment__c == &quot;Major&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Major.Approval_Uplift_Percent__c )&gt;= 
+   Customer_Price_ARR__c), True, 
+  IF( 
+   AND( 
+      Account_Segment__c == &quot;Mid-Market&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+ $CustomMetadata.Renewal_Uplift_Percent__mdt.Mid_Market.Approval_Uplift_Percent__c )&gt;= 
+   Customer_Price_ARR__c), True, 
+  IF( 
+   AND( 
+      Account_Segment__c == &quot;Public Sector&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Public_Sector.Approval_Uplift_Percent__c)&gt;= 
+   Customer_Price_ARR__c), True, 
+  IF( 
+   AND( 
+      Account_Segment__c == &quot;Other Segments&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.Other_Segments.Approval_Uplift_Percent__c)&gt;= 
+   Customer_Price_ARR__c), True, 
+  IF( 
+   AND( 
+      Account_Segment__c == &quot;SMB&quot;,
+      ISPICKVAL( SBQQ__Type__c , &quot;Renewal&quot;),
+      Customer_Price_ARR__c &gt;0, 
+   Pre_Uplift_Amount__c *(1+$CustomMetadata.Renewal_Uplift_Percent__mdt.SMB.Approval_Uplift_Percent__c)&gt;= 
+   Customer_Price_ARR__c), True, 
+False
+)
+ )
+  )
+   )
+    )
+     )
+      )
+       )
+        )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Renewal Uplift Amount Below Goal</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

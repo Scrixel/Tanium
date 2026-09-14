@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Future_Fixed_Pricing__c</fullName>
+    <label>Additional Qty Pricing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fixed $ Per Unit Price</fullName>
+                <default>false</default>
+                <label>Fixed $ Per Unit Price</label>
+            </value>
+            <value>
+                <fullName>Fixed % Off List Price</fullName>
+                <default>false</default>
+                <label>Fixed % Off List Price</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

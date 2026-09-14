@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Include_in_ARR_Calc__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-139 / ELV-CPQ-036. Twinned from QuoteLineItem.ELV_Include_in_ARR_Calc__c (misleading name inherited from CPQ Exclude_ARR_Formula__c; TRUE means include). TRUE when the line is not excluded from ARR, has non-zero quantity, and is not a Summary Item.</description>
+    <inlineHelpText>TRUE when this line is included in ARR calculations. Summary Items are excluded.</inlineHelpText>
+    <label>ELV Include in ARR Calc</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

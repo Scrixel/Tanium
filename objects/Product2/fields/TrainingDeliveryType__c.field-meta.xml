@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrainingDeliveryType__c</fullName>
+    <description>Twin field created for E-Commerce Training functionality</description>
+    <label>Training Delivery Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Instructor-Led Training (ILT)</fullName>
+                <default>false</default>
+                <label>Instructor-Led Training (ILT)</label>
+            </value>
+            <value>
+                <fullName>Virtual Instructor-Led Training (vILT)</fullName>
+                <default>false</default>
+                <label>Virtual Instructor-Led Training (vILT)</label>
+            </value>
+            <value>
+                <fullName>Web-Based Training (WBT)</fullName>
+                <default>false</default>
+                <label>Web-Based Training (WBT)</label>
+            </value>
+            <value>
+                <fullName>Exam</fullName>
+                <default>false</default>
+                <label>Exam</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SBQQ__Cannot_Allocate_POT_With_Constraint</fullName>
+    <active>true</active>
+    <errorConditionFormula>SBQQ__AllocatePotOnOrders__c &amp;&amp; NOT(ISPICKVAL(SBQQ__DynamicPricingConstraint__c,&apos;&apos;))</errorConditionFormula>
+    <errorMessage>You cannot have Allocate POT on Orders enabled if Percent of Total Constraint is specified.</errorMessage>
+</ValidationRule>

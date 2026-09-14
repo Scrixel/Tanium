@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ARR_After_Marketplace__c</fullName>
+    <formula>ARR_Amount__c - (ARR_Amount__c * SBQQ__Quote__r.Marketplace_ARR_Impact_Percent__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The ARR Amount of this quote line minus the Marketplace impact amount</inlineHelpText>
+    <label>ARR After Marketplace</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

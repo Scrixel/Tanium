@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Includes_TaaS_Bundle__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Managed by a Price Rule and used in Quote Approval Routing.</description>
+    <label>Includes TaaS Bundle</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

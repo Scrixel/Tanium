@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Reseller_Disclaimer__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this box if providing a Quote to an End User directly but transaction will likely go through a Partner. Disclaimer language says that Quote is a representation of a Customer-specific price, and Tanium will enable Reseller to offer Customer Price</inlineHelpText>
+    <label>Reseller Disclaimer</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

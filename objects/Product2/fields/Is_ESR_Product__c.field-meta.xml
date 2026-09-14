@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_ESR_Product__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>This field is used to count if there are ESR products on the quote</inlineHelpText>
+    <label>Is ESR Product</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

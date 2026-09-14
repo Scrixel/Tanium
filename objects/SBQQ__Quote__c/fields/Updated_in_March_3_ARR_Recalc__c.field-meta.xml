@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Updated_in_March_3_ARR_Recalc__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tracking field for the March 3 ARR recalc
+
+Temporary field. It can be deleted after 14 days (March 17, 2023)</description>
+    <label>Updated in March 3 ARR Recalc</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

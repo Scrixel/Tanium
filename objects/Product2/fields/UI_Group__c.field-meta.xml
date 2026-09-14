@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UI_Group__c</fullName>
+    <description>ONLY USED FOR UI SORT ORDER PURPOSES. SHOULD NOT BE INCLUDED IN ANY AUTOMATION OR INTEGRATION. SS-4691</description>
+    <inlineHelpText>ONLY USED FOR UI SORT ORDER PURPOSES. SHOULD NOT BE INCLUDED IN ANY AUTOMATION OR INTEGRATION</inlineHelpText>
+    <label>UI Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Conversion to Tanium Cloud</fullName>
+                <default>false</default>
+                <label>Conversion to Tanium Cloud</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Legacy - Perpetual</fullName>
+                <default>false</default>
+                <label>Legacy - Perpetual</label>
+            </value>
+            <value>
+                <fullName>Deprecated - Do not use</fullName>
+                <default>false</default>
+                <label>Deprecated - Do not use</label>
+            </value>
+            <value>
+                <fullName>On-Prem - Core &amp; Modules (A La Carte)</fullName>
+                <default>false</default>
+                <label>On-Prem - Core &amp; Modules (A La Carte)</label>
+            </value>
+            <value>
+                <fullName>On-Prem - Bundles &amp; Solutions</fullName>
+                <default>false</default>
+                <label>On-Prem - Bundles &amp; Solutions</label>
+            </value>
+            <value>
+                <fullName>Third-Party Products &amp; Partnerships</fullName>
+                <default>false</default>
+                <label>Third-Party Products &amp; Partnerships</label>
+            </value>
+            <value>
+                <fullName>Tanium Services &amp; Support</fullName>
+                <default>false</default>
+                <label>Tanium Services &amp; Support</label>
+            </value>
+            <value>
+                <fullName>Tanium Cloud for US Government</fullName>
+                <default>false</default>
+                <label>Tanium Cloud for US Government</label>
+            </value>
+            <value>
+                <fullName>Tanium Cloud - Core &amp; Modules (A La Carte)</fullName>
+                <default>false</default>
+                <label>Tanium Cloud - Core &amp; Modules (A La Carte)</label>
+            </value>
+            <value>
+                <fullName>Tanium Cloud - Bundles &amp; Solutions</fullName>
+                <default>false</default>
+                <label>Tanium Cloud - Bundles &amp; Solutions</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Tanium Endpoint Expansion</fullName>
+                <default>false</default>
+                <label>Tanium Endpoint Expansion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

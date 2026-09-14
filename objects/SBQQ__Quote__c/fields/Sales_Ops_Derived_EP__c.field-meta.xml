@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Ops_Derived_EP__c</fullName>
+    <description>Used in Product Rules to Auto-add Products.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ Business_Motion_Oppty__c = &apos;MSP&apos;,
+  End_User_Account__r.Sales_Ops_Derived_EP__c ,
+SBQQ__Account__r.Sales_Ops_Derived_EP__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Ops Derived EP</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Current_Renewal_Price_Cap__c</fullName>
+    <description>Captures the renewal price cap applicable to this quote, not a future renewal of this quote.</description>
+    <inlineHelpText>Captures the renewal price cap applicable to this quote, not a future renewal of this quote.</inlineHelpText>
+    <label>Current Renewal Price Cap %</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

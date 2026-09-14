@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TodayARR__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Today&apos;s ARR of all line items that are not summary line items.</description>
+    <inlineHelpText>Today&apos;s ARR of all line items that are not summary line items.</inlineHelpText>
+    <label>Today&apos;s ARR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

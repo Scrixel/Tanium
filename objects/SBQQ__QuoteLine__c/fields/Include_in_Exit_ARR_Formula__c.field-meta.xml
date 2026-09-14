@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_in_Exit_ARR_Formula__c</fullName>
+    <formula>AND(
+ NOT(Exclude_from_ARR__c),
+ End_Date__c = SBQQ__Quote__r.Max_End_Date__c
+)</formula>
+    <inlineHelpText>When this box is checked, the ARR Amount on this quote line will be included in Exit ARR calculation</inlineHelpText>
+    <label>Include in Exit ARR (Formula)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

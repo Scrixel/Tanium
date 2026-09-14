@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Comp_in_Synch__c</fullName>
+    <description>A temporary field that will identify where there are mismatches between End Date Comp and End Date Comp (EDW). Jira ticket SS-9992</description>
+    <formula>EndDateCompEDW__c = End_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>End Date Comp in Synch</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

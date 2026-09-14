@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Action_Plan_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When this box is checked, it indicates that a Renewal Action Plan has been created for the incumbent partner</inlineHelpText>
+    <label>Renewal Action Plan Created</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

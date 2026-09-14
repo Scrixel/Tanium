@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TotalCommittedAmount__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total Committed Amount summarized from the total price of all committed credit line items that are not summary line items.</description>
+    <inlineHelpText>Total Committed Amount summarized from the total price of all committed credit line items that are not summary line items.</inlineHelpText>
+    <label>Total Committed Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

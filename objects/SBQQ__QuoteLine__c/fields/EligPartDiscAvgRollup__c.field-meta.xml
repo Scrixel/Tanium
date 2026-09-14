@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EligPartDiscAvgRollup__c</fullName>
+    <formula>IF( 
+  AND( 
+    NOT(ISBLANK(SBQQ__RenewedSubscription__c)), 
+    SBQQ__EffectiveQuantity__c &gt; 0,  
+    ISBLANK(  SBQQ__RequiredBy__c ), 
+    ISPICKVAL( Transaction_Type__c , &quot;Renewal&quot;)), True, 
+False
+)</formula>
+    <label>EligPartDiscAvgRollup</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

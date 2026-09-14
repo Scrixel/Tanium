@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sum_of_Discount_Margin__c</fullName>
+    <description>Formula field - computed value of Discount &amp; Partner Margin</description>
+    <formula>1-(1-Customer_Discount__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula field - computed value of Discount &amp; Partner Margin</inlineHelpText>
+    <label>Sum of Discount &amp; Margin</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>5</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

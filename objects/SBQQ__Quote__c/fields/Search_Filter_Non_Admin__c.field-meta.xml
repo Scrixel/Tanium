@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_Filter_Non_Admin__c</fullName>
+    <description>Used to control who has access to see CPQ Search Filters that are set to &quot;Hidden&quot;</description>
+    <formula>IF($User.Level_3__c == &quot;LATAM: Partner&quot;, False,
+IF($Profile.Name == &quot;Tanium System Administrator&quot;, False,
+IF($Profile.Name == &quot;System Administrator&quot;, False,
+IF($Profile.Name == &quot;Tanium Deals Desk&quot;, False,
+
+True))))</formula>
+    <label>Search Filter Non Admin</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

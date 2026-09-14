@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Expiration_Date_Locked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Locks the calculated expiration-date limit after a manual override; Deal Desk may manage this control.</description>
+    <label>Expiration Date Locked</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

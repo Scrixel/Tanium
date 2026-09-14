@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TCV__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total Contractual Value (TCV) summarized from the TCV of all quote line items that are not summary line items.</description>
+    <inlineHelpText>Total Contractual Value (TCV) summarized from the TCV of all quote line items that are not summary line items.</inlineHelpText>
+    <label>TCV</label>
+    <summarizedField>QuoteLineItem.Ruby__DeltaTCV__c</summarizedField>
+    <summaryFilterItems>
+        <field>QuoteLineItem.Ruby__LineType__c</field>
+        <operation>notEqual</operation>
+        <value>SummaryItem</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>QuoteLineItem.Ruby__LineType__c</field>
+        <operation>notEqual</operation>
+        <value>SplitItem</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

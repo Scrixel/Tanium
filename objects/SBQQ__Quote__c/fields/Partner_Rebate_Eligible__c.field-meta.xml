@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Rebate_Eligible__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Implemented as a part of the FY25 Partner Redesign project. Jira ticket SS-7691</description>
+    <inlineHelpText>Identifies whether this quote is eligible for a rebate based on the following parameters: 1) Opportunity Type equals New Customer or Expansion 2) Partner Program Tier does not equal Authorized 3) Quote is Partner Sourced 4) Level 3 is not equal to Japan</inlineHelpText>
+    <label>DEPRECATED - Partner Rebate Eligible</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

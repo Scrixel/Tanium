@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__All_Quotes</fullName>
+    <columns>QUOTE.NAME</columns>
+    <columns>QUOTE.QUOTENUMBER</columns>
+    <columns>ELV_ApprovalStatus__c</columns>
+    <columns>Ruby__TotalAmount__c</columns>
+    <columns>Owner</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Ruby__Is_Template_Quote__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Company Quotes</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Complete_for_Submission__c</fullName>
+    <formula>IF(ELV_Re_Score_Required__c = FALSE, 1, 0) + IF(!ISBLANK(ELV_Deal_Desk_Approver__c), 1, 0) + IF(ELV_Type_Amount_Rollup__c = Ruby__SellerTotalAmount__c, 1, 0) + IF(!ISBLANK(BillingName), 1, 0) + IF(LineItemCount &gt; 0, 1, 0) + IF(NOT(ISBLANK(ELV_Partner__c)),  1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Complete for Submission</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

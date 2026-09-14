@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Subscription_EULA__c</fullName>
+    <formula>IF( ISPICKVAL(Opportunity.Type,&quot;New Customer&quot;) &amp;&amp; (ELV_Perpetual_count_Roll_up__c = 0) , True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Subscription EULA</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

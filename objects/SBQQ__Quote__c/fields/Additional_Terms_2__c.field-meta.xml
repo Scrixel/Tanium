@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Terms_2__c</fullName>
+    <inlineHelpText>Please Enter any additional non standard terms in this box.PLEASE DO NOT ADD BLANK SPACES BETWEEN PARAGRAPHS, USE OTHER ADDITIONAL TERMS FIELDS IF YOU WANT SPACES BETWEEN PARAGRAPHS.</inlineHelpText>
+    <label>Additional Terms # 2</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

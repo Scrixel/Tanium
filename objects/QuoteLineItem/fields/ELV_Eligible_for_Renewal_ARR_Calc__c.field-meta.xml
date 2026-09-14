@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Eligible_for_Renewal_ARR_Calc__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Nue port of CPQ Eligible_for_Renewal_ARR__c. Renewal test uses Ruby__ChangeType__c containing &apos;Renew&apos; (matches Renew and RenewWithQuantityUpdate) instead of a subscription lookup. Summary Items excluded from ARR aggregation.</description>
+    <formula>AND( NOT( ELV_Exclude_from_ARR__c ), Ruby__ActualQuantity__c &lt;&gt; 0, NOT( ISPICKVAL( Ruby__LineType__c, &quot;SummaryItem&quot; ) ), NOT( ELV_Is_Cloned_Quote_Line__c ), CONTAINS( TEXT( Ruby__ChangeType__c ), &quot;Renew&quot; ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>TRUE when this line is a renewal eligible for renewal ARR. Summary Items are excluded.</inlineHelpText>
+    <label>ELV Eligible for Renewal ARR Calc</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

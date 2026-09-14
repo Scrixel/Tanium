@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quota_Retirement_ARR__c</fullName>
+    <description>Summarizes the Quota Retirement ARR from quote lines. Jira ticket SS-9942</description>
+    <inlineHelpText>A rollup of the Quota Retirement ARR on the quote lines on this quote</inlineHelpText>
+    <label>Quota Retirement ARR</label>
+    <summarizedField>SBQQ__QuoteLine__c.Quota_Retirement_ARR_EDW__c</summarizedField>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

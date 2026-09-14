@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Partner_to_Downstream_Partner</fullName>
+    <active>true</active>
+    <description>[INC0180396] The &quot;Partner&quot; selected must purchase through distribution.  Please select a Distributor in the &quot;Partner&quot; field and add this partner to the &quot;Downstream Partner&quot; field</description>
+    <errorConditionFormula>AND(
+    Indirect_Partner_Override__c = FALSE,
+    ISPICKVAL(SBQQ__Partner__r.Sales_Model__c, &apos;Indirect&apos;),
+    NOT(ISPICKVAL(SBQQ__Opportunity2__r.StageName, &apos;CLOSED WON&apos;)),
+    NOT(ISCLONE()),
+    NOT($Permission.DisableValidationRules),
+    $Profile.Name != &apos;System Administrator&apos;,
+    $Profile.Name != &apos;Tanium System Administrator&apos;,
+    $Profile.Name != &apos;Tanium Deals Desk&apos;,
+    $Profile.Name != &apos;API Only Integration&apos;,
+    $Profile.Name != &apos;API Only Integration Admin&apos;
+)</errorConditionFormula>
+    <errorDisplayField>SBQQ__Partner__c</errorDisplayField>
+    <errorMessage>The “Partner” selected must purchase through distribution.  Please select a Distributor in the “Partner” field and add this partner to the “Downstream Partner” field</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_1_ARR_Unadjusted__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>The value in this field will be populated by a Price Rule. The value will then be used by Flow to populate the Day 1 ARR field, where Day 1 ARR equals Day 1 ARR Unadjusted + ARR Adjustment
+
+10.8.2024 - Deprecated in favor of a rollup summary field. Jira ticket SS-9382</description>
+    <inlineHelpText>This is a deprecated field. Please refer to Day 1 ARR Unadjusted (Rollup)</inlineHelpText>
+    <label>DEPRECATED - Day 1 Unadjust (Price Rule)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

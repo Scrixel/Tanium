@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidiary__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Opportunity.StageName, &quot;POC&quot;), Account.NS_Subsidiary__c, Quote.ELV_Legal_Entity__r.Name)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NS Subsidiary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_Additional_Disc</fullName>
+    <active>true</active>
+    <description>Force users to remove Additional Disc applied from Promo when Promo is removed.</description>
+    <errorConditionFormula>IF( AND(
+ISBLANK( Product_Promotion__c ),
+Promo_Discount_Holder__c &gt; 0,
+Customer_Discount__c == Promo_Discount_Holder__c), true, false)</errorConditionFormula>
+    <errorMessage>You removed the Product Promotion, please also remove ADDT&apos;L Discount that was applied from the promotion.</errorMessage>
+</ValidationRule>

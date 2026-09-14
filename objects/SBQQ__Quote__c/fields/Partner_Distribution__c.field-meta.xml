@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Distribution__c</fullName>
+    <description>Partner Business Motion contains Distribute OR
+Partner Type contains Distributor.  Used in Price Rule.</description>
+    <externalId>false</externalId>
+    <formula>/*IF ( INCLUDES (  SBQQ__Partner__r.Partner_Type__c, &quot;Distributor&quot; ), &quot;Yes&quot;,
+ IF ( INCLUDES ( SBQQ__Partner__r.Business_Motion__c , &quot;Distribute&quot; ), &quot;Yes&quot;,null))
+
+*/
+IF ( INCLUDES (  SBQQ__Partner__r.Partner_Type__c, &quot;Distributor&quot; )  || 
+     INCLUDES ( SBQQ__Partner__r.Business_Motion__c , &quot;Distribute&quot; ), &quot;Yes&quot;, &quot;No&quot;
+    )</formula>
+    <label>Partner Distribution</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TotalPrice__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total Price summarized from the total price of all line items that are not summary line items.</description>
+    <inlineHelpText>Total Price summarized from the total price of all line items that are not summary line items.  When the Total Price is edited, the Discount Amount and Total Amount will be recalculated, and the change will be propagated to line items.</inlineHelpText>
+    <label>Total Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

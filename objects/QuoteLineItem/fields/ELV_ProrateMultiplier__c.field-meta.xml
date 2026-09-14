@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_ProrateMultiplier__c</fullName>
+    <description>Calculated ratio used to compute Prorated Price. TNCI 139 / ELV-CPQ-036: converted from day-based ((End - Start + 1) / 365) to MONTH-based to match CPQ SBQQ__ProrateMultiplier__c. Day-based proration inflated the multiplier by one day on any term crossing February 29, which understated ARR by roughly 0.04 percent on those lines. Month count is taken from the exclusive end boundary (End + 1) so an inclusive end date of 2028-02-29 against a 2027-03-01 start yields exactly 12 months. A partial trailing month is prorated over 30 days.</description>
+    <externalId>false</externalId>
+    <formula>IF( OR( ISBLANK( Ruby__SubscriptionStartDate__c ), ISBLANK( Ruby__SubscriptionEndDate__c ) ), 1,
+( ( YEAR( Ruby__SubscriptionEndDate__c + 1 ) - YEAR( Ruby__SubscriptionStartDate__c ) ) * 12
++ ( MONTH( Ruby__SubscriptionEndDate__c + 1 ) - MONTH( Ruby__SubscriptionStartDate__c ) )
++ ( DAY( Ruby__SubscriptionEndDate__c + 1 ) - DAY( Ruby__SubscriptionStartDate__c ) ) / 30 ) / 12 )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Prorate Multiplier</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

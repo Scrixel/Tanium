@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Detail_Report__c</fullName>
+    <description>Field to link to Quote Detail Report with Id pass through. SS-7861</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/lightning/r/Report/00O0e000005bIu5/view?fv0=&quot;&amp;SBQQ_Quote_18ID__c, &quot;Quote Detail Report&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quote Detail Report</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Sum_Discount_Order__c</fullName>
+    <formula>IF(!ISBLANK(TEXT(ELV_Bundle_Type__c)), ELV_End_customer_Discount__c, IF(ISPICKVAL(ELV_Promotion__c, &quot;&quot;),(1-(1-ELV_Customer_Discount__c)*(1-Ruby__PartnerPayoutPercentage__c)),1))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sum Discount Order</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

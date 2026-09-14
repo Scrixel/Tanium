@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manually_Set_ESO_Quantity_Term__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Use this field when ESO values should not be auto-calculated.</inlineHelpText>
+    <label>Manually Set ESO Quantity/Term</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

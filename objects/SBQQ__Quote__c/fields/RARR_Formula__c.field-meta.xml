@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RARR_Formula__c</fullName>
+    <description>01/08/2025 - Label updated to align with Corporate ARR nomenclature. Jira ticket SS-9438</description>
+    <formula>IF(Day_1_ARR__c &lt; 0, 0, IF(Day_1_ARR__c &gt;= Incoming_ARR_formula__c, Incoming_ARR_formula__c, Day_1_ARR__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>RARR (Renewed ARR) is a calculated value. If Day 1 ARR is greater than or equal to Incoming ARR, then RARR will be equal to Incoming ARR. If not, RARR will be equal to Day 1 ARR</inlineHelpText>
+    <label>Sales RARR (Renewed ARR)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AEM_Solution__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marks the Product as an AEM Solution (FY26 P&amp;P). SS-10352</description>
+    <label>AEM Solution</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_NS_Ready__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-206 / ELV-DM-010. Plain writable checkbox indicating the order product is ready to hand off to NetSuite. Set by process or integration, not calculated.</description>
+    <inlineHelpText>Check when this order product is ready for the NetSuite handoff.</inlineHelpText>
+    <label>NS_Ready</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

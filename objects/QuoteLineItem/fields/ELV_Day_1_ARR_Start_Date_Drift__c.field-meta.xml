@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Day_1_ARR_Start_Date_Drift__c</fullName>
+    <description>TNCI-206 / ELV-DM-010 Layer 2. Drift detector: TRUE when the stored stamp disagrees with the live parent cascade value, so staleness is reportable rather than silent. A blank stamp against a populated parent counts as drift.</description>
+    <formula>IF( AND( ISBLANK( ELV_Day_1_ARR_Start_Date_Stamp__c ),
+         ISBLANK( Quote.ELV_Day_1_ARR_Start_Date__c ) ),
+    FALSE,
+    ELV_Day_1_ARR_Start_Date_Stamp__c &lt;&gt; Quote.ELV_Day_1_ARR_Start_Date__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Checked when the stamped Day 1 ARR start date no longer matches the parent quote.</inlineHelpText>
+    <label>Day 1 ARR Start Date Drift</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

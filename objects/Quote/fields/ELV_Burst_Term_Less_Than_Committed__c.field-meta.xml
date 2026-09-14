@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Burst_Term_Less_Than_Committed__c</fullName>
+    <formula>IF(ELV_Max_Burst_Term_Rollup__c  &lt;= ELV_Committed_Term__c , TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Burst Term Less Than Committed</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

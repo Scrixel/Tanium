@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Include_in_ARR_Calc__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Nue port of CPQ Exclude_ARR_Formula__c (misleading name; TRUE means include). TRUE when the line is not excluded from ARR, has non-zero quantity, and is not a Summary Item. Summary Items are excluded from ARR aggregation to avoid double counting against Product lines.</description>
+    <formula>AND( NOT( ELV_Exclude_from_ARR__c ), Ruby__ActualQuantity__c &lt;&gt; 0, NOT( ISPICKVAL( Ruby__LineType__c, &quot;SummaryItem&quot; ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>TRUE when this line is included in ARR calculations. Summary Items are excluded.</inlineHelpText>
+    <label>ELV Include in ARR Calc</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

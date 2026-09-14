@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Exclude_from_ARR__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-139 / ELV-CPQ-036. Twinned from QuoteLineItem.ELV_Exclude_from_ARR__c. Nue copies the value from the quote line onto the order product because the names match and the field is in the Fields Expose to Nue field set.</description>
+    <label>Exclude from ARR</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

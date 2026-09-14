@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Approvers__c</fullName>
+    <externalId>false</externalId>
+    <formula>/*COE*/
+IF( AND ( SBQQ__PricebookId__c == &apos;01s7V000000NyMZQA0&apos;, Renewal_Roll_up_Amount__c &gt; 0 ,  SBQQ__NetAmount__c &gt; 0), &quot;COE, &quot;, &quot;&quot;) &amp;
+
+
+/*DEAL DESK APPROVER*/
+IF( SBQQ__PricebookId__c == &apos;01s7V000000NyMZQA0&apos; &amp;&amp;
+
+( AND( TEXT( End_User_Account__r.Type ) &lt;&gt; &quot;Customer&quot;, 
+Max_Quantity__c &lt; 500,
+Includes_TaaS_Bundle__c)) ||
+
+
+( AND( TEXT( End_User_Account__r.Type ) &lt;&gt; &quot;Customer&quot;, 
+Max_Quantity__c &lt; 300,
+Includes_On_Prem_Bundle__c)) ||
+
+Ignore_Partner_Margin__c || 
+Max_Bundle_Quantity__c &lt; 100 || 
+Max_Bundle_Quantity__c &gt; 10000 ||
+
+
+AND ( SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;, SBQQ__PricebookId__c &lt;&gt; &apos;01s0e000000NxxjAAC&apos;,
+
+(Renewal_Roll_up_Amount__c &gt; 0) || 
+
+((Account_Type__c == &quot;Prospect&quot; || 
+  Account_Type__c == &quot;Former Customer&quot;)) 
+
+&amp;&amp; Core_Quantity__c &lt; 10000)||
+TEXT(PaymentTypeNew__c)=&apos;Custom&apos; ||
+Payment_Term_Override__c||
+Max_Trial_Term_Rollup__c &gt; 6||
+Converge_Discount__c &gt; 0.50 ||
+Hardware_Discount__c &gt; 0.45 ||
+Account_Contracted_Price__c &gt; 0 || 
+Restricted_SKUs__c &gt; 0
+,  &quot;Deal Desk Approver, &quot;, &quot;&quot;) &amp; 
+
+
+
+
+
+/*ESO DISCOUNT EMEA*/
+IF( 
+ESR_Product_Discount__c &gt; 0.10, &quot;ESO RD, &quot;, &quot;&quot;) &amp;
+
+/*ESO DISCOUNT ALL*/
+IF( OR (
+ESR_Product_Discount__c &gt; 0.50,  Max_FOC_Term_Rollup__c &gt;0), &quot;Russ Slaten, &quot;, &quot;&quot;) &amp;
+
+/*DEAL DESK APPROVER LEAD*/
+IF( AND ( SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;, SBQQ__PricebookId__c &lt;&gt; &apos;01s0e000000NxxjAAC&apos;
+
+    ||
+  (Core_Quantity__c &lt; 10000 &amp;&amp; ( Account_Type__c == &quot;Prospect&quot; || Account_Type__c == &quot;Customer&quot; )) ||
+ ( No_of_End_Points_Quote_Score__c &gt; 50000)),
+&quot;Deal Desk Approver Lead, &quot;, &quot;&quot;) &amp;
+
+/*AVP*/
+IF(
+AND ( SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;, SBQQ__PricebookId__c &lt;&gt; &apos;01s0e000000NxxjAAC&apos; ) ||
+AND ( SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;, SBQQ__PricebookId__c &lt;&gt; &apos;01s0e000000NxxjAAC&apos;,  No_of_End_Points_Quote_Score__c &gt; 25000, No_of_End_Points_Quote_Score__c &lt;= 50000 ) ||
+AND ( SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;, SBQQ__PricebookId__c &lt;&gt; &apos;01s0e000000NxxjAAC&apos;,  No_of_End_Points_Quote_Score__c &gt; 50000),
+&quot;AVP Approver, &quot;, &quot;&quot;) &amp;
+
+&quot;&quot;</formula>
+    <inlineHelpText>Approvers required based on Customer size and Deal Score, as well as any non-standard elements. Please work with Deal Desk if &quot;Exec email approval&quot; is required</inlineHelpText>
+    <label>Quote Approvers</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

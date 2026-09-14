@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Start_Date_in_Opp_Fiscal_Year__c</fullName>
+    <formula>IF(AND(MONTH(Ruby__SubscriptionStartDate__c) = 1, YEAR(Ruby__SubscriptionStartDate__c) = YEAR(Quote.Opportunity.CloseDate)), TRUE, IF(AND(MONTH(Ruby__SubscriptionStartDate__c) &gt; 1, YEAR(Ruby__SubscriptionStartDate__c)+1 = YEAR(Quote.Opportunity.CloseDate)+1), TRUE, FALSE))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Start Date in Opp Fiscal Year</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

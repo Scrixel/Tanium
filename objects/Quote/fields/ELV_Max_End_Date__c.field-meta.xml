@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Max_End_Date__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Converted from a price-rule-stamped writable Date to a Roll-Up Summary: MAX of QuoteLineItem.Ruby__SubscriptionEndDate__c across lines where ELV_Include_in_Exit_ARR__c = true. Summarizes the Nue subscription end date rather than ELV_End_Date__c because that field is a cross-object formula and is not roll-up eligible; on all 76 Exit-ARR lines in Build the two agree exactly, and Ruby__SubscriptionEndDate__c is populated on every flagged line. The Exit-ARR filter also excludes a bad 3276-08-09 end date present on unflagged lines.</description>
+    <inlineHelpText>Latest subscription end date across the quote lines included in Exit ARR.</inlineHelpText>
+    <label>Max End Date</label>
+    <summarizedField>QuoteLineItem.Ruby__SubscriptionEndDate__c</summarizedField>
+    <summaryFilterItems>
+        <field>QuoteLineItem.ELV_Include_in_Exit_ARR__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

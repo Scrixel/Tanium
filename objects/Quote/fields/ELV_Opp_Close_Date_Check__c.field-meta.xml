@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Opp_Close_Date_Check__c</fullName>
+    <formula>IF( Opportunity.CloseDate &gt;= DATE(2019,08,13) , False, True)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Opp Close Date Check</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

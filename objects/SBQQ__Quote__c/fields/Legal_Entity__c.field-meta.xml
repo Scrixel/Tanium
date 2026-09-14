@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Entity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The Legal Entity is determined by the Bill To country attached to the Account (Partner for indirect quotes or Customer for direct quote). This is set for tax purposes. Please work with Sales Ops or Deal Desk for any changes to the Bill To country.</inlineHelpText>
+    <label>Legal Entity</label>
+    <referenceTo>Legal_Entity__c</referenceTo>
+    <relationshipLabel>Quotes</relationshipLabel>
+    <relationshipName>Quotes</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

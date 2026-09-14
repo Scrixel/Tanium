@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Promotion__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Product Promotion</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(((1 AND 2) OR (6 AND 7)) AND (3 OR 4 OR 5))</booleanFilter>
+        <filterItems>
+            <field>$Source.SBQQ__StartDate__c</field>
+            <operation>greaterOrEqual</operation>
+            <valueField>Product_Promotion__c.Start_Date__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SBQQ__StartDate__c</field>
+            <operation>lessOrEqual</operation>
+            <valueField>Product_Promotion__c.End_Date__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SBQQ__Product__c</field>
+            <operation>equals</operation>
+            <valueField>Product_Promotion__c.Promo_Product__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Product_Line__c</field>
+            <operation>equals</operation>
+            <valueField>Product_Promotion__c.Promo_Product_Line__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Product_Promotion__c.Type__c</field>
+            <operation>equals</operation>
+            <value>All</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SBQQ__StartDate__c</field>
+            <operation>greaterOrEqual</operation>
+            <valueField>Product_Promotion__c.Start_Date__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Product_Promotion__c.End_Date__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Product_Promotion__c</referenceTo>
+    <relationshipLabel>Quote Lines</relationshipLabel>
+    <relationshipName>Quote_Lines</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

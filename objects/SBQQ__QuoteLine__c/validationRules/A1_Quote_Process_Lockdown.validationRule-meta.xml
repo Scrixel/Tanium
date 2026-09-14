@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A1_Quote_Process_Lockdown</fullName>
+    <active>true</active>
+    <description>Should it be necessary to prevent one from updating a quote, assign the Order Processing Disabled for Maintenance custom permission to the appropriate profile(s) to block changes during the maintenance period.</description>
+    <errorConditionFormula>$Permission.Order_Processing_Disabled_for_Maintenance</errorConditionFormula>
+    <errorMessage>Quote and opportunity editing has been temporarily disabled while system changes are being made in support of the Partner rebate program. The system should be available again on July 7th, 2024 at 12:00 PM PT. Please check back at that time. Thanks!</errorMessage>
+</ValidationRule>

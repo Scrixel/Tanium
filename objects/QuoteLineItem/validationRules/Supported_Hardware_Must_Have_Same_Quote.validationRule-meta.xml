@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supported_Hardware_Must_Have_Same_Quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(ELV_Supported_Hardware_Line__c)),
+    QuoteId &lt;&gt; ELV_Supported_Hardware_Line__r.QuoteId,
+    NOT($Permission.DisableValidationRules),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+    $Profile.Name &lt;&gt; &quot;Tanium System Administrator&quot;
+)</errorConditionFormula>
+    <errorDisplayField>ELV_Supported_Hardware_Line__c</errorDisplayField>
+    <errorMessage>You can only associate a Support line with a Hardware line on the same Quote</errorMessage>
+</ValidationRule>

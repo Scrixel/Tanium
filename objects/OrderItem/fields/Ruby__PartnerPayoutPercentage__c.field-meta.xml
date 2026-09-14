@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__PartnerPayoutPercentage__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Partner margin or Partner Discount percentage at Line Level. Applied to Total Price. User-entered or tag-based.</description>
+    <inlineHelpText>Partner margin or Partner Discount percentage at Line Level. Applied to Total Price.</inlineHelpText>
+    <label>Partner Discount %</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>5</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

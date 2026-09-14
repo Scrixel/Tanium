@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__PluginPriceCalculationFields</fullName>
+    <description>Extra custom fields used for pricing calculation plugin.</description>
+    <label>Plugin Price Calculation Fields</label>
+</FieldSet>

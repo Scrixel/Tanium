@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiration_Date_cannot_exceed_limit</fullName>
+    <active>false</active>
+    <description>Expiration Date may not be after the Expiration Date Limit. Deactivating per recommendation of Alizae as this field is managed in the Required for Approval flow.</description>
+    <errorConditionFormula>AND(
+   NOT(ISNEW()),
+   NOT(ISBLANK(Expiration_Date_Limit__c)),
+   SBQQ__ExpirationDate__c &gt; Expiration_Date_Limit__c,
+   NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>Expiration Date may not exceed Expiration Date Limit</errorMessage>
+</ValidationRule>

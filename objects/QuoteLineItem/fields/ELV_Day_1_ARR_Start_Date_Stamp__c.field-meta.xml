@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Day_1_ARR_Start_Date_Stamp__c</fullName>
+    <description>TNCI-206 / ELV-DM-010 Layer 2. Stored copy of Quote.ELV_Day_1_ARR_Start_Date__c, written by ELV_Day1ARRStampHelper from the Quote after-update trigger. A cross-object formula cannot be used as roll-up summary filter criteria; this field can. Correctness is guaranteed by the trigger, not by the platform, so it is paired with ELV_Day_1_ARR_Start_Date_Drift__c.</description>
+    <inlineHelpText>Day 1 ARR start date copied from the parent quote by automation. Do not edit manually.</inlineHelpText>
+    <label>Day 1 ARR Start Date (Stamp)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

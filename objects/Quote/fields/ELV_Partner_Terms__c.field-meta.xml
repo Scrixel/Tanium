@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Partner_Terms__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BillingName=&quot;Optiv Security Inc (Partner)&quot;,&quot;Optiv&quot;, IF(BillingName=&quot;Hewlett-Packard Enterprise (HPE)&quot;,&quot;HPE&quot;, IF(BillingName=&quot;GuidePoint Security (Partner)&quot;,&quot;Guidepoint&quot;, IF(BillingName &lt;&gt;  ShippingName &amp;&amp; ISPICKVAL (ELV_Payment_Schedule__c,&quot;UpFront&quot;),&quot;Standard Reseller&quot;, IF(BillingName &lt;&gt;  ShippingName &amp;&amp; ISPICKVAL (ELV_Payment_Schedule__c,&quot;Installments&quot;),&quot;Annualized Reseller&quot;,&quot;&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Partner Terms</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

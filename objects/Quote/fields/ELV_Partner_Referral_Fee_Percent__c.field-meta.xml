@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Partner_Referral_Fee_Percent__c</fullName>
+    <formula>IF(ELV_Day_1_ARR_Unadjusted_Rollup__c = 0, 0, ELV_Partner_Referral_Fee_Dollars__c/ELV_Day_1_ARR_Unadjusted_Rollup__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Partner Referral Fee (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>p_Customer_Discount__c</fullName>
+    <description>Display only in Quote Line Editor.</description>
+    <formula>/* 1 - (  SBQQ__CustomerPrice__c /  SBQQ__ProratedListPrice__c ) */
+
+IF(
+AND(
+SBQQ__Quote__r.SBQQ__PriceBook__r.Name &lt;&gt; &apos;MSP Pricebook&apos;,
+TEXT( Product_Group__c ) &lt;&gt; &apos;Hardware&apos;,
+SBQQ__Bundle__c),  
+
+1-( Customer_Net_Price__c /  Prorated_List_Price__c   ),
+1 - (  SBQQ__CustomerPrice__c /  SBQQ__ProratedListPrice__c )) 
+
+
+
+
+/*IF(TEXT(Product_Group__c) = &apos;Hardware&apos;, (SBQQ__PackageListTotal__c - Total_Customer_Price__c) / SBQQ__PackageListTotal__c,
+  IF(
+   AND(
+     SBQQ__Quote__r.SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;,
+     SBQQ__Bundle__c), 1-( Customer_Net_Price__c /  Prorated_List_Price__c   ), 1 - (  SBQQ__CustomerPrice__c /  SBQQ__ProratedListPrice__c )))
+*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Customer Discount (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

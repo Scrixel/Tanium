@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Bundle__c</fullName>
+    <description>Indicates whether this line item represents a package; meaning, it includes other line items in this quote.</description>
+    <formula>IF( ISPICKVAL(Product2.Ruby__ProductRecordType__c, &quot;Bundle&quot;), TRUE, FALSE )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Package</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

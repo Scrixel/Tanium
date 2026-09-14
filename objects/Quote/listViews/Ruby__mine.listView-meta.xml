@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__mine</fullName>
+    <columns>QUOTE.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>QUOTE.ISSYNCING</columns>
+    <columns>QUOTE.EXPIRATIONDATE</columns>
+    <columns>Ruby__Subtotal__c</columns>
+    <columns>Ruby__TotalAmount__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Quotes</label>
+</ListView>

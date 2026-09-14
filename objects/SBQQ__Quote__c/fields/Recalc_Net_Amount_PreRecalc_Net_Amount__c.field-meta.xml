@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recalc_Net_Amount_PreRecalc_Net_Amount__c</fullName>
+    <description>This is a temporary field. It can be deleted after 14 days (3/17/2023)</description>
+    <formula>SBQQ__NetAmount__c = Net_Amount_prior_to_March_3_ARR_recalc__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Does the Net Amount of the quote following the ARR Recalc on March 3 equal the previous cached value?</inlineHelpText>
+    <label>Recalc Net Amount = PreRecalc Net Amount</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

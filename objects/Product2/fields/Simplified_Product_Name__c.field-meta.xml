@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Simplified_Product_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case(Name, 
+
+
+
+&quot;Tanium Client &amp; Server - Annual Perpetual Support &amp; Maintenance&quot;, &quot;00. Core Platform&quot;,
+&quot;Tanium Client &amp; Server- Subscription&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Connect &amp; API Support - Annual Perpetual Support &amp; Maintenance&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Connection Manager&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Connection Manager - Perpetual Maintenance and Support-Monthly&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Core Limited Platform - Annual Perpetual Support &amp; Maintenance&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Core Limited Platform - Subscription&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Core Platform - Annual Perpetual Support &amp; Maintenance&quot;,&quot;00. Core Platform&quot;,
+&quot;Tanium Core Platform - Subscription&quot;,&quot;00. Core Platform&quot;,
+
+&quot;Tanium Patch - Subscription&quot;,&quot;01. Patch&quot;,
+&quot;Tanium Patch - Annual Perpetual Support &amp; Maintenance&quot;,&quot;01. Patch&quot;,
+
+&quot;Tanium IOC Detect - Annual Perpetual Support &amp; Maintenance&quot;,&quot;02. Detect&quot;,
+&quot;Tanium IOC Detect - Subscription&quot;,&quot;02. Detect&quot;,
+&quot;Tanium IOC Funnel - Perpetual Maintenance and Support&quot;,&quot;02. Detect&quot;,
+&quot;Tanium IOC Funnel - Subscription (Includes Maintenance and Support)&quot;,&quot;02. Detect&quot;,
+
+&quot;Tanium Discover - Annual Perpetual Support &amp; Maintenance&quot;,&quot;03. Discover&quot;,
+&quot;Tanium Discover - Subscription&quot;,&quot;03. Discover&quot;,
+
+&quot;Tanium Incident Response - Subscription&quot;,&quot;04. IR&quot;,
+&quot;Tanium Incident Response - Annual Perpetual Support &amp; Maintenance&quot;,&quot;04. IR&quot;,
+
+&quot;Tanium Trace - Perpetual Support &amp; Maintenance&quot;,&quot;05. Trace&quot;,
+&quot;Tanium Trace - Subscription&quot;,&quot;05. Trace&quot;,
+
+&quot;Tanium Protect - Subscription&quot;,&quot;06. Protect&quot;,
+
+&quot;Tanium Comply - Subscription&quot;,&quot;07. Comply&quot;, 
+
+&quot;Tanium Integrity Monitor - Subscription&quot;,&quot;08. Integrity Monitor&quot;,
+
+&quot;Tanium Asset - Subscription&quot;, &quot;9. Asset&quot;, 
+
+&quot;Tanium Module ELA - Annual Perpetual Support &amp; Maintenance&quot;,&quot;Suite. ELA&quot;,
+&quot;Tanium Module ELA – Subscription: Year 1 Pricing&quot;,&quot;Suite. ELA&quot;,
+&quot;Tanium Security Suite - Subscription&quot;,&quot;Suite. Security Suite&quot;,
+&quot;Tanium Threat Response - Subscription&quot;,&quot;Suite. Threat Response&quot;,
+
+&quot;Suite&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Simplified Product Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

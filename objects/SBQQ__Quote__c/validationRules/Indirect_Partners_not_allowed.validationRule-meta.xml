@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indirect_Partners_not_allowed</fullName>
+    <active>false</active>
+    <description>SS-10556 - Quotes cannot be saved with Indirect Partners as the Downstream Reseller for Marketplace quotes.  Disabled temporarily while COE and Quoting Ops sort out the exception process.</description>
+    <errorConditionFormula>AND(
+Marketplace_Partner__c = TRUE,
+TEXT(Downstream_Reseller__r.Sales_Model__c) = &quot;Indirect&quot;,
+NOT(CONTAINS($Profile.Name, &quot;Integration&quot;)),
+NOT($Permission.DisableValidationRules)
+
+)</errorConditionFormula>
+    <errorMessage>Quotes cannot be saved with Indirect Partners as the Downstream Reseller for Marketplace quotes. Please contact Quoting Ops for assistance.</errorMessage>
+</ValidationRule>

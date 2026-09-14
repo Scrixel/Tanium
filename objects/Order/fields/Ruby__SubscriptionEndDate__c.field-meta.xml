@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__SubscriptionEndDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Subscription End Date, which is defaulted to the Subscription Start Date plus the Term (in Month). It is typically calculated automatically from Start Date and Subscription Term. In the Co-Term scenario, the Subscription Term is automatically calculated when the End Date is changed.</description>
+    <inlineHelpText>The Subscription End Date, which is defaulted to the Subscription Start Date plus the Term (in Month). It is typically calculated automatically from Start Date and Subscription Term. In the Co-Term scenario, the Subscription Term is automatically calculated when the End Date is changed.</inlineHelpText>
+    <label>End Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

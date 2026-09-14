@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_CreatedBy_Formula__c</fullName>
+    <formula>OR(Quote.CreatedBy.Alias =&quot;khind&quot; ,CreatedBy.Username=&quot;cpqdev@tanium.com&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CreatedBy Formula</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

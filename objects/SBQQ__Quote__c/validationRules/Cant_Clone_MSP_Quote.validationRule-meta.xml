@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Clone_MSP_Quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCLONE(),
+    SBQQ__PriceBook__r.Name = &apos;MSP Pricebook&apos;,
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>The quote you&apos;re trying to clone is on the MSP Pricebook, which is no longer active. Please go to the Opportunity and create a New Quote.</errorMessage>
+</ValidationRule>

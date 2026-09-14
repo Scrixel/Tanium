@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Sales_ARR_greater_than_Exit_ARR__c</fullName>
+    <formula>ROUND(ELV_Day_1_ARR_Unadjusted_Rollup__c,2) &gt; ROUND(ELV_Exit_ARR_Unadjusted_Rollup__c, 2)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales ARR greater than Exit ARR</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

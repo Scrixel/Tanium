@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Day_1_ARR_Start_Date__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Converted from writable Date to Formula. Cross-object reference to Quote.ELV_Day_1_ARR_Start_Date__c, where the cascade logic lives. Every quote in the CPQ regression population carried a single distinct Day 1 date across its lines, so deriving the line value from the quote loses no information. Note: as a cross-object formula this field cannot be used as roll-up summary filter criteria.</description>
+    <formula>Quote.ELV_Day_1_ARR_Start_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Day 1 ARR start date, derived from the parent quote.</inlineHelpText>
+    <label>Day 1 ARR Start Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

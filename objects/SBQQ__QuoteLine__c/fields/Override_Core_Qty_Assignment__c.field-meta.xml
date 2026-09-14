@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override_Core_Qty_Assignment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to override a price rule that auto sets quantity for Core and Discover  to match the max quantity for any MSP bundle being sold.</description>
+    <inlineHelpText>Checkbox to override a price rule that auto sets quantity for Core and Discover  to match the max quantity for any MSP bundle being sold.</inlineHelpText>
+    <label>Override Core Qty Assignment</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

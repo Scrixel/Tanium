@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_ARR_Amount_Prorate_Multiplier__c</fullName>
+    <description>TNCI-139 / ELV-CPQ-036. Prorate-multiplier variant of ELV_ARR_Amount__c. Step 1: exclusion gate repointed to line-local ELV_Product_Exclude_from_ARR__c. Step 2: pricing-schedule test repointed from ISBLANK(ELV_Tanium_Pricing_Schedule__c) to the stored checkbox ELV_Has_Tanium_Pricing_Schedule__c so no lookup reference remains and the formula is deterministic for roll-up summarization. Logic unchanged; checkbox maintained by ELV_QuoteLineTriggerUtility before insert/update.</description>
+    <formula>IF( OR( ELV_Product_Exclude_from_ARR__c, ELV_Exclude_from_ARR__c, ISPICKVAL( Ruby__LineType__c, &quot;SummaryItem&quot; ), ELV_ProrateMultiplier__c = 0 ), 0.00, IF( ELV_Has_Tanium_Pricing_Schedule__c, ( ELV_Unit_Price_Variance__c * Ruby__ActualQuantity__c ) / ELV_ProrateMultiplier__c, ( Ruby__NetSalesPrice__c * Ruby__ActualQuantity__c ) / ELV_ProrateMultiplier__c ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Annualized line amount. 0.00 when excluded from ARR or on a Summary Item.</inlineHelpText>
+    <label>ARR Amount (Prorate Multiplier)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

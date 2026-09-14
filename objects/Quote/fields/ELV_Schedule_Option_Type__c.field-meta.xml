@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Schedule_Option_Type__c</fullName>
+    <label>Schedule Option Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stand Alone EULA</fullName>
+                <default>false</default>
+                <label>Stand Alone EULA</label>
+            </value>
+            <value>
+                <fullName>MLA</fullName>
+                <default>false</default>
+                <label>MLA</label>
+            </value>
+            <value>
+                <fullName>EULA</fullName>
+                <default>false</default>
+                <label>EULA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

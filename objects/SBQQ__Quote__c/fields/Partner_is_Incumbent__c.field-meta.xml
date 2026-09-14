@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_is_Incumbent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Implemented as a part of the MSP Simplification and FY25 Partner Redesign projects. Jira ticket SS-7904</description>
+    <inlineHelpText>When this box is checked, it indicates that the partner is the incumbent (meaning that they were the partner of record on the previous quote)</inlineHelpText>
+    <label>Partner is Incumbent</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

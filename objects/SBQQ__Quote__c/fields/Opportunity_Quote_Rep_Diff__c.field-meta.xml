@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Quote_Rep_Diff__c</fullName>
+    <description>Box is checked if the Opportunity Owner and Sales Rep on Quote is different. Used as a flag in missing for submission.</description>
+    <formula>SBQQ__Opportunity2__r.Owner.Full_Name__c != SBQQ__SalesRep__r.Full_Name__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Opportunity &amp; Quote Rep Diff</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Limited_Use_Only__c</fullName>
+    <label>Limited Use Only</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Operations Use Only</fullName>
+                <default>false</default>
+                <label>Operations Use Only</label>
+            </value>
+            <value>
+                <fullName>Security Use Only</fullName>
+                <default>false</default>
+                <label>Security Use Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

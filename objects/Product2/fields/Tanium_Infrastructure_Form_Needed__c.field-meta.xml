@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Infrastructure_Form_Needed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if a Tanium Infrastructure Form is required for this product. Ref INC0455542.</description>
+    <label>Tanium Infrastructure Form Needed</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

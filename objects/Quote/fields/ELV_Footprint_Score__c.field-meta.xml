@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Footprint_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Opportunity.Account.Tanium_Derived_EP_WF__c =0,0,IF( ELV_No_of_End_Points_Quote_Score__c / Opportunity.Account.Tanium_Derived_EP_WF__c &lt; 0.25,1,IF( ELV_No_of_End_Points_Quote_Score__c / Opportunity.Account.Tanium_Derived_EP_WF__c &lt; 0.5,2,IF( ELV_No_of_End_Points_Quote_Score__c / Opportunity.Account.Tanium_Derived_EP_WF__c &lt; 0.75,3,4))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Footprint Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

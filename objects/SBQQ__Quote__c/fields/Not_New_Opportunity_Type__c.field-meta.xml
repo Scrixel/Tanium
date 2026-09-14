@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_New_Opportunity_Type__c</fullName>
+    <formula>IF( 
+NOT( 
+
+(ISPICKVAL( SBQQ__Opportunity2__r.Type, &quot;New Customer&quot;)))&amp;&amp;
+(Do_Not_Show_Dates__c = True),TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>if opportunity is New customer and do not show date = True  then this is true</inlineHelpText>
+    <label>Not New Opportunity Type?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

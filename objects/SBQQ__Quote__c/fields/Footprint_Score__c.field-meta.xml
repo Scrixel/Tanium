@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Footprint_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( SBQQ__Account__r.Tanium_Derived_EP_WF__c =0,0,IF( No_of_End_Points_Quote_Score__c / SBQQ__Account__r.Tanium_Derived_EP_WF__c  &lt; 0.25,1,IF( (No_of_End_Points_Quote_Score__c )/  SBQQ__Account__r.Tanium_Derived_EP_WF__c  &lt; 0.50,2,IF( (No_of_End_Points_Quote_Score__c)/  SBQQ__Account__r.Tanium_Derived_EP_WF__c  &lt; 0.75,3,4))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Footprint % - Ratio of Seats Purchased to Tanium Derived Estimated Endpoints</inlineHelpText>
+    <label>Footprint Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

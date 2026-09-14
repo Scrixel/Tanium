@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zApproval_Reason__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND ( SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;, OR(ISPICKVAL(SBQQ__Opportunity2__r.Type, &quot;Renewal&quot;),Renewal_Roll_up_Amount__c &gt; 0)), &quot;MSP Renewal;&quot;, &quot;&quot;) &amp;
+
+IF(AND(SBQQ__PricebookId__c &lt;&gt; &apos;01s7V000000NyMZQA0&apos;,OR(Total_ESR_Discount__c &gt; 0,Total_Hardware_Discount__c &gt; 0, Total_Training_Discount__c &gt; 0)),&quot;Non-software Score;&quot;, &quot;&quot;) &amp;
+
+IF(AND(SBQQ__PricebookId__c= &apos;01s7V000000NyMZQA0&apos;,Ignore_Partner_Margin__c = TRUE),&quot;Non-standard MSP discounting;&quot;, &quot;&quot;) &amp;
+
+
+IF( Partner_Discretionary_Discount__c = True, &quot;Partner Discretionary Discount;&quot;, &quot;&quot;)&amp;
+
+IF( AND(OR(AND(ADI_SKU_Count__c &gt; 0 &amp;&amp; ADI_SKU_Count__c &lt; 2500,SDM_SKU_Count__c &gt; 0 &amp;&amp; SDM_SKU_Count__c &lt; 2500),
+AND(SCRM_SKU_Count__c &gt; 0, SCRM_SKU_Count__c &lt;5000)),
+AND(OR(Account_Type__c = &quot;Prospect&quot;, Account_Type__c = &quot;Former Customer&quot;),Sales_Ops_Derived_EP__c &lt; 10000)),&quot;Below Bundle EP Minimum;&quot;, &quot;&quot;) &amp;
+
+IF( OR (AND( SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;,    
+TEXT( End_User_Account__r.Type )  &lt;&gt; &quot;Customer&quot;, TEXT(Deployment_Method__c)= &quot;Taas&quot;, 
+Max_Quantity__c &lt; 500), AND ( SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;,    
+TEXT( End_User_Account__r.Type )  &lt;&gt; &quot;Customer&quot;, TEXT(Deployment_Method__c)&lt;&gt; &quot;Taas&quot;, 
+Max_Quantity__c &lt; 300),AND(SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;,Max_Quantity__c &lt; 100)), &quot;Below EP Minimum;&quot;, &quot;&quot;) &amp;
+
+IF(AND(SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;,Max_Quantity__c &gt; 10000 ), &quot;MSP over 10k EPs&quot;, &quot;&quot;) &amp;
+
+IF(AND(SBQQ__PricebookId__c = &apos;01s7V000000NyMZQA0&apos;,OR(Renewal_Roll_up_Amount__c &gt; 0, TEXT(SBQQ__Opportunity2__r.Type)= &quot;Renewal&quot;)), &quot;Renewal Opportunity&quot;, &quot;&quot;) &amp;
+
+IF(TEXT(PaymentTypeNew__c)=&apos;Custom&apos;,&quot;Custom Billing;&quot;, &quot;&quot;) &amp;
+IF(Opportunity_Type__c = &quot;Consulting&quot;,&quot;Consulting SKU;&quot;, &quot;&quot;) &amp;
+
+IF(BurstingCount__c &gt;=1,&quot;Burst Product;&quot;, &quot;&quot;) &amp;
+
+IF(FOC_Count__c &gt;=1 ,&quot;Free of Charge Product;&quot;, &quot;&quot; )&amp;
+
+IF(Max_Trial_Term_Rollup__c &gt; 6, &quot;Trial Term greater than 6 mos;&quot;,&quot;&quot;) &amp;
+IF(Restricted_SKUs__c &gt; 0,&quot;Contains Restricted SKU;&quot;, &quot;&quot; )&amp;
+IF(Payment_Term_Override__c = TRUE,&quot;Payment Term Override;&quot;, &quot;&quot;)&amp;
+IF(Account_Contracted_Price__c &gt; 0,&quot;Account has Contractual Pricing;&quot;, &quot;&quot; )&amp;
+
+IF(((No_of_End_Points_Quote_Score__c &lt;= 20000 &amp;&amp; Chronicle_Discount__c &gt;= 0.35)
+||
+(No_of_End_Points_Quote_Score__c &gt; 20000 &amp;&amp; No_of_End_Points_Quote_Score__c &lt;= 100000 &amp;&amp; Chronicle_Discount__c &gt;= 0.55) 
+||
+(No_of_End_Points_Quote_Score__c &gt; 100000 &amp;&amp; Chronicle_Discount__c &gt;= 0.60)),&quot;Chronicle Discount;&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Non-Standard quote elements requiring Deal Desk to approve</inlineHelpText>
+    <label>DEPRECATED - Approval Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

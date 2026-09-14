@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSP_Bundles__c</fullName>
+    <formula>IF( OR( 
+MSP_Eligible_Bundle__c, 
+INCLUDES(Eligible_Business_Motions__c, &quot;MSP&quot;)), true, false)</formula>
+    <label>MSP Bundles</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Changed_Subscription__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Subscription that this change-order quote line is changing. Populated from the Nue Change Asset ID on the summary line (SUB-&lt;number&gt;_&lt;version&gt;).</description>
+    <inlineHelpText>Subscription that this change-order quote line is changing. Populated from Nue Change Asset ID on the summary line.</inlineHelpText>
+    <label>Changed Subscription</label>
+    <referenceTo>Ruby__Subscription__c</referenceTo>
+    <relationshipLabel>Changed Quote Lines</relationshipLabel>
+    <relationshipName>Changed_Quote_Lines</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

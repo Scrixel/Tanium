@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Program_Tier__c</fullName>
+    <description>Implemented as a part of the MSP Simplification and FY25 Partner Redesign projects. Jira ticket SS-7904</description>
+    <inlineHelpText>The Program Tier is inherited from the partner’s account record. It dictates the discount(s) for which the partner is available</inlineHelpText>
+    <label>Partner Program Tier</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Partner_Program_Tier</valueSetName>
+    </valueSet>
+</CustomField>

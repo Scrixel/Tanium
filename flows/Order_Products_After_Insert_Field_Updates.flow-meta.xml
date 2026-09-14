@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Tax_Code_NS_is_Blank_on_Order_Products</name>
+        <label>Tax_Code_NS_is_Blank_on_Order_Products</label>
+        <locationX>1230</locationX>
+        <locationY>687</locationY>
+        <actionName>OrderItem.Tax_Code_NS_is_Blank_on_Order_Products</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>OrderItem.Tax_Code_NS_is_Blank_on_Order_Products</nameSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Tax_Code_NS_Null</name>
+        <label>Tax Code NS Null?</label>
+        <locationX>1007</locationX>
+        <locationY>691</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Tax_Code_NS__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tax_Code_NS_is_Blank_on_Order_Products</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Will perform actions on a Order Product record after it&apos;s been inserted/saved
+2/27/23: Adding Email alert for when Tax Code NS is blank.
+4/4/23: Adding last two lines in formula to update NS Tax Code field</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TaxCodeNSFormula</name>
+        <dataType>String</dataType>
+        <expression>IF({!$Record.Order.ShippingCountry} = &quot;Canada&quot;, &quot;AVATAX-CAN&quot;,
+IF({!$Record.Order.Subsidiary_NS__c} = &quot;1&quot;, &quot;AVATAX&quot;,
+IF({!$Record.Order.Subsidiary_NS__c} = &quot;15&quot;, &quot;AVATAX&quot;,
+IF({!$Record.Order.BillingCountry} = &quot;UK&quot;, &quot;VAT:S-GB&quot;,
+IF({!$Record.Order.BillingCountry} = &quot;United Kingdom&quot;, &quot;UNDEF&quot;,
+IF({!$Record.Order.Subsidiary_NS__c} = &quot;7&quot;, &quot;VAT:UNDEF-MT&quot;,
+IF({!$Record.Order.Subsidiary_NS__c} = &quot;18&quot;, &quot;VAT:UNDEF-NL&quot;,
+&quot;VAT:O-GB&quot;)))))))</expression>
+    </formulas>
+    <interviewLabel>Order Products - After Insert - Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order Products - After Insert - Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Order_Products</name>
+        <label>Update Order Products</label>
+        <locationX>1015</locationX>
+        <locationY>463</locationY>
+        <connector>
+            <targetReference>Tax_Code_NS_Null</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Tax_Code_NS__c</field>
+            <value>
+                <elementReference>TaxCodeNSFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>888</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Update_Order_Products</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>OrderItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

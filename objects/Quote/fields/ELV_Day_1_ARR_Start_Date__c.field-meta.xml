@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Day_1_ARR_Start_Date__c</fullName>
+    <description>TNCI-206 / ELV-DM-010. Converted from writable Date to Formula. Collapses the four active CPQ price rules that stamped Day_1_ARR_Start_Date__c into their evaluation-order cascade: override, renewal expiration, renewal latest start, then earliest ARR-eligible start with an unfiltered MIN fallback. Validated against the full CPQ population: 97.24 percent exact match on 103,274 quotes, rising to 99.24 percent on quotes recalculated in 2026; residual mismatches are stale stamps.</description>
+    <formula>IF( NOT( ISBLANK( ELV_Sales_ARR_Start_Date_Override__c ) ),
+    ELV_Sales_ARR_Start_Date_Override__c,
+IF( NOT( ISBLANK( ELV_Renewal_Expiration_Date__c ) ),
+    ELV_Renewal_Expiration_Date__c,
+IF( ELV_Renewal_Line_Count__c &gt;= 1,
+    ELV_Renewal_Latest_Start_Date__c,
+    BLANKVALUE( ELV_Min_Start_Date_ARR_Eligible_Lines__c, ELV_All_Lines_Min_Start_Date__c ) )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Day 1 ARR start date for this quote, derived from the quote lines.</inlineHelpText>
+    <label>Sales ARR Start Date Unadjusted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

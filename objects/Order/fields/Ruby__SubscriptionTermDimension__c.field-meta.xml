@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__SubscriptionTermDimension__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Subscription Term Dimension</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Month</fullName>
+                <default>false</default>
+                <label>Month</label>
+            </value>
+            <value>
+                <fullName>Year</fullName>
+                <default>false</default>
+                <label>Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

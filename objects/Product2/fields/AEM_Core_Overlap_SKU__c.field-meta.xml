@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AEM_Core_Overlap_SKU__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Leveraged in Price and Product Rules for mapping legacy SKUs to new AEM Solutions. SS-10578</description>
+    <label>AEM Core Overlap SKU</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

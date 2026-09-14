@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ID_Matches_Primary_Quote_on_Opp__c</fullName>
+    <description>Administrative field used for data maintenance/integrity checks. Allows for quick queries to check for FALSE when Primary quote is TRUE, like below.
+
+SELECT id, name, sbqq__primary__c, sbqq__opportunity2__c, sbqq__opportunity2__r.name, sbqq__opportunity2__r.SBQQ__PrimaryQuote__c, sbqq__opportunity2__r.SBQQ__PrimaryQuote__r.name FROM sbqq__quote__c WHERE SBQQ__Primary__c = TRUE AND ID_Matches_Primary_Quote_on_Opp__c = FALSE AND sbqq__opportunity2__r.SBQQ__PrimaryQuote__c != null</description>
+    <formula>IF (AND(SBQQ__Primary__c, Id = SBQQ__Opportunity2__r.SBQQ__PrimaryQuote__c), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ID Matches Primary Quote on Opp</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

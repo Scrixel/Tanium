@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_la_carte_Required_SKUs__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This SKU is Required for a-la-carte purchases.</description>
+    <label>A-la-carte Required SKUs</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

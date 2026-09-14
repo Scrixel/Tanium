@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provide_Reason_for_ARR_Adjustment</fullName>
+    <active>false</active>
+    <description>Users are required to provide a reason for why they entered an ARR Adjustment</description>
+    <errorConditionFormula>AND(
+   NOT($Permission.DisableValidationRules),
+   NOT(ISCHANGED( ARR_Adjustment_Reason__c)),
+   OR(
+      ISCHANGED(ARR_Adjustment__c),
+      ISCHANGED(Exit_ARR_Adjustment__c)
+   )
+)</errorConditionFormula>
+    <errorDisplayField>ARR_Adjustment_Reason__c</errorDisplayField>
+    <errorMessage>When an adjustment to ARR is made, a reason for the adjustment must be provided</errorMessage>
+</ValidationRule>

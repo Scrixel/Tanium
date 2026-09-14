@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Discount_Justification__c</fullName>
+    <description>Field requested by the Deal Desk team to help streamline the quote process. Jira ticket SS-5709</description>
+    <inlineHelpText>Please select a reason for the pricing/discounting that is being requested. This field will need to be populated before the quote can be submitted for approval</inlineHelpText>
+    <label>Pricing/Discount Justification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Budgeting</fullName>
+                <default>false</default>
+                <label>Budgeting</label>
+            </value>
+            <value>
+                <fullName>Churn Risk</fullName>
+                <default>false</default>
+                <label>Churn Risk</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Historical Discount</fullName>
+                <default>false</default>
+                <label>Historical Discount</label>
+            </value>
+            <value>
+                <fullName>Land and Expand</fullName>
+                <default>false</default>
+                <label>Land and Expand</label>
+            </value>
+            <value>
+                <fullName>Quarterly BAFO</fullName>
+                <default>false</default>
+                <label>Quarterly BAFO</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

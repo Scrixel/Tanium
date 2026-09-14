@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_Products__c</fullName>
+    <inlineHelpText>Select &quot;Free Products“ that are provided at no charge for the &quot;Free Product Period&quot; and enter zero dollar line item entry in Quote Line Items for each product</inlineHelpText>
+    <label>Free Products (FOC)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tanium Core</fullName>
+                <default>false</default>
+                <label>Tanium Core</label>
+            </value>
+            <value>
+                <fullName>Tanium Security Suite</fullName>
+                <default>false</default>
+                <label>Tanium Security Suite</label>
+            </value>
+            <value>
+                <fullName>Tanium Threat Response</fullName>
+                <default>false</default>
+                <label>Tanium Threat Response</label>
+            </value>
+            <value>
+                <fullName>Tanium Comply</fullName>
+                <default>false</default>
+                <label>Tanium Comply</label>
+            </value>
+            <value>
+                <fullName>Tanium IM</fullName>
+                <default>false</default>
+                <label>Tanium IM</label>
+            </value>
+            <value>
+                <fullName>Tanium Protect</fullName>
+                <default>false</default>
+                <label>Tanium Protect</label>
+            </value>
+            <value>
+                <fullName>Tanium Discover</fullName>
+                <default>false</default>
+                <label>Tanium Discover</label>
+            </value>
+            <value>
+                <fullName>Tanium Patch</fullName>
+                <default>false</default>
+                <label>Tanium Patch</label>
+            </value>
+            <value>
+                <fullName>Tanium Training</fullName>
+                <default>false</default>
+                <label>Tanium Training</label>
+            </value>
+            <value>
+                <fullName>Tanium Premium Support</fullName>
+                <default>false</default>
+                <label>Tanium Premium Support</label>
+            </value>
+            <value>
+                <fullName>Tanium Trace</fullName>
+                <default>false</default>
+                <label>Tanium Trace</label>
+            </value>
+            <value>
+                <fullName>IR</fullName>
+                <default>false</default>
+                <label>Tanium Incident Response</label>
+            </value>
+            <value>
+                <fullName>IOC Detect</fullName>
+                <default>false</default>
+                <label>Tanium IOC Detect</label>
+            </value>
+            <value>
+                <fullName>Tanium Asset</fullName>
+                <default>false</default>
+                <label>Tanium Asset</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Tanium Deploy</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Tanium Map</fullName>
+                <default>false</default>
+                <label>Tanium Map</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

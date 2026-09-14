@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__PriceTagSnapshot__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A JSON Representation of price tags snapshot for the order item.</description>
+    <inlineHelpText>A JSON Representation of price tags snapshot for the order item.</inlineHelpText>
+    <label>Price Tag Snapshot</label>
+    <length>32000</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

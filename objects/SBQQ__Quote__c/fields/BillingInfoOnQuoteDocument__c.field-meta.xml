@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BillingInfoOnQuoteDocument__c</fullName>
+    <description>Used to show Billing Info in Quote PDF when Generate Document button is clicked on Quote. This field is updated via code.</description>
+    <inlineHelpText>Used to show in Quote PDF when Generate Document button is clicked on Quote</inlineHelpText>
+    <label>Billing Info On Quote Document</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

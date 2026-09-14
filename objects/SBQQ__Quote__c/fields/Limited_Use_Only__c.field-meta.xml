@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limited_Use_Only__c</fullName>
+    <description>Renamed to Security Use Only</description>
+    <inlineHelpText>Required when quoting Core Limited. Select the use restrictions - Security / Incident Response OR Operations (with Patch,  Asset, Deploy, and Discover modules)</inlineHelpText>
+    <label>Limited Use Only</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Operations Use Only</fullName>
+                <default>false</default>
+                <label>Operations Use Only</label>
+            </value>
+            <value>
+                <fullName>Security Use Only</fullName>
+                <default>false</default>
+                <label>Security Use Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

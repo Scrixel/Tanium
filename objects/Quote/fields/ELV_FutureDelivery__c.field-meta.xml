@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_FutureDelivery__c</fullName>
+    <formula>Ruby__SubscriptionStartDate__c -  TODAY() &gt; 15</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Future Delivery</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IncludeInSeatsPurchased__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>indicates whether it should be included in the Seats Purchased calculation</description>
+    <inlineHelpText>indicates whether it should be included in the Seats Purchased calculation</inlineHelpText>
+    <label>Include in Seats Purchased</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

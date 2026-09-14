@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Marketplace_Exit_ARR_Impact__c</fullName>
+    <description>TNCI-139 / ELV-CPQ-036. REVERTED 2026-08-20 to the original CPQ-equivalent arithmetic, for the reason recorded on ELV_Marketplace_Day_1_ARR_Impact__c: Salesforce evaluates a Percent field in a formula as a fraction, so the /100 divisor added on 2026-08-19 understated the impact by 100x. This field now matches CPQ Marketplace_Exit_ARR_Impact__c verbatim, as it did originally.</description>
+    <formula>ELV_Exit_ARR_Unadjusted_Rollup__c * ELV_Marketplace_ARR_Impact_Percent__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marketplace Exit ARR Impact</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

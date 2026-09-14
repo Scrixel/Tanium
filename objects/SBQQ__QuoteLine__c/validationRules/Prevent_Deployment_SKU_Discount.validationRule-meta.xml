@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Deployment_SKU_Discount</fullName>
+    <active>false</active>
+    <description>Only DD/COE can apply Discount to Deployment SKU (TAN-ESR-DEPLMT-EE)</description>
+    <errorConditionFormula>AND( OR( ISCHANGED ( SBQQ__Discount__c ), (ISNEW() &amp;&amp; SBQQ__Discount__c &gt;0) ),
+SBQQ__ProductCode__c == &apos;TAN-ESR-DEPLMT-EE&apos;,
+$User.ProfileId &lt;&gt; &apos;00e60000001FUqR&apos;
+
+)</errorConditionFormula>
+    <errorMessage>No additional discount can be applied to ESR Deployment Services without prior approval. If an accredited partner can not support the implementation, please email eso@tanium.com for ESR pricing approval. If approved, contact COE to discount.</errorMessage>
+</ValidationRule>

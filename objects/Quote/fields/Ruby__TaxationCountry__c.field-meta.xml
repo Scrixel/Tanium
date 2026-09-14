@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TaxationCountry__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Country of the address used for tax-jurisdiction resolution. Trigger field for the Taxation address override: when non-null at this level (Quote/Order/Account), the five Taxation fields are passed atomically to the tax engine as the destination address, overriding the default ship-to chain.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Country of the address used for tax calculation. When populated, the Taxation address (Street, City, State, Postal Code, Country) overrides the default ship-to address for tax calculation.</inlineHelpText>
+    <label>Taxation Country</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

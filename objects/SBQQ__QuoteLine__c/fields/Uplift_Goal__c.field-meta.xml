@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uplift_Goal__c</fullName>
+    <description>The calculation is now managed by a price rule.  Target field is Suggested_Uplift_Goal__c.  This field is kept to make it read only while on the QLE.</description>
+    <formula>Suggested_Uplift_Goal__c 
+
+/* FIRST CHECK: 
+The calculation will return no value if any of the following conditions are true for each line:
+-   The product code of the renewed subscription contains the word &quot;CONVERSION.&quot;
+-   The renewed subscription field is empty.
+-   The business motion opportunity field of the quote is equal to &quot;MSP.&quot;
+If any of these conditions are true, the result will be 0.*****
+
+IF( OR( 
+IF( Contains( SBQQ__RenewedSubscription__r.Product_Code__c, &quot;CONVERSION&quot;), true, false), 
+ISBLANK( SBQQ__RenewedSubscription__c ),SBQQ__Quote__r.Business_Motion_Oppty__c == &quot;MSP&quot;), 0,
+
+/* SECOND CHECK 
+If None of the Above Conditions are True:
+If the renewed subscription is part of a bundle:
+Calculate the Uplift Goal based on the ‘Bundle Customer Price’. This is done by:
+Dividing the ‘Bundle Customer Price’ (from Subscription) by the prorate multiplier.
+Then, applying the ‘Renewal Uplift’ on the Quote and adjusting for the difference in Partner Discounts.*****
+
+IF( SBQQ__RenewedSubscription__r.SBQQ__Bundle__c,
+(((( SBQQ__RenewedSubscription__r.Bundle_Customer_Price__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c ) * ( SBQQ__Quote__r.Renewal_Uplift_Percent__c + ( SBQQ__RenewedSubscription__r.SBQQ__PartnerDiscount__c - SBQQ__PartnerDiscount__c ))
+)+( SBQQ__RenewedSubscription__r.Bundle_Customer_Price__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c)) * SBQQ__ProrateMultiplier__c),
+
+/* THIRD CHECK
+If the Renewed Subscription is Not a Bundle and if the prior partner discount is less than or equal to the current partner discount:
+Calculate the uplift goal using the net price of the subscription:
+Divide the net price by the prorate multiplier.
+Apply the renewal uplift percentage.*****
+
+IF( SBQQ__RenewedSubscription__r.SBQQ__PartnerDiscount__c &lt;= SBQQ__PartnerDiscount__c,
+(((( SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c ) * SBQQ__Quote__r.Renewal_Uplift_Percent__c )+( SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c)) * SBQQ__ProrateMultiplier__c),
+
+/* FINAL CHECK 
+If the any of the above condition does not apply, calculate the uplift goal as follows:*****
+
+((((SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c ) *
+( SBQQ__Quote__r.Renewal_Uplift_Percent__c + ( SBQQ__RenewedSubscription__r.SBQQ__PartnerDiscount__c - SBQQ__PartnerDiscount__c ))
+) + ( SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c / SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c)) * SBQQ__ProrateMultiplier__c)
+)
+)
+)
+*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Uplift Goal</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

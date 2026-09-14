@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_BurstingCount__c</fullName>
+    <label>Bursting Count</label>
+    <summaryFilterItems>
+        <field>QuoteLineItem.ELV_Promotion__c</field>
+        <operation>equals</operation>
+        <value>Burst</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

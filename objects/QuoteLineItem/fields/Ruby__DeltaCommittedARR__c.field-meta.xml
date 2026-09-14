@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__DeltaCommittedARR__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The delta Committed Annual Recurring Revenue contributed by this line item, effective between Start Date and End Date of the line item.  It is Delta Committed CMRR * 12.</description>
+    <inlineHelpText>The delta Committed Annual Recurring Revenue contributed by this line item, effective between Start Date and End Date of the line item.  It is Delta Committed CMRR * 12.</inlineHelpText>
+    <label>Delta Committed ARR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

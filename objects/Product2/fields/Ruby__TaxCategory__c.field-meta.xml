@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__TaxCategory__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The VAT category code of the product.</description>
+    <inlineHelpText>The VAT category code of the product.</inlineHelpText>
+    <label>Tax Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AE</fullName>
+                <default>false</default>
+                <label>Vat Reverse Charge</label>
+            </value>
+            <value>
+                <fullName>L</fullName>
+                <default>false</default>
+                <label>Canary Islands general indirect tax</label>
+            </value>
+            <value>
+                <fullName>M</fullName>
+                <default>false</default>
+                <label>Tax for production, services and importation in Ceuta and Melilla</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>Exempt from Tax</label>
+            </value>
+            <value>
+                <fullName>S</fullName>
+                <default>true</default>
+                <label>Standard rate</label>
+            </value>
+            <value>
+                <fullName>Z</fullName>
+                <default>false</default>
+                <label>Zero rated goods</label>
+            </value>
+            <value>
+                <fullName>G</fullName>
+                <default>false</default>
+                <label>Free export item, VAT not charged</label>
+            </value>
+            <value>
+                <fullName>K</fullName>
+                <default>false</default>
+                <label>VAT exempt for EEA intra-community supply of goods and services</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>Transferred VAT</label>
+            </value>
+            <value>
+                <fullName>O</fullName>
+                <default>false</default>
+                <label>Service outside scope of tax</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

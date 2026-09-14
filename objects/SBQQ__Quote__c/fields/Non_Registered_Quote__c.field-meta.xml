@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Registered_Quote__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Non-Registered Quote</description>
+    <inlineHelpText>Check this box when providing a Quote to a Partner that is not tied to the Opportunity Registration in a multi-bid scenario.</inlineHelpText>
+    <label>Non-Registered Quote</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

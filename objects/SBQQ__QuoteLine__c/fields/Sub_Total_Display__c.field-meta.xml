@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Total_Display__c</fullName>
+    <description>Use in Quote Template to display Subtotal.</description>
+    <formula>IF( 
+ AND(
+     OR( SBQQ__ProductCode__c = &apos;TAN-SECOPSHUNTIQ-CLOUD&apos;,
+         SBQQ__ProductCode__c = &apos;TAN-SECOPSHUNTIQ-S&apos;),
+     SBQQ__Quote__r.SBQQ__PriceBook__r.Name == &apos;Global Pricebook&apos;,
+     SBQQ__Bundle__c,  
+     ISPICKVAL( Product_Group__c , &apos;Software&apos;)),   
+     SBQQ__ComponentTotal__c,  
+IF( 
+ AND(
+     SBQQ__Quote__r.SBQQ__PriceBook__r.Name == &apos;Global Pricebook&apos;,
+     SBQQ__Bundle__c,  
+     ISPICKVAL( Product_Group__c , &apos;Software&apos;)),   
+     SBQQ__PackageTotal__c,  
+SBQQ__NetTotal__c 
+)
+)
+
+/* Prior version 9.22.25
+IF(
+AND(
+SBQQ__Quote__r.SBQQ__PriceBook__r.Name == &apos;Global Pricebook&apos;,
+SBQQ__Bundle__c,
+ISPICKVAL( Product_Group__c , &apos;Software&apos;)),
+SBQQ__PackageTotal__c, SBQQ__NetTotal__c
+)
+
+*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sub-Total-Display</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

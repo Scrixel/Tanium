@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Term_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check to request alternative Payment Terms. Then, choose the desired terms from the dropdown in the &quot;Payment Terms&quot; field. NOTE: All quotes with this Checkbox selected will route to Deal Desk for review and approval, regardless of Score</inlineHelpText>
+    <label>Payment Term Override</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

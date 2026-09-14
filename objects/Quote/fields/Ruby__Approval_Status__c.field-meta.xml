@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__Approval_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The approval state of this quote, maintained by the approval process. Approvals Pro is object-agnostic and ships no Quote fields: each approval process names a target field in appro__Final_Action_Status_Field__c and stamps it. This is the field that setting is meant to point at. Do NOT point it at Status, which is the quote sales lifecycle and means something different despite sharing the words Approved and Rejected. The four live states mirror appro__Approval_Request__c.Status__c exactly. Not Submitted is the default and is NOT written by Approvals Pro: it is the state a quote starts in, so a new quote says what it is rather than leaving a blank for a consumer to interpret.</description>
+    <inlineHelpText>Set by the approval process, not edited directly. This is the approval outcome, not the quote lifecycle status.</inlineHelpText>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+                <label>Not Submitted</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+                <label>Recalled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

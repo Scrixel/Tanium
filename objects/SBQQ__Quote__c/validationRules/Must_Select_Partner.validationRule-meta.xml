@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Select_Partner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(SBQQ__Partner__c)),
+    NOT(SBQQ__Partner__r.RecordType.Name = &apos;Partner&apos;),
+    NOT(ISPICKVAL(SBQQ__Opportunity2__r.StageName, &apos;CLOSED WON&apos;)),
+    NOT(ISCLONE()),
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>SBQQ__Partner__c</errorDisplayField>
+    <errorMessage>Selection is not a Partner account.  Please select account where Account Record Type is Partner.</errorMessage>
+</ValidationRule>

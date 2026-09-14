@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requestor_Notes_Updated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used in Missing for submission field and is updated by a workflow rule.</description>
+    <inlineHelpText>This field is used in Missing for submission field and is updated by a workflow rule.</inlineHelpText>
+    <label>Requestor Notes Updated</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

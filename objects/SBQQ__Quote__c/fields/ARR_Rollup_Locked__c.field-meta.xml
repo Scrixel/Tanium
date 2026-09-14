@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ARR_Rollup_Locked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>01/08/2025 - Label updated to align with Corporate ARR nomenclature. Jira ticket SS-9438</description>
+    <label>Sales ARR Rollup Locked</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

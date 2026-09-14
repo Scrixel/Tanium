@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Business_Motion__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES(ELV_Partner__r.Partner_Type__c, &quot;Distributor&quot;), &quot;Distributor; &quot;, null) &amp; IF(INCLUDES(ELV_Partner__r.Business_Motion__c, &quot;Distribute&quot;), &quot;Distribute&quot;, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Business Motion</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

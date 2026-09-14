@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_1_ARR_calculation__c</fullName>
+    <description>01/08/2025 - Label updated to align with Corporate ARR nomenclature. Jira ticket SS-9438</description>
+    <inlineHelpText>This field is provided as a quick reference to understand how the Day 1 ARR value is being calculated</inlineHelpText>
+    <label>Sales ARR calculation</label>
+    <length>1024</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

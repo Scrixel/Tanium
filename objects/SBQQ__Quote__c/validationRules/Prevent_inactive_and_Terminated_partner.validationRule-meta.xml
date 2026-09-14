@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_inactive_and_Terminated_partner</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(AND(
+OR(
+SBQQ__Partner__r.Active_Account__c = FALSE,
+ISPICKVAL(SBQQ__Partner__r.Partner_Maturity__c, &apos;Inactive&apos;),
+ISPICKVAL(SBQQ__Partner__r.Partner_Maturity__c, &apos;Terminated&apos;),
+ISPICKVAL(SBQQ__Partner__r.Sales_Model__c, &apos;Indirect&apos;)
+),
+(Indirect_Partner_Override__c = FALSE &amp;&amp;
+ISPICKVAL(SBQQ__Partner__r.Sales_Model__c, &apos;Indirect&apos;)),
+NOT(ISPICKVAL(SBQQ__Opportunity2__r.StageName, &apos;CLOSED WON&apos;)),
+NOT(ISCLONE()),
+NOT($Permission.DisableValidationRules)
+),
+(Indirect_Partner_Override__c = TRUE) &amp;&amp;
+(SBQQ__Partner__r.Active_Account__c = FALSE ||
+ISPICKVAL(SBQQ__Partner__r.Partner_Maturity__c, &apos;Inactive&apos;)||
+ISPICKVAL(SBQQ__Partner__r.Partner_Maturity__c, &apos;Terminated&apos;)))</errorConditionFormula>
+    <errorMessage>The “Partner” selected must be an Active Account, Purchasing Model must not be “Indirect” or it&apos;s not an authorized Tanium Partner. Please reach out to PartnerOnboarding@tanium.com to verify what is needed to allow this partner to quote.</errorMessage>
+</ValidationRule>

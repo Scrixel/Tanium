@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__Edit_Lines_Items</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Edit Line Items</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/lightning/cmp/Ruby__quoteLineEditorContainer?c__mode=edit_quote_lines&amp;c__quoteId={!Quote.Id}&amp;c__cacheBooster={!UNIXTIMESTAMP(NOW())}</url>
+</WebLink>

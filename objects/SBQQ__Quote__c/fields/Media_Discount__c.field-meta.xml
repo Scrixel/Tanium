@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Discount__c</fullName>
+    <inlineHelpText>&quot;Media Discount&quot; is dollar amount of discount afforded to Customer in exchange for Media Rights and should reconcile to &quot;OTD&quot; in the Quote Line Items.</inlineHelpText>
+    <label>DEPRECATED - Media Discount</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

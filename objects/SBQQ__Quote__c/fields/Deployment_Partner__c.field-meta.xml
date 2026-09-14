@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployment_Partner__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <inlineHelpText>Must be accredited for quoted software type (Cloud/OnPrem). See &apos;Partner Selection&apos; information in Helpful Links section for more details</inlineHelpText>
+    <label>Deployment Provider</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5) OR (6) OR (1 AND 2 AND 3 AND 7 AND (5 OR 6)) OR ( NOT (3) AND 7) OR ( NOT (3) AND (4 OR 6))</booleanFilter>
+        <filterItems>
+            <field>$Source.ApprovalStatus__c</field>
+            <operation>notEqual</operation>
+            <value>Approved</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>notEqual</operation>
+            <value>Integration</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Partner_Program_Bucket__c</field>
+            <operation>equals</operation>
+            <value>MSP</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Cloud_Deployment_Verified__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Support_Verified__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.MSP_EM_RS_Accredited__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.On_Prem_Deployment_Verified__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Quotes (Deployment Partner)</relationshipLabel>
+    <relationshipName>Deployment_Partners</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

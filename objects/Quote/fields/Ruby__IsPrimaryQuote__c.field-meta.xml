@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__IsPrimaryQuote__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates if this quote is a primary quote.  The primary quote can be synchronized with the opportunity.</description>
+    <inlineHelpText>By selecting this option, the quote will be set as the primary quote of this opportunity.  A primary quote&apos;s line items will be synchronized with the opportunity.</inlineHelpText>
+    <label>Primary Quote</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

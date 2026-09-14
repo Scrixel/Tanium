@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Exclude_from_Addl_Disc_Calc__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Exclude from Addl Disc Calc</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

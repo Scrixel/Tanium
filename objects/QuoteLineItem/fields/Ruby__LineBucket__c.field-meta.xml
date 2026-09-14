@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__LineBucket__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Reference to the Quote Line Bucket, if this line belongs to a bucket. If null, then the line item is in the default bucket.</description>
+    <label>Line Bucket</label>
+    <referenceTo>Ruby__LineBucket__c</referenceTo>
+    <relationshipLabel>Quote Line Items</relationshipLabel>
+    <relationshipName>QuoteLineItems</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

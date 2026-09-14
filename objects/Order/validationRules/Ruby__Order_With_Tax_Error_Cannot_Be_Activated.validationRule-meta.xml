@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ruby__Order_With_Tax_Error_Cannot_Be_Activated</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK(Ruby__TaxMessage__c)), ISPICKVAL(PRIORVALUE(StatusCode),&apos;Draft&apos;), ISPICKVAL(StatusCode,&apos;Activated&apos;))</errorConditionFormula>
+    <errorMessage>The order cannot be activated because of an error in tax calculation.</errorMessage>
+</ValidationRule>
