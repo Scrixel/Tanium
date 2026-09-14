@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_3_Sub_Area__c</fullName>
+    <label>Level 3 (Sub-Area)</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Latin America</fullName>
+                <default>false</default>
+                <label>Latin America</label>
+            </value>
+            <value>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <label>Japan</label>
+            </value>
+            <value>
+                <fullName>South Korea</fullName>
+                <default>false</default>
+                <label>South Korea</label>
+            </value>
+            <value>
+                <fullName>South Asia</fullName>
+                <default>false</default>
+                <label>South Asia</label>
+            </value>
+            <value>
+                <fullName>US Federal</fullName>
+                <default>false</default>
+                <label>US Federal</label>
+            </value>
+            <value>
+                <fullName>US SLED</fullName>
+                <default>false</default>
+                <label>US SLED</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>EMEA: Central Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Central Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA: Northern Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Northern Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA: Southern Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Southern Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA: Named Accounts</fullName>
+                <default>false</default>
+                <label>EMEA: Named Accounts</label>
+            </value>
+            <value>
+                <fullName>Global Partner Development</fullName>
+                <default>false</default>
+                <label>Global Partner Development</label>
+            </value>
+            <value>
+                <fullName>Global Partner Sales</fullName>
+                <default>false</default>
+                <label>Global Partner Sales</label>
+            </value>
+            <value>
+                <fullName>US and Canada</fullName>
+                <default>false</default>
+                <label>US and Canada</label>
+            </value>
+            <value>
+                <fullName>US Emerging Enterprises</fullName>
+                <default>false</default>
+                <label>US Emerging Enterprises</label>
+            </value>
+            <value>
+                <fullName>US Northeast</fullName>
+                <default>false</default>
+                <label>US Northeast</label>
+            </value>
+            <value>
+                <fullName>US Southeast</fullName>
+                <default>false</default>
+                <label>US Southeast</label>
+            </value>
+            <value>
+                <fullName>US Northwest</fullName>
+                <default>false</default>
+                <label>US Northwest</label>
+            </value>
+            <value>
+                <fullName>US Southwest</fullName>
+                <default>false</default>
+                <label>US Southwest</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEPRECATED_Active__c</fullName>
+    <formula>IF(AND(TODAY() &gt;= Start_Date__c, TODAY() &lt;= End_Date__c), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>A record is considered to be active if today&apos;s date is greater than or equal to Start Date and less than or equal to the End Date</inlineHelpText>
+    <label>DEPRECATED - Active</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
