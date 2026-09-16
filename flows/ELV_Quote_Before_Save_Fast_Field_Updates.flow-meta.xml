@@ -344,6 +344,10 @@ v12: Set default Payment Term from account (via formula to account for unique gl
     &quot;Cash with Order (CWO)&quot;, &quot;0&quot;,
     &quot;Not Applicable&quot;, &quot;0&quot;,
     &quot;None - Reseller only&quot;, &quot;0&quot;,
+    &quot;Net 15&quot;, &quot;Net 15&quot;,
+    &quot;Net 30&quot;, &quot;Net 30&quot;,
+    &quot;Net 45&quot;, &quot;Net 45&quot;,
+    &quot;Net 60&quot;, &quot;Net 60&quot;,
     SUBSTITUTE(
         TEXT({!Get_Opportunity.Account.Payment_Terms__c}),
         &quot;Net &quot;,

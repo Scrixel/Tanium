@@ -185,6 +185,25 @@ public with sharing class ELV_QuoteTriggerUtility {
 		}
 	}
 
+	public static void markCustomCalculationNeeded(
+		List<Quote> quotes,
+		Map<Id, Quote> oldMap
+	) {
+		if (quotes == null || quotes.isEmpty()) {
+			return;
+		}
+
+		for (Quote quote : quotes) {
+			Quote oldQuote = oldMap == null ? null : oldMap.get(quote.Id);
+			if (
+				quote.Status == QUOTE_STATUS_DRAFT &&
+				hasChannelDiscountInputChanged(quote, oldQuote)
+			) {
+				quote.Ruby__IsCustomCalculationNeeded__c = true;
+			}
+		}
+	}
+
 	@TestVisible
 	private static List<Quote> getQuotesToCalculate(List<Quote> quotes, Map<Id, Quote> oldMap) {
 		List<Quote> quotesToCalculate = new List<Quote>();
@@ -501,6 +520,7 @@ public with sharing class ELV_QuoteTriggerUtility {
 			FROM Margin_Costs__c
 			WHERE Cost_Type__c IN :costTypes
 			AND ELV_Cost__c != NULL
+			WITH SYSTEM_MODE
 			ORDER BY Cost_Type__c, Deployment_Type__c, Min_Endpoint_Count__c, Max_Endpoint_Count__c
 		]) {
 			if (!costsByType.containsKey(marginCost.Cost_Type__c)) {

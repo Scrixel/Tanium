@@ -1204,7 +1204,7 @@ NOT(ISBLAnk({!$Record.Opportunity__r.TAM_Sales_SME_Owner__c}))),
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>currentItem_Filter_Modules</name>
         <dataType>SObject</dataType>

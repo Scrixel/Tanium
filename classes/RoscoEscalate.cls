@@ -2028,7 +2028,7 @@ public with sharing class RoscoEscalate {
 					accountChannel = ac;
 				}
 			}
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 			if (cmfields.contains('rosco_slack_incoming_hook__c')) {
 				String hook = String.valueOf(cm.get('rosco_slack_incoming_hook__c'));
 				if (nullOrEmpty(hook) == false) {
@@ -2374,7 +2374,7 @@ public with sharing class RoscoEscalate {
 					}
 				}
 			}
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 			if (cmfields.contains('rosco_slack_incoming_hook__c')) {
 				String hook = String.valueOf(cm.get('rosco_slack_incoming_hook__c'));
 

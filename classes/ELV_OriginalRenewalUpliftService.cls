@@ -13,7 +13,7 @@ public with sharing class ELV_OriginalRenewalUpliftService {
             if (policy == null) policy = Renewal_Uplift_Percent__mdt.getInstance('Undetermined');
             if (policy == null) continue;
             Decimal policyRate = quoteRecord.ELV_Is_First_Partner_Renewal__c == true ? policy.First_Renewal_Uplift__c : policy.Uplift_Percent__c;
-            quoteLine.Ruby__RenewalUpliftPercent__c = resolveEffectiveRate(policyRate, quoteLine.ELV_Contracted_Renewal_Uplift_Percent__c, quoteRecord.ELV_Contracted_Renewal_Uplift_Percent__c);
+            quoteLine.ELV_RenewalUpliftPercent__c = resolveEffectiveRate(policyRate, quoteLine.ELV_Contracted_Renewal_Uplift_Percent__c, quoteRecord.ELV_Contracted_Renewal_Uplift_Percent__c);
         }
     }
     @TestVisible private static Decimal resolveEffectiveRate(Decimal policyRate, Decimal lineCap, Decimal quoteCap) {

@@ -46,7 +46,7 @@ public with sharing class ELV_QuoteRecalculationService {
             return;
         }
 
-        Map<Id, Set<Id>> lineIdsByQuoteId = new Map<Id, Set<Id>>();
+        Set<Id> quoteIds = new Set<Id>();
         for (QuoteLineItem line : newLines) {
             if (
                 line.Id == null ||
@@ -56,18 +56,15 @@ public with sharing class ELV_QuoteRecalculationService {
                 continue;
             }
 
-            if (!lineIdsByQuoteId.containsKey(line.QuoteId)) {
-                lineIdsByQuoteId.put(line.QuoteId, new Set<Id>());
-            }
-            lineIdsByQuoteId.get(line.QuoteId).add(line.Id);
+            quoteIds.add(line.QuoteId);
         }
 
-        if (lineIdsByQuoteId.isEmpty()) {
+        if (quoteIds.isEmpty()) {
             return;
         }
 
         isQueued = true;
-        System.enqueueJob(new ELV_QuoteRecalculationQueueable(lineIdsByQuoteId));
+        System.enqueueJob(new ELV_QuoteRecalculationQueueable(quoteIds));
     }
 
     private static Boolean hasDiscountInputChanged(

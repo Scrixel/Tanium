@@ -145,6 +145,75 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		}
 	}
 
+	public static void reconcilePricingRefreshRequired(List<QuoteLineItem> quoteLines) {
+		if (quoteLines == null || quoteLines.isEmpty()) {
+			return;
+		}
+
+		for (QuoteLineItem quoteLine : quoteLines) {
+			if (!isDirectChannelDiscountLine(quoteLine)) {
+				continue;
+			}
+
+			if (
+				quoteLine.ELV_PartnerDiscount__c == null ||
+				quoteLine.ELV_DistributorDiscount__c == null
+			) {
+				continue;
+			}
+
+			quoteLine.ELV_Pricing_Refresh_Required__c =
+				!isCompoundedDiscountCurrent(quoteLine);
+		}
+	}
+
+	public static void markQuoteCustomCalculationNeeded(
+		List<QuoteLineItem> quoteLines,
+		Map<Id, QuoteLineItem> oldMap
+	) {
+		Set<Id> quoteIds = new Set<Id>();
+		if (quoteLines == null || quoteLines.isEmpty()) {
+			return;
+		}
+
+		for (QuoteLineItem quoteLine : quoteLines) {
+			QuoteLineItem oldQuoteLine = oldMap == null
+				? null
+				: oldMap.get(quoteLine.Id);
+			if (
+				quoteLine.QuoteId != null &&
+				isDirectChannelDiscountLine(quoteLine) &&
+				hasCustomCalculationInputChanged(quoteLine, oldQuoteLine)
+			) {
+				quoteIds.add(quoteLine.QuoteId);
+			}
+		}
+
+		if (quoteIds.isEmpty()) {
+			return;
+		}
+
+		List<Quote> quotesToMark = new List<Quote>();
+		for (Quote quote : [
+			SELECT Id
+			FROM Quote
+			WHERE Id IN :quoteIds
+			AND Status = :QUOTE_STATUS_DRAFT
+			AND Ruby__IsCustomCalculationNeeded__c = FALSE
+		]) {
+			quotesToMark.add(
+				new Quote(
+					Id = quote.Id,
+					Ruby__IsCustomCalculationNeeded__c = true
+				)
+			);
+		}
+
+		if (!quotesToMark.isEmpty()) {
+			update quotesToMark;
+		}
+	}
+
 	public static void requestDerivedValueRefresh(Set<Id> quoteLineIds) {
 		if (quoteLineIds == null || quoteLineIds.isEmpty()) {
 			return;
@@ -171,6 +240,88 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		}
 	}
 
+	public static Boolean restampCurrentChannelDiscounts(Set<Id> quoteIds) {
+		if (quoteIds == null || quoteIds.isEmpty()) {
+			return false;
+		}
+
+		List<QuoteLineItem> quoteLines = [
+			SELECT Id, QuoteId, Quantity, Ruby__LineType__c, Ruby__ChangeType__c,
+				   Ruby__SubscriptionStartDate__c, ELV_Product_Group__c,
+				   ELV_Customer_Discount__c, Ruby__Discount__c,
+				   ELV_Partner_Discount_Override__c,
+				   ELV_PartnerDiscount__c, ELV_DistributorDiscount__c,
+				   ELV_Pricing_Refresh_Required__c, ELV_Refresh_Derived_Values__c
+			FROM QuoteLineItem
+			WHERE QuoteId IN :quoteIds
+			AND Quote.Status IN :getChannelDiscountQuoteStatuses()
+			AND Ruby__LineType__c IN :new Set<String>{
+				LINE_ITEM_LINE_TYPE,
+				RAMP_ITEM_LINE_TYPE
+			}
+		];
+
+		if (quoteLines.isEmpty()) {
+			return false;
+		}
+
+		Map<Id, QuoteLineItem> originalLinesById = new Map<Id, QuoteLineItem>();
+		for (QuoteLineItem quoteLine : quoteLines) {
+			originalLinesById.put(quoteLine.Id, quoteLine.clone(true, false, false, false));
+		}
+
+		stampChannelDiscounts(quoteLines, null);
+		reconcilePricingRefreshRequired(quoteLines);
+
+		List<QuoteLineItem> updates = new List<QuoteLineItem>();
+		for (QuoteLineItem quoteLine : quoteLines) {
+			QuoteLineItem original = originalLinesById.get(quoteLine.Id);
+			if (!hasRestampedChannelDiscountChange(quoteLine, original)) {
+				continue;
+			}
+
+			updates.add(
+				new QuoteLineItem(
+					Id = quoteLine.Id,
+					ELV_PartnerDiscount__c = quoteLine.ELV_PartnerDiscount__c,
+					ELV_DistributorDiscount__c = quoteLine.ELV_DistributorDiscount__c,
+					ELV_Pricing_Refresh_Required__c = quoteLine.ELV_Pricing_Refresh_Required__c,
+					ELV_Refresh_Derived_Values__c = quoteLine.ELV_Refresh_Derived_Values__c
+				)
+			);
+		}
+
+		if (updates.isEmpty()) {
+			return false;
+		}
+
+		update updates;
+		return true;
+	}
+
+	private static Boolean isCompoundedDiscountCurrent(QuoteLineItem quoteLine) {
+		Decimal current = quoteLine.Ruby__Discount__c == null
+			? 0
+			: quoteLine.Ruby__Discount__c;
+
+		return current.setScale(5) == compoundedDiscount(quoteLine);
+	}
+
+	private static Decimal compoundedDiscount(QuoteLineItem quoteLine) {
+		Decimal customer = quoteLine.ELV_Customer_Discount__c == null
+			? 0
+			: quoteLine.ELV_Customer_Discount__c;
+		Decimal partner = quoteLine.ELV_PartnerDiscount__c == null
+			? 0
+			: quoteLine.ELV_PartnerDiscount__c;
+		Decimal distributor = quoteLine.ELV_DistributorDiscount__c == null
+			? 0
+			: quoteLine.ELV_DistributorDiscount__c;
+
+		return ((1 - ((1 - customer / 100) * (1 - partner / 100) *
+			(1 - distributor / 100))) * 100).setScale(5);
+	}
+
 	private static Boolean shouldResolveChannelDiscounts(
 		QuoteLineItem quoteLine,
 		Map<Id, QuoteLineItem> oldMap,
@@ -187,11 +338,47 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		QuoteLineItem oldQuoteLine = oldMap.get(quoteLine.Id);
 		return oldQuoteLine == null ||
 			quoteLine.QuoteId != oldQuoteLine.QuoteId ||
+			quoteLine.Quantity != oldQuoteLine.Quantity ||
 			quoteLine.ELV_Product_Group__c != oldQuoteLine.ELV_Product_Group__c ||
 			quoteLine.Ruby__ChangeType__c != oldQuoteLine.Ruby__ChangeType__c ||
 			quoteLine.Ruby__LineType__c != oldQuoteLine.Ruby__LineType__c ||
 			quoteLine.Ruby__SubscriptionStartDate__c !=
-			oldQuoteLine.Ruby__SubscriptionStartDate__c;
+			oldQuoteLine.Ruby__SubscriptionStartDate__c ||
+			quoteLine.ELV_Partner_Discount_Override__c !=
+			oldQuoteLine.ELV_Partner_Discount_Override__c;
+	}
+
+	private static Boolean hasCustomCalculationInputChanged(
+		QuoteLineItem quoteLine,
+		QuoteLineItem oldQuoteLine
+	) {
+		return oldQuoteLine == null ||
+			quoteLine.QuoteId != oldQuoteLine.QuoteId ||
+			quoteLine.Quantity != oldQuoteLine.Quantity ||
+			quoteLine.ELV_Product_Group__c != oldQuoteLine.ELV_Product_Group__c ||
+			quoteLine.Ruby__ChangeType__c != oldQuoteLine.Ruby__ChangeType__c ||
+			quoteLine.Ruby__LineType__c != oldQuoteLine.Ruby__LineType__c ||
+			quoteLine.Ruby__SubscriptionStartDate__c !=
+			oldQuoteLine.Ruby__SubscriptionStartDate__c ||
+			quoteLine.ELV_Partner_Discount_Override__c !=
+			oldQuoteLine.ELV_Partner_Discount_Override__c ||
+			quoteLine.ELV_PartnerDiscount__c != oldQuoteLine.ELV_PartnerDiscount__c ||
+			quoteLine.ELV_DistributorDiscount__c !=
+			oldQuoteLine.ELV_DistributorDiscount__c;
+	}
+
+	private static Boolean hasRestampedChannelDiscountChange(
+		QuoteLineItem quoteLine,
+		QuoteLineItem original
+	) {
+		return original == null ||
+			quoteLine.ELV_PartnerDiscount__c != original.ELV_PartnerDiscount__c ||
+			quoteLine.ELV_DistributorDiscount__c !=
+			original.ELV_DistributorDiscount__c ||
+			quoteLine.ELV_Pricing_Refresh_Required__c !=
+			original.ELV_Pricing_Refresh_Required__c ||
+			quoteLine.ELV_Refresh_Derived_Values__c !=
+			original.ELV_Refresh_Derived_Values__c;
 	}
 
 	private static Boolean isDirectChannelDiscountLine(QuoteLineItem quoteLine) {
@@ -206,40 +393,98 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		Map<String, List<Tanium_Partner_Discount__c>> partnerDiscountRowsByKey,
 		Boolean isInitialInsert
 	) {
+		Decimal priorPartnerDiscount = quoteLine.ELV_PartnerDiscount__c;
+		Decimal priorDistributorDiscount = quoteLine.ELV_DistributorDiscount__c;
+		Boolean preservePartnerDiscount = quoteLine.ELV_Partner_Discount_Override__c ==
+			true;
+
 		if (quoteLine.Ruby__ChangeType__c == CHANGE_TYPE_CANCEL) {
-			quoteLine.ELV_PartnerDiscount__c = 0;
+			if (!preservePartnerDiscount) {
+				quoteLine.ELV_PartnerDiscount__c = 0;
+			}
 			quoteLine.ELV_DistributorDiscount__c = 0;
-			return;
+		} else if (quoteLine.Ruby__ChangeType__c != CHANGE_TYPE_ADJUST_PRICE) {
+			String matrixLineType = getMatrixLineType(quoteLine, quote);
+
+			if (String.isBlank(matrixLineType)) {
+				if (!preservePartnerDiscount) {
+					quoteLine.ELV_PartnerDiscount__c = 0;
+				}
+				quoteLine.ELV_DistributorDiscount__c = 0;
+			} else {
+				if (!preservePartnerDiscount) {
+					stampPartnerDiscount(
+						quoteLine,
+						quote,
+						matrixLineType,
+						partnerDiscountRowsByKey,
+						isInitialInsert
+					);
+				}
+
+				Account partnerAccount = quote == null || quote.ELV_Partner__c == null
+					? null
+					: partnerAccountsById.get(quote.ELV_Partner__c);
+
+				stampDistributorDiscount(
+					quoteLine,
+					quote,
+					partnerAccount,
+					matrixLineType,
+					isInitialInsert
+				);
+			}
 		}
 
-		if (quoteLine.Ruby__ChangeType__c == CHANGE_TYPE_ADJUST_PRICE) {
-			return;
+		if (
+			quoteLine.ELV_PartnerDiscount__c != priorPartnerDiscount ||
+			quoteLine.ELV_DistributorDiscount__c != priorDistributorDiscount
+		) {
+			quoteLine.ELV_Pricing_Refresh_Required__c = true;
 		}
-
-		String matrixLineType = getMatrixLineType(quoteLine, quote);
-		if (String.isBlank(matrixLineType)) {
-			return;
-		}
-
-		stampPartnerDiscount(
-			quoteLine,
-			quote,
-			matrixLineType,
-			partnerDiscountRowsByKey,
-			isInitialInsert
-		);
-
-		Account partnerAccount = quote == null || quote.ELV_Partner__c == null
-			? null
-			: partnerAccountsById.get(quote.ELV_Partner__c);
-		stampDistributorDiscount(
-			quoteLine,
-			quote,
-			partnerAccount,
-			matrixLineType,
-			isInitialInsert
-		);
 	}
+
+	// private static void stampChannelDiscounts(
+	// 	QuoteLineItem quoteLine,
+	// 	Quote quote,
+	// 	Map<Id, Account> partnerAccountsById,
+	// 	Map<String, List<Tanium_Partner_Discount__c>> partnerDiscountRowsByKey,
+	// 	Boolean isInitialInsert
+	// ) {
+	// 	if (quoteLine.Ruby__ChangeType__c == CHANGE_TYPE_CANCEL) {
+	// 		quoteLine.ELV_PartnerDiscount__c = 0;
+	// 		quoteLine.ELV_DistributorDiscount__c = 0;
+	// 		return;
+	// 	}
+
+	// 	if (quoteLine.Ruby__ChangeType__c == CHANGE_TYPE_ADJUST_PRICE) {
+	// 		return;
+	// 	}
+
+	// 	String matrixLineType = getMatrixLineType(quoteLine, quote);
+	// 	if (String.isBlank(matrixLineType)) {
+	// 		return;
+	// 	}
+
+	// 	stampPartnerDiscount(
+	// 		quoteLine,
+	// 		quote,
+	// 		matrixLineType,
+	// 		partnerDiscountRowsByKey,
+	// 		isInitialInsert
+	// 	);
+
+	// 	Account partnerAccount = quote == null || quote.ELV_Partner__c == null
+	// 		? null
+	// 		: partnerAccountsById.get(quote.ELV_Partner__c);
+	// 	stampDistributorDiscount(
+	// 		quoteLine,
+	// 		quote,
+	// 		partnerAccount,
+	// 		matrixLineType,
+	// 		isInitialInsert
+	// 	);
+	// }
 
 	private static void stampPartnerDiscount(
 		QuoteLineItem quoteLine,
@@ -249,9 +494,7 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		Boolean isInitialInsert
 	) {
 		if (!hasCompletePartnerDiscountContext(quoteLine, quote, matrixLineType)) {
-			if (!isInitialInsert) {
-				quoteLine.ELV_PartnerDiscount__c = 0;
-			}
+			quoteLine.ELV_PartnerDiscount__c = 0;
 			return;
 		}
 
@@ -275,9 +518,7 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		Boolean isInitialInsert
 	) {
 		if (!hasMinimumDistributorContext(quoteLine, quote, matrixLineType)) {
-			if (!isInitialInsert) {
-				quoteLine.ELV_DistributorDiscount__c = 0;
-			}
+			quoteLine.ELV_DistributorDiscount__c = 0;
 			return;
 		}
 
@@ -663,6 +904,62 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 		}
 	}
 
+	public static void stampProductGroup(
+		List<QuoteLineItem> quoteLines,
+		Map<Id, QuoteLineItem> oldMap
+	) {
+		if (quoteLines == null || quoteLines.isEmpty()) {
+			return;
+		}
+
+		List<QuoteLineItem> linesToStamp = new List<QuoteLineItem>();
+		Set<Id> productIds = new Set<Id>();
+
+		for (QuoteLineItem quoteLine : quoteLines) {
+			QuoteLineItem oldQuoteLine = oldMap == null ? null : oldMap.get(quoteLine.Id);
+
+			if (
+				oldQuoteLine != null &&
+				quoteLine.Product2Id != null &&
+				quoteLine.Product2Id == oldQuoteLine.Product2Id &&
+				quoteLine.ELV_Product_Group__c == oldQuoteLine.ELV_Product_Group__c &&
+				String.isNotBlank(quoteLine.ELV_Product_Group__c)
+			) {
+				continue;
+			}
+
+			linesToStamp.add(quoteLine);
+			if (quoteLine.Product2Id != null) {
+				productIds.add(quoteLine.Product2Id);
+			}
+		}
+
+		if (linesToStamp.isEmpty()) {
+			return;
+		}
+
+		Map<Id, Product2> productsById = productIds.isEmpty()
+			? new Map<Id, Product2>()
+			: new Map<Id, Product2>(
+					[
+						SELECT
+							Id,
+							Product_Group__c,
+							Ruby__OriginalProduct__c,
+							Ruby__OriginalProduct__r.Product_Group__c
+						FROM Product2
+						WHERE Id IN :productIds
+					]
+				);
+
+		for (QuoteLineItem quoteLine : linesToStamp) {
+			Product2 product = quoteLine.Product2Id == null
+				? null
+				: productsById.get(quoteLine.Product2Id);
+			quoteLine.ELV_Product_Group__c = resolveProductGroupStamp(product);
+		}
+	}
+
 	public static void stampProductExcludeFromARR(
 		List<QuoteLineItem> quoteLines,
 		Map<Id, QuoteLineItem> oldMap
@@ -713,6 +1010,20 @@ public with sharing class ELV_QuoteLineTriggerUtility {
 				? false
 				: product.Exclude_from_ARR__c == true;
 		}
+	}
+
+	public static String resolveProductGroupStamp(Product2 product) {
+		if (product == null) {
+			return null;
+		}
+
+		if (product.Ruby__OriginalProduct__c == null) {
+			return product.Product_Group__c;
+		}
+
+		return product.Ruby__OriginalProduct__r == null
+			? null
+			: product.Ruby__OriginalProduct__r.Product_Group__c;
 	}
 
 	/** TNCI 139 / ELV-CPQ-036. Line-local deterministic replacement for testing the lookup. */

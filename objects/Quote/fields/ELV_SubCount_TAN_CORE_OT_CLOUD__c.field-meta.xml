@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ELV_SubCount_TAN_CORE_OT_CLOUD__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Count of active TAN-CORE-OT-CLOUD subscriptions on the account.</description>
     <externalId>false</externalId>
     <label>SubCount TAN CORE OT CLOUD</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>2</scale>
+    <scale>0</scale>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Number</type>

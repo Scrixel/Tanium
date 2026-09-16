@@ -6,30 +6,32 @@ private class CaseSendToSMESlackTest {
 
 	static testMethod void testSMESlackCallWithoutContact() {
 		System.debug('entering testSMESlackCallWithoutContact');
-		CreateRecords();
-		Test.setMock(HttpCalloutMock.class, new mockCallout());
-		// Sending w/o an account or a contact...
-		TAM_Team__c teamObj = new TAM_Team__c(
-			Name = 'Test',
-			Slack_Ticket_Channel_ID__c = 'G6HDQMPM0',
-			SME_Component_Name__c = 'Other',
-			SME_Component_Picklist_Value__c = 'Other'
-		);
-		insert teamObj;
-		Case caseObj = new Case(
-			subject = 'IGNORE:testing:matt:20180608.1009:testSMESlackCallWithoutContact',
-			Severity_Community__c = '3',
-			type = 'Incident',
-			Reason = 'New problem',
-			Origin = 'Email',
-			Component__c = 'Other',
-			suppliedEmail = 'matt+testapex@mindvault.com'
-		);
-		insert caseObj;
-		List<Case> lis = new List<Case>();
-		lis.add(caseObj);
-		System.debug(caseObj.subject);
-		CaseSendToAccountSlack.sendToAccountSlack(lis);
+		System.runAs(TestUserFactory.getAdminUser()) {
+			CreateRecords();
+			Test.setMock(HttpCalloutMock.class, new mockCallout());
+			// Sending w/o an account or a contact...
+			TAM_Team__c teamObj = new TAM_Team__c(
+				Name = 'Test',
+				Slack_Ticket_Channel_ID__c = 'G6HDQMPM0',
+				SME_Component_Name__c = 'Other',
+				SME_Component_Picklist_Value__c = 'Other'
+			);
+			insert teamObj;
+			Case caseObj = new Case(
+				subject = 'IGNORE:testing:matt:20180608.1009:testSMESlackCallWithoutContact',
+				Severity_Community__c = '3',
+				type = 'Incident',
+				Reason = 'New problem',
+				Origin = 'Email',
+				Component__c = 'Other',
+				suppliedEmail = 'matt+testapex@mindvault.com'
+			);
+			insert caseObj;
+			List<Case> lis = new List<Case>();
+			lis.add(caseObj);
+			System.debug(caseObj.subject);
+			CaseSendToAccountSlack.sendToAccountSlack(lis);
+		}
 	}
 
 	static testMethod void testSMESlackCall() {

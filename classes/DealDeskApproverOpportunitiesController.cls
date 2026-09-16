@@ -2,8 +2,7 @@
  * Copyright (c) 2026 Tanium
  *
  * @Business: Controller for the Deal_Desk_Approver_Opportunities Visualforce component
- * @Description: Displays the open Opportunities of the current fiscal quarter that reference the user
- * through Deal_Desk_Approver__c
+ * @Description: Lists the approver's open Opportunities closing this fiscal quarter
  * @Date: 2016-04-07
  * @Author: Mahesh G
  * RequestId  ModifiedDate  Description

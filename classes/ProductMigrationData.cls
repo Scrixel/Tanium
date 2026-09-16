@@ -10,6 +10,7 @@
  * SS-11735   2025-09-17    Updated method deDuplicateModule_MigrationStdPlus
  * SS-12213   2025-12-08    Updated method deDuplicateModule_MigrationStdPlus
  * SS-11576   2025-12-08    Updated class to support non-AEM products
+ * SS-13771   2026-08-18    Updated class as part of Elevate project
  */
 
 public class ProductMigrationData {
@@ -35,10 +36,10 @@ public class ProductMigrationData {
 		RC_TAAS
 	};
 
-	public SubscriptionMigration[] subscriptionMigrations { get; set; }
-	public SubscriptionAggregateMigration[] subscriptionAggregateMigrations { get; set; }
-	public SolutionMigration[] solutionMigrations { get; set; }
-	public ModuleMigration[] allModuleMigrations { get; set; }
+	public List<SubscriptionMigration> subscriptionMigrations { get; set; }
+	public List<SubscriptionAggregateMigration> subscriptionAggregateMigrations { get; set; }
+	public List<SolutionMigration> solutionMigrations { get; set; }
+	public List<ModuleMigration> allModuleMigrations { get; set; }
 	public Boolean isPromo;
 
 	public ProductMigrationData() {
@@ -49,8 +50,8 @@ public class ProductMigrationData {
 		isPromo = false;
 	}
 
-	public void addSubscriptionMigrations(SBQQ__Subscription__c[] subscriptions) {
-		for (SBQQ__Subscription__c subscription : subscriptions) {
+	public void addSubscriptionMigrations(List<Ruby__Subscription__c> subscriptions) {
+		for (Ruby__Subscription__c subscription : subscriptions) {
 			this.subscriptionMigrations.add(new SubscriptionMigration(subscription));
 		}
 	}
@@ -70,13 +71,13 @@ public class ProductMigrationData {
 
 		for (SubscriptionMigration subscriptionMigration : this.subscriptionMigrations) {
 			subscription_Migration = new Subscription_Migration__c();
-			subscription_Migration.Contract__c = subscriptionMigration.contractId;
-			subscription_Migration.Subscription__c = subscriptionMigration.subscriptionId;
+			subscription_Migration.Opportunity__c = subscriptionMigration.opportunityId;
+			subscription_Migration.ELV_Subscription__c = subscriptionMigration.subscriptionId;
 			subscription_Migration.Subscription_Product__c = subscriptionMigration.subscriptionProductId;
 			subscription_Migration.Non_AEM_Product__c = subscriptionMigration.nonAemProduct;
 			subscription_Migrations.add(subscription_Migration);
 		}
-		Database.SaveResult[] saveResults = Database.insert(subscription_Migrations, false);
+		List<Database.SaveResult> saveResults = Database.insert(subscription_Migrations, false);
 		logSaveResultErrors('insertSubscription_Migrations', saveResults);
 	}
 
@@ -94,20 +95,20 @@ public class ProductMigrationData {
 			}
 		}
 
-		Database.SaveResult[] saveResults = Database.update(subscription_Migrations, false);
+		List<Database.SaveResult> saveResults = Database.update(subscription_Migrations, false);
 		logSaveResultErrors('updateSubscription_Migrations', saveResults);
 	}
 
-	public void syncSubscriptionMigrations(Id contractId) {
+	public void syncSubscriptionMigrations(Id opportunityId) {
 		Map<Id, Id> subscriptionIdSubscriptionMigrationIdMap = new Map<Id, Id>();
 
 		for (Subscription_Migration__c subscription_Migration : [
-			SELECT Id, Subscription__c, Subscription_Product__c
+			SELECT Id, ELV_Subscription__c, Subscription_Product__c
 			FROM Subscription_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		]) {
 			subscriptionIdSubscriptionMigrationIdMap.put(
-				subscription_Migration.Subscription__c,
+				subscription_Migration.ELV_Subscription__c,
 				subscription_Migration.Id
 			);
 		}
@@ -157,18 +158,19 @@ public class ProductMigrationData {
 			);
 			module_Migrations.add(module_Migration);
 		}
-		Database.SaveResult[] saveResults = Database.insert(module_Migrations, false);
+
+		List<Database.SaveResult> saveResults = Database.insert(module_Migrations, false);
 		logSaveResultErrors('insertModule_Migrations', saveResults);
 	}
 
-	public void addSubscriptionAggregateMigrations(Id contractId) {
+	public void addSubscriptionAggregateMigrations(Id opportunityId) {
 		List<Subscription_Migration__c> subscription_Migrations;
 		Map<Id, Subscription_Migration__c> subscription_MigrationMap = new Map<Id, Subscription_Migration__c>(
 			[
 				SELECT
 					Id,
 					Name,
-					Contract__c,
+					Opportunity__c,
 					Core_Subscription_Allocation_Percent__c,
 					Core_Subscription_List_Price__c,
 					Core_Subscription_Net_Price__c,
@@ -197,7 +199,7 @@ public class ProductMigrationData {
 					Subscription_Product__c
 				FROM Subscription_Migration__c
 				WHERE
-					Contract__c = :contractId
+					Opportunity__c = :opportunityId
 					AND Manual_Entry__c = FALSE
 					AND Non_AEM_Product__c = FALSE
 				ORDER BY Subscription_Product__c
@@ -240,8 +242,9 @@ public class ProductMigrationData {
 			addSubscriptionAggregateMigration(subscription_Migrations);
 		}
 	}
+
 	private void addSubscriptionAggregateMigration(
-		Subscription_Migration__c[] subscription_Migrations
+		List<Subscription_Migration__c> subscription_Migrations
 	) {
 		Decimal netPrice = 0;
 		Decimal listPrice = 0;
@@ -255,7 +258,7 @@ public class ProductMigrationData {
 		this.subscriptionAggregateMigrations.add(
 			new SubscriptionAggregateMigration(
 				subscription_Migrations[0].Name.substringAfter('-'),
-				subscription_Migrations[0].Contract__c,
+				subscription_Migrations[0].Opportunity__c,
 				subscription_Migrations[0].Subscription_Product__c,
 				subscription_Migrations[0].Core_Subscription_Allocation_Percent__c,
 				getMaxListPrice(subscription_Migrations, 'Core_Subscription_List_Price__c'),
@@ -288,7 +291,7 @@ public class ProductMigrationData {
 	}
 
 	public Decimal getMaxNetPrice(
-		Subscription_Migration__c[] subscription_Migrations,
+		List<Subscription_Migration__c> subscription_Migrations,
 		String field
 	) {
 		Decimal maxNetPrice = 0;
@@ -341,7 +344,7 @@ public class ProductMigrationData {
 	}
 
 	public Decimal getMaxListPrice(
-		Subscription_Migration__c[] subscription_Migrations,
+		List<Subscription_Migration__c> subscription_Migrations,
 		String field
 	) {
 		Decimal maxListPrice = 0;
@@ -402,7 +405,7 @@ public class ProductMigrationData {
 		) {
 			subscription_Aggregate_Migration = new Subscription_Aggregate_Migration__c();
 			subscription_Aggregate_Migration.Name = subscriptionAggregateMigration.name;
-			subscription_Aggregate_Migration.Contract__c = subscriptionAggregateMigration.contractId;
+			subscription_Aggregate_Migration.Opportunity__c = subscriptionAggregateMigration.opportunityId;
 			subscription_Aggregate_Migration.Product__c = subscriptionAggregateMigration.productId;
 			subscription_Aggregate_Migration.Core_Subscription_Allocation_Percent__c = subscriptionAggregateMigration.coreSubscriptionAllocationPct;
 			subscription_Aggregate_Migration.Core_Subscription_Net_Price__c = subscriptionAggregateMigration.coreSubscriptionNetPrice;
@@ -435,17 +438,20 @@ public class ProductMigrationData {
 			);
 			subscription_Aggregate_Migrations.add(subscription_Aggregate_Migration);
 		}
-		Database.SaveResult[] saveResults = Database.insert(subscription_Aggregate_Migrations, false);
+		List<Database.SaveResult> saveResults = Database.insert(
+			subscription_Aggregate_Migrations,
+			false
+		);
 		logSaveResultErrors('insertSubscription_Aggregate_Migrations', saveResults);
 	}
 
-	public void syncSubscriptionAggregateMigrations(Id contractId) {
+	public void syncSubscriptionAggregateMigrations(Id opportunityId) {
 		Map<String, Subscription_Aggregate_Migration__c> subscription_Aggregate_MigrationNameSubscription_Aggregate_MigrationMap = new Map<String, Subscription_Aggregate_Migration__c>();
 
 		for (Subscription_Aggregate_Migration__c subscription_Aggregate_Migration : [
 			SELECT Id, Name
 			FROM Subscription_Aggregate_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		]) {
 			subscription_Aggregate_MigrationNameSubscription_Aggregate_MigrationMap.put(
 				subscription_Aggregate_Migration.Name,
@@ -466,10 +472,10 @@ public class ProductMigrationData {
 		}
 	}
 
-	public void addSolutionMigrations(Contract contract) {
+	public void addSolutionMigrations(Opportunity opportunity) {
 		for (String aemProductGroup : getAEMProductGroups()) {
 			this.solutionMigrations.add(
-				new SolutionMigration(contract, aemProductGroup, this.isPromo)
+				new SolutionMigration(opportunity, aemProductGroup, this.isPromo)
 			);
 		}
 	}
@@ -481,7 +487,7 @@ public class ProductMigrationData {
 		for (ProductMigrationData.SolutionMigration solutionMigration : this.solutionMigrations) {
 			solution_Migration = new Solution_Migration__c();
 			solution_Migration.Name = solutionMigration.Name;
-			solution_Migration.Contract__c = solutionMigration.contractId;
+			solution_Migration.Opportunity__c = solutionMigration.opportunityId;
 			solution_Migration.AEM_Product_Group__c = solutionMigration.aemProductGroup;
 			solution_Migration.Migration_Discount__c = solutionMigration.migrationDiscount * 100;
 			solution_Migration.Uplift_Percent__c = solutionMigration.upliftPercent * 100;
@@ -489,11 +495,11 @@ public class ProductMigrationData {
 			solution_Migration.Start_Date__c = solutionMigration.startDate;
 			solution_Migrations.add(solution_Migration);
 		}
-		Database.SaveResult[] saveResults = Database.insert(solution_Migrations, false);
+		List<Database.SaveResult> saveResults = Database.insert(solution_Migrations, false);
 		logSaveResultErrors('insertSolution_Migrations', saveResults);
 	}
 
-	public void syncSolutionMigrations(Id contractId) {
+	public void syncSolutionMigrations(Id opportunityId) {
 		Map<String, Solution_Migration__c> solution_MigrationNameSolution_MigrationMap = new Map<String, Solution_Migration__c>();
 
 		for (Solution_Migration__c solution_Migration : [
@@ -504,7 +510,7 @@ public class ProductMigrationData {
 				Uplift_Partner_Migration_Percent__c,
 				AEM_Solution_Net_Total_Price__c
 			FROM Solution_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		]) {
 			solution_MigrationNameSolution_MigrationMap.put(
 				solution_Migration.Name,
@@ -532,8 +538,8 @@ public class ProductMigrationData {
 		}
 	}
 
-	public void modifySolutionMigrations(Id contractId) {
-		Set<Id> contractIds = new Set<Id>();
+	public void modifySolutionMigrations(Id opportunityId) {
+		Set<Id> opportunityIds = new Set<Id>();
 		Decimal coreSubscriptionAllocationPct = 0;
 		Decimal coreSubscriptionNetTotal = 0;
 		Decimal coreSubscriptionListTotal = 0;
@@ -572,7 +578,7 @@ public class ProductMigrationData {
 		Map<String, Id> aemProductGroupNameAemSolutionIdMap = new Map<String, Id>();
 		Set<Id> subscriptionAggregateMigrationIds = new Set<Id>();
 
-		Subscription_Migration__c[] subscription_Migrations = [
+		List<Subscription_Migration__c> subscription_Migrations = [
 			SELECT
 				Id,
 				Core_Subscription_Allocation_Percent__c,
@@ -602,7 +608,10 @@ public class ProductMigrationData {
 				Subscription_Quantity__c,
 				Subscription_Aggregate_Migration__c
 			FROM Subscription_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE AND Non_AEM_Product__c = FALSE
+			WHERE
+				Opportunity__c = :opportunityId
+				AND Manual_Entry__c = FALSE
+				AND Non_AEM_Product__c = FALSE
 		];
 
 		for (Subscription_Migration__c subscription_Migration : subscription_Migrations) {
@@ -849,10 +858,10 @@ public class ProductMigrationData {
 			}
 		}
 
-		Module_Migration__c[] module_Migrations = [
+		List<Module_Migration__c> module_Migrations = [
 			SELECT Id, AEM_Product_Group__c, AEM_Solution__c, AEM_Solution__r.Name
 			FROM Module_Migration__c
-			WHERE ContractId__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE OpportunityId__c = :opportunityId AND Manual_Entry__c = FALSE
 			ORDER BY AEM_Product_Group__c
 		];
 
@@ -941,8 +950,8 @@ public class ProductMigrationData {
 		}
 	}
 
-	private static Module_Migration__c[] deDuplicateModule_MigrationStdPlus(
-		Module_Migration__c[] module_Migrations
+	private static List<Module_Migration__c> deDuplicateModule_MigrationStdPlus(
+		List<Module_Migration__c> module_Migrations
 	) {
 		Map<String, Id> aemSolutionNameModule_MigrationIdMap = new Map<String, Id>();
 		Set<Id> deDupedModule_MigrationIds = new Set<Id>();
@@ -1093,7 +1102,7 @@ public class ProductMigrationData {
 			}
 		}
 
-		Module_Migration__c[] deDupedModule_Migrations = [
+		List<Module_Migration__c> deDupedModule_Migrations = [
 			SELECT Id, AEM_Product_Group__c, AEM_Solution__c, AEM_Solution__r.Name
 			FROM Module_Migration__c
 			WHERE Id IN :deDupedModule_MigrationIds
@@ -1117,7 +1126,7 @@ public class ProductMigrationData {
 			solution_Migration.AEM_Solution_List_Price__c = solutionMigration.aemSolutionListPrice;
 			solution_Migrations.add(solution_Migration);
 		}
-		Database.SaveResult[] saveResults = Database.update(solution_Migrations, false);
+		List<Database.SaveResult> saveResults = Database.update(solution_Migrations, false);
 		logSaveResultErrors('updateSolution_Migrations', saveResults);
 	}
 
@@ -1154,7 +1163,7 @@ public class ProductMigrationData {
 
 	public class SubscriptionMigration {
 		public Id id { get; set; }
-		public Id contractId { get; set; }
+		public Id opportunityId { get; set; }
 		public Id subscriptionId { get; set; }
 		public Id subscriptionProductId { get; set; }
 		public Decimal netPrice { get; set; }
@@ -1163,20 +1172,20 @@ public class ProductMigrationData {
 		public Date startDate { get; set; }
 		public Date endDate { get; set; }
 		public Boolean nonAemProduct { get; set; }
-		public ModuleMigration[] moduleMigrations;
+		public List<ModuleMigration> moduleMigrations;
 		public SubscriptionAggregateMigration subscriptionAggregateMigration { get; set; }
 
-		public SubscriptionMigration(SBQQ__Subscription__c subscription) {
+		public SubscriptionMigration(Ruby__Subscription__c subscription) {
 			this.id = null;
-			this.contractId = subscription.SBQQ__Contract__c;
+			this.opportunityId = subscription.Ruby__RenewalOpportunity__c;
 			this.subscriptionId = subscription.Id;
-			this.subscriptionProductId = subscription.SBQQ__Product__c;
-			this.netPrice = subscription.SBQQ__NetPrice__c;
-			this.productName = subscription.SBQQ__Product__r.Name;
-			this.quanity = subscription.SBQQ__Quantity__c;
-			this.startDate = subscription.SBQQ__SubscriptionStartDate__c;
-			this.endDate = subscription.SBQQ__SubscriptionEndDate__c;
-			this.nonAemProduct = (subscription.SBQQ__Product__r.Product_Group__c != 'Software');
+			this.subscriptionProductId = subscription.Ruby__Product__c;
+			this.netPrice = subscription.Ruby__NetSellerPrice__c;
+			this.productName = subscription.Ruby__Product__r.Name;
+			this.quanity = subscription.Ruby__Quantity__c;
+			this.startDate = subscription.Ruby__SubscriptionStartDate__c;
+			this.endDate = subscription.Ruby__SubscriptionEndDate__c;
+			this.nonAemProduct = (subscription.Ruby__Product__r.Product_Group__c != 'Software');
 			this.moduleMigrations = new List<ModuleMigration>();
 			subscriptionAggregateMigration = null;
 		}
@@ -1208,7 +1217,7 @@ public class ProductMigrationData {
 			);
 		}
 
-		public ModuleMigration[] getModuleMigrations() {
+		public List<ModuleMigration> getModuleMigrations() {
 			return moduleMigrations;
 		}
 	}
@@ -1216,7 +1225,7 @@ public class ProductMigrationData {
 	public class SubscriptionAggregateMigration {
 		public Id id { get; set; }
 		public String name { get; set; }
-		public Id contractId { get; set; }
+		public Id opportunityId { get; set; }
 		public String aemProductGroup { get; set; }
 		public Id productId { get; set; }
 		public Decimal coreSubscriptionAllocationPct { get; set; }
@@ -1248,7 +1257,7 @@ public class ProductMigrationData {
 
 		public SubscriptionAggregateMigration(
 			String name,
-			Id contractId,
+			Id opportunityId,
 			Id productId,
 			Decimal coreSubscriptionAllocationPct,
 			Decimal coreSubscriptionListPrice,
@@ -1279,7 +1288,7 @@ public class ProductMigrationData {
 		) {
 			this.id = null;
 			this.name = 'SubscrAggrMigration-' + name;
-			this.contractId = contractId;
+			this.opportunityId = opportunityId;
 			this.productId = productId;
 			this.coreSubscriptionAllocationPct = coreSubscriptionAllocationPct;
 			this.coreSubscriptionListPrice = coreSubscriptionListPrice;
@@ -1364,7 +1373,7 @@ public class ProductMigrationData {
 
 		public Id getAEMProductId(String module, String productType, String segment) {
 			String productCode = '';
-			AEM_Solution_Map__mdt[] aemSolutions = [
+			List<AEM_Solution_Map__mdt> aemSolutions = [
 				SELECT Id, AEM_Solution_Product_Code__c, Segment__c
 				FROM AEM_Solution_Map__mdt
 				WHERE Module__c = :module AND Product_Type__c = :productType
@@ -1392,7 +1401,7 @@ public class ProductMigrationData {
 	public class SolutionMigration {
 		public String id { get; set; }
 		public String name { get; set; }
-		public Id contractId { get; set; }
+		public Id opportunityId { get; set; }
 		public String aemProductGroup { get; set; }
 		public String segment { get; set; }
 		public String sector { get; set; }
@@ -1410,14 +1419,14 @@ public class ProductMigrationData {
 		public Id aemSolutionId { get; set; }
 		public Decimal aemSolutionListPrice { get; set; }
 
-		public SolutionMigration(Contract contract, String aemProductGroup, Boolean isPromo) {
-			this.name = contract.ContractNumber + '-' + aemProductGroup;
-			this.contractId = contract.Id;
+		public SolutionMigration(Opportunity opportunity, String aemProductGroup, Boolean isPromo) {
+			this.name = opportunity.Id + '-' + aemProductGroup;
+			this.opportunityId = opportunity.Id;
 			this.aemProductGroup = aemProductGroup;
-			this.segment = contract.Account.Segment__c;
-			this.sector = contract.Account.Sector__c;
-			this.startDate = contract.EndDate + 1;
-			this.maxQuantity = contract.Max_Quantity__c;
+			this.segment = opportunity.Account.Segment__c;
+			this.sector = opportunity.Account.Sector__c;
+			this.startDate = opportunity.EndDate__c + 1;
+			this.maxQuantity = opportunity.MaxQuantity__c;
 			this.legacyNetTotal = 0;
 			this.legacyListTotal = 0;
 			this.legacyDiscount = 0;
@@ -1464,7 +1473,7 @@ public class ProductMigrationData {
 		}
 	}
 
-	private void logSaveResultErrors(String method, Database.SaveResult[] saveResults) {
+	private void logSaveResultErrors(String method, List<Database.SaveResult> saveResults) {
 		Logger.logDatabaseErrors(
 				LoggingLevel.ERROR,
 				'ProductMigrationData.' + method + ' ERRORS',

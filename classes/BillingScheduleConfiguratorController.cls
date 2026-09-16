@@ -10,6 +10,7 @@
  * SS-10464   2025-06-27    Added methods isCashWithOrderPaymentTerms, disablePaymentType and updated method getDefaultPaymentType
  * SS-11278   2025-07-10    Use custom metadata in Payment and Quoter Term Mapping
  * SS-13619   2026-08-14    Migrated to standard Quote/QuoteLineItem
+ * SS-13942   2026-09-07    Exclude Ramp deal summary lines from Billing Net Total and Configurator
  */
 public class BillingScheduleConfiguratorController {
 	public static final String CUSTOM_PAYMENT_TYPE = 'Custom';
@@ -17,6 +18,7 @@ public class BillingScheduleConfiguratorController {
 	public static final String ANNUAL_PAYMENT_TYPE = 'Annual Installment';
 	public static final String UPFRONT_PAYMENT_TYPE = 'Upfront';
 	public static final String FOC = 'FOC';
+	public static final String SUMMARY_LINE_TYPE = 'SummaryItem';
 	public static final List<String> PAYMENT_TYPES_RESTRICTED_FROM_AUTOMATION = new List<String>{
 		CUSTOM_PAYMENT_TYPE
 	};
@@ -86,6 +88,7 @@ public class BillingScheduleConfiguratorController {
 		return 'SELECT ' +
 			'Id, ' +
 			'LineNumber, ' +
+			'Ruby__LineType__c, ' +
 			'ELV_Bundled_Product__c, ' +
 			'ELV_End_Date__c, ' +
 			'ELV_Bundle__c, ' +
@@ -151,7 +154,8 @@ public class BillingScheduleConfiguratorController {
 			}
 			if (!eachQuoteLine.ELV_BillingByQuoteLines__r.isEmpty() && index == 0) {
 				existingPaymentType = eachQuoteLine.ELV_BillingByQuoteLines__r[0].PaymentType__c;
-				existingIsReverseBilling = eachQuoteLine.ELV_BillingByQuoteLines__r[0].IsReverseBilling__c;
+				existingIsReverseBilling = eachQuoteLine.ELV_BillingByQuoteLines__r[0]
+					.IsReverseBilling__c;
 				index++;
 			}
 		}
@@ -162,7 +166,11 @@ public class BillingScheduleConfiguratorController {
 				(existingPaymentType.contains(CUSTOM_PAYMENT_TYPE) && billingsByQuoteLines.isEmpty())
 			) {
 				billingsByQuoteLines = new List<BillingByQuoteLine__c>{
-					getNewBillingByQuoteLine(eachQuoteLine, existingPaymentType, existingIsReverseBilling)
+					getNewBillingByQuoteLine(
+						eachQuoteLine,
+						existingPaymentType,
+						existingIsReverseBilling
+					)
 				};
 			}
 			data = getBillingData(eachQuoteLine, billingsByQuoteLines, recordId);
@@ -678,7 +686,9 @@ public class BillingScheduleConfiguratorController {
 		if (errorMessage.containsIgnoreCase('LOCK')) {
 			errorMessage = System.Label.Billing_Schedule_Configurator_locking_error;
 		} else if (
-			errorMessage.containsIgnoreCase(System.Label.Billing_Schedule_Configurator_Retry_Error_Types)
+			errorMessage.containsIgnoreCase(
+				System.Label.Billing_Schedule_Configurator_Retry_Error_Types
+			)
 		) {
 			errorMessage = System.Label.Billing_Schedule_Configurator_Retry_Error_Message;
 		}
@@ -732,6 +742,7 @@ public class BillingScheduleConfiguratorController {
 			Id recordId
 		) {
 			if (
+				quoteLine.Ruby__LineType__c == SUMMARY_LINE_TYPE ||
 				quoteLine.ELV_Bundled_Product__c ||
 				BillingScheduleConfiguratorUtility.getBundleOptionTypesNotShownInTool()
 					.contains(quoteLine.ELV_OptionType__c)
@@ -785,7 +796,9 @@ public class BillingScheduleConfiguratorController {
 				' $' +
 				quoteLineNetTotalStr;
 			this.errorMessage = '';
-			this.paymentTypeOptions = BillingScheduleConfiguratorUtility.getPaymentTypeOptions(quoteLine);
+			this.paymentTypeOptions = BillingScheduleConfiguratorUtility.getPaymentTypeOptions(
+				quoteLine
+			);
 			this.isQuarterlyAllowedForSalesRepsForPartnerAccount = this.paymentTypeOptions.contains(
 				QUARTERLY_PAYMENT_TYPE
 			);

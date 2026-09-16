@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2026 Tanium
  *
- * @Business: Test class for CatalystRecaptchaVerify
+ * @Business: Test class for CatalystExternalUserRegistration
  * @Date: 2026-02-16
  * @Author: Tanium Dev Team
  * RequestId     ModifiedDate     Description

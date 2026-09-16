@@ -1386,7 +1386,7 @@ public without sharing class RoscoCaseProcesses {
 
 	public static void sendAlertSlack(Map<String, String> state, Map<String, String> settings) {
 		try {
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 
 			List<String> escalationSlackGroups = settings.get('escalationSlackGroups').split(',');
 			String smeString = '';

@@ -22,6 +22,7 @@ public class RoscoEmailUtility {
 		'Case',
 		'Technical_Partnerships'
 	);
+	private static final Set<String> SECRET_ROSCO_KEYS = new Set<String>{ 'slack_incoming_hook' };
 
 	public static void auditIncoming(Messaging.InboundEmail email) {
 		try {
@@ -1417,11 +1418,7 @@ public class RoscoEmailUtility {
 		rput(rosco, 'new_case', 'false'); // Set to true if email results in new case
 		rput(rosco, 'owea_noreply', '0D260000000XZFg');
 		rput(rosco, 'owea_support', '0D20e0000004DjC');
-		rput(
-			rosco,
-			'slack_incoming_hook',
-			'https://hooks.slack.com/services/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'
-		);
+		rput(rosco, 'slack_incoming_hook', '');
 		rput(rosco, 'slackmap', 'false'); // slack roscomap in tool_soa
 		rput(rosco, 'slack_caseupdate', 'C0L7DC8Q6'); // updates to cases
 		rput(rosco, 'sfdc_dom_c', 'tanium.my.salesforce.com'); // domain name for SF Classic
@@ -1747,12 +1744,13 @@ public class RoscoEmailUtility {
 				String cmkey = cmfield.replace('rosco_', '');
 				cmkey = cmkey.replace('__c', '');
 				String cmval = String.valueOf(cm.get(cmfield));
+				String cmlog = SECRET_ROSCO_KEYS.contains(cmkey) ? '[redacted]' : cmval;
 				if ((rosco.containsKey(cmkey)) && (cmval != null)) {
 					if (regexchk.containsKey(cmkey)) {
 						String chk = regexchk.get(cmkey);
 						if (Pattern.matches(chk, cmval)) {
 							rput(rosco, cmkey, cmval);
-							rput(rosco, 'roscolog', 'initRoscoSettings: set ' + cmkey + ':' + cmval);
+							rput(rosco, 'roscolog', 'initRoscoSettings: set ' + cmkey + ':' + cmlog);
 						} else {
 							rput(
 								rosco,
@@ -1760,14 +1758,14 @@ public class RoscoEmailUtility {
 								'initRoscoSettings: RegEx Fail ' +
 								cmkey +
 								'[' +
-								cmval +
+								cmlog +
 								'] does not match: ' +
 								chk
 							);
 						}
 					} else {
 						rput(rosco, cmkey, cmval);
-						rput(rosco, 'roscolog', 'initRoscoSettings: set ' + cmkey + ':' + cmval);
+						rput(rosco, 'roscolog', 'initRoscoSettings: set ' + cmkey + ':' + cmlog);
 					}
 				}
 			}
@@ -1857,7 +1855,8 @@ public class RoscoEmailUtility {
 					!key.contains('body') &&
 					!key.contains('subject') &&
 					key != 'headers' &&
-					!key.contains('txt_')
+					!key.contains('txt_') &&
+					!SECRET_ROSCO_KEYS.contains(key)
 				) {
 					if (key != null) {
 						roscomap += key + ': ' + rget(rosco, key) + '\n';
@@ -2939,7 +2938,8 @@ public class RoscoEmailUtility {
 					!key.contains('body') &&
 					!key.contains('subject') &&
 					key != 'headers' &&
-					!key.contains('txt_')
+					!key.contains('txt_') &&
+					!SECRET_ROSCO_KEYS.contains(key)
 				) {
 					roscomap += key + ': ' + rget(rosco, key) + '\n';
 				}

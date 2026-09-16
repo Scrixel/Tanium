@@ -1133,14 +1133,14 @@
             <targetReference>SetReCaptchaKey</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <description>boolean Is Verified on the Client Side</description>
         <name>boolean_IsClientVerified</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>true</isOutput>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
         <value>
             <booleanValue>false</booleanValue>
         </value>
@@ -1150,8 +1150,8 @@
         <name>boolean_IsServerVerified</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>true</isOutput>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <description>boolean_UserCreationIsSuccess</description>
@@ -1210,8 +1210,8 @@
         <name>text_reCaptchaSiteKey</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>true</isOutput>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>text_RecaptchaToken</name>

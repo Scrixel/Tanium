@@ -69,7 +69,7 @@ private class CatalystRecaptchaVerifyTest {
 	}
 
 	@IsTest
-	static void testVerify_WhenBlankToken_ReturnNoTokenSuppliedMsg() {
+	static void testVerify_WhenBlankToken_ReturnContactAdministratorMsg() {
 		List<CatalystRecaptchaVerify.Result> results;
 		CatalystRecaptchaVerify.Request request = new CatalystRecaptchaVerify.Request();
 		request.token = '';
@@ -83,7 +83,10 @@ private class CatalystRecaptchaVerifyTest {
 		}
 
 		Assert.areEqual(false, results[0].isValid);
-		Assert.areEqual('No reCAPTCHA token was supplied.', results[0].errorMessage);
+		Assert.areEqual(
+			'reCAPTCHA error, please contact your administrator.',
+			results[0].errorMessage
+		);
 	}
 
 	@IsTest

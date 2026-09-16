@@ -1,15 +1,13 @@
 /**
  * Copyright (c) 2026 Tanium
  *
- * @Business: Scheduled email to Deal Desk Approvers about their open Opportunities of the current fiscal quarter
- * @Description: Sends the DealDeskApprover_Opporunities_CurrentFQ template to every User referenced by
- * Opportunity.Deal_Desk_Approver__c that has Opportunities closing this fiscal quarter with Commit or Upside,
- * excluding Signed, Closed, Committed, Failed, pre-commit Renewal and Order Drafted stages
+ * @Business: Scheduled Deal Desk Approver email for open Opportunities this fiscal quarter
+ * @Description: Sends the DealDeskApprover_Opporunities_CurrentFQ template to each approver
  * @Date: 2016-04-07
  * @Author: Mahesh G
  * RequestId  ModifiedDate  Description
  * TAN-483    2018-02-22    Updated StageName
- * SS-13636   2026-09-11    Excluded pre-commit Renewal and Order Drafted stages
+ * SS-13636   2026-09-14    Stage exclusions and Nebula logging
  */
 public class ScheduleOppDealDeskApproverNotification implements Schedulable {
 	public void execute(SchedulableContext sc) {
@@ -18,7 +16,7 @@ public class ScheduleOppDealDeskApproverNotification implements Schedulable {
 
 	public void sendDealDeskApproverNotification() {
 		try {
-			AggregateResult[] aggResults = [
+			List<AggregateResult> aggResults = [
 				SELECT Deal_Desk_Approver__c dealDeskApproverId
 				FROM Opportunity
 				WHERE
@@ -27,7 +25,7 @@ public class ScheduleOppDealDeskApproverNotification implements Schedulable {
 					AND (NOT StageName LIKE 'Signed%')
 					AND (NOT StageName LIKE 'CLOSED%')
 					AND (NOT StageName LIKE 'Committed%')
-					AND StageName != 'Failed'
+					AND StageName != :Utility.FAILED
 					AND StageName != :Utility.ACCOUNT_ASSESSMENT
 					AND StageName != :Utility.CUSTOMER_ENGAGED
 					AND StageName != :Utility.PROPOSAL_SENT
@@ -76,25 +74,23 @@ public class ScheduleOppDealDeskApproverNotification implements Schedulable {
 					);
 					listSingleEmailMSG.add(message);
 				}
-				Messaging.SendEmailResult[] listEmailSendResults = Messaging.sendEmail(
+				List<Messaging.SendEmailResult> listEmailSendResults = Messaging.sendEmail(
 					listSingleEmailMSG
 				);
 				for (Messaging.SendEmailResult emailResult : listEmailSendResults) {
-					System.debug(
-						'\n Success:' +
-							emailResult.success +
-							'\n Error:' +
-							JSON.serialize(emailResult.getErrors())
-					);
+					if (!emailResult.isSuccess()) {
+						Logger.error(
+								'ScheduleOppDealDeskApproverNotification send errors: ' +
+								JSON.serialize(emailResult.getErrors())
+							)
+							.addTag('apex');
+					}
 				}
 			}
+			Logger.saveLog();
 		} catch (Exception ex) {
-			System.debug(
-				'ScheduleOppDealDeskApproverNotification Error:' +
-					ex.getMessage() +
-					'\nStack Trace:' +
-					ex.getStackTraceString()
-			);
+			Logger.error('ScheduleOppDealDeskApproverNotification ERRORS', ex).addTag('apex');
+			Logger.saveLog();
 		}
 	}
 

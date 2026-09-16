@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2026 Tanium
  *
- * @Business: Class for creaeting external (portal) users, support Catalyst Register Screen Flow
+ * @Business: Class for creating external (portal) users, support Catalyst Register Screen Flow
  * @Date: 2026-02-16
  * @Author: Tanium Dev Team
  * RequestId     ModifiedDate     Description
@@ -35,7 +35,6 @@ public with sharing class CatalystExternalUserRegistration {
 					new Set<String>()
 				),
 				ProfileId = request.profileId,
-				ContactId = request.contactId,
 				Alias = generateAlias(request.firstName, request.lastName),
 				TimeZoneSidKey = UserInfo.getTimeZone().getID(),
 				LocaleSidKey = UserInfo.getLocale(),
@@ -47,7 +46,7 @@ public with sharing class CatalystExternalUserRegistration {
 				user.ContactId = request.contactId;
 			}
 
-			Boolean sendConfirmation = request.sendEmailConfirmation ?? request.sendEmailConfirmation;
+			Boolean sendConfirmation = request.sendEmailConfirmation = false;
 
 			try {
 				Id newUserId = Site.createExternalUser(

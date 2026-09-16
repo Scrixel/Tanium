@@ -1,10 +1,13 @@
 /**
+ *  Copyright (c) 2026 Tanium
+ *
  * @Business: Class that supports Product Migratrion functionality
  * @Date:     2025-06-23
  * @Author:   Tanium Dev Team
  * RequestId  ModifiedDate  Description
  * SS-11112   2025-06-23    Created the class
  * SS-11649   2025-09-24    Updated methods execute, getContract
+ * SS-13771   2026-08-17    Updated class as part of Elevate project
  */
 public with sharing class ProductMigrationAsync implements Queueable {
 	private List<Opportunity> renewalOpps;
@@ -34,31 +37,23 @@ public with sharing class ProductMigrationAsync implements Queueable {
 			Potential_New_Module_Count__c = opp.Potential_New_Module_Count__c,
 			Potential_AEM_Migration_ARR__c = opp.Potential_AEM_Migration_ARR__c
 		);
-		Contract contract = getContract(opp.Id);
-		Boolean contractFieldValueChanged = false;
+		//Boolean contractFieldValueChanged = false;
 		Boolean oppFieldValueChanged = false;
-		Boolean calculationCompleted = ProductMigrationController.startCalculation(
-			contract.ContractNumber
-		);
+		Boolean calculationCompleted = ProductMigrationController.startCalculation(opp.Id);
 
-		taniumSoftwareARR = getTaniumSoftwareARR(contract.ContractNumber);
-		renewedContractModules = getRenewedContractModules(contract.ContractNumber);
-		potentialAEMModules = getPotentialAEMModules(contract.ContractNumber);
+		taniumSoftwareARR = getTaniumSoftwareARR(opp.Id);
+		renewedContractModules = getRenewedContractModules(opp.Id);
+		potentialAEMModules = getPotentialAEMModules(opp.Id);
 		potentialNewModules = getPotentialNewModules(potentialAEMModules, renewedContractModules);
 		potentialNewModulesCount = getPotentialNewModulesCount(potentialNewModules);
-		potentialAEMMigrationARR = getPotentialAEMMigrationARR(contract.ContractNumber);
-
-		contractFieldValueChanged = (contract.Tanium_Software_ARR__c != taniumSoftwareARR);
-
-		contract.Tanium_Software_ARR__c = contract.Tanium_Software_ARR__c != taniumSoftwareARR
-			? taniumSoftwareARR
-			: contract.Tanium_Software_ARR__c;
+		potentialAEMMigrationARR = getPotentialAEMMigrationARR(opp.Id);
 
 		oppFieldValueChanged = (oppToUpdate.Renewed_Contract_Modules__c != renewedContractModules ||
 		oppToUpdate.Potential_AEM_Modules__c != potentialAEMModules ||
 		oppToUpdate.Potential_New_Modules__c != potentialNewModules ||
 		oppToUpdate.Potential_New_Module_Count__c != potentialNewModulesCount ||
-		oppToUpdate.Potential_AEM_Migration_ARR__c != potentialAEMMigrationARR);
+		oppToUpdate.Potential_AEM_Migration_ARR__c != potentialAEMMigrationARR ||
+		oppToUpdate.Tanium_Software_ARR__c != taniumSoftwareARR);
 
 		oppToUpdate.Renewed_Contract_Modules__c = oppToUpdate.Renewed_Contract_Modules__c !=
 			renewedContractModules
@@ -80,14 +75,9 @@ public with sharing class ProductMigrationAsync implements Queueable {
 			potentialAEMMigrationARR
 			? potentialAEMMigrationARR
 			: oppToUpdate.Potential_AEM_Migration_ARR__c;
-
-		if (contractFieldValueChanged) {
-			try {
-				Database.update(new List<Contract>{ contract }, true);
-			} catch (Exception e) {
-				logException(e, new List<Contract>{ contract }, contract.Id);
-			}
-		}
+		opp.Tanium_Software_ARR__c = opp.Tanium_Software_ARR__c != taniumSoftwareARR
+			? taniumSoftwareARR
+			: opp.Tanium_Software_ARR__c;
 
 		if (oppFieldValueChanged) {
 			try {
@@ -102,55 +92,39 @@ public with sharing class ProductMigrationAsync implements Queueable {
 		}
 	}
 
-	private Contract getContract(Id oppId) {
-		Contract contract;
-		try {
-			contract = [
-				SELECT Id, ContractNumber, Tanium_Software_ARR__c
-				FROM Contract
-				WHERE SBQQ__RenewalOpportunity__c = :oppId
-				LIMIT 1
-			];
-		} catch (Exception e) {
-			contract = null;
-		}
-
-		return contract;
-	}
-
-	private Decimal getPotentialAEMMigrationARR(String contractNumber) {
+	private Decimal getPotentialAEMMigrationARR(Id opportunityId) {
 		Decimal potentialAEMMigrationARR = 0;
 
 		for (Solution_Migration__c solution_Migration : [
 			SELECT Id, AEM_Solution_Net_Total_Price__c
 			FROM Solution_Migration__c
-			WHERE Contract_Number__c = :contractNumber
+			WHERE Opportunity__c = :opportunityId
 		]) {
 			potentialAEMMigrationARR += solution_Migration.AEM_Solution_Net_Total_Price__c;
 		}
 		return potentialAEMMigrationARR;
 	}
 
-	private Decimal getTaniumSoftwareARR(String contractNumber) {
+	private Decimal getTaniumSoftwareARR(Id opportunityId) {
 		Decimal taniumSoftwareARR = 0;
 		for (Subscription_Migration__c subscription_Migration : [
 			SELECT Id, Annual_Subscription_Net_Total__c
 			FROM Subscription_Migration__c
-			WHERE Contract_Number__c = :contractNumber
+			WHERE Opportunity__c = :opportunityId
 		]) {
-			taniumSoftwareARR += subscription_Migration.Annual_Subscription_Net_Total__c;
+			taniumSoftwareARR += subscription_Migration.Annual_Subscription_Net_Total__c ?? 0;
 		}
 		return taniumSoftwareARR;
 	}
 
-	public String getRenewedContractModules(String contractNumber) {
+	public String getRenewedContractModules(Id opportunityId) {
 		List<String> renewedContractModules;
 		Set<String> renewedContractModulesSet = new Set<String>();
 
 		for (Module_Migration__c module_Migration : [
 			SELECT Id, Module_Name__c
 			FROM Module_Migration__c
-			WHERE Contract_Number__c = :contractNumber
+			WHERE OpportunityId__c = :opportunityId
 		]) {
 			renewedContractModulesSet.add(module_Migration.Module_Name__c);
 		}
@@ -160,7 +134,7 @@ public with sharing class ProductMigrationAsync implements Queueable {
 		return String.join(renewedContractModules, ', ');
 	}
 
-	public String getPotentialAEMModules(String contractNumber) {
+	public String getPotentialAEMModules(Id opportunityId) {
 		Set<Id> aemProductIds = new Set<Id>();
 		List<String> potentialAEMModules;
 		Set<String> potentialAEMModulesSet = new Set<String>();
@@ -168,7 +142,7 @@ public with sharing class ProductMigrationAsync implements Queueable {
 		for (Solution_Migration__c solution_Migration : [
 			SELECT Id, AEM_Solution__c
 			FROM Solution_Migration__c
-			WHERE Contract_Number__c = :contractNumber
+			WHERE Opportunity__c = :opportunityId
 		]) {
 			aemProductIds.add(solution_Migration.AEM_Solution__c);
 		}

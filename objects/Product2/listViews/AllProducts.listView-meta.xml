@@ -10,6 +10,17 @@
     <columns>Bundle_List_Price__c</columns>
     <columns>PRODUCT2.CREATED_DATE</columns>
     <columns>Bundle_Component__c</columns>
+    <columns>X18D_ID__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.CUSTOMER_PRODUCT_ID</field>
+        <operation>notContain</operation>
+        <value>OLD-</value>
+    </filters>
+    <filters>
+        <field>PRODUCT2.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
     <label>All Products</label>
 </ListView>

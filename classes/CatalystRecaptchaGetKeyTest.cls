@@ -11,7 +11,7 @@
 private class CatalystRecaptchaGetKeyTest {
 	@IsTest
 	static void testGetKey_WhenValidType_ReturnKey() {
-		String keyType = 'CustAuthSelfRegCaptchaKey'; // TODO: replace with a real key type used in this org
+		String keyType = 'CustAuthSelfRegCaptchaKey';
 		List<CatalystRecaptchaGetKey.Result> results;
 		CatalystRecaptchaGetKey.Request request = new CatalystRecaptchaGetKey.Request();
 		request.keyType = keyType;

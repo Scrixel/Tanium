@@ -23,13 +23,15 @@ public with sharing class CatalystRecaptchaVerify {
 			Result result = new Result();
 
 			if (String.isBlank(secretKey)) {
-				result.errorMessage = 'reCAPTCHA secret key is not configured.';
+				//reCAPTCHA secret key is not configured, but we return generic error to user in case hacker is trying to use information somehow.
+				result.errorMessage = 'reCAPTCHA error, please contact your administrator.';
 				results.add(result);
 				continue;
 			}
 
 			if (String.isBlank(request.token)) {
-				result.errorMessage = 'No reCAPTCHA token was supplied.';
+				//No reCAPTCHA token was supplied, but we return generic error to user in case hacker is trying to use information somehow.
+				result.errorMessage = 'reCAPTCHA error, please contact your administrator.';
 				results.add(result);
 				continue;
 			}
@@ -37,8 +39,9 @@ public with sharing class CatalystRecaptchaVerify {
 			try {
 				result = callSiteVerify(secretKey, request.token);
 			} catch (Exception e) {
+				// Callout to reCAPTCHA siteverify failed:, but we return generic error to user in case hacker is trying to use information somehow.
 				result.isValid = false;
-				result.errorMessage = 'Callout to reCAPTCHA siteverify failed: ' + e.getMessage();
+				result.errorMessage = 'reCAPTCHA error, please contact your administrator.';
 			}
 			results.add(result);
 		}

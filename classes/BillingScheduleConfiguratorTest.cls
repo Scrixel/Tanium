@@ -29,7 +29,7 @@ private class BillingScheduleConfiguratorTest {
 				'OpportunityTriggerHandler',
 				'OpportunityLineItemTriggerHandler',
 				'QuoteCPQTriggerHandler',
-				'QuoteTriggerHandler',
+				'ELV_QuoteTriggerHandler',
 				'QuoteLineTriggerHandler',
 				'BillingScheduleTriggerHandler',
 				'UserTriggerHandler'
@@ -1568,7 +1568,7 @@ private class BillingScheduleConfiguratorTest {
 
 	@IsTest
 	static void testGetBillingByQuoteLines_whenCalledFromQuote_returnsBillingData() {
-		TriggerHandler.bypass('QuoteTriggerHandler');
+		TriggerHandler.bypass('ELV_QuoteTriggerHandler');
 		List<BillingScheduleConfiguratorController.BillingData> billingData;
 		Opportunity opportunity = [
 			SELECT Id, Name, CloseDate
@@ -1893,7 +1893,7 @@ private class BillingScheduleConfiguratorTest {
 					'OpportunityTriggerHandler',
 					'OpportunityLineItemTriggerHandler',
 					'QuoteCPQTriggerHandler',
-					'QuoteTriggerHandler',
+					'ELV_QuoteTriggerHandler',
 					'QuoteLineTriggerHandler'
 				}
 			);
@@ -1938,7 +1938,7 @@ private class BillingScheduleConfiguratorTest {
 					'OpportunityTriggerHandler',
 					'OpportunityLineItemTriggerHandler',
 					'QuoteCPQTriggerHandler',
-					'QuoteTriggerHandler',
+					'ELV_QuoteTriggerHandler',
 					'QuoteLineTriggerHandler'
 				}
 			);
@@ -2058,7 +2058,7 @@ private class BillingScheduleConfiguratorTest {
 					'OpportunityTriggerHandler',
 					'OpportunityLineItemTriggerHandler',
 					'QuoteCPQTriggerHandler',
-					'QuoteTriggerHandler',
+					'ELV_QuoteTriggerHandler',
 					'QuoteLineTriggerHandler'
 				}
 			);
@@ -2304,7 +2304,7 @@ private class BillingScheduleConfiguratorTest {
 				'OpportunityTriggerHandler',
 				'OpportunityLineItemTriggerHandler',
 				'QuoteCPQTriggerHandler',
-				'QuoteTriggerHandler',
+				'ELV_QuoteTriggerHandler',
 				'QuoteLineTriggerHandler',
 				'BillingScheduleTriggerHandler',
 				'UserTriggerHandler'
@@ -2612,7 +2612,7 @@ private class BillingScheduleConfiguratorTest {
 					'OpportunityTriggerHandler',
 					'UserTriggerHandler',
 					'QuoteCPQTriggerHandler',
-					'QuoteTriggerHandler'
+					'ELV_QuoteTriggerHandler'
 				}
 			);
 

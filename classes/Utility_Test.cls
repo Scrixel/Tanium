@@ -3,7 +3,8 @@
  *
  * @Business: Test class for the Utility class
  * @Date: 2020-01-18
- * Modified  ModifiedDate  Description
+ * @Author: Tanium Dev Team
+ * RequestId  ModifiedDate  Description
  * SS-7985   2024-05-14    Updated test class
  * SS-8749   2024-07-24    Updated test class
  * SS-9451   2024-10-22    Updated test class

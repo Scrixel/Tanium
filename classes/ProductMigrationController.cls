@@ -9,6 +9,7 @@
  * SS-11112   2025-06-23    Added empty constructor and method getPotentialNewModules
  * SS-11649   2025-09-24    Added method updateAemMigrationFields
  * SS-11576   2025-12-08    Updated methods startCalculation and getSolution_Migrations plus added method getOtherRenewableProducts
+ * SS-13771   2026-08-18    Updated class as part of Elevate project
  */
 public without sharing class ProductMigrationController {
 	public static ProductMigrationData productMigrationData;
@@ -22,13 +23,12 @@ public without sharing class ProductMigrationController {
 				SELECT
 					Id,
 					Name,
-					SBQQ__RenewedContract__r.ContractNumber,
-					SBQQ__RenewedContract__r.EndDate,
 					Account.Name,
 					Account.Ineligible_for_Migration_Calculation__c,
-					Account.Ineligible_for_Migration_Calc_Reason__c
+					Account.Ineligible_for_Migration_Calc_Reason__c,
+					EndDate__c
 				FROM Opportunity
-				WHERE Id = :opportunityId AND SBQQ__RenewedContract__c != NULL
+				WHERE Id = :opportunityId
 			];
 
 			if (opportunity.Account.Ineligible_for_Migration_Calculation__c) {
@@ -37,8 +37,11 @@ public without sharing class ProductMigrationController {
 					'This account cannot be calculated due to: ' +
 					opportunity.Account.Ineligible_for_Migration_Calc_Reason__c +
 					'. Please reach out to Quoting Operations for manual calculation.';
+			} else if (opportunity.EndDate__c == null) {
+				rt.retData = 'This opportunity does not have an end date.';
+				return rt;
 			} else {
-				Date startDate = (opportunity.SBQQ__RenewedContract__r.EndDate.addDays(1));
+				Date startDate = opportunity.EndDate__c.addDays(1);
 				Integer day = startDate.day();
 				Integer month = startDate.month();
 				Integer year = startDate.year();
@@ -49,21 +52,16 @@ public without sharing class ProductMigrationController {
 					'/' +
 					year;
 				rt.retResult = true;
-				rt.retData =
-					opportunity.Name +
-					'***' +
-					opportunity.SBQQ__RenewedContract__r.ContractNumber +
-					'***' +
-					startDateStr;
+				rt.retData = opportunity.Name + '***' + opportunity.Id + '***' + startDateStr;
 			}
 		} catch (Exception e) {
-			rt.retData = 'This Opportunity is not linked to a renewed contract.';
+			rt.retData = 'This Opportunity is not eligible due to error ' + e.getMessage();
 		}
 		return rt;
 	}
 
 	@AuraEnabled(cacheable=true)
-	public static List<Subscription_Migration__c> getSubscription_Migrations(String contractNumber) {
+	public static List<Subscription_Migration__c> getSubscription_Migrations(Id opportunityId) {
 		return [
 			SELECT
 				Id,
@@ -73,12 +71,12 @@ public without sharing class ProductMigrationController {
 				Subscription_Start_Date__c,
 				Annual_Subscription_Net_Total__c
 			FROM Subscription_Migration__c
-			WHERE Contract_Number__c = :contractNumber AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		];
 	}
 
 	@AuraEnabled(cacheable=true)
-	public static List<Solution_Migration__c> getSolution_Migrations(String contractNumber) {
+	public static List<Solution_Migration__c> getSolution_Migrations(Id opportunityId) {
 		return [
 			SELECT
 				Id,
@@ -91,13 +89,13 @@ public without sharing class ProductMigrationController {
 				Partner_Migration_Discount_Displ__c,
 				Sort_Order__c
 			FROM Solution_Migration__c
-			WHERE Contract_Number__c = :contractNumber AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 			ORDER BY Sort_Order__c
 		];
 	}
 
 	@AuraEnabled(cacheable=true)
-	public static List<Subscription_Migration__c> getOtherRenewableProducts(String contractNumber) {
+	public static List<Subscription_Migration__c> getOtherRenewableProducts(Id opportunityId) {
 		List<Subscription_Migration__c> otherRenewableProducts = [
 			SELECT
 				Id,
@@ -108,7 +106,7 @@ public without sharing class ProductMigrationController {
 				Annual_Subscription_Net_Total__c
 			FROM Subscription_Migration__c
 			WHERE
-				Contract_Number__c = :contractNumber
+				Opportunity__c = :opportunityId
 				AND Manual_Entry__c = FALSE
 				AND Non_AEM_Product__c = TRUE
 		];
@@ -116,19 +114,19 @@ public without sharing class ProductMigrationController {
 	}
 
 	@AuraEnabled
-	public static EnhancedReturnType getMigrationTotalBaseLine(String contractNumber) {
-		return setMigrationTotalBaseLine(contractNumber);
+	public static EnhancedReturnType getMigrationTotalBaseLine(Id opportunityId) {
+		return setMigrationTotalBaseLine(opportunityId);
 	}
 
-	public static EnhancedReturnType setMigrationTotalBaseLine(String contractNumber) {
+	public static EnhancedReturnType setMigrationTotalBaseLine(Id opportunityId) {
 		EnhancedReturnType rt = new EnhancedReturnType(true, '');
-		Contract contract;
+		Opportunity opportunity;
 		Decimal migrationTotalBaseline = 0;
 		try {
-			contract = [
-				SELECT Id, Migration_Total_Baseline__c
-				FROM Contract
-				WHERE ContractNumber = :contractNumber
+			opportunity = [
+				SELECT Id, Migration_Total_Baseline2__c
+				FROM Opportunity
+				WHERE Id = :opportunityId
 			];
 		} catch (Exception e) {
 			rt.retResult = false;
@@ -136,14 +134,14 @@ public without sharing class ProductMigrationController {
 			return rt;
 		}
 
-		for (Solution_Migration__c solution_Migration : getSolution_Migrations(contractNumber)) {
-			migrationTotalBaseline += solution_Migration.AEM_Solution_Net_Total_Price__c;
+		for (Solution_Migration__c solution_Migration : getSolution_Migrations(opportunityId)) {
+			migrationTotalBaseline += solution_Migration.AEM_Solution_Net_Total_Price__c ?? 0;
 		}
 
-		if (contract.Migration_Total_Baseline__c != migrationTotalBaseline) {
-			contract.Migration_Total_Baseline__c = migrationTotalBaseline;
+		if (opportunity.Migration_Total_Baseline2__c != migrationTotalBaseline) {
+			opportunity.Migration_Total_Baseline2__c = migrationTotalBaseline;
 			try {
-				update contract;
+				update opportunity;
 			} catch (Exception e) {
 				rt.retResult = false;
 				rt.retData = e.getMessage();
@@ -153,49 +151,51 @@ public without sharing class ProductMigrationController {
 				Logger.saveLog();
 			}
 		}
-		rt.retData = String.valueOf(contract.Migration_Total_Baseline__c);
+		rt.retData = String.valueOf(opportunity.Migration_Total_Baseline2__c);
 		return rt;
 	}
 
 	@AuraEnabled
-	public static EnhancedReturnType getPotentialNewModules(String contractNumber) {
+	public static EnhancedReturnType getPotentialNewModules(Id opportunityId) {
 		String renewedContractModules;
 		String potentialAEMModules;
 		String potentialNewModules;
 		EnhancedReturnType rt = new EnhancedReturnType(true);
+
 		ProductMigrationAsync async = new ProductMigrationAsync();
-		renewedContractModules = async.getRenewedContractModules(contractNumber);
-		potentialAEMModules = async.getPotentialAEMModules(contractNumber);
+		renewedContractModules = async.getRenewedContractModules(opportunityId);
+		potentialAEMModules = async.getPotentialAEMModules(opportunityId);
 		potentialNewModules = async.getPotentialNewModules(
 			potentialAEMModules,
 			renewedContractModules
 		);
+
 		rt.retData = potentialNewModules;
 		return rt;
 	}
 
 	@AuraEnabled
 	public static Boolean startCalculation(Id opportunityId) {
-		String contractNumber;
+		Opportunity opportunity;
+
 		try {
-			contractNumber = [
-				SELECT Id, SBQQ__RenewedContract__r.ContractNumber
+			opportunity = [
+				SELECT Id, Account.Segment__c, Account.Sector__c, EndDate__c, MaxQuantity__c
 				FROM Opportunity
 				WHERE Id = :opportunityId
 				LIMIT 1
-			]
-			.SBQQ__RenewedContract__r.ContractNumber;
+			];
 		} catch (Exception e) {
-			contractNumber = null;
+			opportunity = null;
 		}
 
-		return contractNumber == null ? false : startCalculation(contractNumber);
+		return opportunity == null ? false : startCalculation(opportunity);
 	}
 
-	public static Boolean startCalculation(String contractNumber) {
+	public static Boolean startCalculation(Opportunity opportunity) {
 		Boolean finishedCalculation = false;
-		List<SBQQ__Subscription__c> optionSubscriptions = new List<SBQQ__Subscription__c>();
-		List<SBQQ__Subscription__c> moduleSubscriptions = new List<SBQQ__Subscription__c>();
+		List<Ruby__Subscription__c> optionSubscriptions = new List<Ruby__Subscription__c>();
+		List<Ruby__Subscription__c> moduleSubscriptions = new List<Ruby__Subscription__c>();
 		List<String> eligibleProductGroups = new List<String>{
 			'Software',
 			'Third Party Software',
@@ -204,180 +204,72 @@ public without sharing class ProductMigrationController {
 
 		productMigrationData = new ProductMigrationData();
 
-		Contract contract = [
+		deletePriorData(opportunity.Id);
+
+		List<Ruby__Subscription__c> subscriptions = [
 			SELECT
 				Id,
-				ContractNumber,
-				Account.Segment__c,
-				Account.Sector__c,
-				StartDate,
-				EndDate,
-				Max_Quantity__c
-			FROM Contract
-			WHERE ContractNumber = :contractNumber
-			LIMIT 1
-		];
-
-		deletePriorData(contract.Id);
-
-		SBQQ__Subscription__c[] subscriptions = [
-			SELECT
-				Id,
-				SBQQ__Product__c,
-				SBQQ__ListPrice__c,
-				SBQQ__NetPrice__c,
-				SBQQ__ProrateMultiplier__c,
-				SBQQ__ProductOption__c,
-				SBQQ__Product__r.Name,
-				SBQQ__Product__r.Product_Type__c,
-				SBQQ__Account__r.Segment__c,
-				SBQQ__Quantity__c,
-				SBQQ__Contract__c,
-				SBQQ__SubscriptionStartDate__c,
-				SBQQ__SubscriptionEndDate__c,
-				SBQQ__Product__r.Product_Group__c
-			FROM SBQQ__Subscription__c
+				Ruby__Product__c,
+				Ruby__ListPrice__c,
+				Ruby__NetSellerPrice__c,
+				ELV_ProrateMultiplier__c,
+				Ruby__Product__r.Name,
+				Ruby__Product__r.Product_Type__c,
+				Ruby__BillingAccount__r.Segment__c,
+				Ruby__Quantity__c,
+				Ruby__SubscriptionStartDate__c,
+				Ruby__SubscriptionEndDate__c,
+				Ruby__Product__r.Product_Group__c,
+				Ruby__RenewalOpportunity__c
+			FROM Ruby__Subscription__c
 			WHERE
-				SBQQ__Contract__c = :contract.Id
-				AND SBQQ__Bundle__c = FALSE
-				AND SBQQ__Product__r.Product_Group__c IN :eligibleProductGroups
-				AND SBQQ__Quantity__c != 0
-			ORDER BY SBQQ__Number__c
+				Ruby__RenewalOpportunity__c = :opportunity.Id
+				AND ELV_Bundle__c = FALSE
+				AND Ruby__Product__r.Product_Group__c IN :eligibleProductGroups
+				AND Ruby__Quantity__c != 0
 		];
-		for (SBQQ__Subscription__c subscription : subscriptions) {
-			if (subscription.SBQQ__ProductOption__c != null) {
-				optionSubscriptions.add(subscription);
-			} else {
-				moduleSubscriptions.add(subscription);
-			}
+		for (Ruby__Subscription__c subscription : subscriptions) {
+			moduleSubscriptions.add(subscription);
 		}
 
 		productMigrationData.addSubscriptionMigrations(subscriptions);
 		productMigrationData.insertSubscription_Migrations();
-		productMigrationData.syncSubscriptionMigrations(contract.Id);
+		productMigrationData.syncSubscriptionMigrations(opportunity.Id);
 
-		if (!optionSubscriptions.isEmpty()) {
-			processOptions(optionSubscriptions);
-		}
 		if (!moduleSubscriptions.isEmpty()) {
 			processModules(moduleSubscriptions);
 		}
 
 		productMigrationData.insertModule_Migrations();
-		productMigrationData.addSubscriptionAggregateMigrations(contract.Id);
+		productMigrationData.addSubscriptionAggregateMigrations(opportunity.Id);
 
 		if (!productMigrationData.subscriptionAggregateMigrations.isEmpty()) {
 			productMigrationData.insertSubscription_Aggregate_Migrations();
-			productMigrationData.syncSubscriptionAggregateMigrations(contract.Id);
+			productMigrationData.syncSubscriptionAggregateMigrations(opportunity.Id);
 			productMigrationData.modifySubscriptionMigrations();
 			productMigrationData.updateSubscription_Migrations();
 		}
-		productMigrationData.addSolutionMigrations(contract);
+
+		productMigrationData.addSolutionMigrations(opportunity);
 		productMigrationData.insertSolution_Migrations();
-		productMigrationData.syncSolutionMigrations(contract.Id);
-		productMigrationData.modifySolutionMigrations(contract.Id);
+		productMigrationData.syncSolutionMigrations(opportunity.Id);
+		productMigrationData.modifySolutionMigrations(opportunity.Id);
 		productMigrationData.updateSolution_Migrations();
 		finishedCalculation = true;
 		return finishedCalculation;
 	}
 
-	private static void processOptions(SBQQ__Subscription__c[] subscriptions) {
-		Map<Id, Module__c> productIdModuleMap;
-		Map<Id, Product_Module__c> productIdProductModuleMap;
-		Set<Id> productOptionIds = new Set<Id>();
-		Set<Id> optionProductIds = new Set<Id>();
-
-		for (SBQQ__Subscription__c subscription : subscriptions) {
-			productOptionIds.add(subscription.SBQQ__ProductOption__c);
-		}
-
-		SBQQ__ProductOption__c[] productOptions = [
-			SELECT
-				Id,
-				Allocation__c,
-				SBQQ__UnitPrice__c,
-				SBQQ__ConfiguredSKU__c,
-				SBQQ__ProductName__c,
-				SBQQ__OptionalSKU__c,
-				SBQQ__OptionalSKU__r.Name,
-				SBQQ__OptionalSKU__r.Product_Type__c
-			FROM SBQQ__ProductOption__c
-			WHERE Id IN :productOptionIds
-			ORDER BY SBQQ__OptionalSKU__c
-		];
-
-		for (SBQQ__ProductOption__c productOption : productOptions) {
-			optionProductIds.add(productOption.SBQQ__OptionalSKU__c);
-		}
-
-		productIdModuleMap = getProductIdModuleMap(optionProductIds);
-		productIdProductModuleMap = getProductIdProductModuleMap(optionProductIds);
-
-		Id subscriptionId;
-		Id productId;
-		String productName;
-		String moduleName;
-		String productType;
-		String segment;
-		Decimal allocationPct;
-		Decimal allocationListPrice;
-		Decimal allocationNetPrice;
-		Decimal prorateMultiplier;
-		Decimal subscrListPrice;
-		Decimal subscrNetPrice;
-
-		for (SBQQ__Subscription__c subscription : subscriptions) {
-			for (SBQQ__ProductOption__c productOption : productOptions) {
-				if (subscription.SBQQ__ProductOption__c == productOption.Id) {
-					subscriptionId = subscription.Id;
-					productId = productOption.SBQQ__OptionalSKU__r.Id;
-					productName = productOption.SBQQ__OptionalSKU__r.Name;
-					moduleName = productIdModuleMap.get(productOption.SBQQ__OptionalSKU__c)?.Name;
-					productType = productOption.SBQQ__OptionalSKU__r.Product_Type__c;
-					segment = subscription.SBQQ__Account__r.Segment__c;
-					allocationPct = productIdProductModuleMap.get(productOption.SBQQ__OptionalSKU__c)
-							.Attribution_Percentage__c == null
-						? 100
-						: productIdProductModuleMap.get(productOption.SBQQ__OptionalSKU__c)
-								.Attribution_Percentage__c;
-					prorateMultiplier = subscription.SBQQ__ProrateMultiplier__c;
-					subscrListPrice = subscription.SBQQ__ListPrice__c;
-					subscrNetPrice = subscription.SBQQ__NetPrice__c;
-					allocationListPrice = (subscrListPrice / prorateMultiplier) * (allocationPct / 100);
-					allocationNetPrice = (subscrNetPrice / prorateMultiplier) * (allocationPct / 100);
-
-					if (productName.contains('Promo') && !productMigrationData.isPromo) {
-						productMigrationData.isPromo = true;
-					}
-
-					productMigrationData.getSubscriptionMigration(subscriptionId)
-						.addModuleMigration(
-							productId,
-							productName,
-							moduleName,
-							productType,
-							segment,
-							allocationPct,
-							allocationListPrice,
-							allocationNetPrice,
-							'Product Option'
-						);
-				}
-			}
-		}
-	}
-
-	private static void processModules(SBQQ__Subscription__c[] subscriptions) {
+	private static void processModules(List<Ruby__Subscription__c> subscriptions) {
 		Set<Id> productIds = new Set<Id>();
 		Map<Id, Module__c> productIdModuleMap;
 
-		for (SBQQ__Subscription__c subscription : subscriptions) {
-			productIds.add(subscription.SBQQ__Product__c);
+		for (Ruby__Subscription__c subscription : subscriptions) {
+			productIds.add(subscription.Ruby__Product__c);
 		}
 
 		productIdModuleMap = getProductIdModuleMap(productIds);
 
-		Product_Module__c[] productModules = [
+		List<Product_Module__c> productModules = [
 			SELECT
 				Id,
 				Attribution_Percentage__c,
@@ -405,24 +297,24 @@ public without sharing class ProductMigrationController {
 		Decimal subscrListPrice;
 		Decimal subscrNetPrice;
 
-		for (SBQQ__Subscription__c subscription : subscriptions) {
+		for (Ruby__Subscription__c subscription : subscriptions) {
 			for (Product_Module__c productModule : productModules) {
-				if (subscription.SBQQ__Product__c == productModule.Product__c) {
+				if (subscription.Ruby__Product__c == productModule.Product__c) {
 					subscriptionId = subscription.Id;
 					productId = productModule.Product__r.Id;
 					productName = productModule.Product__r.Name;
 					moduleName = productModule.Module__r.Name;
 					productType = productModule.Product__r.Product_Type__c;
-					segment = subscription.SBQQ__Account__r.Segment__c;
+					segment = subscription.Ruby__BillingAccount__r.Segment__c;
 					allocationPct = productModule.Attribution_Percentage__c == null
 						? 100
 						: productModule.Attribution_Percentage__c < 1
 								? productModule.Attribution_Percentage__c * 100
 								: productModule.Attribution_Percentage__c;
 
-					prorateMultiplier = subscription.SBQQ__ProrateMultiplier__c;
-					subscrListPrice = subscription.SBQQ__ListPrice__c;
-					subscrNetPrice = subscription.SBQQ__NetPrice__c;
+					prorateMultiplier = subscription.ELV_ProrateMultiplier__c;
+					subscrListPrice = subscription.Ruby__ListPrice__c;
+					subscrNetPrice = subscription.Ruby__NetSellerPrice__c;
 					allocationListPrice = (subscrListPrice / prorateMultiplier) * (allocationPct / 100);
 					allocationNetPrice = (subscrNetPrice / prorateMultiplier) * (allocationPct / 100);
 
@@ -452,7 +344,7 @@ public without sharing class ProductMigrationController {
 		Map<Id, Module__c> moduleMap;
 		Map<Id, Module__c> productIdModuleMap = new Map<Id, Module__c>();
 
-		Product_Module__c[] productModules = [
+		List<Product_Module__c> productModules = [
 			SELECT Id, Module__c, Product__c
 			FROM Product_Module__c
 			WHERE Product__c IN :productIds
@@ -473,7 +365,7 @@ public without sharing class ProductMigrationController {
 
 	private static Map<Id, Product_Module__c> getProductIdProductModuleMap(Set<Id> productIds) {
 		Map<Id, Product_Module__c> productIdProductModuleMap = new Map<Id, Product_Module__c>();
-		Product_Module__c[] productModules = [
+		List<Product_Module__c> productModules = [
 			SELECT Id, Product__c, Attribution_Percentage__c
 			FROM Product_Module__c
 			WHERE Product__c IN :productIds
@@ -485,30 +377,30 @@ public without sharing class ProductMigrationController {
 		return productIdProductModuleMap;
 	}
 
-	public static void deletePriorData(Id contractId) {
+	public static void deletePriorData(Id opportunityId) {
 		Set<Id> subscription_MigrationIds = new Set<Id>();
-		Database.DeleteResult[] deleteResults;
-		Solution_Migration__c[] solution_Migrations = [
+		List<Database.DeleteResult> deleteResults;
+		List<Solution_Migration__c> solution_Migrations = [
 			SELECT Id
 			FROM Solution_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		];
-		Subscription_Aggregate_Migration__c[] subscription_Aggregate_Migrations = [
+		List<Subscription_Aggregate_Migration__c> subscription_Aggregate_Migrations = [
 			SELECT Id
 			FROM Subscription_Aggregate_Migration__c
-			WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+			WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 		];
 
 		Map<Id, Subscription_Migration__c> subscription_MigrationMap = new Map<Id, Subscription_Migration__c>(
 			[
 				SELECT Id
 				FROM Subscription_Migration__c
-				WHERE Contract__c = :contractId AND Manual_Entry__c = FALSE
+				WHERE Opportunity__c = :opportunityId AND Manual_Entry__c = FALSE
 			]
 		);
 		subscription_MigrationIds.addAll(subscription_MigrationMap.keySet());
 
-		Module_Migration__c[] module_Migrations = [
+		List<Module_Migration__c> module_Migrations = [
 			SELECT Id
 			FROM Module_Migration__c
 			WHERE Subscription_Migration__c IN :subscription_MigrationIds AND Manual_Entry__c = FALSE
@@ -530,7 +422,8 @@ public without sharing class ProductMigrationController {
 					Potential_AEM_Modules__c,
 					Potential_New_Modules__c,
 					Potential_New_Module_Count__c,
-					Potential_AEM_Migration_ARR__c
+					Potential_AEM_Migration_ARR__c,
+					Tanium_Software_ARR__c
 				FROM Opportunity
 				WHERE Id = :oppId
 			]

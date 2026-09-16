@@ -1,8 +1,6 @@
 public without sharing class RoscoCmtyProcesses {
-
-
 	/** nullOrEmpty
-	 */    
+	 */
 	public static Boolean nullOrEmpty(Object o) {
 		return (null == o) ||
 			((o instanceof String) && (0 == ((String) o).trim().length())) ||
@@ -10,42 +8,37 @@ public without sharing class RoscoCmtyProcesses {
 	}
 
 	/** processNewCmtyQuestion
-	 */        
-    public static String processNewCmtyQuestion(FeedItem feedItem){    
+	 */
+	public static String processNewCmtyQuestion(FeedItem feedItem) {
+		String ret = '';
 
-        String ret = '';
+		final String CUSTOMER_CMTY_ID = '0DB0e000000CaezGAC';
 
-        final String CUSTOMER_CMTY_ID = '0DB0e000000CaezGAC';
+		try {
+			if (!nullOrEmpty(feedItem)) {
+				if (feedItem.networkScope == CUSTOMER_CMTY_ID) {
+					String title = 'Title is blank';
+					if (!nullOrEmpty(feedItem.Title)) {
+						title = String.valueOf(feedItem.Title);
+						if (title.length() > 200) {
+							title = title.substring(0, 200);
+						}
+					}
 
-        try {
-
-            if(!nullOrEmpty(feedItem)){
-                if (feedItem.networkScope == CUSTOMER_CMTY_ID) {
-
-                    String title = 'Title is blank';
-                    if(!nullOrEmpty(feedItem.Title)){
-                        title = String.valueOf(feedItem.Title);                    
-                        if (title.length() > 200) {
-                            title = title.substring(0, 200);
-                        }
-                    }
-
-                    
 					String body = 'Body is blank';
-                    if(!nullOrEmpty(feedItem.Body)){
-                        body = String.valueOf(feedItem.Body).stripHtmlTags();
-                        if (body.length() > 2000) {
-                            body =
-                                body.substring(0, 2000) +
-                                '\n<truncated - please view post online (respond button) to see full message>';
-                        }
-                    }
-					
+					if (!nullOrEmpty(feedItem.Body)) {
+						body = String.valueOf(feedItem.Body).stripHtmlTags();
+						if (body.length() > 2000) {
+							body =
+								body.substring(0, 2000) +
+								'\n<truncated - please view post online (respond button) to see full message>';
+						}
+					}
+
 					String reponseButtonTxt = 'Respond';
 					String slackText = '';
-					if(String.valueOf(feedItem.ParentId).left(3) == '005'){
+					if (String.valueOf(feedItem.ParentId).left(3) == '005') {
 						slackText += '*New Community question [' + feedItem.Id + ']';
-						
 					} else {
 						slackText += '*New Group question [' + feedItem.Id + ']';
 						reponseButtonTxt = 'Respond to Group';
@@ -55,37 +48,42 @@ public without sharing class RoscoCmtyProcesses {
 					slackText += ' ```' + body + '```';
 					slackText +=
 						' <https://tanium.lightning.force.com/servlet/networks/switch?networkId=0DB0e000000Caez&startURL=s/question/' +
-						feedItem.Id + ' | ' + reponseButtonTxt + '>';
-					slackText += '    <https://community.tanium.com/s/question/' + feedItem.Id + '|Alt Open>';
-					
-					if(feedItem.Type == 'QuestionPost' || String.valueOf(feedItem.ParentId).left(3) != '005'){
-	                    slackCommunity(slackText, feedItem.ParentId);
+						feedItem.Id +
+						' | ' +
+						reponseButtonTxt +
+						'>';
+					slackText +=
+						'    <https://community.tanium.com/s/question/' +
+						feedItem.Id +
+						'|Alt Open>';
+
+					if (
+						feedItem.Type == 'QuestionPost' ||
+						String.valueOf(feedItem.ParentId).left(3) != '005'
+					) {
+						slackCommunity(slackText, feedItem.ParentId);
 					}
-                }
-            }
+				}
+			}
+		} catch (Exception e) {
+			RoscoLog.addEntry(
+				UserInfo.getUserId(),
+				'Exception',
+				'RoscoCmtyProcesses:processNewCmtyQuestion()',
+				1,
+				'Error',
+				'Processing resulted in ' + ret,
+				String.valueOf('feedItem:' + feedItem),
+				e.getMessage(),
+				e.getStackTraceString()
+			);
+		}
 
-        } catch (Exception e) {
-            RoscoLog.addEntry(
-                UserInfo.getUserId(),
-                'Exception',
-                'RoscoCmtyProcesses:processNewCmtyQuestion()',
-                1,
-                'Error',
-                'Processing resulted in ' + ret,
-                String.valueOf('feedItem:' + feedItem),
-                e.getMessage(),
-                e.getStackTraceString()
-            );            
-        }   
-    
-        return ret;            
-												
-
+		return ret;
 	}
 
-
 	/** tempTillReWrite */
-	public static void tempTillReWriteYo(){
+	public static void tempTillReWriteYo() {
 		String ridiculous = 'tempTillReWriteYo';
 		ridiculous = 'tempTillReWriteYo';
 		ridiculous = 'tempTillReWriteYo';
@@ -182,10 +180,8 @@ public without sharing class RoscoCmtyProcesses {
 		ridiculous = 'tempTillReWriteYo';
 		ridiculous = 'tempTillReWriteYo';
 		ridiculous = 'tempTillReWriteYo';
-		ridiculous = 'tempTillReWriteYo';						
-						
+		ridiculous = 'tempTillReWriteYo';
 	}
-
 
 	/** slackSOA
 	 */
@@ -197,7 +193,7 @@ public without sharing class RoscoCmtyProcesses {
 			Case_Management__c cm = Case_Management__c.getInstance();
 			Set<String> cmfields = Schema.SObjectType.Case_Management__c.fields.getMap().keySet();
 
-			for(String s: cmfields){
+			for (String s : cmfields) {
 				System.debug('s:' + s);
 			}
 
@@ -211,7 +207,10 @@ public without sharing class RoscoCmtyProcesses {
 				}
 			}
 			// Group Override
-			String slackGroupSetting = 'rosco_slack_community_' + String.valueOf(parentId).toLowercase() + '__c';
+			String slackGroupSetting =
+				'rosco_slack_community_' +
+				String.valueOf(parentId).toLowercase() +
+				'__c';
 			System.debug('slackGroupSetting:' + slackGroupSetting);
 			if (cmfields.contains(slackGroupSetting)) {
 				String cmty = String.valueOf(cm.get(slackGroupSetting));
@@ -223,7 +222,7 @@ public without sharing class RoscoCmtyProcesses {
 			System.debug('Slacking Channel: ' + slackChannel);
 
 			// Webhook
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 			if (cmfields.contains('rosco_slack_incoming_hook__c')) {
 				String hook = String.valueOf(cm.get('rosco_slack_incoming_hook__c'));
 
@@ -268,6 +267,4 @@ public without sharing class RoscoCmtyProcesses {
 			HttpResponse res = http.send(req);
 		}
 	}
-
-
 }

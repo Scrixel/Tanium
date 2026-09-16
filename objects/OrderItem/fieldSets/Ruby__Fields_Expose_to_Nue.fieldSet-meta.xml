@@ -3,6 +3,16 @@
     <fullName>Ruby__Fields_Expose_to_Nue</fullName>
     <description>Custom Fields which are exposed to Nue service</description>
     <displayedFields>
+        <field>ELV_Subscription__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>ELV_UsageModel__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
         <field>ELV_UsageQuantity__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
@@ -19,6 +29,11 @@
     </displayedFields>
     <displayedFields>
         <field>ELV_NARR__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>ELV_RenewalUpliftPercent__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>

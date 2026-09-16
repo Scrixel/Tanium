@@ -23,10 +23,10 @@ trigger ELV_RenewalUpliftAppliedRateTrigger on QuoteLineItem (before insert, bef
         Ruby__Subscription__c subscription = subscriptions.get(line.ELV_Changed_Subscription__c);
         if (subscription != null && subscription.ELV_Contracted_Renewal_Uplift_Percent__c != null && (cap == null || subscription.ELV_Contracted_Renewal_Uplift_Percent__c < cap)) cap = subscription.ELV_Contracted_Renewal_Uplift_Percent__c;
         if (cap != null && rate > cap) rate = cap;
-        line.Ruby__RenewalUpliftPercent__c = rate;
+        line.ELV_RenewalUpliftPercent__c = rate;
         if (String.isNotBlank(line.Ruby__ChangeAssetId__c)) ratesByAsset.put(line.Ruby__ChangeAssetId__c, rate);
     }
     for (QuoteLineItem line : Trigger.new) {
-        if (line.ELV_Renewal_Uplift_Override__c != true && line.Ruby__LineType__c == 'LineItem' && line.ELV_Exclude_Uplift__c != true && (line.Ruby__ChangeType__c == 'Renew' || line.Ruby__ChangeType__c == 'AdjustPrice') && ratesByAsset.containsKey(line.Ruby__ChangeAssetId__c)) line.Ruby__RenewalUpliftPercent__c = ratesByAsset.get(line.Ruby__ChangeAssetId__c);
+        if (line.ELV_Renewal_Uplift_Override__c != true && line.Ruby__LineType__c == 'LineItem' && line.ELV_Exclude_Uplift__c != true && (line.Ruby__ChangeType__c == 'Renew' || line.Ruby__ChangeType__c == 'AdjustPrice') && ratesByAsset.containsKey(line.Ruby__ChangeAssetId__c)) line.ELV_RenewalUpliftPercent__c = ratesByAsset.get(line.Ruby__ChangeAssetId__c);
     }
 }

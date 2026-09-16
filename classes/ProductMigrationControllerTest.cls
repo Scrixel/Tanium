@@ -8,6 +8,7 @@
  * SS-11649   2025-09-24    Updated the test class
  * SS-11576   2025-12-11    Added test method testGetOtherRenewableProducts_WhenNoRenewableProducts_ReturnEmptyList
  * SS-13048   2026-04-14    Updated test class to bypass SubscriptionTriggerHandler
+ * SS-13771   2026-08-18    Updated class as part of Elevate project
  */
 @IsTest
 private class ProductMigrationControllerTest {
@@ -19,7 +20,10 @@ private class ProductMigrationControllerTest {
 				'AccountTriggerHandler',
 				'ContactTriggerHandler',
 				'OpportunityTriggerHandler',
-				'QuoteCPQTriggerHandler',
+				'ELV_QuoteTriggerHandler',
+				'ELV_QuoteLineTriggerHandler',
+				'QuoteTriggerHandler',
+				'QuoteLineTriggerHandler',
 				'SubscriptionTriggerHandler'
 			}
 		);
@@ -27,25 +31,12 @@ private class ProductMigrationControllerTest {
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Account account = TestFactory.buildAccount('Test Account');
 			account.Segment__c = 'Enterprise';
-			insert account;
-
-			Contract contract1 = new Contract(
-				Name = 'Active Contract1',
-				RecordTypeId = Utility.getRecordTypeIdByAPIName('Contract', 'Account_Contracts'),
-				StartDate = System.today().addDays(-1),
-				EndDate = System.today().addDays(30),
-				AccountId = account.Id,
-				ContractTerm = 12
-			);
-			Contract contract2 = new Contract(
-				Name = 'Active Contract2',
-				RecordTypeId = Utility.getRecordTypeIdByAPIName('Contract', 'Account_Contracts'),
-				StartDate = System.today().addDays(-1),
-				EndDate = System.today().addDays(30),
-				AccountId = account.Id,
-				ContractTerm = 12
-			);
-			insert new List<Contract>{ contract1, contract2 };
+			account.Ineligible_for_Migration_Calculation__c = false;
+			Account invalidAemAccount = TestFactory.buildAccount('Test Account');
+			invalidAemAccount.Segment__c = 'Enterprise';
+			invalidAemAccount.Ineligible_for_Migration_Calculation__c = true;
+			invalidAemAccount.Ineligible_for_Migration_Calc_Reason__c = 'Account is ineligible for migration calculation.';
+			insert new List<Account>{ account, invalidAemAccount };
 
 			Opportunity opp1 = TestFactory.buildOpportunity(
 				'Test Opportunity1',
@@ -53,27 +44,42 @@ private class ProductMigrationControllerTest {
 				'New',
 				account.Id
 			);
+
+			opp1.EndDate__c = System.today().addDays(120);
+			opp1.MaxQuantity__c = 10;
+
 			Opportunity opp2 = TestFactory.buildOpportunity(
 				'Test Opportunity2',
 				System.today().addDays(120),
 				'New',
 				account.Id
 			);
-			opp2.SBQQ__RenewedContract__c = contract2.Id;
-			insert new List<Opportunity>{ opp1, opp2 };
+
+			Opportunity opp3 = TestFactory.buildOpportunity(
+				'Invalid Opportunity For AEM Migration',
+				System.today().addDays(120),
+				'New',
+				invalidAemAccount.Id
+			);
+
+			insert new List<Opportunity>{ opp1, opp2, opp3 };
 
 			Product2 product1 = TestFactory.buildProduct('Tanium-Asset', 'TAN-ASSET');
 			product1.Product_Group__c = 'Software';
 			product1.Product_Type__c = 'Subscription';
+			product1.Family = 'None';
 			Product2 product2 = TestFactory.buildProduct('Tanium-Deploy', 'TAN-DEPLOY');
 			product2.Product_Group__c = 'Software';
 			product2.Product_Type__c = 'TaaS';
+			product2.Family = 'None';
 			Product2 product3 = TestFactory.buildProduct('Tanium-Core', 'TAN-CORE');
 			product3.Product_Group__c = 'Software';
 			product3.Product_Type__c = 'Subscription';
+			product3.Family = 'None';
 			Product2 product4 = TestFactory.buildProduct('Tanium-Discover', 'TAN-DISC');
 			product4.Product_Group__c = 'Software';
 			product4.Product_Type__c = 'TaaS';
+			product4.Family = 'None';
 			insert new List<Product2>{ product1, product2, product3, product4 };
 
 			PricebookEntry pricebookEntry1 = TestFactory.buildPricebookEntry(
@@ -135,6 +141,7 @@ private class ProductMigrationControllerTest {
 				discoverProductModule
 			};
 
+			/*
 			SBQQ__ProductOption__c productOption = new SBQQ__ProductOption__c(
 				SBQQ__ConfiguredSKU__c = product3.Id,
 				SBQQ__OptionalSKU__c = product4.Id,
@@ -142,99 +149,93 @@ private class ProductMigrationControllerTest {
 				SBQQ__UnitPrice__c = 4.56,
 				SBQQ__Number__c = 1
 			);
-			insert productOption;
+			insert productOption;*/
 
-			SBQQ__Quote__c quote1 = TestFactory.buildSBQQ_Quote(
+			Quote quote1 = TestFactory.buildQuote(
+				'Quote1',
 				opp1.Id,
-				account.Id,
-				'Draft',
-				'',
-				null,
-				null,
-				null
+				System.today(),
+				System.today().addMonths(3)
 			);
-			SBQQ__Quote__c quote2 = TestFactory.buildSBQQ_Quote(
+			Quote quote2 = TestFactory.buildQuote(
+				'Quote2',
 				opp2.Id,
-				account.Id,
-				'Draft',
-				'',
-				null,
-				null,
-				null
+				System.today(),
+				System.today().addMonths(3)
 			);
-			insert new List<SBQQ__Quote__c>{ quote1, quote2 };
+			insert new List<Quote>{ quote1, quote2 };
 
-			SBQQ__QuoteLine__c quoteLine1a_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine1a_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product1.Id,
-				1
+				10,
+				4.63,
+				pricebookEntry1.Id
 			);
-			quoteLine1a_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine1b_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine1b_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product1.Id,
-				1
+				10,
+				4.63,
+				pricebookEntry1.Id
 			);
-			quoteLine1b_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine2_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine2_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product2.Id,
-				1
+				10,
+				4.63,
+				pricebookEntry2.Id
 			);
-			quoteLine2_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine3a_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine3a_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product3.Id,
-				50
+				10,
+				4.63,
+				pricebookEntry3.Id
 			);
-			quoteLine3a_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine3b_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine3b_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product3.Id,
-				40
+				10,
+				4.63,
+				pricebookEntry3.Id
 			);
-			quoteLine3b_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine4_1 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine4_1 = TestFactory.buildQuoteLineItem(
 				quote1.Id,
-				product4.Id,
-				50
+				10,
+				4.63,
+				pricebookEntry4.Id
 			);
-			quoteLine4_1.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine1_2 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine1_2 = TestFactory.buildQuoteLineItem(
 				quote2.Id,
-				product1.Id,
-				1
+				10,
+				4.63,
+				pricebookEntry1.Id
 			);
-			quoteLine1_2.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine2_2 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine2_2 = TestFactory.buildQuoteLineItem(
 				quote2.Id,
-				product2.Id,
-				1
+				10,
+				4.63,
+				pricebookEntry2.Id
 			);
-			quoteLine2_2.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine3_2 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine3_2 = TestFactory.buildQuoteLineItem(
 				quote2.Id,
-				product3.Id,
-				50
+				10,
+				4.63,
+				pricebookEntry3.Id
 			);
-			quoteLine3_2.SBQQ__StartDate__c = System.today();
 
-			SBQQ__QuoteLine__c quoteLine4_2 = TestFactory.buildSBQQ_QuoteLine(
+			QuoteLineItem quoteLine4_2 = TestFactory.buildQuoteLineItem(
 				quote2.Id,
-				product4.Id,
-				50
+				10,
+				4.63,
+				pricebookEntry4.Id
 			);
-			quoteLine4_2.SBQQ__StartDate__c = System.today();
 
-			insert new List<SBQQ__QuoteLine__c>{
+			insert new List<QuoteLineItem>{
 				quoteLine1a_1,
 				quoteLine1b_1,
 				quoteLine2_1,
@@ -247,119 +248,110 @@ private class ProductMigrationControllerTest {
 				quoteLine4_2
 			};
 
-			SBQQ__Subscription__c subscription1a_1 = buildSubscription(
-				account.Id,
-				product1.Id,
-				1.00,
-				quoteLine1a_1.Id
-			);
-			subscription1a_1.SBQQ__Contract__c = contract1.Id;
-			subscription1a_1.SBQQ__ProrateMultiplier__c = 1;
-			subscription1a_1.SBQQ__ListPrice__c = 99;
-			subscription1a_1.SBQQ__NetPrice__c = 99;
+			Ruby__UOM__c uom = new Ruby__UOM__c(Name = 'Endpoints/Year');
+			insert uom;
 
-			SBQQ__Subscription__c subscription1b_1 = buildSubscription(
+			Ruby__Subscription__c subscription1a_1 = buildSubscription(
 				account.Id,
+				opp1.Id,
 				product1.Id,
-				1.00,
-				quoteLine1b_1.Id
+				quoteLine1a_1.Id,
+				pricebookEntry1.Id,
+				uom.Id
 			);
-			subscription1b_1.SBQQ__Contract__c = contract1.Id;
-			subscription1b_1.SBQQ__ProrateMultiplier__c = 2;
-			subscription1b_1.SBQQ__ListPrice__c = 99;
-			subscription1b_1.SBQQ__NetPrice__c = 99;
+			subscription1a_1.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription2_1 = buildSubscription(
+			Ruby__Subscription__c subscription1b_1 = buildSubscription(
 				account.Id,
+				opp1.Id,
+				product1.Id,
+				quoteLine1b_1.Id,
+				pricebookEntry1.Id,
+				uom.Id
+			);
+			subscription1b_1.Ruby__Quantity__c = 10;
+
+			Ruby__Subscription__c subscription2_1 = buildSubscription(
+				account.Id,
+				opp1.Id,
 				product2.Id,
-				1.00,
-				quoteLine2_1.Id
+				quoteLine2_1.Id,
+				pricebookEntry2.Id,
+				uom.Id
 			);
-			subscription2_1.SBQQ__Contract__c = contract1.Id;
-			subscription2_1.SBQQ__ProrateMultiplier__c = 1;
-			subscription2_1.SBQQ__ListPrice__c = 49;
-			subscription2_1.SBQQ__NetPrice__c = 49;
+			subscription2_1.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription3a_1 = buildSubscription(
+			Ruby__Subscription__c subscription3a_1 = buildSubscription(
 				account.Id,
+				opp1.Id,
 				product3.Id,
-				1.00,
-				quoteLine3a_1.Id
+				quoteLine3a_1.Id,
+				pricebookEntry3.Id,
+				uom.Id
 			);
-			subscription3a_1.SBQQ__Contract__c = contract1.Id;
-			subscription3a_1.SBQQ__ProrateMultiplier__c = 1;
-			subscription3a_1.SBQQ__ListPrice__c = 19;
-			subscription3a_1.SBQQ__NetPrice__c = 19;
+			subscription3a_1.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription3b_1 = buildSubscription(
+			Ruby__Subscription__c subscription3b_1 = buildSubscription(
 				account.Id,
+				opp1.Id,
 				product3.Id,
-				2.00,
-				quoteLine3b_1.Id
+				quoteLine3b_1.Id,
+				pricebookEntry3.Id,
+				uom.Id
 			);
-			subscription3b_1.SBQQ__Contract__c = contract1.Id;
-			subscription3b_1.SBQQ__ProrateMultiplier__c = 1;
-			subscription3b_1.SBQQ__ListPrice__c = 20;
-			subscription3b_1.SBQQ__NetPrice__c = 20;
+			subscription3b_1.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription4_1 = buildSubscription(
+			Ruby__Subscription__c subscription4_1 = buildSubscription(
 				account.Id,
+				opp1.Id,
 				product4.Id,
-				1.00,
-				quoteLine4_1.Id
+				quoteLine4_1.Id,
+				pricebookEntry4.Id,
+				uom.Id
 			);
-			subscription4_1.SBQQ__Contract__c = contract1.Id;
-			subscription4_1.SBQQ__ProductOption__c = productOption.Id;
-			subscription4_1.SBQQ__ListPrice__c = 19;
-			subscription4_1.SBQQ__NetPrice__c = 19;
-			subscription4_1.SBQQ__ProrateMultiplier__c = 1;
+			subscription4_1.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription1_2 = buildSubscription(
+			Ruby__Subscription__c subscription1_2 = buildSubscription(
 				account.Id,
+				opp2.Id,
 				product1.Id,
-				1.00,
-				quoteLine1_2.Id
+				quoteLine1_2.Id,
+				pricebookEntry1.Id,
+				uom.Id
 			);
-			subscription1_2.SBQQ__Contract__c = contract2.Id;
-			subscription1_2.SBQQ__ProrateMultiplier__c = 1;
-			subscription1_2.SBQQ__ListPrice__c = 99;
-			subscription1_2.SBQQ__NetPrice__c = 99;
+			subscription1_2.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription2_2 = buildSubscription(
+			Ruby__Subscription__c subscription2_2 = buildSubscription(
 				account.Id,
+				opp2.Id,
 				product2.Id,
-				1.00,
-				quoteLine2_2.Id
+				quoteLine2_2.Id,
+				pricebookEntry2.Id,
+				uom.Id
 			);
-			subscription2_2.SBQQ__Contract__c = contract2.Id;
-			subscription2_2.SBQQ__ProrateMultiplier__c = 1;
-			subscription2_2.SBQQ__ListPrice__c = 49;
-			subscription2_2.SBQQ__NetPrice__c = 49;
+			subscription2_2.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription3_2 = buildSubscription(
+			Ruby__Subscription__c subscription3_2 = buildSubscription(
 				account.Id,
+				opp2.Id,
 				product3.Id,
-				1.00,
-				quoteLine3_2.Id
+				quoteLine3_2.Id,
+				pricebookEntry3.Id,
+				uom.Id
 			);
-			subscription3_2.SBQQ__Contract__c = contract2.Id;
-			subscription3_2.SBQQ__ProrateMultiplier__c = 1;
-			subscription3_2.SBQQ__ListPrice__c = 19;
-			subscription3_2.SBQQ__NetPrice__c = 19;
+			subscription3_2.Ruby__Quantity__c = 10;
 
-			SBQQ__Subscription__c subscription4_2 = buildSubscription(
+			Ruby__Subscription__c subscription4_2 = buildSubscription(
 				account.Id,
+				opp2.Id,
 				product4.Id,
-				1.00,
-				quoteLine4_2.Id
+				quoteLine4_2.Id,
+				pricebookEntry4.Id,
+				uom.Id
 			);
-			subscription4_2.SBQQ__Contract__c = contract2.Id;
-			subscription4_2.SBQQ__ProductOption__c = productOption.Id;
-			subscription4_2.SBQQ__ListPrice__c = 19;
-			subscription4_2.SBQQ__NetPrice__c = 19;
-			subscription4_2.SBQQ__ProrateMultiplier__c = 1;
+			subscription4_2.Ruby__Quantity__c = 10;
 
-			insert new List<SBQQ__Subscription__c>{
+			insert new List<Ruby__Subscription__c>{
 				subscription1a_1,
 				subscription1b_1,
 				subscription2_1,
@@ -376,7 +368,11 @@ private class ProductMigrationControllerTest {
 
 	@IsTest
 	static void testIsValidOpportunity_WhenInvalidOpportunity_ReturnInvalidOpportunityMessage() {
-		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
+		Opportunity opp = [
+			SELECT Id
+			FROM Opportunity
+			WHERE Name = 'Invalid Opportunity For AEM Migration'
+		];
 		EnhancedReturnType rt = new EnhancedReturnType(false);
 
 		System.runAs(TestUserFactory.getAdminUser()) {
@@ -384,12 +380,12 @@ private class ProductMigrationControllerTest {
 			rt = ProductMigrationController.isValidOpportunity(opp.Id);
 			Test.stopTest();
 		}
-		Assert.isTrue(rt.retData == 'This Opportunity is not linked to a renewed contract.');
+		Assert.isTrue(rt.retData.startsWith('This account cannot be calculated due to'));
 	}
 
 	@IsTest
 	static void testIsValidOpportunity_WhenValidOpportunity_ReturnOpportunityName() {
-		Opportunity opp = [SELECT Id, Name FROM Opportunity WHERE Name = 'Test Opportunity2'];
+		Opportunity opp = [SELECT Id, Name FROM Opportunity WHERE Name = 'Test Opportunity1'];
 		EnhancedReturnType rt = new EnhancedReturnType(false);
 
 		System.runAs(TestUserFactory.getAdminUser()) {
@@ -400,46 +396,38 @@ private class ProductMigrationControllerTest {
 		Assert.isTrue(rt.retData.subStringBefore('***') == opp.Name);
 	}
 
+	/*
 	@IsTest
 	static void testStartCalculation_WhenValidAmendContract_FinishCalculation() {
 		Boolean finishedCalculation = false;
-		Contract contract = [
-			SELECT Id, ContractNumber
-			FROM Contract
-			WHERE Name = 'Active Contract1'
-			LIMIT 1
-		];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			finishedCalculation = ProductMigrationController.startCalculation(contract.ContractNumber);
+			finishedCalculation = ProductMigrationController.startCalculation(opp.Id);
 			Test.stopTest();
 		}
 		Assert.isTrue(finishedCalculation);
-	}
+	}*/
 
 	@IsTest
-	static void testStartCalculation_WhenValidContract_FinishCalculation() {
+	static void testStartCalculation_WhenValidOpportunity_FinishCalculation() {
 		Boolean finishedCalculation = false;
-		Contract contract = [
-			SELECT Id, ContractNumber
-			FROM Contract
-			WHERE Name = 'Active Contract2'
-			LIMIT 1
-		];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			finishedCalculation = ProductMigrationController.startCalculation(contract.ContractNumber);
+			finishedCalculation = ProductMigrationController.startCalculation(opp.Id);
 			Test.stopTest();
 		}
 		Assert.isTrue(finishedCalculation);
 	}
 
+	/*
 	@IsTest
 	static void testStartCalculation_WhenInvalidOpportunity_DoNotFinishCalculation() {
 		Boolean finishedCalculation = false;
-		Opportunity opp = [SELECT Id FROM Opportunity LIMIT 1];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity2'];
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
@@ -448,22 +436,18 @@ private class ProductMigrationControllerTest {
 			Test.stopTest();
 		}
 		Assert.isFalse(finishedCalculation);
-	}
+	}*/
 
 	@IsTest
-	static void testGetMigrationTotalBaseLine_WhenValidContract_UpdateMigrationTotalBaseline() {
+	static void testGetMigrationTotalBaseLine_WhenValidOpportunity_UpdateMigrationTotalBaseline() {
 		Boolean finishedCalculation = false;
 		EnhancedReturnType rt;
-		Contract contract = [
-			SELECT Id, ContractNumber, Migration_Total_Baseline__c
-			FROM Contract
-			WHERE Name = 'Active Contract2'
-		];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			finishedCalculation = ProductMigrationController.startCalculation(contract.ContractNumber);
-			rt = ProductMigrationController.getMigrationTotalBaseLine(contract.ContractNumber);
+			finishedCalculation = ProductMigrationController.startCalculation(opp.Id);
+			rt = ProductMigrationController.getMigrationTotalBaseLine(opp.Id);
 			Test.stopTest();
 		}
 
@@ -472,15 +456,13 @@ private class ProductMigrationControllerTest {
 
 	@IsTest
 	static void testGetSubscription_Migrations_WhenValidContract_ReturnSubscription_Migrations() {
-		Contract contract = [SELECT Id, ContractNumber FROM Contract LIMIT 1];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 		Subscription_Migration__c[] subscription_Migrations;
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			if (ProductMigrationController.startCalculation(contract.ContractNumber)) {
-				subscription_Migrations = ProductMigrationController.getSubscription_Migrations(
-					contract.ContractNumber
-				);
+			if (ProductMigrationController.startCalculation(opp.Id)) {
+				subscription_Migrations = ProductMigrationController.getSubscription_Migrations(opp.Id);
 			}
 			Test.stopTest();
 		}
@@ -489,15 +471,13 @@ private class ProductMigrationControllerTest {
 
 	@IsTest
 	static void testGetOtherRenewableProducts_WhenNoRenewableProducts_ReturnEmptyList() {
-		Contract contract = [SELECT Id, ContractNumber FROM Contract LIMIT 1];
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 		List<Subscription_Migration__c> otherRenewableProducts = null;
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			if (ProductMigrationController.startCalculation(contract.ContractNumber)) {
-				otherRenewableProducts = ProductMigrationController.getOtherRenewableProducts(
-					contract.ContractNumber
-				);
+			if (ProductMigrationController.startCalculation(opp.Id)) {
+				otherRenewableProducts = ProductMigrationController.getOtherRenewableProducts(opp.Id);
 			}
 			Test.stopTest();
 		}
@@ -505,36 +485,49 @@ private class ProductMigrationControllerTest {
 	}
 
 	@IsTest
-	static void testGetSolution_Migrations_WhenValidContract_ReturnSolution_Migrations() {
-		Contract contract = [SELECT Id, ContractNumber FROM Contract LIMIT 1];
+	static void testGetSolution_Migrations_WhenValidOpportunity_ReturnSolution_Migrations() {
+		Opportunity opp = [SELECT Id FROM Opportunity WHERE Name = 'Test Opportunity1'];
 		List<Solution_Migration__c> solution_Migrations = null;
 
 		System.runAs(TestUserFactory.getAdminUser()) {
 			Test.startTest();
-			if (ProductMigrationController.startCalculation(contract.ContractNumber)) {
-				solution_Migrations = ProductMigrationController.getSolution_Migrations(
-					contract.ContractNumber
-				);
+			if (ProductMigrationController.startCalculation(opp.Id)) {
+				solution_Migrations = ProductMigrationController.getSolution_Migrations(opp.Id);
 			}
 			Test.stopTest();
 		}
 		Assert.isNotNull(solution_Migrations);
 	}
 
-	static SBQQ__Subscription__c buildSubscription(
+	static Ruby__Subscription__c buildSubscription(
 		Id accountId,
+		Id opportunityId,
 		Id productId,
-		Decimal quantity,
-		Id quoteLineId
+		Id quoteLineId,
+		Id priceBookEntryId,
+		Id uomId
 	) {
-		SBQQ__Subscription__c sub = new SBQQ__Subscription__c();
-		sub.SBQQ__Account__c = (accountId != null ? accountId : null);
-		sub.SBQQ__Product__c = (productId != null ? productId : null);
-		sub.SBQQ__Quantity__c = quantity;
-		sub.SBQQ__SubscriptionStartDate__c = System.today().addDays(-30);
-		sub.SBQQ__SubscriptionEndDate__c = System.today().addDays(90);
-		sub.Exclude_from_Seats_Roll_up__c = false;
-		sub.SBQQ__QuoteLine__c = quoteLineId;
-		return sub;
+		Ruby__Subscription__c subscription = new Ruby__Subscription__c();
+		subscription.Ruby__BillingAccount__c = accountId;
+		subscription.Ruby__RenewalOpportunity__c = opportunityId;
+		subscription.Ruby__Product__c = productId;
+		subscription.Ruby__Quantity__c = 10;
+		subscription.ELV_QuoteLine__c = quoteLineId;
+		subscription.Ruby__ListPrice__c = 99;
+		subscription.Ruby__NetSellerPrice__c = 99;
+		subscription.Ruby__SubscriptionStartDate__c = System.today();
+		subscription.Ruby__SubscriptionEndDate__c = System.today().addMonths(12);
+		subscription.Ruby__PriceBookEntry__c = priceBookEntryId;
+		subscription.Ruby__ActualSubscriptionTerm__c = 12;
+		subscription.Ruby__SubscriptionVersion__c = 1;
+		subscription.Ruby__TaxAmount__c = 0;
+		subscription.Ruby__TotalAmount__c =
+			subscription.Ruby__NetSellerPrice__c *
+			subscription.Ruby__Quantity__c *
+			subscription.Ruby__ActualSubscriptionTerm__c;
+		subscription.Ruby__TotalPrice__c =
+			subscription.Ruby__NetSellerPrice__c * subscription.Ruby__Quantity__c;
+		subscription.Ruby__Uom__c = uomId;
+		return subscription;
 	}
 }

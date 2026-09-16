@@ -106,8 +106,8 @@
         <description>SS-13670: Recalc for Maximum value of Subscription End Date.</description>
         <name>Opportunity_Max_End_Date</name>
         <label>Opportunity Max End Date</label>
-        <locationX>1525</locationX>
-        <locationY>121</locationY>
+        <locationX>1110</locationX>
+        <locationY>1235</locationY>
         <actionName>RollupFlowFullRecalcDispatcher</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -157,7 +157,8 @@
         <inputParameters>
             <name>rollupDeveloperNames</name>
             <value>
-                <stringValue>Account_Seats_Purchased_on_Contract,Contract_Max_Quantity,Contract_Products,Account_Agreement_Types, Account_Support_Center_Subscription</stringValue>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>Account_Seats_Purchased_on_Contract,Contract_Max_Quantity,Contract_Products,Account_Agreement_Types,Account_Support_Center_Subscription</stringValue>
             </value>
         </inputParameters>
         <nameSegment>RollupFlowFullRecalcDispatcher</nameSegment>
@@ -166,8 +167,7 @@
     </actionCalls>
     <apiVersion>64.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
-    <description>V14 is TEST version. Do not activate
-08.31.26 - SS-13670 : Added Opportunity Max End Date to Ruby Subscription related rollups.
+    <description>08.31.26 - SS-13670 : Added Opportunity Max End Date to Ruby Subscription related rollups.
 01.27.26 - SS-12312 : Added the Account Support Center Subscription to Subscription Related Rollups. 
 01.23.26 - SS-12251: Added the Account Entitlements rollup and removed some deprecated rollups (e.g., TRA, Business Objective)
 07.08.25 AT: Added Partner Services Verification Apex Rollup to Account Task and Business Objective Counts Apex Action</description>
@@ -237,7 +237,7 @@
         <locationX>991</locationX>
         <locationY>47</locationY>
         <connector>
-            <targetReference>Opportunity_Max_End_Date</targetReference>
+            <targetReference>Jira_Rollups</targetReference>
         </connector>
         <schedule>
             <dayOfMonthToRun>0</dayOfMonthToRun>
@@ -248,7 +248,7 @@
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <waits>
         <name>Pause_for_0_Minutes</name>
         <label>Pause for 30 Minutes</label>
@@ -444,6 +444,9 @@
         <waitEvents>
             <name>Resume_70_0</name>
             <conditionLogic>and</conditionLogic>
+            <connector>
+                <targetReference>Opportunity_Max_End_Date</targetReference>
+            </connector>
             <eventType>AlarmEvent</eventType>
             <inputParameters>
                 <name>AlarmTime</name>

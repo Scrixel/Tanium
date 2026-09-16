@@ -199,6 +199,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>ELV_UsageModel__c</picklist>
+        <values>
+            <fullName>Commit with Overage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Included Tokens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay As You Go</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>ELV_UsagePeriod__c</picklist>
         <values>
             <fullName>Annually</fullName>

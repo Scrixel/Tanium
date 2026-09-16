@@ -27,7 +27,8 @@ public with sharing class CaseSendToFedSlack {
 			String caseLink = System.URL.getSalesforceBaseUrl().toExternalForm() + '/' + aCase.ID;
 
 			if (
-				cmfields.contains('rosco_case_url_prefix__c') && cmfields.contains('rosco_sfdc_dom_l__c')
+				cmfields.contains('rosco_case_url_prefix__c') &&
+				cmfields.contains('rosco_sfdc_dom_l__c')
 			) {
 				String urlprefix = String.valueOf(cm.get('rosco_case_url_prefix__c'));
 				String urlfriend = String.valueOf(cm.get('rosco_sfdc_dom_l__c'));
@@ -46,7 +47,7 @@ public with sharing class CaseSendToFedSlack {
 			}
 
 			// Webhook
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 			if (cmfields.contains('rosco_slack_incoming_hook__c')) {
 				String hook = String.valueOf(cm.get('rosco_slack_incoming_hook__c'));
 

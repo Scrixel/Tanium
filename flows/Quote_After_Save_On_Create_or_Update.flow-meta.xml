@@ -72,7 +72,7 @@
         <offset>0</offset>
         <versionString>2.0.1</versionString>
     </actionCalls>
-    <apiVersion>62.0</apiVersion>
+    <apiVersion>66.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Apply_Uplift</name>
@@ -1491,6 +1491,12 @@ Migrated on 4.17.26 from the Quote_After_Insert_Field_Updates flow.</description
 )</expression>
     </formulas>
     <formulas>
+        <name>formula_CARR_Component</name>
+        <dataType>Currency</dataType>
+        <expression>IF({!$Record.CARR_Formula__c} &lt; 0, {!$Record.CARR_Formula__c}, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
         <name>formula_Eligible_Distributor_Discount</name>
         <dataType>Boolean</dataType>
         <expression>IF ( INCLUDES ( {!$Record.SBQQ__Partner__r.Partner_Type__c}, &quot;Distributor&quot; ) ||
@@ -1626,16 +1632,16 @@ INCLUDES ( {!$Record.SBQQ__Partner__r.Business_Motion__c}, &quot;Distribute&quot
         <name>formula_MSP_Annualized_Software_Spend</name>
         <dataType>Currency</dataType>
         <expression>IF(
-    {!$Record.Incoming_ARR_formula__c} = 0,
-    {!$Record.New_Business_Annualized_Software_Spend__c},
-    IF(
-        OR({!$Record.NARR_Formula__c} &gt; 0, {!$Record.CARR_Formula__c} &lt; 0),
-        {!$Record.SBQQ__Account__r.Annualized_Software_Spend__c}
-        + IF({!$Record.NARR_Formula__c} &gt; 0, {!$Record.NARR_Formula__c}, 0)
-        + IF({!$Record.CARR_Formula__c} &lt; 0, {!$Record.CARR_Formula__c} , 0),
-        0
-    )
+    OR({!$Record.NARR_Formula__c} &gt; 0, {!$Record.CARR_Formula__c} &lt; 0),
+    {!$Record.SBQQ__Account__r.Annualized_Software_Spend__c} + {!formula_NARR_Component} + {!formula_CARR_Component},
+    {!$Record.SBQQ__Account__r.Annualized_Software_Spend__c} + {!$Record.New_Business_Annualized_Software_Spend__c}
 )</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_NARR_Component</name>
+        <dataType>Currency</dataType>
+        <expression>IF({!$Record.NARR_Formula__c} &gt; 0, {!$Record.NARR_Formula__c}, 0)</expression>
         <scale>2</scale>
     </formulas>
     <formulas>

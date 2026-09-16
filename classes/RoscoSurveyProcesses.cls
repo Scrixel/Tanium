@@ -67,7 +67,9 @@ public with sharing class RoscoSurveyProcesses {
 					surveysInner
 				);
 				Map<String, Integer> rolling12MonthCaseCSAT = getRolling12MonthCaseCSAT(surveysInner);
-				Map<String, String> mostRecentRelationalScore = getMostRecentRelationalScore(surveysInner);
+				Map<String, String> mostRecentRelationalScore = getMostRecentRelationalScore(
+					surveysInner
+				);
 
 				// Transacational
 				Map<String, Integer> allTimeCaseScore = getAllTimeCaseInfo(surveysInner);
@@ -84,16 +86,22 @@ public with sharing class RoscoSurveyProcesses {
 					accounts[0].Survey_AllTimeCount__c = allTimeScore.get('count');
 					accounts[0].Survey_Rolling12MonthScore__c = rolling12MonthScore.get('score');
 					accounts[0].Survey_Rolling12MonthCount__c = rolling12MonthScore.get('count');
-					accounts[0].Survey_MostRecentScore__c = Integer.valueOf(mostRecentScore.get('score'));
-					accounts[0].Survey_MostRecentDate__c = Datetime.valueOfGmt(mostRecentScore.get('date'));
+					accounts[0].Survey_MostRecentScore__c = Integer.valueOf(
+						mostRecentScore.get('score')
+					);
+					accounts[0].Survey_MostRecentDate__c = Datetime.valueOfGmt(
+						mostRecentScore.get('date')
+					);
 
 					// Relational
 					accounts[0].Survey_AllTimeRelationalScore__c = allTimeRelationalScore.get('score');
 					accounts[0].Survey_AllTimeRelationalCount__c = allTimeRelationalScore.get('count');
-					accounts[0].Survey_Rolling12MonthRelationalScore__c = rolling12MonthRelationalScore.get(
+					accounts[0]
+						.Survey_Rolling12MonthRelationalScore__c = rolling12MonthRelationalScore.get(
 						'score'
 					);
-					accounts[0].Survey_Rolling12MonthRelationalCount__c = rolling12MonthRelationalScore.get(
+					accounts[0]
+						.Survey_Rolling12MonthRelationalCount__c = rolling12MonthRelationalScore.get(
 						'count'
 					);
 					accounts[0].Survey_MostRecentRelationalScore__c = Integer.valueOf(
@@ -156,14 +164,18 @@ public with sharing class RoscoSurveyProcesses {
 					account.Survey_AllTimeCaseCount__c = allTimeCaseScore.get('count');
 					account.Survey_Rolling12MonthCaseScore__c = rolling12MonthCaseScore.get('score');
 					account.Survey_Rolling12MonthCaseCount__c = rolling12MonthCaseScore.get('count');
-					account.Survey_MostRecentCaseScore__c = Integer.valueOf(mostRecentCaseScore.get('score'));
+					account.Survey_MostRecentCaseScore__c = Integer.valueOf(
+						mostRecentCaseScore.get('score')
+					);
 					account.Survey_MostRecentCaseDate__c = Datetime.valueOfGmt(
 						mostRecentCaseScore.get('date')
 					);
 
 					account.Survey_AllTimeCaseCSAT__c = allTimeCaseCSAT.get('score');
 					account.Survey_Rolling12MonthCaseCSAT__c = rolling12MonthCaseCSAT.get('score');
-					account.Survey_MostRecentCaseCSAT__c = Integer.valueOf(mostRecentCaseCSAT.get('score'));
+					account.Survey_MostRecentCaseCSAT__c = Integer.valueOf(
+						mostRecentCaseCSAT.get('score')
+					);
 
 					insert account;
 					System.debug('Rosco Account Created: ' + String.valueOf(account.Id));
@@ -197,14 +209,18 @@ public with sharing class RoscoSurveyProcesses {
 				processCaseSurvey(new List<Survey__c>{ survey });
 			} else if (survey.Name.containsIgnoreCase('Relational NPS')) {
 				processRelationalSurvey(new List<Survey__c>{ survey });
-			} else if (survey.Name.containsIgnoreCase('Enterprise Services Engagement Feedback Survey')) {
+			} else if (
+				survey.Name.containsIgnoreCase('Enterprise Services Engagement Feedback Survey')
+			) {
 				processESOSurvey(new List<Survey__c>{ survey });
 			} else if (survey.Name.containsIgnoreCase('Implement Survey')) {
 				processImplementSurvey(new List<Survey__c>{ survey });
 			} else if (survey.Name.containsIgnoreCase('Onboard Survey')) {
 				processOnboardSurvey(new List<Survey__c>{ survey });
 			} else if (
-				survey.Name.containsIgnoreCase('Tanium Enterprise Services Customer Satisfaction Survey')
+				survey.Name.containsIgnoreCase(
+					'Tanium Enterprise Services Customer Satisfaction Survey'
+				)
 			) {
 				processESCSATSurvey(new List<Survey__c>{ survey });
 			} else if (survey.Name.containsIgnoreCase('Tanium Technical Account Management Survey')) {
@@ -1060,7 +1076,10 @@ public with sharing class RoscoSurveyProcesses {
 			*/
 		} catch (Exception e) {
 			System.debug(
-				'processCaseSurveyTranslate: ' + e.getMessage() + '\n' + e.getStackTraceString()
+				'processCaseSurveyTranslate: ' +
+				e.getMessage() +
+				'\n' +
+				e.getStackTraceString()
 			);
 		}
 	}
@@ -1284,7 +1303,9 @@ public with sharing class RoscoSurveyProcesses {
 
 		caseMap = caseIds.isEmpty()
 			? new Map<Id, Case>()
-			: new Map<Id, Case>([SELECT CaseNumber, Subject, Owner.Email FROM Case WHERE Id IN :caseIds]);
+			: new Map<Id, Case>(
+					[SELECT CaseNumber, Subject, Owner.Email FROM Case WHERE Id IN :caseIds]
+			  );
 
 		try {
 			for (Survey__c survey : surveys) {
@@ -1559,7 +1580,7 @@ public with sharing class RoscoSurveyProcesses {
 		System.debug('sendAlertSlack');
 
 		try {
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 
 			List<Map<String, Object>> fieldsList = new List<Map<String, Object>>();
 			Map<String, Object> fieldsMap = new Map<String, Object>();

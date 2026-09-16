@@ -23,6 +23,7 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 		);
 		logBeforeInsertQuoteLines();
 		ELV_QuoteLineTriggerUtility.populateChangedSubscription(quoteLines);
+		ELV_QuoteLineTriggerUtility.stampProductGroup(quoteLines, null);
 		ELV_QuoteLineTriggerUtility.stampProductExcludeFromARR(quoteLines, null);
 		ELV_QuoteLineTriggerUtility.stampHasTaniumPricingSchedule(quoteLines);
 		ELV_QuoteLineTriggerUtility.stampIsRenewalTransaction(quoteLines);
@@ -30,9 +31,11 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 		// TNCI-208. Calculate OEM fee from the discounted Legacy Quote Line Total Price before save.
 		ELV_OEMFeeService.apply(quoteLines);
 		ELV_QuoteLineTriggerUtility.stampChannelDiscounts(quoteLines, null);
+		ELV_QuoteLineTriggerUtility.reconcilePricingRefreshRequired(quoteLines);
 	}
 
 	public override void beforeUpdate() {
+		ELV_QuoteLineTriggerUtility.stampProductGroup(quoteLines, oldMap);
 		ELV_QuoteLineTriggerUtility.stampProductExcludeFromARR(quoteLines, oldMap);
 		ELV_QuoteLineTriggerUtility.stampQuotaRetirementEligible(quoteLines, oldMap);
 		// TNCI-208. Re-evaluate OEM fee from the discounted Legacy Quote Line Total Price before save.
@@ -40,6 +43,7 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 		ELV_QuoteLineTriggerUtility.stampHasTaniumPricingSchedule(quoteLines);
 		ELV_QuoteLineTriggerUtility.stampIsRenewalTransaction(quoteLines);
 		ELV_QuoteLineTriggerUtility.stampChannelDiscounts(quoteLines, oldMap);
+		ELV_QuoteLineTriggerUtility.reconcilePricingRefreshRequired(quoteLines);
 	}
 
 	public override void afterUpdate() {
@@ -48,20 +52,30 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 			return;
 		}
 
+		ELV_QuoteLineTriggerUtility.markQuoteCustomCalculationNeeded(
+			unlockedQuoteLines,
+			oldMap
+		);
 		ELV_QuoteRecalculationService.requestRecalculation(unlockedQuoteLines, oldMap);
+		ELV_CustomCalculationClearQueueable.enqueue(quoteIds(unlockedQuoteLines));
 		ELV_QuoteLineTriggerUtility.requestQuoteRefreshOnQualifyingChange(unlockedQuoteLines, oldMap);
 
 		// TNCI 139 / ELV-CPQ-036. The quota retirement copy is taken after save because the
 		// formula it mirrors reaches through Quote.Opportunity and is not resolved in memory.
 		ELV_QuotaRetirementStampService.stampLines(new Map<Id, QuoteLineItem>(unlockedQuoteLines).keySet());
 
-		QuoteTriggerHandler.syncARR(quoteIds(unlockedQuoteLines));
+		ELV_QuoteTriggerHandler.syncARR(quoteIds(unlockedQuoteLines));
 	}
 
 	/** A new line always moves the roll-ups, so no field comparison is possible or needed. */
 	public override void afterInsert() {
 		List<QuoteLineItem> unlockedQuoteLines = getLinesForUnlockedQuotes(quoteLines);
+		ELV_QuoteLineTriggerUtility.markQuoteCustomCalculationNeeded(
+			unlockedQuoteLines,
+			null
+		);
 		ELV_QuoteRecalculationService.requestRecalculationForStampedDiscounts(unlockedQuoteLines);
+		ELV_CustomCalculationClearQueueable.enqueue(quoteIds(unlockedQuoteLines));
 		ELV_QuoteLineTriggerUtility.requestQuoteRefresh(quoteLines);
 		ELV_QuotaRetirementStampService.stampLines(new Map<Id, QuoteLineItem>(quoteLines).keySet());
 
@@ -69,7 +83,7 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 		// inserted: the request writes and clears the flag inside a single update, so the
 		// after-update branch reads the old value as false. The ARR pass is therefore invoked
 		// from here, where the parent ids are known and the lines have committed.
-		QuoteTriggerHandler.syncARR(quoteIds(quoteLines));
+		ELV_QuoteTriggerHandler.syncARR(quoteIds(quoteLines));
 	}
 
 	/** Deleting the earliest line shifts the cascade for every surviving line on the quote. */
@@ -78,12 +92,12 @@ public with sharing class ELV_QuoteLineTriggerHandler extends TriggerHandler {
 			? new List<QuoteLineItem>()
 			: oldMap.values();
 		ELV_QuoteLineTriggerUtility.requestQuoteRefresh(deleted);
-		QuoteTriggerHandler.syncARR(quoteIds(deleted));
+		ELV_QuoteTriggerHandler.syncARR(quoteIds(deleted));
 	}
 
 	public override void afterUndelete() {
 		ELV_QuoteLineTriggerUtility.requestQuoteRefresh(quoteLines);
-		QuoteTriggerHandler.syncARR(quoteIds(quoteLines));
+		ELV_QuoteTriggerHandler.syncARR(quoteIds(quoteLines));
 	}
 
 	/** The distinct parent quotes behind a set of lines. */

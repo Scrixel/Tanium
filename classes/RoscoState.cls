@@ -514,12 +514,21 @@ public with sharing class RoscoState {
 
 	/** sendEmail
 	 */
-	public static void sendEmail(Case aCase, String html, String text, Map<String, String> previous) {
+	public static void sendEmail(
+		Case aCase,
+		String html,
+		String text,
+		Map<String, String> previous
+	) {
 		String caseid = aCase.Id;
 
 		// get people on CC
 		List<String> cc = new List<String>();
-		List<CaseContactRole> ccr = [SELECT Contact.Email FROM CaseContactRole WHERE CasesId = :caseid];
+		List<CaseContactRole> ccr = [
+			SELECT Contact.Email
+			FROM CaseContactRole
+			WHERE CasesId = :caseid
+		];
 		if (nullOrEmpty(ccr) == false) {
 			for (CaseContactRole c : ccr) {
 				if (c.Contact.Email != null) {
@@ -599,7 +608,8 @@ public with sharing class RoscoState {
 			String caseLink = System.URL.getSalesforceBaseUrl().toExternalForm() + '/' + aCase.ID;
 
 			if (
-				cmfields.contains('rosco_case_url_prefix__c') && cmfields.contains('rosco_sfdc_dom_l__c')
+				cmfields.contains('rosco_case_url_prefix__c') &&
+				cmfields.contains('rosco_sfdc_dom_l__c')
 			) {
 				String urlprefix = String.valueOf(cm.get('rosco_case_url_prefix__c'));
 				String urlfriend = String.valueOf(cm.get('rosco_sfdc_dom_l__c'));
@@ -614,7 +624,12 @@ public with sharing class RoscoState {
 						'/lightning/r/Case/' +
 						aCase.ID +
 						'/view>';
-					caseLink += ' <https://' + urlfriend + '/lightning/r/Case/' + aCase.ID + '/view|(alt)>';
+					caseLink +=
+						' <https://' +
+						urlfriend +
+						'/lightning/r/Case/' +
+						aCase.ID +
+						'/view|(alt)>';
 				}
 			}
 
@@ -641,7 +656,7 @@ public with sharing class RoscoState {
 
 			// Webhook
 			System.debug('sendToSlack:checking for webhook url');
-			String webhookURL = 'https://hooks.slack.com/services/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';
+			String webhookURL = '';
 			if (cmfields.contains('rosco_slack_incoming_hook__c')) {
 				String hook = String.valueOf(cm.get('rosco_slack_incoming_hook__c'));
 

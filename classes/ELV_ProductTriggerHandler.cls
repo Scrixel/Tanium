@@ -16,5 +16,6 @@ public with sharing class ELV_ProductTriggerHandler extends TriggerHandler {
 
 	public override void afterUpdate() {
 		ELV_ProductARRStampService.handleProductChanges(products, oldMap);
+		ELV_ProductGroupStampService.handleProductChanges(products, oldMap);
 	}
 }

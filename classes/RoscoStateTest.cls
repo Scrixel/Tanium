@@ -70,11 +70,6 @@ public with sharing class RoscoStateTest {
 				Tags__c = 'foo'
 			);
 			insert caseObj;
-			CaseContactRole ccrObj = new CaseContactRole(
-				CasesId = caseObj.Id,
-				ContactId = contactObj.Id
-			);
-			insert ccrObj;
 
 			// Email Message to start case
 			Messaging.InboundEmail.Header hd = new Messaging.InboundEmail.Header();

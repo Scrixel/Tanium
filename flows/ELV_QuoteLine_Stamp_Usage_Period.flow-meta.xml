@@ -6,7 +6,7 @@
         <name>Stamp_Usage_Period</name>
         <label>Stamp Usage Period</label>
         <locationX>176</locationX>
-        <locationY>312</locationY>
+        <locationY>287</locationY>
         <assignmentItems>
             <assignToReference>$Record.ELV_UsagePeriod__c</assignToReference>
             <operator>Assign</operator>
@@ -14,14 +14,62 @@
                 <elementReference>$Record.Product2.ELV_UsagePeriod__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ELV_UsageModel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product2.ELV_UsageModel__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ELV_UsageQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product2.ELV_UsageQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ELV_Product_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product2.Product_Group__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ELV_UsageCreditMultiplier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product2.ELV_UsageCreditMultiplier__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.ELV_PoT_PricePercent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product2.ELV_PoT_PricePercent__c</elementReference>
+            </value>
+        </assignmentItems>
     </assignments>
-    <description>TNCI-234. Stamps Usage Period from Product2 when a standard Quote Line Item is created. Does not run on updates.</description>
+    <description>TNCI-234. Stamps Usage Period, Usage Model, and Usage Quantity from Product2 when a standard Quote Line Item is created. Does not run on updates. Updated to also stamp Usage Credit Multiplier and PoT Price Percent from Product2.</description>
+    <environments>Default</environments>
     <interviewLabel>Quote Line - Stamp Usage Period {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Quote Line - Stamp Usage Period</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>80</locationX>
-        <locationY>40</locationY>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Stamp_Usage_Period</targetReference>
         </connector>

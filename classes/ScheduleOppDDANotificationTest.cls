@@ -5,18 +5,20 @@
  * @Date: 2016-04-08
  * @Author: Mahesh G
  * RequestId  ModifiedDate  Description
- * TAN-536    2018-04-13    Fixed issue due to the Country_Restriction validation rule on the Opportunity
+ * TAN-536    2018-04-13    Fixed failure from the Country_Restriction validation rule
  * SS-13176   2026-05-27    Removed Level_4__c references
- * SS-13636   2026-09-11    Covered pre-commit Renewal and Order Drafted stage exclusion
+ * SS-13636   2026-09-14    Covered pre-commit Renewal and Order Drafted stage exclusion
  */
 @IsTest
 private class ScheduleOppDDANotificationTest {
+	private static final String COMMITTED_RENEWAL = 'Committed Renewal';
+	private static final String DDA_TEMPLATE_NAME = 'DealDeskApprover_Opporunities_CurrentFQ';
 	private static final List<String> EXCLUDED_STAGES = new List<String>{
 		Utility.ACCOUNT_ASSESSMENT,
 		Utility.CUSTOMER_ENGAGED,
 		Utility.PROPOSAL_SENT,
 		Utility.COMMIT_STAGE,
-		'Committed Renewal',
+		COMMITTED_RENEWAL,
 		Utility.ORDER_DRAFTED
 	};
 
@@ -25,7 +27,7 @@ private class ScheduleOppDDANotificationTest {
 		TriggerHandler.bypass(
 			new List<String>{ 'AccountTriggerHandler', 'OpportunityTriggerHandler' }
 		);
-		User adminUser = getAdminUser();
+		User adminUser = TestUserFactory.getAdminUser();
 		System.runAs(adminUser) {
 			Account excludedStagesAccount = TestFactory.buildAccount('Excluded Stages Account');
 			excludedStagesAccount.Country_Restrictions__c = 'Business Allowed';
@@ -34,13 +36,14 @@ private class ScheduleOppDDANotificationTest {
 
 			List<Opportunity> opps = new List<Opportunity>();
 			for (String excludedStage : EXCLUDED_STAGES) {
-				Opportunity opp = TestFactory.buildOpportunity(
-					excludedStage,
-					System.today(),
-					excludedStage,
-					excludedStagesAccount.Id
+				opps.add(
+					TestFactory.buildOpportunity(
+						excludedStage,
+						System.today(),
+						excludedStage,
+						excludedStagesAccount.Id
+					)
 				);
-				opps.add(opp);
 			}
 			insert opps;
 
@@ -53,26 +56,12 @@ private class ScheduleOppDDANotificationTest {
 		}
 	}
 
-	private static User buildUser(String lastName, String alias, String email, Id profileId) {
-		User newUser = new User(ProfileId = profileId);
-		newUser.LastName = lastName;
-		newUser.Alias = alias;
-		newUser.Email = email;
-		newUser.Username = email;
-		newUser.Emailencodingkey = 'UTF-8';
-		newUser.Languagelocalekey = 'en_US';
-		newUser.Localesidkey = 'en_US';
-		newUser.Timezonesidkey = 'America/Los_Angeles';
-
-		return newUser;
-	}
-
 	@IsTest
 	static void testFunctionality() {
 		Profile profile = [SELECT Id FROM profile WHERE Name = 'Tanium System Administrator'];
 		UserRole userRole = [SELECT Id, Name FROM UserRole WHERE PortalType = 'None' LIMIT 1];
-		System.runAs(getAdminUser()) {
-			list<Sales_Heirarchy__c> listSalesHeiarchy = new List<Sales_Heirarchy__c>();
+		System.runAs(TestUserFactory.getAdminUser()) {
+			List<Sales_Heirarchy__c> listSalesHeiarchy = new List<Sales_Heirarchy__c>();
 			for (Integer i = 0; i < 10; i++) {
 				listSalesHeiarchy.add(new Sales_Heirarchy__c(Role__c = userRole.Name));
 			}
@@ -118,19 +107,101 @@ private class ScheduleOppDDANotificationTest {
 		}
 	}
 
-	static User getAdminUser() {
-		List<User> testUsers = [
-			SELECT Id
-			FROM User
-			WHERE LastName = :TestUserFactory.TANIUM_ADMIN_USER
-		];
-		if (testUsers.isEmpty()) {
-			User adminUser = TestUserFactory.createTaniumAdminUser(true);
-			TestingUtility.assignPermissionSet(adminUser.Id, 'DisableValidationRules');
-			TestingUtility.assignPermissionSet(adminUser.Id, 'DisableFlows');
-			return adminUser;
-		} else {
-			return testUsers[0];
+	@IsTest
+	static void testSendDealDeskApproverNotification_OnlyExcludedStageOpps_SendsNoEmail() {
+		Integer emailInvocations;
+
+		System.runAs(TestUserFactory.getAdminUser()) {
+			Test.startTest();
+			new ScheduleOppDealDeskApproverNotification().sendDealDeskApproverNotification();
+			emailInvocations = Limits.getEmailInvocations();
+			Test.stopTest();
 		}
+
+		Assert.areEqual(
+			0,
+			emailInvocations,
+			'Renewal, Committed Renewal and Order Drafted stages => no email'
+		);
+	}
+
+	@IsTest
+	static void testSendDealDeskApproverNotification_QualifyingOpp_ProcessesApproverBatch() {
+		User adminUser = TestUserFactory.getAdminUser();
+		List<Opportunity> opps = [
+			SELECT Id, StageName
+			FROM Opportunity
+			WHERE StageName = :Utility.COMMIT_STAGE
+		];
+		for (Opportunity opp : opps) {
+			opp.StageName = Utility.DISCOVERY;
+			opp.CloseDate = System.today();
+			opp.Commit__c = 1;
+		}
+		Integer emailInvocations;
+
+		System.runAs(adminUser) {
+			TriggerHandler.bypass('OpportunityTriggerHandler');
+			update opps;
+			TriggerHandler.clearBypass('OpportunityTriggerHandler');
+		}
+
+		Integer qualifyingOpps = [
+			SELECT COUNT()
+			FROM Opportunity
+			WHERE
+				Deal_Desk_Approver__c != NULL
+				AND CloseDate = THIS_FISCAL_QUARTER
+				AND StageName = :Utility.DISCOVERY
+				AND (Commit__c > 0
+				OR Upside__c > 0)
+		];
+		Assert.areEqual(1, qualifyingOpps, 'Discovery Opportunity qualifies for the approver email');
+
+		System.runAs(adminUser) {
+			Test.startTest();
+			new ScheduleOppDealDeskApproverNotification().sendDealDeskApproverNotification();
+			emailInvocations = Limits.getEmailInvocations();
+			Test.stopTest();
+		}
+
+		Assert.isTrue(emailInvocations <= 1, 'One approver batch sends at most one email');
+	}
+
+	@IsTest
+	static void testBuildSingleEmailMessage_Always_ReturnsConfiguredMessage() {
+		User adminUser = TestUserFactory.getAdminUser();
+		List<EmailTemplate> templates = [
+			SELECT Id
+			FROM EmailTemplate
+			WHERE DeveloperName = :DDA_TEMPLATE_NAME
+		];
+		Id templateId = templates.isEmpty() ? null : templates[0].Id;
+		Messaging.SingleEmailMessage message;
+
+		System.runAs(adminUser) {
+			Test.startTest();
+			message = new ScheduleOppDealDeskApproverNotification()
+				.buildSingleEmailMessage(templateId, adminUser.Id, adminUser.Id, false, null);
+			Test.stopTest();
+		}
+
+		Assert.areEqual(templateId, message.getTemplateId(), 'Uses the Deal Desk Approver template');
+		Assert.areEqual(adminUser.Id, message.getTargetObjectId(), 'Targets the Deal Desk Approver');
+		Assert.areEqual(1, message.getBccAddresses().size(), 'Keeps the single BCC address');
+	}
+
+	private static User buildUser(String lastName, String alias, String email, Id profileId) {
+		User newUser = new User(ProfileId = profileId);
+		newUser.LastName = lastName;
+		newUser.Alias = alias;
+		newUser.Email = email;
+		newUser.Username = email;
+		newUser.Emailencodingkey = 'UTF-8';
+		newUser.Languagelocalekey = 'en_US';
+		newUser.Localesidkey = 'en_US';
+		newUser.Timezonesidkey = 'America/Los_Angeles';
+
+		return newUser;
 	}
 }

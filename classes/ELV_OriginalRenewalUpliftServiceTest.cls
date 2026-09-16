@@ -22,11 +22,11 @@ private class ELV_OriginalRenewalUpliftServiceTest {
         Quote quoteRecord = [SELECT Id FROM Quote WHERE Id = '0Q0cc000002ZoOzCAK' LIMIT 1];
         QuoteLineItem overriddenLine = new QuoteLineItem(
             QuoteId = quoteRecord.Id, Ruby__LineType__c = 'LineItem',
-            ELV_Renewal_Uplift_Override__c = true, Ruby__RenewalUpliftPercent__c = 9.9
+            ELV_Renewal_Uplift_Override__c = true, ELV_RenewalUpliftPercent__c = 9.9
         );
         Test.startTest();
         ELV_OriginalRenewalUpliftService.stamp(new List<QuoteLineItem>{overriddenLine});
         Test.stopTest();
-        System.assertEquals(9.9, overriddenLine.Ruby__RenewalUpliftPercent__c, 'Override must be preserved.');
+        System.assertEquals(9.9, overriddenLine.ELV_RenewalUpliftPercent__c, 'Override must be preserved.');
     }
 }
