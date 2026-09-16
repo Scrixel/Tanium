@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ELV_SubCnt_Req_Provision_Sub__c</fullName>
-    <defaultValue>0</defaultValue>
+    <label>SubCount Required for Provision Subscription</label>
     <description>Count of active Required for Provision Subscription subscriptions on the account.</description>
-    <externalId>false</externalId>
-    <label>SubCount Required Subscription</label>
-    <precision>18</precision>
-    <required>false</required>
-    <scale>0</scale>
-    <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
     <type>Number</type>
+    <precision>18</precision>
+    <scale>0</scale>
+    <defaultValue>0</defaultValue>
+    <required>false</required>
+    <externalId>false</externalId>
     <unique>false</unique>
 </CustomField>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ELV_Deployment_Method_Aggregate__c</fullName>
-    <defaultValue>0</defaultValue>
-    <description>Aggregate deployment-method indicator computed by the pricing trigger from quote lines.</description>
-    <externalId>false</externalId>
     <label>Deployment Method Aggregate</label>
-    <precision>18</precision>
-    <required>false</required>
-    <scale>0</scale>
-    <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
+    <description>Aggregate deployment-method indicator computed by the pricing trigger from quote lines.</description>
     <type>Number</type>
+    <precision>18</precision>
+    <scale>0</scale>
+    <defaultValue>0</defaultValue>
+    <required>false</required>
+    <externalId>false</externalId>
     <unique>false</unique>
 </CustomField>
