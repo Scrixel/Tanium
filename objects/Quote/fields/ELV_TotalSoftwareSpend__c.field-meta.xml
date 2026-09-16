@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_TotalSoftwareSpend__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>The Total Software Spend for all active subscriptions that align within the Start and End date period of the Quote</description>
+    <label>Total Software Spend</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

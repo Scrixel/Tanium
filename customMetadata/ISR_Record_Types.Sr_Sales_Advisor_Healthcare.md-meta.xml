@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sr. Sales Advisor: Healthcare</label>
+    <protected>false</protected>
+    <values>
+        <field>ISR_Owner_CIO_Strategist__c</field>
+        <value xsi:type="xsd:string">0050e000006uL6kAAE</value>
+    </values>
+    <values>
+        <field>Record_Type_Developer_Name__c</field>
+        <value xsi:type="xsd:string">Vertical_CIO_Strategist_Request</value>
+    </values>
+    <values>
+        <field>Support_Request__c</field>
+        <value xsi:type="xsd:string">Sr. Sales Advisor</value>
+    </values>
+    <values>
+        <field>Verticals__c</field>
+        <value xsi:type="xsd:string">Healthcare</value>
+    </values>
+</CustomMetadata>

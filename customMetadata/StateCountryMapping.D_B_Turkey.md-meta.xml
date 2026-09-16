@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>D&amp;B Turkey</label>
+    <protected>false</protected>
+    <values>
+        <field>Category__c</field>
+        <value xsi:type="xsd:string">Country</value>
+    </values>
+    <values>
+        <field>Country__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>External_Value__c</field>
+        <value xsi:type="xsd:string">Turkiye</value>
+    </values>
+    <values>
+        <field>Salesforce_Value__c</field>
+        <value xsi:type="xsd:string">Turkey</value>
+    </values>
+    <values>
+        <field>System__c</field>
+        <value xsi:type="xsd:string">D&amp;B</value>
+    </values>
+</CustomMetadata>

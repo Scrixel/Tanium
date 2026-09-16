@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Technology Vendor</label>
+    <protected>false</protected>
+    <values>
+        <field>Help_Text__c</field>
+        <value xsi:type="xsd:string">Tanium technology integrations present in account.</value>
+    </values>
+    <values>
+        <field>Scope_of_Service_Help_Text__c</field>
+        <value xsi:type="xsd:string">Detail any potential integration requests for other technologies including any listed above but not currently active in account.</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_UsageModel__c</fullName>
+    <description>TNCI-234 — Type of Usage model</description>
+    <label>Usage Model</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Included Tokens</fullName>
+                <default>false</default>
+                <label>Included Tokens</label>
+            </value>
+            <value>
+                <fullName>Commit with Overage</fullName>
+                <default>false</default>
+                <label>Commit with Overage</label>
+            </value>
+            <value>
+                <fullName>Pay As You Go</fullName>
+                <default>false</default>
+                <label>Pay As You Go</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

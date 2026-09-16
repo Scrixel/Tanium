@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Announce_Articles_Automatically__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Applied_Test_Profile__c</field>
+        <value xsi:type="xsd:string">System Administrator</value>
+    </values>
+    <values>
+        <field>Article_Publish_Date__c</field>
+        <value xsi:type="xsd:string">User Time Zone</value>
+    </values>
+    <values>
+        <field>Enable_Audience_Targeting__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Enable_Multi_Language__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>PermissionSetName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Require_Group_Membership__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Show_Nickname_in_Lightning_Experience__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Use_Managed_Sharing__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>UserOrGroupId__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>View_All_Permission_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>X7S_News_Default_Custom_Field_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

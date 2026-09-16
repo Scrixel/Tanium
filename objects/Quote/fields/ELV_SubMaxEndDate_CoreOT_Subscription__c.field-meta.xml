@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_SubMaxEndDate_CoreOT_Subscription__c</fullName>
+    <description>Latest end date across the account&apos;s existing CoreOT Subscription subscriptions.</description>
+    <label>SubMaxEndDate CoreOT Subscription</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

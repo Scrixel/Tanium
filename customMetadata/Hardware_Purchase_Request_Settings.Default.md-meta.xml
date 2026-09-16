@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Disclaimer_Terms__c</field>
+        <value xsi:type="xsd:string">Certifying Party is purchasing for its own use product from Tanium (or otherwise intends to be an end user of such product), hereafter “Product.”
+
+The Certifying Party hereby certifies and agrees (and if Certifying Party is purchasing for resale, it has confirmed with End User) as follows:
+
+1) Certifying Party attests that it is the end user of the Product.
+2) Certifying Party attests that it is not wholly owned by, or otherwise controlled by or acting on behalf of, any foreign government.
+3) Certifying Party is aware that certain Products may be subject to U.S. and foreign import/export controls.
+4) Certifying Party shall abide by all applicable import/export laws and regulations both U.S. and foreign with respect to Products. Without limiting the foregoing, it/they shall not engage in any resale/export/transfer of the Products classified as a “restricted” encryption item under the “ENC” license exception (US Export Admin. Regulations (EAR) Sec. 740.17 (see http://www.bis.doc.gov/policiesandregulations/ear/index.htm) to any government end user outside the countries listed in EAR Part 740 Supp. 3 (currently, Austria, Australia, Belgium, Canada, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Japan, Latvia, Lithuania, Luxembourg, Malta, Netherlands, New Zealand, Norway, Poland, Portugal, Slovakia, Slovenia, Spain, Sweden, Switzerland, the United Kingdom and the United States) without license approval from the U.S. Department of Commerce, Bureau of Export Administration.
+5) Certifying Party is NOT engaged in any military activities or any nuclear, missile, chemical or biological end use activities, and:      
+     * End User IS NOT a part of any government entity (other than a US local, state or federal entity)       
+     * End User is not acting on behalf of any government entity (other than a US local, state or federal entity).
+6) Certifying Party shall not engage in any resale/export/transfer of Product:
+     * to any entity/person prohibited by U.S. law from receiving exports (including those listed on the Denied Parties List, the Entity List and the Specially Designated Nationals List) (see http://www.bis.doc.gov/complianceandenforcement/liststocheck.htm);
+     * to any of the following countries: Cuba, North Korea, Iran, Libya, Myanmar (Burma), Syria, Sudan or any other country on the U.S. embargoed list.
+
+Acceptance
+The undersigned, as an authorized representative of Certifying Party, hereby certifies, in writing or by electronic submission or transmission, the information contained in this certificate on behalf of Certifying Party effective as of the date first set forth above.</value>
+    </values>
+    <values>
+        <field>Product_Usage_Missing__c</field>
+        <value xsi:type="xsd:string">Enter the intended usage to continue</value>
+    </values>
+    <values>
+        <field>Signature_Disclaimer__c</field>
+        <value xsi:type="xsd:string">The undersigned, as an authorized representative of Certifying Party, hereby certifies, in writing or by electronic submission or transmission, the information contained in this certificate on behalf of Certifying Party effective as of the date first set forth above.</value>
+    </values>
+    <values>
+        <field>Your_Name_Missing__c</field>
+        <value xsi:type="xsd:string">Enter your name to continue</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_SubMaxEnd_TAN_SUPP_EXT24x7__c</fullName>
+    <description>Latest end date across the account&apos;s existing TAN-SUPP-EXTENDED24x7 subscriptions.</description>
+    <label>SubMaxEndDate TAN SUPP EXTENDED24x7</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>
