@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Selected_Modules__c</fullName>
+    <description>Provides a list of the Solution fields that have been checked on the record. Jira ticket SS-12115</description>
+    <externalId>false</externalId>
+    <formula>IF(Asset_SBOM__c,&apos;Asset_SBOM__c,&apos;, NULL) &amp;
+IF(Certificate_Manager__c,&apos;Certificate_Manager__c,&apos;, NULL) &amp;
+IF(Comply__c,&apos;Comply__c,&apos;, NULL) &amp;
+IF(Core__c,&apos;Core__c,&apos;, NULL) &amp;
+IF(Deploy__c,&apos;Deploy__c,&apos;, NULL) &amp;
+IF(Discover__c,&apos;Discover__c,&apos;, NULL) &amp;
+IF(Enforce__c,&apos;Enforce__c,&apos;, NULL) &amp;
+IF(Engage__c,&apos;Engage__c,&apos;, NULL) &amp;
+IF(Impact__c,&apos;Impact__c,&apos;, NULL) &amp;
+IF(Integrity_Monitor__c,&apos;Integrity_Monitor__c,&apos;, NULL) &amp;
+IF(Investigate__c,&apos;Investigate__c,&apos;, NULL) &amp;
+IF(Map__c,&apos;Map__c,&apos;, NULL) &amp;
+IF(Patch__c,&apos;Patch__c,&apos;, NULL) &amp;
+IF(Performance__c,&apos;Performance__c,&apos;, NULL) &amp;
+IF(Provision__c,&apos;Provision__c,&apos;, NULL) &amp;
+IF(Reveal__c,&apos;Reveal__c,&apos;, NULL) &amp;
+IF(Risk__c,&apos;Risk__c,&apos;, NULL) &amp;
+IF(Threat_Response__c,&apos;Threat_Response__c&apos;, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Provides a list of the Solution fields that have been checked on the record</inlineHelpText>
+    <label>Selected Modules</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

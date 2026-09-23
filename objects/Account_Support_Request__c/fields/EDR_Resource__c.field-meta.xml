@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDR_Resource__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>EDR Resource assigned to the ISR</description>
+    <inlineHelpText>EDR Resource assigned to the ISR</inlineHelpText>
+    <label>UES Assigned 1</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>ISR_EDR</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Configured_in_Active_Active_Array__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>2014-10-14 | JR  
+Added field to track customers/prospects who have configured their Server Deployment in an Active/Active Array</description>
+    <inlineHelpText>Select the checkbox control if the application server is configured in an Active/Active array.</inlineHelpText>
+    <label>Configured in Active/Active Array</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

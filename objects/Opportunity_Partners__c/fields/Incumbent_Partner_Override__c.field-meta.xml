@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incumbent_Partner_Override__c</fullName>
+    <description>Implemented as a part of the MSP Simplification and FY25 Partner Redesign projects. Jira ticket SS-8602</description>
+    <inlineHelpText>When this field is not blank, it will override the value of the Incumbent Partner field which is programmatically updated to indicate that this partner was the partner of record on the quote related to the contract that this opportunity renews.</inlineHelpText>
+    <label>Incumbent Partner Override</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+                <label>TRUE</label>
+            </value>
+            <value>
+                <fullName>FALSE</fullName>
+                <default>false</default>
+                <label>FALSE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

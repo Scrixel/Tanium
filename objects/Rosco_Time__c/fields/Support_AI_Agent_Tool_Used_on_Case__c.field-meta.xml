@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support_AI_Agent_Tool_Used_on_Case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS-13441: Add a check box on case time card to indicate of AI Used</description>
+    <label>Support AI Agent Tool Used on Case</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

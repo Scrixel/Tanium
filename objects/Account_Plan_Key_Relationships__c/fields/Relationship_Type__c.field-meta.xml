@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Type__c</fullName>
+    <inlineHelpText>What is the relationship type for this key contact?</inlineHelpText>
+    <label>Relationship Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Champion</fullName>
+                <default>false</default>
+                <label>Champion</label>
+            </value>
+            <value>
+                <fullName>CIO</fullName>
+                <default>false</default>
+                <label>CIO</label>
+            </value>
+            <value>
+                <fullName>CISO</fullName>
+                <default>false</default>
+                <label>CISO</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Saboteur</fullName>
+                <default>false</default>
+                <label>Saboteur</label>
+            </value>
+            <value>
+                <fullName>Technical Champion</fullName>
+                <default>false</default>
+                <label>Technical Champion</label>
+            </value>
+            <value>
+                <fullName>VP IT Ops</fullName>
+                <default>false</default>
+                <label>VP IT Ops</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

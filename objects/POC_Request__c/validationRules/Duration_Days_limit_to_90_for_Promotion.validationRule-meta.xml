@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Days_limit_to_90_for_Promotion</fullName>
+    <active>false</active>
+    <description>[INC0169766] When the picklist value for field Tanium Infrastructure Required is Yes – Tanium as a Service, Duration days must fall between 1 - 90 for promotion = ITSC</description>
+    <errorConditionFormula>AND(OR(Duration__c &lt; 1, Duration__c &gt; 90), ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;), (ISPICKVAL(Promotion__c , &quot;ITSC&quot;)))</errorConditionFormula>
+    <errorDisplayField>Duration__c</errorDisplayField>
+    <errorMessage>For Promotion = ITSC, duration days must fall between 1 - 90 when Tanium Infrastructure Required selection is &quot;Yes - Tanium as a Service&quot;.</errorMessage>
+</ValidationRule>

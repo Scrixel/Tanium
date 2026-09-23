@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Partner_Creator_already_created</fullName>
+    <active>true</active>
+    <description>SS-7634 - Upon Create New of an Influence Partner Registration ISR, if there is already an Opportunity Partner with the Partner Role of &quot;Partner Creator&quot; listed, An error will appear</description>
+    <errorConditionFormula>AND(
+ ISNEW(),
+ Opportunity__r.Partner_Created_Rollup__c &gt; 0,
+ RecordType.DeveloperName = &quot;Influence_Partner_Registration&quot;,
+ NOT($Permission.DisableValidationRules )
+)</errorConditionFormula>
+    <errorMessage>There is already a Partner Creator listed on this Opportunity. This ISR cannot be created. Please reach out to ChannelOps@tanium.com if you believe this is incorrect.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billable_Confirmed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ref: David Mkrtchian, Katie Fanelli and Daniel Moran</description>
+    <inlineHelpText>By checking this box, you are confirming that Customer is aware that all ESO resources are billed to and paid by Customer</inlineHelpText>
+    <label>Budget for ESO resources confirmed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

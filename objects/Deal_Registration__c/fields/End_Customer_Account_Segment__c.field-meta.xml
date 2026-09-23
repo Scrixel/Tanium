@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Customer_Account_Segment__c</fullName>
+    <description>INC0131406 Nick Scala info pulls in from End Customer Account
+2021-04-23 Extended field length to 255 per Robert&apos;s suggestion.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Info pulls in from End Customer Account at the time account is assigned.</inlineHelpText>
+    <label>End Customer Account Segment</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

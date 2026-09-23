@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Tanium_Users__c</fullName>
+    <inlineHelpText>How many employee(s) will be estimated to use it?</inlineHelpText>
+    <label>Number of Tanium Users</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-10</fullName>
+                <default>false</default>
+                <label>1-10</label>
+            </value>
+            <value>
+                <fullName>10-50</fullName>
+                <default>false</default>
+                <label>10-50</label>
+            </value>
+            <value>
+                <fullName>50-100</fullName>
+                <default>false</default>
+                <label>50-100</label>
+            </value>
+            <value>
+                <fullName>100+</fullName>
+                <default>false</default>
+                <label>100+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

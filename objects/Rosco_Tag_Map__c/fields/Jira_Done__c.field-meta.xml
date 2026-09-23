@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jira_Done__c</fullName>
+    <description>Formula field to check if there is a Jira Issue and if the Status is not Done, Rejected, or Resolved.</description>
+    <formula>IF(OR(ISBLANK(Jira_Issue__c),
+ OR((Jira_Issue__r.Issue_Status__c = &apos;Done&apos;),
+(Jira_Issue__r.Issue_Status__c = &apos;Resolved&apos;),
+(Jira_Issue__r.Issue_Status__c = &apos;Rejected&apos;))),TRUE,FALSE)</formula>
+    <label>Jira Done?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

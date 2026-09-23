@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Renewal_Action_Plan_Confirmed</fullName>
+    <active>false</active>
+    <description>Once the Renewal Action Plan Confirmed field is checked, only a member of the Channel Operations team will be able to uncheck it</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Renewal_Action_Plan_Confirmed__c),
+Renewal_Action_Plan_Confirmed__c = False,
+PRIORVALUE(Renewal_Action_Plan_Confirmed__c) = True, 
+NOT($Permission.Allow_Channel_Ops_permission),
+NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Renewal_Action_Plan_Confirmed__c</errorDisplayField>
+    <errorMessage>Renewal Action Plan Confirmed cannot be unchecked. Please reach out to Channel Operations Team</errorMessage>
+</ValidationRule>

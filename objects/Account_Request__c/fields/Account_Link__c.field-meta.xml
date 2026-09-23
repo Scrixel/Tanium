@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Link__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>A link to the Account record that was created following approval of the Account Request</inlineHelpText>
+    <label>Account Link</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Account Requests (Account Link)</relationshipLabel>
+    <relationshipName>Account_Requests1</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

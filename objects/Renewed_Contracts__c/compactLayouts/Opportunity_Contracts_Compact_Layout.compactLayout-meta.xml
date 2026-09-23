@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Contracts_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Contract__c</fields>
+    <fields>Exit_ARR__c</fields>
+    <label>Opportunity Contracts Compact Layout</label>
+</CompactLayout>

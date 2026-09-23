@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Unchecking_Ramp_Requirements</fullName>
+    <active>true</active>
+    <description>SS-12416 - Once a checkbox is checked, it must be locked from being unchecked. To uncheck a box, a user must submit a ticket. The uncheck action must be approved by Tim or Kareena.</description>
+    <errorConditionFormula>AND(OR(AND(ISCHANGED(Month_1_Ramp_Requirements_Met__c), Month_1_Ramp_Requirements_Met__c = FALSE),
+AND(ISCHANGED(Month_2_Ramp_Requirements_Met__c), Month_2_Ramp_Requirements_Met__c = FALSE),
+AND(ISCHANGED(Month_3_Ramp_Requirements_Met__c), Month_3_Ramp_Requirements_Met__c = FALSE)),
+NOT($Permission.Sales_Plan_Admin),
+OR($User.Id = Sales_User__r.Manager.Id, 
+$User.Id = Sales_User__r.Area_VP__r.Id),
+NOT($Permission.DisableValidationRules))</errorConditionFormula>
+    <errorMessage>Ramp Requirements Met fields are locked once checked. To request an uncheck, please open a ServiceNow ticket for approval.</errorMessage>
+</ValidationRule>

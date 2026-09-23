@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Closing_Timeframe__c</fullName>
+    <description>Partner Portal Prompt: What is the anticipated time to close?</description>
+    <label>Expected Time to Close</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>This quarter</fullName>
+                <default>false</default>
+                <label>This quarter</label>
+            </value>
+            <value>
+                <fullName>Within 6 months</fullName>
+                <default>false</default>
+                <label>Within 6 months</label>
+            </value>
+            <value>
+                <fullName>Within a year</fullName>
+                <default>false</default>
+                <label>Within a year</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

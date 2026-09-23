@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSL_Certificate__c</fullName>
+    <description>2014-10-23 JR | Added to track whether customer is using a Self-signed SSL certificate to secure the console communication.</description>
+    <inlineHelpText>Select &quot;Self-signed&quot; if the server uses the default self-signed SSL cert; otherwise, choose &quot;Certificate Authority Signed&quot; if the SSL certificate is signed by either the customer&apos;s internal certificate signing authority or an external CA such as VeriSign.</inlineHelpText>
+    <label>SSL Certificate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Self-signed</fullName>
+                <default>false</default>
+                <label>Self-signed</label>
+            </value>
+            <value>
+                <fullName>Certificate Authority Signed</fullName>
+                <default>false</default>
+                <label>Certificate Authority Signed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

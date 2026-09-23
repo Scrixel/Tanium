@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_2_Needs__c</fullName>
+    <label>ESO_2_Needs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Faster Response</fullName>
+                <default>false</default>
+                <label>Faster Response</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Ease of contracting</fullName>
+                <default>false</default>
+                <label>Ease of contracting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

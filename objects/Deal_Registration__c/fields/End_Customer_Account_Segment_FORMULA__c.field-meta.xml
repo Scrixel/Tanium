@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Customer_Account_Segment_FORMULA__c</fullName>
+    <description>INC0136451/INC0135139 Nick Scala Data Temporary Field for Data Update. Will be deleted upon completion.</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Account__r.Segment__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>End Customer Account Segment FORMULA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_Group__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Private news item - can only be viewed by Group members</description>
+    <inlineHelpText>Check to limit viewing this item to group members only</inlineHelpText>
+    <label>Private Group</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

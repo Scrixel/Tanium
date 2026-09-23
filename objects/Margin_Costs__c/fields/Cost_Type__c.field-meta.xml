@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Type__c</fullName>
+    <description>Used to determine if the record captures support cost or hosting cost for margin calculation</description>
+    <label>Cost Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Hosting</fullName>
+                <default>false</default>
+                <label>Hosting</label>
+            </value>
+            <value>
+                <fullName>HuntIQ</fullName>
+                <default>false</default>
+                <label>HuntIQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

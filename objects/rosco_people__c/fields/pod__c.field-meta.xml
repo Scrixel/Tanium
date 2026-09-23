@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pod__c</fullName>
+    <label>pod</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product SME</fullName>
+                <default>false</default>
+                <label>Product SME</label>
+            </value>
+            <value>
+                <fullName>Northeast and Canada</fullName>
+                <default>false</default>
+                <label>Northeast and Canada</label>
+            </value>
+            <value>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+                <label>Southeast</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>Federal-Civ</fullName>
+                <default>false</default>
+                <label>Federal-Civ</label>
+            </value>
+            <value>
+                <fullName>EMEA South</fullName>
+                <default>false</default>
+                <label>EMEA South</label>
+            </value>
+            <value>
+                <fullName>EMEA North</fullName>
+                <default>false</default>
+                <label>EMEA North</label>
+            </value>
+            <value>
+                <fullName>Asia North</fullName>
+                <default>false</default>
+                <label>Asia North</label>
+            </value>
+            <value>
+                <fullName>Asia South</fullName>
+                <default>false</default>
+                <label>Asia South</label>
+            </value>
+            <value>
+                <fullName>Product Engineering</fullName>
+                <default>false</default>
+                <label>Product Engineering</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>TAM &amp; CS Leadership</fullName>
+                <default>false</default>
+                <label>TAM &amp; CS Leadership</label>
+            </value>
+            <value>
+                <fullName>CSM</fullName>
+                <default>false</default>
+                <label>CSM</label>
+            </value>
+            <value>
+                <fullName>ESO</fullName>
+                <default>false</default>
+                <label>ESO</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Partner Pod</fullName>
+                <default>false</default>
+                <label>Partner Pod</label>
+            </value>
+            <value>
+                <fullName>CSM-Central</fullName>
+                <default>false</default>
+                <label>CSM-Central</label>
+            </value>
+            <value>
+                <fullName>Order Ops</fullName>
+                <default>false</default>
+                <label>Order Ops</label>
+            </value>
+            <value>
+                <fullName>CSM-East</fullName>
+                <default>false</default>
+                <label>CSM-East</label>
+            </value>
+            <value>
+                <fullName>CSM-Intl</fullName>
+                <default>false</default>
+                <label>CSM-Intl</label>
+            </value>
+            <value>
+                <fullName>CSM-West</fullName>
+                <default>false</default>
+                <label>CSM-West</label>
+            </value>
+            <value>
+                <fullName>EDR</fullName>
+                <default>false</default>
+                <label>EDR</label>
+            </value>
+            <value>
+                <fullName>CSM &amp; Tech GTM</fullName>
+                <default>false</default>
+                <label>CSM &amp; Tech GTM</label>
+            </value>
+            <value>
+                <fullName>Sales SME</fullName>
+                <default>false</default>
+                <label>Sales SME</label>
+            </value>
+            <value>
+                <fullName>CSM (West)</fullName>
+                <default>false</default>
+                <label>CSM (West)</label>
+            </value>
+            <value>
+                <fullName>CSM (East)</fullName>
+                <default>false</default>
+                <label>CSM (East)</label>
+            </value>
+            <value>
+                <fullName>OCISO</fullName>
+                <default>false</default>
+                <label>OCISO</label>
+            </value>
+            <value>
+                <fullName>Customer Success Leadership</fullName>
+                <default>false</default>
+                <label>Customer Success Leadership</label>
+            </value>
+            <value>
+                <fullName>DACH</fullName>
+                <default>false</default>
+                <label>DACH</label>
+            </value>
+            <value>
+                <fullName>ESO &amp; Fed TAMs</fullName>
+                <default>false</default>
+                <label>ESO &amp; Fed TAMs</label>
+            </value>
+            <value>
+                <fullName>NECAN</fullName>
+                <default>false</default>
+                <label>NECAN</label>
+            </value>
+            <value>
+                <fullName>APAC</fullName>
+                <default>false</default>
+                <label>APAC</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>Product SMEs</fullName>
+                <default>false</default>
+                <label>Product SMEs</label>
+            </value>
+            <value>
+                <fullName>Sales SMEs</fullName>
+                <default>false</default>
+                <label>Sales SMEs</label>
+            </value>
+            <value>
+                <fullName>Tech Alliances &amp; Partners</fullName>
+                <default>false</default>
+                <label>Tech Alliances &amp; Partners</label>
+            </value>
+            <value>
+                <fullName>TAM ORG</fullName>
+                <default>false</default>
+                <label>TAM ORG</label>
+            </value>
+            <value>
+                <fullName>Federal (Fed Civ Region 2)</fullName>
+                <default>false</default>
+                <label>Federal (Fed Civ Region 2)</label>
+            </value>
+            <value>
+                <fullName>East (Ohio Valley)</fullName>
+                <default>false</default>
+                <label>East (Ohio Valley)</label>
+            </value>
+            <value>
+                <fullName>East (Canada)</fullName>
+                <default>false</default>
+                <label>East (Canada)</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+            <value>
+                <fullName>Federal (Fed DoD Region 3)</fullName>
+                <default>false</default>
+                <label>Federal (Fed DoD Region 3)</label>
+            </value>
+            <value>
+                <fullName>East (NY/NJ/PA)</fullName>
+                <default>false</default>
+                <label>East (NY/NJ/PA)</label>
+            </value>
+            <value>
+                <fullName>East (New England)</fullName>
+                <default>false</default>
+                <label>East (New England)</label>
+            </value>
+            <value>
+                <fullName>Federal (Fed DoD Region 1)</fullName>
+                <default>false</default>
+                <label>Federal (Fed DoD Region 1)</label>
+            </value>
+            <value>
+                <fullName>Federal (Fed DoD Region 2)</fullName>
+                <default>false</default>
+                <label>Federal (Fed DoD Region 2)</label>
+            </value>
+            <value>
+                <fullName>East (NC/SC)</fullName>
+                <default>false</default>
+                <label>East (NC/SC)</label>
+            </value>
+            <value>
+                <fullName>East (FL)</fullName>
+                <default>false</default>
+                <label>East (FL)</label>
+            </value>
+            <value>
+                <fullName>Federal (Fed Civ Region 1)</fullName>
+                <default>false</default>
+                <label>Federal (Fed Civ Region 1)</label>
+            </value>
+            <value>
+                <fullName>East (GA/AL)</fullName>
+                <default>false</default>
+                <label>East (GA/AL)</label>
+            </value>
+            <value>
+                <fullName>East (Mid-Atlantic)</fullName>
+                <default>false</default>
+                <label>East (Mid-Atlantic)</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>US Pub Sec</fullName>
+                <default>false</default>
+                <label>US Pub Sec</label>
+            </value>
+            <value>
+                <fullName>Support Center</fullName>
+                <default>false</default>
+                <label>Support Center</label>
+            </value>
+            <value>
+                <fullName>NE-SE-Central</fullName>
+                <default>false</default>
+                <label>NE-SE-Central</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

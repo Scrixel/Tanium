@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_Name_IP_Address__c</fullName>
+    <description>2012-12-04 Case 60165 Changed label to &quot;Server Name, IP Address&quot;</description>
+    <externalId>false</externalId>
+    <label>Server Name, IP Address</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_EndDate__c</fullName>
+    <description>The End Date from the related Quote Line. Used in the &apos;Manage Allocation&apos; screen on the Opportunity. SS-13898</description>
+    <formula>ELV_QuoteLineItem__r.Ruby__SubscriptionEndDate__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The End Date from the related Quote Line. Used in the &apos;Manage Allocation&apos; screen on the Opportunity.</inlineHelpText>
+    <label>End Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

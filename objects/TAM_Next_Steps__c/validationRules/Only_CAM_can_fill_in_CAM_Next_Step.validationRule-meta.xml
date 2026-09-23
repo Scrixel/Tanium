@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_CAM_can_fill_in_CAM_Next_Step</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( CAM_Next_Steps__c)), 
+$Profile.Name &lt;&gt; &quot;Tanium CAM&quot;,
+$Profile.Name &lt;&gt; &quot;Tanium Standard User&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name  &lt;&gt; &quot;Tanium System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Super User&quot;)
+
+/*AND(
+NOT(ISBLANK( CAM_Next_Steps__c)), 
+$Profile.Name &lt;&gt; &quot;Tanium CAM&quot;,
+$Profile.Name &lt;&gt; &quot;Tanium Standard User&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;Super User&quot;)*/</errorConditionFormula>
+    <errorMessage>Only CAM&apos;s can create CAM Next Steps</errorMessage>
+</ValidationRule>

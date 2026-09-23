@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_Pod</fullName>
+    <active>true</active>
+    <label>Escalation Pod</label>
+    <picklistValues>
+        <picklist>Responsibility__c</picklist>
+        <values>
+            <fullName>Pod Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Enabled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

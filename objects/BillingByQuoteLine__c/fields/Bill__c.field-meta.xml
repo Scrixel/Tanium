@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill__c</fullName>
+    <description>If( isBundle__c, BillAmount__c/QuoteLinePackageTotal__c , BillAmount__c/ QuoteLineNetTotal__c )</description>
+    <formula>If( isBundleParent__c, BillAmount__c/QuoteLinePackageTotal__c , BillAmount__c/ QuoteLineNetTotal__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>% calculated out of Bill Amount and Quote Line Package Total or Quote Line Net Total depending upon if it is a bundle or not.</inlineHelpText>
+    <label>Bill %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

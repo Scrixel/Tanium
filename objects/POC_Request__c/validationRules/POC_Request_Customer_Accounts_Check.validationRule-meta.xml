@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Request_Customer_Accounts_Check</fullName>
+    <active>true</active>
+    <description>Custom label used-
+Account Record Type &quot;Partner&quot; = 01260000000Q6hS</description>
+    <errorConditionFormula>AND(
+OR(
+(RecordType.Name = &quot;Customer: On-Prem&quot;),
+(RecordType.Name=&quot;Customer: Tanium Cloud&quot;)
+),
+ Account__r.RecordTypeId  = $Label.Account_Record_Type_Partner,
+ NOT($Permission.DisableValidationRules)
+
+)
+
+/*
+AND(
+(RecordType.DeveloperName = &quot;Partner_On_Prem&quot;),
+
+(NOT(ISPICKVAL(Account__r.Type,&quot;MSP partner&quot;)))
+
+)
+*/</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>You are using a Customer POC record type. The Account must not be a Partner record type. The Account you’ve selected does not meet the requirement.</errorMessage>
+</ValidationRule>

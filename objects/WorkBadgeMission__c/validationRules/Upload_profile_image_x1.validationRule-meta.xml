@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upload_profile_image_x1</fullName>
+    <active>true</active>
+    <description>Upload profile image can only be x1</description>
+    <errorConditionFormula>AND(Text(Action__c) = &apos;Upload a profile image&apos;,Threshold__c != 1)</errorConditionFormula>
+    <errorDisplayField>Threshold__c</errorDisplayField>
+    <errorMessage>Upload profile image can only be x1</errorMessage>
+</ValidationRule>

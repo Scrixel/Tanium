@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Taas_Admin_Email_is_Verified_US_Person</fullName>
+    <active>false</active>
+    <description>Required to meet contactual requirements of enforcing only US Persons can be the Primary admin on Tanium Cloud for U.S. Government cloud tenancies.</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL( Server_Device_Type__c , &quot;Tanium Cloud for U.S. Government&quot;),
+ 00N7V000003XZVQ.00N7V000003PhBe = FALSE )</errorConditionFormula>
+    <errorMessage>Please make sure the Contact associated with this email address is a Verified US Person.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_Event_for_Displacement__c</fullName>
+    <description>https://tanium.lightning.force.com/lightning/r/Case/5000e00001mr199AAA/view</description>
+    <label>Trigger Event for Displacement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Breach</fullName>
+                <default>false</default>
+                <label>Breach</label>
+            </value>
+            <value>
+                <fullName>Contract Expiring</fullName>
+                <default>false</default>
+                <label>Contract Expiring</label>
+            </value>
+            <value>
+                <fullName>Existing Tool Failure</fullName>
+                <default>false</default>
+                <label>Existing Tool Failure</label>
+            </value>
+            <value>
+                <fullName>New Leader/Political</fullName>
+                <default>false</default>
+                <label>New Leader/Political</label>
+            </value>
+            <value>
+                <fullName>M&amp;A</fullName>
+                <default>false</default>
+                <label>M&amp;A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

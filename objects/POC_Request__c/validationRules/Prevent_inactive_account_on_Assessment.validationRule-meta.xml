@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_inactive_account_on_Assessment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(Account__r.Active_Account__c),
+ISPICKVAL( POC_Category__c , &apos;Assessment&apos;) )</errorConditionFormula>
+    <errorMessage>Assessment licenses are only available to &quot;Active&quot; Tanium Partners. Please raise a Customer POC if Assessment licenses are needed in the customer environment.</errorMessage>
+</ValidationRule>

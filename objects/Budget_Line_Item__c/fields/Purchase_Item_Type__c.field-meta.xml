@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchase_Item_Type__c</fullName>
+    <label>Purchase Item Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting Fees</fullName>
+                <default>false</default>
+                <label>Accounting Fees</label>
+            </value>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Analyst Relations</fullName>
+                <default>false</default>
+                <label>Analyst Relations</label>
+            </value>
+            <value>
+                <fullName>Audit Service Fees (External Auditor)</fullName>
+                <default>false</default>
+                <label>Audit Service Fees (External Auditor)</label>
+            </value>
+            <value>
+                <fullName>Board Fees</fullName>
+                <default>false</default>
+                <label>Board Fees</label>
+            </value>
+            <value>
+                <fullName>Branded Merchandise</fullName>
+                <default>false</default>
+                <label>Branded Merchandise</label>
+            </value>
+            <value>
+                <fullName>Building CAM Expense</fullName>
+                <default>false</default>
+                <label>Building CAM Expense</label>
+            </value>
+            <value>
+                <fullName>Business cards</fullName>
+                <default>false</default>
+                <label>Business cards</label>
+            </value>
+            <value>
+                <fullName>Business Insurance</fullName>
+                <default>false</default>
+                <label>Business Insurance</label>
+            </value>
+            <value>
+                <fullName>Business Licenses &amp; Taxes</fullName>
+                <default>false</default>
+                <label>Business Licenses &amp; Taxes</label>
+            </value>
+            <value>
+                <fullName>Car Lease</fullName>
+                <default>false</default>
+                <label>Car Lease</label>
+            </value>
+            <value>
+                <fullName>CEO Airfare</fullName>
+                <default>false</default>
+                <label>CEO Airfare</label>
+            </value>
+            <value>
+                <fullName>Charitable Donations</fullName>
+                <default>false</default>
+                <label>Charitable Donations</label>
+            </value>
+            <value>
+                <fullName>Communication - Internet</fullName>
+                <default>false</default>
+                <label>Communication - Internet</label>
+            </value>
+            <value>
+                <fullName>Communication - telephones</fullName>
+                <default>false</default>
+                <label>Communication - telephones</label>
+            </value>
+            <value>
+                <fullName>Computer Hardware/Software Maintenance</fullName>
+                <default>false</default>
+                <label>Computer Hardware/Software Maintenance</label>
+            </value>
+            <value>
+                <fullName>Computer Hardware &lt;$2,500</fullName>
+                <default>false</default>
+                <label>Computer Hardware &lt;$2,500</label>
+            </value>
+            <value>
+                <fullName>Computer Hardware &gt;$2,500 - Fixed Assets</fullName>
+                <default>false</default>
+                <label>Computer Hardware &gt;$2,500 - Fixed Assets</label>
+            </value>
+            <value>
+                <fullName>Computer Software &lt;$2,500</fullName>
+                <default>false</default>
+                <label>Computer Software &lt;$2,500</label>
+            </value>
+            <value>
+                <fullName>Computer Software &gt;$2,500 - Fixed Assets</fullName>
+                <default>false</default>
+                <label>Computer Software &gt;$2,500 - Fixed Assets</label>
+            </value>
+            <value>
+                <fullName>Construction in Progress (Leasehold Improvements)</fullName>
+                <default>false</default>
+                <label>Construction in Progress (Leasehold Improvements)</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Content Development &amp; Creative Services</fullName>
+                <default>false</default>
+                <label>Content Development &amp; Creative Services</label>
+            </value>
+            <value>
+                <fullName>Dues &amp; Subscriptions</fullName>
+                <default>false</default>
+                <label>Dues &amp; Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Equipment Rentals</fullName>
+                <default>false</default>
+                <label>Equipment Rentals</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Facilities Janitorial</fullName>
+                <default>false</default>
+                <label>Facilities Janitorial</label>
+            </value>
+            <value>
+                <fullName>Facilities Maintenance &amp; Repair</fullName>
+                <default>false</default>
+                <label>Facilities Maintenance &amp; Repair</label>
+            </value>
+            <value>
+                <fullName>Facilities Materials &amp; Supplies</fullName>
+                <default>false</default>
+                <label>Facilities Materials &amp; Supplies</label>
+            </value>
+            <value>
+                <fullName>Facilities Moving Expenses</fullName>
+                <default>false</default>
+                <label>Facilities Moving Expenses</label>
+            </value>
+            <value>
+                <fullName>Furniture, Fixture &amp; Equipment &lt;$2,500</fullName>
+                <default>false</default>
+                <label>Furniture, Fixture &amp; Equipment &lt;$2,500</label>
+            </value>
+            <value>
+                <fullName>Furniture, Fixture &amp; Equipment &gt;$2,500 - Fixed Assets</fullName>
+                <default>false</default>
+                <label>Furniture, Fixture &amp; Equipment &gt;$2,500 - Fixed Assets</label>
+            </value>
+            <value>
+                <fullName>Gifts</fullName>
+                <default>false</default>
+                <label>Gifts</label>
+            </value>
+            <value>
+                <fullName>Health Insurance</fullName>
+                <default>false</default>
+                <label>Health Insurance</label>
+            </value>
+            <value>
+                <fullName>Holiday Party</fullName>
+                <default>false</default>
+                <label>Holiday Party</label>
+            </value>
+            <value>
+                <fullName>Immigration Fees</fullName>
+                <default>false</default>
+                <label>Immigration Fees</label>
+            </value>
+            <value>
+                <fullName>Leasehold Improvement &lt;$2,500</fullName>
+                <default>false</default>
+                <label>Leasehold Improvement &lt;$2,500</label>
+            </value>
+            <value>
+                <fullName>Leasehold Improvements &gt; $2,500 - Fixed Assets</fullName>
+                <default>false</default>
+                <label>Leasehold Improvements &gt; $2,500 - Fixed Assets</label>
+            </value>
+            <value>
+                <fullName>Legal Service Fees</fullName>
+                <default>false</default>
+                <label>Legal Service Fees</label>
+            </value>
+            <value>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+                <label>Life Insurance</label>
+            </value>
+            <value>
+                <fullName>Lodging</fullName>
+                <default>false</default>
+                <label>Lodging</label>
+            </value>
+            <value>
+                <fullName>Marketing Tools &amp; Analytics</fullName>
+                <default>false</default>
+                <label>Marketing Tools &amp; Analytics</label>
+            </value>
+            <value>
+                <fullName>Meals &amp; Entertainment</fullName>
+                <default>false</default>
+                <label>Meals &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>Office Food</fullName>
+                <default>false</default>
+                <label>Office Food</label>
+            </value>
+            <value>
+                <fullName>Office Supplies</fullName>
+                <default>false</default>
+                <label>Office Supplies</label>
+            </value>
+            <value>
+                <fullName>Online Marketing</fullName>
+                <default>false</default>
+                <label>Online Marketing</label>
+            </value>
+            <value>
+                <fullName>Other Company Benefits</fullName>
+                <default>false</default>
+                <label>Other Company Benefits</label>
+            </value>
+            <value>
+                <fullName>Other Marketing</fullName>
+                <default>false</default>
+                <label>Other Marketing</label>
+            </value>
+            <value>
+                <fullName>Other Recruiting Expense</fullName>
+                <default>false</default>
+                <label>Other Recruiting Expense</label>
+            </value>
+            <value>
+                <fullName>Other Service Fees</fullName>
+                <default>false</default>
+                <label>Other Service Fees</label>
+            </value>
+            <value>
+                <fullName>Partner Fee Expense - other accrual</fullName>
+                <default>false</default>
+                <label>Partner Fee Expense - other accrual</label>
+            </value>
+            <value>
+                <fullName>Payroll Service Fees</fullName>
+                <default>false</default>
+                <label>Payroll Service Fees</label>
+            </value>
+            <value>
+                <fullName>Postage &amp; Courier</fullName>
+                <default>false</default>
+                <label>Postage &amp; Courier</label>
+            </value>
+            <value>
+                <fullName>Public Relations &amp; Social Media</fullName>
+                <default>false</default>
+                <label>Public Relations &amp; Social Media</label>
+            </value>
+            <value>
+                <fullName>Recruiting Fee</fullName>
+                <default>false</default>
+                <label>Recruiting Fee</label>
+            </value>
+            <value>
+                <fullName>Relocation</fullName>
+                <default>false</default>
+                <label>Relocation</label>
+            </value>
+            <value>
+                <fullName>Rent</fullName>
+                <default>false</default>
+                <label>Rent</label>
+            </value>
+            <value>
+                <fullName>Rent - Parking</fullName>
+                <default>false</default>
+                <label>Rent - Parking</label>
+            </value>
+            <value>
+                <fullName>SaaS Subscriptions</fullName>
+                <default>false</default>
+                <label>SaaS Subscriptions</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Seminars / Conferences</fullName>
+                <default>false</default>
+                <label>Seminars / Conferences</label>
+            </value>
+            <value>
+                <fullName>Staff Offsite</fullName>
+                <default>false</default>
+                <label>Staff Offsite</label>
+            </value>
+            <value>
+                <fullName>Tax Service Fees</fullName>
+                <default>false</default>
+                <label>Tax Service Fees</label>
+            </value>
+            <value>
+                <fullName>Tax Service Fees (External Auditor)</fullName>
+                <default>false</default>
+                <label>Tax Service Fees (External Auditor)</label>
+            </value>
+            <value>
+                <fullName>Training / Continuing Education</fullName>
+                <default>false</default>
+                <label>Training / Continuing Education</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+            <value>
+                <fullName>Workers&apos; Compensation</fullName>
+                <default>false</default>
+                <label>Workers&apos; Compensation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

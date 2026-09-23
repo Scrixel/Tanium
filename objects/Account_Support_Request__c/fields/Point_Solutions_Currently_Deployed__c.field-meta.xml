@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Point_Solutions_Currently_Deployed__c</fullName>
+    <label>Point Solutions Currently Deployed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Altiris</fullName>
+                <default>false</default>
+                <label>Altiris</label>
+            </value>
+            <value>
+                <fullName>Aternity</fullName>
+                <default>false</default>
+                <label>Aternity</label>
+            </value>
+            <value>
+                <fullName>BigFix</fullName>
+                <default>false</default>
+                <label>BigFix</label>
+            </value>
+            <value>
+                <fullName>Carbon Black</fullName>
+                <default>false</default>
+                <label>Carbon Black</label>
+            </value>
+            <value>
+                <fullName>Crowdstrike</fullName>
+                <default>false</default>
+                <label>Crowdstrike</label>
+            </value>
+            <value>
+                <fullName>FireEye</fullName>
+                <default>false</default>
+                <label>FireEye</label>
+            </value>
+            <value>
+                <fullName>Flexera</fullName>
+                <default>false</default>
+                <label>Flexera</label>
+            </value>
+            <value>
+                <fullName>Ivanti</fullName>
+                <default>false</default>
+                <label>Ivanti</label>
+            </value>
+            <value>
+                <fullName>Jamf</fullName>
+                <default>false</default>
+                <label>Jamf</label>
+            </value>
+            <value>
+                <fullName>McAfee</fullName>
+                <default>false</default>
+                <label>McAfee</label>
+            </value>
+            <value>
+                <fullName>Nexthink</fullName>
+                <default>false</default>
+                <label>Nexthink</label>
+            </value>
+            <value>
+                <fullName>Qualys</fullName>
+                <default>false</default>
+                <label>Qualys</label>
+            </value>
+            <value>
+                <fullName>Rapid7</fullName>
+                <default>false</default>
+                <label>Rapid7</label>
+            </value>
+            <value>
+                <fullName>Red Hat Satellite</fullName>
+                <default>false</default>
+                <label>Red Hat Satellite</label>
+            </value>
+            <value>
+                <fullName>SCCM</fullName>
+                <default>false</default>
+                <label>SCCM</label>
+            </value>
+            <value>
+                <fullName>SerciceNow</fullName>
+                <default>false</default>
+                <label>SerciceNow</label>
+            </value>
+            <value>
+                <fullName>Solar Winds</fullName>
+                <default>false</default>
+                <label>Solar Winds</label>
+            </value>
+            <value>
+                <fullName>Symantec</fullName>
+                <default>false</default>
+                <label>Symantec</label>
+            </value>
+            <value>
+                <fullName>Tenable</fullName>
+                <default>false</default>
+                <label>Tenable</label>
+            </value>
+            <value>
+                <fullName>Tripwire</fullName>
+                <default>false</default>
+                <label>Tripwire</label>
+            </value>
+            <value>
+                <fullName>OTHER or HOMEGROWN</fullName>
+                <default>false</default>
+                <label>OTHER or HOMEGROWN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

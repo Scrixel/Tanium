@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Quantity__c</fullName>
+    <description>The Quantity from the Quote Line that needs to be allocated. This value will vary depending on if the Line Item is Usage or not. Used in the &apos;Manage Allocation&apos; screen on the Opportunity. SS-13898</description>
+    <externalId>false</externalId>
+    <formula>ELV_QuoteLineItem__r.ELV_Opp_Server_Deployment_Quantity__c</formula>
+    <inlineHelpText>The Quantity from the Quote Line that needs to be allocated. This value will vary depending on if the Line Item is Usage or not. Used in the &apos;Manage Allocation&apos; screen on the Opportunity.</inlineHelpText>
+    <label>Quantity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

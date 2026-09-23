@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Type__c</fullName>
+    <description>Opp Reg Type</description>
+    <inlineHelpText>Opp Reg Type</inlineHelpText>
+    <label>Opp Reg Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Partner Created</fullName>
+                <default>false</default>
+                <label>Partner Created</label>
+            </value>
+            <value>
+                <fullName>Tanium Created</fullName>
+                <default>false</default>
+                <label>Tanium Created</label>
+            </value>
+            <value>
+                <fullName>Non-Registered</fullName>
+                <default>false</default>
+                <label>Non-Registered</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

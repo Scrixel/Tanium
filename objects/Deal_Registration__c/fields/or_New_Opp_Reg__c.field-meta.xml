@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_New_Opp_Reg__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Value is selected at the time a new opp reg is created, and is updated to unselected when a new opp reg approval is approved or rejected.  System will use this flag in addition to other filters (extension count, opp reg status) to determine new or extension approval process when user submits approval.</description>
+    <inlineHelpText>Value is selected at the time a new Deal is created, and is updated to unselected when a new Deal approval is approved or rejected.  System will use this flag in addition to other filters (extension count,status) to determine new or extension</inlineHelpText>
+    <label>New Deal?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

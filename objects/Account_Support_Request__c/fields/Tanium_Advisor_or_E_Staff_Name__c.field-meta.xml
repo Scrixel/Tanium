@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Advisor_or_E_Staff_Name__c</fullName>
+    <description>SS-13677 - Created to use in Email template in ISR After Save flow as Tanium_Sr_Advisor_Invited__r.Name cannot be selected in the email template.</description>
+    <externalId>false</externalId>
+    <formula>TRIM(
+  BLANKVALUE(Tanium_Sr_Advisor_Invited__r.FirstName, &quot;&quot;) &amp; &quot; &quot; &amp;
+  BLANKVALUE(Tanium_Sr_Advisor_Invited__r.LastName, &quot;&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tanium Advisor or E-Staff Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

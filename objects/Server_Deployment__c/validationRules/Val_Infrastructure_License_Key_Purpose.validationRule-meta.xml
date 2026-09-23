@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Val_Infrastructure_License_Key_Purpose</fullName>
+    <active>true</active>
+    <description>Validate Infrastructure-License Key Purpose to either &quot;On-Prem&quot;, &quot;Tanium Cloud&quot; or &quot;Tanium Cloud for U.S. Government&quot;.
+
+Server_Device_Type__c (Picklist Value) :
+- &quot;Tanium as a Service&quot; (API Name) = &quot;Tanium Cloud&quot; (Label)</description>
+    <errorConditionFormula>AND (
+    NOT($Permission.DisableValidationRules),
+    NOT( 
+       (ISPICKVAL( Server_Device_Type__c , &quot;Tanium as a Service&quot;) ||  
+        ISPICKVAL(Server_Device_Type__c , &quot;On-Prem&quot;) ||
+        ISPICKVAL( Server_Device_Type__c , &quot;Tanium Cloud for U.S. Government&quot;)
+    ))
+)</errorConditionFormula>
+    <errorDisplayField>Server_Device_Type__c</errorDisplayField>
+    <errorMessage>Please update Infrastructure-License Key Purpose to either &quot;On-Prem&quot;, &quot;Tanium Cloud&quot; or &quot;Tanium Cloud for U.S. Government&quot;.</errorMessage>
+</ValidationRule>

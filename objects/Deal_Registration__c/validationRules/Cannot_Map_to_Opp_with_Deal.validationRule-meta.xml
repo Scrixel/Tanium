@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Map_to_Opp_with_Deal</fullName>
+    <active>true</active>
+    <description>Implemented as a part of the Zift Partner Portal project. Jira ticket SS-8945</description>
+    <errorConditionFormula>AND(
+   ISCHANGED (Mapped_Opportunity__c),
+   TEXT(or_Opp_Reg_Approval_Flow_Status__c) = &apos;Approvals not started&apos;,
+   TEXT(or_Opp_Reg_Status__c) = &apos;Pending&apos;,
+   or_New_Opp_Reg__c, 
+   LEN(Mapped_Opportunity__r.Deal_Reg_ID__c) &gt; 0,
+   OR(
+      TEXT(Mapped_Opportunity__r.Deal_Reg_ID__r.or_Opp_Reg_Status__c) = &apos;Approved&apos;,
+      TEXT(Mapped_Opportunity__r.Deal_Reg_ID__r.or_Opp_Reg_Status__c) = &apos;Extension Pending&apos;,
+      TEXT(Mapped_Opportunity__r.Deal_Reg_ID__r.or_Opp_Reg_Status__c) = &apos;Closed Won&apos;
+   ),
+   NOT($Profile.Name=&quot;API Only Integration Admin&quot;),
+   NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Mapped_Opportunity__c</errorDisplayField>
+    <errorMessage>The opportunity that you are trying to map has a Deal Registration connected. Please either (i) select an alternate opportunity, (ii)select “Create new opp upon approval”, or (iii) reject the Deal Registration as this opportunity is already registered.</errorMessage>
+</ValidationRule>

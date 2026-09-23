@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GSFileLink_Id__c</fullName>
+    <description>This is the ID of the JBCXM__GSFileLink__c JSON file that contains the solutions manifest JSON (usually gathered via TPAN)</description>
+    <externalId>false</externalId>
+    <label>GSFileLink__Id</label>
+    <length>32</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

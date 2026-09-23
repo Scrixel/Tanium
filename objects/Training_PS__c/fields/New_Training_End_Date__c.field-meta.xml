@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Training_End_Date__c</fullName>
+    <description>This field is manually filled and cannot be more than 90 Days than Training End Date. Following Approval, this field&apos;s value is filled in &quot;Training End Date&quot; Field.</description>
+    <label>New Training End Date</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

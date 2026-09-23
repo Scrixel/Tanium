@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Maintain count of email sent to User(Deal Desk Approver or Contract Owner) of Opportunity.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Contract Checklist Notification</label>
+    <visibility>Protected</visibility>
+</CustomObject>

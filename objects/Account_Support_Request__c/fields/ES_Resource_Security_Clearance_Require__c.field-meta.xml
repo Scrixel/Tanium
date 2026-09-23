@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ES_Resource_Security_Clearance_Require__c</fullName>
+    <description>11/4/25 - Change of Field Type (Text to Picklist) and change of Label (SS-10397)
+
+Ref: Katee Guzman 
+Added to ESO ISR</description>
+    <inlineHelpText>Please be sure the security clearance you provide is final and correct as this is what will be used for recruiting the resource.</inlineHelpText>
+    <label>Security Clearance Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>US_Confidential</fullName>
+                <default>false</default>
+                <label>US_Confidential</label>
+            </value>
+            <value>
+                <fullName>US_Secret</fullName>
+                <default>false</default>
+                <label>US_Secret</label>
+            </value>
+            <value>
+                <fullName>US_TS</fullName>
+                <default>false</default>
+                <label>US_TS</label>
+            </value>
+            <value>
+                <fullName>US_Secret/SCI</fullName>
+                <default>false</default>
+                <label>US_Secret/SCI</label>
+            </value>
+            <value>
+                <fullName>US_TS/SCI</fullName>
+                <default>false</default>
+                <label>US_TS/SCI</label>
+            </value>
+            <value>
+                <fullName>US_CI Poly</fullName>
+                <default>false</default>
+                <label>US_CI Poly</label>
+            </value>
+            <value>
+                <fullName>US_FS Poly</fullName>
+                <default>false</default>
+                <label>US_FS Poly</label>
+            </value>
+            <value>
+                <fullName>UK_SC</fullName>
+                <default>false</default>
+                <label>UK_SC</label>
+            </value>
+            <value>
+                <fullName>UK_DV</fullName>
+                <default>false</default>
+                <label>UK_DV</label>
+            </value>
+            <value>
+                <fullName>Other (Explain)</fullName>
+                <default>false</default>
+                <label>Other (Explain)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

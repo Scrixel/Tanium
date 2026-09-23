@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executive_Engagement_ISRs_US_West</fullName>
+    <columns>Account__c</columns>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>NAME</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>ISR_Age__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Tanium_Sr_Advisor_Invited__c</field>
+        <operation>contains</operation>
+        <value>Hindawi,Streetman,Fagg,Ross,Quinn,Jenks,Hunt,Levine,Mickelsen,McClean,Hallenbeck,Kaur</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account_Support_Request__c.Tanium_Estaff_Engagement</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted and Under Review,Approved and Under Review,Sent to Sr. Advisor/E-Staff,Request sent to contact,Acknowledged by Contact,Call or Meeting Completed,Approved</value>
+    </filters>
+    <label>Tanium E-Staff ISRs US West</label>
+</ListView>

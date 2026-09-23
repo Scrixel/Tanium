@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Region__c</fullName>
+    <description>Picklist values managed through global value set. Corresponds to L4 values to simply rule creation and filtering.</description>
+    <label>DEPRECATED Sub Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Region__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Sub_Region_L4</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <valueName>Partner_GSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>US and Canada Velocity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Latin America PFS Brasil_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Latin America PFS Brasil Gov</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Latin America PFS LATAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Latin America PFS MX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Latin America PFS Non MX_Brasil_Rio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_LATAM</controllingFieldValue>
+            <valueName>Partner_LATAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS Federal HA</controllingFieldValue>
+            <valueName>USPS Federal HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <valueName>EMEA Central MSP PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <valueName>EMEA North MSP PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <controllingFieldValue>Partner_Global MSP</controllingFieldValue>
+            <valueName>Partner_Global MSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <valueName>US MSP East PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <valueName>US MSP West PFS_1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_MSP</controllingFieldValue>
+            <valueName>US MSP West PFS_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US SLED HA</controllingFieldValue>
+            <valueName>US SLED HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Federal</controllingFieldValue>
+            <valueName>Fed_Civilian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Federal</controllingFieldValue>
+            <valueName>Fed_DOD-IC-FSI 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Federal</controllingFieldValue>
+            <valueName>Fed_DOD-IC-FSI 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Federal</controllingFieldValue>
+            <valueName>US Federal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>Partner_US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_Central_Maj-Ent PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_MM_COM_PFS_1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_MM_COM_PFS_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_MM_COM_PFS_3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_MM_COM_PFS_4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_Southeast_PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US_West_PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US and Canada National Partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada</controllingFieldValue>
+            <valueName>US and Canada National Partners PAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US SLED</controllingFieldValue>
+            <valueName>SLED_Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US SLED</controllingFieldValue>
+            <valueName>SLED_East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US SLED</controllingFieldValue>
+            <valueName>SLED_West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US SLED</controllingFieldValue>
+            <valueName>US SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial HA</controllingFieldValue>
+            <valueName>US-UK MM and Commercial HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales HA</controllingFieldValue>
+            <valueName>Global Sales HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PS Canada</controllingFieldValue>
+            <valueName>PS Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS SLED and PS Canada HA</controllingFieldValue>
+            <valueName>USPS SLED and PS Canada HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK_MM and Commercial</controllingFieldValue>
+            <valueName>UK Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK_MM and Commercial</controllingFieldValue>
+            <valueName>UK Mid-Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK_MM and Commercial</controllingFieldValue>
+            <valueName>UK MM and Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Mid-Market</controllingFieldValue>
+            <valueName>US Mid-Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Mid-Market</controllingFieldValue>
+            <valueName>US Mid-Market_Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Mid-Market</controllingFieldValue>
+            <valueName>US Mid-Market_Northeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Mid-Market</controllingFieldValue>
+            <valueName>US Mid-Market_Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Mid-Market</controllingFieldValue>
+            <valueName>US Mid-Market_Southwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Northeast</controllingFieldValue>
+            <valueName>Northeast_FinServ-NY Metro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Northeast</controllingFieldValue>
+            <valueName>Northeast_Great Lakes-Ohio Valley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Northeast</controllingFieldValue>
+            <valueName>Northeast_New England</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Northeast</controllingFieldValue>
+            <valueName>Northeast_Tri-State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Northeast</controllingFieldValue>
+            <valueName>US_Northeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Southeast</controllingFieldValue>
+            <valueName>Southeast_Central Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Southeast</controllingFieldValue>
+            <valueName>Southeast_Florida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Southeast</controllingFieldValue>
+            <valueName>Southeast_South Atlantic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Southeast</controllingFieldValue>
+            <valueName>Southeast_TAO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Southeast</controllingFieldValue>
+            <valueName>US_Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>US_West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>West_Heartland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>West_NorCal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>West_North Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>West_PNW-MTN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_West</controllingFieldValue>
+            <valueName>West_Southwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ HA</controllingFieldValue>
+            <valueName>APJ HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Commercial</controllingFieldValue>
+            <valueName>US Commercial_East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US_Commercial</controllingFieldValue>
+            <valueName>US Commercial_West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA HA</controllingFieldValue>
+            <valueName>EMEA HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>US-UK MM and Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_APAC</controllingFieldValue>
+            <valueName>APAC_ANZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_APAC</controllingFieldValue>
+            <valueName>APAC_ASEAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_APAC</controllingFieldValue>
+            <valueName>APAC_South Korea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_APAC</controllingFieldValue>
+            <valueName>APJ_APAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_SA1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_SA2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_SA3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ_Japan</controllingFieldValue>
+            <valueName>Japan_SA4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Central Europe</controllingFieldValue>
+            <valueName>Central Europe_North</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Central Europe</controllingFieldValue>
+            <valueName>Central Europe_South</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Central Europe</controllingFieldValue>
+            <valueName>EMEA_Central Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>APJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Global Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <valueName>Global GSI PAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <valueName>Global GSI PAM EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <valueName>Global GSI PAM US and Canada_1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <valueName>Global GSI PAM US and Canada_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_GSI</controllingFieldValue>
+            <controllingFieldValue>Partner_US and Canada_Maj-Ent</controllingFieldValue>
+            <valueName>Partner_US and Canada_Maj-Ent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US and Canada_MM-Comm</controllingFieldValue>
+            <valueName>Partner_US and Canada_MM-Comm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Northern Europe</controllingFieldValue>
+            <valueName>EMEA_Northern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Northern Europe</controllingFieldValue>
+            <valueName>Northern Europe_Benelux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Northern Europe</controllingFieldValue>
+            <valueName>Northern Europe_UK Enterprise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Northern Europe</controllingFieldValue>
+            <valueName>Northern Europe_UK Major and Nordics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Northern Europe</controllingFieldValue>
+            <valueName>Northern Europe_UK Public Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>Partner_US Federal and Sled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>Partner_US SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>SLED_Central PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>SLED_East PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>SLED_West PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>US Federal PFS_1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>US Federal PFS_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_US Federal and Sled</controllingFieldValue>
+            <valueName>US Federal PFS_3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Southern Europe</controllingFieldValue>
+            <valueName>EMEA_Southern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Southern Europe</controllingFieldValue>
+            <valueName>Southern Europe_France and Iberia Focus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA_Southern Europe</controllingFieldValue>
+            <valueName>Southern Europe_France and Italy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner HA</controllingFieldValue>
+            <valueName>Partner HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Under 1K Account Records</controllingFieldValue>
+            <valueName>Under 1K Account Records</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA_Central Europe Channel PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA_Northern Europe Benelux Channel PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA_Northern Europe UK Channel PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA_Southern Europe France Channel PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA_Southern Europe Spain Channel PFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA National Partners PAM_1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>EMEA National Partners PAM_2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner_EMEA</controllingFieldValue>
+            <valueName>Partner_EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada HA</controllingFieldValue>
+            <valueName>US and Canada HA</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

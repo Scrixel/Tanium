@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Address__c</fullName>
+    <description>Email of specific contact for introduction
+05/19/2020: Updated label to Contract Source (Board or Executive) per Lori T&apos;s request
+03/22/2021: Updated label to Target Contact Info per Justin&apos;s request</description>
+    <inlineHelpText>Email of specific contact for introduction</inlineHelpText>
+    <label>Target Contact Info</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

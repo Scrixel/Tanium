@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NFR_Requestor_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>INC0124516
+Old Requestor Name field is a text field</description>
+    <inlineHelpText>Primary Partner Contact that requested the NFR licenses</inlineHelpText>
+    <label>Requestor Name</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>NFRs</relationshipLabel>
+    <relationshipName>NFRsContacts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

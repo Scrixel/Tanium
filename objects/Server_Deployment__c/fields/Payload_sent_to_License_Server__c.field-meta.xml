@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payload_sent_to_License_Server__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>A link to the Integration Callout record, which stores the details of the payload sent to the License Server</description>
+    <inlineHelpText>A link to the Integration Callout record, which stores the details of the payload sent to the License Server</inlineHelpText>
+    <label>Payload sent to License Server</label>
+    <referenceTo>Integration_Callout__c</referenceTo>
+    <relationshipLabel>Server Deployments</relationshipLabel>
+    <relationshipName>Server_Deployments</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

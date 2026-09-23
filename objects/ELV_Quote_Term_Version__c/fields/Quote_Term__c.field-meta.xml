@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Term__c</fullName>
+    <inlineHelpText>Links the version to its parent term. Used for organizing terms: the Quote Term object to group variants by a single legal/business purpose, with versions as related records.</inlineHelpText>
+    <label>Quote Term</label>
+    <referenceTo>ELV_Quote_Term__c</referenceTo>
+    <relationshipLabel>Quote Term Versions</relationshipLabel>
+    <relationshipName>Quote_Term_Versions</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

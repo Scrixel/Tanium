@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relational_6_Authority__c</fullName>
+    <label>Relational_6_Authority</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I purchased Tanium for my organization or company (i.e., I authorized the purchase)</fullName>
+                <default>false</default>
+                <label>I purchased Tanium for my organization or company (i.e., I authorized the purchase)</label>
+            </value>
+            <value>
+                <fullName>I directly influenced the decision to purchase Tanium</fullName>
+                <default>false</default>
+                <label>I directly influenced the decision to purchase Tanium</label>
+            </value>
+            <value>
+                <fullName>I did not authorize or influence the decision to purchase Tanium</fullName>
+                <default>false</default>
+                <label>I did not authorize or influence the decision to purchase Tanium</label>
+            </value>
+            <value>
+                <fullName>私は私の組織または会社のためにTaniumを購入決定をする権限があります。</fullName>
+                <default>false</default>
+                <label>私は私の組織または会社のためにTaniumを購入決定をする権限があります。</label>
+            </value>
+            <value>
+                <fullName>私は、Tanium を購入する決定に直接影響を与える立場にあります。</fullName>
+                <default>false</default>
+                <label>私は、Tanium を購入する決定に直接影響を与える立場にあります。</label>
+            </value>
+            <value>
+                <fullName>私は、Tanium を購入する決定影響を与える立場にありません。</fullName>
+                <default>false</default>
+                <label>私は、Tanium を購入する決定影響を与える立場にありません。</label>
+            </value>
+            <value>
+                <fullName>Taniumの購入を決定をする権限がある</fullName>
+                <default>false</default>
+                <label>Taniumの購入を決定をする権限がある</label>
+            </value>
+            <value>
+                <fullName>Taniumの購入の決定に直接影響を与える立場にある</fullName>
+                <default>false</default>
+                <label>Taniumの購入の決定に直接影響を与える立場にある</label>
+            </value>
+            <value>
+                <fullName>Taniumの購入を決定する権限や購入への影響力はない (</fullName>
+                <default>false</default>
+                <label>Taniumの購入を決定する権限や購入への影響力はない (</label>
+            </value>
+            <value>
+                <fullName>Taniumの購入を決定する権限や購入への影響力はない</fullName>
+                <default>false</default>
+                <label>Taniumの購入を決定する権限や購入への影響力はない</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

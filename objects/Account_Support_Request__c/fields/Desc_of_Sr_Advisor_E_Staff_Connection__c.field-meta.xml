@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desc_of_Sr_Advisor_E_Staff_Connection__c</fullName>
+    <description>Senior Advisor Layout V2</description>
+    <inlineHelpText>What are the known connections between the Sr. Advisor/Estaff and the account</inlineHelpText>
+    <label>Advisor&apos;s/E-Staff&apos;s Contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

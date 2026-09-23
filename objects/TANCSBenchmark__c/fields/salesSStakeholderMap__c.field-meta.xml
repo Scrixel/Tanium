@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>salesSStakeholderMap__c</fullName>
+    <description>DEFINITION: A documented org chart showing reporting lines and political power
+
+IMPORTANCE: Sales, TAMs and Execs need to be clear on who is who. Influencers. Detractors and supporters. Will evolve as campaign progresses</description>
+    <externalId>false</externalId>
+    <label>salesSStakeholderMap</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

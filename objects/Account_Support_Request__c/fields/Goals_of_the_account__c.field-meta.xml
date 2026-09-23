@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goals_of_the_account__c</fullName>
+    <description>CSM ISR</description>
+    <inlineHelpText>Tanium internal account goals (i.e. upsell x module(s) by targeting y team for z use case)</inlineHelpText>
+    <label>Account Goals</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

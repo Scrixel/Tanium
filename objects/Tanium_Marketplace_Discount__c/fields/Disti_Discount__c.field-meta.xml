@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disti_Discount__c</fullName>
+    <defaultValue>(0)</defaultValue>
+    <description>Will be assigned on Marketplace quotes before being pushed down to the Quote Line by CPQ Price Rule. Jira ticket SS-9205</description>
+    <inlineHelpText>Assign the percent to be assigned to the Quote Lines as the Disti Discount</inlineHelpText>
+    <label>Disti Discount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

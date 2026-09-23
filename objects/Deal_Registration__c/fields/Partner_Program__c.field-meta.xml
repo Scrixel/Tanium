@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Program__c</fullName>
+    <description>Channel Ops will use this field to track Deal Registrations influenced by the Partner Program.</description>
+    <label>Partner Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>It&apos;s Just Lunch</fullName>
+                <default>false</default>
+                <label>It&apos;s Just Lunch</label>
+            </value>
+            <value>
+                <fullName>Rev Up</fullName>
+                <default>false</default>
+                <label>Rev Up</label>
+            </value>
+            <value>
+                <fullName>Rev-up October Pull In</fullName>
+                <default>false</default>
+                <label>Rev-up October Pull In</label>
+            </value>
+            <value>
+                <fullName>ServiceNow OEM</fullName>
+                <default>false</default>
+                <label>ServiceNow OEM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

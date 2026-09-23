@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Down_Voting__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Allow users to downvote an idea</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Check to enable users to down vote an idea.</inlineHelpText>
+    <label>Allow Down Voting</label>
+    <type>Checkbox</type>
+</CustomField>

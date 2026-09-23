@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Account_Update_after_Create</fullName>
+    <active>true</active>
+    <description>SS-2162 https://tanium.atlassian.net/browse/SS-2162</description>
+    <errorConditionFormula>AND(
+ ISNEW() == FALSE,
+ ISCHANGED( Account__c ) 
+
+)</errorConditionFormula>
+    <errorMessage>Account cannot be changed after Tech Integration record had been created.</errorMessage>
+</ValidationRule>

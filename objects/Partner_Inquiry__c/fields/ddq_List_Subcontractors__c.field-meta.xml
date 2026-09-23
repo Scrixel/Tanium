@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_List_Subcontractors__c</fullName>
+    <description>If you will be subcontracting, identify the other company or subcontractor and describe the part of the services it will perform.</description>
+    <inlineHelpText>If you will be subcontracting, identify the other company or subcontractor and describe the part of the services it will perform.</inlineHelpText>
+    <label>List Subcontractor(s)</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

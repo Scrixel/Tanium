@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Business_Objective_Count_Require</fullName>
+    <active>true</active>
+    <description>SS-2211 - If Customer Journey Account Task Type equals “Onboard” and Sub-Type equals “Document business objectives,” then do not allow the Customer Journey Account Task to be completed unless Business Objectives are found for the Account</description>
+    <errorConditionFormula>ISNEW() = False &amp;&amp;
+(ISCHANGED(Status__c) &amp;&amp; ISPICKVAL(Status__c, &quot;Completed&quot;)) &amp;&amp;
+RecordType.DeveloperName = &apos;Customer_Journey&apos; &amp;&amp;
+ISPICKVAL(Type__c, &quot;Onboard&quot;) &amp;&amp;
+ISPICKVAL(Sub_Type__c, &quot;Document business objectives&quot;) &amp;&amp;
+Account_Business_Objective_Created__c = False</errorConditionFormula>
+    <errorMessage>You cannot complete this Customer Journey Account Task until you create Business Objectives for your Account. Please create the Business Objectives and then come back to complete this Account Task.</errorMessage>
+</ValidationRule>

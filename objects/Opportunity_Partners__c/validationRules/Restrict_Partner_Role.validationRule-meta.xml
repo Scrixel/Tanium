@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Partner_Role</fullName>
+    <active>true</active>
+    <description>SS-7700 &amp; SS-7792 - The ability to create Opp Partner or change Partner Role with &quot;Partner Co-Sell&quot;, &quot;Referral&quot;, &quot;Partner Creator&quot; with the exception of System Admins, Channel Ops, Kirstin &amp; Alison.</description>
+    <errorConditionFormula>AND(
+   OR(
+      ISNEW(),
+      ISCHANGED(Partner_Role__c)
+   ),
+   OR(
+      AND(ISPICKVAL(Partner_Role__c, &quot;Partner Co-Sell&quot;),NOT($Permission.Edit_Oppty_Partner_Role)),
+      AND(ISPICKVAL(Partner_Role__c, &quot;Referral&quot;),NOT($Permission.Allow_Channel_Ops_permission)),
+      AND(ISPICKVAL(Partner_Role__c,&apos;Partner Creator&apos;),isRecordManuallyCreated__c, NOT($Permission.Edit_Co_Sell_Partner_Role))
+   ), 
+   $Profile.Name != &apos;Tanium System Administrator&apos;,
+   $Profile.Name != &apos;System Administrator&apos;,
+   Opportunity__r.RecordType.Name != &apos;Ramp&apos;,
+   NOT($Permission.DisableValidationRules )
+)</errorConditionFormula>
+    <errorDisplayField>Partner_Role__c</errorDisplayField>
+    <errorMessage>You do not have permissions to select Partner Roles: &quot;Partner Creator&quot;, &quot;Partner Co-Sell&quot; or &quot;Referral.” Many of these selections are automated. If you have questions, please reach out to ChannelOps@tanium.com.</errorMessage>
+</ValidationRule>

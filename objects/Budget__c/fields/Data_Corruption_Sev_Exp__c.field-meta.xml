@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Corruption_Sev_Exp__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;High(Severe or catastrophic financial, reputational, competitive or regulatory adverse consequences)&quot; &amp; BR() &amp; BR()&amp; &quot;Medium (Serious financial, reputational, competitive or regulatory adverse consequences)&quot;&amp; BR() &amp; BR()&amp; &quot;Low (Limited financial, reputational, competitive or regulatory adverse consequences)&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Data Explainer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

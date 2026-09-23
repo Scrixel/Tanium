@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hardware_Purchase_Request_Queue_Id__c</fullName>
+    <description>TAN-908: SFDC Queue Id for new Hardware Purchase Requests. Used by flow to avoid hardcoding the reference.</description>
+    <externalId>false</externalId>
+    <label>Hardware Purchase Request Queue Id</label>
+    <length>18</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

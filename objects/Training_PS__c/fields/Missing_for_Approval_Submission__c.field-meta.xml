@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_for_Approval_Submission__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK(New_Training_End_Date__c),&quot;&quot;,&quot;New Training End Date ;&quot;) &amp; 
+IF(!ISBLANK(Customer_Contact__c),&quot;&quot;,&quot;Customer Contact&quot;)&amp;
+IF(!ISBLANK(Business_justification__c),&quot;&quot;,&quot;Business Justification&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Missing for Approval Submission</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

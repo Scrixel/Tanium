@@ -1,0 +1,4 @@
+/** TNCI-135 / ELV-CPQ-068 — executable Step 2 contractual-cap coverage. */
+@IsTest private class ELV_RenewalUpliftStep2Test {
+ @IsTest static void quoteInheritsExplicitZeroCap(){Account a=new Account(Name='ELV Step2 Test');insert a;Opportunity o=new Opportunity(Name='ELV Renewal',AccountId=a.Id,StageName='Prospecting',CloseDate=Date.today(),ELV_Contracted_Renewal_Uplift_Percent__c=0);insert o;Quote q=new Quote(Name='ELV Quote',OpportunityId=o.Id,Pricebook2Id=Test.getStandardPricebookId());Test.startTest();ELV_RenewalUpliftCapPropagation.stampQuotes(new List<Quote>{q});Test.stopTest();System.assertEquals(0,q.ELV_Contracted_Renewal_Uplift_Percent__c,'Explicit zero must propagate.');}
+}

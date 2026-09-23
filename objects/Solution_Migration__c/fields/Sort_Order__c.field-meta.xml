@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sort_Order__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL(AEM_Solution__r.Product_Type__c, &apos;TaaS&apos;),
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Core&apos;), 1,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Endpoint&apos;), 2,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Risk&apos;), 3,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Incident&apos;), 4, NULL)))),
+
+IF(
+ISPICKVAL(AEM_Solution__r.Product_Type__c, &apos;Subscription&apos;),
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Core&apos;), 5,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Endpoint&apos;), 6,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Risk&apos;), 7,
+IF(CONTAINS(AEM_Solution__r.Name, &apos;Incident&apos;), 8, null)))),
+NULL
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sort Order</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

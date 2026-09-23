@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>salesSUseCases__c</fullName>
+    <description>DEFINITION: Is there a clear, documented set of use cases that form the basis of Tanium&apos;s use?
+
+IMPORTANCE: A clear, referenceable document to remove ambiguity, demonstrate Tanium&apos;s understanding. Provides clear foundation to move forward. Helps to provide clarity of use vs shelf ware</description>
+    <externalId>false</externalId>
+    <label>salesSUseCases</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

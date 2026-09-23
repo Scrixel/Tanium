@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <description>Picklist values managed through global value set. Corresponds to L3 values to simply rule creation and filtering.</description>
+    <label>DEPRECATED Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Geo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Region</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>APJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>APJ_APAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>APJ_Japan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>APJ HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA_Central Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA_Northern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA_Southern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_Global MSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_GSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_LATAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_MSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_US and Canada_Maj-Ent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_US and Canada_MM-Comm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner_US Federal and Sled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Partner HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales HA</controllingFieldValue>
+            <valueName>Global Sales HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US_Northeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US_Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US_West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US and Canada HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>UK_MM and Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>Under 1K Account Records</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>US_Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>US_Mid-Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>US-UK MM and Commercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US-UK MM and Commercial</controllingFieldValue>
+            <valueName>US-UK MM and Commercial HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS Federal</controllingFieldValue>
+            <valueName>US Federal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS Federal</controllingFieldValue>
+            <valueName>USPS Federal HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS SLED and PS Canada</controllingFieldValue>
+            <valueName>PS Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS SLED and PS Canada</controllingFieldValue>
+            <valueName>USPS SLED and PS Canada HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS SLED and PS Canada</controllingFieldValue>
+            <valueName>US SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS SLED and PS Canada</controllingFieldValue>
+            <valueName>US SLED HA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Global Sales</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

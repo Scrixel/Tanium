@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaaS_Fields_Require_All</fullName>
+    <active>true</active>
+    <description>2020-09-14 Case 56132 Require TaaS Fields
+2020-09-18 Add Status = &quot;Active&quot;
+Server_Device_Type__c (Picklist Value) : 
+- &quot;Tanium as a Service&quot; (API Name) = &quot;Tanium Cloud&quot; (Label)
+SS-8288 - Cloud_Region field to replace Taas_Region.</description>
+    <errorConditionFormula>AND(
+OR(
+TEXT(Server_Device_Type__c)= &quot;Tanium Cloud for U.S. Government&quot;,
+TEXT(Server_Device_Type__c)= &quot;Tanium as a Service&quot;),
+ISPICKVAL(Status__c,&quot;Active&quot;),
+OR(
+LEN( TEXT(Cloud_Region__c ))=0,
+ISBLANK( Vanity_URL__c ),
+ISBLANK( Tanium_Cloud_Admin__c )),
+NOT($Profile.Name=&quot;API Only Integration Admin&quot;),
+NOT($Profile.Name = &quot;Tanium System Administrator&quot;),
+NOT($Profile.Name=&quot;System Administrator&quot;),
+NOT($Profile.Name=&quot;API Only Integration&quot;),
+RecordType.DeveloperName =&apos;TaaS&apos;
+)</errorConditionFormula>
+    <errorMessage>When Tanium Cloud or Tanium Cloud for U.S. Government is selected in the Infrastructure-License Key Purpose field, you must populate the Vanity, Cloud Region, and Tanium Cloud Admin fields. Please check those fields are updated to save your record.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Sourced_Opp_Reg__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Implemented as a part of FY25 Partner Redesign</description>
+    <inlineHelpText>Select an Opp Reg record that was previously Partner Sourced by the partner. This will provide the partner an additional discount on Authorized quotes</inlineHelpText>
+    <label>DEPRECATED - Partner Sourced Opp Reg</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Lead.RecordType.Id</field>
+            <operation>equals</operation>
+            <value>0120e000000kuOjAAI</value>
+        </filterItems>
+        <filterItems>
+            <field>Lead.wi__Associated_Partner__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Opportunity Partners (Partner Sourced Opp Reg)</relationshipLabel>
+    <relationshipName>Opportunity_Partners1</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

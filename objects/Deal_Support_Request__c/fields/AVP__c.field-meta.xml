@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AVP__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ref: Naveen Bhagvara. User will fill this if needed. No need to autofill.</description>
+    <label>AVP</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Deal_Support_Requests9</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

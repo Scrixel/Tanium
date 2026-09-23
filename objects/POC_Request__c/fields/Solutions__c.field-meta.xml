@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solutions__c</fullName>
+    <description>Used in Licensing email template and populated through the licensing tool, after the Licensing Event. Not on Page Layout.
+
+07.17.2025 - Extended the length of the field from 4,000 to 32,768 characters to remove a synchronization issue pushing data from the licensing tool via Workato. Jira ticket SS-11363.</description>
+    <label>Solutions</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

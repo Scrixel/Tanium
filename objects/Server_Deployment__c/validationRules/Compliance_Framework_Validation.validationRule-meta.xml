@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Framework_Validation</fullName>
+    <active>true</active>
+    <description>SS-2739 - Validate the compliance framework values and enforce when they need to be completed.</description>
+    <errorConditionFormula>((TEXT(Server_Device_Type__c) = &quot;Tanium Cloud for U.S. Government&quot; &amp;&amp; TEXT(Compliance_Framework__c) != &quot;tc_usg&quot;)
+||
+(TEXT(Server_Device_Type__c) != &quot;Tanium Cloud for U.S. Government&quot; &amp;&amp; TEXT(Compliance_Framework__c) = &quot;tc_usg&quot;))
+&amp;&amp;
+NOT($Permission.DisableValidationRules)</errorConditionFormula>
+    <errorMessage>Compliance Framework must be set to &quot;tc_usg&quot; if the License Key Function is &quot;Tanium Cloud for U.S. Government.</errorMessage>
+</ValidationRule>

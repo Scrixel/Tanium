@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrations_Currently_Using__c</fullName>
+    <label>Integrations Currently Using</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AEM Agent for ServiceNow</fullName>
+                <default>false</default>
+                <label>AEM Agent for ServiceNow</label>
+            </value>
+            <value>
+                <fullName>Asset Push</fullName>
+                <default>false</default>
+                <label>Asset Push</label>
+            </value>
+            <value>
+                <fullName>Service Graph Connector</fullName>
+                <default>false</default>
+                <label>Service Graph Connector</label>
+            </value>
+            <value>
+                <fullName>SDK for ServiceNow</fullName>
+                <default>false</default>
+                <label>SDK for ServiceNow</label>
+            </value>
+            <value>
+                <fullName>Software Management</fullName>
+                <default>false</default>
+                <label>Software Management</label>
+            </value>
+            <value>
+                <fullName>Live UI</fullName>
+                <default>false</default>
+                <label>Live UI</label>
+            </value>
+            <value>
+                <fullName>File Integrity Monitoring</fullName>
+                <default>false</default>
+                <label>File Integrity Monitoring</label>
+            </value>
+            <value>
+                <fullName>Patch Management for IT Operations</fullName>
+                <default>false</default>
+                <label>Patch Management for IT Operations</label>
+            </value>
+            <value>
+                <fullName>Vulnerability Response</fullName>
+                <default>false</default>
+                <label>Vulnerability Response</label>
+            </value>
+            <value>
+                <fullName>Patch Management for Vulnerability Response</fullName>
+                <default>false</default>
+                <label>Patch Management for Vulnerability Response</label>
+            </value>
+            <value>
+                <fullName>Security Incident Response</fullName>
+                <default>false</default>
+                <label>Security Incident Response</label>
+            </value>
+            <value>
+                <fullName>Configuration Compliance</fullName>
+                <default>false</default>
+                <label>Configuration Compliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

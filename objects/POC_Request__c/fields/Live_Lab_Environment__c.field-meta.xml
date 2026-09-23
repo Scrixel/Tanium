@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Lab_Environment__c</fullName>
+    <description>Picklist for the type of environment the POC will be in.</description>
+    <inlineHelpText>Shared Environment- Collaborative workspace (one log in - preferred for POC testing)
+Individual Environment - Each has separate view and interactions do not affect other users/testing
+
+Environment - Picklist</inlineHelpText>
+    <label>Live Lab Environment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shared Environment</fullName>
+                <default>false</default>
+                <label>Shared Environment</label>
+            </value>
+            <value>
+                <fullName>Individual Environment</fullName>
+                <default>false</default>
+                <label>Individual Environment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

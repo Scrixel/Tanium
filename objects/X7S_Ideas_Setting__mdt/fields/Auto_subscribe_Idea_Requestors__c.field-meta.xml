@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_subscribe_Idea_Requestors__c</fullName>
+    <defaultValue>false</defaultValue>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Check this field to auto-subscribe requestors to Ideas submitted on their behalf.</inlineHelpText>
+    <label>Auto-subscribe Idea Requestors</label>
+    <type>Checkbox</type>
+</CustomField>

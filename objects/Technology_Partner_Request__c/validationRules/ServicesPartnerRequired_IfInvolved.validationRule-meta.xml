@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ServicesPartnerRequired_IfInvolved</fullName>
+    <active>true</active>
+    <description>If the “Services Partner Involved” checkbox is TRUE, system should require a value in the “Services Partner” lookup field.</description>
+    <errorConditionFormula>AND(
+  Services_Partner_Involved__c = TRUE,
+  ISBLANK(Services_Partner__c),
+  NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Services_Partner__c</errorDisplayField>
+    <errorMessage>Please specify a Services Partner if &apos;Services Partner Involved&apos; is checked.</errorMessage>
+</ValidationRule>

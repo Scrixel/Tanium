@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Renewable_product</name>
+        <label>Renewable product?</label>
+        <locationX>1059</locationX>
+        <locationY>324</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Is_Renewable</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Product__r.SBQQ__SubscriptionType__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Renewable</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Renewal_Amount__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contract_without_End_User</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>07/28/26: Atlas (SS-13641)
+11/20/24: Remove Transaction Type automation on Subscription (SS-7249)
+7/10/23: Set delay to 7 Days (SS-2949)
+6/26/23: Added Entry Criteria for NOT({!$Permission.DisableFlows})
+Removed MSP Decision.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_Annualized_Software_Spend</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+  AND(
+    {!$Record.SBQQ__Product__r.Include_In_Annualized_Software_Spend__c},
+    {!$Record.SBQQ__Quantity__c} &gt; 0,
+    {!$Record.SBQQ__EndDate__c} &gt; TODAY()
+  ),
+  IF(
+    AND(
+      NOT(ISBLANK({!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__RenewedSubscription__c})),
+      {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__RenewedSubscription__r.SBQQ__EndDate__c} &gt; TODAY()
+    ),
+    (({!$Record.SBQQ__NetPrice__c} * {!$Record.SBQQ__Quantity__c}) / {!$Record.SBQQ__ProrateMultiplier__c})
+      - (({!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__RenewedSubscription__r.SBQQ__NetPrice__c} * {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__RenewedSubscription__r.SBQQ__Quantity__c}) / {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__RenewedSubscription__r.SBQQ__ProrateMultiplier__c}),
+    IF(
+      AND(
+        NOT(ISBLANK({!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__UpgradedSubscription__c})),
+        {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__UpgradedSubscription__r.SBQQ__EndDate__c} &gt; TODAY()
+      ),
+      (({!$Record.SBQQ__NetPrice__c} * {!$Record.SBQQ__Quantity__c}) / {!$Record.SBQQ__ProrateMultiplier__c})
+        - (({!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__UpgradedSubscription__r.SBQQ__NetPrice__c} * {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__UpgradedSubscription__r.SBQQ__Quantity__c}) / {!$Record.SBQQ__OriginalQuoteLine__r.SBQQ__UpgradedSubscription__r.SBQQ__ProrateMultiplier__c}),
+      ({!$Record.SBQQ__NetPrice__c} * {!$Record.SBQQ__Quantity__c}) / {!$Record.SBQQ__ProrateMultiplier__c}
+    )
+  ),
+  0
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>We need to transfer the end user account from the opportunity to the contract</description>
+        <name>formula_EndUserAccount</name>
+        <dataType>String</dataType>
+        <expression>IF(ISNULL({!$Record.SBQQ__Contract__r.SBQQ__Opportunity__r.End_User_Account__c}), NULL, {!$Record.SBQQ__Contract__r.SBQQ__Opportunity__r.End_User_Account__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IncludeInAnnualizedSoftwareSpend</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.SBQQ__Product__r.Include_In_Annualized_Software_Spend__c} = true, true, false)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>IsNew()</expression>
+    </formulas>
+    <interviewLabel>Subscription - After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Subscription - After Insert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Calculate_Annualized_Software_Spend</name>
+        <label>Calculate Annualized Software Spend</label>
+        <locationX>663</locationX>
+        <locationY>324</locationY>
+        <inputAssignments>
+            <field>Customer_Annualized_Software_Spend__c</field>
+            <value>
+                <elementReference>formula_Annualized_Software_Spend</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Include_In_Annualized_Software_Spend__c</field>
+            <value>
+                <elementReference>formula_IncludeInAnnualizedSoftwareSpend</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contract_without_End_User</name>
+        <label>Update Contract without End User</label>
+        <locationX>927</locationX>
+        <locationY>432</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Contract__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>End_User_Account__c</field>
+            <value>
+                <elementReference>formula_EndUserAccount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SBQQ__RenewalQuoted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contract</object>
+    </recordUpdates>
+    <start>
+        <locationX>735</locationX>
+        <locationY>48</locationY>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>SBQQ__Subscription__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Defer_processing_by_1_Day</name>
+            <connector>
+                <targetReference>Renewable_product</targetReference>
+            </connector>
+            <label>Defer for 1 Day</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Defer_1_Minute_After</name>
+            <connector>
+                <targetReference>Calculate_Annualized_Software_Spend</targetReference>
+            </connector>
+            <label>Defer 1 Minute After</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>boolean_UpdateRecord</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>record_Updated_Contract</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contract</objectType>
+    </variables>
+</Flow>

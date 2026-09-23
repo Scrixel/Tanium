@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>6/26/23: Added Entry Criteria for NOT({!$Permission.DisableFlows})
+SS-1217 - Automatically populate the “Slack Channel ID” field data from the Account Object into the Server Deployment Object field “Tanium Cloud Internal Slack Channel ID” for all “New” Server Deployment” creations.</description>
+    <environments>Default</environments>
+    <interviewLabel>Server Deployment - Update Slack Channel ID on New Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Server Deployment - Update Slack Channel ID on New Record</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Slack_ID_Field</name>
+        <label>Update Slack ID Field</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Tanium_Cloud_Internal_Slack_Channel_ID__c</field>
+            <value>
+                <elementReference>$Record.Account__r.Slack_Channel_Id__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Slack_ID_Field</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Server_Deployment__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_we_find_out_about_Opportunity__c</fullName>
+    <description>How did we find out about Opportunity</description>
+    <inlineHelpText>How did we find out about Opportunity</inlineHelpText>
+    <label>How did we find out about Opportunity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

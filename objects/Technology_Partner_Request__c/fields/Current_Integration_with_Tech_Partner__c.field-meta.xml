@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Integration_with_Tech_Partner__c</fullName>
+    <inlineHelpText>How is the customer currently integrated with the technology partner (ServiceNow, Microsoft, etc.)?</inlineHelpText>
+    <label>Current Integration with Tech Partner</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

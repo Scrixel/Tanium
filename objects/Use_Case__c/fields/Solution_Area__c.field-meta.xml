@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Area__c</fullName>
+    <inlineHelpText>Please choose the platform tier or solution that this use case is related to or relies upon.  If a module was chosen for module relationship please make sure that module is part of the platform tier or solution chosen here.</inlineHelpText>
+    <label>Solution</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Platform Tier 1 - Core X1</fullName>
+                <default>false</default>
+                <label>Core X1</label>
+            </value>
+            <value>
+                <fullName>Platform Tier 1 - Core X2</fullName>
+                <default>false</default>
+                <label>Core X2</label>
+            </value>
+            <value>
+                <fullName>Platform Tier 1 - Core X3</fullName>
+                <default>false</default>
+                <label>Core X3</label>
+            </value>
+            <value>
+                <fullName>DEX</fullName>
+                <default>false</default>
+                <label>DEX</label>
+            </value>
+            <value>
+                <fullName>Endpoint Management</fullName>
+                <default>false</default>
+                <label>Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Incident Response</fullName>
+                <default>false</default>
+                <label>Incident Response</label>
+            </value>
+            <value>
+                <fullName>Risk and Compliance</fullName>
+                <default>false</default>
+                <label>Risk and Compliance</label>
+            </value>
+            <value>
+                <fullName>Optional Add-Ons</fullName>
+                <default>false</default>
+                <label>Optional Add-Ons</label>
+            </value>
+            <value>
+                <fullName>Digital User Experience</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Digital User Experience</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

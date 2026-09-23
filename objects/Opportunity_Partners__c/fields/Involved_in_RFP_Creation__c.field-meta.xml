@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Involved_in_RFP_Creation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Deprecated from SS-14659
+Question 3</description>
+    <inlineHelpText>Which Partner helped prepare the RFP and/or owns the completion of the response to the customer</inlineHelpText>
+    <label>DEPRECATED - Involved in RFP Creation</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

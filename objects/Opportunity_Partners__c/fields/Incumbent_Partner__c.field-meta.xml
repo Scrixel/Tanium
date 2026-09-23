@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incumbent_Partner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Implemented as a part of the MSP Simplification and FY25 Partner Redesign projects. Jira ticket SS-7727</description>
+    <inlineHelpText>When this box is checked, it indicates that this partner was the partner of record on the quote related to the contract that this opportunity renews.</inlineHelpText>
+    <label>Incumbent Partner</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Link_POC_Opportunitiy</fullName>
+    <active>true</active>
+    <description>SS-13637 - Updated the StageNumber value.
+An opportunity with Type as “POC”, cannot be linked/used in the POC Request(POC Request Object) record in the field “POC Opportunity”(opportunity lookup).</description>
+    <errorConditionFormula>AND(
+OR(
+  RecordType.Name  = &apos;Customer: On-Prem&apos;,
+  RecordType.Name  = &apos;Customer: Tanium Cloud&apos;
+),
+OR(ISPICKVAL(Opportunity__r.Type, &apos;POC&apos;),
+Opportunity__r.StageNumber__c = 210))</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>The Opportunity linked to this request cannot be in POC Type or Stage.</errorMessage>
+</ValidationRule>

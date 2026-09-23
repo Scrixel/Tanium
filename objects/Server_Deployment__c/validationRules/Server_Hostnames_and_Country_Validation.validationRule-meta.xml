@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_Hostnames_and_Country_Validation</fullName>
+    <active>false</active>
+    <description>INC0140238 -[ Deactivated this rule and replaced.]
+When the &quot;Infrastructure-License Key Purpose&quot; is set to Tanium as a Service, make the  &quot;Server Hostnames&quot; not required. It&apos;s redundant since they will be completing the Vanity field.</description>
+    <errorConditionFormula>IF(AND(NOT( ISPICKVAL(Server_Device_Type__c , &quot;Tanium as a Service&quot;)),OR(ISBLANK( Server_Hostnames__c ), ISBLANK( Country__c )) ), TRUE, FALSE)</errorConditionFormula>
+    <errorMessage>please enter values for Server Hostnames and Country fields.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAM_Week_Budget_Tracker_Reference__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Which line item in the approved TAM week budget does this fall under</inlineHelpText>
+    <label>TAM Week Budget Tracker Reference</label>
+    <length>150</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

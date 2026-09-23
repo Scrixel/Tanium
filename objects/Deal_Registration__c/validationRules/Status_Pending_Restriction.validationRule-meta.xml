@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Pending_Restriction</fullName>
+    <active>true</active>
+    <description>[SS-7391] OppReg in pending status only one of these fields can be filled in:  &quot;Create new Opportunity ?&quot; , &quot;Mapped Opportunity&quot;.</description>
+    <errorConditionFormula>AND(
+   or_Create_Opportunity_upon_Approval__c,
+   NOT(ISBLANK(Mapped_Opportunity__c)),
+   TEXT(or_Opp_Reg_Status__c) = &apos;Pending&apos;,
+   NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>Please uncheck the Create New Opportunity? field or remove the mapped Opportunity before saving. Only one of these fields can be filled out.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,1802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_DSA_Manager</name>
+        <label>Assign DSA Manager</label>
+        <locationX>446</locationX>
+        <locationY>3143</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.SDR_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.BDR__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.SDR_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.BDR__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Manual_SDR_Owner_Override_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assignment to update corresponding Stage Exit Date when a record is moved to a new stage.</description>
+        <name>Assign_Prior_Stage_Exit_Values</name>
+        <label>Assign Prior Stage Exit Values</label>
+        <locationX>578</locationX>
+        <locationY>3935</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Customer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage9</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Unqualified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage110</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Recycle__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage111</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Existing_Opp__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageExit_Stage112</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Stage_Count_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_SDR_from_Account</name>
+        <label>Assign SDR from Account</label>
+        <locationX>710</locationX>
+        <locationY>3143</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.SDR_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.BDR__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.SDR_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SDRManager</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Manual_SDR_Owner_Override_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning an SDR Manager from a formula, because the SDR Owner was overridden.</description>
+        <name>Assign_SDR_Manager_from_Override</name>
+        <label>Assign SDR Manager from Override</label>
+        <locationX>644</locationX>
+        <locationY>3527</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SDR_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_ManualSDROverrideManager</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contact_Stage_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Skipped_Stage_Counts</name>
+        <label>Assign Skipped Stage Counts</label>
+        <locationX>446</locationX>
+        <locationY>4475</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStageCount_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Skipped_Stage_Entry_Values</name>
+        <label>Assign Skipped Stage Entry Values</label>
+        <locationX>446</locationX>
+        <locationY>4259</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Entry_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Skipped_Stage_Exit_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Skipped_Stage_Exit_Values</name>
+        <label>Assign Skipped Stage Exit Values</label>
+        <locationX>446</locationX>
+        <locationY>4367</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Exit_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_SkippedStage_Exit_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Skipped_Stage_Counts</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assignment to update Stage Count when a record is moved into a stage.</description>
+        <name>Assign_Stage_Count_Values</name>
+        <label>Assign Stage Count Values</label>
+        <locationX>578</locationX>
+        <locationY>4043</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Customer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage9</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Unqualified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage110</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Recycle__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage111</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Stage_Count_Existing_Opp__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_StageCount_Stage112</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Stage_Skipped</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assignment to update corresponding Stage Entry Date when a record is moved into a given stage.</description>
+        <name>Assign_Stage_Entry_Values</name>
+        <label>Assign Stage Entry Values</label>
+        <locationX>578</locationX>
+        <locationY>3827</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_New__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_MQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage3</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Attempting_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage4</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Working__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage5</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SAL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage6</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SQL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage7</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_SVL__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage8</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Customer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage9</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Unqualified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage110</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Recycle__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage111</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Last_Stage_Entry_Existing_Opp__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EntryDate_Stage112</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Prior_Stage_Exit_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>SS-12616 Update Sales Acceptance to &quot;Tele-Accepted&quot;</description>
+        <name>Assign_TAL_Values</name>
+        <label>Assign TAL Values</label>
+        <locationX>644</locationX>
+        <locationY>1535</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sales_Acceptance__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Tele-Accepted</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Sales_Accepted</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Check_Sync_to_Marketo</name>
+        <label>Check Sync to Marketo</label>
+        <locationX>644</locationX>
+        <locationY>2735</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sync_to_Marketo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Reset_Score1</name>
+        <label>Reset Score</label>
+        <locationX>644</locationX>
+        <locationY>2135</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FCRM__FCR_Nurture_Timeout__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_TodayPlusOne</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>PDR_Owner_Updated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stage_Attempting_Contact</name>
+        <label>Stage = Attempting Contact</label>
+        <locationX>644</locationX>
+        <locationY>1235</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Contact_Stage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Attempting Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contact_TAL</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stage_MQL</name>
+        <label>Stage = MQL</label>
+        <locationX>490</locationX>
+        <locationY>851</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Contact_Stage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Marketing Qualified Lead (MQL)</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Attempting_Contact</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stage_Response</name>
+        <label>Stage = Response</label>
+        <locationX>644</locationX>
+        <locationY>443</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Contact_Stage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Response</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>MQL_Score_changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Date</name>
+        <label>Update Date</label>
+        <locationX>644</locationX>
+        <locationY>2435</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PDR_Owner_Update_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Partner_Email_Subscriptions_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Dates</name>
+        <label>Update Dates</label>
+        <locationX>644</locationX>
+        <locationY>1835</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sales_Accepted_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Recycled_Only</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Account_Changed</name>
+        <label>Account Changed?</label>
+        <locationX>776</locationX>
+        <locationY>2927</locationY>
+        <defaultConnector>
+            <targetReference>Manual_SDR_Owner_Override_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>7 AND ((1 AND 2) OR (1 AND 3 AND 4) OR (1 AND 5 AND 6))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SDR_Owner__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.BDR__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.BDR__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SDR_Owner_Override__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DSA_SDR</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Attempting_Contact</name>
+        <label>Attempting Contact?</label>
+        <locationX>776</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>Contact_TAL</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Attempting_Contact</name>
+            <conditionLogic>(1 AND 2) AND (3 OR 4 OR 5 OR 6 OR 7 OR 8)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Groove_Active_Flows_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_priorActiveFlowCount</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Groove_Active_Flows_Count__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>2.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>3.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>111.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_Attempting_Contact</targetReference>
+            </connector>
+            <label>Yes - Attempting Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Contact_MQL_d</name>
+        <label>Contact MQL&apos;d?</label>
+        <locationX>622</locationX>
+        <locationY>743</locationY>
+        <defaultConnector>
+            <targetReference>Attempting_Contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_and_not_with_45_Days</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4 OR 5 OR 6 OR 7 OR 8)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.mkto71_Lead_Score__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_NoMQL45DAys</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>2.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>4.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>110.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>111.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_MQL</targetReference>
+            </connector>
+            <label>Yes and not with 45 Days</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Contact_Stage_Changed</name>
+        <label>Contact Stage Changed?</label>
+        <locationX>776</locationX>
+        <locationY>3719</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Contact_Stage_Changed</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contact_Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Contact_Stage__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Converted_from_Lead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_Entry_Values</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>SS-12616 Should the contact be moved to TAL?</description>
+        <name>Contact_TAL</name>
+        <label>Contact TAL?</label>
+        <locationX>776</locationX>
+        <locationY>1427</locationY>
+        <defaultConnector>
+            <targetReference>Sales_Accepted</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ContactTAL</name>
+            <conditionLogic>(1 AND (2 OR 3))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact_Stage__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contact_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Attempting Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contact_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Working</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_TAL_Values</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Removed Hard Coded Id for DSA User Id and swapped for Custom Label</description>
+        <name>DSA_SDR</name>
+        <label>DSA SDR</label>
+        <locationX>578</locationX>
+        <locationY>3035</locationY>
+        <defaultConnector>
+            <targetReference>Assign_SDR_from_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>DSA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.BDR__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.DSA_User_Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_DSA_Manager</targetReference>
+            </connector>
+            <label>DSA</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Stage_Skipped</name>
+        <label>Is Stage Skipped?</label>
+        <locationX>578</locationX>
+        <locationY>4151</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_SkippedStage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_SkippedStage</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_NewStageNumber</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Skipped_Stage_Entry_Values</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if the SDR Owner was changed and it was overridden</description>
+        <name>Manual_SDR_Owner_Override_Update</name>
+        <label>Manual SDR Owner Override Update?</label>
+        <locationX>776</locationX>
+        <locationY>3419</locationY>
+        <defaultConnector>
+            <targetReference>Contact_Stage_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Manager</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SDR_Owner_Override__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SDR_Owner__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_SDR_Manager_from_Override</targetReference>
+            </connector>
+            <label>Yes - Update Manager</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>MQL_Score_changed</name>
+        <label>MQL Score changed?</label>
+        <locationX>776</locationX>
+        <locationY>635</locationY>
+        <defaultConnector>
+            <targetReference>Attempting_Contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Score_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.mkto71_Lead_Score__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_MQL_d</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Partner_Email_Subscriptions_update</name>
+        <label>Email Subs update?</label>
+        <locationX>776</locationX>
+        <locationY>2627</locationY>
+        <defaultConnector>
+            <targetReference>Account_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Sync_to_Marketo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Partner_Email_Subscriptions__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sync_to_Marketo__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Sync_to_Marketo</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>PDR_Owner_Updated</name>
+        <label>PDR Owner Updated</label>
+        <locationX>776</locationX>
+        <locationY>2327</locationY>
+        <defaultConnector>
+            <targetReference>Partner_Email_Subscriptions_update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_PDR_Owner_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PDR_Owner__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Date</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Recycled_Only</name>
+        <label>Recycled Only?</label>
+        <locationX>776</locationX>
+        <locationY>2027</locationY>
+        <defaultConnector>
+            <targetReference>PDR_Owner_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sales_Acceptance__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Acceptance__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Recycled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reset_Score1</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Sales_Accepted</name>
+        <label>Sales Accepted?</label>
+        <locationX>776</locationX>
+        <locationY>1727</locationY>
+        <defaultConnector>
+            <targetReference>Recycled_Only</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Sales_Accepted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sales_Acceptance__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Accepted Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Dates</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Stage_to_Response</name>
+        <label>Set Stage to Response?</label>
+        <locationX>776</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>MQL_Score_changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Set_Stage_to_Response</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_EngagementScoreforResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_PriorStageNumber</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>111.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_Response</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes - Set Stage to Response</label>
+        </rules>
+    </decisions>
+    <description>9/17/26: SS-13996 removed automation that moves a Contact to &apos;Attempting Contact&apos; when the Contact is added to a Qualified Sequence.
+SS-13660: Updated formula_priorEngagementScore variable to output 0 when Engagement Score prior value is blank.
+SS-13572 removed the references for the fields Acceleration meeting, Acceleration submission date, Recent Lead Event, Recent Fields Updated and MQL date.
+SS-13541: Adding SDR Owner Override and updating of SDR Manager if overridden
+SS-13310/SS-13297/SS-13331: Removing additional FCI Fields from Automation for Deprecation and Deletion. 
+SS-13295: Updated Date Stamping for Skipped Stages when moving from Recycle into Stage Funnel
+04/27/26: Updated the formula formula_EngagementScoreforResponse
+04/27/26: SS-SS-12945 Updating Attempting Contact Decision formula
+04/22/26: SS-12938 - Update Stage Entry/Exit logic to prevent unnecessary data population for MQL and Response
+Migrated from Contact - Before Insert - Fast Field Updates
+SS-12895: Update logic for SDR Manager to use RVP Override when present
+SS-12616: Move Contacts Sales Acceptance to TAL
+2/9/26: SS-12572 Adding criteria for moving Contact to Attempting Contact
+1/23/26: SS-12306 Swapping Recent Lead Source field to new field in &quot;Recent Field Updates&quot; Decision
+1/13/26: SS-12159 &amp; SS-12184 Update Contact Stage to Response or MQL
+1/9/26: SS-12262- Contact Stage Change updates for Stage Date/Time Fields
+10/17/24: SS-9379 - Replacing PDR owner logic lost in version update
+09/18/24: SS-9065 - Set Sync to Marketo to True when Partner Email Subscriptions is updated.
+06/21/24: SS-8230 - Update Acceleration Submission Date when Acceleration Meeting Checked or Unchecked
+02/12/24: SS-2536 - Delete SAC Fields
+6/26/23: Added Entry Criteria for NOT({!$Permission.DisableFlows})
+12/19/22: SS-1924 - Removed Outreach Sequence Fields
+12/02/22: SS-2217 - Update SDR Manager Fix
+11/03/22: Update SDR when Account Changed
+10/07/22: Removed &quot;DEPRECATE - MQL Date&quot; (MQL_Date__c) field references.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula used to identify when, in skipped stage scenarios, a lead moves from Stage NULL or NEW directly to ATTEMPTING CONTACT or further in the funnel. If record moves from NULL or NEW to ATTEMPTING CONTACT or further in the funnel, do not populate Skipped Stage values (entry/exit date) for Response and Marketing Qualified Lead (MQL) stages.</description>
+        <name>formula_BypassMarketingStages</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+  OR(
+    {!formula_PriorStageNumber} = 0,
+    {!formula_PriorStageNumber} = 1,
+    {!formula_PriorStageNumber} = 111
+  ),
+  {!formula_NewStageNumber} &gt;= 4, {!formula_NewStageNumber} &lt; 100
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EngagementScoreforResponse</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(AND(ISCHANGED({!$Record.Engagement_Score__c}), 
+{!formula_priorEngagementScore} &lt; {!$Record.Engagement_Score__c}, 
+{!$Record.Engagement_Score__c} &gt; 0), TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage1</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 1, NOW(), {!$Record.Last_Stage_Entry_New__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage110</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 110, NOW(), {!$Record.Last_Stage_Entry_Unqualified__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage111</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 111, NOW(), {!$Record.Last_Stage_Entry_Recycle__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage112</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 112, NOW(), {!$Record.Last_Stage_Entry_Existing_Opp__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage2</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 2, NOW(), {!$Record.Last_Stage_Entry_Response__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage3</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 3, NOW(), {!$Record.Last_Stage_Entry_MQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage4</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 4, NOW(), {!$Record.Last_Stage_Entry_Attempting_Contact__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage5</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 5, NOW(), {!$Record.Last_Stage_Entry_Working__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage6</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 6, NOW(), {!$Record.Last_Stage_Entry_SAL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage7</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 7, NOW(), {!$Record.Last_Stage_Entry_SQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage8</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 8, NOW(), {!$Record.Last_Stage_Entry_SVL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EntryDate_Stage9</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_NewStageNumber} = 9, NOW(), {!$Record.Last_Stage_Entry_Customer__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to populate the SDR Manager when the SDR Owner Override is selected.</description>
+        <name>formula_ManualSDROverrideManager</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ NOT(ISBLANK({!$Record.SDR_Owner__r.RVP_Override__c})),
+ {!$Record.SDR_Owner__r.RVP_Override__c},
+ {!$Record.SDR_Owner__r.ManagerId}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_NewStageNumber</name>
+        <dataType>Number</dataType>
+        <expression>CASE(TEXT({!$Record.Contact_Stage__c}),
+&apos;&apos;, 0,
+&apos;New&apos;, 1,
+&apos;Response&apos;, 2,
+&apos;Marketing Qualified Lead (MQL)&apos;, 3,
+&apos;Attempting Contact&apos;, 4,
+&apos;Working&apos;, 5,
+&apos;Sales Accepted Lead (SAL)&apos;, 6,
+&apos;Sales Qualified Lead (SQL)&apos;, 7,
+&apos;Sales Validated Lead (SVL)&apos;, 8,
+&apos;Customer&apos;, 9,
+&apos;Unqualified&apos;, 110,
+&apos;Recycle&apos;, 111,
+&apos;Existing Opp&apos;, 112 ,
+NULL
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_NoMQL45DAys</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+    /* both blank → never MQL → allow */
+    AND(
+        ISBLANK({!$Record.Last_Stage_Entry_MQL__c}),
+        ISBLANK({!$Record.Last_Stage_Exit_MQL__c})
+    ),
+
+    /* entry and exit are exactly the same datetime → stage skipped → allow */
+    AND(
+        NOT(ISBLANK({!$Record.Last_Stage_Entry_MQL__c})),
+        NOT(ISBLANK({!$Record.Last_Stage_Exit_MQL__c})),
+        {!$Record.Last_Stage_Entry_MQL__c} = {!$Record.Last_Stage_Exit_MQL__c}
+    ),
+
+    /* normal 45‑day rule based on the most recent of the two */
+    TODAY() -
+    IF(
+        ISBLANK({!$Record.Last_Stage_Entry_MQL__c}),
+        DATEVALUE({!$Record.Last_Stage_Exit_MQL__c}),
+        IF(
+            ISBLANK({!$Record.Last_Stage_Exit_MQL__c}),
+            DATEVALUE({!$Record.Last_Stage_Entry_MQL__c}),
+            IF(
+                {!$Record.Last_Stage_Entry_MQL__c} &gt;= {!$Record.Last_Stage_Exit_MQL__c},
+                DATEVALUE({!$Record.Last_Stage_Entry_MQL__c}),
+                DATEVALUE({!$Record.Last_Stage_Exit_MQL__c})
+            )
+        )
+    ) &gt;= 45
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_Now</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_priorActiveFlowCount</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record__Prior.Groove_Active_Flows_Count__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_priorEngagementScore</name>
+        <dataType>Number</dataType>
+        <expression>BLANKVALUE({!$Record__Prior.Engagement_Score__c}, 0)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_PriorStageNumber</name>
+        <dataType>Number</dataType>
+        <expression>CASE(TEXT({!$Record__Prior.Contact_Stage__c}),
+&apos;&apos;, 0,
+&apos;New&apos;, 1,
+&apos;Response&apos;, 2,
+&apos;Marketing Qualified Lead (MQL)&apos;, 3,
+&apos;Attempting Contact&apos;, 4,
+&apos;Working&apos;, 5,
+&apos;Sales Accepted Lead (SAL)&apos;, 6,
+&apos;Sales Qualified Lead (SQL)&apos;, 7,
+&apos;Sales Validated Lead (SVL)&apos;, 8,
+&apos;Customer&apos;, 9,
+&apos;Unqualified&apos;, 110,
+&apos;Recycle&apos;, 111,
+&apos;Existing Opp&apos;, 112 ,
+NULL
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>SS-12895 If SDR has an RVP Override value, use RVP Override, else ManagerId.</description>
+        <name>formula_SDRManager</name>
+        <dataType>String</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.Account.BDR__r.RVP_Override__c})),{!$Record.Account.BDR__r.RVP_Override__c},{!$Record.Account.BDR__r.ManagerId})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage</name>
+        <dataType>Boolean</dataType>
+        <expression>IF((({!formula_NewStageNumber} - {!formula_PriorStageNumber}) &gt; 1) || ({!formula_PriorStageNumber} = 111 &amp;&amp; {!formula_NewStageNumber} &gt;= 3), TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage1</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} &lt; 1 &amp;&amp; {!formula_NewStageNumber} &gt;= 1 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_New__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage2</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 2 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 2 &amp;&amp; {!formula_NewStageNumber} &lt; 100 &amp;&amp; NOT({!formula_BypassMarketingStages}), NOW(), {!$Record.Last_Stage_Entry_Response__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage3</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 3 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 3 &amp;&amp; {!formula_NewStageNumber} &lt; 100 &amp;&amp; NOT({!formula_BypassMarketingStages}), NOW(),{!$Record.Last_Stage_Entry_MQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage4</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 4 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 4 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_Attempting_Contact__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage5</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 5 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 5 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_Working__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage6</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 6  || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 6 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_SAL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage7</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 7 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 7 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_SQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Entry_Stage8</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 8 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 8 &amp;&amp; {!formula_NewStageNumber} &lt; 100, NOW(), {!$Record.Last_Stage_Entry_SVL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage1</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} &lt; 2 &amp;&amp; {!formula_NewStageNumber} &gt;= 2 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_New__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage2</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 3 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 3 &amp;&amp; {!formula_NewStageNumber} &lt; 100 &amp;&amp; NOT({!formula_BypassMarketingStages}), NOW(), {!$Record.Last_Stage_Exit_Response__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage3</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 4 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 4 &amp;&amp; {!formula_NewStageNumber} &lt; 100 &amp;&amp; NOT({!formula_BypassMarketingStages}), NOW(), {!$Record.Last_Stage_Exit_MQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage4</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 5 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 5 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_Attempting_Contact__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage5</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 6 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 6 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_Working__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage6</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 7 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 7 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_SAL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage7</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 8 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 8 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_SQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStage_Exit_Stage8</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(({!formula_PriorStageNumber} &lt; 9 || {!formula_PriorStageNumber} = 111) &amp;&amp; {!formula_NewStageNumber} &gt;= 9 &amp;&amp; {!formula_NewStageNumber} &lt; 100 , NOW(), {!$Record.Last_Stage_Exit_SVL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage1</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 1 &amp;&amp; NOT({!formula_BypassMarketingStages}) &amp;&amp; {!formula_PriorStageNumber} != 111, BLANKVALUE({!$Record.Stage_Count_New__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_New__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage2</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 2 &amp;&amp; NOT({!formula_BypassMarketingStages}), BLANKVALUE({!$Record.Stage_Count_Response__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_Response__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage3</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 3 &amp;&amp; NOT({!formula_BypassMarketingStages}), BLANKVALUE({!$Record.Stage_Count_MQL__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_MQL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage4</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 4, BLANKVALUE({!$Record.Stage_Count_Attempting_Contact__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_Attempting_Contact__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage5</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 5, BLANKVALUE({!$Record.Stage_Count_Working__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_Working__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage6</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 6, BLANKVALUE({!$Record.Stage_Count_SAL__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_SAL__c}, 0))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage7</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 7, BLANKVALUE({!$Record.Stage_Count_SQL__c},0) + 1, BLANKVALUE({!$Record.Stage_Count_SQL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_SkippedStageCount_Stage8</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} &gt; 8, BLANKVALUE({!$Record.Stage_Count_SVL__c},0) + 1, BLANKVALUE({!$Record.Stage_Count_SVL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage1</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 1, BLANKVALUE({!$Record.Stage_Count_New__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_New__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage110</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 110, BLANKVALUE({!$Record.Stage_Count_Unqualified__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Unqualified__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage111</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 111, BLANKVALUE({!$Record.Stage_Count_Recycle__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Recycle__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage112</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 112, BLANKVALUE({!$Record.Stage_Count_Existing_Opp__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Existing_Opp__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage2</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 2 &amp;&amp; NOT({!formula_BypassMarketingStages}), BLANKVALUE({!$Record.Stage_Count_Response__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_Response__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage3</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 3 &amp;&amp; NOT({!formula_BypassMarketingStages}), BLANKVALUE({!$Record.Stage_Count_MQL__c}, 0) + 1, BLANKVALUE({!$Record.Stage_Count_MQL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage4</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 4, BLANKVALUE({!$Record.Stage_Count_Attempting_Contact__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Attempting_Contact__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage5</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 5, BLANKVALUE({!$Record.Stage_Count_Working__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Working__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage6</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 6, BLANKVALUE({!$Record.Stage_Count_SAL__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_SAL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage7</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 7, BLANKVALUE({!$Record.Stage_Count_SQL__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_SQL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage8</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 8, BLANKVALUE({!$Record.Stage_Count_SVL__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_SVL__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageCount_Stage9</name>
+        <dataType>Number</dataType>
+        <expression>IF({!formula_NewStageNumber} = 9, BLANKVALUE({!$Record.Stage_Count_Customer__c}, 0) +1, BLANKVALUE({!$Record.Stage_Count_Customer__c}, 0))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage1</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 1, NOW(), {!$Record.Last_Stage_Exit_New__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage110</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 110, NOW(), {!$Record.Last_Stage_Exit_Unqualified__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage111</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 111, NOW(), {!$Record.Last_Stage_Exit_Recycle__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage112</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 112, NOW(), {!$Record.Last_Stage_Exit_Existing_Opp__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage2</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 2, NOW(), {!$Record.Last_Stage_Exit_Response__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage3</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 3, NOW(), {!$Record.Last_Stage_Exit_MQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage4</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 4, NOW(), {!$Record.Last_Stage_Exit_Attempting_Contact__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage5</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 5, NOW(), {!$Record.Last_Stage_Exit_Working__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage6</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 6, NOW(), {!$Record.Last_Stage_Exit_SAL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage7</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 7, NOW(), {!$Record.Last_Stage_Exit_SQL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage8</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 8, NOW(), {!$Record.Last_Stage_Exit_SVL__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_StageExit_Stage9</name>
+        <dataType>DateTime</dataType>
+        <expression>IF({!formula_PriorStageNumber} = 9, NOW(), {!$Record.Last_Stage_Exit_Customer__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TodayPlusOne</name>
+        <dataType>Date</dataType>
+        <expression>Today()+1</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TodaysDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Contact - Before Save - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact - Before Save - Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Set_Stage_to_Response</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Used as a local variable to build data for skipped stage variables.</description>
+        <name>number_StageNumber</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>text_Stage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

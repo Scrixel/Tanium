@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_meeting_also_requires_an_EDR_Resour__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This meeting also requires an EDR Resource</description>
+    <inlineHelpText>Note: EDR Resources primarily requested for IR Training.</inlineHelpText>
+    <label>UES Resource also required</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

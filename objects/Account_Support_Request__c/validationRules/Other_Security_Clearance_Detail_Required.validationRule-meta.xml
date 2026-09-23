@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Security_Clearance_Detail_Required</fullName>
+    <active>true</active>
+    <description>If Security Clearance = &quot;Other (explain): then this field is required.</description>
+    <errorConditionFormula>AND(TEXT( ES_Resource_Security_Clearance_Require__c) = &apos;Other (Explain)&apos;,
+ISBLANK( Other_Security_Clearance_Details__c))</errorConditionFormula>
+    <errorDisplayField>Other_Security_Clearance_Details__c</errorDisplayField>
+    <errorMessage>If Security Clearance = &quot;Other (explain): then this field is required.</errorMessage>
+</ValidationRule>

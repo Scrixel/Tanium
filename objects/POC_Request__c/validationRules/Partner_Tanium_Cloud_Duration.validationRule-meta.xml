@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Tanium_Cloud_Duration</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Partner_Tanium_Cloud&quot;,
+
+(
+OR(ISPICKVAL( POC_Category__c , &apos;Partner Internal&apos;),
+ISPICKVAL( POC_Category__c , &apos;IR&apos;))
+&amp;&amp;
+(Duration__c &lt; 1 || Duration__c &gt; 120)
+)
+
+||
+
+(
+ISPICKVAL( POC_Category__c , &apos;MSP End User&apos;)
+&amp;&amp;
+(Duration__c &lt; 1 || Duration__c &gt; 60)
+)
+
+||
+
+(
+ISPICKVAL( POC_Category__c , &apos;Assessment&apos;)
+&amp;&amp;
+(Duration__c &lt; 1 || Duration__c &gt; 90)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Duration__c</errorDisplayField>
+    <errorMessage>For Partner: Tanium Cloud, # days must be Between 1 and 120 for Partner Internal and IR,
+1-90 days for Assessment and1-60 days for MSP End User.</errorMessage>
+</ValidationRule>

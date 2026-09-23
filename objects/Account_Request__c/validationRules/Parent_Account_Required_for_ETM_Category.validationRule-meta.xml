@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Account_Required_for_ETM_Category</fullName>
+    <active>true</active>
+    <description>Parent Account is required if the ETM Category value is either Subsidiary or Independent Subsidiary.</description>
+    <errorConditionFormula>AND(
+ISBLANK(Parent_Account__c),
+OR(ISPICKVAL(ETM_Category__c, &quot;Subsidiary&quot;),
+ISPICKVAL(ETM_Category__c, &quot;Independent Subsidiary&quot;)),
+NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Parent_Account__c</errorDisplayField>
+    <errorMessage>Parent Account must be populated if the ETM Category is either &quot;Subsidiary&quot; or &quot;Independent Subsidiary&quot;.</errorMessage>
+</ValidationRule>

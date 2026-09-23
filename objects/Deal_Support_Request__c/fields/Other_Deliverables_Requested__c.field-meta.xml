@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Deliverables_Requested__c</fullName>
+    <description>This field is mandatory if &quot;Deliverables_Requested_2&quot; field&apos;s value is Other
+Made required by a Validation Rule &quot;Other_Deliverables_Requested&quot;.</description>
+    <label>Other Deliverables Requested</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

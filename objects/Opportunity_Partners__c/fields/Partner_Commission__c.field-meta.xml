@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Commission__c</fullName>
+    <description>05/13/2024 - Label changed as a part of the FY25 Partner Redesign project. Jira ticket SS--7685. Fields will be removed at a future date, likely in FY26.</description>
+    <label>DEPRECATED - Partner Commission %</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>7</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Percent</type>
+</CustomField>

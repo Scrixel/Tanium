@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provide_Custom_Deliverable_Requested</fullName>
+    <active>true</active>
+    <description>When Custom is selected as the value for the Deliverable Requested you must provide the Custom information.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Deliverable_Requested__c , &quot;Custom - Please provide details below&quot;) , ISBLANK(Custom_Deliverable_Requested__c ))</errorConditionFormula>
+    <errorMessage>When you choose the value Custom for the Deliverable Requested you must provide what that custom deliverable is.</errorMessage>
+</ValidationRule>

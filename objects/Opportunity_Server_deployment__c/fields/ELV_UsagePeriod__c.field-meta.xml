@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_UsagePeriod__c</fullName>
+    <description>The usage period for usage line items. Used in the &apos;Manage Allocation&apos; screen on the Opportunity. SS-13898</description>
+    <externalId>false</externalId>
+    <formula>TEXT(ELV_QuoteLineItem__r.ELV_UsagePeriod__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The usage period for usage line items. Used in the &apos;Manage Allocation&apos; screen on the Opportunity.</inlineHelpText>
+    <label>Usage Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cloud_Provider__c</fullName>
+    <description>SS-4495 - Field to capture the cloud provider.
+ITSC-00291940 - Field to default to blank and only OrderOps (use Deal Desk profile) can update it.</description>
+    <inlineHelpText>This field should be blank - it can only be updated by Order Ops for initial tenant builds. It&apos;s only editable by order ops and it overrides the cloud provider that Provisioner defaults to (via license file), for when deals come through a given cloud marketplace.</inlineHelpText>
+    <label>Cloud Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AWS</fullName>
+                <default>false</default>
+                <label>AWS</label>
+            </value>
+            <value>
+                <fullName>Azure</fullName>
+                <default>false</default>
+                <label>Azure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

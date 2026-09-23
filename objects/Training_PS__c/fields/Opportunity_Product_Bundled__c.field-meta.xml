@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Product_Bundled__c</fullName>
+    <description>Field used by Training Team to identify if the training record is tied to a bundle component</description>
+    <formula>Opportunity_Product__r.SBQQ_Bundled__c</formula>
+    <label>Opportunity Product Bundled</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

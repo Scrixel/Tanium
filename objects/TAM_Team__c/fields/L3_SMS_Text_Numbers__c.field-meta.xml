@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L3_SMS_Text_Numbers__c</fullName>
+    <description>SMS Text Number(s) / mobile number(s) that should be notified on L3 escalations (comma separated)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The SMS Text Numbers /  mobile phone number(s) ) use for Case Escalations.  For example, when a L3 Escalation for this team is raised these phone numbers will receive a text to this group.  To specify a single phone number simply type in the phone number, 15551234567  or specify multiple email numbers comma separated values 15551234567, 15557654321.    If dialing internationally, use the format +CountryCode and then number. For example, Singapore&apos;s country code is +65 and have 8 digit numbers, so the form</inlineHelpText>
+    <label>L3 SMS Text Numbers</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

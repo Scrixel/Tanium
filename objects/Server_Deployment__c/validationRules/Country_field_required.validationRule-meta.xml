@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_field_required</fullName>
+    <active>true</active>
+    <description>When the &quot;Infrastructure-License Key Purpose&quot; is set to Tanium as a Service, make the  &quot;Server Hostnames&quot; not required. It&apos;s redundant since they will be completing the Vanity field. This rule replaced-Server_Hostnames_and_Country_Validation -[INC0140238]</description>
+    <errorConditionFormula>AND(
+ISBLANK( Country__c ),
+NOT( RecordType.DeveloperName = &quot;TaaS&quot; ),
+NOT($Permission.DisableValidationRules))</errorConditionFormula>
+    <errorMessage>Country field required. please enter values for the Country field.</errorMessage>
+</ValidationRule>

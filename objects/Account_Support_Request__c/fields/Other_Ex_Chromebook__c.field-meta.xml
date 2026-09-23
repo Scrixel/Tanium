@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Ex_Chromebook__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What are the Other Laptops/Desktops, and how many are there?</inlineHelpText>
+    <label>Other - Ex: Chromebook</label>
+    <length>125</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

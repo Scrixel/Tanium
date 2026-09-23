@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Inquiry_Business_Motion</fullName>
+    <active>true</active>
+    <description>INC0126448 Jaclyn Woodward Only Partner Portal Admin can select other values besides &quot;Managed Services&quot; and &quot;Resell&quot; in Business Motion field.</description>
+    <errorConditionFormula>OR((
+ISCHANGED( Business_Motion__c ) &amp;&amp;
+Override_Business_Motion__c = FALSE &amp;&amp;
+OR(INCLUDES( Business_Motion__c ,&quot;Consulting Services&quot;), 
+   INCLUDES( Business_Motion__c ,&quot;Build&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Distribute&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Government System Integrator&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Influence&quot;),
+   INCLUDES( Business_Motion__c ,&quot;End User Support&quot;),
+   INCLUDES( Business_Motion__c ,&quot;System Integrator&quot;)
+)&amp;&amp;
+NOT($Profile.Name=&quot;API Only Integration Admin&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;System Administrator&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;Tanium System Administrator&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;Tanium Partner Portal Admin&quot;)),
+/* --- Values exist already */
+(Override_Business_Motion__c = FALSE &amp;&amp;
+OR(INCLUDES( Business_Motion__c ,&quot;Consulting Services&quot;), 
+   INCLUDES( Business_Motion__c ,&quot;Build&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Distribute&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Government System Integrator&quot;),
+   INCLUDES( Business_Motion__c ,&quot;Influence&quot;),
+   INCLUDES( Business_Motion__c ,&quot;End User Support&quot;),
+   INCLUDES( Business_Motion__c ,&quot;System Integrator&quot;)
+)&amp;&amp;
+NOT($Profile.Name=&quot;API Only Integration Admin&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;System Administrator&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;Tanium System Administrator&quot;) &amp;&amp;
+NOT($Profile.Name=&quot;Tanium Partner Portal Admin&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Business_Motion__c</errorDisplayField>
+    <errorMessage>Only Partner Portal Admin can select other values besides &quot;Managed Services&quot; and &quot;Resell&quot; in Business Motion field. Please contact Partner Ops.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modules_Linked_Manually__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field set to true through the POC Request - Link Modules flow when POC Modules are created through the button.</description>
+    <label>Modules Linked Manually</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

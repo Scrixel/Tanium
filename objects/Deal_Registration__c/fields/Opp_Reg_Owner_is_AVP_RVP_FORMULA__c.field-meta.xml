@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Owner_is_AVP_RVP_FORMULA__c</fullName>
+    <description>Update existing record upon deployment</description>
+    <formula>IF ( 
+CONTAINS(Owner:User.UserRole.Name, &quot;AVP&quot;), TRUE,
+IF ( 
+CONTAINS(Owner:User.UserRole.Name, &quot;RVP&quot;), TRUE,
+
+FALSE))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Deal Owner is AVP/RVP? (Formula)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

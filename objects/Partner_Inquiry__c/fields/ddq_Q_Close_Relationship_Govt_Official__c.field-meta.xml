@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_Q_Close_Relationship_Govt_Official__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does any current or former employee, officer, or director of your company have a close or familiar relationship with a Government Official?</description>
+    <inlineHelpText>Does any current or former employee, officer, or director of your company have a close or familiar relationship with a Government Official?</inlineHelpText>
+    <label>Close Relationship to Govt Official?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

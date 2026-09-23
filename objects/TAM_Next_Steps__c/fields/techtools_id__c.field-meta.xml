@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>techtools_id__c</fullName>
+    <description>This is a surrogate key we&apos;re creating now based on account id, date for the CAD, and the datetime last updated in Tech Tools</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a surrogate key we&apos;re creating now based on account id, date for the CAD, and the datetime last updated in Tech Tools</inlineHelpText>
+    <label>techtools_id</label>
+    <length>64</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

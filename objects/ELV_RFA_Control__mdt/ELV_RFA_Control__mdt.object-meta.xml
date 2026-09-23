@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Kill switch and binding gates for the scratch Required for Approval solution. Default is fail-closed.</description>
+    <label>Required for Approval Control</label>
+    <pluralLabel>Required for Approval Controls</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

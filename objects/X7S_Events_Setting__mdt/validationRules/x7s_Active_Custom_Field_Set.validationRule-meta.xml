@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x7s_Active_Custom_Field_Set</fullName>
+    <active>true</active>
+    <description>This validation rule will prevent selecting the inactive custom field set.</description>
+    <errorConditionFormula>X7S_Event_Custom_Field_Set__r.Active__c = false</errorConditionFormula>
+    <errorDisplayField>X7S_Event_Custom_Field_Set__c</errorDisplayField>
+    <errorMessage>Please Select the active field set</errorMessage>
+</ValidationRule>

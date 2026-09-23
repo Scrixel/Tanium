@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Customer_IT_landscape_knowledge__c</fullName>
+    <inlineHelpText>Entered by Partner if Expected Purchase Amount is &gt;$600k - Portal Prompt: Select the option that most accurately describes Partners knowledge of End Customer IT landscape relevant to opportunity pursuit</inlineHelpText>
+    <label>Customer IT landscape knowledge</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Basic</fullName>
+                <default>false</default>
+                <label>Basic</label>
+            </value>
+            <value>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+                <label>Moderate</label>
+            </value>
+            <value>
+                <fullName>Extensive</fullName>
+                <default>false</default>
+                <label>Extensive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

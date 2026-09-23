@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Mapped_Opp_Stage__c</fullName>
+    <description>SS-13637 - Updated the stagenumber values.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Mapped_Opportunity__c), &quot;Pending&quot;,
+IF(Mapped_Opportunity__r.StageNumber__c = 190, &quot;Closed Won&quot;,
+TEXT(Mapped_Opportunity__r.StageName)))
+
+/* Formula below is prior the implementation of the new stages above on Feb 1, 2024
+
+IF(TEXT(Mapped_Opportunity__r.StageName)= &quot;CLOSED WON&quot;,&quot;Closed Won&quot;,TEXT(Mapped_Opportunity__r.StageName))*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mapped Opp Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

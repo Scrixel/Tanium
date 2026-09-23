@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Expense__c</fullName>
+    <label>Project Expense</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TAM Week - quarterly</fullName>
+                <default>false</default>
+                <label>TAM Week - quarterly</label>
+            </value>
+            <value>
+                <fullName>Annual SKO</fullName>
+                <default>false</default>
+                <label>Annual SKO</label>
+            </value>
+            <value>
+                <fullName>New Hire Training Week</fullName>
+                <default>false</default>
+                <label>New Hire Training Week</label>
+            </value>
+            <value>
+                <fullName>VP Team Offsite</fullName>
+                <default>false</default>
+                <label>VP Team Offsite</label>
+            </value>
+            <value>
+                <fullName>Presidents Club</fullName>
+                <default>false</default>
+                <label>Presidents Club</label>
+            </value>
+            <value>
+                <fullName>Tanium User Conference</fullName>
+                <default>false</default>
+                <label>Tanium User Conference</label>
+            </value>
+            <value>
+                <fullName>North Carolina Office</fullName>
+                <default>false</default>
+                <label>North Carolina Office</label>
+            </value>
+            <value>
+                <fullName>IPO Costs</fullName>
+                <default>false</default>
+                <label>IPO Costs</label>
+            </value>
+            <value>
+                <fullName>Quarterly DEV Week</fullName>
+                <default>false</default>
+                <label>Quarterly DEV Week</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>G&amp;A</fullName>
+                <default>false</default>
+                <label>G&amp;A</label>
+            </value>
+            <value>
+                <fullName>TAM</fullName>
+                <default>false</default>
+                <label>TAM</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>POD Week</fullName>
+                <default>false</default>
+                <label>POD Week</label>
+            </value>
+            <value>
+                <fullName>HQ - 2100 Buildout</fullName>
+                <default>false</default>
+                <label>HQ - 2100 Buildout</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

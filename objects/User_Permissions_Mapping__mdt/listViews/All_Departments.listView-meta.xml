@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Departments</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Permission_Set_Group_API_Name__c</columns>
+    <columns>Conga_Approvals_License__c</columns>
+    <columns>Conga_CLM_License__c</columns>
+    <columns>Flow_User__c</columns>
+    <columns>Marketing_User__c</columns>
+    <columns>Role_Category__c</columns>
+    <columns>Role_Name__c</columns>
+    <columns>Profile_Name__c</columns>
+    <columns>Salesforce_CPQ_License__c</columns>
+    <columns>Knowledge_User__c</columns>
+    <columns>Service_Cloud_User__c</columns>
+    <columns>Assign_Groove_Core_license__c</columns>
+    <columns>Assign_Groove_Flow_license__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Departments</label>
+    <language>en_US</language>
+</ListView>

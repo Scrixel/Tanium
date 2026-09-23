@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Endpoints_Min__c</columns>
+    <columns>Endpoints_Max__c</columns>
+    <columns>Additional_Discount_Min__c</columns>
+    <columns>Additional_Discount_Max__c</columns>
+    <columns>Volume_Discount__c</columns>
+    <columns>Flag_Color__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

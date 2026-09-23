@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Geo_Region_and_Sub_Region</fullName>
+    <active>true</active>
+    <description>Without the proper permission, in this case custom ppermission, users can not edit Geo, Region or Sub Region fields.</description>
+    <errorConditionFormula>NOT( $Permission.Modify_Geo_Region_and_Sub_Region) &amp;&amp;
+(ISCHANGED( Geo__c ) ||
+ISCHANGED( Region__c ) ||
+ISCHANGED( Sub_Region__c ))</errorConditionFormula>
+    <errorMessage>You can not edit the Geo, Region or Sub Region fields without permission. Please reach out to you Salesforce Administrator with the updates you would like to make.</errorMessage>
+</ValidationRule>

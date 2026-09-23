@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Create_Opportunity_upon_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If no opportunity exists, check this option to auto-create an opportunity upon Deal Approval</inlineHelpText>
+    <label>Create Opportunity upon Approval?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

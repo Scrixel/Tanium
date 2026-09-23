@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Lab_POC_Duration_Errors</fullName>
+    <active>true</active>
+    <description>Validation rule for Live Lab POC Request to ensure Duration (Days) is within parameters for the team.</description>
+    <errorConditionFormula>AND(
+ RecordType.Name = &apos;Live Lab Environment POC&apos;,
+ Duration__c &gt; 99,
+ NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Duration__c</errorDisplayField>
+    <errorMessage>Duration (Days) cannot exceed 99 Days. Please correct duration requested.</errorMessage>
+</ValidationRule>

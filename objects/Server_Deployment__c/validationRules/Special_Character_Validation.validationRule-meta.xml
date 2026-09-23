@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Character_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(REGEX( Vanity_URL__c , &quot;^[a-zA-Z0-9-]*$&quot;)),
+NOT($Profile.Name=&quot;System Administrator&quot;),
+NOT($Profile.Name=&quot;Tanium System Administrator&quot;),
+NOT($Permission.DisableValidationRules))
+
+/*AND(NOT(REGEX( Vanity_URL__c , &quot;^[a-zA-Z0-9-]*$&quot;)),NOT($Profile.Name=&quot;Tanium System Administrator&quot;))*/</errorConditionFormula>
+    <errorMessage>Vanity is typically the customer name and will be in the link to the TaaS instance: [vanity].cloud.tanium.com, for example abccompany.cloud.tanium.com. Please enter only the vanity portion in this field. Alphanumeric text ONLY, hyphen allowed.</errorMessage>
+</ValidationRule>

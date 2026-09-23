@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Training_Type__c</fullName>
+    <description>Training Request. When value = Customer Paid, a process builder will fill in Product Version</description>
+    <label>Tanium Training Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Paid</fullName>
+                <default>true</default>
+                <label>Customer Paid</label>
+            </value>
+            <value>
+                <fullName>NHT</fullName>
+                <default>false</default>
+                <label>NHT</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Multi-Customer</fullName>
+                <default>false</default>
+                <label>Multi-Customer</label>
+            </value>
+            <value>
+                <fullName>Partner Study Group</fullName>
+                <default>false</default>
+                <label>Partner Study Group</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

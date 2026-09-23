@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approximate_Displacement_Date_Required</fullName>
+    <active>true</active>
+    <description>When Displacement Stage is Partial or Full, Approximate Displacement Date is needed</description>
+    <errorConditionFormula>AND(
+OR 
+(
+TEXT(Displacement_Stage__c) = &quot;Partial&quot;,
+TEXT(Displacement_Stage__c) = &quot;Full&quot;
+),
+ISBLANK(TEXT(Approximate_Displacement_Date__c )))</errorConditionFormula>
+    <errorMessage>Approximate Displacement Date needed when Displacement Stage = Partial or Full</errorMessage>
+</ValidationRule>

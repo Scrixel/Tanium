@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_OS__c</fullName>
+    <inlineHelpText>Enter full name of the operating system installed to the application server, including Release and Service Pack levels when known, for example:  Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, etc.</inlineHelpText>
+    <label>Server OS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Windows Server 2012 R2</fullName>
+                <default>false</default>
+                <label>Windows Server 2012 R2</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2012</fullName>
+                <default>false</default>
+                <label>Windows Server 2012</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2008 R2</fullName>
+                <default>false</default>
+                <label>Windows Server 2008 R2</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2008</fullName>
+                <default>false</default>
+                <label>Windows Server 2008</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2003</fullName>
+                <default>false</default>
+                <label>Windows Server 2003</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2016</fullName>
+                <default>false</default>
+                <label>Windows Server 2016</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2019</fullName>
+                <default>false</default>
+                <label>Windows Server 2019</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.0.0-418</fullName>
+                <default>false</default>
+                <label>TanOS 1.0.0-418</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.0.0-365</fullName>
+                <default>false</default>
+                <label>TanOS 1.0.0-365</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.0.0-420</fullName>
+                <default>false</default>
+                <label>TanOS 1.0.0-420</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.2.0</fullName>
+                <default>false</default>
+                <label>TanOS 1.2.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.2.1</fullName>
+                <default>false</default>
+                <label>TanOS 1.2.1</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.3.0</fullName>
+                <default>false</default>
+                <label>TanOS 1.3.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.3.1</fullName>
+                <default>false</default>
+                <label>TanOS 1.3.1</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.3.2</fullName>
+                <default>false</default>
+                <label>TanOS 1.3.2</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.3.3</fullName>
+                <default>false</default>
+                <label>TanOS 1.3.3</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.3.4</fullName>
+                <default>false</default>
+                <label>TanOS 1.3.4</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.4.0</fullName>
+                <default>false</default>
+                <label>TanOS 1.4.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.0</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.1</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.1</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.2</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.2</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.3</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.3</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.4</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.4</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.5</fullName>
+                <default>false</default>
+                <label>TANOS 1.5.5</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.5.6</fullName>
+                <default>false</default>
+                <label>TanOS 1.5.6</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.0</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.1</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.1</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.2</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.2</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.3</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.3</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.4</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.4</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.5</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.5</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.6</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.6</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.6.7</fullName>
+                <default>false</default>
+                <label>TanOS 1.6.7</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.0</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.0</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.1</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.1</label>
+            </value>
+            <value>
+                <fullName>Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Tanium as a Service</label>
+            </value>
+            <value>
+                <fullName>Linux</fullName>
+                <default>false</default>
+                <label>Linux</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.2</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.2</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.3</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.3</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.4</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.4</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.5</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.5</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.7.6</fullName>
+                <default>false</default>
+                <label>TanOS 1.7.6</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.1</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.1</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.2</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.2</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.3</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.3</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.4</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.4</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.5</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.5</label>
+            </value>
+            <value>
+                <fullName>TanOS 1.8.6</fullName>
+                <default>false</default>
+                <label>TanOS 1.8.6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

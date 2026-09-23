@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>deploySQuickWins__c</fullName>
+    <description>DEFINITION: Have we exhausted opportunities to show incremental value in parallel to deployment (i.e. documenting use cases, processes, writing sensors, building dashboards, testing integration, ROI, training, general consulting)
+
+IMPORTANCE: For longer deployments, the quicker we show value the better. What can we do in parallel. Get creative. Go above and beyond</description>
+    <externalId>false</externalId>
+    <label>deploySQuickWins</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

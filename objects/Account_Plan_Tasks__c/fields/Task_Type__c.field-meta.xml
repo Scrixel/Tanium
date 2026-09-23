@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Type__c</fullName>
+    <label>Task Type</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Engagement Strategy</fullName>
+                <default>false</default>
+                <label>Engagement Strategy</label>
+            </value>
+            <value>
+                <fullName>Growth Strategy</fullName>
+                <default>false</default>
+                <label>Growth Strategy</label>
+            </value>
+            <value>
+                <fullName>Marketing &amp; Events</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Events</label>
+            </value>
+            <value>
+                <fullName>Partner Strategy</fullName>
+                <default>false</default>
+                <label>Partner Strategy</label>
+            </value>
+            <value>
+                <fullName>Retention Strategy</fullName>
+                <default>false</default>
+                <label>Retention Strategy</label>
+            </value>
+            <value>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+                <label>Strategy</label>
+            </value>
+            <value>
+                <fullName>TAM Task</fullName>
+                <default>false</default>
+                <label>TAM Task</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

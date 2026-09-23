@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Director_Disciplined_for_Misconduct__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Company director discipline/misconduct</description>
+    <inlineHelpText>In the past ten years has your bus., or any dir. or exec. off. of your bus., been suspended/disqualified/debarred from doing bus. with any comp. or gov. ent., been under the review of a monitor/been determined to not be a responsible or qualified bidder?</inlineHelpText>
+    <label>Company director discipline/misconduct</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

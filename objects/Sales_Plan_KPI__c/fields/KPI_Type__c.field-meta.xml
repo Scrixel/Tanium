@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI_Type__c</fullName>
+    <description>The type for this KPI</description>
+    <inlineHelpText>Please select a type for this KPI</inlineHelpText>
+    <label>KPI Type</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>KPI_Label__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Sales_Plan_KPI_KPI_Type</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Geo NARR</controllingFieldValue>
+            <controllingFieldValue>Discrete MSP ARR</controllingFieldValue>
+            <controllingFieldValue>Non-Discrete MSP ARR</controllingFieldValue>
+            <controllingFieldValue>Discrete Partner Territory NARR</controllingFieldValue>
+            <controllingFieldValue>GSI NARR</controllingFieldValue>
+            <controllingFieldValue>Partner NARR</controllingFieldValue>
+            <controllingFieldValue>Discrete Partner NARR</controllingFieldValue>
+            <controllingFieldValue>Tech Alliance NARR</controllingFieldValue>
+            <controllingFieldValue>Direct ARR</controllingFieldValue>
+            <controllingFieldValue>Onboarding Incentive</controllingFieldValue>
+            <controllingFieldValue>Partner Co-Sell ARR</controllingFieldValue>
+            <controllingFieldValue>Tech Alliances-Management</controllingFieldValue>
+            <controllingFieldValue>Certifications</controllingFieldValue>
+            <controllingFieldValue>PSA-Tech Alliances Management</controllingFieldValue>
+            <controllingFieldValue>MSP ARR</controllingFieldValue>
+            <controllingFieldValue>MSP Management</controllingFieldValue>
+            <controllingFieldValue>Federal ARR</controllingFieldValue>
+            <controllingFieldValue>PSA-MSP Management</controllingFieldValue>
+            <controllingFieldValue>Opportunity Progression</controllingFieldValue>
+            <controllingFieldValue>Partner VP</controllingFieldValue>
+            <controllingFieldValue>ROW NARR</controllingFieldValue>
+            <controllingFieldValue>Month 1</controllingFieldValue>
+            <controllingFieldValue>Area NARR</controllingFieldValue>
+            <controllingFieldValue>Month 2</controllingFieldValue>
+            <controllingFieldValue>MSP-GSI ARR</controllingFieldValue>
+            <controllingFieldValue>Month 3</controllingFieldValue>
+            <controllingFieldValue>Partner Co-Sell NARR</controllingFieldValue>
+            <controllingFieldValue>MSP-GSI NARR</controllingFieldValue>
+            <controllingFieldValue>Prorated</controllingFieldValue>
+            <controllingFieldValue>SAL</controllingFieldValue>
+            <controllingFieldValue>ARR</controllingFieldValue>
+            <controllingFieldValue>NARR</controllingFieldValue>
+            <controllingFieldValue>Pipeline</controllingFieldValue>
+            <controllingFieldValue>SQL</controllingFieldValue>
+            <controllingFieldValue>Partner Created NARR</controllingFieldValue>
+            <controllingFieldValue>Primary NARR</controllingFieldValue>
+            <controllingFieldValue>Secondary NARR</controllingFieldValue>
+            <controllingFieldValue>IARR</controllingFieldValue>
+            <controllingFieldValue>PTP NARR</controllingFieldValue>
+            <controllingFieldValue>RARR</controllingFieldValue>
+            <valueName>OTV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Geo NARR</controllingFieldValue>
+            <controllingFieldValue>Discrete MSP ARR</controllingFieldValue>
+            <controllingFieldValue>Non-Discrete MSP ARR</controllingFieldValue>
+            <controllingFieldValue>Discrete Partner Territory NARR</controllingFieldValue>
+            <controllingFieldValue>GSI NARR</controllingFieldValue>
+            <controllingFieldValue>Partner NARR</controllingFieldValue>
+            <controllingFieldValue>Discrete Partner NARR</controllingFieldValue>
+            <controllingFieldValue>Tech Alliance NARR</controllingFieldValue>
+            <controllingFieldValue>Direct ARR</controllingFieldValue>
+            <controllingFieldValue>Onboarding Incentive</controllingFieldValue>
+            <controllingFieldValue>Partner Co-Sell ARR</controllingFieldValue>
+            <controllingFieldValue>Tech Alliances-Management</controllingFieldValue>
+            <controllingFieldValue>Certifications</controllingFieldValue>
+            <controllingFieldValue>PSA-Tech Alliances Management</controllingFieldValue>
+            <controllingFieldValue>MSP ARR</controllingFieldValue>
+            <controllingFieldValue>MSP Management</controllingFieldValue>
+            <controllingFieldValue>Federal ARR</controllingFieldValue>
+            <controllingFieldValue>PSA-MSP Management</controllingFieldValue>
+            <controllingFieldValue>Opportunity Progression</controllingFieldValue>
+            <controllingFieldValue>Partner VP</controllingFieldValue>
+            <controllingFieldValue>ROW NARR</controllingFieldValue>
+            <controllingFieldValue>Month 1</controllingFieldValue>
+            <controllingFieldValue>Area NARR</controllingFieldValue>
+            <controllingFieldValue>Month 2</controllingFieldValue>
+            <controllingFieldValue>MSP-GSI ARR</controllingFieldValue>
+            <controllingFieldValue>Month 3</controllingFieldValue>
+            <controllingFieldValue>Partner Co-Sell NARR</controllingFieldValue>
+            <controllingFieldValue>MSP-GSI NARR</controllingFieldValue>
+            <controllingFieldValue>Prorated</controllingFieldValue>
+            <controllingFieldValue>SAL</controllingFieldValue>
+            <controllingFieldValue>ARR</controllingFieldValue>
+            <controllingFieldValue>NARR</controllingFieldValue>
+            <controllingFieldValue>Pipeline</controllingFieldValue>
+            <controllingFieldValue>SQL</controllingFieldValue>
+            <controllingFieldValue>Partner Created NARR</controllingFieldValue>
+            <controllingFieldValue>Primary NARR</controllingFieldValue>
+            <controllingFieldValue>Secondary NARR</controllingFieldValue>
+            <controllingFieldValue>IARR</controllingFieldValue>
+            <controllingFieldValue>PTP NARR</controllingFieldValue>
+            <controllingFieldValue>RARR</controllingFieldValue>
+            <valueName>Quota</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

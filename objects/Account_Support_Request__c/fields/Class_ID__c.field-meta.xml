@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Class_ID__c</fullName>
+    <description>Field requested by Natalie Quon from the Training team. Jira ticket SS-8762</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Stores the ID for this training class</inlineHelpText>
+    <label>Class ID</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

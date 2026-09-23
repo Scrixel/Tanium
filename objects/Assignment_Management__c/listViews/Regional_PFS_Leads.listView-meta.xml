@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_PFS_Leads</fullName>
+    <columns>NAME</columns>
+    <columns>Pricebook__c</columns>
+    <columns>old_Opportunity_Type__c</columns>
+    <columns>Geo__c</columns>
+    <columns>Region__c</columns>
+    <columns>Regional_PFS_Lead__c</columns>
+    <columns>Sub_Region__c</columns>
+    <columns>Route_Based_on_RVP_or_AVP__c</columns>
+    <columns>Persona_Selection__c</columns>
+    <columns>Contract_Owner_Name__c</columns>
+    <columns>Partner_Owner_Name__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Assignment_Management__c.Regional_PFS_Lead_Assignment</value>
+    </filters>
+    <label>Regional PFS Leads</label>
+</ListView>

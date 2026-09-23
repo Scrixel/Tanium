@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ETM_Category__c</fullName>
+    <description>Field defaults to Parent/Standalone Account unless changed by requestor or BOA. This field identifies whether the account is a true account, or the type of child account if it isn’t a true account.</description>
+    <inlineHelpText>Parent/Standalone: Controls or owns other accounts, or an account that exists independently w/o subsidiaries
+
+Subsidiary: Owned or controlled by a parent company.
+
+Independent Subsidiary: A subsidiary that operates independently from its parent company.
+
+Holding Company/Investment Firm: An account that holds investments or controls other businesses.
+
+Non-Account Record: Vendors, Resellers that are not considered a customer or prospect, etc</inlineHelpText>
+    <label>ETM Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>ETM_Category</valueSetName>
+    </valueSet>
+</CustomField>

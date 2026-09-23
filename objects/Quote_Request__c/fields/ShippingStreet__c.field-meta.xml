@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShippingStreet__c</fullName>
+    <description>Street on the Ship To address for this Quote Request. Jira ticket SS-11057.</description>
+    <inlineHelpText>Please enter the Ship To Street.</inlineHelpText>
+    <label>Ship To Street</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

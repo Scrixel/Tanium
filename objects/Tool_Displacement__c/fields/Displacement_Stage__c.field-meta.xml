@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Displacement_Stage__c</fullName>
+    <label>Displacement Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Evaluating</fullName>
+                <default>false</default>
+                <label>Evaluating</label>
+            </value>
+            <value>
+                <fullName>Implementing</fullName>
+                <default>false</default>
+                <label>Implementing</label>
+            </value>
+            <value>
+                <fullName>Partial</fullName>
+                <default>false</default>
+                <label>Partial</label>
+            </value>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <label>Full</label>
+            </value>
+            <value>
+                <fullName>Not Displacing Anymore</fullName>
+                <default>false</default>
+                <label>Displacement Failed</label>
+            </value>
+            <value>
+                <fullName>Not Exploring Displacement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Exploring Displacement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

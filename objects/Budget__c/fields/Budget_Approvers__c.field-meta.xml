@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Approvers__c</fullName>
+    <description>changes made - case 00040089 - Changes to include CFO approval - SS - 03-16-2020</description>
+    <externalId>false</externalId>
+    <formula>&quot;Budget Owner: &quot; &amp; Budget_Owner__r.Full_Name__c &amp;BR() &amp;
+IF( NOT(ISPICKVAL(SaaS_or_On_Premises__c,&quot;&quot;)), &quot;SAAS Approval: Sarah Araya Duenas&quot;,&quot;&quot;)&amp;BR() &amp;
+&quot;Finance Approver: &quot; &amp; Finance_Approver__r.Full_Name__c &amp;BR() &amp;
+IF( NOT(ISPICKVAL(SaaS_or_On_Premises__c,&quot;&quot;)), &quot;Security Approval: Jonathan Freinberg&quot;,&quot;&quot;)&amp;BR() &amp;
+IF( Approximate_Amount_In_USD__c &gt;= 5000, &quot;Procurement Approval&quot;,&quot;&quot;) &amp; BR()&amp;
+IF( Approximate_Amount_In_USD__c &gt;= 5000, &quot;CFO Approval: Jim Jackson&quot;,&quot;&quot;)&amp;BR() &amp;
+IF( Approximate_Amount_In_USD__c &gt;= 25000,&quot;E Staff Approver: &quot; &amp; Procurement_E_Staff_Approver__r.Full_Name__c ,&quot;&quot;) &amp;BR() &amp;
+IF( Approximate_Amount_In_USD__c &gt;= 150000, &quot;VP- Procurement: Jessica Jackson&quot;,&quot;&quot;)&amp;BR() &amp;
+IF( Approximate_Amount_In_USD__c &gt;= 150000, &quot;CO-CEO Approval: Fazal Merchant&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Budget Approvers</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

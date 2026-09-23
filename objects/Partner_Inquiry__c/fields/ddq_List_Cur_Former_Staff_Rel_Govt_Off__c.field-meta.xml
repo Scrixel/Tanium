@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_List_Cur_Former_Staff_Rel_Govt_Off__c</fullName>
+    <description>List current or former employee, officer, or director of your company who has a close or familiar relationship with a Government Official.</description>
+    <inlineHelpText>List current or former employee, officer, or director of your company who has a close or familiar relationship with a Government Official.</inlineHelpText>
+    <label>List Current/Former Staff w Rel Govt Off</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

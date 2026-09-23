@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parter_Required_for_Direct_to_Indirect</fullName>
+    <active>true</active>
+    <description>When the Record Type is Partner Transition ISR (API Name: Direct_To_Indirect_Partner_Transition_ISR) and the Transition Type = Direct to Indirect, THEN Partner Name is required</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Direct_To_Indirect_Partner_Transition_ISR&apos;, 
+			ISPICKVAL(Transition_Type__c, &quot;Direct-to-Indirect&quot;),
+				OR(
+				ISBLANK( Partner_Name_lookup__c),
+				ISBLANK( Proposed_Partner_Margins__c), 
+				ISBLANK( Partner_Value_in_Opportunity__c ),
+				ISBLANK( Additional_comments_from_Partner__c )), 
+NOT( $Permission.DisableValidationRules))</errorConditionFormula>
+    <errorMessage>Partner Fields in the Partner Details section are all required when Transition Type is Direct To Indirect.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_For_Not_Displaying__c</fullName>
+    <description>Changes from &quot;Reason for not Displaying&quot; to &quot;Failed Displacement Reason &quot;
+https://tanium.lightning.force.com/lightning/r/Case/5000e00001mr199AAA/view</description>
+    <inlineHelpText>Reason for not Displaying</inlineHelpText>
+    <label>Failed Displacement Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Displacement_Stage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Difficult to deploy and/or use</fullName>
+                <default>false</default>
+                <label>Difficult to deploy and/or use</label>
+            </value>
+            <value>
+                <fullName>Incumbent solution is good enough</fullName>
+                <default>false</default>
+                <label>Incumbent solution is good enough</label>
+            </value>
+            <value>
+                <fullName>Issue in the sales experience</fullName>
+                <default>false</default>
+                <label>Issue in the sales experience</label>
+            </value>
+            <value>
+                <fullName>Missing features</fullName>
+                <default>false</default>
+                <label>Missing features</label>
+            </value>
+            <value>
+                <fullName>Pricing/Packaging</fullName>
+                <default>false</default>
+                <label>Pricing/Packaging</label>
+            </value>
+            <value>
+                <fullName>Prospect did not have a need right now</fullName>
+                <default>false</default>
+                <label>Prospect did not have a need right now</label>
+            </value>
+            <value>
+                <fullName>Support model</fullName>
+                <default>false</default>
+                <label>Support model</label>
+            </value>
+            <value>
+                <fullName>Switching/migration costs too high</fullName>
+                <default>false</default>
+                <label>Switching/migration costs too high</label>
+            </value>
+            <value>
+                <fullName>Tanium did not meet customer expectations</fullName>
+                <default>false</default>
+                <label>Tanium did not meet customer expectations</label>
+            </value>
+            <value>
+                <fullName>Unknown/Greenfield</fullName>
+                <default>false</default>
+                <label>Unknown/Greenfield</label>
+            </value>
+            <value>
+                <fullName>Account Volatility</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Volatility</label>
+            </value>
+            <value>
+                <fullName>Attached to Existing Tools</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Attached to Existing Tools</label>
+            </value>
+            <value>
+                <fullName>Feature Incompleteness</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feature Incompleteness</label>
+            </value>
+            <value>
+                <fullName>Too Much to Manage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Too Much to Manage</label>
+            </value>
+            <value>
+                <fullName>Value Unproven</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Value Unproven</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Difficult to deploy and/or use</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Incumbent solution is good enough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Issue in the sales experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Missing features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Pricing/Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Prospect did not have a need right now</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Support model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Switching/migration costs too high</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Tanium did not meet customer expectations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Displacing Anymore</controllingFieldValue>
+            <valueName>Unknown/Greenfield</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

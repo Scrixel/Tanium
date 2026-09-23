@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Deliverable_Requested__c</fullName>
+    <description>When the value Custom is chosen from picklist this field must have a value to describe what the custom deliverable is .</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide information regarding the Custom Deliverable Request.</inlineHelpText>
+    <label>Custom Deliverable Requested</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

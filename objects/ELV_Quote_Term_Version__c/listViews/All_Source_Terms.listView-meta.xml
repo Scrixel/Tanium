@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Source_Terms</fullName>
+    <columns>NAME</columns>
+    <columns>Display_Order__c</columns>
+    <columns>CPQ_Version__c</columns>
+    <columns>Term_Title__c</columns>
+    <columns>Active__c</columns>
+    <columns>Template_Types__c</columns>
+    <columns>Tested_Formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Version_Type__c</field>
+        <operation>equals</operation>
+        <value>Source</value>
+    </filters>
+    <label>All Source Terms</label>
+</ListView>

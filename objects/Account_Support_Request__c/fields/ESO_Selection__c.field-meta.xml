@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Selection__c</fullName>
+    <description>This selection will appear after clicking the Create ESO Request. This will direct the flow to show certain fields for various kinds of ESO Support needed.</description>
+    <label>ESO Selection</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1wk Support ONLY</fullName>
+                <default>false</default>
+                <label>1wk Support ONLY</label>
+            </value>
+            <value>
+                <fullName>24x7 Support ONLY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>24x7 Support ONLY</label>
+            </value>
+            <value>
+                <fullName>8x5 Support ONLY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8x5 Support ONLY</label>
+            </value>
+            <value>
+                <fullName>Block of Hours - Support</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Block of Hours - Support</label>
+            </value>
+            <value>
+                <fullName>Cloud Migration</fullName>
+                <default>false</default>
+                <label>Cloud Migration</label>
+            </value>
+            <value>
+                <fullName>Emerging Enterprise Deployment</fullName>
+                <default>false</default>
+                <label>Emerging Enterprise Deployment</label>
+            </value>
+            <value>
+                <fullName>ESO Hands on Keyboard Support (Traditional ESO)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ESO Hands on Keyboard Support (Traditional ESO)</label>
+            </value>
+            <value>
+                <fullName>Fed Bundle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fed Bundle</label>
+            </value>
+            <value>
+                <fullName>Ops Express Bundle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ops Express Bundle</label>
+            </value>
+            <value>
+                <fullName>Service Package</fullName>
+                <default>false</default>
+                <label>Service Package</label>
+            </value>
+            <value>
+                <fullName>Staff Augmentation</fullName>
+                <default>false</default>
+                <label>Staff Augmentation</label>
+            </value>
+            <value>
+                <fullName>Tenant Health Monitoring</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tenant Health Monitoring</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

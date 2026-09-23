@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Registration__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Deal Registration for which this Quote Request was created. Jira ticket SS-11057.</description>
+    <inlineHelpText>Select the Deal to which this Quote Request should be associated. Please note that the Deal must be approved and must have a mapped opportunity.</inlineHelpText>
+    <label>Deal Registration</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Deal_Registration__c.Mapped_Opportunity__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Deal_Registration__c.or_Opp_Reg_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Deal_Registration__c</referenceTo>
+    <relationshipLabel>Quote Requests</relationshipLabel>
+    <relationshipName>Quote_Requests</relationshipName>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

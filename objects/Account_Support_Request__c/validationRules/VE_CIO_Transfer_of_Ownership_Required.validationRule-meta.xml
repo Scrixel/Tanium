@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VE_CIO_Transfer_of_Ownership_Required</fullName>
+    <active>false</active>
+    <description>SS-10088: For VE &amp; CIO ISR, &quot;Transfer of Ownership&quot; is required when status=Completed, Delivered/Presented.
+Stakeholders: Laura Narat, Benny Fry, Colin Smith, Erik Gaston
+7/21 Deactivated as no longer needed.</description>
+    <errorConditionFormula>AND(
+      Transfer_of_Ownership__c = False,
+     OR(
+        RecordType.DeveloperName = &quot;Value_Engineering_Request&quot;,
+        RecordType.DeveloperName = &quot;Vertical_CIO_Strategist_Request&quot;
+        ),
+     OR(
+        ISPICKVAL( Status__c, &quot;Completed&quot;),
+        ISPICKVAL( Status__c, &quot;Delivered/Presented&quot;)
+        ),
+     NOT($Permission.DisableValidationRules )
+)</errorConditionFormula>
+    <errorDisplayField>Transfer_of_Ownership__c</errorDisplayField>
+    <errorMessage>For VE &amp; CIO ISR, &quot;Transfer of Ownership&quot; is required when status=Completed, Delivered/Presented.</errorMessage>
+</ValidationRule>

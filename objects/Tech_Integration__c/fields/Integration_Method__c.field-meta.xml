@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Method__c</fullName>
+    <label>Integration Method</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>API Gateway</fullName>
+                <default>false</default>
+                <label>API Gateway</label>
+            </value>
+            <value>
+                <fullName>Asset DB/SQL</fullName>
+                <default>false</default>
+                <label>Asset DB/SQL</label>
+            </value>
+            <value>
+                <fullName>Asset Report Ingest</fullName>
+                <default>false</default>
+                <label>Asset Report Ingest</label>
+            </value>
+            <value>
+                <fullName>Asset REST API</fullName>
+                <default>false</default>
+                <label>Asset REST API</label>
+            </value>
+            <value>
+                <fullName>Comply REST API</fullName>
+                <default>false</default>
+                <label>Comply REST API</label>
+            </value>
+            <value>
+                <fullName>Connect (All Other Sources)</fullName>
+                <default>false</default>
+                <label>Connect (All Other Sources)</label>
+            </value>
+            <value>
+                <fullName>Connect (Audit)</fullName>
+                <default>false</default>
+                <label>Connect (Audit)</label>
+            </value>
+            <value>
+                <fullName>Connect (Events)</fullName>
+                <default>false</default>
+                <label>Connect (Events)</label>
+            </value>
+            <value>
+                <fullName>Connect (Reporting)</fullName>
+                <default>false</default>
+                <label>Connect (Reporting)</label>
+            </value>
+            <value>
+                <fullName>Connect (Saved Question)</fullName>
+                <default>false</default>
+                <label>Connect (Saved Question)</label>
+            </value>
+            <value>
+                <fullName>Connect REST API</fullName>
+                <default>false</default>
+                <label>Connect REST API</label>
+            </value>
+            <value>
+                <fullName>Custom Sensor/Package</fullName>
+                <default>false</default>
+                <label>Custom Sensor/Package</label>
+            </value>
+            <value>
+                <fullName>Deploy Gallery</fullName>
+                <default>false</default>
+                <label>Deploy Gallery</label>
+            </value>
+            <value>
+                <fullName>Deploy REST API</fullName>
+                <default>false</default>
+                <label>Deploy REST API</label>
+            </value>
+            <value>
+                <fullName>Endpoint Identity API</fullName>
+                <default>false</default>
+                <label>Endpoint Identity API</label>
+            </value>
+            <value>
+                <fullName>Enforce REST API</fullName>
+                <default>false</default>
+                <label>Enforce REST API</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor REST API</fullName>
+                <default>false</default>
+                <label>Integrity Monitor REST API</label>
+            </value>
+            <value>
+                <fullName>Patch REST API</fullName>
+                <default>false</default>
+                <label>Patch REST API</label>
+            </value>
+            <value>
+                <fullName>Platform REST API</fullName>
+                <default>false</default>
+                <label>Platform REST API</label>
+            </value>
+            <value>
+                <fullName>Stream</fullName>
+                <default>false</default>
+                <label>Stream</label>
+            </value>
+            <value>
+                <fullName>Threat Response REST API</fullName>
+                <default>false</default>
+                <label>Threat Response REST API</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

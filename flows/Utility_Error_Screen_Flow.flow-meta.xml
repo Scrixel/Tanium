@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Use as a subflow to show user friendly error messages when a flow fails.</description>
+    <interviewLabel>Utility Error Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Utility Error Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <description>Show an error message on-screen to users.</description>
+        <name>scn_Error</name>
+        <label>Error</label>
+        <locationX>176</locationX>
+        <locationY>235</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>cmp_Header_SomethingWentWrong</name>
+            <extensionName>c:sectionHeading</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>iconName</name>
+                <value>
+                    <stringValue>utility:error</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>iconVariant</name>
+                <value>
+                    <stringValue>error</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Something went wrong</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>opt_ErrorMessage</name>
+            <fieldText>&lt;p&gt;Something went wrong and your form couldn&apos;t be submitted successfully.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Technical Stuff&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Running User: &lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!var_FlowRunningUser}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Current Record: {!var_FlowCurrentRecord}&lt;/p&gt;&lt;p&gt;Error message: {!var_FlowFaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>scn_Error</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Get the current record variable from the main flow</description>
+        <name>var_FlowCurrentRecord</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store the current Stage of the mail flow where the error occurred</description>
+        <name>var_FlowCurrentStage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store the flow error message from the primary flow</description>
+        <name>var_FlowFaultMessage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store the flow running user</description>
+        <name>var_FlowRunningUser</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

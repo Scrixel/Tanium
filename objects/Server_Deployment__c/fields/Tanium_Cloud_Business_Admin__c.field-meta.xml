@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Cloud_Business_Admin__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Identifies the customer contact who will serves as the business admin. Jira ticket SS-10499</description>
+    <inlineHelpText>Please select the customer contact who will serve as the business admin for this deployment</inlineHelpText>
+    <label>Tanium Cloud Business Admin</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR 3 OR 4</booleanFilter>
+        <errorMessage>This contact doesn&apos;t meet the filter criteria. The Tanium Cloud Business Admin must be an active contact and on the same account as the account of this Server Deployment</errorMessage>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>System Administrator, Tanium System Administrator</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>contains</operation>
+            <value>API Integration</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Server Deployments (Tanium Cloud Business Admin)</relationshipLabel>
+    <relationshipName>Server_Deployments1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

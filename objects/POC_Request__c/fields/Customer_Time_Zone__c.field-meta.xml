@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Time_Zone__c</fullName>
+    <label>Customer Time Zone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>London UTC+00:00</fullName>
+                <default>false</default>
+                <label>London UTC+00:00</label>
+            </value>
+            <value>
+                <fullName>Amsterdam UTC+01:00</fullName>
+                <default>false</default>
+                <label>Amsterdam UTC+01:00</label>
+            </value>
+            <value>
+                <fullName>Paris UTC+01:00</fullName>
+                <default>false</default>
+                <label>Paris UTC+01:00</label>
+            </value>
+            <value>
+                <fullName>Kuwait UTC+03:00</fullName>
+                <default>false</default>
+                <label>Kuwait UTC+03:00</label>
+            </value>
+            <value>
+                <fullName>Kabul UTC+04:30</fullName>
+                <default>false</default>
+                <label>Kabul UTC+04:30</label>
+            </value>
+            <value>
+                <fullName>New Delhi UTC+05:30</fullName>
+                <default>false</default>
+                <label>New Delhi UTC+05:30</label>
+            </value>
+            <value>
+                <fullName>Singapore UTC+08:00</fullName>
+                <default>false</default>
+                <label>Singapore UTC+08:00</label>
+            </value>
+            <value>
+                <fullName>Tokyo UTC+09:00</fullName>
+                <default>false</default>
+                <label>Tokyo UTC+09:00</label>
+            </value>
+            <value>
+                <fullName>Brisbane UTC+10:00</fullName>
+                <default>false</default>
+                <label>Brisbane UTC+10:00</label>
+            </value>
+            <value>
+                <fullName>Auckland	UTC+12:00</fullName>
+                <default>false</default>
+                <label>Auckland	UTC+12:00</label>
+            </value>
+            <value>
+                <fullName>Coordinated Universal Time+13 UTC+13:00</fullName>
+                <default>false</default>
+                <label>Coordinated Universal Time+13 UTC+13:00</label>
+            </value>
+            <value>
+                <fullName>Greenland UTC-02:00</fullName>
+                <default>false</default>
+                <label>Greenland UTC-02:00</label>
+            </value>
+            <value>
+                <fullName>City of Buenos Aires UTC-03:00</fullName>
+                <default>false</default>
+                <label>City of Buenos Aires UTC-03:00</label>
+            </value>
+            <value>
+                <fullName>Atlantic Time (Canada) UTC-04:00</fullName>
+                <default>false</default>
+                <label>Atlantic Time (Canada) UTC-04:00</label>
+            </value>
+            <value>
+                <fullName>San Juan	UTC-04:00</fullName>
+                <default>false</default>
+                <label>San Juan	UTC-04:00</label>
+            </value>
+            <value>
+                <fullName>Eastern Time (US &amp; Canada) UTC-05:00</fullName>
+                <default>false</default>
+                <label>Eastern Time (US &amp; Canada) UTC-05:00</label>
+            </value>
+            <value>
+                <fullName>Central Time (US &amp; Canada) UTC-06:00</fullName>
+                <default>false</default>
+                <label>Central Time (US &amp; Canada) UTC-06:00</label>
+            </value>
+            <value>
+                <fullName>Arizona UTC-07:00</fullName>
+                <default>false</default>
+                <label>Arizona UTC-07:00</label>
+            </value>
+            <value>
+                <fullName>Mountain Time (US &amp; Canada) UTC-07:00</fullName>
+                <default>false</default>
+                <label>Mountain Time (US &amp; Canada) UTC-07:00</label>
+            </value>
+            <value>
+                <fullName>Pacific Time (US &amp; Canada) UTC-08:00</fullName>
+                <default>false</default>
+                <label>Pacific Time (US &amp; Canada) UTC-08:00</label>
+            </value>
+            <value>
+                <fullName>Alaska UTC-09:00</fullName>
+                <default>false</default>
+                <label>Alaska UTC-09:00</label>
+            </value>
+            <value>
+                <fullName>Hawaii UTC-10:00</fullName>
+                <default>false</default>
+                <label>Hawaii UTC-10:00</label>
+            </value>
+            <value>
+                <fullName>UTC+00:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+00:00</label>
+            </value>
+            <value>
+                <fullName>UTC+01:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+01:00</label>
+            </value>
+            <value>
+                <fullName>UTC+02:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+02:00</label>
+            </value>
+            <value>
+                <fullName>UTC+03:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+03:00</label>
+            </value>
+            <value>
+                <fullName>UTC+03:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+03:30</label>
+            </value>
+            <value>
+                <fullName>UTC+04:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+04:00</label>
+            </value>
+            <value>
+                <fullName>UTC+04:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+04:30</label>
+            </value>
+            <value>
+                <fullName>UTC+05:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+05:00</label>
+            </value>
+            <value>
+                <fullName>UTC+05:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+05:30</label>
+            </value>
+            <value>
+                <fullName>UTC+05:45</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+05:45</label>
+            </value>
+            <value>
+                <fullName>UTC+06:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+06:00</label>
+            </value>
+            <value>
+                <fullName>UTC+06:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+06:30</label>
+            </value>
+            <value>
+                <fullName>UTC+07:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+07:00</label>
+            </value>
+            <value>
+                <fullName>UTC+08:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+08:00</label>
+            </value>
+            <value>
+                <fullName>UTC+08:45</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+08:45</label>
+            </value>
+            <value>
+                <fullName>UTC+09:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+09:00</label>
+            </value>
+            <value>
+                <fullName>UTC+09:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+09:30</label>
+            </value>
+            <value>
+                <fullName>UTC+10:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+10:00</label>
+            </value>
+            <value>
+                <fullName>UTC+10:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+10:30</label>
+            </value>
+            <value>
+                <fullName>UTC+11:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+11:00</label>
+            </value>
+            <value>
+                <fullName>UTC+12:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+12:00</label>
+            </value>
+            <value>
+                <fullName>UTC+12:45</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+12:45</label>
+            </value>
+            <value>
+                <fullName>UTC+13:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+13:00</label>
+            </value>
+            <value>
+                <fullName>UTC+14:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC+14:00</label>
+            </value>
+            <value>
+                <fullName>UTC-01:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-01:00</label>
+            </value>
+            <value>
+                <fullName>UTC-02:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-02:00</label>
+            </value>
+            <value>
+                <fullName>UTC-03:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-03:00</label>
+            </value>
+            <value>
+                <fullName>UTC-03:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-03:30</label>
+            </value>
+            <value>
+                <fullName>UTC-04:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-04:00</label>
+            </value>
+            <value>
+                <fullName>UTC-05:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-05:00</label>
+            </value>
+            <value>
+                <fullName>UTC-06:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-06:00</label>
+            </value>
+            <value>
+                <fullName>UTC-07:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-07:00</label>
+            </value>
+            <value>
+                <fullName>UTC-08:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-08:00</label>
+            </value>
+            <value>
+                <fullName>UTC-09:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-09:00</label>
+            </value>
+            <value>
+                <fullName>UTC-09:30</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-09:30</label>
+            </value>
+            <value>
+                <fullName>UTC-10:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-10:00</label>
+            </value>
+            <value>
+                <fullName>UTC-11:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-11:00</label>
+            </value>
+            <value>
+                <fullName>UTC-12:00</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UTC-12:00</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

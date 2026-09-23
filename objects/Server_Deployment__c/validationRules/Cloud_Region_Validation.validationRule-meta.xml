@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cloud_Region_Validation</fullName>
+    <active>true</active>
+    <description>SS-4495 - Validate the cloud provider values and enforce when they need to be completed.
+SS-8288 - Cloud_Region field to replace Taas_Region. Deactivate VR.</description>
+    <errorConditionFormula>((TEXT(Compliance_Framework__c) = &quot;tc_usg&quot; &amp;&amp; TEXT(Cloud_Region__c) != &quot;gov&quot;)
+||
+(TEXT(Compliance_Framework__c) = &quot;protected_b&quot; &amp;&amp; TEXT(Cloud_Region__c) != &quot;ca&quot;)
+||
+(ISPICKVAL( Server_Device_Type__c , &quot;Tanium as a Service&quot;) &amp;&amp; TEXT(Cloud_Region__c) = &quot;gov&quot;))
+&amp;&amp;
+NOT($Permission.DisableValidationRules)</errorConditionFormula>
+    <errorMessage>Cloud Region &quot;gov (United States)&quot; is reserved for TC_USG customers ONLY and Cloud Region &quot;ca (Canada) is required for ProtectedB customers.</errorMessage>
+</ValidationRule>

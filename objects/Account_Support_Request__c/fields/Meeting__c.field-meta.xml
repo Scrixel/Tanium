@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting__c</fullName>
+    <label>Engagement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Set Up a Call</fullName>
+                <default>false</default>
+                <label>Set Up a Call</label>
+            </value>
+            <value>
+                <fullName>Set Up a Meeting</fullName>
+                <default>false</default>
+                <label>Set Up a Meeting</label>
+            </value>
+            <value>
+                <fullName>In Person Meeting</fullName>
+                <default>false</default>
+                <label>In Person Meeting</label>
+            </value>
+            <value>
+                <fullName>Email Customer</fullName>
+                <default>false</default>
+                <label>Email Customer</label>
+            </value>
+            <value>
+                <fullName>Email Prospect</fullName>
+                <default>false</default>
+                <label>Email Prospect</label>
+            </value>
+            <value>
+                <fullName>OCISO Door Opener Email/LinkedIn</fullName>
+                <default>false</default>
+                <label>Door Opener Email/LinkedIn</label>
+            </value>
+            <value>
+                <fullName>OCISO Attend an in-person meeting</fullName>
+                <default>false</default>
+                <label>Attend an in-person meeting</label>
+            </value>
+            <value>
+                <fullName>OCISO Attend a remote meeting (phone/Zoom)</fullName>
+                <default>false</default>
+                <label>Attend a remote meeting (phone/Zoom)</label>
+            </value>
+            <value>
+                <fullName>OCISO Account Email/documentation request</fullName>
+                <default>false</default>
+                <label>Account Email/documentation request</label>
+            </value>
+            <value>
+                <fullName>Warm Intro</fullName>
+                <default>false</default>
+                <label>Warm Intro</label>
+            </value>
+            <value>
+                <fullName>Concern Flag</fullName>
+                <default>false</default>
+                <label>Concern Flag</label>
+            </value>
+            <value>
+                <fullName>Constructive Nudge</fullName>
+                <default>false</default>
+                <label>Constructive Nudge</label>
+            </value>
+            <value>
+                <fullName>Thankful Reversion</fullName>
+                <default>false</default>
+                <label>Thankful Reversion</label>
+            </value>
+            <value>
+                <fullName>Ongoing Engagement</fullName>
+                <default>false</default>
+                <label>Ongoing Engagement</label>
+            </value>
+            <value>
+                <fullName>One-Time Engagement</fullName>
+                <default>false</default>
+                <label>One-Time Engagement</label>
+            </value>
+            <value>
+                <fullName>EBR</fullName>
+                <default>false</default>
+                <label>EBR</label>
+            </value>
+            <value>
+                <fullName>CISO Connect</fullName>
+                <default>false</default>
+                <label>CISO Connect</label>
+            </value>
+            <value>
+                <fullName>Network access</fullName>
+                <default>false</default>
+                <label>Network access</label>
+            </value>
+            <value>
+                <fullName>Executive Sponsorship / EBRs</fullName>
+                <default>false</default>
+                <label>Executive Sponsorship / EBRs</label>
+            </value>
+            <value>
+                <fullName>Executive Selling / Discovery</fullName>
+                <default>false</default>
+                <label>Executive Selling / Discovery</label>
+            </value>
+            <value>
+                <fullName>Statement of Direction / Road Map</fullName>
+                <default>false</default>
+                <label>Statement of Direction / Road Map</label>
+            </value>
+            <value>
+                <fullName>Partner  / Channel strategy</fullName>
+                <default>false</default>
+                <label>Partner  / Channel strategy</label>
+            </value>
+            <value>
+                <fullName>Executive Selling / Success Criteria</fullName>
+                <default>false</default>
+                <label>Executive Selling / Success Criteria</label>
+            </value>
+            <value>
+                <fullName>Post Sales Advisory</fullName>
+                <default>false</default>
+                <label>Post Sales Advisory</label>
+            </value>
+            <value>
+                <fullName>Business Discovery</fullName>
+                <default>false</default>
+                <label>Business Discovery</label>
+            </value>
+            <value>
+                <fullName>Executive First</fullName>
+                <default>false</default>
+                <label>Executive First</label>
+            </value>
+            <value>
+                <fullName>Business Case</fullName>
+                <default>false</default>
+                <label>Business Case</label>
+            </value>
+            <value>
+                <fullName>OI Business Case</fullName>
+                <default>false</default>
+                <label>OI Business Case</label>
+            </value>
+            <value>
+                <fullName>Value Summary</fullName>
+                <default>false</default>
+                <label>Value Summary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

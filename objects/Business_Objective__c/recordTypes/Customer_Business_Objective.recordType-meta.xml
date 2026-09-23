@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Business_Objective</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Highlight_Panel_Layout</compactLayoutAssignment>
+    <label>Customer Business Objective</label>
+    <picklistValues>
+        <picklist>Business_Objective__c</picklist>
+        <values>
+            <fullName>Decrease Cost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decrease Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enable Business Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enable Data-driven Decision Making</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enable Digital Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve Efficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve Employee Experience and Productivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maximize Value of IT Investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meet Compliance Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Details Below%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Outcome__c</picklist>
+        <values>
+            <fullName>Accelerate threat response%2C investigation%2C and remediation at scale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accurate and real-time CVE management reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accurate real-time Software Inventory Usage %28SIU%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Achieve Patch efficacy in the 90th%2B percentile to meet SLA or other compliance requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All PII and sensitive data is found and monitored</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analyze both direct control and indirect control when evaluating the potential movement of an endpoint%2C user or group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Answer any question about an endpoints current or historical state on demand in real-time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apply and enforce a unified policy configuration across all endpoints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assign impact ratings to users%2Fgroups%2Fendpoints to easily prioritize the endpoints and user accounts pose cyber risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automate endpoint management tasks such as patching and software deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automate manual tasks at real-time speed and scale%2E%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVEs are remediated in minutes instead of days or weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete inventory of managed and unmanaged endpoints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comply with relevant regulatory requirements related to incident response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create custom solutions leveraging platform extensibility%2E%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed inventory of certificates with expire and cryptographic data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discover and reduce lateral movement paths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrich external systems with accurate highly extensible real-time data%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Establish an enterprise-wide%2C automated scheduled 3rd party software update methodology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Establish and Enforce a standardized patching policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exploits and vulnerabilities are managed in accordance with regulatory compliance frameworks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Sec Ops tools consolidation%2E%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve collaboration across teams with a integrated IT and Sec Ops platform%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve delivery on IT%27s SLAs%2FSLOs to the business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve efficiency by migrating to Tanium Cloud%2E%C2%A0%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improve remote employees productivity while using endpoints and applications%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase employee satisfaction and retention by self-resolving technical issues%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase visibility into performance issues and resources usage%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instantaneous alerts and%2For detailed reporting of privileged access anomalies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keep endpoints up to date with a highly efficient and scalable patching solution capable of attaining high levels of patching efficacy%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meet internal and external compliance requirements%2C pass audits%2C and avoid fines%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitigate Software Supply Chain Vulnerabilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitigated costs and fines associated with data breaches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitigation of regulatory fines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More favorable Cyberinsurance premiums and policies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Details Below%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prioritize cyber hygiene and posture improvements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provide end users the capability to initiate the installation of patches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provide users with a self-service portal to allow end-users to initiate the installation%2C update%2C or removal of 3rd party software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quickly and easily install software at scale by utilizing a pre-packaged gallery of hundreds of common enterprise applications%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quickly provision devices wherever they may be to company standards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real time CVE and OS%2C app%2C log%2C and Win Reg change data fed to Automation and event management tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real-time endpoint and software inventory with accurate high fidelity details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Realtime visibility and prioritization of CVEs with remediation paths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduce mean time to remediation%2Fresolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduce security risk with real-time visibility into cyber hygiene and posture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduce time to risk mitigation with real-time visiblity and control%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduce unmanaged endpoint population</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remediate vulnerabilities uncovered by vulnerability management process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robust real-time views and reporting on state of entire environment %28Windows%2C Mac%2C Linux%2C Containers%29%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seamlessly integrate with existing security solutions and infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Streamline investigation and analysis using a single platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Streamline processes and and optimize resource utilization to reduce overall cybersecurity expenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strengthen operational resilience and minimize downtime in the face of cybersecurity incidents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swift and comprehensive visibility and management of CVEs%2C digital certificates%2C and sensitive data during corporate restructuring %26 M%26A%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The ability to image and re-image systems on domain or off%2C local or remote at speed and scale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modules_Used_To_Satify_Business_Objectiv__c</picklist>
+        <values>
+            <fullName>Asset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benchmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrity Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investigate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reveal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ScreenMeet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Threat Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Solution_Area__c</picklist>
+        <values>
+            <fullName>Core X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core X2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core X3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endpoint Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incident Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk and Compliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Customer Outcome Achieved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer Relevant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Team__c</picklist>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Value_Component__c</picklist>
+        <values>
+            <fullName>Breach Prevention%2FMitigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Found un%2Fundermanaged assets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware reclamation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outage Prevention%2FMitigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>People%2FProcess efficiencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software license compliance audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software reclamation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tool Consolidation%2FDisplacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

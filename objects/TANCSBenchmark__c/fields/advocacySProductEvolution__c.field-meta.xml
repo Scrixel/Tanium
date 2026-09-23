@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>advocacySProductEvolution__c</fullName>
+    <description>DEFINITION: How engaged are they in making our product better?  How much do they care? From submitting bugs, enhancement requests, reviewing UI, to co-developing modules
+
+IMPORTANCE: They are invested in our technology. They want us to solve their challenges (large or small). More chance of evangelizing in the marketplace</description>
+    <externalId>false</externalId>
+    <label>advocacySProductEvolution</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

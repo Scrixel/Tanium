@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_Opportunity_details__c</fullName>
+    <description>Overview of the potential opportunity (customer, endpoints, product focus)</description>
+    <inlineHelpText>Overview of the potential opportunity (customer, endpoints, product focus)</inlineHelpText>
+    <label>Potential Opportunity details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

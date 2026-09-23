@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Support_Fields_Integrity</fullName>
+    <active>true</active>
+    <description>When ESO ISR is cloned and before Save…
+
+Status - should be “ESO Draft”
+
+ESO Selection - will be empty
+
+ESO Business Unit will be empty.</description>
+    <errorConditionFormula>AND
+(
+ISCLONE(),
+$RecordType.DeveloperName = &quot;ESO_Support_Request&quot;,
+OR(
+NOT(ISPICKVAL(Status__c,&quot;ESO Draft&quot;)),
+NOT(ISPICKVAL(ESO_Selection__c,&quot;&quot;)),
+NOT(ISPICKVAL(Business_Unit__c,&quot;&quot;))
+)
+)
+
+
+
+
+/*AND(
+$RecordType.DeveloperName = &quot;ESO Support Request&quot;,
+ISCLONE(),
+ISNEW(),
+OR(
+NOT(ISPICKVAL(Status__c,&apos;ESO Draft&apos;)),
+NOT(ISBLANK(TEXT(ESO_Selection__c))),
+NOT(ISBLANK(TEXT(Business_Unit__c)))
+)
+)*/</errorConditionFormula>
+    <errorMessage>These fields need changes:
+Status - change to “ESO Draft”
+ESO Selection - Change to empty
+ESO Business Unit - Change to empty</errorMessage>
+</ValidationRule>

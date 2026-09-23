@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L2_Slack_Channel_Ids__c</fullName>
+    <description>Slack Channel(s) that should be notified on L2 escalations (comma separated)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The L2 Slack Channel Id is used for Case Escalations.  For example, when a L2 Escalation for this team is raised this channel (or channels) will receive a slack message.  To specify a single channel, simply type in the Slack channel Id, i.e. GCEBYKZ24, or specify multiple channels via comma separated values, i.e. GCEBYKZ24,CCC66LTRT.  You can identify a Slack Channel Id by right clicking a Slack Channel in the Slack UI &gt; Copy Link &gt; and extracting the rightmost value.</inlineHelpText>
+    <label>L2 Slack Channel Ids</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

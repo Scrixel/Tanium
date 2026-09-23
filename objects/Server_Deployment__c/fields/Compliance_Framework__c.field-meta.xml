@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Framework__c</fullName>
+    <description>SS-2739 - Note that picklist values need to be lower case to feed correctly to the Provisioner application.</description>
+    <inlineHelpText>Choose &quot;None&quot; for all customers unless there are explicit instructions to select tc_usg (Government) or protected_b (Canadian) compliance.</inlineHelpText>
+    <label>Compliance Framework</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>tc_usg</fullName>
+                <default>false</default>
+                <label>tc_usg</label>
+            </value>
+            <value>
+                <fullName>protected_b</fullName>
+                <default>false</default>
+                <label>protected_b</label>
+            </value>
+            <value>
+                <fullName>tc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>tc</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

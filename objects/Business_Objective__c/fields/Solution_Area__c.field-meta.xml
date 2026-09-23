@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Area__c</fullName>
+    <description>SS-11088: Deprecated</description>
+    <label>DEPRECATED - Solution Area</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core X1</fullName>
+                <default>false</default>
+                <label>Core X1</label>
+            </value>
+            <value>
+                <fullName>Core X2</fullName>
+                <default>false</default>
+                <label>Core X2</label>
+            </value>
+            <value>
+                <fullName>Core X3</fullName>
+                <default>false</default>
+                <label>Core X3</label>
+            </value>
+            <value>
+                <fullName>DEX</fullName>
+                <default>false</default>
+                <label>DEX</label>
+            </value>
+            <value>
+                <fullName>Endpoint Management</fullName>
+                <default>false</default>
+                <label>Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Incident Response</fullName>
+                <default>false</default>
+                <label>Incident Response</label>
+            </value>
+            <value>
+                <fullName>Risk and Compliance</fullName>
+                <default>false</default>
+                <label>Risk and Compliance</label>
+            </value>
+            <value>
+                <fullName>Asset Discovery and Inventory</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Asset Discovery and Inventory</label>
+            </value>
+            <value>
+                <fullName>Client Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Management</label>
+            </value>
+            <value>
+                <fullName>Core Platform</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform</label>
+            </value>
+            <value>
+                <fullName>Sensitive Data Monitoring</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sensitive Data Monitoring</label>
+            </value>
+            <value>
+                <fullName>Solution Area</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solution Area</label>
+            </value>
+            <value>
+                <fullName>Threat Hunting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Threat Hunting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

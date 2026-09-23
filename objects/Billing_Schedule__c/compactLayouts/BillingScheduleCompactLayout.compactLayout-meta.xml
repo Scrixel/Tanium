@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BillingScheduleCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>Invoice_Date__c</fields>
+    <fields>Billing_Amount__c</fields>
+    <fields>Invoice_Number__c</fields>
+    <fields>Invoice_Status__c</fields>
+    <fields>PONumber__c</fields>
+    <fields>ReconciliationStatus__c</fields>
+    <fields>ReconciliationSemiMatchReason__c</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Account__c</fields>
+    <label>BillingScheduleCompactLayout</label>
+</CompactLayout>

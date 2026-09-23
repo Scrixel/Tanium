@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blogs</fullName>
+    <active>true</active>
+    <label>Blogs</label>
+    <picklistValues>
+        <picklist>Image_Type__c</picklist>
+        <values>
+            <fullName>Attachment</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>CMS Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External URL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Related File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Static Resource</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language__c</picklist>
+        <values>
+            <fullName>en_US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

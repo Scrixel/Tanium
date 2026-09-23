@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Contacts__c</fullName>
+    <defaultValue>&quot;Technical Contacts(s):&quot; + BR() + &quot;&quot; + BR() + 
+&quot;Business Contacts(s):&quot; + BR() + &quot;&quot; + BR() + 
+&quot;Partner Account Rep(s):&quot; + BR() + &quot;&quot; + BR() + 
+&quot;Partner SE(s):&quot; + BR()</defaultValue>
+    <description>2014 | JR:  This field is deprecated.  
+
+Prospect/Customer and Partner contacts should be added as a Salesforce.com Contact and then linked to this server deployment by adding the contacts to the respective Account and Opportunity records.</description>
+    <label>Main Contacts</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

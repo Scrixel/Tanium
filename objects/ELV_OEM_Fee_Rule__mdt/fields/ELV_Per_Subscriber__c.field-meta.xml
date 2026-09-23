@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Per_Subscriber__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-208: Indicates that tier evaluation is performed separately for each subscriber.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Per Subscriber</label>
+    <type>Checkbox</type>
+</CustomField>

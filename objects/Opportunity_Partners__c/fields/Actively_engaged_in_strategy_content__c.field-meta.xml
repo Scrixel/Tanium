@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actively_engaged_in_strategy_content__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Deprecated from SS-14659
+Question 2</description>
+    <inlineHelpText>Which Partner is the most engaged in developing sales strategy &amp; content, and in presenting to the customer either independently or with Tanium account resources, throughout the entire sales cycle</inlineHelpText>
+    <label>DEPRECATED - Actively engaged in strat</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

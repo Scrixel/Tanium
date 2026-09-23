@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RC_Subscription_Allocation_Percent__c</fullName>
+    <description>Risk &amp; Compliance Subscription Allocation Percent</description>
+    <label>RC Subscription Allocation Percent</label>
+    <summarizedField>Module_Migration__c.Allocation_Percent__c</summarizedField>
+    <summaryFilterItems>
+        <field>Module_Migration__c.AEM_Product_Group__c</field>
+        <operation>equals</operation>
+        <value>RC Subscription</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Module_Migration__c.Subscription_Migration__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

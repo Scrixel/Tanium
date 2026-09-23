@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cloud Conversion Support</fullName>
+                <default>false</default>
+                <label>Cloud Conversion Support</label>
+            </value>
+            <value>
+                <fullName>Deal Closeout Support</fullName>
+                <default>false</default>
+                <label>Deal Closeout Support</label>
+            </value>
+            <value>
+                <fullName>Enablement / Training Request</fullName>
+                <default>false</default>
+                <label>Enablement / Training Request</label>
+            </value>
+            <value>
+                <fullName>ESO Quoting Support</fullName>
+                <default>false</default>
+                <label>ESO Quoting Support</label>
+            </value>
+            <value>
+                <fullName>General Marketplace Support</fullName>
+                <default>false</default>
+                <label>General Marketplace Support</label>
+            </value>
+            <value>
+                <fullName>General Quote Structuring / Configuration</fullName>
+                <default>false</default>
+                <label>General Quote Structuring / Configuration</label>
+            </value>
+            <value>
+                <fullName>HuntIQ Approval</fullName>
+                <default>false</default>
+                <label>HuntIQ Approval</label>
+            </value>
+            <value>
+                <fullName>Marketplace Quote Approvals</fullName>
+                <default>false</default>
+                <label>Marketplace Quote Approvals</label>
+            </value>
+            <value>
+                <fullName>MSP Quote Approvals</fullName>
+                <default>false</default>
+                <label>MSP Quote Approvals</label>
+            </value>
+            <value>
+                <fullName>P&amp;P Quote Approval</fullName>
+                <default>false</default>
+                <label>P&amp;P Quote Approval</label>
+            </value>
+            <value>
+                <fullName>P&amp;P Related Support</fullName>
+                <default>false</default>
+                <label>P&amp;P Related Support</label>
+            </value>
+            <value>
+                <fullName>Quoting Error Message</fullName>
+                <default>false</default>
+                <label>Quoting Error Message</label>
+            </value>
+            <value>
+                <fullName>Renewal Consolidation</fullName>
+                <default>false</default>
+                <label>Renewal Consolidation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>EDR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EDR</label>
+            </value>
+            <value>
+                <fullName>TAM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TAM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

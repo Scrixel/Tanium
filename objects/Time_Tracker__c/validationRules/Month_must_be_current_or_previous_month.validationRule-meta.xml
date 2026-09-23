@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month_must_be_current_or_previous_month</fullName>
+    <active>true</active>
+    <description>The month selected in the picklist value must be the current or previous month.</description>
+    <errorConditionFormula>OR(
+         Month_Formula__c  = TEXT(MONTH(TODAY())),  
+       Month_Formula__c = TEXT(MONTH(TODAY()) - 1)  
+    )</errorConditionFormula>
+    <errorMessage>The month must be the current or previous month in the same year.</errorMessage>
+</ValidationRule>

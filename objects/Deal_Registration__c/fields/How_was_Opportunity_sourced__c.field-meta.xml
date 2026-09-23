@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_was_Opportunity_sourced__c</fullName>
+    <label>How was Opportunity sourced</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Partner Rep. Prospecting</fullName>
+                <default>false</default>
+                <label>Partner Rep. Prospecting</label>
+            </value>
+            <value>
+                <fullName>Partner Hosted Event</fullName>
+                <default>false</default>
+                <label>Partner Hosted Event</label>
+            </value>
+            <value>
+                <fullName>Tanium Hosted Event</fullName>
+                <default>false</default>
+                <label>Tanium Hosted Event</label>
+            </value>
+            <value>
+                <fullName>Call Blitz</fullName>
+                <default>false</default>
+                <label>Call Blitz</label>
+            </value>
+            <value>
+                <fullName>Partner-Driven Campaign</fullName>
+                <default>false</default>
+                <label>Partner-Driven Campaign</label>
+            </value>
+            <value>
+                <fullName>Customer Assessment</fullName>
+                <default>false</default>
+                <label>Customer Assessment</label>
+            </value>
+            <value>
+                <fullName>Tanium Trial / Proof of Concept</fullName>
+                <default>false</default>
+                <label>Tanium Trial / Proof of Concept</label>
+            </value>
+            <value>
+                <fullName>Tanium Sales Sourced</fullName>
+                <default>false</default>
+                <label>Tanium Sales Sourced</label>
+            </value>
+            <value>
+                <fullName>Other / None of the Above</fullName>
+                <default>false</default>
+                <label>Other / None of the Above</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

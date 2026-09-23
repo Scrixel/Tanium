@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Director_Bribery_Fraud_Corrupt__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Director/company bribery/fraud/corrupt</description>
+    <inlineHelpText>Within the past ten years has your business, or any director or executive officer of your business, been the subject of any investigations, claims, demands or proceedings involving bribery, fraud, or corruption issues?</inlineHelpText>
+    <label>Director/company bribery/fraud/corrupt</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

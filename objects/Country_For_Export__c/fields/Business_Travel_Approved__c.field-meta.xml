@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Travel_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>The value of this field should align to the Tanium Permitted Countries Policy document which is owned and maintained by the Legal team.
+
+https://tanium.sharepoint.com/:b:/r/sites/EmpHub-Policy%20Central/Shared%20Documents/Protecting%20Tanium%20Information%20%26%20IP/Permitted%20Countries%20Policy.pdf?csf=1&amp;web=1&amp;e=cLJVjp</description>
+    <inlineHelpText>Short-term business travel permitted. Use of Tanium IT assets and access to Tanium resources over the internet (e.g., Outlook, Teams, Office, Slack, Jira, etc.) while on business travel is allowed, and is also permitted while on personal travel to these countries.</inlineHelpText>
+    <label>Business Travel Approved</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

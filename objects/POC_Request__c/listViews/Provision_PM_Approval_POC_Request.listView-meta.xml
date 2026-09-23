@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provision_PM_Approval_POC_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Provision PM Approval</label>
+    <queue>Provision_PM_Approval</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

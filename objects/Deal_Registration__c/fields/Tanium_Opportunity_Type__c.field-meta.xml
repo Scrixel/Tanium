@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Opportunity_Type__c</fullName>
+    <description>INC0131406 Nick Scala editable for WebI Integration.  Updates from Mapped Opportunity.
+
+11.21.2024 - No longer needed</description>
+    <externalId>false</externalId>
+    <label>Tanium Opportunity Type</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WBT_TrainingPS_Start_Date__c</fullName>
+    <description>Filled in by Flow &quot;Insert Web Based Training and PS record&quot; from Quote if filled in. Editable for Training Team</description>
+    <label>WBT Start Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

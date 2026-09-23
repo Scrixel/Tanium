@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is implemented as a part of Project Fulcrum. Jira ticker SS-7828</description>
+    <inlineHelpText>This is the manager of the opportunity owner. This user will be the first person in the Opportunity Partner approval chain</inlineHelpText>
+    <label>Opportunity Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Opportunity_Partners</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Revenue_Unqualified__c</fullName>
+    <defaultValue>&quot;Not Applicable (Revenue/Qualified POC)&quot;</defaultValue>
+    <description>Specify reason why POC is unqualified otherwise specify Not Applicable (Revenue/Qualified POC).</description>
+    <inlineHelpText>Specify reason why POC is unqualified otherwise specify Not Applicable (Revenue/Qualified POC).</inlineHelpText>
+    <label>Non-Revenue / Unqualified</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+                <label>Assessment</label>
+            </value>
+            <value>
+                <fullName>Concession</fullName>
+                <default>false</default>
+                <label>Concession</label>
+            </value>
+            <value>
+                <fullName>Churn Mitigation</fullName>
+                <default>false</default>
+                <label>Churn Mitigation</label>
+            </value>
+            <value>
+                <fullName>Lab</fullName>
+                <default>false</default>
+                <label>Lab</label>
+            </value>
+            <value>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+                <label>Promotion</label>
+            </value>
+            <value>
+                <fullName>Showcase (No POC Plan - Customer Eval)</fullName>
+                <default>false</default>
+                <label>Showcase (No POC Plan - Customer Eval)</label>
+            </value>
+            <value>
+                <fullName>Not Applicable (Revenue/Qualified POC)</fullName>
+                <default>true</default>
+                <label>Not Applicable (Revenue/Qualified POC)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

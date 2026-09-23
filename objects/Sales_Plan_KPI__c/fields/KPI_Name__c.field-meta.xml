@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI_Name__c</fullName>
+    <description>This field is automatically populated by Salesforce by the Sales Plan KPI - Before Insert - Fast Field Updates flow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The name is automatically populated by Salesforce based on the combination of Fiscal Year, KPI Label and KPI Type</inlineHelpText>
+    <label>KPI Name</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

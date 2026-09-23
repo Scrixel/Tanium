@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Opportunity_Field</fullName>
+    <active>true</active>
+    <description>INC0116272 opened edit access to Opportunity field for Tanium Standard Users.
+INC0131558 create validation rule that limits edit access to DSA, DD, or OO only.</description>
+    <errorConditionFormula>($Profile.Name = &apos;Tanium Standard User&apos; &amp;&amp; $User.Title &lt;&gt; &apos;Director of Strategic Accounts&apos;) ||
+($Profile.Name = &apos;Tanium Deals Desk&apos; &amp;&amp; !ISPICKVAL($User.Role_Category__c, &apos;Deal Desk&apos;) &amp;&amp; !ISPICKVAL($User.Role_Category__c, &apos;Finance&apos;))</errorConditionFormula>
+    <errorMessage>The hardware delivery questionnaire should be assigned to the opportunity by the DSA. If you need assistance, please contact the DSA or hardware@tanium.com.</errorMessage>
+</ValidationRule>

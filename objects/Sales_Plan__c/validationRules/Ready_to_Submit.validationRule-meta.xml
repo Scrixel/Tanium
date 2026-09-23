@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_to_Submit</fullName>
+    <active>false</active>
+    <description>Validation rule to ensure certain fields are filled in before Ready to Submit can be set to TRUE.</description>
+    <errorConditionFormula>Ready_to_Submit__c = TRUE &amp;&amp;
+(ISBLANK(Role__c) ||
+ISPICKVAL(Plan_Type__c, &quot;&quot;) ||
+ISPICKVAL(Type__c, &quot;&quot;) ||
+ISBLANK(OTV_2__c) ||
+ISPICKVAL(OTV_2_Currency__c, &quot;&quot;) ||
+ISBLANK(NNBARV_Quota__c) ||
+ISBLANK(OTV_3__c) ||
+ISPICKVAL(OTV_3_Currency__c, &quot;&quot;) ||
+ISBLANK(Renewal_Quota__c))</errorConditionFormula>
+    <errorMessage>The following fields must have a value before you can check off Ready to Submit: Role, Plan Type,Type, Primary OTV, Primary OTV Currency, Primary Quota, Renewal OTV, Renewal OTV Currency, and Renewal Quota.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_2__c</fullName>
+    <label>DEPRECATED - Level 2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Level_1__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>APJ</fullName>
+                <default>false</default>
+                <label>APJ</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>Global Sales</fullName>
+                <default>false</default>
+                <label>Global Sales</label>
+            </value>
+            <value>
+                <fullName>LATAM</fullName>
+                <default>false</default>
+                <label>LATAM</label>
+            </value>
+            <value>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+                <label>North Asia</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>South Asia</fullName>
+                <default>false</default>
+                <label>South Asia</label>
+            </value>
+            <value>
+                <fullName>US and Canada</fullName>
+                <default>false</default>
+                <label>US and Canada</label>
+            </value>
+            <value>
+                <fullName>USPS Federal</fullName>
+                <default>false</default>
+                <label>USPS Federal</label>
+            </value>
+            <value>
+                <fullName>USPS SLED</fullName>
+                <default>false</default>
+                <label>USPS SLED</label>
+            </value>
+            <value>
+                <fullName>US SLED</fullName>
+                <default>false</default>
+                <label>US SLED</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>APJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Global Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>LATAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>North Asia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Public Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>South Asia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>USPS Federal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>USPS SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>US SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Duty_Ended_Date__c</fullName>
+    <description>The date in which the ESR disengaged from the client (doesn’t have to be the contract end date).</description>
+    <inlineHelpText>The date in which the ESR disengaged from the client (doesn’t have to be the contract end date).</inlineHelpText>
+    <label>ESO Duty Ended Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

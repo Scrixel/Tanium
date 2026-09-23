@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Type_Select_only_two_option</fullName>
+    <active>false</active>
+    <description>SS-299 We want to only allow 2 values for the Partner Type</description>
+    <errorConditionFormula>AND(
+IF(INCLUDES( Partner_Type__c , &quot;Consultant&quot;), 1,0)  +  IF(INCLUDES( Partner_Type__c , &quot;Distributor&quot;), 1,0)+
+IF(INCLUDES( Partner_Type__c , &quot;Managed Services Provider&quot;), 1,0)  
+ + IF(INCLUDES( Partner_Type__c , &quot;Reseller&quot;), 1,0) 
+ + IF(INCLUDES( Partner_Type__c , &quot;System Integrator&quot;), 1,0)  + IF(INCLUDES( Partner_Type__c , &quot;Technology Alliance&quot;), 1,0) &gt; 2)</errorConditionFormula>
+    <errorDisplayField>Partner_Type__c</errorDisplayField>
+    <errorMessage>This field allows a maximum of 2 choices.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Opp_Reg_NEW_Bus_Days_in_App_Cycle__c</fullName>
+    <description>In Business Days
+Completed approvals:  Timestamp RVP/Fed VP - Date Created
+Rejection:  Date Rejected - Date Created
+In progress: Now - Lead Owner Changed Timestamp 
+Not started: Now - Created Date</description>
+    <externalId>false</externalId>
+    <formula>CASE (
+TEXT( or_Opp_Reg_Approval_Flow_Status__c ),
+&quot;Approvals complete&quot;,
+((5 * ( FLOOR( ( DATEVALUE(or_New_Opp_Reg_Time_RVP_FED_VP_Completed__c ) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(or_New_Opp_Reg_Time_RVP_FED_VP_Completed__c ) - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approver rejected&quot;,
+((5 * ( FLOOR( ( Date_Rejected__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Date_Rejected__c - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approvals not started&quot;,
+((5 * ( FLOOR( ( today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( today() - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approvals in progress&quot;,
+((5 * ( FLOOR( ( today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( today() - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+0)
+
+
+
+
+/*CASE (
+TEXT( or_Opp_Reg_Approval_Flow_Status__c ),
+&quot;Approvals complete&quot;, ((5 * ( FLOOR( ( DATEVALUE(or_New_Opp_Reg_Time_RVP_FED_VP_Completed__c ) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(or_New_Opp_Reg_Time_RVP_FED_VP_Completed__c ) - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approver rejected&quot;, ((5 * ( FLOOR( ( DATEVALUE(Date_Rejected__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(Date_Rejected__c) - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approvals not started&quot;, ((5 * ( FLOOR( ( today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( today() - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+&quot;Approvals in progress&quot;, ((5 * ( FLOOR( ( today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( today() - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE(OR_Created_Date_n_Time__c) - DATE( 1900, 1, 8), 7 ) ) )),
+
+0)*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>In Business Days
+Completed approvals:  Timestamp RVP/Fed VP - Date Created
+Rejection:  Date Rejected - Date Created
+In progress: Now - Lead Owner Changed Timestamp 
+Not started: Now - Created Date</inlineHelpText>
+    <label>Days in Approval Cycle (New)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Custom_FieldValues__c</fullName>
+    <description>Enter a list of mandatory User record field value pairs used for unit tests</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enter a CSV list of required custom User field value pairs for unit tests (Field_API_Name1:value1, field_API_Name2:value2)</inlineHelpText>
+    <label>Test User Custom FieldValues</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Opportunity_Registration__c</fullName>
+    <description>Refer to the Opp Reg Policy Guide for further details on Opp Reg type requirements</description>
+    <inlineHelpText>Refer to the Policy Guide for further details on Type requirements</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Opportunity_Registration</valueSetName>
+    </valueSet>
+</CustomField>

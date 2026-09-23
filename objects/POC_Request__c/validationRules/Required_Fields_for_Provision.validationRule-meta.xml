@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_for_Provision</fullName>
+    <active>true</active>
+    <description>Require Deploy when Provision is selected.</description>
+    <errorConditionFormula>AND(!Deploy__c,
+Provision__c
+)</errorConditionFormula>
+    <errorMessage>If Provision is selected then Deploy must also be selected.</errorMessage>
+</ValidationRule>

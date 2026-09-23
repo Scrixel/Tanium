@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit_ID_Formula__c</fullName>
+    <description>&quot;Business Unit&quot; is an object in Kimble.
+This field will fill in Kimble&apos;s Business Unit RT ID and pass it on to Flow: &quot;Create Kimble Proposal&quot; to create Proposal in Kimble upon ESO ISR Approval.
+Only visible to Admins for troubleshooting.
+Ref: SS-194</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL(Business_Unit__c,&quot;APJ&quot;),&quot;aAU7V000000g4w6&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;EMEA&quot;),&quot;aAU7V000000RLgJ&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;Americas Commercial&quot;),&quot;aAU7V000000RLgE&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;Americas PubSec&quot;),&quot;aAU7V000000RLgO&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Central Focus +&quot;),&quot;aAU7V000000RLgc&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Central-West ENT&quot;),&quot;aAU7V000000RLgd&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Northeast ENT&quot;),&quot;aAU7V000000RLgU&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Northeast Focus +&quot;),&quot;aAU7V000000RLgT&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Southeast ENT&quot;),&quot;aAU7V000000RLga&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US Southeast Focus +&quot;),&quot;aAU7V000000RLgV&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec ALPHA&quot;),&quot;aAU7V000000RLge&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec BRAVO&quot;),&quot;aAU7V000000RLgf&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec MIKE&quot;),&quot;aAU7V000000RLgg&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec ECHO&quot;),&quot;aAU7V000000RLgh&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec JULIET&quot;),&quot;aAU7V000000RLgi&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US PubSec OMAHA&quot;),&quot;aAU7V000000RLgj&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;International&quot;),&quot;aAU7V000000RLgJ&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;Asia North&quot;),&quot;aAU7V000000RLgX&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;Asia South&quot;),&quot;aAU7V000000RLgW&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;EMEA Commercial&quot;),&quot;aAU7V000000RLgY&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;EMEA PubSec&quot;),&quot;aAU7V000000RLgZ&quot;,
+IF(
+ISPICKVAL(Business_Unit__c,&quot;US West Focus +&quot;),&quot;aAU7V000000RLgb&quot;,&quot;&quot;
+
+))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ESO Business Unit ID Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7_0_Deployments</fullName>
+    <columns>Account__c</columns>
+    <columns>Server_Version__c</columns>
+    <columns>Seats_Deployed__c</columns>
+    <columns>Successfully_Deployed_Seats_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Deployment_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Server_Version__c</field>
+        <operation>startsWith</operation>
+        <value>7</value>
+    </filters>
+    <label>7.0 Deployments</label>
+    <sharedTo>
+        <group>Global_Sales</group>
+        <group>TAM</group>
+    </sharedTo>
+</ListView>

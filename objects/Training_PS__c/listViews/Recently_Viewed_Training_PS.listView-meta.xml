@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recently_Viewed_Training_PS</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Opportunity_Close_Date__c</columns>
+    <columns>Product__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>Training_End_Date__c</columns>
+    <columns>New_Training_End_Date__c</columns>
+    <columns>Formatted_Training_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/13/2023 12:00 AM</value>
+    </filters>
+    <label>Recently Viewed Training &amp; PS</label>
+    <language>en_US</language>
+</ListView>

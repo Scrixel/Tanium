@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity__c</fullName>
+    <description>4/19/21: Change label from Number of End Points to Number of POC Endpoints</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Production: limited to maximum purchased seats. Lab: limited to
+10% of purchased seats</inlineHelpText>
+    <label>Number of POC Endpoints</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

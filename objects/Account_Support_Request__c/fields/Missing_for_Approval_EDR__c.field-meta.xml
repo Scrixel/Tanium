@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_for_Approval_EDR__c</fullName>
+    <externalId>false</externalId>
+    <formula>/*IF( !ISBLANK( Meeting_Call_or_Email_Objective__c ),&quot;&quot;,&quot; Meeting Objective; &quot;) &amp;*/
+IF( !ISBLANK( Onsite_Contact__c),&quot;&quot;,&quot; Onsite Contact; &quot;)&amp;
+IF( !ISBLANK(Date_of_Meeting__c ),&quot;&quot;,&quot; Date of Meeting; &quot;)&amp;
+IF(!ISBLANK(Text( Time_Zone__c)),&quot;&quot;,&quot;Time Zone; &quot;)&amp;
+IF( Number_of_Attendees__c &gt; 0,&quot;&quot;,&quot;Number of Attendees&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Missing for Approval - UES Request</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

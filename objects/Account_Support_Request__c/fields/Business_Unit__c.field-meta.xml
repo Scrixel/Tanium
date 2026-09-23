@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <description>SS-194
+If a value is added to this field, it also needs to be added to ISR Field &quot;Business_Unit_ID_Formula__c&quot; along with Kimble Business Unit Record Id from Kimble Object &quot;Business Units&quot;.</description>
+    <label>ESO Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Americas Commercial</fullName>
+                <default>false</default>
+                <label>Americas Commercial</label>
+            </value>
+            <value>
+                <fullName>US Northeast Focus +</fullName>
+                <default>false</default>
+                <label>US Northeast Focus +</label>
+            </value>
+            <value>
+                <fullName>US Northeast ENT</fullName>
+                <default>false</default>
+                <label>US Northeast ENT</label>
+            </value>
+            <value>
+                <fullName>US Southeast Focus +</fullName>
+                <default>false</default>
+                <label>US Southeast Focus +</label>
+            </value>
+            <value>
+                <fullName>US Southeast ENT</fullName>
+                <default>false</default>
+                <label>US Southeast ENT</label>
+            </value>
+            <value>
+                <fullName>US West Focus +</fullName>
+                <default>false</default>
+                <label>US West Focus +</label>
+            </value>
+            <value>
+                <fullName>US Central Focus +</fullName>
+                <default>false</default>
+                <label>US Central Focus +</label>
+            </value>
+            <value>
+                <fullName>US Central-West ENT</fullName>
+                <default>false</default>
+                <label>US Central-West ENT</label>
+            </value>
+            <value>
+                <fullName>Americas PubSec</fullName>
+                <default>false</default>
+                <label>Americas PubSec</label>
+            </value>
+            <value>
+                <fullName>US PubSec ALPHA</fullName>
+                <default>false</default>
+                <label>US PubSec ALPHA</label>
+            </value>
+            <value>
+                <fullName>US PubSec BRAVO</fullName>
+                <default>false</default>
+                <label>US PubSec BRAVO</label>
+            </value>
+            <value>
+                <fullName>US PubSec MIKE</fullName>
+                <default>false</default>
+                <label>US PubSec MIKE</label>
+            </value>
+            <value>
+                <fullName>US PubSec ECHO</fullName>
+                <default>false</default>
+                <label>US PubSec ECHO</label>
+            </value>
+            <value>
+                <fullName>US PubSec JULIET</fullName>
+                <default>false</default>
+                <label>US PubSec JULIET</label>
+            </value>
+            <value>
+                <fullName>US PubSec OMAHA</fullName>
+                <default>false</default>
+                <label>US PubSec OMAHA</label>
+            </value>
+            <value>
+                <fullName>Asia North</fullName>
+                <default>false</default>
+                <label>Asia North</label>
+            </value>
+            <value>
+                <fullName>Asia South</fullName>
+                <default>false</default>
+                <label>Asia South</label>
+            </value>
+            <value>
+                <fullName>EMEA Commercial</fullName>
+                <default>false</default>
+                <label>EMEA Commercial</label>
+            </value>
+            <value>
+                <fullName>EMEA PubSec</fullName>
+                <default>false</default>
+                <label>EMEA PubSec</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>APJ</fullName>
+                <default>false</default>
+                <label>APJ</label>
+            </value>
+            <value>
+                <fullName>Americas Federal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Americas Federal</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Tanium</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>serviceScore__c</fullName>
+    <description>Score from the service sub pieces</description>
+    <externalId>false</externalId>
+    <formula>( serviceSStrategyGoals__c +  serviceSSupport__c +  serviceSHealthMonitoring__c +  serviceSImprovementPlan__c +  serviceSDocumentation__c +  serviceSRegularMeetings__c +  serviceSTechIntegration__c +   serviceSProcessIntegration__c +  serviceSUseCases__c +  serviceSRoiProved__c +  serviceSQBRs__c +  serviceSRenewalTracking__c +  serviceSExpansionTracking__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>serviceScore</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

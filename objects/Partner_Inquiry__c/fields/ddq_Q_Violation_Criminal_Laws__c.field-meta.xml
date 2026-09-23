@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_Q_Violation_Criminal_Laws__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Has your business or any of its employees, officers or directors ever been found guilty or convicted of a violation of any criminal laws?</description>
+    <inlineHelpText>Has your business or any of its employees, officers or directors ever been found guilty or convicted of a violation of any criminal laws?</inlineHelpText>
+    <label>Violation Criminal Laws?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

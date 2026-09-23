@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution__c</fullName>
+    <description>Used to identify product related content.</description>
+    <label>Solution</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Connect</fullName>
+                <default>false</default>
+                <label>Connect</label>
+            </value>
+            <value>
+                <fullName>Core Platform</fullName>
+                <default>false</default>
+                <label>Core Platform</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Deploy</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Enforce</fullName>
+                <default>false</default>
+                <label>Enforce</label>
+            </value>
+            <value>
+                <fullName>Index</fullName>
+                <default>false</default>
+                <label>Index</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor</fullName>
+                <default>false</default>
+                <label>Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>Map</fullName>
+                <default>false</default>
+                <label>Map</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Protect</fullName>
+                <default>false</default>
+                <label>Protect</label>
+            </value>
+            <value>
+                <fullName>Reveal</fullName>
+                <default>false</default>
+                <label>Reveal</label>
+            </value>
+            <value>
+                <fullName>Threat Response</fullName>
+                <default>false</default>
+                <label>Threat Response</label>
+            </value>
+            <value>
+                <fullName>Trends</fullName>
+                <default>false</default>
+                <label>Trends</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>Impact</fullName>
+                <default>false</default>
+                <label>Impact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POD__c</fullName>
+    <description>TAM POD mapping
+Please confirm with Daniel Moran (cc Katie Fanelli) before adding any POD Values. This is originating from User to Account to ISR</description>
+    <inlineHelpText>TAM POD</inlineHelpText>
+    <label>POD</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asia North</fullName>
+                <default>false</default>
+                <label>Asia North</label>
+            </value>
+            <value>
+                <fullName>Asia South</fullName>
+                <default>false</default>
+                <label>Asia South</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>DACH</fullName>
+                <default>false</default>
+                <label>DACH</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+            <value>
+                <fullName>EDR</fullName>
+                <default>false</default>
+                <label>EDR</label>
+            </value>
+            <value>
+                <fullName>EMEA-UK</fullName>
+                <default>false</default>
+                <label>EMEA North</label>
+            </value>
+            <value>
+                <fullName>EMEA-France</fullName>
+                <default>false</default>
+                <label>EMEA South</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>Partner POD</fullName>
+                <default>false</default>
+                <label>Partner POD</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

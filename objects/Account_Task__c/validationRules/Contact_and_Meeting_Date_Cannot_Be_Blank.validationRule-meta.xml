@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_and_Meeting_Date_Cannot_Be_Blank</fullName>
+    <active>true</active>
+    <description>SS-1410:Account Contact OR Meeting Date can not be null</description>
+    <errorConditionFormula>AND(
+    OR(
+        AND(
+            ISPICKVAL(Type__c,&quot;Implement&quot;),
+            OR( 
+                ISPICKVAL(Sub_Type__c,&quot;Hold implementation kickoff meeting&quot;),
+                ISPICKVAL(Sub_Type__c,&quot;Hold first Status Meeting&quot;)
+            )
+        ),
+        AND(
+            ISPICKVAL(Type__c,&quot;Onboard&quot;),
+            OR( 
+                ISPICKVAL(Sub_Type__c,&quot;Hold onboarding kickoff meeting&quot;),
+                ISPICKVAL(Sub_Type__c,&quot;Receive completed pre-implementation requirements checklist&quot;)
+            )
+        ),
+        AND(
+            ISPICKVAL(Type__c,&quot;Mature&quot;),
+            ISPICKVAL(Sub_Type__c,&quot;Deliver Executive Business Review&quot;)
+        )
+    ),
+    ISPICKVAL(Status__c,&quot;Completed&quot;),
+    OR(
+        ISBLANK(Account_Contact__c),
+        ISBLANK(Meeting_Date__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please populate the Account Contact and Meeting Date to complete this task</errorMessage>
+</ValidationRule>

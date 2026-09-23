@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_c__c</fullName>
+    <description>Used to be called CSM Driver 
+08/15/2020:Changed to category upon Michael Boyd&apos;s request</description>
+    <label>Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advocacy Potential</fullName>
+                <default>false</default>
+                <label>Advocacy Potential</label>
+            </value>
+            <value>
+                <fullName>Cross Sell / Up Sell Potential</fullName>
+                <default>false</default>
+                <label>Cross Sell / Up Sell Potential</label>
+            </value>
+            <value>
+                <fullName>Drive Adoption</fullName>
+                <default>false</default>
+                <label>Drive Adoption</label>
+            </value>
+            <value>
+                <fullName>Low Health</fullName>
+                <default>false</default>
+                <label>Low Health</label>
+            </value>
+            <value>
+                <fullName>New Account</fullName>
+                <default>false</default>
+                <label>New Account</label>
+            </value>
+            <value>
+                <fullName>New Logo Presales</fullName>
+                <default>false</default>
+                <label>New Logo Presales</label>
+            </value>
+            <value>
+                <fullName>Other (Contact CSM)</fullName>
+                <default>false</default>
+                <label>Other (Contact CSM)</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Strategic Importance</fullName>
+                <default>false</default>
+                <label>Strategic Importance</label>
+            </value>
+            <value>
+                <fullName>Use Case Expansion</fullName>
+                <default>false</default>
+                <label>Use Case Expansion</label>
+            </value>
+            <value>
+                <fullName>ACV Protection</fullName>
+                <default>false</default>
+                <label>ACV Protection</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>deploySSupportModel__c</fullName>
+    <description>1	1	Pain Points?	0	1	DEFINITION: A documented understanding of what problem we are solving\n\nIMPORTANCE: Clarity. Mutual agreement between stakeholders. Understanding as new stakeholders involved at new stages \n\n
+2	1	Stakeholder Map?	1	1	DEFINITION: A documented org chart showing reporting lines and political power\n\nIMPORTANCE: Sales, TAMs and Execs need to be clear on who is who. Influencers. Detractors and supporters. Will evolve as campaign progresses
+3	1	Eval Guide?	2	1	DEFINITION: Common template used in POCs\n\nIMPORTANCE: A clear, referenceable document to remove ambiguity, demonstrate Taniumâ€™s understanding. Provides clear foundation to move forward. Helps to provide clarity of use vs shelf ware 
+4	1	Use Cases?	3	1	DEFINITION: Is there a clear, documented set of use cases that form the basis of Tanium&apos;s use? 
+
+IMPORTANCE: A clear, referenceable document to remove ambiguity, demonstrate Taniumâ€™s understanding. Provides clear foundation to move forward. Helps to p</description>
+    <externalId>false</externalId>
+    <label>deploySSupportModel</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

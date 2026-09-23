@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Margin_Type__c</fullName>
+    <description>Used to match the type of deal the margin is being calculated for</description>
+    <label>Margin Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MSP</fullName>
+                <default>false</default>
+                <label>MSP</label>
+            </value>
+            <value>
+                <fullName>Non-MSP</fullName>
+                <default>false</default>
+                <label>Non-MSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

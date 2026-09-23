@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_3__c</fullName>
+    <label>DEPRECATED - Level 3</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Level_2__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>APJ</fullName>
+                <default>false</default>
+                <label>APJ</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>EMEA: Central Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Central Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA: Named Accounts</fullName>
+                <default>false</default>
+                <label>EMEA: Named Accounts</label>
+            </value>
+            <value>
+                <fullName>EMEA: Northern Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Northern Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA: Southern Europe</fullName>
+                <default>false</default>
+                <label>EMEA: Southern Europe</label>
+            </value>
+            <value>
+                <fullName>EMEA Northern Europe MSP</fullName>
+                <default>false</default>
+                <label>EMEA Northern Europe MSP</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>Global MSP</fullName>
+                <default>false</default>
+                <label>Global MSP</label>
+            </value>
+            <value>
+                <fullName>Global Partner Development</fullName>
+                <default>false</default>
+                <label>Global Partner Development</label>
+            </value>
+            <value>
+                <fullName>Global Partner Sales</fullName>
+                <default>false</default>
+                <label>Global Partner Sales</label>
+            </value>
+            <value>
+                <fullName>Global Sales</fullName>
+                <default>false</default>
+                <label>Global Sales</label>
+            </value>
+            <value>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <label>Japan</label>
+            </value>
+            <value>
+                <fullName>LATAM: Partner</fullName>
+                <default>false</default>
+                <label>LATAM: Partner</label>
+            </value>
+            <value>
+                <fullName>Latin America</fullName>
+                <default>false</default>
+                <label>Latin America</label>
+            </value>
+            <value>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+                <label>North Asia</label>
+            </value>
+            <value>
+                <fullName>South Asia</fullName>
+                <default>false</default>
+                <label>South Asia</label>
+            </value>
+            <value>
+                <fullName>South Korea</fullName>
+                <default>false</default>
+                <label>South Korea</label>
+            </value>
+            <value>
+                <fullName>US and Canada</fullName>
+                <default>false</default>
+                <label>US and Canada</label>
+            </value>
+            <value>
+                <fullName>US and Canada GSI</fullName>
+                <default>false</default>
+                <label>US and Canada GSI</label>
+            </value>
+            <value>
+                <fullName>US and Canada Partner</fullName>
+                <default>false</default>
+                <label>US and Canada Partner</label>
+            </value>
+            <value>
+                <fullName>US Central</fullName>
+                <default>false</default>
+                <label>US Central</label>
+            </value>
+            <value>
+                <fullName>US Emerging Enterprises</fullName>
+                <default>false</default>
+                <label>US Emerging Enterprises</label>
+            </value>
+            <value>
+                <fullName>US Federal</fullName>
+                <default>false</default>
+                <label>US Federal</label>
+            </value>
+            <value>
+                <fullName>US MSP East</fullName>
+                <default>false</default>
+                <label>US MSP East</label>
+            </value>
+            <value>
+                <fullName>US MSP West</fullName>
+                <default>false</default>
+                <label>US MSP West</label>
+            </value>
+            <value>
+                <fullName>US Northeast</fullName>
+                <default>false</default>
+                <label>US Northeast</label>
+            </value>
+            <value>
+                <fullName>US Northwest</fullName>
+                <default>false</default>
+                <label>US Northwest</label>
+            </value>
+            <value>
+                <fullName>US SLED</fullName>
+                <default>false</default>
+                <label>US SLED</label>
+            </value>
+            <value>
+                <fullName>US Southeast</fullName>
+                <default>false</default>
+                <label>US Southeast</label>
+            </value>
+            <value>
+                <fullName>US Southwest</fullName>
+                <default>false</default>
+                <label>US Southwest</label>
+            </value>
+            <value>
+                <fullName>US West</fullName>
+                <default>false</default>
+                <label>US West</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>South Asia</controllingFieldValue>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <valueName>South Asia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <valueName>Federal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <controllingFieldValue>US SLED</controllingFieldValue>
+            <valueName>US SLED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS Federal</controllingFieldValue>
+            <valueName>US Federal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US and Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Emerging Enterprises</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Northeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Northwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Southeast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US Southwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US and Canada</controllingFieldValue>
+            <valueName>US West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <controllingFieldValue>North Asia</controllingFieldValue>
+            <valueName>APJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <controllingFieldValue>North Asia</controllingFieldValue>
+            <valueName>Japan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <controllingFieldValue>North Asia</controllingFieldValue>
+            <valueName>North Asia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APJ</controllingFieldValue>
+            <controllingFieldValue>North Asia</controllingFieldValue>
+            <valueName>South Korea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Global MSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>LATAM: Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA: Central Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA: Named Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA: Northern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>EMEA: Southern Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LATAM</controllingFieldValue>
+            <valueName>Global Partner Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LATAM</controllingFieldValue>
+            <valueName>Global Partner Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LATAM</controllingFieldValue>
+            <valueName>Latin America</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Sales</controllingFieldValue>
+            <valueName>Global Sales</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnPrem</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>On_Prem_Compact_Layout</compactLayoutAssignment>
+    <label>On-Prem</label>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>McAfee%2FRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>VMware%2FTrustpoint</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_OSes__c</picklist>
+        <values>
+            <fullName>AIX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debian%2FUbuntu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red Hat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solaris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Migration_Status__c</picklist>
+        <values>
+            <fullName>Configuration Migration Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Migration_Tools__c</picklist>
+        <values>
+            <fullName>CableCar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Migr8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please comment%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TaaSinator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Provider__c</picklist>
+        <values>
+            <fullName>AWS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Region__c</picklist>
+        <values>
+            <fullName>au</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>gov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>jp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>uk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>us</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Compliance_Framework__c</picklist>
+        <values>
+            <fullName>protected_b</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tc_usg</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Database__c</picklist>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Titankube_Integration_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ring__c</picklist>
+        <values>
+            <fullName>EA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SAR_Version__c</picklist>
+        <values>
+            <fullName>2024H1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024H2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025H1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025H2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not on SAR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SSL_Certificate__c</picklist>
+        <values>
+            <fullName>Certificate Authority Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-signed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Server_Device_Type__c</picklist>
+        <values>
+            <fullName>On-Prem</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Server_Model_Manufacturer_Brand__c</picklist>
+        <values>
+            <fullName>Cisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Server_OS__c</picklist>
+        <values>
+            <fullName>Linux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E0%2E0-365</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E0%2E0-418</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E0%2E0-420</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E2%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E3%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E3%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E3%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E3%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E3%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E4%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E5%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E6%2E7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E7%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TanOS 1%2E8%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium as a Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2003</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2008 R2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2012 R2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Server 2019</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Signed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Successfully_Deployed_Seats__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TaaS_Region__c</picklist>
+        <values>
+            <fullName>AP-Northeast-1 %28Japan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU-Central-1 %28Germany%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ap-southeast-2 %28Australia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ca-central-1 %28Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eu-west-2 %28England%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sa-east-1 %28Brazil%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tanium_Infrastructure__c</picklist>
+        <values>
+            <fullName>Cloud Template %E2%80%93 AWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Template %E2%80%93 Azure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium %E2%80%93 Cloud Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium %E2%80%93 Physical Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium - Virtual Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium as a Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows %E2%80%93 Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows %E2%80%93 Physical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows %E2%80%93 Virtual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Lab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

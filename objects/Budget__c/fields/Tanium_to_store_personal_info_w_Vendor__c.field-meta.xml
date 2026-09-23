@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_to_store_personal_info_w_Vendor__c</fullName>
+    <inlineHelpText>To &quot;store&quot; personal information with the vendor typically arises in the context of hosted services or SaaS where Tanium&apos;s will upload personal information to the vendor&apos;s services (e.g., SFDC, GSuite, Slack)</inlineHelpText>
+    <label>Tanium to store personal info w/ Vendor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

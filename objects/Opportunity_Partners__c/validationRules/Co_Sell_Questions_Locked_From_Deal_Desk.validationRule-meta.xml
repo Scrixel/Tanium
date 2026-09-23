@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Co_Sell_Questions_Locked_From_Deal_Desk</fullName>
+    <active>true</active>
+    <description>Deal Desk is restricted from editing the Partner Co-Sell fields.</description>
+    <errorConditionFormula>(ISCHANGED(Provided_Consistent_Value__c)||
+ISCHANGED(Added_Value_to_Complete_Solution__c))&amp;&amp;
+NOT( $Permission.Allow_Channel_Ops_permission )&amp;&amp;
+NOT( $Permission.DisableValidationRules)&amp;&amp;
+NOT( $Profile.Name = &apos;Tanium System Administrator&apos;)&amp;&amp;
+Opportunity__r.Co_Sell_Questions_Submitted__c = TRUE</errorConditionFormula>
+    <errorMessage>Deal Desk is prohibited from changing the Opportunity Partner Co-Sell Fields</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EBC_Is_Lunch_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field added to EBC RT and Pagelayout Ref: Debbie Mansfield</description>
+    <inlineHelpText>Lunch is provided daily at Tanium HQ</inlineHelpText>
+    <label>Is Lunch Requested?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

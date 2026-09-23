@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProfilesWithRestrictedPaymentTypesAccess__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Profile Names having access to Restricted Payment Types. Profile names to be separated by semi colon.</inlineHelpText>
+    <label>ProfilesWithRestrictedPaymentTypesAccess</label>
+    <length>250</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

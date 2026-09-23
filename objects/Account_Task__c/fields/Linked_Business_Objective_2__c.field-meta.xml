@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_Business_Objective_2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Linked Business Objective 2</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Business Objective must be on the same Account.</errorMessage>
+        <filterItems>
+            <field>Business_Objective__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Business_Objective__c</referenceTo>
+    <relationshipLabel>Account Tasks (Linked Business Objective 2)</relationshipLabel>
+    <relationshipName>Account_Tasks1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Registration_LATAM_RVP_Deal_Registration</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Deal Registration - LATAM RVP</label>
+    <queue>Deal_Registration_LATAM_RVP</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

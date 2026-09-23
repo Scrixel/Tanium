@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>deploySTechIntegration__c</fullName>
+    <description>DEFINITION: The design and testing of technical integration of Tanium as a feed to other systems (SIEM, ServiceNow) or other systems to Tanium (IOC feeds, VirusTotal etc)
+
+IMPORTANCE: Integration can be complex. The earlier we start, the more sticky we become. The more seamless the experience. Speed to value</description>
+    <externalId>false</externalId>
+    <label>deploySTechIntegration</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

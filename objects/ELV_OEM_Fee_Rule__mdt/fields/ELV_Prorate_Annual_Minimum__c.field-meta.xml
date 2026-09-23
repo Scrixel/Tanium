@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Prorate_Annual_Minimum__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TNCI-208: Indicates whether a qualifying sub-annual minimum fee is prorated.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Prorate Annual Minimum</label>
+    <type>Checkbox</type>
+</CustomField>

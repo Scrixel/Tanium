@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_Manager_Account_LU__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>CSM Manager (Account) Lookup added to add this field to EBC ISR Email Alert
+Will be filled up from Account via PB: Assign Account Support Request Hierarchy</description>
+    <inlineHelpText>CSM Manager (Account)</inlineHelpText>
+    <label>CSM Manager (Account)</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Internal_Support_Requests_LU</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

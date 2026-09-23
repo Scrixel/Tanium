@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Corruption_Severity__c</fullName>
+    <inlineHelpText>Please list Severity Level AND What would be the worst thing that could happen? (ie. Low. Worst thing disclosed would be email addresses)</inlineHelpText>
+    <label>Data Corruption Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High (Severe or catastrophic financial, reputational, competitive or regulatory adverse consequences)</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium (Serious financial, reputational, competitive or regulatory adverse consequences)</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low (Limited financial, reputational, competitive or regulatory adverse consequences)</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

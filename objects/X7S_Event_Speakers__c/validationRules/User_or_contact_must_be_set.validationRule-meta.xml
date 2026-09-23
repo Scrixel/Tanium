@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_or_contact_must_be_set</fullName>
+    <active>true</active>
+    <description>User or Contact field cannot be blank on Event Speaker record</description>
+    <errorConditionFormula>ISBLANK(User__c) &amp;&amp; ISBLANK(Contact__c)</errorConditionFormula>
+    <errorDisplayField>User__c</errorDisplayField>
+    <errorMessage>User or Contact is not set. One of these is required.</errorMessage>
+</ValidationRule>

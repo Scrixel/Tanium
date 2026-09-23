@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsibility__c</fullName>
+    <label>Responsibility</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TAM</fullName>
+                <default>false</default>
+                <label>TAM</label>
+            </value>
+            <value>
+                <fullName>OTAM</fullName>
+                <default>false</default>
+                <label>OTAM</label>
+            </value>
+            <value>
+                <fullName>Primary TAM</fullName>
+                <default>false</default>
+                <label>Primary TAM</label>
+            </value>
+            <value>
+                <fullName>Secondary TAM</fullName>
+                <default>false</default>
+                <label>Secondary TAM</label>
+            </value>
+            <value>
+                <fullName>TAM Architect</fullName>
+                <default>false</default>
+                <label>TAM Architect</label>
+            </value>
+            <value>
+                <fullName>CSM</fullName>
+                <default>false</default>
+                <label>CSM</label>
+            </value>
+            <value>
+                <fullName>SME Lead</fullName>
+                <default>false</default>
+                <label>SME Lead</label>
+            </value>
+            <value>
+                <fullName>SME Lead (Secondary)</fullName>
+                <default>false</default>
+                <label>SME Lead (Secondary)</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Pod Lead</fullName>
+                <default>false</default>
+                <label>Pod Lead</label>
+            </value>
+            <value>
+                <fullName>Support Enabled</fullName>
+                <default>false</default>
+                <label>Support Enabled</label>
+            </value>
+            <value>
+                <fullName>Support Candidate</fullName>
+                <default>false</default>
+                <label>Support Candidate</label>
+            </value>
+            <value>
+                <fullName>Escalation Engineer</fullName>
+                <default>false</default>
+                <label>Escalation Engineer</label>
+            </value>
+            <value>
+                <fullName>Principal Escalation Engineer</fullName>
+                <default>false</default>
+                <label>Principal Escalation Engineer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

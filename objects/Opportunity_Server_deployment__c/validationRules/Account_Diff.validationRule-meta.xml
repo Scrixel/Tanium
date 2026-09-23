@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Diff</fullName>
+    <active>false</active>
+    <description>Server deployment Account different from Opportunity Account</description>
+    <errorConditionFormula>CASESAFEID(Opportunity_Account_id__c) &lt;&gt; CASESAFEID(Server_Deployment_Account_Id__c)</errorConditionFormula>
+    <errorMessage>Server deployment Account is different from Opportunity Account, please select  Server deployment linked to Opportunity Account</errorMessage>
+</ValidationRule>

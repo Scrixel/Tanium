@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Record_Types</fullName>
+    <columns>NAME</columns>
+    <columns>Pricebook__c</columns>
+    <columns>old_Opportunity_Type__c</columns>
+    <columns>Level_2__c</columns>
+    <columns>Level_3__c</columns>
+    <columns>Level_4__c</columns>
+    <columns>Route_Based_on_RVP_or_AVP__c</columns>
+    <columns>Contract_Owner_Name__c</columns>
+    <columns>Partner_Owner_Name__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Record Types</label>
+</ListView>

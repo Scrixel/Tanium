@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provide_Other_Or_Homegrown_Pt_Solution</fullName>
+    <active>true</active>
+    <description>If Other or Homegrown point solution is the value chosen, this Other or Homegrown solution must be provided in this field.</description>
+    <errorConditionFormula>AND( INCLUDES( Point_Solutions_Currently_Deployed__c ,  &quot;Other or Homegrown&quot; ) , ISBLANK( Other_or_Homegrown_Deployed_Pt_Solutions__c ))</errorConditionFormula>
+    <errorMessage>If Other or Homegrown Point Solution is the value chosen, this field must list what the Other or Homegrown solution is.</errorMessage>
+</ValidationRule>

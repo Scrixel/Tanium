@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Test Field Set</label>
+    <protected>false</protected>
+    <values>
+        <field>Field_10__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_1__c</field>
+        <value xsi:type="xsd:string">Account_Vote_Limit</value>
+    </values>
+    <values>
+        <field>Field_2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_3__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_4__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_5__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_6__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_7__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_8__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_9__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_10__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_1__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Field_Sequence_2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_3__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_4__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_5__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_6__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_7__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_8__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Sequence_9__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

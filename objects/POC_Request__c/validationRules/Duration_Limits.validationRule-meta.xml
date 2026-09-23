@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Limits</fullName>
+    <active>false</active>
+    <description>When the picklist value for field Tanium Infrastructure Required is Yes – Tanium as a Service, Duration days  must fall between 1 - 30 for both New and Extension POC Type.
+ #INC0168419 - Remove &quot;Duration&lt;&gt;90&quot; after &quot;1/31/22&quot;</description>
+    <errorConditionFormula>IF( Account__r.RecordTypeId =&apos;01260000000Q6hS&apos;,
+AND(OR(Duration__c &lt; 1, Duration__c &gt; 60), ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;),  NOT(ISPICKVAL( Promotion__c , &quot;Performance Promo (Expires 1/31/22)&quot;)),NOT(ISPICKVAL( Promotion__c , &quot;ITSC&quot;))), 
+AND(OR(Duration__c &lt; 1, Duration__c &gt; 30), ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;),NOT(ISPICKVAL( Promotion__c , &quot;Performance Promo (Expires 1/31/22)&quot;)),NOT(ISPICKVAL( Promotion__c , &quot;ITSC&quot;))))</errorConditionFormula>
+    <errorDisplayField>Duration__c</errorDisplayField>
+    <errorMessage>Duration days must fall between 1 - 60 when Tanium Infrastructure Required selection is Yes - Tanium as a Service for a Partner Account or It should fall between 1 - 30 when Tanium Infrastructure Required Selection is Yes - Tanium as a Service.</errorMessage>
+</ValidationRule>

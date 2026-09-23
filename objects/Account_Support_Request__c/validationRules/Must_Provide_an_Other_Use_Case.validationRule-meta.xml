@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Provide_an_Other_Use_Case</fullName>
+    <active>true</active>
+    <description>When &quot;Other Use Case&quot; is the selected value from the picklist field Primary Use Cases/Why Tanium this field must give the Other Use Case.</description>
+    <errorConditionFormula>AND( 
+INCLUDES( Primary_Use_Cases_Why_Tanium__c , &quot;OTHER - If OTHER list additional use case(s)&quot;) , ISBLANK
+( OTHER_List_Additional_Use_Cases__c ) )</errorConditionFormula>
+    <errorMessage>You must enter the Other Use Case when you select &quot;Other - If Other list additional Use Case&quot; for the value.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DI EPP 1 49999</label>
+    <protected>false</protected>
+    <values>
+        <field>ELV_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ELV_Max_Quantity__c</field>
+        <value xsi:type="xsd:double">49999.0</value>
+    </values>
+    <values>
+        <field>ELV_Min_Quantity__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>ELV_Minimum_Fee_Per_Subscription__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ELV_Minimum_Fee_Per_Unit__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>ELV_Per_Subscriber__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ELV_Product_SKU__c</field>
+        <value xsi:type="xsd:string">DI-EPP</value>
+    </values>
+    <values>
+        <field>ELV_Prorate_Annual_Minimum__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ELV_Royalty_Percent__c</field>
+        <value xsi:type="xsd:double">50.0</value>
+    </values>
+</CustomMetadata>

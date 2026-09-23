@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_Prioritized_Focus_Areas__c</fullName>
+    <inlineHelpText>To review definitions and examples of focus areas, visit the CSM Google Site: https://sites.google.com/tanium.com/customersuccess/engagement-model</inlineHelpText>
+    <label>CSM Prioritized Focus Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IT Hygiene</fullName>
+                <default>false</default>
+                <label>IT Hygiene</label>
+            </value>
+            <value>
+                <fullName>New Account</fullName>
+                <default>false</default>
+                <label>New Account</label>
+            </value>
+            <value>
+                <fullName>Low Health</fullName>
+                <default>false</default>
+                <label>Low Health</label>
+            </value>
+            <value>
+                <fullName>ARR Protection: Renewal Risk</fullName>
+                <default>false</default>
+                <label>ARR Protection: Renewal Risk</label>
+            </value>
+            <value>
+                <fullName>NARR: Cross/Up-Sell</fullName>
+                <default>false</default>
+                <label>NARR: Cross/Up-Sell</label>
+            </value>
+            <value>
+                <fullName>Single-Threaded: Use Case Expansion</fullName>
+                <default>false</default>
+                <label>Single-Threaded: Use Case Expansion</label>
+            </value>
+            <value>
+                <fullName>Single-Threaded: Drive Adoption</fullName>
+                <default>false</default>
+                <label>Single-Threaded: Drive Adoption</label>
+            </value>
+            <value>
+                <fullName>Executive Relationships</fullName>
+                <default>false</default>
+                <label>Executive Relationships</label>
+            </value>
+            <value>
+                <fullName>Advocacy Potential</fullName>
+                <default>false</default>
+                <label>Advocacy Potential</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Strategic Importance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategic Importance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Attendees__c</fullName>
+    <label>Number of Attendees</label>
+    <summaryFilterItems>
+        <field>X7S_Event_RSVP__c.Response__c</field>
+        <operation>equals</operation>
+        <value>Attending</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>X7S_Event_RSVP__c.Registration_Status__c</field>
+        <operation>notEqual</operation>
+        <value>pending</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>X7S_Event_RSVP__c.Registration_Status__c</field>
+        <operation>notEqual</operation>
+        <value>denied</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>X7S_Event_RSVP__c.Response__c</field>
+        <operation>notEqual</operation>
+        <value>Waitlist</value>
+    </summaryFilterItems>
+    <summaryForeignKey>X7S_Event_RSVP__c.Event__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

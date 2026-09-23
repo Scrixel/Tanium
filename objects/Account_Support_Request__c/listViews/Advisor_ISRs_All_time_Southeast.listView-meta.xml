@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advisor_ISRs_All_time_Southeast</fullName>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>NAME</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>ISR_Age__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Tanium_Sr_Advisor_Invited__c</field>
+        <operation>contains</operation>
+        <value>Wilderotter,Weinberger,Geagea,Hershman,Veihmeyer,Akbari,Robinson,Fasano,Godec,Imhoff,Bleich,Sheinwald,Russo,Woertz,Blair,Goodhart,Josefsberg,Kuenzler,Lachmandas,McCluggage,Neiers,Rice,Shurts,Armour</value>
+    </filters>
+    <label>Advisor ISRs (All-time) | Southeast</label>
+</ListView>

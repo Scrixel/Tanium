@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Approval_Quote_Messaging__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Pre Approval Quote Messaging</label>
+    <referenceTo>Pre_Approval_Quote_Messaging__mdt</referenceTo>
+    <relationshipLabel>Pre Approval Quote Pricebook Exceptions</relationshipLabel>
+    <relationshipName>Pre_Approval_Quote_Pricebook_Exceptions</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

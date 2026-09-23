@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Stage__c</fullName>
+    <label>Approval Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Request needs to be submitted for approval</fullName>
+                <default>true</default>
+                <label>Request needs to be submitted for approval</label>
+            </value>
+            <value>
+                <fullName>Awaiting for Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Fully Approved</fullName>
+                <default>false</default>
+                <label>Fully Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Missing Info</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Missing Info</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

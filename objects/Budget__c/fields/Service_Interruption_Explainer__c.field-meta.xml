@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Interruption_Explainer__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;High (The most impact on the organization, mission, and other networks and systems. The business cannot function if the service is down for more than 24 hours.)&quot; &amp; BR() &amp; BR()&amp; &quot;Medium (A moderate problem to the organization and possibly other networks or systems. Affects a smaller subset of users.)&quot;&amp; BR() &amp; BR()&amp; &quot;Low (Little impact, damage or disruption to the organization. No loss, but lost efficiency. Alternative software or manual process would exist.)&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Service Interruption Explainer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

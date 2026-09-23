@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_by_Contract_Number</fullName>
+    <columns>NAME</columns>
+    <columns>Legacy_List_Total__c</columns>
+    <columns>Legacy_Net_Total__c</columns>
+    <columns>Legacy_Discount__c</columns>
+    <columns>Migration_Discount__c</columns>
+    <columns>Migration_Unit_Price__c</columns>
+    <columns>Uplift_Percent__c</columns>
+    <columns>Partner_Migration_Discount__c</columns>
+    <columns>Uplift_Partner_Migration_Percent__c</columns>
+    <columns>Uplift_Unit_Price__c</columns>
+    <columns>Manual_Entry__c</columns>
+    <columns>AEM_Solution__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contract_Number__c</field>
+        <operation>equals</operation>
+        <value>00129848</value>
+    </filters>
+    <label>Search by Contract Number</label>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteers_Registered__c</fullName>
+    <label>Volunteers Registered</label>
+    <summaryForeignKey>X7S_Events_Volunteer_Registration__c.Volunteer_Need__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

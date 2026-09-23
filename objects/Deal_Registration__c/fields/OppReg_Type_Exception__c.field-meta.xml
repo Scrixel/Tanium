@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppReg_Type_Exception__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>INC0131406 Nick Scala 2020-04-12 track and report on ORs that qualified/received exceptions.  Visible to Partner Portal Admins only.</description>
+    <label>Type Exception</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

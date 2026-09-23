@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Motion__c</fullName>
+    <description>Partner Portal Prompt: What business models are a priority for your organization? (select all that apply)</description>
+    <label>Business Motion</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Business_Motion</valueSetName>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

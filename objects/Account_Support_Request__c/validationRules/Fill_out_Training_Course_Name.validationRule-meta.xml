@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fill_out_Training_Course_Name</fullName>
+    <active>true</active>
+    <description>Per this rule, if Tanium Training Type = NHT or Partner, Training Course Name cannot be blank</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Tanium_Training_Type__c,&apos;NHT&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Training_Course_Name__c</errorDisplayField>
+    <errorMessage>Please fill Training Course Name</errorMessage>
+</ValidationRule>

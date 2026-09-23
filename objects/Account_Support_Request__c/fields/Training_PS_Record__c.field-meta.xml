@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_PS_Record__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to Training &amp; PS Record. Added to TR ISR</description>
+    <label>Training &amp; PS Record</label>
+    <referenceTo>Training_PS__c</referenceTo>
+    <relationshipLabel>Internal Support Requests</relationshipLabel>
+    <relationshipName>Internal_Support_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

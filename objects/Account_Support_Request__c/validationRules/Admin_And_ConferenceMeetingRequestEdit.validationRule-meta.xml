@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_And_ConferenceMeetingRequestEdit</fullName>
+    <active>true</active>
+    <description>Admin and Users with &apos;Conference Meeting Request Edit&apos; Permission Set is allowed to update the Status field on &apos;Conference Meeting Request&apos; ISR Record Type.
+
+5.1.26 Added NOT(ISPICKVAL(Status__c, &apos;Draft&apos;)) for the ISBLANK fields</description>
+    <errorConditionFormula>AND(
+  RecordType.Name = &apos;Conference Meeting Request&apos;,
+  OR(
+    ISCHANGED(Status__c),
+    AND(
+      ISNEW(),
+      NOT(ISPICKVAL(Status__c, &apos;Draft&apos;))
+    ),
+    ISCHANGED(Date_of_Meeting__c),
+    ISCHANGED(Time_of_Meeting__c),
+    ISCHANGED(Meeting_Address__c),
+    ISCHANGED(Time_Zone__c),
+    ISCHANGED(Sr_Advisor_Monthly_Updates__c),
+    AND(
+      ISNEW(),
+      NOT(ISPICKVAL(Status__c, &apos;Draft&apos;)),
+      OR(
+        NOT(ISBLANK(Date_of_Meeting__c)),
+        NOT(ISBLANK(Sr_Advisor_Monthly_Updates__c)),
+        NOT(ISPICKVAL(Time_Zone__c, &apos;&apos;)),
+        NOT(ISBLANK(Meeting_Address__c)),
+        OR(
+          TEXT(HOUR(Time_of_Meeting__c)) &lt;&gt; &quot;8&quot;,
+          TEXT(MINUTE(Time_of_Meeting__c)) &lt;&gt; &quot;0&quot;
+        )
+      )
+    )
+  ),
+  NOT($Profile.Name = &apos;Tanium System Administrator&apos;),
+  NOT($Permission.Conference_Meeting_Request_Edit_Access)
+)
+
+/*AND(
+RecordType.Name = &apos;Conference Meeting Request&apos;,
+
+OR(
+ISCHANGED(Status__c),
+AND(
+ISNEW(),
+NOT(ISPICKVAL(Status__c, &apos;Draft&apos;))
+),
+ISCHANGED(Date_of_Meeting__c),
+ISCHANGED(Time_of_Meeting__c),
+ISCHANGED(Meeting_Address__c),
+ISCHANGED(Time_Zone__c),
+ISCHANGED( Sr_Advisor_Monthly_Updates__c ),
+
+
+AND(
+ISNEW(),
+OR(
+NOT(ISBLANK(Date_of_Meeting__c)),
+NOT(ISBLANK(Sr_Advisor_Monthly_Updates__c)),
+NOT(ISPICKVAL(Time_Zone__c, &apos;&apos;)),
+NOT(ISBLANK(Meeting_Address__c)),
+
+OR(
+TEXT(HOUR(Time_of_Meeting__c)) &lt;&gt; &quot;8&quot;,
+TEXT(MINUTE(Time_of_Meeting__c)) &lt;&gt; &quot;0&quot;
+)
+)
+)
+),
+
+NOT($Profile.Name = &apos;Tanium System Administrator&apos;),
+NOT($Permission.Conference_Meeting_Request_Edit_Access)
+)*/</errorConditionFormula>
+    <errorMessage>Update of Status, Date of Meeting, Time of Meeting, Time Zone
+&amp; Meeting Location fields are not allowed. Please blank out these fields and submit for approval when ready</errorMessage>
+</ValidationRule>

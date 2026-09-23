@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin</fullName>
+    <columns>NAME</columns>
+    <columns>Partner_Level__c</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Partner_is_Incumbent__c</columns>
+    <columns>Program_Bucket__c</columns>
+    <columns>Quote_Line_Type__c</columns>
+    <columns>Total_Discount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Program_Bucket__c</field>
+        <operation>notEqual</operation>
+        <value>MSP</value>
+    </filters>
+    <filters>
+        <field>Program_Bucket__c</field>
+        <operation>equals</operation>
+        <value>Renewal</value>
+    </filters>
+    <filters>
+        <field>Partner_Level__c</field>
+        <operation>equals</operation>
+        <value>Strategic</value>
+    </filters>
+    <filters>
+        <field>Product_Group__c</field>
+        <operation>equals</operation>
+        <value>Software</value>
+    </filters>
+    <label>Admin</label>
+</ListView>

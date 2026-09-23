@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month_3_Ramp_Requirements_Met__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS-12416 - Indicate whether the Sales person has met the requirements for their first, second and third month compensation ramps.</description>
+    <label>Month 3 Ramp Requirements Met</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

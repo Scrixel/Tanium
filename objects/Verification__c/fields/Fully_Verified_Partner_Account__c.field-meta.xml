@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fully_Verified_Partner_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>If Partner Account listed on Verification record has Approval Level as Proxy, this means the Partner Account can sell a service, but another Partner/company delivers the service, the proxy(Fully Verified Partner Account). It’s for companies where we do business in multiple counties. One country may be the only fully verified partner to deliver the service, but multiple other countries the partner operates in can sell that service. SS-11783</description>
+    <label>Fully Verified Partner Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Verifications (Fully Verified Partner Account)</relationshipLabel>
+    <relationshipName>VerificationsFullyVerifiedPartnerAccount</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

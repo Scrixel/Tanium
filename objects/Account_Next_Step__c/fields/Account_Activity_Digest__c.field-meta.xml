@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Activity_Digest__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Account Activity Digest that spawned this next step.</description>
+    <label>Account Activity Digest</label>
+    <referenceTo>Account_Activity_Digest__c</referenceTo>
+    <relationshipLabel>Account Next Steps</relationshipLabel>
+    <relationshipName>Account_Next_Steps</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

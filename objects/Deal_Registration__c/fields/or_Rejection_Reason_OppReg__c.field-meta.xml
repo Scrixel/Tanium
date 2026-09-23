@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Rejection_Reason_OppReg__c</fullName>
+    <inlineHelpText>Before processing the rejection, ensure rejection criteria have been met per the Deal Registration Policy and communicate to Partner that deal will be rejected with applicable reasoning</inlineHelpText>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>At customer direction</fullName>
+                <default>false</default>
+                <label>At customer direction</label>
+            </value>
+            <value>
+                <fullName>Opportunity does not meet minimum value threshold</fullName>
+                <default>false</default>
+                <label>Opportunity does not meet minimum value threshold</label>
+            </value>
+            <value>
+                <fullName>Opportunity is already registered with another partner</fullName>
+                <default>false</default>
+                <label>Opportunity is already registered with another partner</label>
+            </value>
+            <value>
+                <fullName>Opportunity Registration is for end customer resale opportunities only</fullName>
+                <default>false</default>
+                <label>Opportunity Registration is for end customer resale opportunities only</label>
+            </value>
+            <value>
+                <fullName>Partner not authorized to resell in customer country</fullName>
+                <default>false</default>
+                <label>Partner not authorized to resell in customer country</label>
+            </value>
+            <value>
+                <fullName>Qualified Opportunity attributes have not been met</fullName>
+                <default>false</default>
+                <label>Qualified Opportunity attributes have not been met</label>
+            </value>
+            <value>
+                <fullName>Registration is a duplicate submission</fullName>
+                <default>false</default>
+                <label>Registration is a duplicate submission</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

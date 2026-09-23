@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Notice_Directory_Compact_Layout</fullName>
+    <fields>Account_Name__c</fields>
+    <fields>Agreement_Name__c</fields>
+    <fields>Contact_Name_LN__c</fields>
+    <fields>Name</fields>
+    <fields>OwnerId</fields>
+    <label>Legal Notice Directory Compact Lyout</label>
+</CompactLayout>

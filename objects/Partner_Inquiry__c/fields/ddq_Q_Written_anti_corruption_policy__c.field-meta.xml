@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_Q_Written_anti_corruption_policy__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does your company have a written anti-corruption policy?</description>
+    <inlineHelpText>Does your company have a written anti-corruption policy?</inlineHelpText>
+    <label>Written anti-corruption policy?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

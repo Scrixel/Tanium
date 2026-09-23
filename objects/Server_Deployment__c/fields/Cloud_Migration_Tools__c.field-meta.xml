@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cloud_Migration_Tools__c</fullName>
+    <description>Field will be used to track tools used as part of Tanium Cloud Server migration (i.e. CableCar, TaaSinator, Migr8)</description>
+    <label>Cloud Migration Tools</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CableCar</fullName>
+                <default>false</default>
+                <label>CableCar</label>
+            </value>
+            <value>
+                <fullName>ClientMigrate</fullName>
+                <default>false</default>
+                <label>ClientMigrate</label>
+            </value>
+            <value>
+                <fullName>Migr8</fullName>
+                <default>false</default>
+                <label>Migr8</label>
+            </value>
+            <value>
+                <fullName>TaaSinator</fullName>
+                <default>false</default>
+                <label>TaaSinator</label>
+            </value>
+            <value>
+                <fullName>Other (please comment)</fullName>
+                <default>false</default>
+                <label>Other (please comment)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

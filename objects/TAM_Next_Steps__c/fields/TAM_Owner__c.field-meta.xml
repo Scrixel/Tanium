@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAM_Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>11.05.2024 - Deprecated. Jira ticket SS-9539</description>
+    <label>DEPRECATED - TAM Owner (old)</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Contact.Account.Id</field>
+            <operation>equals</operation>
+            <value>00132000019soMf</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Next Steps</relationshipLabel>
+    <relationshipName>Next_Steps</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

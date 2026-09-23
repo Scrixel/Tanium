@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapped_Opp_Discovery_Date__c</fullName>
+    <description>[INC0154654]  This field pulls the value from the &quot;Discovery Date&quot; field on the mapped opportunity. Tanium Standard User, Tanium CAM, Partner Portal Admin, and Super User profiles use:  To set up off-the-shelf reporting and dashboards to more effectively track and analyze the partner business.</description>
+    <formula>Mapped_Opportunity__r.Discovery_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field pulls the value from the &quot;Discovery Date&quot; field on the mapped opportunity.</inlineHelpText>
+    <label>Mapped Opp Discovery Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

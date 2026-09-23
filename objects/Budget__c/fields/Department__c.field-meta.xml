@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <label>Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cost of Sales</fullName>
+                <default>false</default>
+                <label>Cost of Sales</label>
+            </value>
+            <value>
+                <fullName>Cost of Sales : TaaS</fullName>
+                <default>false</default>
+                <label>Cost of Sales : TaaS</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Accounting</fullName>
+                <default>false</default>
+                <label>G&amp;A: Accounting</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Allocate</fullName>
+                <default>false</default>
+                <label>G&amp;A: Allocate</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Excecutives/Other</fullName>
+                <default>false</default>
+                <label>G&amp;A: Excecutives/Other</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Facilities</fullName>
+                <default>false</default>
+                <label>G&amp;A: Facilities</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Finance</fullName>
+                <default>false</default>
+                <label>G&amp;A: Finance</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Human Resources</fullName>
+                <default>false</default>
+                <label>G&amp;A: Human Resources</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: IT Security</fullName>
+                <default>false</default>
+                <label>G&amp;A: IT Security</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: IT Support</fullName>
+                <default>false</default>
+                <label>G&amp;A: IT Support</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Legal</fullName>
+                <default>false</default>
+                <label>G&amp;A: Legal</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Office of the CEO</fullName>
+                <default>false</default>
+                <label>G&amp;A: Office of the CEO</label>
+            </value>
+            <value>
+                <fullName>G&amp;A: Talent Acquitision</fullName>
+                <default>false</default>
+                <label>G&amp;A: Talent Acquitision</label>
+            </value>
+            <value>
+                <fullName>Marketing: Customer Marketing</fullName>
+                <default>false</default>
+                <label>Marketing: Customer Marketing</label>
+            </value>
+            <value>
+                <fullName>Marketing: Exec/Admin/PM</fullName>
+                <default>false</default>
+                <label>Marketing: Exec/Admin/PM</label>
+            </value>
+            <value>
+                <fullName>Marketing: Field &amp; Ops</fullName>
+                <default>false</default>
+                <label>Marketing: Field &amp; Ops</label>
+            </value>
+            <value>
+                <fullName>Marketing: Intergrated Marketing</fullName>
+                <default>false</default>
+                <label>Marketing: Intergrated Marketing</label>
+            </value>
+            <value>
+                <fullName>Marketing: Product</fullName>
+                <default>false</default>
+                <label>Marketing: Product</label>
+            </value>
+            <value>
+                <fullName>Marketing: Public Relations</fullName>
+                <default>false</default>
+                <label>Marketing: Public Relations</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: Global Technology</fullName>
+                <default>false</default>
+                <label>R&amp;D: Global Technology</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: IT Endpoint Detection Response</fullName>
+                <default>false</default>
+                <label>R&amp;D: IT Endpoint Detection Response</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: Platform Engineering</fullName>
+                <default>false</default>
+                <label>R&amp;D: Platform Engineering</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: Product Engineering</fullName>
+                <default>false</default>
+                <label>R&amp;D: Product Engineering</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: Product Security</fullName>
+                <default>false</default>
+                <label>R&amp;D: Product Security</label>
+            </value>
+            <value>
+                <fullName>R&amp;D: User Experience/User Interface</fullName>
+                <default>false</default>
+                <label>R&amp;D: User Experience/User Interface</label>
+            </value>
+            <value>
+                <fullName>Sales: Alliances</fullName>
+                <default>false</default>
+                <label>Sales: Alliances</label>
+            </value>
+            <value>
+                <fullName>Sales: Channels</fullName>
+                <default>false</default>
+                <label>Sales: Channels</label>
+            </value>
+            <value>
+                <fullName>Sales: Contracts</fullName>
+                <default>false</default>
+                <label>Sales: Contracts</label>
+            </value>
+            <value>
+                <fullName>Sales: Field Operations</fullName>
+                <default>false</default>
+                <label>Sales: Field Operations</label>
+            </value>
+            <value>
+                <fullName>Sales: General</fullName>
+                <default>false</default>
+                <label>Sales: General</label>
+            </value>
+            <value>
+                <fullName>Sales: Operations</fullName>
+                <default>false</default>
+                <label>Sales: Operations</label>
+            </value>
+            <value>
+                <fullName>TAM: Customer Success</fullName>
+                <default>false</default>
+                <label>TAM: Customer Success</label>
+            </value>
+            <value>
+                <fullName>TAM: Enablement TAM</fullName>
+                <default>false</default>
+                <label>TAM: Enablement TAM</label>
+            </value>
+            <value>
+                <fullName>TAM: General</fullName>
+                <default>false</default>
+                <label>TAM: General</label>
+            </value>
+            <value>
+                <fullName>TAM: Strategic Alliances Pod</fullName>
+                <default>false</default>
+                <label>TAM: Strategic Alliances Pod</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

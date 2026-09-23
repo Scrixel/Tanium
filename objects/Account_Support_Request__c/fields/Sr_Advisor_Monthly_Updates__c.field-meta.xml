@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sr_Advisor_Monthly_Updates__c</fullName>
+    <description>Sr. Advisor Monthly Updates</description>
+    <inlineHelpText>Sr. Advisor Monthly Updates</inlineHelpText>
+    <label>Executive Engagements Team Updates</label>
+    <length>10000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

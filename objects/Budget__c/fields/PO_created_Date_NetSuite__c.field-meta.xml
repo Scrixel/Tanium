@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_created_Date_NetSuite__c</fullName>
+    <description>Date PO was created In Netsuite</description>
+    <inlineHelpText>This Field is updated by Process Builder and reflects the Date PO was created In NetSuite</inlineHelpText>
+    <label>PO created Date NetSuite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

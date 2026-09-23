@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assumed_contractual_risk__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Deprecated from SS-12659
+Question 4</description>
+    <inlineHelpText>Which Partner assumes risk as the counter-party on the contract with the end customer</inlineHelpText>
+    <label>DEPRECATED - Assumed contractual risk</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

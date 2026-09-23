@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isPrimaryQuote__c</fullName>
+    <description>Indicates if attached quote is primary or not</description>
+    <formula>ELV_Quote__r.Ruby__IsPrimaryQuote__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicates if attached quote is primary or not</inlineHelpText>
+    <label>isPrimaryQuote</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

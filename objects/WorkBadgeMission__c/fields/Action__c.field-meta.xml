@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action__c</fullName>
+    <description>Action</description>
+    <label>Action</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add a Post</fullName>
+                <default>false</default>
+                <label>Add a Post</label>
+            </value>
+            <value>
+                <fullName>Add a Comment</fullName>
+                <default>false</default>
+                <label>Add a Comment</label>
+            </value>
+            <value>
+                <fullName>Ask a question</fullName>
+                <default>false</default>
+                <label>Ask a question</label>
+            </value>
+            <value>
+                <fullName>Answer a question</fullName>
+                <default>false</default>
+                <label>Answer a question</label>
+            </value>
+            <value>
+                <fullName>Best Answer</fullName>
+                <default>false</default>
+                <label>Best Answer</label>
+            </value>
+            <value>
+                <fullName>Upload a profile image</fullName>
+                <default>false</default>
+                <label>Upload a profile image</label>
+            </value>
+            <value>
+                <fullName>Create an Idea</fullName>
+                <default>false</default>
+                <label>Create an Idea</label>
+            </value>
+            <value>
+                <fullName>Your answer is marked as best</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Your answer is marked as best</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

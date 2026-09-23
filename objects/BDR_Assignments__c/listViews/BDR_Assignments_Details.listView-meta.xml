@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDR_Assignments_Details</fullName>
+    <columns>NAME</columns>
+    <columns>User_Name__c</columns>
+    <columns>SETUP_TYPE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>BDR Assignments Details</label>
+    <language>en_US</language>
+</ListView>

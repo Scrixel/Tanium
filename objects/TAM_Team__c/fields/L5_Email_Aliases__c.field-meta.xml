@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L5_Email_Aliases__c</fullName>
+    <description>Email aliaes that should be notified on L5 escalations (comma separated)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The L5 Email Alias is used for Case Escalations.  For example, when a L5 Escalation for this team is raised this email alias (or aliases) will receive an email to this group.  To specify a single email alias, simply type in the email alias, foo@tanium.com or specify multiple email aliases via comma separated values foo@tanium.com,bar@tanium.com.</inlineHelpText>
+    <label>L5 Email Aliases</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Read_Only_Users__c</fullName>
+    <defaultValue>false</defaultValue>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Disable read only profile users from following, voting and commenting on Ideas</inlineHelpText>
+    <label>Restrict Read Only Users</label>
+    <type>Checkbox</type>
+</CustomField>

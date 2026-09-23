@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Relationships_w_decision_makers__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Deprecated from SS-12659 
+Question 1</description>
+    <inlineHelpText>Which Partner has the most previously successful sales relationships with key decision-makers in the account</inlineHelpText>
+    <label>DEPRECATED - Sales Relationships w/ de</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

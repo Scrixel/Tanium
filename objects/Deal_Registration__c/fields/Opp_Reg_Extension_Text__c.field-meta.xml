@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Extension_Text__c</fullName>
+    <description>Text to insert into existing email template to differentiate between new and extension opp regs</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Text to insert into existing email template to differentiate between new and extension Deals</inlineHelpText>
+    <label>Extension Text</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

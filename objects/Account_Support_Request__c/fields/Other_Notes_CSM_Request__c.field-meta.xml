@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Notes_CSM_Request__c</fullName>
+    <description>Anything else you’d like us to know, such as further context on teams/execs involved, account next-steps, timelines, EBRs, criticality/urgency, etc.</description>
+    <inlineHelpText>Anything else you’d like us to know, such as further context on teams/execs involved, account next-steps, timelines, EBRs, criticality/urgency, etc.</inlineHelpText>
+    <label>Additional Request Info</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

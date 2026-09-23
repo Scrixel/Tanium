@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Employee_Size_Required</fullName>
+    <active>true</active>
+    <description>SS-533
+There is a complimentary VR on Account &quot;Estimated_Employee_Size_Required&quot; for the same purpose.</description>
+    <errorConditionFormula>AND
+(
+ISNEW(), 
+OR(ISBLANK(No_of_Employees__c), 
+No_of_Employees__c &lt;= 0)
+)</errorConditionFormula>
+    <errorMessage># of Employees is used in account segmentation. Please provide the most accurate information possible regarding the number of employees</errorMessage>
+</ValidationRule>

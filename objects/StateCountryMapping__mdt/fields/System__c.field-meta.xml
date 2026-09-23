@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System__c</fullName>
+    <description>External source system the value originates from (e.g. D&amp;B). Combined with Category and External Value to form the unique lookup key.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>External source system the value originates from (e.g. D&amp;B). Combined with Category and External Value to form the unique lookup key.</inlineHelpText>
+    <label>System</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

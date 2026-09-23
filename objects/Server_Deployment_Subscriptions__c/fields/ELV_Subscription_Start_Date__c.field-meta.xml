@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Subscription_Start_Date__c</fullName>
+    <description>Formula to populate the related Subscription Start Date. SS-13765</description>
+    <formula>ELV_Subscription__r.Ruby__SubscriptionStartDate__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula to populate the related Subscription Start Date.</inlineHelpText>
+    <label>Subscription Start Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Article_Publish_Date__c</fullName>
+    <defaultValue>&apos;User Time Zone&apos;</defaultValue>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Article Publish Date</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User Time Zone</fullName>
+                <default>true</default>
+                <label>User Time Zone</label>
+            </value>
+            <value>
+                <fullName>Company Time Zone</fullName>
+                <default>false</default>
+                <label>Company Time Zone</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

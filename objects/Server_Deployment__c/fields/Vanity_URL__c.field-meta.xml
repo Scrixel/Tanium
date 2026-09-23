@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanity_URL__c</fullName>
+    <description>Case 56132 Sophie Xu, Mo Patel:  Move TaaS fields from Opp to Server Deployment</description>
+    <inlineHelpText>Vanity should typically be the customer name and will be in the link to the Tanium Cloud instance:
+[vanity].cloud.tanium.com, for example
+abccompany.cloud.tanium.com (USG: abccompany.cloud.taniumfed.com). Please enter only the vanity portion in this field.
+Do not include values with &quot;poc&quot; or &quot;test&quot; in the vanity
+Alphanumeric text ONLY. No special characters besides hyphen are allowed.</inlineHelpText>
+    <label>Vanity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

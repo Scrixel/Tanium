@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geo__c</fullName>
+    <description>Picklist values managed through global value set. Corresponds to L2 values to simply rule creation and filtering.</description>
+    <label>DEPRECATED Geo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Geo</valueSetName>
+    </valueSet>
+</CustomField>

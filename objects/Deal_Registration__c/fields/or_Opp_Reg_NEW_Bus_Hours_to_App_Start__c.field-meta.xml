@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Opp_Reg_NEW_Bus_Hours_to_App_Start__c</fullName>
+    <description>In Business Hours, Approval Start - Lead Timestamp Change</description>
+    <externalId>false</externalId>
+    <formula>ROUND( 8 * (
+   ( 5 * FLOOR( ( DATEVALUE( or_New_Opp_Reg_Time_Pending_CAM__c ) - DATE( 1900, 1, 8) ) / 7) +
+    MIN(5, 
+     MOD( DATEVALUE( or_New_Opp_Reg_Time_Pending_CAM__c ) - DATE( 1900, 1, 8), 7) +
+     MIN( 1, 24 / 8 * ( MOD( or_New_Opp_Reg_Time_Pending_CAM__c - DATETIMEVALUE( &apos;1900-01-08 16:00:00&apos; ), 1 ) ) )
+    ) 
+   )
+ -
+   ( 5 * FLOOR( ( DATEVALUE( Lead_Owner_Changed_Timestamp__c ) - DATE( 1900, 1, 8) ) / 7) +
+     MIN( 5,
+      MOD( DATEVALUE( Lead_Owner_Changed_Timestamp__c ) - DATE( 1996, 1, 1), 7 ) +
+      MIN( 1, 24 / 8 * ( MOD( Lead_Owner_Changed_Timestamp__c - DATETIMEVALUE( &apos;1900-01-08 16:00:00&apos; ), 1) ) )
+    )
+   ) 
+  ), 
+0 )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>In Business Hours, Approval Start - Lead Timestamp Change</inlineHelpText>
+    <label>Business Hours to Approval Start</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

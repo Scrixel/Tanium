@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Resource_1__c</fullName>
+    <description>ESO Resource 1</description>
+    <inlineHelpText>For SLED ESR - resource engagement is fixed and unalterable based on the terms in the purchased SKU</inlineHelpText>
+    <label>ESO Resource</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+                <label>Deployment</label>
+            </value>
+            <value>
+                <fullName>Engineer (ESE)</fullName>
+                <default>false</default>
+                <label>Engineer (ESE)</label>
+            </value>
+            <value>
+                <fullName>Systems Integration Engineer (ESSIE)</fullName>
+                <default>false</default>
+                <label>Systems Integration Engineer (ESSIE)</label>
+            </value>
+            <value>
+                <fullName>TaaS Migration</fullName>
+                <default>false</default>
+                <label>TaaS Migration</label>
+            </value>
+            <value>
+                <fullName>Technical Project Manager</fullName>
+                <default>false</default>
+                <label>Technical Project Manager</label>
+            </value>
+            <value>
+                <fullName>ESE - Remote</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ESE - Remote</label>
+            </value>
+            <value>
+                <fullName>ESE - Remote TBD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ESE - Remote TBD</label>
+            </value>
+            <value>
+                <fullName>Strategic Consultant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategic Consultant</label>
+            </value>
+            <value>
+                <fullName>Technical Writer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical Writer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_End_User_Account_on_Subscription</name>
+        <label>Assign End User Account on Subscription</label>
+        <locationX>788</locationX>
+        <locationY>572</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.End_User_Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Contract__r.SBQQ__Opportunity__r.End_User_Account__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Opportunity_End_User_Account_Populated</name>
+        <label>Opportunity End User Account Populated</label>
+        <locationX>776</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_End_User_Account_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Contract__r.SBQQ__Opportunity__r.End_User_Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.End_User_Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Contract__r.SBQQ__Opportunity__r.Business_Motion__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_End_User_Account_on_Subscription</targetReference>
+            </connector>
+            <label>Yes - End User Account Populated</label>
+        </rules>
+    </decisions>
+    <description>12/2: Update to add Business Motion = MSP criteria to update End User Account</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_Software_Spend</name>
+        <dataType>Currency</dataType>
+        <expression>({!$Record.SBQQ__NetPrice__c} * {!$Record.SBQQ__Quantity__c}) / {!$Record.SBQQ__ProrateMultiplier__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Subscription - Before Insert Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Subscription - Before Insert Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Annualized_Customer_Software_Spend</name>
+        <label>Update Annualized Customer Software Spend</label>
+        <locationX>491</locationX>
+        <locationY>283</locationY>
+        <connector>
+            <targetReference>Opportunity_End_User_Account_Populated</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Customer_Annualized_Software_Spend__c</field>
+            <value>
+                <elementReference>formula_Software_Spend</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>650</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>Update_Annualized_Customer_Software_Spend</targetReference>
+        </connector>
+        <object>SBQQ__Subscription__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

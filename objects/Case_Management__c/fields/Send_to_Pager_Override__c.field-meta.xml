@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_Pager_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enable the Send to Pager action to be turned off for sandbox use and testing.</description>
+    <label>Send to Pager Override</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_Account_Owner_LU__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field updated by flow Insert Training &amp; PS record with Lookup to Quote</description>
+    <label>CSM Account Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Training_PS2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

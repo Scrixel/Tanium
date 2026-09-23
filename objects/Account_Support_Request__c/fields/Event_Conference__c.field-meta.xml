@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Conference__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>If you don’t see Event&apos;Conference required please reach out to Executive Engagement Team.</inlineHelpText>
+    <label>Event/Conference</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Event__c.Event_Conference_Expired__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>Value does not exist or is expired.</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Event__c</referenceTo>
+    <relationshipLabel>Internal Support Requests</relationshipLabel>
+    <relationshipName>Internal_Support_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

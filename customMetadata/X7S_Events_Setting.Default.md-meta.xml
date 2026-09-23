@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Default_Test_Profile__c</field>
+        <value xsi:type="xsd:string">System Administrator</value>
+    </values>
+    <values>
+        <field>Enable_Audience_Targeting__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Enable_Multi_Language__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Notify_Organizer_of_New_Posts_Chatter__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>PermissionSetName__c</field>
+        <value xsi:type="xsd:string">Post_Events_Permission</value>
+    </values>
+    <values>
+        <field>Post_to_General_Permission_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Registration_Import_Window__c</field>
+        <value xsi:type="xsd:double">30.0</value>
+    </values>
+    <values>
+        <field>Require_Group_Membership__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Show_Notification_Label__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Topic_Limit__c</field>
+        <value xsi:type="xsd:double">5000.0</value>
+    </values>
+    <values>
+        <field>View_All_Permission_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>X7S_Event_Custom_Field_Set__c</field>
+        <value xsi:type="xsd:string">Field_Set_1</value>
+    </values>
+    <values>
+        <field>X7S_Event_Default_Custom_Field_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

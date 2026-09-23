@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Platform_Login__c</fullName>
+    <description>DET-173 Telemetry fields. These values originate from the User Analytics platform, are ingested into Snowflake and pushed to Salesforce via Workato.</description>
+    <inlineHelpText>The first time the customer logged into the Tanium Cloud platform as measured by the User Analytics tool for Tanium Cloud.</inlineHelpText>
+    <label>First Platform Login</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

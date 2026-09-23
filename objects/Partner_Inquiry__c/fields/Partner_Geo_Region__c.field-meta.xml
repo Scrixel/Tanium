@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Geo_Region__c</fullName>
+    <inlineHelpText>Only editable by Partner Portal Admin Users</inlineHelpText>
+    <label>Partner Geo (Region)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ANZ</fullName>
+                <default>false</default>
+                <label>ANZ</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>LatAm</fullName>
+                <default>false</default>
+                <label>LatAm</label>
+            </value>
+            <value>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+                <label>North Asia</label>
+            </value>
+            <value>
+                <fullName>South Asia (Non-ANZ)</fullName>
+                <default>false</default>
+                <label>South Asia (Non-ANZ)</label>
+            </value>
+            <value>
+                <fullName>US and Canada</fullName>
+                <default>false</default>
+                <label>US and Canada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

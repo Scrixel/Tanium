@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_pmetdec</targetReference>
+            </connector>
+            <label>Sell Side Request</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_pmetdec</targetReference>
+            </connector>
+            <label>Partner Request no Opportunity</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision6</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_pmetdec</targetReference>
+            </connector>
+            <label>Partner Schedule Request</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision6</name>
+        <label>myDecision6</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_7</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_7</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_pmetdec</targetReference>
+            </connector>
+            <label>Sales Agreement Request</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>100</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_1_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_1_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_3_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>300</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_3_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_3_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_5_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>500</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_5_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_5_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_7_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>700</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_7_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_7_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_7_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_7_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <description>Assigns correct owner from opportunity for sell side and sets status to approval required for buy side agreement requests</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+([Apttus__APTS_Agreement__c].RecordType.Name = &quot;EULA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;License Schedule&quot;) &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner_Schedule&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; )&amp;&amp;
+
+
+ [Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c &lt;&gt; NULL &amp;&amp;[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Owner__c &lt;&gt; [Apttus__APTS_Agreement__c].OwnerId &amp;&amp;
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Owner__c &lt;&gt; NULL 
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+({!myVariable_current.RecordType.Name} = &quot;EULA&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;License Schedule&quot;) &amp;&amp;
+
+({!myVariable_current.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Partner_Schedule&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;NDA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;MLA&quot; )&amp;&amp;
+
+
+ {!myVariable_current.Apttus__Related_Opportunity__c} &lt;&gt; NULL &amp;&amp;{!myVariable_current.Apttus__Related_Opportunity__r.Contract_Owner__c} &lt;&gt; {!myVariable_current.OwnerId} &amp;&amp;
+{!myVariable_current.Apttus__Related_Opportunity__r.Contract_Owner__c} &lt;&gt; NULL 
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+([Apttus__APTS_Agreement__c].RecordType.Name = &quot;EULA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;License Schedule&quot;) &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner_Schedule&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; )&amp;&amp;
+
+
+ [Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c &lt;&gt; NULL &amp;&amp;[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Owner__c &lt;&gt; [Apttus__APTS_Agreement__c].OwnerId &amp;&amp;
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Owner__c &lt;&gt; NULL 
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+({!myVariable_old.RecordType.Name} = &quot;EULA&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;License Schedule&quot;) &amp;&amp;
+
+({!myVariable_old.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Partner_Schedule&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;NDA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;MLA&quot; )&amp;&amp;
+
+
+ {!myVariable_old.Apttus__Related_Opportunity__c} &lt;&gt; NULL &amp;&amp;{!myVariable_old.Apttus__Related_Opportunity__r.Contract_Owner__c} &lt;&gt; {!myVariable_old.OwnerId} &amp;&amp;
+{!myVariable_old.Apttus__Related_Opportunity__r.Contract_Owner__c} &lt;&gt; NULL 
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Schedule&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+ISBLANK([Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c)
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_current.RecordType.Name} = &quot;Partner Schedule&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+({!myVariable_current.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;{!myVariable_current.RecordType.Name} &lt;&gt; &quot;MLA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+ISBLANK({!myVariable_current.Apttus__Related_Opportunity__c})
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Schedule&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+ISBLANK([Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c)
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_old.RecordType.Name} = &quot;Partner Schedule&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+({!myVariable_old.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;{!myVariable_old.RecordType.Name} &lt;&gt; &quot;MLA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+ISBLANK({!myVariable_old.Apttus__Related_Opportunity__c})
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Schedule&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c &lt;&gt; NULL &amp;&amp;[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Partner_Owner__c &lt;&gt; [Apttus__APTS_Agreement__c].OwnerId &amp;&amp;
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Partner_Owner__c &lt;&gt; NULL
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_current.RecordType.Name} = &quot;Partner Schedule&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+({!myVariable_current.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;{!myVariable_current.RecordType.Name} &lt;&gt; &quot;MLA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+{!myVariable_current.Apttus__Related_Opportunity__c} &lt;&gt; NULL &amp;&amp;{!myVariable_current.Apttus__Related_Opportunity__r.Contract_Partner_Owner__c} &lt;&gt; {!myVariable_current.OwnerId} &amp;&amp;
+{!myVariable_current.Apttus__Related_Opportunity__r.Contract_Partner_Owner__c} &lt;&gt; NULL
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Schedule&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;MLA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c &lt;&gt; NULL &amp;&amp;[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Partner_Owner__c &lt;&gt; [Apttus__APTS_Agreement__c].OwnerId &amp;&amp;
+[Apttus__APTS_Agreement__c].Apttus__Related_Opportunity__c.Contract_Partner_Owner__c &lt;&gt; NULL
+,TRUE,FALSE)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_old.RecordType.Name} = &quot;Partner Schedule&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;Partner Agreement&quot;)
+ &amp;&amp;
+
+({!myVariable_old.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;{!myVariable_old.RecordType.Name} &lt;&gt; &quot;MLA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;NDA&quot; )&amp;&amp;
+
+{!myVariable_old.Apttus__Related_Opportunity__c} &lt;&gt; NULL &amp;&amp;{!myVariable_old.Apttus__Related_Opportunity__r.Contract_Partner_Owner__c} &lt;&gt; {!myVariable_old.OwnerId} &amp;&amp;
+{!myVariable_old.Apttus__Related_Opportunity__r.Contract_Partner_Owner__c} &lt;&gt; NULL
+,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;NDA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Evaluation&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;MLA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Technical Inbound License&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Other&quot; )
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner Agreement&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner Schedule&quot;) &amp;&amp;
+
+NOT(ISCHANGED([Apttus__APTS_Agreement__c].RecordType.Name)) &amp;&amp;
+[Apttus__APTS_Agreement__c].Created_By_Flow__c = FALSE
+, TRUE,FALSE)
+ </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_7</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_current.RecordType.Name} = &quot;NDA&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;Evaluation&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;MLA&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;Technical Inbound License&quot; || 
+{!myVariable_current.RecordType.Name} = &quot;Other&quot; )
+ &amp;&amp;
+
+({!myVariable_current.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Partner Agreement&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;
+{!myVariable_current.RecordType.Name} &lt;&gt; &quot;Partner Schedule&quot;) &amp;&amp;
+
+NOT(ISCHANGED({!myVariable_current.RecordType.Name})) &amp;&amp;
+{!myVariable_current.Created_By_Flow__c} = FALSE
+, TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF( ([Apttus__APTS_Agreement__c].RecordType.Name = &quot;NDA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Evaluation&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;MLA&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Technical Inbound License&quot; || 
+[Apttus__APTS_Agreement__c].RecordType.Name = &quot;Other&quot; )
+ &amp;&amp;
+
+([Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner Agreement&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;IT&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;EULA&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;License Schedule&quot; &amp;&amp;
+[Apttus__APTS_Agreement__c].RecordType.Name &lt;&gt; &quot;Partner Schedule&quot;) &amp;&amp;
+
+NOT(ISCHANGED([Apttus__APTS_Agreement__c].RecordType.Name)) &amp;&amp;
+[Apttus__APTS_Agreement__c].Created_By_Flow__c = FALSE
+, TRUE,FALSE)
+ </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_7_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ({!myVariable_old.RecordType.Name} = &quot;NDA&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;Evaluation&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;MLA&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;Technical Inbound License&quot; || 
+{!myVariable_old.RecordType.Name} = &quot;Other&quot; )
+ &amp;&amp;
+
+({!myVariable_old.RecordType.Name} &lt;&gt; &quot;Consulting&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Partner Agreement&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;IT&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Facilities&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;EULA&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;License Schedule&quot; &amp;&amp;
+{!myVariable_old.RecordType.Name} &lt;&gt; &quot;Partner Schedule&quot;) &amp;&amp;
+
+NOT(ISCHANGED({!myVariable_old.RecordType.Name})) &amp;&amp;
+{!myVariable_old.Created_By_Flow__c} = FALSE
+, TRUE,FALSE)</expression>
+    </formulas>
+    <interviewLabel>Apttus_Agreement_Creation_Flows-29_InterviewLabel</interviewLabel>
+    <label>Apttus Agreement Creation Flows</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Apttus__APTS_Agreement__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>update owner</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Agreement Owner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Agreement_Owner__c</field>
+            <value>
+                <elementReference>myVariable_current.Apttus__Related_Opportunity__r.Contract_Owner__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Update Requestor</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Requestor</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Requestor__c</field>
+            <value>
+                <elementReference>myVariable_current.Apttus__Related_Opportunity__r.Deal_Desk_Approver__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Update Owner/Requestor</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Agreement Owner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Agreement_Owner__c</field>
+            <value>
+                <elementReference>myVariable_current.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Requestor</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Requestor__c</field>
+            <value>
+                <elementReference>myVariable_current.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_5_A1</name>
+        <label>Update Owner</label>
+        <locationX>500</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_5_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Agreement Owner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Agreement_Owner__c</field>
+            <value>
+                <elementReference>myVariable_current.Apttus__Related_Opportunity__r.Contract_Partner_Owner__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_5_A2</name>
+        <label>Update Requestor</label>
+        <locationX>500</locationX>
+        <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Requestor</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Requestor__c</field>
+            <value>
+                <elementReference>myVariable_current.Apttus__Related_Opportunity__r.Deal_Desk_Approver__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_7_A1</name>
+        <label>Update Owner/Requestor</label>
+        <locationX>700</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_7_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Agreement Owner</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Agreement_Owner__c</field>
+            <value>
+                <elementReference>myVariable_current.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Requestor</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Requestor__c</field>
+            <value>
+                <elementReference>myVariable_current.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Owner ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Group;User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>myVariable_current.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Apttus__APTS_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_7_A2</name>
+        <label>Default Status</label>
+        <locationX>700</locationX>
+        <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Approval Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus_Approval__Approval_Status__c</field>
+            <value>
+                <stringValue>Approval Required</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status Category</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Status_Category__c</field>
+            <value>
+                <stringValue>Request</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Apttus__Status__c</field>
+            <value>
+                <stringValue>Request</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Apttus__APTS_Agreement__c</object>
+    </recordUpdates>
+    <startElementReference>myDecision</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Apttus__APTS_Agreement__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Apttus__APTS_Agreement__c</objectType>
+    </variables>
+</Flow>

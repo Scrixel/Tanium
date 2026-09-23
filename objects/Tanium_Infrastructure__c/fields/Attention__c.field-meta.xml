@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attention__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Tanium_Infrastructure_Form_Status__c = &quot;Pending&quot;,&quot;Please update Tanium Infrastructure Quantities in the section below&quot;,IF(Tanium_Infrastructure_Form_Status__c = &quot;Pending Confirmation&quot; ,&quot;Please update &apos;Quantities Confirmed&apos; to TRUE&quot;,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pending Items</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

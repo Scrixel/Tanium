@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstimatedPaymentDate__c</fullName>
+    <description>If no invoice attached to billing schedule, then default is Invoice_date__c+90 else calculated using Invoice__c.InvoicePaymentTerm__c.</description>
+    <label>Estimated Payment Date (new)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

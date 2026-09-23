@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hold_Reason__c</fullName>
+    <description>Tracks the reason an order is delayed or on hold. SS-13533</description>
+    <inlineHelpText>Select the reason the order is currently on hold.</inlineHelpText>
+    <label>Hold Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Revised PO/Quote Required</fullName>
+                <default>false</default>
+                <label>Revised PO/Quote Required</label>
+            </value>
+            <value>
+                <fullName>License Allocation Pending</fullName>
+                <default>false</default>
+                <label>License Allocation Pending</label>
+            </value>
+            <value>
+                <fullName>End User Verification Required (EUV/EUC)</fullName>
+                <default>false</default>
+                <label>End User Verification Required (EUV/EUC)</label>
+            </value>
+            <value>
+                <fullName>Tax Certificate Pending</fullName>
+                <default>false</default>
+                <label>Tax Certificate Pending</label>
+            </value>
+            <value>
+                <fullName>Date or Term Issue</fullName>
+                <default>false</default>
+                <label>Date or Term Issue</label>
+            </value>
+            <value>
+                <fullName>Special Deal Handling (RAP, GovCloud, MSP, Cloud Transfer)</fullName>
+                <default>false</default>
+                <label>Special Deal Handling (RAP, GovCloud, MSP, Cloud Transfer)</label>
+            </value>
+            <value>
+                <fullName>Other - See Comments</fullName>
+                <default>false</default>
+                <label>Other - See Comments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

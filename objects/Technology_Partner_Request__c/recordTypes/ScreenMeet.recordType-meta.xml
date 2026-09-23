@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ScreenMeet</fullName>
+    <active>false</active>
+    <label>ScreenMeet</label>
+    <picklistValues>
+        <picklist>Integrations_Currently_Using__c</picklist>
+        <values>
+            <fullName>AEM Agent for ServiceNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset Push</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Configuration Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Integrity Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live UI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch Management for IT Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch Management for Vulnerability Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDK for ServiceNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Incident Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Graph Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vulnerability Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integrations_Evaluating__c</picklist>
+        <values>
+            <fullName>AEM Agent for ServiceNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset Push</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Configuration Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Integrity Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live UI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch Management for IT Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch Management for Vulnerability Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDK for ServiceNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Incident Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Graph Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vulnerability Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Presence_Type__c</picklist>
+        <values>
+            <fullName>In-Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resource Assigned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EBR%2FQBR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services Partner Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology Partner Engagement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Technology_Partner_Products_Evaluating__c</picklist>
+        <values>
+            <fullName>Configuration Compliance %28CC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware Asset Management %28HAM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Operations Management %28ITOM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated Risk Management %28IRM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Now Assist%2FAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Incident Response %28SIR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Asset Management %28SAM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vulnerability Response %28VR%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Technology_Partner_Products_Owned__c</picklist>
+        <values>
+            <fullName>Configuration Compliance %28CC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware Asset Management %28HAM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Operations Management %28ITOM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated Risk Management %28IRM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Incident Response %28SIR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Asset Management %28SAM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vulnerability Response %28VR%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Zone__c</picklist>
+        <values>
+            <fullName>APJ Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU Eastern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU Western</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Eastern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mountain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Pacific</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

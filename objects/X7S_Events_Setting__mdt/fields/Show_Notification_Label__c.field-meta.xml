@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Notification_Label__c</fullName>
+    <defaultValue>true</defaultValue>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Show event organizer’s label (x7sEventsMentionText) when they are mentioned in a chatter post.</inlineHelpText>
+    <label>Show Notification Label</label>
+    <type>Checkbox</type>
+</CustomField>

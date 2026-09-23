@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Solution__c</fullName>
+    <label>Tanium Solution</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Custom Solution</fullName>
+                <default>false</default>
+                <label>Custom Solution</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Deploy</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor</fullName>
+                <default>false</default>
+                <label>Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>IT Ops Suite</fullName>
+                <default>false</default>
+                <label>IT Ops Suite</label>
+            </value>
+            <value>
+                <fullName>Map</fullName>
+                <default>false</default>
+                <label>Map</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Protect</fullName>
+                <default>false</default>
+                <label>Protect</label>
+            </value>
+            <value>
+                <fullName>Reveal</fullName>
+                <default>false</default>
+                <label>Reveal</label>
+            </value>
+            <value>
+                <fullName>Threat Response</fullName>
+                <default>false</default>
+                <label>Threat Response</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

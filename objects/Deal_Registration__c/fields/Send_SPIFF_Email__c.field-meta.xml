@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_SPIFF_Email__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>2021-07-14 updated field name per INC0142979
+2020-09-23 added help text</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Emails are sent to SPIFF Partner Account Recipient Email upon Deal Approval and Opp Approval.  Enter 1 to email at the time Deal is approved, 2 to email at the time Opportunity is approved, and 3 when 3 or more Opportunities have been approved.</inlineHelpText>
+    <label>Send Partner Account Manager SPIFF Email</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

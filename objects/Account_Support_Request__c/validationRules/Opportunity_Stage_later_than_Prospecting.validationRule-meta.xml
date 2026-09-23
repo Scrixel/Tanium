@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Stage_later_than_Prospecting</fullName>
+    <active>true</active>
+    <description>SS-13637 - Updated the StageNumber value.
+SS-7634 - Upon Create New Influence Partner Registration ISR, if the Opportunity Stage is later then Prospecting, an error will appear.</description>
+    <errorConditionFormula>AND(
+ ISNEW(),
+ Opportunity__r.StageNumber__c &gt; 10,
+ RecordType.DeveloperName = &quot;Influence_Partner_Registration&quot;,
+ NOT($Permission.DisableValidationRules )
+)</errorConditionFormula>
+    <errorMessage>A Partner Creator ISR cannot be added to this deal because the Opportunity is past the Prospecting phase. Please reach out to ChannelOps@tanium.com if you believe this is incorrect.</errorMessage>
+</ValidationRule>

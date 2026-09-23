@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona_Selection__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Persona Selection</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Assignment_Managements4</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

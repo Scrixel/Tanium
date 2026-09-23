@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Status__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>AVP__c</columns>
+    <columns>Caren_Notes__c</columns>
+    <columns>CEO_Details__c</columns>
+    <columns>CFO__c</columns>
+    <columns>Chairman_Details__c</columns>
+    <columns>CIO__c</columns>
+    <columns>Date_of_Meeting__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account_Support_Request__c.Travel_Request_ISR</value>
+    </filters>
+    <label>Restricted Country Travel ISRs</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

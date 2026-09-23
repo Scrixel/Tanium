@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Product_Group</name>
+        <label>Assign Product Group</label>
+        <locationX>283</locationX>
+        <locationY>563</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Product_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Product__r.Product_Group__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_RenewedSubscription</name>
+        <label>Update RenewedSubscription</label>
+        <locationX>421</locationX>
+        <locationY>403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__RenewedSubscription__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_RenewedSubscription</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__UpgradedSubscription__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_UpgradedSubscription</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Eligible_for_Renewal_ARR_Flow__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_EligibleForRenewalARR</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Product_Group</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Update_Product_Group</name>
+        <label>Update Product Group?</label>
+        <locationX>410</locationX>
+        <locationY>565</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update_Product_Group</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (1 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Quote__r.ApprovalStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Group__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Product__r.Product_Group__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Group__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.SBQQ__Product__r.Product_Group__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Product_Group</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>04.03.2025 - SS-10618: Added logic to remove the subscription reference on quote lines cloned within the quote</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_EffectiveQuantity</name>
+        <dataType>Number</dataType>
+        <expression>IF(OR(ISPICKVAL({!$Record.SBQQ__DiscountScheduleType__c}, &apos;Slab&apos;),ISPICKVAL({!$Record.SBQQ__PricingMethod__c}, &apos;Block&apos;)),IF(OR(AND(!{!$Record.SBQQ__Existing__c}, !{!$Record.SBQQ__CarryoverLine__c}, {!$Record.SBQQ__Quantity__c} == 0),AND(OR({!$Record.SBQQ__Existing__c}, {!$Record.SBQQ__CarryoverLine__c}),OR({!$Record.SBQQ__Quantity__c} == {!$Record.SBQQ__PriorQuantity__c} - {!$Record.SBQQ__UpgradedQuantity__c},AND(!{!$Record.SBQQ__AllowAssetRefund__c}, ISPICKVAL({!$Record.SBQQ__SubscriptionPricing__c}, &apos;&apos;), {!$Record.SBQQ__Quantity__c} &lt; {!$Record.SBQQ__PriorQuantity__c} - {!$Record.SBQQ__UpgradedQuantity__c})))),0,1),IF(AND(!{!$Record.SBQQ__Existing__c}, !{!$Record.SBQQ__CarryoverLine__c}),{!$Record.SBQQ__Quantity__c},IF({!$Record.SBQQ__Quantity__c} &gt;= {!$Record.SBQQ__PriorQuantity__c} - {!$Record.SBQQ__UpgradedQuantity__c},IF(ISPICKVAL({!$Record.SBQQ__SubscriptionPricing__c}, &apos;Percent Of Total&apos;),{!$Record.SBQQ__Quantity__c},{!$Record.SBQQ__Quantity__c} - {!$Record.SBQQ__PriorQuantity__c} + {!$Record.SBQQ__UpgradedQuantity__c}),IF(AND(!{!$Record.SBQQ__AllowAssetRefund__c}, ISPICKVAL({!$Record.SBQQ__SubscriptionPricing__c}, &apos;&apos;)),0,{!$Record.SBQQ__Quantity__c} - {!$Record.SBQQ__PriorQuantity__c} + {!$Record.SBQQ__UpgradedQuantity__c}))))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_EligibleForRenewalARR</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(AND(NOT({!$Record.Exclude_from_ARR__c}), {!formula_EffectiveQuantity} != 0, NOT(ISBLANK({!$Record.SBQQ__RenewedSubscription__c}))), TRUE, FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_RenewedSubscription</name>
+        <dataType>String</dataType>
+        <expression>IF(AND({!$Record.SBQQ__Source__c} != NULL, {!$Record.SBQQ__Source__r.SBQQ__Quote__c} = {!$Record.SBQQ__Quote__c}), NULL, {!$Record.SBQQ__RenewedSubscription__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_UpgradedSubscription</name>
+        <dataType>String</dataType>
+        <expression>IF(AND({!$Record.SBQQ__Source__c} != NULL, {!$Record.SBQQ__Source__r.SBQQ__Quote__c} = {!$Record.SBQQ__Quote__c}), NULL, {!$Record.SBQQ__UpgradedSubscription__c})</expression>
+    </formulas>
+    <interviewLabel>Quote Line - Before Insert - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote Line - Before Insert - Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>295</locationX>
+        <locationY>104</locationY>
+        <connector>
+            <targetReference>Update_RenewedSubscription</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>SBQQ__QuoteLine__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

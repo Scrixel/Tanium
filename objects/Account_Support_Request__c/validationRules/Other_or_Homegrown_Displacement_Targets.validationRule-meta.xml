@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_or_Homegrown_Displacement_Targets</fullName>
+    <active>true</active>
+    <description>If Other or Homegrown Displacement Targets is the value chosen for Point Solution Displacement Targets the information must be listed in the field Other or Homegrown Displacement Targets.</description>
+    <errorConditionFormula>AND( INCLUDES( Point_Solution_Displacement_Targets__c , &quot;OTHER or HOMEGROWN&quot;) , ISBLANK(Other_or_Homegrown_Displacement_Targets__c ))</errorConditionFormula>
+    <errorMessage>When the value chosen is Other or Homegrown you must enter the Other or Homegrown Displacement Target in this field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Tanium_Partner_Interest__c</fullName>
+    <description>Partner Inquiry Form Prompt: What prompted your interest in becoming a Tanium partner?
+2020-03-18</description>
+    <label>Reason for Inquiry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer request or requirement</fullName>
+                <default>false</default>
+                <label>Customer request or requirement</label>
+            </value>
+            <value>
+                <fullName>Previous engagement with a Tanium employee</fullName>
+                <default>false</default>
+                <label>Previous engagement with a Tanium employee</label>
+            </value>
+            <value>
+                <fullName>Requested or suggested by a Tanium executive</fullName>
+                <default>false</default>
+                <label>Requested or suggested by a Tanium executive</label>
+            </value>
+            <value>
+                <fullName>General interest</fullName>
+                <default>false</default>
+                <label>General interest</label>
+            </value>
+            <value>
+                <fullName>Referral from a strategic Tanium partner</fullName>
+                <default>false</default>
+                <label>Referral from a strategic Tanium partner</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

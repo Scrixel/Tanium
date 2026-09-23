@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_Cloud_Provider</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(TEXT( Cloud_Provider__c)),  ISPICKVAL( If_Cloud_does_customer_have_direct_conn__c ,&quot;Yes&quot;))</errorConditionFormula>
+    <errorDisplayField>Cloud_Provider__c</errorDisplayField>
+    <errorMessage>Cloud Provider to be provided when customer has cloud provider</errorMessage>
+</ValidationRule>

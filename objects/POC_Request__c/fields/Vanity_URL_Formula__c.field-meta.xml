@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanity_URL_Formula__c</fullName>
+    <description>The formula used in the field is:
+CASESAFEID( Related_Contact__c) &amp; &quot;.cloud.tanium.com&quot;</description>
+    <externalId>false</externalId>
+    <formula>CASESAFEID( Related_Contact__c) &amp; &quot;.cloud.tanium.com&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Field is populated with a formula:
+CASESAFEID( Related_Contact__c) &amp; &quot;.cloud.tanium.com&quot;</inlineHelpText>
+    <label>Vanity URL Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

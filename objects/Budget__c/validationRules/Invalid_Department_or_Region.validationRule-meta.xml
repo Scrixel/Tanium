@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_Department_or_Region</fullName>
+    <active>true</active>
+    <errorConditionFormula>Budget_Owner__c = NULL &amp;&amp;
+ Finance_Approver__c = NULL &amp;&amp;
+ Procurement_E_Staff_Approver__c = NULL &amp;&amp;
+ RecordType.Name = &quot;Procurement&quot;</errorConditionFormula>
+    <errorMessage>You have selected an invalid Department and/or Region. Please view the Approval Matrix &amp; select a valid combination</errorMessage>
+</ValidationRule>

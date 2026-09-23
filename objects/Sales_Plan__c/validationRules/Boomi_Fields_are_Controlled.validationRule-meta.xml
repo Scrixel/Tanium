@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Boomi_Fields_are_Controlled</fullName>
+    <active>true</active>
+    <description>Added API Only Integration profile on 5/26 to allow Workato to Update and Insert Sales Plans records.</description>
+    <errorConditionFormula>AND(
+   NOT(CONTAINS($Profile.Name, &apos;API&apos;)),
+   $Profile.Name != &apos;System Administrator&apos;,
+   $Profile.Name != &apos;Tanium System Administrator&apos;,
+   OR (
+      ISCHANGED(ADP_ID__c),
+      ISCHANGED(ADP_Position__c),
+      ISCHANGED(Employee_ID_Text__c),
+      ISCHANGED(Last_Payroll_Date__c),
+      ISCHANGED(Legal_Entity__c),
+      ISCHANGED(OTV_1__c),
+      ISCHANGED(OTV_1_Currency__c),
+      ISCHANGED(Payment_Currency__c),
+      ISCHANGED(Total_OTV_Effective_Date__c),
+      ISCHANGED(Work_Location__c),
+      ISCHANGED(Work_Location_ID__c)
+   )
+)</errorConditionFormula>
+    <errorMessage>You&apos;re trying to change Total OTV or one of the fields in the Boomi section of the page. Those are controlled fields. They can only be changed by administrators. Please contact the Sales System team if you need assistance.</errorMessage>
+</ValidationRule>

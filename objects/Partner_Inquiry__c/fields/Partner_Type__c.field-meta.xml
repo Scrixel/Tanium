@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Type__c</fullName>
+    <description>Partner Portal Prompt: Which of these best describes your organization &quot;type&quot; or route to market?</description>
+    <label>Partner Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Partner_Type</valueSetName>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

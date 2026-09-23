@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Category__c</fullName>
+    <inlineHelpText>IR/Assessment/MSP End User categories require a signed agreement</inlineHelpText>
+    <label>POC Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Partner Internal</fullName>
+                <default>false</default>
+                <label>Partner Internal</label>
+            </value>
+            <value>
+                <fullName>IR</fullName>
+                <default>false</default>
+                <label>IR</label>
+            </value>
+            <value>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+                <label>Assessment</label>
+            </value>
+            <value>
+                <fullName>MSP End User</fullName>
+                <default>false</default>
+                <label>MSP End User</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

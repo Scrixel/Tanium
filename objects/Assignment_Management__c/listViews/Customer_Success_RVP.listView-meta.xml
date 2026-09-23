@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Success_RVP</fullName>
+    <columns>NAME</columns>
+    <columns>Geo__c</columns>
+    <columns>Region__c</columns>
+    <columns>Sub_Region__c</columns>
+    <columns>Booked_ARR_Scale__c</columns>
+    <columns>Primary_Sales_Territory_Name__c</columns>
+    <columns>Customer_Success_RVP__c</columns>
+    <columns>Solution_Engineer_RVP__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Assignment_Management__c.Customer_Success_Solution_Engineer_RVP</value>
+    </filters>
+    <label>Customer Success/Solution Engineer RVP</label>
+</ListView>

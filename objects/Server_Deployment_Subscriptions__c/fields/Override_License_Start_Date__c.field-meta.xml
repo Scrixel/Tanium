@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override_License_Start_Date__c</fullName>
+    <description>This field is used by Sales Ops and Admins to manually override the License Start Date. If populated, it will impact the License Start Date field.</description>
+    <inlineHelpText>This field is used by Sales Ops and Admins to manually override the License Start Date. If populated, it will impact the License Start Date field.</inlineHelpText>
+    <label>Override License Start Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

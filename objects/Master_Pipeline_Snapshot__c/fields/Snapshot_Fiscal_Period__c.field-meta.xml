@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Snapshot_Fiscal_Period__c</fullName>
+    <description>Fiscal period of Created Date</description>
+    <externalId>false</externalId>
+    <formula>IF (isBlank(TEXT(YEAR( Date_Created_Date__c ))), &quot;&quot;, IF(
+MONTH(Date_Created_Date__c)=1,TEXT(YEAR(Date_Created_Date__c)-1),TEXT(YEAR(Date_Created_Date__c))) &amp; &quot;, &quot; &amp; CASE(MONTH(Date_Created_Date__c),1,&quot;Q4&quot;,2,&quot;Q1&quot;,3,&quot;Q1&quot;,4,&quot;Q1&quot;,5,&quot;Q2&quot;,6,&quot;Q2&quot;,7,&quot;Q2&quot;,8,&quot;Q3&quot;,9,&quot;Q3&quot;,10,&quot;Q3&quot;,11,&quot;Q4&quot;,12,&quot;Q4&quot;,&quot;UNKNOWN&quot;))</formula>
+    <inlineHelpText>Fiscal period of Created Date</inlineHelpText>
+    <label>Snapshot Fiscal Period</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

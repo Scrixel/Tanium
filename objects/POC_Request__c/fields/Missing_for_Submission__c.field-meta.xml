@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_for_Submission__c</fullName>
+    <description>SS-13777: Added Solution Engineer checker.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes-Tanium - Physical&quot;),IF( !ISBLANK(Contract_Owner__c ),&quot;&quot;,&quot; Contract Owner is Missing; &quot;),&quot;&quot;)&amp;
+
+IF( !ISBLANK( Account_RVP__c ),&quot;&quot;,&quot; Account RVP is Missing; &quot;)&amp;
+IF( Opportunity_Stage__c = TRUE, &quot;POC should be created from an open opportunity; &quot;,&quot;&quot;)&amp;
+
+IF(Chronicle__c = TRUE, IF(OR(ISBLANK(Subdomain__c), ISBLANK(Customer_Contact_Email__c)), &quot;Chronicle Section incomplete; &quot;,&quot;&quot;),&quot;&quot;) &amp;
+
+IF( OR(VALUE( TAN_320_S_Copper_Quantity__c) &lt;1, VALUE(TAN_320_S_Fiber_Quantity__c) &lt;1, VALUE(TAN_420_M_Copper_Quantity__c) &lt;1, VALUE(TAN_420_M_Fiber_Quantity__c) &lt;1, VALUE(TAN_720_L_Copper_Quantity__c) &lt;1, VALUE(TAN_720_L_Fiber_Quantity__c) &lt;1, VALUE(TAN_920_XL_Copper_Quantity__c) &lt;1, VALUE(TAN_920_XL_Fiber_Quantity__c) &lt;1, VALUE(TAN_CLOUD_Quantity__c) &lt;1, VALUE(TAN_220_DEV_Copper_Quantity__c) &lt;1, VALUE(TAN_220_DEV_Fiber_Quantity__c) &lt;1, VALUE(TAN_L_730_CP_Quantity__c) &lt;1, VALUE(TAN_L_735_FB_Quantity__c) &lt;1, VALUE(TAN_M_430_CP_Quantity__c) &lt;1, VALUE(TAN_M_435_FB_Quantity__c) &lt;1, VALUE(TAN_S_330_CP_Quantity__c) &lt;1, VALUE(TAN_S_335_FB_Quantity__c) &lt;1, VALUE(TAN_VIRTUAL_Quantity__c) &lt;1, VALUE(TAN_XL_930_CP_Quantity__c) &lt;1, VALUE(TAN_XL_935_FB_Quantity__c) &lt;1), &quot;Infrastructure Product should be blank or greater than 0; &quot;,&quot;&quot; )&amp;
+
+IF(AND(ISBLANK( Solution_Engineer_RVP__c ), OR(RecordType.DeveloperName != &quot;Partner_Tanium_Cloud&quot;, RecordType.DeveloperName != &quot;Partner_On_Prem&quot;)), &quot;SE RVP Missing. Add SE to Account or Opportunity and resave POC. &quot;,&quot;&quot;)&amp;
+
+IF(AND(ISBLANK( Solution_Engineer__c  ), OR(RecordType.DeveloperName != &quot;Partner_Tanium_Cloud&quot;, RecordType.DeveloperName != &quot;Partner_On_Prem&quot;)), &quot;SE Missing. Add SE to Account or Opportunity and resave POC. &quot;,&quot;&quot;)</formula>
+    <inlineHelpText>ERROR: MUST FIX BEFORE SUBMISSION</inlineHelpText>
+    <label>ERROR: MUST FIX BEFORE SUBMISSION</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

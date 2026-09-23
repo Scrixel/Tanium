@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Source_Quote_Term_Version__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Only populated when Version Type = Quote Instance, this field links a quote-specific Term Version back to the Source record from which it was copied.</inlineHelpText>
+    <label>Source Quote Term Version</label>
+    <referenceTo>ELV_Quote_Term_Version__c</referenceTo>
+    <relationshipLabel>Quote Term Versions</relationshipLabel>
+    <relationshipName>Quote_Term_Versions</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

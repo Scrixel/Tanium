@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitive_Bid_Helper__c</fullName>
+    <description>Help Text For Competitive Bid</description>
+    <externalId>false</externalId>
+    <formula>&quot;SOLE SOURCE: Indicates there is not another vendor that provides the required goods or services. Sole Source requests must include a statement from the vendor on company letterhead, or in email indicating that the quoted price is certified to be equal to the pricing given to the vendor’s most favored customers or other competitors of Tanium.&quot; &amp; BR() &amp;  BR() &amp;
+
+&quot;EMERGENCY: The goods or services are needed to correct or prevent an emergency health, environmental or safety hazard; special or time sensitive events; and/or emergency repair as determined by the CFO, or designee.&quot;  &amp; BR() &amp;  BR() &amp;
+
+&quot;ECONOMIC: When Tanium has equipment or other goods and services from an existing vendor wherein it would be too costly to change vendors, then a case (description(s) of the excess costs and/or conditions to change) would need to accompany the waiver.&quot; &amp; BR() &amp; BR() &amp;
+
+&quot;PREFERRED VENDOR:  When Tanium has an existing vendor relationship with a master agreement in place.  Any services and goods received by a preferred vendor that is performed under a statement of work or purchase order.&quot; &amp; BR() &amp;  BR() &amp;
+
+&quot;EXEMPT VENDOR:  When Tanium is participating in a sponsorship or event, or the vendor is performing legal professional services.&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Help Text For Competitive Bid</inlineHelpText>
+    <label>Competitive Bid Helper</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

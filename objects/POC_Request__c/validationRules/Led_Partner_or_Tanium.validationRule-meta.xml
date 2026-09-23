@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Led_Partner_or_Tanium</fullName>
+    <active>true</active>
+    <description>For On-Prem and TaaS record types ensure that Tanium Led or Partner Led is selected.</description>
+    <errorConditionFormula>/* Ensure Tanium or Partner is selected */
+AND((isNew() || DATEVALUE( CreatedDate ) &gt; DATEVALUE(&quot;2023-08-10&quot;)),RecordType.DeveloperName = &quot;Standard&quot;, NOT(ISPICKVAL(POC_Led_By__c, &quot;Tanium&quot;) ),NOT(ISPICKVAL(POC_Led_By__c, &quot;Partner&quot;)) )
+|| AND((isNew() || DATEVALUE( CreatedDate ) &gt; DATEVALUE(&quot;2023-08-10&quot;)),RecordType.DeveloperName = &quot;TaaS&quot;, NOT(ISPICKVAL(POC_Led_By__c, &quot;Tanium&quot;) ),NOT(ISPICKVAL(POC_Led_By__c, &quot;Partner&quot;)) )</errorConditionFormula>
+    <errorDisplayField>POC_Led_By__c</errorDisplayField>
+    <errorMessage>Choose either Tanium or Partner</errorMessage>
+</ValidationRule>

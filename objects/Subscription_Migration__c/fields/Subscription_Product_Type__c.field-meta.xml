@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(ELV_Subscription__r.Ruby__Product__r.Product_Type__c)</formula>
+    <label>Subscription Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

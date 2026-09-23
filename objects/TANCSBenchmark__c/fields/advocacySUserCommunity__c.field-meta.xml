@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>advocacySUserCommunity__c</fullName>
+    <description>DEFINITION: Everything from passive consumption (downloading a white paper, attending a webinar) through to active participation (a joint case study, attending Converge or presenting at Converge)
+
+IMPORTANCE: As above. Emotionally invested in our expertise. Participating in our content and community demonstrates commitment, value derived and knowledge transfer</description>
+    <externalId>false</externalId>
+    <label>advocacySUserCommunity</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

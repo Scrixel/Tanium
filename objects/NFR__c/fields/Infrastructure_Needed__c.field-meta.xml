@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Infrastructure_Needed__c</fullName>
+    <label>Infrastructure Needed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On-Prem</fullName>
+                <default>false</default>
+                <label>On-Prem</label>
+            </value>
+            <value>
+                <fullName>Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Tanium as a Service</label>
+            </value>
+            <value>
+                <fullName>Partner Provided</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner Provided</label>
+            </value>
+            <value>
+                <fullName>Partner Provided - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner Provided - Physical</label>
+            </value>
+            <value>
+                <fullName>Partner Provided - Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner Provided - Virtual</label>
+            </value>
+            <value>
+                <fullName>Tanium- Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium- Cloud Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium- Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium- Physical</label>
+            </value>
+            <value>
+                <fullName>Tanium- Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium- Virtual Appliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

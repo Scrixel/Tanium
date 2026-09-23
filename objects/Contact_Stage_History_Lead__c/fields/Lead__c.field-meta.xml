@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Lead record on which the Contact Stage changed.Jira ticket   SS-12157</description>
+    <inlineHelpText>The Lead record on which the Contact Stage changed.</inlineHelpText>
+    <label>Lead</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Contact Stage Histories (Lead)</relationshipLabel>
+    <relationshipName>Contact_Stage_Histories_Lead</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

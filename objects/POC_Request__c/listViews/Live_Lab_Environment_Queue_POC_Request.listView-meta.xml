@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Lab_Environment_Queue_POC_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Live Lab Environment Queue</label>
+    <queue>Live_Lab_Environment_Queue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

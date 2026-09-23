@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_On_Prem__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the On-Prem product record. Jira ticket SS-12115</description>
+    <inlineHelpText>Lookup to the On-Prem product record</inlineHelpText>
+    <label>Product - On-Prem</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>POC Request Solution and Module Map (Product - On-Prem)</relationshipLabel>
+    <relationshipName>POC_Request_Solution_and_Module_Map1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

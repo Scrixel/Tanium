@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaaS</fullName>
+    <active>true</active>
+    <description>For customer-run Tanium Cloud POCs</description>
+    <label>Customer: Tanium Cloud</label>
+    <picklistValues>
+        <picklist>Approval_Stage__c</picklist>
+        <values>
+            <fullName>Awaiting for Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request needs to be submitted for approval</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Cloud_Provider__c</picklist>
+        <values>
+            <fullName>AWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amazon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Cloud Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microsoft Azure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cloud_Direct_Connection__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Time_Zone__c</picklist>
+        <values>
+            <fullName>Alaska UTC-09%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amsterdam UTC%2B01%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona UTC-07%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlantic Time %28Canada%29 UTC-04%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auckland%09UTC%2B12%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brisbane UTC%2B10%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Time %28US %26 Canada%29 UTC-06%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City of Buenos Aires UTC-03%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinated Universal Time%2B13 UTC%2B13%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Time %28US %26 Canada%29 UTC-05%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greenland UTC-02%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii UTC-10%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kabul UTC%2B04%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuwait UTC%2B03%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London UTC%2B00%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain Time %28US %26 Canada%29 UTC-07%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Delhi UTC%2B05%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pacific Time %28US %26 Canada%29 UTC-08%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paris UTC%2B01%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Juan%09UTC-04%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore UTC%2B08%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tokyo UTC%2B09%3A00</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment_Country__c</picklist>
+        <values>
+            <fullName>Ceuta and Melilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosovo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia%2C Federal State of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>License_Type__c</picklist>
+        <values>
+            <fullName>Lab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>QA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>License_Version_6_5_or_7_x__c</picklist>
+        <values>
+            <fullName>6%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E4%2E6%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Live_Lab_Environment__c</picklist>
+        <values>
+            <fullName>Individual Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shared Environment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Non_Revenue_Unqualified__c</picklist>
+        <values>
+            <fullName>Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Churn Mitigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable %28Revenue%2FQualified POC%29</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Promotion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Showcase %28No POC Plan - Customer Eval%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>POC_Category__c</picklist>
+        <values>
+            <fullName>Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSP End User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>POC_Led_By__c</picklist>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>POC_Shadowing__c</picklist>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>POC_Type__c</picklist>
+        <values>
+            <fullName>Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modify an existing%2Factive POC license</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Physical_Appliance_Delivery_Questionna__c</picklist>
+        <values>
+            <fullName>Completed - Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Solution_Area__c</picklist>
+        <values>
+            <fullName>Asset %26 Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk %26 Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sensitive Data Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Threat Hunting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unlisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vulnerability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promotion__c</picklist>
+        <values>
+            <fullName>Benchmark Churn POC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endpoint Hardening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan Mythos Campaign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TaaS_Region__c</picklist>
+        <values>
+            <fullName>AP-Northeast-1 %28Japan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU-Central-1 %28Germany%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-West-2 %28Oregon%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-West-2 %28United States%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ap-southeast-2 %28Australia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ca-central-1 %28Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eu-west-2 %28England%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sa-east-1 %28Brazil%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tanium_Cloud_Region__c</picklist>
+        <values>
+            <fullName>AP-Northeast-1 %28Japan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU-Central-1 %28Germany%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-West-2 %28Oregon%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-West-2 %28United States%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ap-southeast-2 %28Australia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ca-central-1 %28Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eu-west-2 %28England%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sa-east-1 %28Brazil%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>us-gov-west-1 %28United States%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tanium_Infrastructure_2__c</picklist>
+        <values>
+            <fullName>No %E2%80%93 Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %E2%80%93 Tanium as a Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - Tanium - Physical Appliance %28Already Owned%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Tanium - Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Tanium - Physical Appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- Tanium -Virtual Appliance %28OVA%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tanium_Infrastructure__c</picklist>
+        <values>
+            <fullName>Tanium as a Service</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Virtual_On_Prem__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

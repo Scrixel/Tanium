@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDD_Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>[INC0168890] Requestor Nick Scala. We will use this field to look up the Partner Team owner from the Tanium Partner org.  For example, if we receive an OppReg for an end customer in Boston, we would lookup User &quot;Michael Presti&quot; in the new PDD Owner field as he covers that area</description>
+    <inlineHelpText>Partner Team owner from the Tanium Partner org</inlineHelpText>
+    <label>PDD Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>DealRegistration3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

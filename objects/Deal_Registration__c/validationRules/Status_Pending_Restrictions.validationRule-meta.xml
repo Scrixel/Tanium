@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Pending_Restrictions</fullName>
+    <active>true</active>
+    <description>Restrict the editing of select fields during select Statuses</description>
+    <errorConditionFormula>AND(
+    TEXT(or_Opp_Reg_Status__c) != &apos;Pending&apos;,
+    OR(
+        ISCHANGED(Account__c),
+        ISCHANGED(or_Create_Opportunity_upon_Approval__c),
+        AND(
+             ISCHANGED(Mapped_Opportunity__c),
+             NOT(ISBLANK(PRIORVALUE(Mapped_Opportunity__c)))
+        ),
+        AND(
+             ISCHANGED(or_Date_Approved__c),
+             NOT(ISBLANK(or_Date_Approved__c))
+        )
+    ),
+    $Profile.Name != &quot;Tanium Partner Portal Admin&quot;,
+    NOT($Permission.Deal_Registration_Manager), 
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>Sorry, but the Account, Create Opportunity Upon Approval, Mapped Opportunity, Date Approved and Date Rejected fields can&apos;t be edited while the status of the Deal is not Pending. Contact channelops@tanium.com for assistance.</errorMessage>
+</ValidationRule>

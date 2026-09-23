@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Premise</fullName>
+    <columns>NAME</columns>
+    <columns>MSP_EP_Pricing_Tier_Approved__c</columns>
+    <columns>Number_of_Packages__c</columns>
+    <columns>Discount__c</columns>
+    <columns>Bundle_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bundle_Type__c</field>
+        <operation>equals</operation>
+        <value>On Premise</value>
+    </filters>
+    <label>On Premise</label>
+</ListView>

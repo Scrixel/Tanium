@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AEM_Solution__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>AEM Solution (lookup to product)</description>
+    <label>AEM Solution</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Solution Migrations</relationshipLabel>
+    <relationshipName>Solution_Migrations</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

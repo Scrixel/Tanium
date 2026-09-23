@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Value__c</fullName>
+    <description>The raw value as sent by the external system (e.g. country name Türkiye, or a region code). Matched case-insensitively.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The raw value as sent by the external system (e.g. country name Türkiye, or a region code). Matched case-insensitively.</inlineHelpText>
+    <label>External Value</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

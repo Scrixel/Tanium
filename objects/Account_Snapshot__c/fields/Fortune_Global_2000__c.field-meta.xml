@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fortune_Global_2000__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marketing Use only, used to track penetration into Fortune&apos;s Global 2000</description>
+    <inlineHelpText>Marketing Use only, used to track penetration into Forbe&apos;s Global 2000</inlineHelpText>
+    <label>Forbes Global 2000</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

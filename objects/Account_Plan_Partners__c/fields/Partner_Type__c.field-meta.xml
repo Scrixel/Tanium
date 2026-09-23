@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Type__c</fullName>
+    <inlineHelpText>Select the Partner type</inlineHelpText>
+    <label>Partner Type</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ITOps Consulting Partner</fullName>
+                <default>false</default>
+                <label>ITOps Consulting Partner</label>
+            </value>
+            <value>
+                <fullName>MSP/MSPP Partner</fullName>
+                <default>false</default>
+                <label>MSP/MSPP Partner</label>
+            </value>
+            <value>
+                <fullName>Preferred Reseller</fullName>
+                <default>false</default>
+                <label>Preferred Reseller</label>
+            </value>
+            <value>
+                <fullName>Services, Implementation, Staffing Partner</fullName>
+                <default>false</default>
+                <label>Services, Implementation, Staffing Partner</label>
+            </value>
+            <value>
+                <fullName>Technology Partner</fullName>
+                <default>false</default>
+                <label>Technology Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

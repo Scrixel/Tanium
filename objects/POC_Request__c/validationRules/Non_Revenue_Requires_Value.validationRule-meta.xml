@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Revenue_Requires_Value</fullName>
+    <active>true</active>
+    <description>Specify reason why POC is unqualified otherwise specify Not Applicable (Revenue/Qualified POC).</description>
+    <errorConditionFormula>(RecordType.DeveloperName = &quot;Standard&quot; || RecordType.DeveloperName = &quot;TaaS&quot;) &amp;&amp; ISPICKVAL( Non_Revenue_Unqualified__c ,&quot;&quot;) &amp;&amp; (isNew() || DATEVALUE( CreatedDate ) &gt; DATEVALUE(&quot;2023-08-10&quot;))</errorConditionFormula>
+    <errorDisplayField>Non_Revenue_Unqualified__c</errorDisplayField>
+    <errorMessage>Specify reason why POC is unqualified otherwise specify Not Applicable (Revenue/Qualified POC).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Value__c</fullName>
+    <description>The Salesforce picklist value to use instead - a valid HQ Country label or State &amp; Country picklist value.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The Salesforce picklist value to use instead — a valid HQ Country label or State &amp; Country picklist value.</inlineHelpText>
+    <label>Salesforce Value</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

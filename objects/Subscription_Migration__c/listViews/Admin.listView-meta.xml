@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin</fullName>
+    <columns>NAME</columns>
+    <columns>Subscription_Product__c</columns>
+    <columns>Subscription_List_Price__c</columns>
+    <columns>Subscription_Net_Price__c</columns>
+    <columns>Manual_Entry__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Admin</label>
+</ListView>

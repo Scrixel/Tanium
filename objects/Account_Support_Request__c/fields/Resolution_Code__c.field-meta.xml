@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Code__c</fullName>
+    <label>Resolution Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solved via Call</fullName>
+                <default>false</default>
+                <label>Solved via Call</label>
+            </value>
+            <value>
+                <fullName>Solved via Chatter</fullName>
+                <default>false</default>
+                <label>Solved via Chatter</label>
+            </value>
+            <value>
+                <fullName>Solved via Email</fullName>
+                <default>false</default>
+                <label>Solved via Email</label>
+            </value>
+            <value>
+                <fullName>Solved via Slack/Teams</fullName>
+                <default>false</default>
+                <label>Solved via Slack</label>
+            </value>
+            <value>
+                <fullName>Approved Quote</fullName>
+                <default>false</default>
+                <label>Approved Quote</label>
+            </value>
+            <value>
+                <fullName>Referred to Other Team</fullName>
+                <default>false</default>
+                <label>Referred to Other Team</label>
+            </value>
+            <value>
+                <fullName>Duplicate Case</fullName>
+                <default>false</default>
+                <label>Duplicate Case</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

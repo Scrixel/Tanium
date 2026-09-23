@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_disclose_personal_info_to_vendor__c</fullName>
+    <inlineHelpText>&quot;Personal information&quot; means any information that can be used to identify an individual, such as name, SSN, email address, phone number, IP address, or device IDs.</inlineHelpText>
+    <label>Tanium disclose personal info to vendor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

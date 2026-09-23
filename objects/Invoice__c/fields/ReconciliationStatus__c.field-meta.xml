@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReconciliationStatus__c</fullName>
+    <description>When Invoice is created or updated, this field is calculated by apex trigger to indicate if a corresponding Billing Schedule was found or not.</description>
+    <label>Reconciliation Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exact Match</fullName>
+                <default>false</default>
+                <label>Exact Match</label>
+            </value>
+            <value>
+                <fullName>Semi Match</fullName>
+                <default>false</default>
+                <label>Semi Match</label>
+            </value>
+            <value>
+                <fullName>No Match</fullName>
+                <default>false</default>
+                <label>No Match</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

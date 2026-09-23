@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Through_Partner_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used by the licensing tool. It should not be updated, or have the values changed, without consultation with the licensing team</description>
+    <inlineHelpText>Can we distribute through a partner only?</inlineHelpText>
+    <label>Through Partner Only</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

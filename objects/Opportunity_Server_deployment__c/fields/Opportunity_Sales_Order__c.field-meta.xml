@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Sales_Order__c</fullName>
+    <description>Formula to populate the Sales Order from the related Opportunity.</description>
+    <externalId>false</externalId>
+    <formula>Opportunity__r.Sales_Order_New__c</formula>
+    <inlineHelpText>Formula to populate the Sales Order from the related Opportunity.</inlineHelpText>
+    <label>Opportunity Sales Order</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

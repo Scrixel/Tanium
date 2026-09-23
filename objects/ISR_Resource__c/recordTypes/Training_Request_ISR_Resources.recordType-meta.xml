@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Request_ISR_Resources</fullName>
+    <active>true</active>
+    <description>Training Request ISR Resources</description>
+    <label>Training Request ISR Resources</label>
+    <picklistValues>
+        <picklist>Designation__c</picklist>
+        <values>
+            <fullName>On-site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ESO_Resource_Days_per_Week__c</picklist>
+        <values>
+            <fullName>Friday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saturday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thursday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuesday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wednesday</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ESO_Resource_Duration__c</picklist>
+        <values>
+            <fullName>12%28%2B%29 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 months %28By exception only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ESO_Resource__c</picklist>
+        <values>
+            <fullName>Technical Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Writer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resource_Reference__c</picklist>
+        <values>
+            <fullName>ESO Resource 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Resource 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Resource 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resource_Status__c</picklist>
+        <values>
+            <fullName>ESO Approved Recruiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Engagement Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESO Recalled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trainer_Role__c</picklist>
+        <values>
+            <fullName>1st Time Leading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Observer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shadow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solo Trainer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veteran Trainer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

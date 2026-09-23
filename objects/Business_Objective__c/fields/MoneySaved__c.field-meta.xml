@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MoneySaved__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <inlineHelpText>If known, enter the amount of money the customer saved by achieving this business objective.</inlineHelpText>
+    <label>DEPRECATED - $ Saved</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

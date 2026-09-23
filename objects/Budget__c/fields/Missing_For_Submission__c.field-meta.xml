@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_For_Submission__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Security_Review_Complete__c &lt;&gt; TRUE &amp;&amp;  ISPICKVAL(IT_Security_Review_Needed__c, &quot;Yes&quot;)
+, &quot;INTERNAL IT/Security Review Section, &quot;, &quot;&quot;)&amp; 
+IF(  Line_Item_Count__c = 0, &quot;Budget Line Items, &quot;, &quot;&quot;) &amp;
+IF( OR(ISPICKVAL( Competitive_Bid_Needed__c, &quot;Yes&quot;) &amp;&amp; ISPICKVAL( Competitive_Bid_Type__c,&quot;&quot;), ISPICKVAL(Competitive_Bid_Needed__c,&quot;&quot;)), &quot;Competitive Bid Section&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Required To Submit for Approval</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

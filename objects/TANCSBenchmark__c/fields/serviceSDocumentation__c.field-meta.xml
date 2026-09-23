@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>serviceSDocumentation__c</fullName>
+    <description>DEFINITION: Stakeholder maps, actions lists, risk logs, enhancements etc. Shared?
+
+IMPORTANCE: 101</description>
+    <externalId>false</externalId>
+    <label>serviceSDocumentation</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

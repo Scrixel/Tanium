@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unapproved_Country__c</fullName>
+    <description>Used to identify if the POC is created for an Account where the country is restricted and there is no country exception ISR.
+09/07/2020: Malaysia, Thailand, Indonesia and Philippines have been made unrestricted. NH
+Only visible to admin</description>
+    <formula>(ISPICKVAL(Deployment_Country__c, &quot;Bahrain&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Bulgaria&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Chile&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Czech Republic&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Estonia&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Kuwait&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Latvia&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Lithuania&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Mexico&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Oman&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Qatar&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Romania&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;Saudi Arabia&quot;) ||
+ISPICKVAL(Deployment_Country__c, &quot;United Arab Emirates&quot;))
+
+&amp;&amp;
+
+(Account__r.Country_Exception_Approved__c = FALSE ||
+(Account__r.Country_Exception_Approved__c = TRUE &amp;&amp;   TEXT( Account__r.HQ_Country__c) != TEXT(Deployment_Country__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Unapproved Country</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>psme__c</fullName>
+    <label>psme</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SME-Infrastructure</fullName>
+                <default>false</default>
+                <label>SME-Infrastructure</label>
+            </value>
+            <value>
+                <fullName>SME-Asset</fullName>
+                <default>false</default>
+                <label>SME-Asset</label>
+            </value>
+            <value>
+                <fullName>SME-Comply</fullName>
+                <default>false</default>
+                <label>SME-Comply</label>
+            </value>
+            <value>
+                <fullName>SME-Connect</fullName>
+                <default>false</default>
+                <label>SME-Connect</label>
+            </value>
+            <value>
+                <fullName>SME-Deploy</fullName>
+                <default>false</default>
+                <label>SME-Deploy</label>
+            </value>
+            <value>
+                <fullName>SME-Discover</fullName>
+                <default>false</default>
+                <label>SME-Discover</label>
+            </value>
+            <value>
+                <fullName>SME-Incident Response</fullName>
+                <default>false</default>
+                <label>SME-Incident Response</label>
+            </value>
+            <value>
+                <fullName>SME-Index</fullName>
+                <default>false</default>
+                <label>SME-Index</label>
+            </value>
+            <value>
+                <fullName>SME-Integrity Monitor</fullName>
+                <default>false</default>
+                <label>SME-Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>SME-Console / Interact</fullName>
+                <default>false</default>
+                <label>SME-Console / Interact</label>
+            </value>
+            <value>
+                <fullName>SME-Patch</fullName>
+                <default>false</default>
+                <label>SME-Patch</label>
+            </value>
+            <value>
+                <fullName>SME-Protect</fullName>
+                <default>false</default>
+                <label>SME-Protect</label>
+            </value>
+            <value>
+                <fullName>SME-Trends</fullName>
+                <default>false</default>
+                <label>SME-Trends</label>
+            </value>
+            <value>
+                <fullName>SME-Platform</fullName>
+                <default>false</default>
+                <label>SME-Platform</label>
+            </value>
+            <value>
+                <fullName>SME-Threat Response</fullName>
+                <default>false</default>
+                <label>SME-Threat Response</label>
+            </value>
+            <value>
+                <fullName>SME-Map</fullName>
+                <default>false</default>
+                <label>SME-Map</label>
+            </value>
+            <value>
+                <fullName>SME-Reveal</fullName>
+                <default>false</default>
+                <label>SME-Reveal</label>
+            </value>
+            <value>
+                <fullName>SME-Health Check</fullName>
+                <default>false</default>
+                <label>SME-Health Check</label>
+            </value>
+            <value>
+                <fullName>SME-Performance</fullName>
+                <default>false</default>
+                <label>SME-Performance</label>
+            </value>
+            <value>
+                <fullName>SME-Other</fullName>
+                <default>false</default>
+                <label>SME-Other</label>
+            </value>
+            <value>
+                <fullName>SME-Tanium Index</fullName>
+                <default>false</default>
+                <label>SME-Tanium Index</label>
+            </value>
+            <value>
+                <fullName>EDR</fullName>
+                <default>false</default>
+                <label>EDR</label>
+            </value>
+            <value>
+                <fullName>SME-Tanium Client Management (TCM)</fullName>
+                <default>false</default>
+                <label>SME-Tanium Client Management (TCM)</label>
+            </value>
+            <value>
+                <fullName>SME-Client Management</fullName>
+                <default>false</default>
+                <label>SME-Client Management</label>
+            </value>
+            <value>
+                <fullName>SME-Network Quarantine Service</fullName>
+                <default>false</default>
+                <label>SME-Network Quarantine Service</label>
+            </value>
+            <value>
+                <fullName>SME-Enforce</fullName>
+                <default>false</default>
+                <label>SME-Enforce</label>
+            </value>
+            <value>
+                <fullName>SME-Direct Connect (DEC)</fullName>
+                <default>false</default>
+                <label>SME-Direct Connect (DEC)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>&quot;Campaign Member Status Change - Swoogo&quot; outbound message</description>
+        <name>Trigger_Campaign_Member_Status_Change_Swoogo_Outbound_Message</name>
+        <label>Trigger Campaign Member Status Change - Swoogo Outbound Message</label>
+        <locationX>1513</locationX>
+        <locationY>310</locationY>
+        <actionName>CampaignMember.Campaign_Member_Status_Change_Swoogo</actionName>
+        <actionType>outboundMessage</actionType>
+        <connector>
+            <targetReference>Log_Entry</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>CampaignMember.Campaign_Member_Status_Change_Swoogo</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>SS-10535: New Flow created to trigger Outbound Message to Swoogo when Campaign Member Status changes.</description>
+    <environments>Default</environments>
+    <interviewLabel>Campaign Member - After Insert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign Member - After Insert - Send to Swoogo</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Log_Entry</name>
+        <label>Log Entry</label>
+        <locationX>1664</locationX>
+        <locationY>310</locationY>
+        <inputAssignments>
+            <field>Endpoint__c</field>
+            <value>
+                <stringValue>https://tanium-swoogo-sf-e649b86e0bbb.herokuapp.com/api/v1/webhook</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>Swoogo Outbound Message</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payload__c</field>
+            <value>
+                <elementReference>Trigger_Campaign_Member_Status_Change_Swoogo_Outbound_Message</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Integration_Callout__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>871</locationX>
+        <locationY>48</locationY>
+        <filterFormula>NOT({!$Permission.DisableFlows}) &amp;&amp;
+ISCHANGED({!$Record.Status})</filterFormula>
+        <object>CampaignMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X5_Minute_Delay</name>
+            <connector>
+                <targetReference>Trigger_Campaign_Member_Status_Change_Swoogo_Outbound_Message</targetReference>
+            </connector>
+            <label>5 Minute Delay</label>
+            <maxBatchSize>50</maxBatchSize>
+            <offsetNumber>5</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

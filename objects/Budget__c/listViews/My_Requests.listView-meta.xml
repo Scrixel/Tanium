@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Program_Name__c</columns>
+    <columns>Vendor_Name__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Status__c</columns>
+    <columns>Budget_Amount__c</columns>
+    <columns>Business_Department__c</columns>
+    <columns>Business_Region__c</columns>
+    <columns>Requestor__c</columns>
+    <columns>Budget_Owner__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>List_View_Formula__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>My Requests</label>
+</ListView>

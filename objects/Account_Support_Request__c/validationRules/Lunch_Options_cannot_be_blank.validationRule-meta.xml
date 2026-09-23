@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lunch_Options_cannot_be_blank</fullName>
+    <active>true</active>
+    <description>For EBC request, if &quot;Is Lunch Requested&quot; is checked, Lunch Options field cannot be blank</description>
+    <errorConditionFormula>AND(
+    EBC_Is_Lunch_Requested__c,
+    ISBLANK(TEXT(EBC_Lunch_Options__c)
+))</errorConditionFormula>
+    <errorMessage>If Lunch is requested, Lunch Options cannot be blank</errorMessage>
+</ValidationRule>

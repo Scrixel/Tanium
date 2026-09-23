@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provided_Consistent_Value__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS-12659</description>
+    <inlineHelpText>Which Partner provided CONSISTENT business value (pre-sales, business relationship, Tanium value messaging to the customer) or technical value (Tanium Demo, Proof of Concept, Whiteboarding) to help Tanium win the business?</inlineHelpText>
+    <label>Provided Consistent Value</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

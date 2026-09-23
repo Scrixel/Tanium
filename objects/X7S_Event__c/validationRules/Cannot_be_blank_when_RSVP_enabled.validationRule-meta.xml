@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_be_blank_when_RSVP_enabled</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISBLANK( RSVP_Count_Threshold__c ),
+Enable_RSVP__c
+)</errorConditionFormula>
+    <errorDisplayField>RSVP_Count_Threshold__c</errorDisplayField>
+    <errorMessage>RSVP Count Threshold must be set if RSVP is enabled.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Screen_Sharing_Number_of_Operators</fullName>
+    <active>true</active>
+    <description>If Screen Sharing equals True then Screen Sharing Number of Operators cannot be blank or zero</description>
+    <errorConditionFormula>AND( Screen_Sharing__c = TRUE,
+OR(ISNULL( Screen_Sharing_Number_of_Operators__c ), 
+Screen_Sharing_Number_of_Operators__c = 0))</errorConditionFormula>
+    <errorDisplayField>Screen_Sharing_Number_of_Operators__c</errorDisplayField>
+    <errorMessage>If Screen Sharing equals True then Screen Sharing Number of Operators cannot be blank or zero</errorMessage>
+</ValidationRule>

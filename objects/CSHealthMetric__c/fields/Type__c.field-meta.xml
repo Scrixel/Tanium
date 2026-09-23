@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>SS-11217: Deprecated.</description>
+    <label>DEPRECATED - Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoption</fullName>
+                <default>false</default>
+                <label>Adoption</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>Bugs</fullName>
+                <default>false</default>
+                <label>Bugs</label>
+            </value>
+            <value>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+                <label>Deployment</label>
+            </value>
+            <value>
+                <fullName>Deployment Percentage</fullName>
+                <default>false</default>
+                <label>Deployment Percentage</label>
+            </value>
+            <value>
+                <fullName>Executive Usage</fullName>
+                <default>false</default>
+                <label>Executive Usage</label>
+            </value>
+            <value>
+                <fullName>InService</fullName>
+                <default>false</default>
+                <label>InService</label>
+            </value>
+            <value>
+                <fullName>MinimalUsage</fullName>
+                <default>false</default>
+                <label>MinimalUsage</label>
+            </value>
+            <value>
+                <fullName>NPS</fullName>
+                <default>false</default>
+                <label>NPS</label>
+            </value>
+            <value>
+                <fullName>Outages</fullName>
+                <default>false</default>
+                <label>Outages</label>
+            </value>
+            <value>
+                <fullName>PctDeployed</fullName>
+                <default>false</default>
+                <label>PctDeployed</label>
+            </value>
+            <value>
+                <fullName>People</fullName>
+                <default>false</default>
+                <label>People</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Positive Engagement</fullName>
+                <default>false</default>
+                <label>Positive Engagement</label>
+            </value>
+            <value>
+                <fullName>Primary Use Cases</fullName>
+                <default>false</default>
+                <label>Primary Use Cases</label>
+            </value>
+            <value>
+                <fullName>Qualitative and CS Benchmark</fullName>
+                <default>false</default>
+                <label>Qualitative and CS Benchmark</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Satisfaction</fullName>
+                <default>false</default>
+                <label>Satisfaction</label>
+            </value>
+            <value>
+                <fullName>Stability</fullName>
+                <default>false</default>
+                <label>Stability</label>
+            </value>
+            <value>
+                <fullName>Support:Metric1</fullName>
+                <default>false</default>
+                <label>Support:Metric1</label>
+            </value>
+            <value>
+                <fullName>Support:OpenSev1and2</fullName>
+                <default>false</default>
+                <label>Support:OpenSev1and2</label>
+            </value>
+            <value>
+                <fullName>TAM Digest Score</fullName>
+                <default>false</default>
+                <label>TAM Digest Score</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+            <value>
+                <fullName>Business Alignment</fullName>
+                <default>false</default>
+                <label>Business Alignment</label>
+            </value>
+            <value>
+                <fullName>Customer Experience and Usage</fullName>
+                <default>false</default>
+                <label>Customer Experience and Usage</label>
+            </value>
+            <value>
+                <fullName>M-Shape</fullName>
+                <default>false</default>
+                <label>M-Shape</label>
+            </value>
+            <value>
+                <fullName>User Interaction</fullName>
+                <default>false</default>
+                <label>User Interaction</label>
+            </value>
+            <value>
+                <fullName>Help Requested</fullName>
+                <default>false</default>
+                <label>Help Requested</label>
+            </value>
+            <value>
+                <fullName>Team Usage</fullName>
+                <default>false</default>
+                <label>Team Usage</label>
+            </value>
+            <value>
+                <fullName>IR Usage</fullName>
+                <default>false</default>
+                <label>IR Usage</label>
+            </value>
+            <value>
+                <fullName>Trace Maturity</fullName>
+                <default>false</default>
+                <label>Trace Maturity</label>
+            </value>
+            <value>
+                <fullName>Trace Usage</fullName>
+                <default>false</default>
+                <label>Trace Usage</label>
+            </value>
+            <value>
+                <fullName>Protect Maturity</fullName>
+                <default>false</default>
+                <label>Protect Maturity</label>
+            </value>
+            <value>
+                <fullName>Protect Usage</fullName>
+                <default>false</default>
+                <label>Protect Usage</label>
+            </value>
+            <value>
+                <fullName>IOC Detect Usage</fullName>
+                <default>false</default>
+                <label>IOC Detect Usage</label>
+            </value>
+            <value>
+                <fullName>Core Maturity</fullName>
+                <default>false</default>
+                <label>Core Maturity</label>
+            </value>
+            <value>
+                <fullName>Core Usage</fullName>
+                <default>false</default>
+                <label>Core Usage</label>
+            </value>
+            <value>
+                <fullName>Interact Maturity</fullName>
+                <default>false</default>
+                <label>Interact Maturity</label>
+            </value>
+            <value>
+                <fullName>Interact Usage</fullName>
+                <default>false</default>
+                <label>Interact Usage</label>
+            </value>
+            <value>
+                <fullName>Impact Maturity</fullName>
+                <default>false</default>
+                <label>Impact Maturity</label>
+            </value>
+            <value>
+                <fullName>Impact Usage</fullName>
+                <default>false</default>
+                <label>Impact Usage</label>
+            </value>
+            <value>
+                <fullName>Connect Maturity</fullName>
+                <default>false</default>
+                <label>Connect Maturity</label>
+            </value>
+            <value>
+                <fullName>Connect Usage</fullName>
+                <default>false</default>
+                <label>Connect Usage</label>
+            </value>
+            <value>
+                <fullName>Trends Maturity</fullName>
+                <default>false</default>
+                <label>Trends Maturity</label>
+            </value>
+            <value>
+                <fullName>Trends Usage</fullName>
+                <default>false</default>
+                <label>Trends Usage</label>
+            </value>
+            <value>
+                <fullName>Training/Competency</fullName>
+                <default>false</default>
+                <label>Training/Competency</label>
+            </value>
+            <value>
+                <fullName>Deploy Usage</fullName>
+                <default>false</default>
+                <label>Deploy Usage</label>
+            </value>
+            <value>
+                <fullName>Map Maturity</fullName>
+                <default>false</default>
+                <label>Map Maturity</label>
+            </value>
+            <value>
+                <fullName>Map Usage</fullName>
+                <default>false</default>
+                <label>Map Usage</label>
+            </value>
+            <value>
+                <fullName>Performance Maturity</fullName>
+                <default>false</default>
+                <label>Performance Maturity</label>
+            </value>
+            <value>
+                <fullName>Performance Usage</fullName>
+                <default>false</default>
+                <label>Performance Usage</label>
+            </value>
+            <value>
+                <fullName>Reveal Maturity</fullName>
+                <default>false</default>
+                <label>Reveal Maturity</label>
+            </value>
+            <value>
+                <fullName>Stability/Use</fullName>
+                <default>false</default>
+                <label>Stability/Use</label>
+            </value>
+            <value>
+                <fullName>Feature sets</fullName>
+                <default>false</default>
+                <label>Feature sets</label>
+            </value>
+            <value>
+                <fullName>The enemy within</fullName>
+                <default>false</default>
+                <label>The enemy within</label>
+            </value>
+            <value>
+                <fullName>TAM Gut Check</fullName>
+                <default>false</default>
+                <label>TAM Gut Check</label>
+            </value>
+            <value>
+                <fullName>Reveal Usage</fullName>
+                <default>false</default>
+                <label>Reveal Usage</label>
+            </value>
+            <value>
+                <fullName>Threat Response Maturity</fullName>
+                <default>false</default>
+                <label>Threat Response Maturity</label>
+            </value>
+            <value>
+                <fullName>Threat Response Usage</fullName>
+                <default>false</default>
+                <label>Threat Response Usage</label>
+            </value>
+            <value>
+                <fullName>Risk team is using</fullName>
+                <default>false</default>
+                <label>Risk team is using</label>
+            </value>
+            <value>
+                <fullName>Discover Maturity</fullName>
+                <default>false</default>
+                <label>Discover Maturity</label>
+            </value>
+            <value>
+                <fullName>Discover Usage</fullName>
+                <default>false</default>
+                <label>Discover Usage</label>
+            </value>
+            <value>
+                <fullName>Asset Maturity</fullName>
+                <default>false</default>
+                <label>Asset Maturity</label>
+            </value>
+            <value>
+                <fullName>Asset Usage</fullName>
+                <default>false</default>
+                <label>Asset Usage</label>
+            </value>
+            <value>
+                <fullName>Deploy Maturity</fullName>
+                <default>false</default>
+                <label>Deploy Maturity</label>
+            </value>
+            <value>
+                <fullName>Detect Maturity</fullName>
+                <default>false</default>
+                <label>Detect Maturity</label>
+            </value>
+            <value>
+                <fullName>Detect Usage</fullName>
+                <default>false</default>
+                <label>Detect Usage</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor Maturity</fullName>
+                <default>false</default>
+                <label>Integrity Monitor Maturity</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor Usage</fullName>
+                <default>false</default>
+                <label>Integrity Monitor Usage</label>
+            </value>
+            <value>
+                <fullName>Deployed</fullName>
+                <default>false</default>
+                <label>Deployed</label>
+            </value>
+            <value>
+                <fullName>Patch Maturity</fullName>
+                <default>false</default>
+                <label>Patch Maturity</label>
+            </value>
+            <value>
+                <fullName>Patch Usage</fullName>
+                <default>false</default>
+                <label>Patch Usage</label>
+            </value>
+            <value>
+                <fullName>Comply Maturity</fullName>
+                <default>false</default>
+                <label>Comply Maturity</label>
+            </value>
+            <value>
+                <fullName>Comply Usage</fullName>
+                <default>false</default>
+                <label>Comply Usage</label>
+            </value>
+            <value>
+                <fullName>Incident Response Maturity</fullName>
+                <default>false</default>
+                <label>Incident Response Maturity</label>
+            </value>
+            <value>
+                <fullName>Incident Response Usage</fullName>
+                <default>false</default>
+                <label>Incident Response Usage</label>
+            </value>
+            <value>
+                <fullName>Enforce Maturity</fullName>
+                <default>false</default>
+                <label>Enforce Maturity</label>
+            </value>
+            <value>
+                <fullName>Enforce Usage</fullName>
+                <default>false</default>
+                <label>Enforce Usage</label>
+            </value>
+            <value>
+                <fullName>Operationalization</fullName>
+                <default>false</default>
+                <label>Operationalization</label>
+            </value>
+            <value>
+                <fullName>Security team is using</fullName>
+                <default>false</default>
+                <label>Security team is using</label>
+            </value>
+            <value>
+                <fullName>Operations team is using</fullName>
+                <default>false</default>
+                <label>Operations team is using</label>
+            </value>
+            <value>
+                <fullName>Reporting team is using</fullName>
+                <default>false</default>
+                <label>Reporting team is using</label>
+            </value>
+            <value>
+                <fullName>Other teams are using</fullName>
+                <default>false</default>
+                <label>Other teams are using</label>
+            </value>
+            <value>
+                <fullName>Traininig/Competency</fullName>
+                <default>false</default>
+                <label>Traininig/Competency</label>
+            </value>
+            <value>
+                <fullName>Seats Deployed</fullName>
+                <default>false</default>
+                <label>Seats Deployed</label>
+            </value>
+            <value>
+                <fullName>Seats Intended</fullName>
+                <default>false</default>
+                <label>Seats Intended</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

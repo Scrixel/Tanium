@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Procurement_Requests</fullName>
+    <columns>LAST_UPDATE</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Program_Name__c</columns>
+    <columns>Vendor_Name__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Budget_Amount__c</columns>
+    <columns>Business_Department__c</columns>
+    <columns>Business_Region__c</columns>
+    <columns>Requestor__c</columns>
+    <columns>Budget_Owner__c</columns>
+    <columns>Finance_Approver__c</columns>
+    <columns>Procurement_E_Staff_Approver__c</columns>
+    <columns>Agreement_Status_Category__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Budget__c.Procurement</value>
+    </filters>
+    <label>Procurement Requests</label>
+</ListView>

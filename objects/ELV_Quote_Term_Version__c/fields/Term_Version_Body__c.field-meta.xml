@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Term_Version_Body__c</fullName>
+    <inlineHelpText>Contains the formatted/rich text that comprises the body of the term to be published on the quote document.</inlineHelpText>
+    <label>Term Version Body</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NFR_License_Purpose__c</fullName>
+    <inlineHelpText>What is the purpose of this request? What is the intended use for the NFR licenses including education, technology and / or integration goals? (Please be specific)&quot;</inlineHelpText>
+    <label>NFR License Purpose</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

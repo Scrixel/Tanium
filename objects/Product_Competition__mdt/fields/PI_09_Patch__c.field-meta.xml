@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PI_09_Patch__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Patch</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Competitor</fullName>
+                <default>true</default>
+                <label>No Competitor</label>
+            </value>
+            <value>
+                <fullName>BigFix</fullName>
+                <default>false</default>
+                <label>BigFix</label>
+            </value>
+            <value>
+                <fullName>Dell KACE</fullName>
+                <default>false</default>
+                <label>Dell KACE</label>
+            </value>
+            <value>
+                <fullName>LANDesk</fullName>
+                <default>false</default>
+                <label>LANDesk</label>
+            </value>
+            <value>
+                <fullName>Lumension</fullName>
+                <default>false</default>
+                <label>Lumension</label>
+            </value>
+            <value>
+                <fullName>Microsoft (SCCM)</fullName>
+                <default>false</default>
+                <label>Microsoft (SCCM)</label>
+            </value>
+            <value>
+                <fullName>Symantec (Altiris)</fullName>
+                <default>false</default>
+                <label>Symantec (Altiris)</label>
+            </value>
+            <value>
+                <fullName>Symantec Endpoint</fullName>
+                <default>false</default>
+                <label>Symantec Endpoint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Desk_Approver__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User assigned as Deal Desk Approver for Quotes based on Territory values.</description>
+    <inlineHelpText>User assigned as Deal Desk Approver for Quotes based on Territory values.</inlineHelpText>
+    <label>Deal Desk Approver</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Assignment_Management_Deal_Desk_Approver</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

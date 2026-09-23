@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CE_Owner__c</fullName>
+    <description>INC0137855
+
+11.05.2024 - Deprecated. Jira ticket SS-9539</description>
+    <externalId>false</externalId>
+    <formula>CreatedBy.Full_Name__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DEPRECATED - Owner (formula)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

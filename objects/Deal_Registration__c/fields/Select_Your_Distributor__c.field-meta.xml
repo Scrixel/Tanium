@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_Your_Distributor__c</fullName>
+    <description>[Being use in WI Integration] Ensure OppReg process aligns with our multi distribution model for FED/SLED in AMER.
+ Only internal to people looking at set up. Would “Partner selected distributor on WI”</description>
+    <inlineHelpText>Fed/SLED Only</inlineHelpText>
+    <label>Select Your Distributor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carahsoft</fullName>
+                <default>false</default>
+                <label>Carahsoft</label>
+            </value>
+            <value>
+                <fullName>immixGroup (Arrow)</fullName>
+                <default>false</default>
+                <label>immixGroup (Arrow)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

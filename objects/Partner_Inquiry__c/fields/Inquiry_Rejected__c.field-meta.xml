@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inquiry_Rejected__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>INC0121240 Jaclyn Woodward.  Checking box will set Partner Inquiry&apos;s Status to &quot;Inquiry Rejected&quot;, Approval Flow Status to &quot;Approver Rejected&quot; and send rejection emails.</description>
+    <inlineHelpText>Checking box will set Partner Inquiry&apos;s Status to &quot;Inquiry Rejected&quot;, Approval Flow Status to &quot;Approver Rejected&quot; and send rejection emails if Customize Rejection Email? is not selected.</inlineHelpText>
+    <label>Inquiry Rejected</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

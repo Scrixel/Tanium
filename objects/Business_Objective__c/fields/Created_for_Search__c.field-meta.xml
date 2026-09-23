@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_for_Search__c</fullName>
+    <defaultValue>&apos;All&apos;</defaultValue>
+    <description>SS-11088: Deprecated.
+Created to all Users to search for &quot;All&quot; Business Objectives when searching for it via a Lookup field. Will not be visible to users on Page Layout.</description>
+    <externalId>false</externalId>
+    <label>DEPRECATED - Created for Search</label>
+    <length>3</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

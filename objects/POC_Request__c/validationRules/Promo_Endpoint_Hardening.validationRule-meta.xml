@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo_Endpoint_Hardening</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(
+ISPICKVAL(Promotion__c , &quot;Endpoint Hardening&quot;),
+(Patch__c  &lt;&gt; TRUE  || Deploy__c  &lt;&gt; TRUE)
+)</errorConditionFormula>
+    <errorDisplayField>Promotion__c</errorDisplayField>
+    <errorMessage>If Promo = Endpoint Hardening, then Deploy and Patch must be selected.</errorMessage>
+</ValidationRule>

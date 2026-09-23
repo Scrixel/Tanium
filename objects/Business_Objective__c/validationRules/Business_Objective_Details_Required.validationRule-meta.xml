@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Objective_Details_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Business_Objective__c ,&quot;Other (Details Below)&quot;)
+&amp;&amp;
+ISBLANK( Customer_Business_Objective__c )</errorConditionFormula>
+    <errorDisplayField>Customer_Business_Objective__c</errorDisplayField>
+    <errorMessage>Please provide additional details on the Business Objective.</errorMessage>
+</ValidationRule>

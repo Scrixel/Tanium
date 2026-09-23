@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Distributor_and_Other_Resellers__c</fullName>
+    <inlineHelpText>Portal Prompt: If this is a multi-tier transaction select relevant picklist option and complete contact information fields for additional partners</inlineHelpText>
+    <label>Distributor and/or Other Resellers?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Yes - Distributor</fullName>
+                <default>false</default>
+                <label>Yes - Distributor</label>
+            </value>
+            <value>
+                <fullName>Yes - Distributor and Other Reseller</fullName>
+                <default>false</default>
+                <label>Yes - Distributor and Other Reseller</label>
+            </value>
+            <value>
+                <fullName>Yes - Reseller (Single)</fullName>
+                <default>false</default>
+                <label>Yes - Reseller (Single)</label>
+            </value>
+            <value>
+                <fullName>Yes - Reseller (Multiple)</fullName>
+                <default>false</default>
+                <label>Yes - Reseller (Multiple)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

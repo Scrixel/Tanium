@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Split_cannot_be_greater_than_100</fullName>
+    <active>true</active>
+    <description>Split cannot be greater than 100%</description>
+    <errorConditionFormula>(Rep_1_Percent__c + Rep_2_Percent__c) &lt;&gt; 1.00</errorConditionFormula>
+    <errorMessage>Combined percentage of Rep 1 and Rep 2  splits cannot be lower or higher than 100</errorMessage>
+</ValidationRule>

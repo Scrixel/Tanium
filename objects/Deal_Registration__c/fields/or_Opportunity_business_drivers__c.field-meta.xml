@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Opportunity_business_drivers__c</fullName>
+    <inlineHelpText>Entered by Partner if Expected Purchase Amount is &gt;$600k - Portal Prompt: Briefly describe End Customer&apos;s use cases and drivers for initiative</inlineHelpText>
+    <label>Opportunity Business Drivers</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

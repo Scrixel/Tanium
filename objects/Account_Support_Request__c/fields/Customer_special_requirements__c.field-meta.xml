@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_special_requirements__c</fullName>
+    <description>SS-11385: field created.</description>
+    <inlineHelpText>Any special considerations for hunter i.e.. special clearance needs or region/time-zone they must be based in.</inlineHelpText>
+    <label>Customer special requirements</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

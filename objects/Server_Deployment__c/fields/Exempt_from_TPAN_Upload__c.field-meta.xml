@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exempt_from_TPAN_Upload__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ITSC-00147634</description>
+    <inlineHelpText>Flag to indicate whether a particular customer is exempt from the requirement to upload TPAN files.</inlineHelpText>
+    <label>Exempt from TPAN Upload</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

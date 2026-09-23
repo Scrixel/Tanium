@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Delivered__c</fullName>
+    <description>This field is to be added only on On-Prem &amp; TaaS page layouts. And has access to only Deal Desk Profile. The purpose of this field is to know when the license has been delivered, as the license will be created but the delivery date might be in the future. To keep track of that licenses this field has been created.</description>
+    <label>License Delivered</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

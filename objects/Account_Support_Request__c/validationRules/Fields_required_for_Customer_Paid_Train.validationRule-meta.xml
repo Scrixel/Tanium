@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fields_required_for_Customer_Paid_Train</fullName>
+    <active>true</active>
+    <description>Training Request</description>
+    <errorConditionFormula>AND(
+  RecordTypeId = &quot;0121b0000000NLW&quot; ,
+ISPICKVAL(Tanium_Training_Type__c, &quot;Customer Paid&quot;), 
+ISBLANK (Training_PS_Record__c)
+)</errorConditionFormula>
+    <errorMessage>Customer Paid Training requires Training PS Record Field</errorMessage>
+</ValidationRule>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Zone__c</fullName>
+    <label>Time Zone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>US Pacific</fullName>
+                <default>false</default>
+                <label>US Pacific</label>
+            </value>
+            <value>
+                <fullName>US Mountain</fullName>
+                <default>false</default>
+                <label>US Mountain</label>
+            </value>
+            <value>
+                <fullName>US Central</fullName>
+                <default>false</default>
+                <label>US Central</label>
+            </value>
+            <value>
+                <fullName>US Eastern</fullName>
+                <default>false</default>
+                <label>US Eastern</label>
+            </value>
+            <value>
+                <fullName>EU Western</fullName>
+                <default>false</default>
+                <label>EU Western</label>
+            </value>
+            <value>
+                <fullName>EU Central</fullName>
+                <default>false</default>
+                <label>EU Central</label>
+            </value>
+            <value>
+                <fullName>EU Eastern</fullName>
+                <default>false</default>
+                <label>EU Eastern</label>
+            </value>
+            <value>
+                <fullName>APJ Japan</fullName>
+                <default>false</default>
+                <label>APJ Japan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

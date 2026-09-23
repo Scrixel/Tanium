@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_QuoteLineItem__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Quote Line record this allocation is related to. This field will always be populated from the Manage Allocations screen on the Opportunity. SS-13898</description>
+    <inlineHelpText>The Quote Line record this allocation is related to. This field will always be populated from the Manage Allocations screen on the Opportunity.</inlineHelpText>
+    <label>Quote Line</label>
+    <referenceTo>QuoteLineItem</referenceTo>
+    <relationshipLabel>Opportunity Server Deployments (Quote Line)</relationshipLabel>
+    <relationshipName>Opportunity_Server_Deployments1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

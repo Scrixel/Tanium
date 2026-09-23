@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAM_and_TAM_Admin_can_edit_Status_CSMRT</fullName>
+    <active>true</active>
+    <description>TAM and TAM Admin can edit Status on CSM RT and Vertical CIO/Strategist RT Only
+SS-1486: Added exception so Jim Kelly, Duncan Miller and Daniel Sweet can edit the Status field on Training Request and Unified Endpoint Security Support Request record types</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status__c),
+OR(
+($Profile.Name = &apos;TAM Admin&apos; &amp;&amp;
+NOT(
+OR(
+RecordType.Name = &apos;ESO Support Request&apos;,
+RecordType.Name = &apos;Vertical CIO/Strategist Request&apos;
+)
+)
+),
+($Profile.Name = &apos;TAM&apos; &amp;&amp;
+(AND(
+NOT($Permission.Unified_Endpoint_Security_Support_Request_Edit)
+
+) &amp;&amp;
+OR(
+RecordType.Name = &apos;Training Request&apos;,
+RecordType.Name = &apos;Unified Endpoint Security Support Request&apos;
+)
+) &amp;&amp;
+NOT(
+OR(
+RecordType.Name = &apos;ESO Support Request&apos;,
+RecordType.Name = &apos;Vertical CIO/Strategist Request&apos;
+)
+)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Updates to the Status field are not allowed on this ISR type</errorMessage>
+</ValidationRule>

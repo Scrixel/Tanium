@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAAS</fullName>
+    <columns>NAME</columns>
+    <columns>Client_Version__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Server_Deployment__c.TaaS</value>
+    </filters>
+    <label>TAAS</label>
+</ListView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Security_Review_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND( ISPICKVAL(IT_Security_Review_Needed__c,&quot;YES&quot;),
+
+OR(ISBLANK(What_capability_will_solution_provide__c), ISBLANK(How_the_capability_currently_delivered__c), ISBLANK(Application_Owner__c), ISBLANK(Read_Only_Users__c), ISPICKVAL(How_Will_Access_be_Granted__c,&quot;&quot;), ISPICKVAL(Third_Party_Support_Involved__c,&quot;&quot;),ISBLANK(Integration_Solution_Details__c), ISBLANK(Other_Application_Storage__c),  ISBLANK(Hardware_Included__c), 
+ISBLANK(Most_Recent_Access_Review__c),ISBLANK(What_Kind_of_Software_Solution__c),ISBLANK(Data_Access__c), ISBLANK(Data_Description__c), ISPICKVAL(Data_Disclosure_Severity__c,&quot;&quot;),ISPICKVAL(Data_Corruption_Severity__c,&quot;&quot;), ISPICKVAL(Service_Interruption_Impact__c, &quot;&quot;), ISBLANK(Whats_the_worst_that_could_happen__c), ISPICKVAL(Risk_Acceptance__c,&quot;&quot;)))
+
+, &quot;Security Review Section not Complete&quot;, 
+
+IF(Security_Review_Complete__c = TRUE
+, &quot;Security Review Section Complete&quot;, &quot;Security Review Not Required&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Security Review Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

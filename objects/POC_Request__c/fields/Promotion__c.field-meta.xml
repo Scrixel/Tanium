@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotion__c</fullName>
+    <description>Please select any promotion that applies to this POC</description>
+    <inlineHelpText>Please select any promotion that applies to this POC</inlineHelpText>
+    <label>Promotion</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ITFR</fullName>
+                <default>false</default>
+                <label>ITFR</label>
+            </value>
+            <value>
+                <fullName>Endpoint Hardening</fullName>
+                <default>false</default>
+                <label>Endpoint Hardening</label>
+            </value>
+            <value>
+                <fullName>Benchmark Churn POC</fullName>
+                <default>false</default>
+                <label>Benchmark Churn POC</label>
+            </value>
+            <value>
+                <fullName>Japan Mythos Campaign</fullName>
+                <default>false</default>
+                <label>Japan Mythos Campaign</label>
+            </value>
+            <value>
+                <fullName>ITSC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ITSC</label>
+            </value>
+            <value>
+                <fullName>Performance Promo (Expires 1/31/22)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Performance Promo (Expires 1/31/22)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

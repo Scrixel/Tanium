@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verifications_Compact_Layout</fullName>
+    <fields>Approval_Level__c</fields>
+    <fields>Type__c</fields>
+    <fields>Partner_Account__c</fields>
+    <fields>Issue_Date__c</fields>
+    <fields>Expiration_Date__c</fields>
+    <fields>Services_Battlecard__c</fields>
+    <label>Verifications Compact Layout</label>
+</CompactLayout>

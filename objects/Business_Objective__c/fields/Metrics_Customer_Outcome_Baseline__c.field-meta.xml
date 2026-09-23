@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metrics_Customer_Outcome_Baseline__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Document where your customer is starting prior to implementing Tanium. This should reflect the Identified Pain from MEDDPICC when possible. If not known, baseline ASAP after deployment</inlineHelpText>
+    <label>DEPRECATED - Metrics/Customer Outcome</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

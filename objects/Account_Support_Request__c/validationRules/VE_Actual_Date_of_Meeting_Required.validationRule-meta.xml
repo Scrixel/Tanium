@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VE_Actual_Date_of_Meeting_Required</fullName>
+    <active>true</active>
+    <description>SS-10088: For VE record type only &quot;Actual Date of Meeting&quot; will be required when status=In Progress, Completed, Delivered/presented. Stakeholder: Laura Narat, Benny Fry, Colin Smith</description>
+    <errorConditionFormula>AND(
+    OR( ISPICKVAL( Status__c, &quot;In Progress&quot;),
+        ISPICKVAL( Status__c, &quot;Completed&quot;),
+        ISPICKVAL( Status__c, &quot;Delivered/Presented&quot;)
+       ),
+    ISNULL(Actual_Date_of_Meeting__c),
+    RecordType.DeveloperName = &quot;Value_Engineering_Request&quot;,
+    NOT($Permission.DisableValidationRules )
+)</errorConditionFormula>
+    <errorDisplayField>Actual_Date_of_Meeting__c</errorDisplayField>
+    <errorMessage>For VE ISR, &quot;Actual Date of Meeting&quot; is required when status=In Progress, Completed, Delivered/Presented.</errorMessage>
+</ValidationRule>

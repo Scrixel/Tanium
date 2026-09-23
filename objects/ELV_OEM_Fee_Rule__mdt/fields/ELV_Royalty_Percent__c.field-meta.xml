@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Royalty_Percent__c</fullName>
+    <description>TNCI-208: Royalty percentage used in the OEM fee calculation.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Royalty Percent</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Percent</type>
+</CustomField>

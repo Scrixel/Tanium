@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Expiry_Date_Extension_Opp_Reg__c</fullName>
+    <description>Expiry Date for extensions</description>
+    <inlineHelpText>Expiry Date for extensions</inlineHelpText>
+    <label>Expiry Date - Extension</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

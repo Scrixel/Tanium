@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Slack_Notification_Platform_and_Integration</name>
+        <label>Send Slack Notification - Platform and Integration</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T024F7PBP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C068PF3NYAV</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>textTemp_SlackNotification</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Tech_Partner_Request_Send_Email</name>
+        <label>Tech Partner Request - Send Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Technology_Partner_Request__c.Technology_Partner_Request_Created</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Technology_Partner_Request__c.Technology_Partner_Request_Created</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Record_Type</name>
+        <label>Record Type?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ServiceNow</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ServiceNow</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.SobjectType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Technology_Partner_Request__c</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Slack_Notification</targetReference>
+            </connector>
+            <label>ServiceNow</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Record_Type_Immediate</name>
+        <label>Record Type?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ServiceNow_Immediate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.SobjectType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Technology_Partner_Request__c</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ServiceNow</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Notification</targetReference>
+            </connector>
+            <label>ServiceNow</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Send_Email_Notification</name>
+        <label>Send Email Notification?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Send_Email</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Technology Partner Engagement</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Services Partner Support</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EBR/QBR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tech_Partner_Request_Send_Email</targetReference>
+            </connector>
+            <label>Yes - Send Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Send_Slack_Notification</name>
+        <label>Send Slack Notification?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Send_Slack_Notification</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Demo</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Discovery Support</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EBR/QBR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Services Partner Support</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Integration Configuration</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Slack_Notification_Platform_and_Integration</targetReference>
+            </connector>
+            <label>Yes - Send Slack Notification</label>
+        </rules>
+    </decisions>
+    <description>SS-11831: Flow to send slack notification when a Technology Partner Request record is created.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_OrgURL</name>
+        <dataType>String</dataType>
+        <expression>LEFT($Api.Enterprise_Server_URL_510, FIND( &apos;/services&apos;, $Api.Enterprise_Server_URL_510)) &amp;{!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>Technology Partner Request - After Insert - Notification Management {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Technology Partner Request - After Insert - Notification Management</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Record_Type_Immediate</targetReference>
+        </connector>
+        <filterFormula>AND( 
+NOT({!$Permission.DisableFlows}),
+NOT(ISPICKVAL({!$Record.Request_Type__c},&quot;&quot;))
+)</filterFormula>
+        <object>Technology_Partner_Request__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Record_Type</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>textTemp_SlackNotification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Technology Partner Request ID: {!$Record.Name}
+Account: {!$Record.Account__c}
+Account Type: {!$Record.Account_Type__c}
+Opportunity: {!$Record.Opportunity__c}
+Technology Partner: {!$Record.Technology_Partner__r.Name}
+Services Partner: {!$Record.Services_Partner__c}
+Request Type: {!$Record.Request_Type__c}
+Status: {!$Record.Request_Status__c}
+Presence Type: {!$Record.Presence_Type__c}
+Time Zone: {!$Record.Time_Zone__c}
+Strategic Initiative for Request: {!$Record.Strategic_Initiative_for_Request__c}
+Record Link: {!formula_OrgURL}</text>
+    </textTemplates>
+</Flow>

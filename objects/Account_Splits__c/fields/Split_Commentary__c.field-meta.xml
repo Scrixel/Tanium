@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Split_Commentary__c</fullName>
+    <description>Added Per Pete Sander&apos;s request to track additional information For example, if there is a 3rd rep or RVP.</description>
+    <label>Split Commentary</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Weekend</fullName>
+                <default>false</default>
+                <label>Weekend</label>
+            </value>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Ad Hoc</fullName>
+                <default>false</default>
+                <label>Ad Hoc</label>
+            </value>
+            <value>
+                <fullName>TKO</fullName>
+                <default>false</default>
+                <label>TKO</label>
+            </value>
+            <value>
+                <fullName>Cover</fullName>
+                <default>false</default>
+                <label>Cover</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

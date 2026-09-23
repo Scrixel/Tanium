@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Track the purpose of this server deployment within the organization&apos;s change management process.</description>
+    <inlineHelpText>-Production: intended for live environment, does not allow unsigned content
+-Lab: testing license, includes labs content and allows unsigned content
+-QA: testing license that mirrors prod, no labs content and no unsigned content, Limited use</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lab</fullName>
+                <default>false</default>
+                <label>Lab</label>
+            </value>
+            <value>
+                <fullName>QA</fullName>
+                <default>false</default>
+                <label>QA</label>
+            </value>
+            <value>
+                <fullName>Production</fullName>
+                <default>false</default>
+                <label>Production</label>
+            </value>
+            <value>
+                <fullName>POC/Pilot</fullName>
+                <default>false</default>
+                <label>POC/Pilot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

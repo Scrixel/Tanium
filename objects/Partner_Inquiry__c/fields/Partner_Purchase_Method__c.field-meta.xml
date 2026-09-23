@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Purchase_Method__c</fullName>
+    <description>Partner Portal Prompt:  Will your company be buying directly from Tanium or through a Distributor?</description>
+    <inlineHelpText>Partner Portal Prompt:  Will your company be buying directly from Tanium or through a Distributor?</inlineHelpText>
+    <label>Partner Purchase Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct</fullName>
+                <default>false</default>
+                <label>Direct</label>
+            </value>
+            <value>
+                <fullName>Through Distributor</fullName>
+                <default>false</default>
+                <label>Through Distributor</label>
+            </value>
+            <value>
+                <fullName>Not sure</fullName>
+                <default>false</default>
+                <label>Not sure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

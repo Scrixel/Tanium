@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Days_4</fullName>
+    <active>true</active>
+    <description>Partner:
+01260000000Q6hS
+
+Client:
+01260000000Q6hN
+
+Prospect:
+0120e000000DxkX
+
+POC Record Type (TaaS): 
+0127V000000JPya</description>
+    <errorConditionFormula>AND(
+RecordType.Name &lt;&gt; &apos;Partner: Tanium Cloud&apos;,
+
+(Account__r.RecordTypeId = &apos;0120e000000DxkX&apos; &amp;&amp;
+RecordTypeId = &apos;0127V000000JPya&apos; &amp;&amp;
+(Duration__c &lt; 1 || Duration__c &gt; 60))
+||
+(AND
+(Account__r.RecordTypeId =&apos;01260000000Q6hS&apos;,
+OR(Duration__c &lt; 1, Duration__c &gt; 60),
+NOT(ISPICKVAL(Promotion__c , &quot;Endpoint Hardening&quot;)),
+ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;)))
+||
+AND(
+OR(Duration__c &lt; 1, Duration__c &gt; 60),
+ISPICKVAL(Promotion__c , &quot;Endpoint Hardening&quot;))
+||
+AND(
+Duration__c &gt; (DATE(2026,12,31) - TODAY()),
+ISPICKVAL(Promotion__c , &quot;Japan Mythos Campaign&quot;))
+||
+(AND
+(Account__r.RecordTypeId &lt;&gt; &apos;01260000000Q6hS&apos;,
+Account__r.RecordTypeId &lt;&gt; &apos;0120e000000DxkX&apos;,
+OR(Duration__c &lt; 1, Duration__c &gt; 30),
+NOT(ISPICKVAL(Promotion__c , &quot;Endpoint Hardening&quot;)),
+NOT(ISPICKVAL(Primary_Solution_Area__c,&quot;Vulnerability&quot;)),
+ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;)))
+||
+AND(Account__r.RecordTypeId &lt;&gt; &apos;01260000000Q6hS&apos;,
+Account__r.RecordTypeId &lt;&gt; &apos;0120e000000DxkX&apos;,
+(OR(Duration__c &lt; 1, Duration__c &gt; 45)),
+ISPICKVAL( Tanium_Infrastructure__c , &quot;Yes – Tanium as a Service&quot;),
+ISPICKVAL(Primary_Solution_Area__c,&quot;Vulnerability&quot;)
+))</errorConditionFormula>
+    <errorDisplayField>Duration__c</errorDisplayField>
+    <errorMessage>For Partner &amp; Prospect account, Duration must be 1-60, Customers 1-30. For Primary Solution Area = Vulnerability, 1-45. When Promotion = Endpoint Hardening, Duration should be 1-60. For Japan Mythos Campaign, Duration must be days remaining until 12/31/26</errorMessage>
+</ValidationRule>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Opp_Reg_Approval_Flow_Status__c</fullName>
+    <label>Approval Flow Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approvals not started</fullName>
+                <default>true</default>
+                <label>Approvals not started</label>
+            </value>
+            <value>
+                <fullName>Approvals in progress</fullName>
+                <default>false</default>
+                <label>Approvals in progress</label>
+            </value>
+            <value>
+                <fullName>Approvals complete</fullName>
+                <default>false</default>
+                <label>Approvals complete</label>
+            </value>
+            <value>
+                <fullName>Approver rejected</fullName>
+                <default>false</default>
+                <label>Approver rejected</label>
+            </value>
+            <value>
+                <fullName>Approvals complete Ext</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approvals complete Ext</label>
+            </value>
+            <value>
+                <fullName>Approvals in progress Ext</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approvals in progress Ext</label>
+            </value>
+            <value>
+                <fullName>Approvals not started Ext</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approvals not started Ext</label>
+            </value>
+            <value>
+                <fullName>Approver rejected Ext</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approver rejected Ext</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

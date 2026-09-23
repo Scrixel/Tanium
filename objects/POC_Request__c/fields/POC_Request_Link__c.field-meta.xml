@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Request_Link__c</fullName>
+    <description>Hyperlink to the POC Request.</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/lightning/&quot;&amp;X18ID__c , &quot;POC Request Link&quot;)</formula>
+    <label>POC Request Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

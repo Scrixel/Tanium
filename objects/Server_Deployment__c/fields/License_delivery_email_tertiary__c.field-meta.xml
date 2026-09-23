@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_delivery_email_tertiary__c</fullName>
+    <description>SS-1008: Server Deployment Field Addition</description>
+    <inlineHelpText>Additional License Delivery Emails to be entered separated by semicolon &apos;;&apos;.</inlineHelpText>
+    <label>License delivery email (tertiary)</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

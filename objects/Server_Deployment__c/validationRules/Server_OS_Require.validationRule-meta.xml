@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_OS_Require</fullName>
+    <active>true</active>
+    <description>2020-08-25 Case 52874 require Server OS, Mo Patel</description>
+    <errorConditionFormula>AND(
+LEN(TEXT(Server_OS__c))= 0,
+TEXT(Status__c)&lt;&gt; &quot;Inactive&quot;,
+RecordType.DeveloperName =&apos;OnPrem&apos;,
+NOT($Profile.Name=&quot;API Only Integration Admin&quot;),
+NOT($Permission.DisableValidationRules))</errorConditionFormula>
+    <errorDisplayField>Server_OS__c</errorDisplayField>
+    <errorMessage>Please select Server OS.</errorMessage>
+</ValidationRule>

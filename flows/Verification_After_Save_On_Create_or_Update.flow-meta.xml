@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>SS-12861: Set the On-Prem Deployment value to FALSE on the Partner Account related to the triggering Verification record.</description>
+        <name>Assign_Account_On_Prem_Deployment_Verified_False</name>
+        <label>Assign Account On-Prem Deployment Verified False</label>
+        <locationX>2466</locationX>
+        <locationY>870</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.On_Prem_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>MSP_Approval_Level_Fully_Verified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>SS-12861: Set the On-Prem Deployment value to FALSE on the Partner Account related to the triggering Verification record.</description>
+        <name>Assign_Account_On_Prem_Deployment_Verified_False_0</name>
+        <label>Assign Account On-Prem Deployment Verified False</label>
+        <locationX>1844</locationX>
+        <locationY>860</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.On_Prem_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_Support</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>SS-12861: Set the On-Prem Deployment value to TRUE on the Partner Account related to the triggering Verification record.</description>
+        <name>Assign_Account_On_Prem_Deployment_Verified_True</name>
+        <label>Assign Account On-Prem Deployment Verified True</label>
+        <locationX>2457</locationX>
+        <locationY>342</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.On_Prem_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Cloud Deployment Verified TRUE</description>
+        <name>Assign_Cloud_Active</name>
+        <label>Assign Cloud Active</label>
+        <locationX>1387</locationX>
+        <locationY>330</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.Cloud_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_On_Prem_Deployment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Cloud Deployment Verified FALSE</description>
+        <name>Assign_Cloud_Expired</name>
+        <label>Assign Cloud Expired</label>
+        <locationX>1392</locationX>
+        <locationY>697</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.Cloud_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_On_Prem_Deployment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign MSP-EM Verified TRUE</description>
+        <name>Assign_MSP_EM_Active</name>
+        <label>Assign MSP-EM Active</label>
+        <locationX>2046</locationX>
+        <locationY>341</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.MSP_EM_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_MSP_RS</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign MSP-EM Verified FALSE</description>
+        <name>Assign_MSP_EM_Expired</name>
+        <label>Assign MSP-EM Expired</label>
+        <locationX>2049</locationX>
+        <locationY>700</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.MSP_EM_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Active_On_Prem_Verification_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign MSP-RS Verified TRUE</description>
+        <name>Assign_MSP_RS_Active</name>
+        <label>Assign MSP-RS Active</label>
+        <locationX>2208</locationX>
+        <locationY>342</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.MSP_RS_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>MSP_Approval_Level_Fully_Verified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign MSP-RS Verified FALSE</description>
+        <name>Assign_MSP_RS_Expired</name>
+        <label>Assign MSP-RS Expired</label>
+        <locationX>2208</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.MSP_RS_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Active_On_Prem_Verification_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign On-Prem Deployment Verified TRUE</description>
+        <name>Assign_On_Prem_Active</name>
+        <label>Assign On-Prem Active</label>
+        <locationX>1538</locationX>
+        <locationY>329</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.On_Prem_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_Support</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign On-Prem Deployment Verified FALSE</description>
+        <name>Assign_On_Prem_Expired</name>
+        <label>Assign On-Prem Expired</label>
+        <locationX>1539</locationX>
+        <locationY>692</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.On_Prem_Deployment_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_MSP_EM_MSP_RS_Verification_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Partner Account Id to local record variable for use in flow. Later used to update Partner Account that&apos;s related to trigger Verification record.</description>
+        <name>Assign_Partner_Account_Id</name>
+        <label>Assign Partner Account Id</label>
+        <locationX>1240</locationX>
+        <locationY>516</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Partner_Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_Cloud_Deployment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Support Verified FALSE</description>
+        <name>Assign_Support_Expired</name>
+        <label>Assign Support Expired</label>
+        <locationX>1918</locationX>
+        <locationY>692</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.Support_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_MSP_EM</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Support Verified TRUE</description>
+        <name>Support_Active</name>
+        <label>Assign Support Active</label>
+        <locationX>1917</locationX>
+        <locationY>336</locationY>
+        <assignmentItems>
+            <assignToReference>rec_Account.Support_Verified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Type_MSP_EM</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>SS-12861: check if an active and fully verified MSP-EM/MSP-RS Verification record found</description>
+        <name>Active_Fully_Verified_MSP_EM_MSP_RS_Record_NOT_Found</name>
+        <label>Active, Fully Verified MSP-EM/MSP-RS Record NOT Found?</label>
+        <locationX>1684</locationX>
+        <locationY>866</locationY>
+        <defaultConnector>
+            <targetReference>Type_Support</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_GetMSPNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_MSP_EM_MSP_RS_Verification_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Account_On_Prem_Deployment_Verified_False_0</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>SS-12861: check if an active On Prem Deployment Verification record found</description>
+        <name>Active_On_Prem_Deployment_Record_NOT_Found</name>
+        <label>Active On-Prem Deployment Record NOT Found?</label>
+        <locationX>2250</locationX>
+        <locationY>883</locationY>
+        <defaultConnector>
+            <targetReference>MSP_Approval_Level_Fully_Verified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_GetOnPremNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Active_On_Prem_Verification_Records</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Account_On_Prem_Deployment_Verified_False</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the Issue Date or Expiration Date changed on triggering Verification Record?</description>
+        <name>Issue_or_Expiration_Date_Changed</name>
+        <label>Issue or Expiration Date Changed?</label>
+        <locationX>993</locationX>
+        <locationY>519</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_DatesChanged</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Issue_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Issue_Date__c</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Expiration_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Expiration_Date__c</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Partner_Account_Id</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the Verification record Active with a Type value of &quot;MSP-EM&quot; or &quot;MSP-RS&quot; and has the Approval Level value changed to &quot;Fully Verified&quot;?</description>
+        <name>MSP_Approval_Level_Fully_Verified</name>
+        <label>MSP Approval Level Fully Verified?</label>
+        <locationX>2448</locationX>
+        <locationY>510</locationY>
+        <defaultConnector>
+            <targetReference>Update_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ApprovalLevel</name>
+            <conditionLogic>(1 OR 2) AND 3 AND (4 OR 5) AND 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Approval_Level__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Approval_Level__c</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Approval_Level__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fully Verified</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-EM</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-RS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Account_On_Prem_Deployment_Verified_True</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Verification Type &quot;Cloud&quot; and is the Record Active or Expired?</description>
+        <name>Type_Cloud_Deployment</name>
+        <label>Type Cloud Deployment?</label>
+        <locationX>1383</locationX>
+        <locationY>519</locationY>
+        <defaultConnector>
+            <targetReference>Type_On_Prem_Deployment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_Cloud</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cloud Deployment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Cloud_Active</targetReference>
+            </connector>
+            <label>Active Cloud</label>
+        </rules>
+        <rules>
+            <name>Expired_Cloud</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cloud Deployment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Cloud_Expired</targetReference>
+            </connector>
+            <label>Expired Cloud</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Verification Type &quot;MSP-EM&quot; and is the Record Active or Expired?</description>
+        <name>Type_MSP_EM</name>
+        <label>Type MSP-EM?</label>
+        <locationX>2039</locationX>
+        <locationY>514</locationY>
+        <defaultConnector>
+            <targetReference>Type_MSP_RS</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_MSP_EM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-EM</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MSP_EM_Active</targetReference>
+            </connector>
+            <label>Active MSP-EM</label>
+        </rules>
+        <rules>
+            <name>Expired_MSP_EM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-EM</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MSP_EM_Expired</targetReference>
+            </connector>
+            <label>Expired MSP-EM</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Verification Type &quot;MSP-RS&quot; and is the Record Active or Expired?</description>
+        <name>Type_MSP_RS</name>
+        <label>Type MSP-RS?</label>
+        <locationX>2204</locationX>
+        <locationY>518</locationY>
+        <defaultConnector>
+            <targetReference>MSP_Approval_Level_Fully_Verified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_MSP_RS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-RS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MSP_RS_Active</targetReference>
+            </connector>
+            <label>Active MSP-RS</label>
+        </rules>
+        <rules>
+            <name>Expired_MSP_RS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MSP-RS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MSP_RS_Expired</targetReference>
+            </connector>
+            <label>Expired MSP-RS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Verification Type &quot;On-Prem Deployment&quot; and is the Record Active or Expired?</description>
+        <name>Type_On_Prem_Deployment</name>
+        <label>Type On-Prem Deployment?</label>
+        <locationX>1530</locationX>
+        <locationY>517</locationY>
+        <defaultConnector>
+            <targetReference>Type_Support</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_On_Prem</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On-Prem Deployment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_On_Prem_Active</targetReference>
+            </connector>
+            <label>Active On-Prem</label>
+        </rules>
+        <rules>
+            <name>Expired_On_Prem</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On-Prem Deployment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_On_Prem_Expired</targetReference>
+            </connector>
+            <label>Expired On-Prem</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Verification Type &quot;Support L1/L2&quot; and is the Record Active or Expired?</description>
+        <name>Type_Support</name>
+        <label>Type Support?</label>
+        <locationX>1836</locationX>
+        <locationY>524</locationY>
+        <defaultConnector>
+            <targetReference>Type_MSP_EM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_Support</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Support L1/L2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Support_Active</targetReference>
+            </connector>
+            <label>Active Support</label>
+        </rules>
+        <rules>
+            <name>Expired_Support</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Support_L1/L2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Support_Expired</targetReference>
+            </connector>
+            <label>Expired Support</label>
+        </rules>
+    </decisions>
+    <description>05.13.26 AP SS-12861 : Updated MSP Verification logic. Added nodes to Update the Account.On Prem Deployment based on MSP-EM or MSP-RS Status and Approval.
+07.07.25 AT: Updates to API Name of Type picklist value Support L1/L2. Updated Support Decision element with updated value.</description>
+    <environments>Default</environments>
+    <interviewLabel>Verification - After Save - On Create or Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Verification - After Save - On Create or Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>SS-12861: Query an Active On-Prem Deployment Verification record</description>
+        <name>Get_Active_On_Prem_Verification_Records</name>
+        <label>Get Active On-Prem Verification Records</label>
+        <locationX>2063</locationX>
+        <locationY>880</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Active_On_Prem_Deployment_Record_NOT_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Partner_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>rec_Account.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>On-Prem Deployment</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Verification__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>SS-12861: Query an Active, Full Verified and MSP-EM/MSP-RS Verification record</description>
+        <name>Get_MSP_EM_MSP_RS_Verification_Record</name>
+        <label>Get MSP-EM/MSP-RS Verification Record</label>
+        <locationX>1542</locationX>
+        <locationY>864</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Active_Fully_Verified_MSP_EM_MSP_RS_Record_NOT_Found</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters>
+            <field>Partner_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Partner_Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Approval_Level__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Fully Verified</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MSP-EM</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MSP-RS</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Verification__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Account Verification Fields, based on the decisions and assignments</description>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>2770</locationX>
+        <locationY>500</locationY>
+        <inputReference>rec_Account</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>874</locationX>
+        <locationY>178</locationY>
+        <connector>
+            <targetReference>Issue_or_Expiration_Date_Changed</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Verification__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Run_on_Issue_Date</name>
+            <connector>
+                <targetReference>Assign_Partner_Account_Id</targetReference>
+            </connector>
+            <label>Run on Issue Date</label>
+            <offsetNumber>0</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>Issue_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Run_on_Expiriry_Date</name>
+            <connector>
+                <targetReference>Assign_Partner_Account_Id</targetReference>
+            </connector>
+            <label>Run on Expiriry Date</label>
+            <offsetNumber>0</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>Expiration_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>rec_Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

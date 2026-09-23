@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Startdate_validation_when_promo_selected</fullName>
+    <active>false</active>
+    <description>Start date validation when promo option is selected on POC request object.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Tanium_Infrastructure__c , &apos;Yes – Tanium as a Service&apos;),Duration__c = 90,
+Start_Date__c  &gt; DATEVALUE(&quot;2022-01-31&quot;)
+)</errorConditionFormula>
+    <errorMessage>Start Date should not be greater than &quot;1/31/22&quot;</errorMessage>
+</ValidationRule>

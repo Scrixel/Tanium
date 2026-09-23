@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Completed_Date__c</fullName>
+    <description>Allow users to choose a completed date or a target date.</description>
+    <inlineHelpText>Enter the actual POC completed date or a target date if the POC is in progress.</inlineHelpText>
+    <label>POC Completed Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

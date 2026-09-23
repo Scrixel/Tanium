@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Opp_Upon_Approval_Locked</fullName>
+    <active>true</active>
+    <description>When a Deal is in an Approval Process, the Mapped Opportunity can not be changed by non Admins.</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(or_Create_Opportunity_upon_Approval__c),
+    TEXT(or_Opp_Reg_Approval_Flow_Status__c) = &apos;Approvals in progress&apos;,
+    $Profile.Name != &apos;Tanium Partner Portal Admin&apos;,
+    NOT($Permission.Deal_Registration_Manager), 
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>The Create Opportunity Upon Approval field cannot be changed when the current Deal is in the approval process.</errorMessage>
+</ValidationRule>

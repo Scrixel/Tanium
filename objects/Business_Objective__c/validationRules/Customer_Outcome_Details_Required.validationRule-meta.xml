@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Outcome_Details_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(  Customer_Outcome__c  ,&quot;Other (Details Below)&quot;)
+&amp;&amp;
+ISBLANK(  Expected_Customer_Outcome__c )</errorConditionFormula>
+    <errorDisplayField>Expected_Customer_Outcome__c</errorDisplayField>
+    <errorMessage>Please provide additional details on the Customer Outcome.</errorMessage>
+</ValidationRule>

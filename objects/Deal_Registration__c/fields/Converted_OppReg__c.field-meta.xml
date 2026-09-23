@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_OppReg__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>This field provides a link to the Opportunity Registration (i.e., Lead) record from which this Deal Registration was ported as a part of the Zift Implementation project</inlineHelpText>
+    <label>Converted OppReg</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>Deal Registration</relationshipLabel>
+    <relationshipName>Deal_Registration</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

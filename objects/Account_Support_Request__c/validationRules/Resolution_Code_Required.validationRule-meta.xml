@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Code_Required</fullName>
+    <active>true</active>
+    <description>Resolution Code is required in order to close a Quoting Support ticket</description>
+    <errorConditionFormula>( RecordType.DeveloperName = &quot;Quoting_Support&quot;)
+&amp;&amp; 
+ISPICKVAL(Status__c,&quot;Completed&quot;)
+&amp;&amp;
+ISPICKVAL(Resolution_Code__c,&quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Resolution_Code__c</errorDisplayField>
+    <errorMessage>Please select Resolution Code before closing ticket.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Transaction_Type__c</fullName>
+    <label>Transaction Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial - Resale</fullName>
+                <default>false</default>
+                <label>Commercial - Resale</label>
+            </value>
+            <value>
+                <fullName>Federal - Resale</fullName>
+                <default>false</default>
+                <label>Federal - Resale</label>
+            </value>
+            <value>
+                <fullName>State and Local and Education (SLED) - Resale</fullName>
+                <default>false</default>
+                <label>State and Local and Education (SLED) - Resale</label>
+            </value>
+            <value>
+                <fullName>Managed Service Provider</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Managed Service Provider</label>
+            </value>
+            <value>
+                <fullName>State, Local and Education (SLED) - Resale</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>State, Local and Education (SLED) - Resale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

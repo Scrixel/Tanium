@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Module__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the Module record. Jira ticket SS-12115</description>
+    <inlineHelpText>Lookup to the Module record</inlineHelpText>
+    <label>Module</label>
+    <referenceTo>Module__c</referenceTo>
+    <relationshipLabel>POC Request Solution and Module Map</relationshipLabel>
+    <relationshipName>POC_Request_Solution_and_Module_Map</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

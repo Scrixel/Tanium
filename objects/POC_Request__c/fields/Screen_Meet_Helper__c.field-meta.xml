@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Screen_Meet_Helper__c</fullName>
+    <description>Hyperlink to the internal Screen Meet information.</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://www.tanium.com/resources/tanium-and-screenmeet/&quot;, &quot;ScreenMeet, Investigate, Engage, and Performance work well together and provide a unified approach to endpoint management and security. Learn more here.&quot;)</formula>
+    <inlineHelpText>Hyperlink to the internal Screen Meet information.</inlineHelpText>
+    <label>Screen Meet Helper</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

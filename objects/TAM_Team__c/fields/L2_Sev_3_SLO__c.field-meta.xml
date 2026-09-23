@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L2_Sev_3_SLO__c</fullName>
+    <description>Service Level Objective (SLO) in minutes (i.e. 60)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Service Level Objective (SLO) should be the number of minutes (i.e. 60) that indicates how quickly a case should be engaged by SME. Reminder notifications take the escalation time coupled with this SLO to determine when to remind.</inlineHelpText>
+    <label>L2 Sev 3 SLO</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

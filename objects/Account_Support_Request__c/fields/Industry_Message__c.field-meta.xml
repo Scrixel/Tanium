@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Message__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Industry__c ,
+&apos;Media &amp; Telecommunications&apos;, &apos;The Tanium platform allows carriers, media, and telecom IT organizations to track critical end-user performance metrics related to resource and bandwidth consumption, application health, and system health. Gain insights about performance issues and receive alerts about subpar device performance.&apos;,
+&apos;Professional &amp; Business Services&apos;, &apos;Tanium customer, GoDaddy’s incident response team was adept at identifying threats in their system, but slow and redundant processes prevented them from acting in a timely manner. Since deploying Tanium, GoDaddy dramatically decreased the mean-time-to-recover from an incident by automating known processes and freeing up IT resources.&apos;,
+&apos;Retail &amp; Hospitality&apos;, &apos;The Tanium platform will help monitor and protect sensitive credit card data on POS systems, attain industry compliance, and optimize IT investments to improve the bottom line.&apos;,
+&apos;Transportation Services&apos;, &apos;Tanium empowers transportation providers to gain visibility over their networks, navigate trade, and accurately collaborate with partner entities to execute timely and safe deliveries.&apos;,
+&apos;Utilities&apos;, &apos;Tanium helps utility providers gain visibility and control over their networks to ensure continual performance, regulatory compliance, and consistent utility delivery across seasons.&apos;,
+&apos; &apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Industry Message</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

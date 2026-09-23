@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zift_Lead_ID__c</fullName>
+    <description>Zift unique identifier for Deal. Created as a part of the Zift integration project. Jira ticket SS-8969</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Zift unique identifier for Deal. Created as a part of the Zift integration project.</inlineHelpText>
+    <label>Zift Lead ID</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

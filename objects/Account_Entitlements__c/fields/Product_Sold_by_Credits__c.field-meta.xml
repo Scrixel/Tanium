@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Sold_by_Credits__c</fullName>
+    <description>When this box is checked, it indicates that the Product for this record is sold by Credits. The Quantity of Credits for the product is reflected in the Quantity field. Jira ticket SS-12597.</description>
+    <formula>TEXT(Product__r.LicenseMetric__c) = &apos;Credits&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>When this box is checked, it indicates that the Product for this record is sold by Credits. The Quantity of Credits for the product is reflected in the Quantity field.</inlineHelpText>
+    <label>Product Sold by Credits</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

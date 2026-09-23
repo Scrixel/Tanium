@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Support_Request_ISR__c</fullName>
+    <description>The ISR to which this KPI record is attached</description>
+    <inlineHelpText>Please select the ISR record to which this Attendee is related</inlineHelpText>
+    <label>Internal Support Request (ISR)</label>
+    <referenceTo>Account_Support_Request__c</referenceTo>
+    <relationshipName>ISR_Customer_Attendees</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

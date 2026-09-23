@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreExpiry_Email_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>INC0119131 Field is set to TRUE upon pre-expiry (30 days), and reset to FALSE upon opp reg extension approval. For triggering pre-expiry email notification.</description>
+    <inlineHelpText>Field is set to &quot;Selected&quot; upon pre-expiry (30 days), and deselected upon extension approval. For triggering pre-expiry email notification.</inlineHelpText>
+    <label>PreExpiry Email Sent?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

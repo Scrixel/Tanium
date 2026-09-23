@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RestrictedPaymentTypes__c</fullName>
+    <description>These payment types separated by &quot;; &quot; will be visible to profiles - Tanium Deals Desk, System Administrator and Tanium System Administrator only.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>These payment types separated by &quot;; &quot; will be visible to profiles - Tanium Deals Desk, System Administrator and Tanium System Administrator only.</inlineHelpText>
+    <label>Restricted Payment Types</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processed_by__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is for On-Prem &amp; TaaS Page Layout. For now, it&apos;s just a User lookup field and visible to only Deal Desk Profile.</description>
+    <label>Processed by</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>POC_Requests8</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

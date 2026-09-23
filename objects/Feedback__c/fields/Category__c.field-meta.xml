@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Grouping of the type of feedback provided</description>
+    <inlineHelpText>Select a category that best describes the feedback or suggestion offered</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solution Feature Request</fullName>
+                <default>false</default>
+                <label>Solution Feature Request</label>
+            </value>
+            <value>
+                <fullName>Community Portal Feedback</fullName>
+                <default>false</default>
+                <label>Community Portal Feedback</label>
+            </value>
+            <value>
+                <fullName>Support Team Feedback</fullName>
+                <default>false</default>
+                <label>Support Team Feedback</label>
+            </value>
+            <value>
+                <fullName>Solution Feedback</fullName>
+                <default>false</default>
+                <label>Solution Feedback</label>
+            </value>
+            <value>
+                <fullName>General Feedback</fullName>
+                <default>false</default>
+                <label>General Feedback</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Access</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Access</label>
+            </value>
+            <value>
+                <fullName>Functionality</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Functionality</label>
+            </value>
+            <value>
+                <fullName>Navigation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Navigation</label>
+            </value>
+            <value>
+                <fullName>Topics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Topics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

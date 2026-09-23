@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Type_Text__c</fullName>
+    <description>Text of Opportunity Registration Type</description>
+    <externalId>false</externalId>
+    <formula>Text( or_Opportunity_Registration__c)</formula>
+    <inlineHelpText>Text of Opportunity Registration Type</inlineHelpText>
+    <label>Type Text</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

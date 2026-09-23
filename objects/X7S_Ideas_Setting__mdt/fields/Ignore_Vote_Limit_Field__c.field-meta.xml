@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ignore_Vote_Limit_Field__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Enable this to ignore account voting limits</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>If checked, disables account voting restrictions globally.  If unchecked, account-level settings will be used where defined.</inlineHelpText>
+    <label>Ignore Vote Limit Field</label>
+    <type>Checkbox</type>
+</CustomField>

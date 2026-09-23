@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Years_in_Business__c</fullName>
+    <description>Two decimal places are possible.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Two decimal places are possible.</inlineHelpText>
+    <label>Years in Business</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

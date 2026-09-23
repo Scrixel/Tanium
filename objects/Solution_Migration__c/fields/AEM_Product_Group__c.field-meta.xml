@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AEM_Product_Group__c</fullName>
+    <description>AEM Product Group</description>
+    <label>AEM Product Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core Subscription</fullName>
+                <default>false</default>
+                <label>Core Subscription</label>
+            </value>
+            <value>
+                <fullName>Core TaaS</fullName>
+                <default>false</default>
+                <label>Core TaaS</label>
+            </value>
+            <value>
+                <fullName>EM Subscription</fullName>
+                <default>false</default>
+                <label>EM Subscription</label>
+            </value>
+            <value>
+                <fullName>EM TaaS</fullName>
+                <default>false</default>
+                <label>EM TaaS</label>
+            </value>
+            <value>
+                <fullName>IR Subscription</fullName>
+                <default>false</default>
+                <label>IR Subscription</label>
+            </value>
+            <value>
+                <fullName>IR TaaS</fullName>
+                <default>false</default>
+                <label>IR TaaS</label>
+            </value>
+            <value>
+                <fullName>RC Subscription</fullName>
+                <default>false</default>
+                <label>RC Subscription</label>
+            </value>
+            <value>
+                <fullName>RC TaaS</fullName>
+                <default>false</default>
+                <label>RC TaaS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

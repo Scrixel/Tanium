@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Attendees__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISBLANK(Customer_Attendee_5__c)), Customer_Attendee_5__r.FirstName +&quot;, &quot;+ Customer_Attendee_5__r.LastName +&quot; : &quot;+ Customer_Attendee_5__r.Title +BR()+ 
+Customer_Attendee_4__r.FirstName +&quot;, &quot;+ Customer_Attendee_4__r.LastName +&quot; : &quot;+ Customer_Attendee_4__r.Title  +BR()+
+Customer_Attendee_3__r.FirstName +&quot;, &quot;+ Customer_Attendee_3__r.LastName +&quot; : &quot;+ Customer_Attendee_3__r.Title  +BR()+
+Customer_Attendee_2__r.FirstName +&quot;, &quot;+ Customer_Attendee_2__r.LastName +&quot; : &quot;+ Customer_Attendee_2__r.Title +BR()+
+Customer_Attendee_1__r.FirstName +&quot;, &quot;+ Customer_Attendee_1__r.LastName +&quot; : &quot;+ Customer_Attendee_1__r.Title  ,IF( NOT(ISBLANK(Customer_Attendee_4__c)),Customer_Attendee_4__r.FirstName +&quot;, &quot;+ Customer_Attendee_4__r.LastName +&quot; : &quot;+ Customer_Attendee_4__r.Title +BR()+
+Customer_Attendee_3__r.FirstName +&quot;, &quot;+ Customer_Attendee_3__r.LastName +&quot; : &quot;+ Customer_Attendee_3__r.Title +BR()+
+Customer_Attendee_2__r.FirstName +&quot;, &quot;+ Customer_Attendee_2__r.LastName +&quot; : &quot;+ Customer_Attendee_2__r.Title +BR()+
+Customer_Attendee_1__r.FirstName +&quot;, &quot;+ Customer_Attendee_1__r.LastName +&quot; : &quot;+ Customer_Attendee_1__r.Title ,IF( NOT(ISBLANK(Customer_Attendee_3__c)),Customer_Attendee_3__r.FirstName +&quot;, &quot;+ Customer_Attendee_3__r.LastName +&quot; : &quot;+ Customer_Attendee_3__r.Title +BR()+
+Customer_Attendee_2__r.FirstName +&quot;, &quot;+ Customer_Attendee_2__r.LastName +&quot; : &quot;+ Customer_Attendee_2__r.Title +BR()+
+Customer_Attendee_1__r.FirstName +&quot;, &quot;+ Customer_Attendee_1__r.LastName +&quot; : &quot;+ Customer_Attendee_1__r.Title ,IF( NOT(ISBLANK(Customer_Attendee_2__c)),Customer_Attendee_2__r.FirstName +&quot;, &quot;+ Customer_Attendee_2__r.LastName +&quot; : &quot;+ Customer_Attendee_2__r.Title +BR()+
+Customer_Attendee_1__r.FirstName +&quot;, &quot;+ Customer_Attendee_1__r.LastName +&quot; : &quot;+ Customer_Attendee_1__r.Title ,IF( NOT(ISBLANK(Customer_Attendee_1__c)),Customer_Attendee_1__r.FirstName +&quot;, &quot;+ Customer_Attendee_1__r.LastName +&quot; : &quot;+ Customer_Attendee_1__r.Title,&quot; &quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Customer Attendees</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

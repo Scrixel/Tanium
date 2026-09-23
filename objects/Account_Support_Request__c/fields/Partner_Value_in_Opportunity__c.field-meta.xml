@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Value_in_Opportunity__c</fullName>
+    <description>SS-1005</description>
+    <inlineHelpText>Detail the value partner provided in helping us advance in Account</inlineHelpText>
+    <label>Partner Value in Opportunity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

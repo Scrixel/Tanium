@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Commission_Amount__c</fullName>
+    <description>INC0180752
+This field Rolls up to Opportunity Field &quot;Commission Fee Total (TCV)&quot;
+Should be the same as &quot;Commission_Amount__c&quot; which is a formula field and cannot be used in Roll Up Summary field. 
+Filled in by Flow &quot;Commission Amount Update on Opportunity Partner&quot;
+Only visible to System Admins for troubleshooting
+
+05/13/2024 - Label changed as a part of the FY25 Partner Redesign project. Jira ticket SS--7685. Fields will be removed at a future date, likely in FY26.</description>
+    <inlineHelpText>Automatically populated by Salesforce with the amount from the Commission Amount (formula) field. This field is used in a rollup on the Opportunity for the Commission Fee Total (TCV) field.</inlineHelpText>
+    <label>DEPRECATED - Commission Amount</label>
+    <precision>14</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Currency</type>
+</CustomField>

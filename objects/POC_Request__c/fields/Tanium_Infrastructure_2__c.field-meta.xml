@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Infrastructure_2__c</fullName>
+    <label>DEPRECATED - Tanium Infrastructure 2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No – Customer</fullName>
+                <default>false</default>
+                <label>No – Customer Provided</label>
+            </value>
+            <value>
+                <fullName>Yes – Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Yes – Tanium as a Service</label>
+            </value>
+            <value>
+                <fullName>Yes- Tanium -Virtual Appliance (OVA)</fullName>
+                <default>false</default>
+                <label>Yes- Tanium -Virtual Appliance</label>
+            </value>
+            <value>
+                <fullName>Yes- Tanium - Cloud</fullName>
+                <default>false</default>
+                <label>Yes- Tanium - Cloud Appliance</label>
+            </value>
+            <value>
+                <fullName>Yes- Tanium - Physical Appliance</fullName>
+                <default>false</default>
+                <label>Yes- Tanium - Physical Appliance</label>
+            </value>
+            <value>
+                <fullName>Yes - Tanium - Physical Appliance (Already Owned)</fullName>
+                <default>false</default>
+                <label>Yes - Tanium - Physical Appliance (Already Owned)</label>
+            </value>
+            <value>
+                <fullName>No - Customer - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No - Customer - Physical</label>
+            </value>
+            <value>
+                <fullName>No - Customer - Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No - Customer - Virtual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

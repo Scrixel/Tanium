@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_Triage</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>account__c</columns>
+    <columns>NAME</columns>
+    <columns>Bypass_Triage_Tickets__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bypass_Triage_Tickets__c</field>
+        <operation>contains</operation>
+        <value>G</value>
+    </filters>
+    <filters>
+        <field>Bypass_Triage_Tickets__c</field>
+        <operation>contains</operation>
+        <value>C</value>
+    </filters>
+    <label>Bypass Triage</label>
+</ListView>

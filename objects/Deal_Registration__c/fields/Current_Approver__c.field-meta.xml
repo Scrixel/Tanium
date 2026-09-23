@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Approver__c</fullName>
+    <description>This field is to display the &quot;Current Approver&quot; name at each stage after submitting the record for Approval.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>We are showing the  &quot;Current Approver&quot; name at each stage after submitting the record for Approval.</inlineHelpText>
+    <label>Current Approver</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

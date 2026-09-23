@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapped_Opp_Locked_During_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED( Mapped_Opportunity__c ),
+    TEXT(or_Opp_Reg_Approval_Flow_Status__c) = &apos;Approvals in progress&apos;,
+    $Profile.Name = &quot;Tanium Partner Portal Admin&quot;,
+    NOT($Permission.Deal_Registration_Manager), 
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Mapped_Opportunity__c</errorDisplayField>
+    <errorMessage>The Mapped Opportunity field can not be changed while the Deal is in the approval process</errorMessage>
+</ValidationRule>

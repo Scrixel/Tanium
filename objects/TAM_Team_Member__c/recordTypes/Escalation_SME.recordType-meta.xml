@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_SME</fullName>
+    <active>true</active>
+    <label>Escalation SME</label>
+    <picklistValues>
+        <picklist>Responsibility__c</picklist>
+        <values>
+            <fullName>Escalation Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal Escalation Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Enabled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

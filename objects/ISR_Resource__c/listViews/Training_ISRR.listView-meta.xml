@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_ISRR</fullName>
+    <columns>NAME</columns>
+    <columns>Trainer_Role__c</columns>
+    <columns>Assigned_Trainer__c</columns>
+    <columns>Location__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Trainer_Duration_Days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ISR_Resource__c.Training_Request_ISR_Resources</value>
+    </filters>
+    <label>Training ISRR</label>
+</ListView>

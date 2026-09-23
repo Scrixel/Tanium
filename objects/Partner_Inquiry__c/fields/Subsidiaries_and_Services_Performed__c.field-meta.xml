@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidiaries_and_Services_Performed__c</fullName>
+    <description>Subsidiaries/services being performed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If you answered ‘Yes’ above, provide the names of the subsidiaries, affiliates or other group companies that will provide services and describe the services they will perform.</inlineHelpText>
+    <label>Subsidiaries/services being performed</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

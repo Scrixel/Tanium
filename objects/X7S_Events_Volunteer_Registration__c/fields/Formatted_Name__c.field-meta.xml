@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formatted_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>User__r.FirstName + &apos; &apos; + User__r.LastName + &apos; &apos; +  Volunteer_Need__r.Name + &apos; to &apos; + Volunteer_Need__r.Event__r.Name</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Formatted Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

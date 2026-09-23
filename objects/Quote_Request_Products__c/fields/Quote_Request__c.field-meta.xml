@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Request__c</fullName>
+    <description>Lookup to the Quote Request. Jira ticket SS-11057.</description>
+    <inlineHelpText>Please select the Quote Request to which this Product will be associated.</inlineHelpText>
+    <label>Quote Request</label>
+    <referenceTo>Quote_Request__c</referenceTo>
+    <relationshipLabel>Quote Request Products</relationshipLabel>
+    <relationshipName>Quote_Request_Products</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

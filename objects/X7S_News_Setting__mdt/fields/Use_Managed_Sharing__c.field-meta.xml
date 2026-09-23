@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Managed_Sharing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Apply managed sharing when creating a new record with publish now.</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enable this to apply 7Summits Visibility Managed Sharing for  News and Publish Now.</inlineHelpText>
+    <label>Use Managed Sharing</label>
+    <type>Checkbox</type>
+</CustomField>

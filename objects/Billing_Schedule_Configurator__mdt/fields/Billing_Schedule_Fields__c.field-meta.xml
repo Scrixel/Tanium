@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Schedule_Fields__c</fullName>
+    <description>Fields to query from Billing Schedule object. Used in BillingScheduleConfiguratorController. updateBillingInformationOnQuote().</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Billing Schedule Fields</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

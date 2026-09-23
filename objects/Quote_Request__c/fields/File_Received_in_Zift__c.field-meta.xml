@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Received_in_Zift__c</fullName>
+    <description>Unifyr to stamp the Partner Portal Attachment ID once the file attachment on the Quote Request has been sync to the partner portal successfully.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unifyr to stamp the Partner Portal Attachment ID once the file attachment on the Quote Request has been sync to the partner portal successfully.</inlineHelpText>
+    <label>File Received in Zift</label>
+    <length>80</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

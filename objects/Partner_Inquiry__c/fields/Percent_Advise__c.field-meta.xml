@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percent_Advise__c</fullName>
+    <description>Partner Inquiry:  Percent of partner business</description>
+    <inlineHelpText>Partner Inquiry:  Percent of partner business</inlineHelpText>
+    <label>Percent Advise</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

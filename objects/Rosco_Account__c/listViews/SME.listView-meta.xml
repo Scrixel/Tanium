@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SME</fullName>
+    <columns>account__c</columns>
+    <columns>NAME</columns>
+    <columns>Secondary_Slack_Channel_Id__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>SME</label>
+</ListView>

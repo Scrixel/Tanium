@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SME_Component_Picklist_Value__c</fullName>
+    <description>This is the picklist value for the component (in case) for the SME component in question</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ask matt to get and fill in.</inlineHelpText>
+    <label>SME Component Picklist Value</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CEO_Advisors</fullName>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>Estimate_Endpoint__c</columns>
+    <columns>Opportunity_NARR__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status_Bucketed__c</field>
+        <operation>notEqual</operation>
+        <value>draft,on hold,rejected,request completed</value>
+    </filters>
+    <filters>
+        <field>Tanium_Sr_Advisor_Invited__c</field>
+        <operation>contains</operation>
+        <value>wilderotter,bleich,woertz,russo,sheinwald,veihmeyer,weinberger</value>
+    </filters>
+    <label>All CEO Advisors</label>
+</ListView>

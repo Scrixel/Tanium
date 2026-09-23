@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Use_Cases_Why_Tanium__c</fullName>
+    <label>Primary Use Cases/Why Tanium</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incident Response</fullName>
+                <default>false</default>
+                <label>Incident Response</label>
+            </value>
+            <value>
+                <fullName>Threat Detection / Response</fullName>
+                <default>false</default>
+                <label>Threat Detection / Response</label>
+            </value>
+            <value>
+                <fullName>Security Analytics / SIEM</fullName>
+                <default>false</default>
+                <label>Security Analytics / SIEM</label>
+            </value>
+            <value>
+                <fullName>Forensics</fullName>
+                <default>false</default>
+                <label>Forensics</label>
+            </value>
+            <value>
+                <fullName>Vulnerability Scanning/Management</fullName>
+                <default>false</default>
+                <label>Vulnerability Scanning/Management</label>
+            </value>
+            <value>
+                <fullName>Endpoint Protection / EDR</fullName>
+                <default>false</default>
+                <label>Endpoint Protection / EDR</label>
+            </value>
+            <value>
+                <fullName>Application Mapping</fullName>
+                <default>false</default>
+                <label>Application Mapping</label>
+            </value>
+            <value>
+                <fullName>Application Blacklisting / Whitelisting</fullName>
+                <default>false</default>
+                <label>Application Blacklisting / Whitelisting</label>
+            </value>
+            <value>
+                <fullName>Data Loss Protection</fullName>
+                <default>false</default>
+                <label>Data Loss Protection</label>
+            </value>
+            <value>
+                <fullName>File Integrity Monitoring</fullName>
+                <default>false</default>
+                <label>File Integrity Monitoring</label>
+            </value>
+            <value>
+                <fullName>Patching - Windows Workstations / Desktops / Laptops</fullName>
+                <default>false</default>
+                <label>Patching - Windows Workstations / Desktops / Laptops</label>
+            </value>
+            <value>
+                <fullName>Patching - Macs</fullName>
+                <default>false</default>
+                <label>Patching - Macs</label>
+            </value>
+            <value>
+                <fullName>Patching - Windows Servers</fullName>
+                <default>false</default>
+                <label>Patching - Windows Servers</label>
+            </value>
+            <value>
+                <fullName>Patching - Non-Windows Servers</fullName>
+                <default>false</default>
+                <label>Patching - Non-Windows Servers</label>
+            </value>
+            <value>
+                <fullName>Asset Discovery / Inventory</fullName>
+                <default>false</default>
+                <label>Asset Discovery / Inventory</label>
+            </value>
+            <value>
+                <fullName>Asset Management - Hardware</fullName>
+                <default>false</default>
+                <label>Asset Management - Hardware</label>
+            </value>
+            <value>
+                <fullName>Asset Management - Software (Including License Metering &amp; Compliance)</fullName>
+                <default>false</default>
+                <label>Asset Management - Software (Including License Metering &amp; Compliance)</label>
+            </value>
+            <value>
+                <fullName>Software Distribution</fullName>
+                <default>false</default>
+                <label>Software Distribution</label>
+            </value>
+            <value>
+                <fullName>End User Performance Monitoring</fullName>
+                <default>false</default>
+                <label>End User Performance Monitoring</label>
+            </value>
+            <value>
+                <fullName>OTHER - If OTHER list additional use case(s)</fullName>
+                <default>false</default>
+                <label>OTHER - If OTHER list additional use case</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instance_Quote__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Only populated when Version Type = Quote Instance, this field links a quote to its related Term Versions. &quot;Source&quot; Quote Term Versions will not be linked to quotes, but when applicable to a quote, a copy of type &quot;Quote Instance&quot; will be created automatically.</inlineHelpText>
+    <label>Instance Quote</label>
+    <referenceTo>Quote</referenceTo>
+    <relationshipLabel>Quote Term Versions</relationshipLabel>
+    <relationshipName>Quote_Term_Versions</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

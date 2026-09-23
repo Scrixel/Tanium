@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Approval_Assignment_Levels</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Approval_Assignment__c</columns>
+    <columns>Countries__c</columns>
+    <columns>Countries_Exceptions__c</columns>
+    <columns>Level_1__c</columns>
+    <columns>Level_1_Exceptions__c</columns>
+    <columns>Level_2__c</columns>
+    <columns>Level_2_Exceptions__c</columns>
+    <columns>Level_3__c</columns>
+    <columns>Level_3_Exceptions__c</columns>
+    <columns>Level_4__c</columns>
+    <columns>Level_4_Exceptions__c</columns>
+    <columns>Partner_Account_ID__c</columns>
+    <columns>Partner_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Opp Reg Approval Assignment Lev</label>
+    <language>en_US</language>
+</ListView>

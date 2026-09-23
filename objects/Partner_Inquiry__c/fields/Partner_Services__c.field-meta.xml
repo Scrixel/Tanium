@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Services__c</fullName>
+    <description>Partner Portal Prompt: Please describe the nature of Tanium-related services that will be provided to customers.</description>
+    <inlineHelpText>Partner Portal Prompt Please describe the nature of Tanium-related services that will be provided to customers.</inlineHelpText>
+    <label>Partner Services</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

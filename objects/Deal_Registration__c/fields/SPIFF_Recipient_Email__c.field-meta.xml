@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SPIFF_Recipient_Email__c</fullName>
+    <description>2021-7-13 Changed Field Label ticket #INC0142979
+2020-09-23 Added Help Text
+2020-08-16 Case 52953 Populate with Partner Sales Account Manager (PSAM) email address if there is a value.  If PSAM is blank, populate with Partner Contact email address.  SPIFF email will be sent to this email.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Populate with Partner Sales Account Manager (PSAM) email address if there is a value. 
+If there is no email for PSAM, populate with Partner Contact email address. SPIFF email will be sent to this email.</inlineHelpText>
+    <label>Partner Acct Mgr Spiff Recipient Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

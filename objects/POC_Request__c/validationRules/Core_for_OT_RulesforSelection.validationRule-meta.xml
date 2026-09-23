@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_for_OT_RulesforSelection</fullName>
+    <active>true</active>
+    <description>SS-12270: Validation to ensure that Core for Operational Technology without Exposure for Operational Tech can only be selected if the POC Request is either Core Standard, Core Plus or has Tanium Cloud Server Deployment.</description>
+    <errorConditionFormula>AND(
+    Exposure_Management_for_Operational_Tech__c = False,
+    Core_for_Operational_Technology__c = True,
+    Today() &lt;= End_Date__c ,
+    NOT( Server_Deployment__r.RecordType.DeveloperName = &quot;TaaS&quot;),
+    Core_Standard__c = False,
+    Core_Plus__c  = False,
+    NOT( $Permission.DisableValidationRules)
+)
+
+
+
+/* 04-15-26 SS-13060: Removed Start_Date from the criteria
+*/</errorConditionFormula>
+    <errorDisplayField>Core_for_Operational_Technology__c</errorDisplayField>
+    <errorMessage>Core for Operational Technology, without Exposure for Operational Tech, can only be selected if the POC Request is either Core Standard, Core Plus or has Tanium Cloud Server Deployment.</errorMessage>
+</ValidationRule>

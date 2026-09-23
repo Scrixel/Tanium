@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Timeframe__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <inlineHelpText>Select the date the customer expects to see the outcome.  If the customer does not have a specific date, we encourage selecting a date based on best practices and delighting the customer.</inlineHelpText>
+    <label>DEPRECATED - Expected Timeframe</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

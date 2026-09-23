@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmailDomain_match_AccountDomain</fullName>
+    <active>true</active>
+    <description>SS-6500 - Server Deployment - validate end user email domain to match the domains from the account</description>
+    <errorConditionFormula>/*Taas record type*/
+AND(
+ IF(ISBLANK(TaaS_Admin_email__c), 
+        NOT(OR(
+           CONTAINS(Account__r.Domain__c, RIGHT( Tanium_Cloud_Admin__r.Email ,(LEN( Tanium_Cloud_Admin__r.Email )-FIND(&quot;@&quot;, Tanium_Cloud_Admin__r.Email )))),
+           CONTAINS(Account__r.Other_Domains__c, RIGHT( Tanium_Cloud_Admin__r.Email ,(LEN( Tanium_Cloud_Admin__r.Email )-FIND(&quot;@&quot;, Tanium_Cloud_Admin__r.Email )))))
+        ), 
+        NOT(OR(
+           CONTAINS(Account__r.Domain__c, RIGHT( Tanium_Cloud_Admin__r.Email ,(LEN( Tanium_Cloud_Admin__r.Email )-FIND(&quot;@&quot;, Tanium_Cloud_Admin__r.Email )))),
+           CONTAINS(Account__r.Other_Domains__c, RIGHT( Tanium_Cloud_Admin__r.Email ,(LEN( Tanium_Cloud_Admin__r.Email )-FIND(&quot;@&quot;, Tanium_Cloud_Admin__r.Email )))),
+           CONTAINS(Account__r.Other_Domains__c, RIGHT(TaaS_Admin_email__c,(LEN( TaaS_Admin_email__c )-FIND(&quot;@&quot;, TaaS_Admin_email__c )))),
+           CONTAINS(Account__r.Domain__c, RIGHT(TaaS_Admin_email__c,(LEN( TaaS_Admin_email__c )-FIND(&quot;@&quot;, TaaS_Admin_email__c )))))
+        )
+     ),
+OR(
+RecordType.DeveloperName = &apos;TaaS&apos;,
+TEXT(Server_Device_Type__c) = &quot;Tanium Cloud for U.S. Government&quot;,
+TEXT(Server_Device_Type__c) = &quot;Tanium as a Service&quot;),
+ISBLANK(Domain_Exception_Reason__c),
+NOT($Permission.DisableValidationRules)  
+)
+||
+
+/*On-Prem record type*/
+AND(
+   NOT(
+        OR(
+        CONTAINS(Account__r.Other_Domains__c, RIGHT(License_delivery_email_primary__c,(LEN(License_delivery_email_primary__c)-FIND(&quot;@&quot;,License_delivery_email_primary__c)))),
+        CONTAINS( Account__r.Domain__c, RIGHT(License_delivery_email_primary__c,(LEN(License_delivery_email_primary__c)-FIND(&quot;@&quot;,License_delivery_email_primary__c))))
+        )
+   ),
+OR(
+RecordType.DeveloperName = &apos;OnPrem&apos;,
+TEXT(Server_Device_Type__c) = &quot;On-Prem&quot;),
+ISBLANK(Domain_Exception_Reason__c),
+NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>Please update the email to match the domain on the account or populate the domain exception reason.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Map_to_Failed_Opp</fullName>
+    <active>true</active>
+    <description>Case 50868 When Mapped Opportunity&apos;s Stage is Failed, corresponding OR in Portal&apos;s status is Closed Lost, and no further integration will take place.  Rule prevents this mistake.</description>
+    <errorConditionFormula>AND(
+   ISCHANGED(Mapped_Opportunity__c),
+   ISPICKVAL(Mapped_Opportunity__r.StageName,&quot;Failed&quot;),
+   $Profile.Name != &apos;API Only Integration Admin&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Mapped_Opportunity__c</errorDisplayField>
+    <errorMessage>Mapped Opportunity&apos;s Stage is Failed.  Please choose another opportunity.</errorMessage>
+</ValidationRule>

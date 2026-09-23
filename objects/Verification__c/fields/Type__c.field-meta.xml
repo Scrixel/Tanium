@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>2025-11-20 SS-11986 Added new values.</description>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+                <label>Assessment</label>
+            </value>
+            <value>
+                <fullName>Cloud Deployment</fullName>
+                <default>false</default>
+                <label>Cloud Deployment</label>
+            </value>
+            <value>
+                <fullName>Cyber Insurance</fullName>
+                <default>false</default>
+                <label>Cyber Insurance</label>
+            </value>
+            <value>
+                <fullName>Microsoft VSO</fullName>
+                <default>false</default>
+                <label>Microsoft VSO</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>MSP-EM</fullName>
+                <default>false</default>
+                <label>MSP-EM</label>
+            </value>
+            <value>
+                <fullName>MSP-RS</fullName>
+                <default>false</default>
+                <label>MSP-RS</label>
+            </value>
+            <value>
+                <fullName>On-Prem Deployment</fullName>
+                <default>false</default>
+                <label>On-Prem Deployment</label>
+            </value>
+            <value>
+                <fullName>POC</fullName>
+                <default>false</default>
+                <label>POC</label>
+            </value>
+            <value>
+                <fullName>ServiceNow VSO</fullName>
+                <default>false</default>
+                <label>ServiceNow VSO</label>
+            </value>
+            <value>
+                <fullName>Support L1/L2</fullName>
+                <default>false</default>
+                <label>Support L1/L2</label>
+            </value>
+            <value>
+                <fullName>VSO</fullName>
+                <default>false</default>
+                <label>VSO</label>
+            </value>
+            <value>
+                <fullName>MSP EM/RS Accredited</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MSP EM/RS Accredited</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

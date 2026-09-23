@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Notes__c</fullName>
+    <description>2014 | JIR:  This field is deprecated
+
+Notes and attachments associated with this Server deployment should be attached within the &quot;Notes and Attachments&quot; of the Server Deployment record or the Opportunity record.</description>
+    <label>General Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

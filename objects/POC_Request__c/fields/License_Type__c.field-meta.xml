@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Type__c</fullName>
+    <inlineHelpText>-Production: intended for live environment, does not allow unsigned content
+-Lab: testing license, includes labs content and allows unsigned content
+-QA: testing license that mirrors prod, no labs content and no unsigned content, Limited use</inlineHelpText>
+    <label>License Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tanium_Infrastructure__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Production</fullName>
+                <default>false</default>
+                <label>Production</label>
+            </value>
+            <value>
+                <fullName>Lab</fullName>
+                <default>true</default>
+                <label>Lab</label>
+            </value>
+            <value>
+                <fullName>QA</fullName>
+                <default>false</default>
+                <label>QA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Tanium as a Service</controllingFieldValue>
+            <controllingFieldValue>On-Prem</controllingFieldValue>
+            <valueName>Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>On-Prem</controllingFieldValue>
+            <valueName>Lab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>On-Prem</controllingFieldValue>
+            <valueName>QA</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

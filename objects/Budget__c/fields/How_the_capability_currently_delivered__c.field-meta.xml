@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_the_capability_currently_delivered__c</fullName>
+    <inlineHelpText>If not new, how is the capability currently delivered today? How will this solution improve the current methodology already used to deliver this capability?</inlineHelpText>
+    <label>How the capability currently delivered</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

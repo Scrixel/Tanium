@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Messaging__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Industry__c,&apos;Agriculture, Mining and Raw Materials&apos;, &apos;Tanium can help mining and farming producers gain visibility and control over their networks to better track inventory, yields, refined production, sales, or meet import &amp; export compliance regulations.&apos;,
+&apos;Educational Services&apos;, &apos;As an example of what your organization can achieve, one customer found immediate cost savings of $175 of unused software per computer with immediate cost savings of $3.5M and another research university leveraged Tanium for quicker compliance response and a competitive advantage for research grants funds.&apos;,
+&apos;Financial Services&apos;, &apos;The Tanium platform will make sure &apos; &amp;Account__r.Name&amp; &apos; is ready for attacks by detecting threat actors and remediating vulnerabilities to mitigate disruption - protecting your clients’ money and data.&apos;,
+&apos;Government - Federal&apos;, &apos;With Tanium, Federal entities are better equipped to stay ahead of threats and report risk with confidence that their networks perform in compliance, at scale. Tanium enables federal entities to stay ahead of threats and report risk with confidence that their networks operate in compliance and with performance.&apos;,
+&apos;Government - Local&apos;, &apos;State and local government agencies using the Tanium platform are empowered to improve compliance and modernize their IT operations to secure critical data with limited budgets, staff, and unreliable technology.&apos;,
+&apos;Healthcare and Life Sciences&apos;, &apos;Tanium can partner with &apos; &amp;Account__r.Name&amp; &apos; to meet stringent healthcare compliance objectives including HIPAA and CCPA. Detect and manage personal health information and other sensitive data on endpoints to limit exposure.&apos;,
+&apos;Insurance&apos;, &apos;The Tanium platform will make sure &apos; &amp;Account__r.Name&amp; &apos; is ready for attacks by detecting threat actors and remediating vulnerabilities to mitigate disruption - protecting its business and clients’ personal data.&apos;,
+&apos;Manufacturing, Construction and Wholesale Trade&apos;, &apos;Like many multinational manufacturers, Whirlpool used a variety of security tools, creating gaps in visibility, accountability, and resilience. Tanium helped provide a single source of truth for their environment, uniting teams on one platform for endpoint management and security.&apos;,&apos; &apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Industry Messaging</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

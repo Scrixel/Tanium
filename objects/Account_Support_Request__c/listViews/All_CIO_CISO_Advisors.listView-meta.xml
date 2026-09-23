@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CIO_CISO_Advisors</fullName>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>Estimate_Endpoint__c</columns>
+    <columns>Opportunity_NARR__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status_Bucketed__c</field>
+        <operation>notEqual</operation>
+        <value>draft,on hold,rejected,request completed,submitted and under review</value>
+    </filters>
+    <filters>
+        <field>Tanium_Sr_Advisor_Invited__c</field>
+        <operation>contains</operation>
+        <value>shurts,lachmandas,robinson,blair,mccluggage,neiers,fasano,godec,josefsberg,imhoff,goodhart</value>
+    </filters>
+    <filters>
+        <field>Substatus__c</field>
+        <operation>notEqual</operation>
+        <value>No Current Interest,Closed Lost,No Connection</value>
+    </filters>
+    <label>All CIO/CISO Advisors</label>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Track_Follow_Topic__c</fullName>
+    <defaultValue>false</defaultValue>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enable to track follow Topic activity</inlineHelpText>
+    <label>Track Follow Topic</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Country__c</fullName>
+    <description>This value set is being used in the Internal Support request: Exception Country currently. The values are similar to Account: HQ Country. Anytime when Account: HQ Country has been changed. This picklist value should be updated accordingly. Jira SS-532</description>
+    <label>Exception Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Exception_Country</valueSetName>
+    </valueSet>
+</CustomField>

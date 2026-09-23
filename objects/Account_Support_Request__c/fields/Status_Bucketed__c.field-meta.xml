@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Bucketed__c</fullName>
+    <description>TAN-787 Built from Bucket values on report</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+Status__c,
+&quot;Call or Meeting Completed - No Current Interest&quot;, &quot;Closed - No Current Opportunity&quot;,
+&quot;Request Completed - Request Acknowledged by Sr. Advisor Contact - No Current Interest&quot;, &quot;Closed - No Current Opportunity&quot;,
+&quot;Request Completed - CLOSED LOST&quot;, &quot;Closed - No Current Opportunity&quot;,
+&quot;Request Completed - CLOSED WON&quot;, &quot;Closed Won&quot;,
+&quot;Call or Meeting Completed - Opportunity Exists&quot;, &quot;Intro Made - Active Opportunity&quot;,
+&quot;Request Acknowledged by Sr. Advisor Contact - Call or Meeting Pending&quot;, &quot;Sr. Advisor Introduction in Process&quot;,
+&quot;Request Sent to Sr. Advisor&quot;, &quot;Sr. Advisor Introduction in Process&quot;,
+&quot;Sr. Advisor request sent to contact&quot;, &quot;Sr. Advisor Introduction in Process&quot;,
+&quot;Recalled&quot;, &quot;On Hold&quot;,
+TEXT(Status__c)
+)</formula>
+    <label>Status Bucketed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

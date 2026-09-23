@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BillingsByQuoteLines</fullName>
+    <fields>Name</fields>
+    <fields>BillingSchedule__c</fields>
+    <fields>QuoteLine__c</fields>
+    <fields>BillAmount__c</fields>
+    <fields>BillDate__c</fields>
+    <fields>PaymentType__c</fields>
+    <fields>Product__c</fields>
+    <fields>Quantity__c</fields>
+    <fields>StartDate__c</fields>
+    <fields>EndDate__c</fields>
+    <label>Billings by Quote Lines</label>
+</CompactLayout>

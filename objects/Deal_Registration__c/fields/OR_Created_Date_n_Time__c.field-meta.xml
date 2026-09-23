@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OR_Created_Date_n_Time__c</fullName>
+    <defaultValue>NOW()</defaultValue>
+    <description>2020-07-24 Field is a necessity due to RingLead merge which resulted in incorrect Created Dates for Opp Reg records.  Write access limited by permission set &quot;Opportunity Registration&quot;</description>
+    <label>Created Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

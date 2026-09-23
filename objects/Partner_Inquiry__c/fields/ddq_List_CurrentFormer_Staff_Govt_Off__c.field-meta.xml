@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_List_CurrentFormer_Staff_Govt_Off__c</fullName>
+    <description>List any current or former employee, officer, or director of your company, who is a Government Official.</description>
+    <inlineHelpText>List any current or former employee, officer, or director of your company, who is a Government Official.</inlineHelpText>
+    <label>List Current/Former Staff Govt Official</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

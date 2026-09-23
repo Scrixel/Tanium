@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Tanium_Partner_support__c</fullName>
+    <description>Is there a current Tanium partner that can support?</description>
+    <inlineHelpText>Is there a current Tanium partner that can support?</inlineHelpText>
+    <label>Current Tanium Partner support ?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

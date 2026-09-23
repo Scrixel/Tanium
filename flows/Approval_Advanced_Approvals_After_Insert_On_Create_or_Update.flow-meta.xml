@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Clone</name>
+        <label>Clone?</label>
+        <locationX>1164</locationX>
+        <locationY>374</locationY>
+        <defaultConnector>
+            <targetReference>New_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Is_Clone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Source__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Source</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Record</name>
+        <label>New Record?</label>
+        <locationX>1164</locationX>
+        <locationY>510</locationY>
+        <defaultConnector>
+            <targetReference>Get_Last_Approval_Comment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_New_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Reason_for_Approval</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Status_Requested</name>
+        <label>Status Requested?</label>
+        <locationX>1161</locationX>
+        <locationY>800</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Status_Requested</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.sbaa__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Requested</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sbaa__Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Current_Approval</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>04/27/2026: SS-12886 Removed QuoteTracker Apex Action callouts
+01/29/2026: SS-11539 Quote Approval Cycle Time: The time taken to obtain internal approval.
+11/07/2025: SS-10943 Added stamping of the Target field on the source record of clones
+9/3/2025: SS-11539 Process Approved and Rejected Approval 
+8/20/2025: SS-11502 Stamp Last Approval Comment Bug Fix
+8/20/2025: SS-11502 Stamp Last Approval Comment
+7/8/2025: SS-11276 Populate Reason for Approval</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_IsClone</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCLONE()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ReasonforApproval</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!$Record.sbaa__Rule__r.Name}, &quot;Software Discount&quot;),
+  {!$Record.sbaa__Rule__r.Reason_for_Quote_Approval__c} &amp; &quot;.&quot; &amp;
+  &quot; Seats Purchased: &quot; &amp; TEXT({!$Record.Quote__r.No_of_End_Points_Quote_Score__c}) &amp; &quot;.&quot; &amp;
+  &quot; Additional Software Discount: &quot; &amp; TEXT({!$Record.Quote__r.Total_Software_Discount__c}),
+{!$Record.sbaa__Rule__r.Reason_for_Quote_Approval__c}
+)</expression>
+    </formulas>
+    <interviewLabel>Approval (Advanced Approvals) - Before Insert - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Approval (Advanced Approvals) - After Insert - On Create or Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Last_Approval_Comment</name>
+        <label>Get Last Approval Comment</label>
+        <locationX>1171</locationX>
+        <locationY>656</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Status_Requested</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Quote__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Quote__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>sbaa__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Comments_Length__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sbaa__Approval__c</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Current_Approval</name>
+        <label>Update Current Approval</label>
+        <locationX>1014</locationX>
+        <locationY>795</locationY>
+        <inputAssignments>
+            <field>Last_Approval_Comment__c</field>
+            <value>
+                <elementReference>Get_Last_Approval_Comment.sbaa__CommentsLong__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Reason_for_Approval</name>
+        <label>Update Reason for Approval</label>
+        <locationX>1023</locationX>
+        <locationY>503</locationY>
+        <inputAssignments>
+            <field>Reason_for_Approval__c</field>
+            <value>
+                <elementReference>formula_ReasonforApproval</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>When the approval is cloned, this will stamp the source record with the ID of the clone, so that it can be used for reparenting cloned Approval Snapshots</description>
+        <name>Update_Source</name>
+        <label>Update Source</label>
+        <locationX>1335</locationX>
+        <locationY>369</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Target__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Source__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1046</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Clone</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>sbaa__Approval__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

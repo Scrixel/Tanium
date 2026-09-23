@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapped_Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Map an existing opportunity to this Deal, but first check to ensure the opportunity does not already have an active Deal</inlineHelpText>
+    <label>Mapped Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Deal Registration</relationshipLabel>
+    <relationshipName>Opportunity_DealReg</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

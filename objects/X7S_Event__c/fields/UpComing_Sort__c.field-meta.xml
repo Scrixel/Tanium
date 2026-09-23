@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UpComing_Sort__c</fullName>
+    <formula>IF (NOT(ISBLANK(Start_DateTime__c)), DATETIMEVALUE(Start_DateTime__c), DATETIMEVALUE(All_Day_Start__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Event List Sort by Up Coming Date helper</inlineHelpText>
+    <label>UpComing Sort</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

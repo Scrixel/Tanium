@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>L4_Slack_Groups__c</fullName>
+    <description>Slack Group(s) that should be notified on L4 escalations (comma separated)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The L4 Slack Group is used for Case Escalations.  For example, when a L4 Escalation for this team is raised this group (or groups) will receive a @ slack notification in the corresponding L4 channel.  To specify a single group, simply type in the group name, patchsme or specify multiple groups via comma separated values patchsme,smegroupfoo.</inlineHelpText>
+    <label>L4 Slack Groups</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_Organizer_of_New_Posts_Chatter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Notify the event organizer (as set on the 7S Event record) via Chatter if anyone posts to the 7S Event Chatter feed.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Automatically mention event organizer in chatter posts for their event.</inlineHelpText>
+    <label>Notify Organizer of New Posts</label>
+    <type>Checkbox</type>
+</CustomField>

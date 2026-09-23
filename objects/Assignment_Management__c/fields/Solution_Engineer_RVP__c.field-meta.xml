@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Engineer_RVP__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SS-10949: used by Account and Opportunity - After Insert flows to determine who is the appropriate SE RVP to be assigned based on territory.</description>
+    <label>Solution Engineer RVP</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Assignment_Managements3</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

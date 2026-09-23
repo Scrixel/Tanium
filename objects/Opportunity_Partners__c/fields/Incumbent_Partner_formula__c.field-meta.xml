@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incumbent_Partner_formula__c</fullName>
+    <description>Implemented as a part of the MSP Simplification and FY25 Partner Redesign projects. Jira ticket SS-7727</description>
+    <formula>IF(TEXT(Incumbent_Partner_Override__c) = &apos;TRUE&apos;, TRUE,
+IF(TEXT(Incumbent_Partner_Override__c) = &apos;FALSE&apos;, FALSE,
+IF(Account__c = Opportunity__r.SBQQ__RenewedContract__r.SBQQ__Quote__r.Downstream_Reseller__c, TRUE, 
+IF(Account__c = Opportunity__r.SBQQ__RenewedContract__r.SBQQ__Quote__r.SBQQ__Partner__c, TRUE, 
+FALSE))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>When this box is checked, it indicates that this partner was the partner of record on the quote related to the contract that this opportunity renews.</inlineHelpText>
+    <label>Incumbent Partner (formula)</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

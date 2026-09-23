@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Integration</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Tech_Integration_Compact_Layout</compactLayoutAssignment>
+    <label>Tech Integration</label>
+    <picklistValues>
+        <picklist>Integration_Method__c</picklist>
+        <values>
+            <fullName>API Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset DB%2FSQL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comply REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect %28All Other Sources%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect %28Audit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect %28Events%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect %28Reporting%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect %28Saved Question%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Sensor%2FPackage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy Gallery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endpoint Identity API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforce REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrity Monitor REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Threat Response REST API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Module__c</picklist>
+        <values>
+            <fullName>Asset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benchmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrity Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reveal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Threat Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trends</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

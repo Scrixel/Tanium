@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leader__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The name of the team leader</description>
+    <inlineHelpText>This field is primarily used for looking up TAM within an Escalation Pod.  For example, if TAMA reports to Manager1 and Manager1 reports to Manager2 - you can define Manager2 and the leader and TAM will be within this team.</inlineHelpText>
+    <label>Leader</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>TAM_Teams</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

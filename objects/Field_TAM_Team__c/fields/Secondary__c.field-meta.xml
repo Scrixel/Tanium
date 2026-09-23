@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Secondary</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.Email</field>
+            <operation>contains</operation>
+            <value>tanium.com</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Field_TAM_Teams1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

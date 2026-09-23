@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_PM_Assign_Edit_Roadmap</fullName>
+    <active>true</active>
+    <description>SS-13948 - Only Product Team can edit the PM assigned field.</description>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &quot;Road_Map_Request&quot;,
+
+    ISCHANGED(PM_Assigned__c),
+
+    NOT($Profile.Name = &quot;Tanium System Administrator&quot;),
+    NOT($Permission.DisableValidationRules),
+
+    OR(
+        ISBLANK($User.Department),
+        NOT(CONTAINS($User.Department, &quot;Product&quot;)),
+        $User.Department = &quot;Product Marketing&quot;
+    )
+)</errorConditionFormula>
+    <errorDisplayField>PM_Assigned__c</errorDisplayField>
+    <errorMessage>You do not have permission to edit the PM Assign field. Only Product Team may update this field on Roadmap records.</errorMessage>
+</ValidationRule>

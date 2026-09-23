@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description>Tanium Product</description>
+    <inlineHelpText>Tanium Product</inlineHelpText>
+    <label>Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor</fullName>
+                <default>false</default>
+                <label>Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>IOC</fullName>
+                <default>false</default>
+                <label>IOC</label>
+            </value>
+            <value>
+                <fullName>IR</fullName>
+                <default>false</default>
+                <label>IR</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Protect</fullName>
+                <default>false</default>
+                <label>Protect</label>
+            </value>
+            <value>
+                <fullName>Trace</fullName>
+                <default>false</default>
+                <label>Trace</label>
+            </value>
+            <value>
+                <fullName>Trends</fullName>
+                <default>false</default>
+                <label>Trends</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

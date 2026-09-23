@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <inlineHelpText>Sub-type values are dependent on the Type values.</inlineHelpText>
+    <label>Sub-Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Growth – Partner enablement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Growth – Partner enablement</label>
+            </value>
+            <value>
+                <fullName>Account Growth – Upsell</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Growth – Upsell</label>
+            </value>
+            <value>
+                <fullName>Conduct Executive POC Readout Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conduct Executive POC Readout Meeting</label>
+            </value>
+            <value>
+                <fullName>Configure Core value components</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Configure Core value components</label>
+            </value>
+            <value>
+                <fullName>Create prep docs (Implement)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Create prep docs (Implement)</label>
+            </value>
+            <value>
+                <fullName>Create prep documents (Onboard)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Create prep documents (Onboard)</label>
+            </value>
+            <value>
+                <fullName>Deliver Executive Business Review</fullName>
+                <default>false</default>
+                <label>Deliver Executive Business Review</label>
+            </value>
+            <value>
+                <fullName>Deliver Handoff Docs to Deployment Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deliver Handoff Docs to Deployment Team</label>
+            </value>
+            <value>
+                <fullName>Deliver POC / TRA Prep Document(s)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deliver POC / TRA Prep Document(s)</label>
+            </value>
+            <value>
+                <fullName>Deliver POC / TRA Readout Document(s)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deliver POC / TRA Readout Document(s)</label>
+            </value>
+            <value>
+                <fullName>Deploy Tanium agents (target = 75%)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deploy Tanium agents (target = 75%)</label>
+            </value>
+            <value>
+                <fullName>Document business objectives</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Document business objectives</label>
+            </value>
+            <value>
+                <fullName>Enroll identified Tanium operators in training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Enroll identified Tanium operators in training</label>
+            </value>
+            <value>
+                <fullName>Hold first status meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hold first status meeting</label>
+            </value>
+            <value>
+                <fullName>Hold Handoff Meeting with Deployment Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hold Handoff Meeting with Deployment Team</label>
+            </value>
+            <value>
+                <fullName>Hold implementation kickoff meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hold implementation kickoff meeting</label>
+            </value>
+            <value>
+                <fullName>Hold onboarding kickoff meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hold onboarding kickoff meeting</label>
+            </value>
+            <value>
+                <fullName>Hold POC Kickoff Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hold POC Kickoff Meeting</label>
+            </value>
+            <value>
+                <fullName>Identify Implementation Executive and/or Project Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Identify Implementation Executive and/or Project Manager</label>
+            </value>
+            <value>
+                <fullName>Identify Tanium operators for training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Identify Tanium operators for training</label>
+            </value>
+            <value>
+                <fullName>Install and configure Tanium</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Install and configure Tanium</label>
+            </value>
+            <value>
+                <fullName>Operationalization – &lt;Module&gt;-Use Case</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operationalization – &lt;Module&gt;-Use Case</label>
+            </value>
+            <value>
+                <fullName>Operationalization – Endpoint count validation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operationalization – Endpoint count validation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Receive completed pre-implementation requirements checklist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Receive completed pre-implementation requirements checklist</label>
+            </value>
+            <value>
+                <fullName>Review/Update Business Objectives</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Review/Update Business Objectives</label>
+            </value>
+            <value>
+                <fullName>Run TRA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Run TRA</label>
+            </value>
+            <value>
+                <fullName>Run TRA to benchmark environment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Run TRA to benchmark environment</label>
+            </value>
+            <value>
+                <fullName>Send implementation NPS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Send implementation NPS</label>
+            </value>
+            <value>
+                <fullName>Send Onboarding NPS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Send Onboarding NPS</label>
+            </value>
+            <value>
+                <fullName>Sustainability – Building Relationships</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability – Building Relationships</label>
+            </value>
+            <value>
+                <fullName>Sustainability – Center of excellence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability – Center of excellence</label>
+            </value>
+            <value>
+                <fullName>Sustainability – Champion growth</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability – Champion growth</label>
+            </value>
+            <value>
+                <fullName>Sustainability - Customer Enablement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability - Customer Enablement</label>
+            </value>
+            <value>
+                <fullName>Sustainability - Onsite Visit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability - Onsite Visit</label>
+            </value>
+            <value>
+                <fullName>Technical – Information Gathering</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical – Information Gathering</label>
+            </value>
+            <value>
+                <fullName>Technical - Risk Identification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical - Risk Identification</label>
+            </value>
+            <value>
+                <fullName>Technical – SME review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical – SME review</label>
+            </value>
+            <value>
+                <fullName>Validate Business Objectives</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Validate Business Objectives</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Mature</controllingFieldValue>
+            <valueName>Deliver Executive Business Review</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

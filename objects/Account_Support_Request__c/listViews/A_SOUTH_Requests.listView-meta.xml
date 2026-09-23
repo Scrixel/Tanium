@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_SOUTH_Requests</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>Status__c</columns>
+    <columns>POD__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>TAM_Account_Owner__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Meeting_Type__c</columns>
+    <columns>Date_of_Meeting__c</columns>
+    <columns>Assigned_TAM__c</columns>
+    <columns>Assigned_TAM2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>0120e0000005Psm,Account_Support_Request__c.TAM_Request,Account_Support_Request__c.ESO_Support_Request</value>
+    </filters>
+    <filters>
+        <field>POD__c</field>
+        <operation>contains</operation>
+        <value>Asia South</value>
+    </filters>
+    <label>A.SOUTH Requests</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

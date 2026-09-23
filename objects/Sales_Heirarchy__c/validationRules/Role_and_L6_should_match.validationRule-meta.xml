@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role_and_L6_should_match</fullName>
+    <active>true</active>
+    <description>The role name and L6 value should match each other</description>
+    <errorConditionFormula>AND (
+    NOT($Permission.DisableValidationRules),
+    Role__c != Level_6__c
+)</errorConditionFormula>
+    <errorMessage>The role name and L6 value should match each other. Please make sure that they are the same and that they correspond to the name of a user role.</errorMessage>
+</ValidationRule>

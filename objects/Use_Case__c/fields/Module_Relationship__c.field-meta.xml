@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Module_Relationship__c</fullName>
+    <inlineHelpText>Please choose the module that this use case most closely relates to or relies upon, if more than one, please choose the primary.</inlineHelpText>
+    <label>Module Relationship</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>Benchmark</fullName>
+                <default>false</default>
+                <label>Benchmark</label>
+            </value>
+            <value>
+                <fullName>Certificate Manager</fullName>
+                <default>false</default>
+                <label>Certificate Manager</label>
+            </value>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Deploy</label>
+            </value>
+            <value>
+                <fullName>DEX</fullName>
+                <default>false</default>
+                <label>DEX</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Enforce</fullName>
+                <default>false</default>
+                <label>Enforce</label>
+            </value>
+            <value>
+                <fullName>Engage</fullName>
+                <default>false</default>
+                <label>Engage</label>
+            </value>
+            <value>
+                <fullName>Impact</fullName>
+                <default>false</default>
+                <label>Impact</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor</fullName>
+                <default>false</default>
+                <label>Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Provision</fullName>
+                <default>false</default>
+                <label>Provision</label>
+            </value>
+            <value>
+                <fullName>Reveal</fullName>
+                <default>false</default>
+                <label>Reveal</label>
+            </value>
+            <value>
+                <fullName>SBOM</fullName>
+                <default>false</default>
+                <label>SBOM</label>
+            </value>
+            <value>
+                <fullName>Screenmeet</fullName>
+                <default>false</default>
+                <label>Screenmeet</label>
+            </value>
+            <value>
+                <fullName>THR</fullName>
+                <default>false</default>
+                <label>THR</label>
+            </value>
+            <value>
+                <fullName>Connect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Connect</label>
+            </value>
+            <value>
+                <fullName>Core (Interact)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core (Interact)</label>
+            </value>
+            <value>
+                <fullName>Core Platform</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Interact + Connect)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Interact + Connect)</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Interact)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Interact)</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Platform &amp; Connect)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Platform &amp; Connect)</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Platform)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Platform)</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Trends / Reporting)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Trends / Reporting)</label>
+            </value>
+            <value>
+                <fullName>Core Platform (Trends)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core Platform (Trends)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

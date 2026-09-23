@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Companion_Sales_Plan_KPI__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The companion KPI to this one. If this record is of type Quota, then this link will be of type OTV</inlineHelpText>
+    <label>Companion Sales Plan KPI</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Sales_Plan__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Sales_Plan__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.KPI_Label__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.KPI_Label__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Sales_Plan_KPI__c</referenceTo>
+    <relationshipLabel>Sales Plan KPIs</relationshipLabel>
+    <relationshipName>Sales_Plan_KPIs</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

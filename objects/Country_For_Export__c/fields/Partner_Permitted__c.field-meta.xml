@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Permitted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>The value of this field should align to the Tanium Permitted Countries Policy document which is owned and maintained by the Legal team.
+
+https://tanium.sharepoint.com/:b:/r/sites/EmpHub-Policy%20Central/Shared%20Documents/Protecting%20Tanium%20Information%20%26%20IP/Permitted%20Countries%20Policy.pdf?csf=1&amp;web=1&amp;e=cLJVjp</description>
+    <inlineHelpText>Indirect sales via partners are permitted. For purposes of this category, the country designation is based on the country where the end-user customer’s headquarters is located, not the location of the partner’s headquarters. For countries that are Partner Permitted but not Tanium Direct Sales Permitted, Tanium-provided in- country support must be pre-approved by Tanium’s Chief Customer Officer</inlineHelpText>
+    <label>Partner Permitted</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

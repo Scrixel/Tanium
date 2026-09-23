@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_User_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>End User Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Server Deployment Subscriptions (End User Account)</relationshipLabel>
+    <relationshipName>Server_Deployment_Subscriptions1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

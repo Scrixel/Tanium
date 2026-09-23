@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bundle_Type__c</fullName>
+    <description>Compared to the Bundle Type on the Quote Line.  Use in Price Rule to assign MSP Discount.</description>
+    <label>Bundle Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TaaS</fullName>
+                <default>false</default>
+                <label>TaaS</label>
+            </value>
+            <value>
+                <fullName>On Premise</fullName>
+                <default>false</default>
+                <label>On Premise</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

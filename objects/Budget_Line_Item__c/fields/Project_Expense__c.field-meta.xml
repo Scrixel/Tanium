@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Expense__c</fullName>
+    <label>Project Expense</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2100 Powell - Day 2 Construction</fullName>
+                <default>false</default>
+                <label>2100 Powell - Day 2 Construction</label>
+            </value>
+            <value>
+                <fullName>Annual SKO</fullName>
+                <default>false</default>
+                <label>Annual SKO</label>
+            </value>
+            <value>
+                <fullName>Bathesda MD Buildout</fullName>
+                <default>false</default>
+                <label>Bathesda MD Buildout</label>
+            </value>
+            <value>
+                <fullName>Category Design</fullName>
+                <default>false</default>
+                <label>Category Design</label>
+            </value>
+            <value>
+                <fullName>G&amp;A</fullName>
+                <default>false</default>
+                <label>G&amp;A</label>
+            </value>
+            <value>
+                <fullName>HQ - 2100 Buildout</fullName>
+                <default>false</default>
+                <label>HQ - 2100 Buildout</label>
+            </value>
+            <value>
+                <fullName>IPO Costs</fullName>
+                <default>false</default>
+                <label>IPO Costs</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>New Hire Training Week</fullName>
+                <default>false</default>
+                <label>New Hire Training Week</label>
+            </value>
+            <value>
+                <fullName>New York Buildout</fullName>
+                <default>false</default>
+                <label>New York Buildout</label>
+            </value>
+            <value>
+                <fullName>North Carolina Office</fullName>
+                <default>false</default>
+                <label>North Carolina Office</label>
+            </value>
+            <value>
+                <fullName>Plano TX Buildout</fullName>
+                <default>false</default>
+                <label>Plano TX Buildout</label>
+            </value>
+            <value>
+                <fullName>POD Week</fullName>
+                <default>false</default>
+                <label>POD Week</label>
+            </value>
+            <value>
+                <fullName>Presidents Club</fullName>
+                <default>false</default>
+                <label>Presidents Club</label>
+            </value>
+            <value>
+                <fullName>Quarterly DEV Week</fullName>
+                <default>false</default>
+                <label>Quarterly DEV Week</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Reading UK Buildout</fullName>
+                <default>false</default>
+                <label>Reading UK Buildout</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>TAM</fullName>
+                <default>false</default>
+                <label>TAM</label>
+            </value>
+            <value>
+                <fullName>TAM Week - quarterly</fullName>
+                <default>false</default>
+                <label>TAM Week - quarterly</label>
+            </value>
+            <value>
+                <fullName>Tanium User Conference</fullName>
+                <default>false</default>
+                <label>Tanium User Conference</label>
+            </value>
+            <value>
+                <fullName>Tokyo Buildout</fullName>
+                <default>false</default>
+                <label>Tokyo Buildout</label>
+            </value>
+            <value>
+                <fullName>VP Team Offsite</fullName>
+                <default>false</default>
+                <label>VP Team Offsite</label>
+            </value>
+            <value>
+                <fullName>SAP-SF Implementation Project</fullName>
+                <default>false</default>
+                <label>SAP-SF Implementation Project</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

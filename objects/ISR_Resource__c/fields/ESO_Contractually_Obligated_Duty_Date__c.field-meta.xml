@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESO_Contractually_Obligated_Duty_Date__c</fullName>
+    <inlineHelpText>Date that we are contractually obligated to have the ESO resource report for duty as listed in the contract</inlineHelpText>
+    <label>ESO Contractually Obligated Duty Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_Deployment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup field to the Server Deployment object (records)</description>
+    <inlineHelpText>Lookup field to the Server Deployment object (records).</inlineHelpText>
+    <label>Server Deployment</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The Server Deployment selected does not meet filter criteria. The Server Deployment must be active, be on the same Account as this POC and can not be in POC/Pilot</errorMessage>
+        <filterItems>
+            <field>Server_Deployment__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Server_Deployment__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Server_Deployment__c.Type__c</field>
+            <operation>notEqual</operation>
+            <value>POC/Pilot</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Server_Deployment__c</referenceTo>
+    <relationshipLabel>POC Requests</relationshipLabel>
+    <relationshipName>POC_Requests</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

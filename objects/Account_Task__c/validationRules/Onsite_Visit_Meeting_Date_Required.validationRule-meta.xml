@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Visit_Meeting_Date_Required</fullName>
+    <active>true</active>
+    <description>Upon completing Onsite Visits, the Meeting Date is required (if performed). Please specify the date the meeting occurred.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Sub_Type__c,&quot;Sustainability - Onsite Visit&quot;)
+&amp;&amp;
+ISPICKVAL(Status__c,&quot;Completed&quot;)
+&amp;&amp;
+!ISPICKVAL(Meeting_Type__c,&quot;Not Performed&quot;)
+&amp;&amp;
+!ISPICKVAL(Meeting_Type__c,&quot;&quot;)
+&amp;&amp;
+ISBLANK(Meeting_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Meeting_Date__c</errorDisplayField>
+    <errorMessage>Upon completing Onsite Visits, the Meeting Date is required (if performed). Please specify the date the meeting occurred.</errorMessage>
+</ValidationRule>

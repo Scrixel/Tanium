@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Status__c</fullName>
+    <description>Whether the language on this record is the approved language. Source versions are Approved once they pass the Activate action. A quote instance inherits Approved because its body is a copy of the source. Editing the body of a quote instance makes it a Custom Quote Instance and sets this to Not Approved, because the language on the quote is no longer the language that was approved.</description>
+    <inlineHelpText>Set by automation. A term whose body has been customized for this deal reads Not Approved until it is approved.</inlineHelpText>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Approved</fullName>
+                <default>true</default>
+                <label>Not Approved</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

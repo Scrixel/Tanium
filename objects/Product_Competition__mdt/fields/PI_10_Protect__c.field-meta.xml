@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PI_10_Protect__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Protect</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Competitor</fullName>
+                <default>true</default>
+                <label>No Competitor</label>
+            </value>
+            <value>
+                <fullName>BigFix</fullName>
+                <default>false</default>
+                <label>BigFix</label>
+            </value>
+            <value>
+                <fullName>Bromium</fullName>
+                <default>false</default>
+                <label>Bromium</label>
+            </value>
+            <value>
+                <fullName>Carbon Black</fullName>
+                <default>false</default>
+                <label>Carbon Black</label>
+            </value>
+            <value>
+                <fullName>Countertack</fullName>
+                <default>false</default>
+                <label>Countertack</label>
+            </value>
+            <value>
+                <fullName>CrowdStrike</fullName>
+                <default>false</default>
+                <label>CrowdStrike</label>
+            </value>
+            <value>
+                <fullName>Cybereason</fullName>
+                <default>false</default>
+                <label>Cybereason</label>
+            </value>
+            <value>
+                <fullName>Cylance</fullName>
+                <default>false</default>
+                <label>Cylance</label>
+            </value>
+            <value>
+                <fullName>Darktrace</fullName>
+                <default>false</default>
+                <label>Darktrace</label>
+            </value>
+            <value>
+                <fullName>Deep Instinct</fullName>
+                <default>false</default>
+                <label>Deep Instinct</label>
+            </value>
+            <value>
+                <fullName>Hexis</fullName>
+                <default>false</default>
+                <label>Hexis</label>
+            </value>
+            <value>
+                <fullName>McAfee</fullName>
+                <default>false</default>
+                <label>McAfee</label>
+            </value>
+            <value>
+                <fullName>McAfee (Active Response)</fullName>
+                <default>false</default>
+                <label>McAfee (Active Response)</label>
+            </value>
+            <value>
+                <fullName>SentinelOne</fullName>
+                <default>false</default>
+                <label>SentinelOne</label>
+            </value>
+            <value>
+                <fullName>Ziften</fullName>
+                <default>false</default>
+                <label>Ziften</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_Events</fullName>
+    <columns>NAME</columns>
+    <columns>Campaign_Sub_Source__c</columns>
+    <columns>Member_Status_Label__c</columns>
+    <columns>IsDefault__c</columns>
+    <columns>HasResponded__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Sub_Source__c</field>
+        <operation>equals</operation>
+        <value>3rd Party Event</value>
+    </filters>
+    <label>3rd Party Events</label>
+</ListView>

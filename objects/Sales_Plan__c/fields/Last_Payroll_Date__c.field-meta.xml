@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Payroll_Date__c</fullName>
+    <description>Used in Xactly/SFDC integration. Populated by Boomi from SuccessFactor.
+This date is different from the termination date on the SFDC user record. Termination Date is the last working day which is separate from the last payroll date. Termination Date on the SFDC user record will be used to terminate Xactly access and Last Payroll Date will be used to populate the Termination Date in Xactly.</description>
+    <inlineHelpText>This field is populated from SuccessFactor by Boomi. This is not a user updated field.</inlineHelpText>
+    <label>Last Payroll Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Deployment_CSAT</fullName>
+    <active>true</active>
+    <label>Post Deployment CSAT</label>
+    <picklistValues>
+        <picklist>Case_2_Overall_Support__c</picklist>
+        <values>
+            <fullName>Extremely satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not at all satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not so satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>普通</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に満足</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_3_Speed_of_Resolution__c</picklist>
+        <values>
+            <fullName>Extremely satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not at all satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not so satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>普通</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に満足</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_4_Technical_Knowledge__c</picklist>
+        <values>
+            <fullName>Extremely satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not at all satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not so satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>普通</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に満足</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_5_Issue_Resolved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>いいえ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>はい</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment_Verification_Response__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ESO_2_Needs__c</picklist>
+        <values>
+            <fullName>Ease of contracting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faster Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relational_4_Value_Satisfaction__c</picklist>
+        <values>
+            <fullName>Extremely satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not at all satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not so satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>あまり満足していない</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>とても満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>まったく満足していない</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>やや満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>普通</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に不満</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に満足</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>非常に満足しています</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relational_6_Authority__c</picklist>
+        <values>
+            <fullName>I did not authorize or influence the decision to purchase Tanium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I directly influenced the decision to purchase Tanium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I purchased Tanium for my organization or company %28i%2Ee%2E%2C I authorized the purchase%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taniumの購入の決定に直接影響を与える立場にある</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taniumの購入を決定する権限や購入への影響力はない</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taniumの購入を決定する権限や購入への影響力はない %28</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taniumの購入を決定をする権限がある</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>私は%E3%80%81Tanium を購入する決定に直接影響を与える立場にあります%E3%80%82</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>私は%E3%80%81Tanium を購入する決定影響を与える立場にありません%E3%80%82</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>私は私の組織または会社のためにTaniumを購入決定をする権限があります%E3%80%82</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

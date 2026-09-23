@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seats_Intended__c</fullName>
+    <defaultValue>(0)</defaultValue>
+    <description>Number of seats that the customer intends to deploy.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of seats that the customer intends to deploy.</inlineHelpText>
+    <label>Seats Intended</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

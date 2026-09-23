@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Case_to_Triage_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Toggle on or off the Case Management - New Case Send Case to Triage Step in process builder.</description>
+    <label>Send Case to Triage Override</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

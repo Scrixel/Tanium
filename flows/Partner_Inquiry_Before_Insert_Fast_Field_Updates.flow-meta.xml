@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Manager_Value</name>
+        <label>Assign Manager Value</label>
+        <locationX>844</locationX>
+        <locationY>499</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Owner_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner:User.ManagerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>SS- 522: Update Partner Inquiry  Owner and PDD to &quot;Austin Boyington&quot;.</description>
+        <name>Update_Partner_Inquiry_Owner_and_PDD_CAD</name>
+        <label>Update Partner Inquiry Owner and PDD/CAD</label>
+        <locationX>843</locationX>
+        <locationY>331</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Label.Partner_Inquiry_Owner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PDD_CAD__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Label.Partner_Inquiry_PDD_CAD</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Owner_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner:User.ManagerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_Owner_Changed</name>
+        <label>Is Owner Changed?</label>
+        <locationX>572</locationX>
+        <locationY>500</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_OwnerChanged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Manager_Value</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is this a new record?</description>
+        <name>IsNew1</name>
+        <label>IsNew?</label>
+        <locationX>572</locationX>
+        <locationY>333</locationY>
+        <defaultConnector>
+            <targetReference>Is_Owner_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_IsNew</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Partner_Inquiry_Owner_and_PDD_CAD</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>04/09/26 AT: Updated Flow to include Owner ISCHANGED Logic from After Save flow
+Performs updates on the Partner Inquiry object before saving to the database.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_ApprovalAssignment</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(OR(TEXT({!$Record.HQ_Country__c}) =&quot;United States&quot;,
+TEXT({!$Record.HQ_Country__c}) =&quot;Canada&quot;),
+{!$Record.Region__c} =&quot;AMER&quot;,
+PICKLISTCOUNT({!$Record.Business_Motion__c}) +1 &gt;= 1,
+ INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;)),&quot;2&quot;,
+IF(AND(OR(TEXT({!$Record.HQ_Country__c}) =&quot;United States&quot;,
+TEXT({!$Record.HQ_Country__c}) =&quot;Canada&quot;),
+NOT(ISNULL({!$Record.Business_Motion__c})),
+{!$Record.Region__c} =&quot;AMER&quot;,
+NOT(INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;))),&quot;2.5&quot;,
+IF(INCLUDES ({!$Record.Business_Motion__c},&quot;Build&quot;),&quot;12&quot;,
+IF({!$Record.Region__c} =&quot;APAC North&quot;,&quot;11&quot;,
+IF({!$Record.Region__c} =&quot;APAC South&quot;,&quot;10&quot;,
+IF({!$Record.Region__c} =&quot;LATAM&quot;,&quot;3&quot;,
+IF(AND({!$Record.Region__c} =&quot;EMEA South&quot;,
+   INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;)),&quot;9&quot;,
+IF(AND({!$Record.Region__c} =&quot;EMEA Central Europe&quot;,
+   INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;)),&quot;8&quot;,
+IF(AND(CONTAINS({!$Record.Region__c},&quot;EMEA North&quot;),
+   INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;)),&quot;7&quot;,
+IF(AND({!$Record.Region__c} =&quot;EMEA South&quot;,
+   INCLUDES({!$Record.Business_Motion__c},&quot;Resell&quot;)),&quot;6&quot;,
+IF(AND({!$Record.Region__c} =&quot;EMEA Central Europe&quot;,
+   INCLUDES({!$Record.Business_Motion__c},&quot;Resell&quot;)),&quot;5&quot;,
+IF(AND(CONTAINS({!$Record.Region__c},&quot;EMEA North&quot;),
+   INCLUDES({!$Record.Business_Motion__c},&quot;Resell&quot;)),&quot;4&quot;,
+
+IF(AND(OR(TEXT({!$Record.HQ_Country__c}) =&quot;United States&quot;,
+       TEXT({!$Record.HQ_Country__c}) =&quot;Canada&quot;),
+{!$Record.Region__c} =&quot;AMER&quot;,
+PICKLISTCOUNT({!$Record.Business_Motion__c}) +1 = 1,
+   INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;)),&quot;1&quot;,&quot;13&quot;)))))))))))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IncludesManagedServices</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(INCLUDES({!$Record.Business_Motion__c},&quot;Managed Services&quot;),TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Partner Inquiry - Before Insert - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Partner Inquiry - Before Insert - Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>454</locationX>
+        <locationY>23</locationY>
+        <connector>
+            <targetReference>IsNew1</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Partner_Inquiry__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

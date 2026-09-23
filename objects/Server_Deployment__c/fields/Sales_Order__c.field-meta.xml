@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Order__c</fullName>
+    <description>Most recent Closed Won Opportunity&apos;s Sales Order, set via the Server Deployment Link Subscriptions flow.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Most recent Closed Won Opportunity&apos;s Sales Order, set via the Server Deployment Link Subscriptions flow.</inlineHelpText>
+    <label>Sales Order</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

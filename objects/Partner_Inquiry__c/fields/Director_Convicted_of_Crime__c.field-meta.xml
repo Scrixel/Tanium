@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Director_Convicted_of_Crime__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Director(s) convicted/guilty of crime</description>
+    <inlineHelpText>Has your business, or any directors or executive officers of your business, been found guilty or convicted of a violation of any criminal laws?</inlineHelpText>
+    <label>Director(s) convicted/guilty of crime</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

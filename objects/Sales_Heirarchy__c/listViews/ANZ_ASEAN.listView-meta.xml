@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ANZ_ASEAN</fullName>
+    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Role__c</columns>
+    <columns>Level_1__c</columns>
+    <columns>Level_2__c</columns>
+    <columns>Level_3__c</columns>
+    <columns>Level_4__c</columns>
+    <columns>Level_5__c</columns>
+    <columns>Level_6__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Role_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Level_2__c</field>
+        <operation>equals</operation>
+        <value>South Asia</value>
+    </filters>
+    <filters>
+        <field>Level_3__c</field>
+        <operation>equals</operation>
+        <value>South Asia</value>
+    </filters>
+    <filters>
+        <field>Level_4__c</field>
+        <operation>equals</operation>
+        <value>ANZ,ANZ: Emerging Enterprises,ANZ: Enterprise,ANZ: Federal,ASEAN,South Asia</value>
+    </filters>
+    <label>ANZ, ASEAN</label>
+</ListView>

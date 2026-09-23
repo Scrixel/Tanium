@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EBC_Background_Information__c</fullName>
+    <inlineHelpText>Have we tried to get into the account before? If we failed, why? 
+Customer: Are they fully using Tanium? If not, why not?</inlineHelpText>
+    <label>Background Information</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

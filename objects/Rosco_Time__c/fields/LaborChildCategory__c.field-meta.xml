@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LaborChildCategory__c</fullName>
+    <description>Tertiary/Grandchild category for Time Labor (initially only used by Presales time logging)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tertiary/Grandchild category for Time Labor (initially only used by Presales time logging)</inlineHelpText>
+    <label>LaborChildCategory</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

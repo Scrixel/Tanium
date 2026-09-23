@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identified_NonExec_Attendee_Count__c</fullName>
+    <description>Count of Attendee record with Types Not Equal to ‘Other’ and &apos;Tanium Executive Requested&apos;.</description>
+    <label>Identified NonExec Attendee Count</label>
+    <summaryFilterItems>
+        <field>ISR_Customer_Attendee__c.Attendee_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Tanium Executive Requested</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>ISR_Customer_Attendee__c.Attendee_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Other</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ISR_Customer_Attendee__c.Internal_Support_Request_ISR__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

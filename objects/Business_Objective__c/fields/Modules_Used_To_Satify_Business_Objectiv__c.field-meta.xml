@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modules_Used_To_Satify_Business_Objectiv__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <label>DEPRECATED - Modules Used To Meet Obj</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>Benchmark</fullName>
+                <default>false</default>
+                <label>Benchmark</label>
+            </value>
+            <value>
+                <fullName>Certificate Manager</fullName>
+                <default>false</default>
+                <label>Certificate Manager</label>
+            </value>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Core Platform</fullName>
+                <default>false</default>
+                <label>Core Platform</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Deploy</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Enforce</fullName>
+                <default>false</default>
+                <label>Enforce</label>
+            </value>
+            <value>
+                <fullName>Engage</fullName>
+                <default>false</default>
+                <label>Engage</label>
+            </value>
+            <value>
+                <fullName>Impact</fullName>
+                <default>false</default>
+                <label>Impact</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Integrity Monitor</fullName>
+                <default>false</default>
+                <label>Integrity Monitor</label>
+            </value>
+            <value>
+                <fullName>Investigate</fullName>
+                <default>false</default>
+                <label>Investigate</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Provision</fullName>
+                <default>false</default>
+                <label>Provision</label>
+            </value>
+            <value>
+                <fullName>Reveal</fullName>
+                <default>false</default>
+                <label>Reveal</label>
+            </value>
+            <value>
+                <fullName>SBOM</fullName>
+                <default>false</default>
+                <label>SBOM</label>
+            </value>
+            <value>
+                <fullName>ScreenMeet</fullName>
+                <default>false</default>
+                <label>ScreenMeet</label>
+            </value>
+            <value>
+                <fullName>Threat Response</fullName>
+                <default>false</default>
+                <label>Threat Response</label>
+            </value>
+            <value>
+                <fullName>Asset SBOM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Asset SBOM</label>
+            </value>
+            <value>
+                <fullName>Risk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Risk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

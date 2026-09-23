@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x90_day_limit_to_New_Date</fullName>
+    <active>false</active>
+    <description>90 day limit to New Date.
+When User requests an extension to Training End Date by manually filling out New Training End Date, it cannot be more than 90 Days extension
+---
+Jira Ticket SS-1049 - Deactivate VR</description>
+    <errorConditionFormula>AND
+(
+$Profile.Name &lt;&gt;&apos;System Administrator&apos;,
+$Profile.Name &lt;&gt;&apos;Tanium System Administrator&apos;,
+$User.Id &lt;&gt; &quot;0050e000006z7Ef&quot;,
+New_Training_End_Date__c - Training_End_Date__c &gt; 90
+)
+/*
+AND
+(
+
+$Profile.Name &lt;&gt;&apos;Tanium System Administrator&apos;,
+$User.Id &lt;&gt; &quot;0050e000006z7Ef&quot;,
+New_Training_End_Date__c - Training_End_Date__c &gt; 90
+)*/</errorConditionFormula>
+    <errorMessage>New Training End Date cannot be beyond 90 days from Current Training End Date</errorMessage>
+</ValidationRule>

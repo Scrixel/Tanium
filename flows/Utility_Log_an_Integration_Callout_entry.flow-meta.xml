@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Creates an Integration Callout record, which can be used for tracking scheduled flow activity
+Inputs:
+- Flow Name (Text(255))
+- Payload (Text(32768))
+- Response (Text(32768))</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_CalloutName</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Flow.CurrentDateTime}) &amp; &quot; Flow:&quot; &amp; {!input_textFlowName}</expression>
+    </formulas>
+    <interviewLabel>Utility - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Utility - Log an Integration Callout entry</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Integration_Callout_Record</name>
+        <label>Create Integration Callout Record</label>
+        <locationX>273</locationX>
+        <locationY>242</locationY>
+        <inputAssignments>
+            <field>Endpoint__c</field>
+            <value>
+                <elementReference>input_textFlowName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>formula_CalloutName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payload__c</field>
+            <value>
+                <elementReference>input_textPayload</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Integration_Callout__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>147</locationX>
+        <locationY>75</locationY>
+        <connector>
+            <targetReference>Create_Integration_Callout_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>input_textFlowName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>input_textPayload</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>input_textResponse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

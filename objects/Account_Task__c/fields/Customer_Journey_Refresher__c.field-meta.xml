@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Journey_Refresher__c</fullName>
+    <description>SS-2205 - Account Task Object Layout Changes | Links to direct the user to a SharePoint Page if they need help on Customer Journey Account Tasks as per Type</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Type__c , &quot;Educate&quot;), &quot;New to Educate Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Educate.aspx&quot;, &quot;Customer Journey Educate Stage page.&quot; ,&quot;_blank&quot;), 
+
+IF(ISPICKVAL( Type__c , &quot;Evaluate&quot;), &quot;New to Evaluate Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Evaluate.aspx&quot;, &quot;Customer Journey Evaluate Stage page.&quot; ,&quot;_blank&quot;), 
+
+IF(ISPICKVAL( Type__c , &quot;Buy&quot;), &quot;New to Buy Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Buy.aspx&quot;, &quot;Customer Journey Buy Stage page.&quot; ,&quot;_blank&quot;),
+
+IF(ISPICKVAL( Type__c , &quot;Onboard&quot;), &quot;New to Onboard Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Onboard.aspx&quot;, &quot;Customer Journey Onboard Stage page.&quot; ,&quot;_blank&quot;), 
+
+IF(ISPICKVAL( Type__c , &quot;Implement&quot;) , &quot;New to Implement Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Implement.aspx&quot;, &quot;Customer Journey Implement Stage page.&quot; ,&quot;_blank&quot;), 
+
+IF(ISPICKVAL( Type__c , &quot;Mature&quot;) , &quot;New to Mature Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Mature.aspx&quot;, &quot;Customer Journey Mature Stage page.&quot; ,&quot;_blank&quot;),
+
+IF(ISPICKVAL( Type__c , &quot;Advocate&quot;) , &quot;New to Advocate Account Tasks? Need a refresher?  Visit the &quot; + HYPERLINK(&quot;https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Advocate.aspx&quot;, &quot;Customer Journey Advocate Stage page.&quot; ,&quot;_blank&quot;),
+
+
+NULL)))))))</formula>
+    <inlineHelpText>Use this link to visit the Customer Journey SharePoint Page if you need help with this task.
+
+Realize: https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Realize.aspx
+
+Educate: https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Educate.aspx
+
+Evaluate: https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Evaluate.aspx
+
+Buy: https://tanium.sharepoint.com/sites/GTMHub-Customer%20Journey/SitePages/Buy.aspx</inlineHelpText>
+    <label>Customer Journey Refresher</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

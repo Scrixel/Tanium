@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Type__c</fullName>
+    <label>Partner/Vendor Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Technology Vendor</fullName>
+                <default>false</default>
+                <label>Technology Vendor</label>
+            </value>
+            <value>
+                <fullName>Infrastructure Vendor</fullName>
+                <default>false</default>
+                <label>Infrastructure Vendor</label>
+            </value>
+            <value>
+                <fullName>Preferred Cloud Provider</fullName>
+                <default>false</default>
+                <label>Preferred Cloud Provider</label>
+            </value>
+            <value>
+                <fullName>Preferred Reseller</fullName>
+                <default>false</default>
+                <label>Preferred Reseller</label>
+            </value>
+            <value>
+                <fullName>Client Financial Auditor</fullName>
+                <default>false</default>
+                <label>Client Financial Auditor</label>
+            </value>
+            <value>
+                <fullName>Managed Service Provider</fullName>
+                <default>false</default>
+                <label>Managed Service Provider</label>
+            </value>
+            <value>
+                <fullName>Other Partners</fullName>
+                <default>false</default>
+                <label>Other Partners</label>
+            </value>
+            <value>
+                <fullName>Advisory / System Integrator</fullName>
+                <default>false</default>
+                <label>Advisory / System Integrator</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

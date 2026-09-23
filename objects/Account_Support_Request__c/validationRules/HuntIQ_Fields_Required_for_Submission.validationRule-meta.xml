@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HuntIQ_Fields_Required_for_Submission</fullName>
+    <active>true</active>
+    <description>SS-11358: Validation Rule to check for any missing fields for HuntIQ ISR.</description>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &apos;HuntIQ_Threat_Hunter_Service_Request&apos;,
+    OR( 
+         ISBLANK(Threat_Hunter_Justification__c),
+         Customer_Owns_Threat_Response__c = False,
+         Customer_Will_Provision__c = False
+       ),
+    ISPICKVAL( Status__c , &quot;Draft&quot;),
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>These fields are required in order to submit for approval, Threat Hunter Justification, Customer owns Threat Response, Customer Will Provision HoK.</errorMessage>
+</ValidationRule>

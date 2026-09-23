@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pod_Number_of_Days_Since_Next_Steps__c</fullName>
+    <description>The number of days after the last next step (acct or oppty) when next steps will nudge out at.</description>
+    <externalId>false</externalId>
+    <label>Pod Number of Days Since Next Steps</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

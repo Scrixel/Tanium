@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Maps an external system&apos;s country name or state/province code to the matching Salesforce picklist value when there&apos;s no direct match.</description>
+    <label>StateCountryMapping</label>
+    <pluralLabel>StateCountryMappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

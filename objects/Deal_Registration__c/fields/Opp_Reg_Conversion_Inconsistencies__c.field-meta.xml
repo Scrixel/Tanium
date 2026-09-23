@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Reg_Conversion_Inconsistencies__c</fullName>
+    <description>2020-12-17 Case 60238 changes for integrated new/extension approvals.
+2021-02-24 Missing Opp Reg Owner Levels causes Approval Assignment to be blank INC0123192</description>
+    <externalId>false</externalId>
+    <formula>IF(Opp_Reg_Approval_Assignment__c = 0, &quot;Please contact Channel Ops, Deal Registration Approval Assignment is missing. &quot;,&quot;&quot;) &amp;
+IF(ISBLANK(Account__c), &quot;End Customer Account is blank. &quot;,&quot;&quot;) &amp;
+IF(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Pending&quot;),&quot;&quot;,&quot;Status must be Pending or Extension Pending. &quot;)&amp;
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Pending&quot;),Opp_Reg_Extension_Count__c&lt;&gt;0),&quot;Extension Count must be 0 for new Deal Registration approval. &quot;,&quot;&quot;)&amp;
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Pending&quot;),or_New_Opp_Reg__c=FALSE),&quot;New Deal Reg? must be selected for new Deal Registration approval. &quot;,&quot;&quot;)&amp;
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Pending&quot;),NOT(ISPICKVAL(or_Opp_Reg_Approval_Flow_Status__c,&quot;Approvals not started&quot;))),&quot;Approval Flow Status must be &apos;Approvals not started.&apos; &quot;,&quot;&quot;)&amp;
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Pending&quot;),or_Create_Opportunity_upon_Approval__c=FALSE,ISBLANK(Mapped_Opportunity__c)),&quot;Enter a Mapped Opportunity or select Create Opportunity Upon Approval.&quot;,&quot;&quot;) &amp;
+IF(OR(ISPICKVAL(Mapped_Opportunity__r.StageName,&quot;Closed Won&quot;),ISPICKVAL(Mapped_Opportunity__r.StageName,&quot;Failed&quot;), ISPICKVAL(Mapped_Opportunity__r.StageName,&quot;Failed Renewal&quot;)), &quot;Map an open oppty to submit for approval. &quot;, &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Field needs to be blank to Submit for Approval</inlineHelpText>
+    <label>Missing for Approval</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

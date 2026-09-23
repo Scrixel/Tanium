@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Lead_Stage_Changed</name>
+        <label>Lead Stage Changed?</label>
+        <locationX>653</locationX>
+        <locationY>517</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Contact_Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Contact_Stage__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Trigger_Stage_Manager_Sub_Flo</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>04/22/26: SS-12938  Updates to stage manager subflow trigger
+Migrated from Lead - After Insert - On Create or Update
+03/24/26: SS-11917 Removed the scheduled path that was sending a notification to Groove
+1/13/26: SS-12262 Contact Stage Date Management and Sub-Flow Triggering Management.
+10/07/25: SS-11853 - Remove scheduled action to update the MQL Tier on Campaign Member
+06/20/25: SS-11067 - Added real time notification to Groove for Tier 1 leads since Groove pulls Salesforce data every three hours
+06/17/25: Changed the instantiation of the MQL Tier subflow to a scheduled action to try to alleviate CPU timeouts coming from Marketo and updated the API version
+1/10/24: Updated Entry Criteria to fire on Record Type of Lead and removed FCI Ready update (moved to Before Insert flow)
+6/26/23: Added Entry Criteria for NOT({!$Permission.DisableFlows})
+11/17/22: Added Decision and Subflow to auto-populate related Campaign Member&apos;s MQL Tier</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_FCIReady</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.mkto71_Lead_Score__c}&gt;= 100,TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>Formula_IsMQLTierBlank</name>
+        <dataType>String</dataType>
+        <expression>&apos;An error has occurred in the&quot;Is MQL Tier Blank&quot; Metadata element&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Lead - After Save - On Create or Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - After Save - On Create or Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>533</locationX>
+        <locationY>143</locationY>
+        <connector>
+            <targetReference>Lead_Stage_Changed</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows}) &amp;&amp; {!$Record.RecordType.Name} = &apos;Lead&apos;</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Trigger_Stage_Manager_Sub_Flo</name>
+        <label>Trigger Stage Manager Sub-Flo</label>
+        <locationX>827</locationX>
+        <locationY>512</locationY>
+        <flowName>Contact_Lead_Subflow_Stage_History_Manager</flowName>
+        <inputAssignments>
+            <name>text_LeadId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>text_NewStageValue</name>
+            <value>
+                <elementReference>$Record.Contact_Stage__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>text_OldStageValue</name>
+            <value>
+                <elementReference>$Record__Prior.Contact_Stage__c</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

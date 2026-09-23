@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Action_Plan_Confirmed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>042225: Deprecated as a part of the FY26 Partner Program changes. Jira ticket SS-10712</description>
+    <inlineHelpText>Checking this box grants additional discounts to the partner. By checking this field, you acknowledge that a Renewal Action Plan has been created for this incumbent partner. Once the field is checked, it can only be unchecked by a member of the Channel Operations team.</inlineHelpText>
+    <label>DEPRECATED - Renewal Plan Confirmed</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

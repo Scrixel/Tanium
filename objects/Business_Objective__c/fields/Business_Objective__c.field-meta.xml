@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Objective__c</fullName>
+    <description>SS-11088: Deprecated.
+SS-6861</description>
+    <inlineHelpText>Select the broad goal or objective that your customer is trying to achieve with Tanium. This should map to one of their corporate initiatives</inlineHelpText>
+    <label>DEPRECATED - Business Objective</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decrease Cost</fullName>
+                <default>false</default>
+                <label>Decrease Cost</label>
+            </value>
+            <value>
+                <fullName>Decrease Risk</fullName>
+                <default>false</default>
+                <label>Decrease Risk</label>
+            </value>
+            <value>
+                <fullName>Enable Business Growth</fullName>
+                <default>false</default>
+                <label>Enable Business Growth</label>
+            </value>
+            <value>
+                <fullName>Enable Data-driven Decision Making</fullName>
+                <default>false</default>
+                <label>Enable Data-driven Decision Making</label>
+            </value>
+            <value>
+                <fullName>Enable Digital Innovation</fullName>
+                <default>false</default>
+                <label>Enable Digital Innovation</label>
+            </value>
+            <value>
+                <fullName>Improve Efficiency</fullName>
+                <default>false</default>
+                <label>Improve Efficiency</label>
+            </value>
+            <value>
+                <fullName>Improve Employee Experience and Productivity</fullName>
+                <default>false</default>
+                <label>Improve Employee Experience and Productivity</label>
+            </value>
+            <value>
+                <fullName>Improve Security</fullName>
+                <default>false</default>
+                <label>Improve Security</label>
+            </value>
+            <value>
+                <fullName>Maximize Value of IT Investments</fullName>
+                <default>false</default>
+                <label>Maximize Value of IT Investments</label>
+            </value>
+            <value>
+                <fullName>Meet Compliance Requirements</fullName>
+                <default>false</default>
+                <label>Meet Compliance Requirements</label>
+            </value>
+            <value>
+                <fullName>Other (Details Below)</fullName>
+                <default>false</default>
+                <label>Other (Details Below)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

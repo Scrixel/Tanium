@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7S_News_Default_Custom_Field_Set__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The custom field set specified here will be the default custom field set for 7S News, unless changed in the builder properties of the component</inlineHelpText>
+    <label>7S News Default Custom Field Set</label>
+    <referenceTo>X7S_Shr_Custom_Field_Set__mdt</referenceTo>
+    <relationshipLabel>7S News Settings</relationshipLabel>
+    <relationshipName>X7S_News_Settings</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

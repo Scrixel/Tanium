@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_by_Screen_Flow__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, it means that the record was created by the New Next Step flow, so we don&apos;t want to run the After Insert flow. Jira ticket SS-9539</description>
+    <label>Created by Screen Flow</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

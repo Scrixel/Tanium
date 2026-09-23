@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Template__c</fullName>
+    <inlineHelpText>Select one of the email templates</inlineHelpText>
+    <label>Ghost Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Risk team ask with acknowledgement of Tanium Engagement</fullName>
+                <default>false</default>
+                <label>Business Risk team ask with acknowledgement of Tanium Engagement</label>
+            </value>
+            <value>
+                <fullName>Business Risk team  ask without acknowledgement of Tanium Engagement</fullName>
+                <default>false</default>
+                <label>Business Risk team  ask without acknowledgement of Tanium Engagement</label>
+            </value>
+            <value>
+                <fullName>CEO connection ask</fullName>
+                <default>false</default>
+                <label>CEO connection ask</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

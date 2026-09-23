@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>serviceSStrategyGoals__c</fullName>
+    <description>DEFINITION: Documented, clear, agreed and shared
+
+IMPORTANCE: Alignment across functions. Shared goals with client provide a baseline for measurement</description>
+    <externalId>false</externalId>
+    <label>serviceSStrategyGoals</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

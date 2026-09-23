@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Enablement_MeetingDate_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Sub_Type__c,&quot;Sustainability - Customer Enablement&quot;)
+&amp;&amp;
+ISPICKVAL(Status__c,&quot;Completed&quot;)
+&amp;&amp;
+ISBLANK(Meeting_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Meeting_Date__c</errorDisplayField>
+    <errorMessage>Upon completing Customer Enablement, the Meeting Date is required (if performed). Please specify the date the meeting occurred.</errorMessage>
+</ValidationRule>

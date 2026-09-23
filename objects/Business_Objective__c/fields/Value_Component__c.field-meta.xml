@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Component__c</fullName>
+    <description>SS-11088: Deprecated</description>
+    <inlineHelpText>Select the best option to capture the Value Realized.  More information on Tanium Value Components can be found here: https://tanium.sharepoint.com/sites/Team-Team-GlobalsVerticals/SitePages/VE-ValueComponents.aspx</inlineHelpText>
+    <label>DEPRECATED - Value Component</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Breach Prevention/Mitigation</fullName>
+                <default>false</default>
+                <label>Breach/Risk Prevention/Mitigation</label>
+            </value>
+            <value>
+                <fullName>Found un/undermanaged assets</fullName>
+                <default>false</default>
+                <label>Found un/undermanaged assets</label>
+            </value>
+            <value>
+                <fullName>Hardware reclamation</fullName>
+                <default>false</default>
+                <label>Hardware reclamation</label>
+            </value>
+            <value>
+                <fullName>Outage Prevention/Mitigation</fullName>
+                <default>false</default>
+                <label>Outage Prevention/Mitigation</label>
+            </value>
+            <value>
+                <fullName>People/Process efficiencies</fullName>
+                <default>false</default>
+                <label>People/Process efficiencies</label>
+            </value>
+            <value>
+                <fullName>Software license compliance audit</fullName>
+                <default>false</default>
+                <label>Software license compliance audit</label>
+            </value>
+            <value>
+                <fullName>Software reclamation</fullName>
+                <default>false</default>
+                <label>Software reclamation</label>
+            </value>
+            <value>
+                <fullName>Tool Consolidation/Displacement</fullName>
+                <default>false</default>
+                <label>Tool Consolidation/Displacement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,2752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <label>State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Country__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alabama</fullName>
+                <default>false</default>
+                <label>Alabama</label>
+            </value>
+            <value>
+                <fullName>Alaska</fullName>
+                <default>false</default>
+                <label>Alaska</label>
+            </value>
+            <value>
+                <fullName>Arizona</fullName>
+                <default>false</default>
+                <label>Arizona</label>
+            </value>
+            <value>
+                <fullName>Arkansas</fullName>
+                <default>false</default>
+                <label>Arkansas</label>
+            </value>
+            <value>
+                <fullName>Armed Forces Americas</fullName>
+                <default>false</default>
+                <label>Armed Forces Americas</label>
+            </value>
+            <value>
+                <fullName>Armed Forces Europe</fullName>
+                <default>false</default>
+                <label>Armed Forces Europe</label>
+            </value>
+            <value>
+                <fullName>Armed Forces Pacific</fullName>
+                <default>false</default>
+                <label>Armed Forces Pacific</label>
+            </value>
+            <value>
+                <fullName>California</fullName>
+                <default>false</default>
+                <label>California</label>
+            </value>
+            <value>
+                <fullName>Colorado</fullName>
+                <default>false</default>
+                <label>Colorado</label>
+            </value>
+            <value>
+                <fullName>Connecticut</fullName>
+                <default>false</default>
+                <label>Connecticut</label>
+            </value>
+            <value>
+                <fullName>Delaware</fullName>
+                <default>false</default>
+                <label>Delaware</label>
+            </value>
+            <value>
+                <fullName>District of Columbia</fullName>
+                <default>false</default>
+                <label>District of Columbia</label>
+            </value>
+            <value>
+                <fullName>Florida</fullName>
+                <default>false</default>
+                <label>Florida</label>
+            </value>
+            <value>
+                <fullName>Georgia</fullName>
+                <default>false</default>
+                <label>Georgia</label>
+            </value>
+            <value>
+                <fullName>Hawaii</fullName>
+                <default>false</default>
+                <label>Hawaii</label>
+            </value>
+            <value>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+                <label>Idaho</label>
+            </value>
+            <value>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+                <label>Illinois</label>
+            </value>
+            <value>
+                <fullName>Indiana</fullName>
+                <default>false</default>
+                <label>Indiana</label>
+            </value>
+            <value>
+                <fullName>Iowa</fullName>
+                <default>false</default>
+                <label>Iowa</label>
+            </value>
+            <value>
+                <fullName>Kansas</fullName>
+                <default>false</default>
+                <label>Kansas</label>
+            </value>
+            <value>
+                <fullName>Kentucky</fullName>
+                <default>false</default>
+                <label>Kentucky</label>
+            </value>
+            <value>
+                <fullName>Louisiana</fullName>
+                <default>false</default>
+                <label>Louisiana</label>
+            </value>
+            <value>
+                <fullName>Maine</fullName>
+                <default>false</default>
+                <label>Maine</label>
+            </value>
+            <value>
+                <fullName>Maryland</fullName>
+                <default>false</default>
+                <label>Maryland</label>
+            </value>
+            <value>
+                <fullName>Massachusetts</fullName>
+                <default>false</default>
+                <label>Massachusetts</label>
+            </value>
+            <value>
+                <fullName>Michigan</fullName>
+                <default>false</default>
+                <label>Michigan</label>
+            </value>
+            <value>
+                <fullName>Minnesota</fullName>
+                <default>false</default>
+                <label>Minnesota</label>
+            </value>
+            <value>
+                <fullName>Mississippi</fullName>
+                <default>false</default>
+                <label>Mississippi</label>
+            </value>
+            <value>
+                <fullName>Missouri</fullName>
+                <default>false</default>
+                <label>Missouri</label>
+            </value>
+            <value>
+                <fullName>Montana</fullName>
+                <default>false</default>
+                <label>Montana</label>
+            </value>
+            <value>
+                <fullName>Nebraska</fullName>
+                <default>false</default>
+                <label>Nebraska</label>
+            </value>
+            <value>
+                <fullName>Nevada</fullName>
+                <default>false</default>
+                <label>Nevada</label>
+            </value>
+            <value>
+                <fullName>New Hampshire</fullName>
+                <default>false</default>
+                <label>New Hampshire</label>
+            </value>
+            <value>
+                <fullName>New Jersey</fullName>
+                <default>false</default>
+                <label>New Jersey</label>
+            </value>
+            <value>
+                <fullName>New Mexico</fullName>
+                <default>false</default>
+                <label>New Mexico</label>
+            </value>
+            <value>
+                <fullName>New York</fullName>
+                <default>false</default>
+                <label>New York</label>
+            </value>
+            <value>
+                <fullName>North Carolina</fullName>
+                <default>false</default>
+                <label>North Carolina</label>
+            </value>
+            <value>
+                <fullName>North Dakota</fullName>
+                <default>false</default>
+                <label>North Dakota</label>
+            </value>
+            <value>
+                <fullName>Ohio</fullName>
+                <default>false</default>
+                <label>Ohio</label>
+            </value>
+            <value>
+                <fullName>Oklahoma</fullName>
+                <default>false</default>
+                <label>Oklahoma</label>
+            </value>
+            <value>
+                <fullName>Oregon</fullName>
+                <default>false</default>
+                <label>Oregon</label>
+            </value>
+            <value>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+                <label>Pennsylvania</label>
+            </value>
+            <value>
+                <fullName>Puerto Rico</fullName>
+                <default>false</default>
+                <label>Puerto Rico</label>
+            </value>
+            <value>
+                <fullName>Rhode Island</fullName>
+                <default>false</default>
+                <label>Rhode Island</label>
+            </value>
+            <value>
+                <fullName>South Carolina</fullName>
+                <default>false</default>
+                <label>South Carolina</label>
+            </value>
+            <value>
+                <fullName>South Dakota</fullName>
+                <default>false</default>
+                <label>South Dakota</label>
+            </value>
+            <value>
+                <fullName>Tennessee</fullName>
+                <default>false</default>
+                <label>Tennessee</label>
+            </value>
+            <value>
+                <fullName>Utah</fullName>
+                <default>false</default>
+                <label>Utah</label>
+            </value>
+            <value>
+                <fullName>Vermont</fullName>
+                <default>false</default>
+                <label>Vermont</label>
+            </value>
+            <value>
+                <fullName>Virginia</fullName>
+                <default>false</default>
+                <label>Virginia</label>
+            </value>
+            <value>
+                <fullName>Washington</fullName>
+                <default>false</default>
+                <label>Washington</label>
+            </value>
+            <value>
+                <fullName>West Virginia</fullName>
+                <default>false</default>
+                <label>West Virginia</label>
+            </value>
+            <value>
+                <fullName>Wisconsin</fullName>
+                <default>false</default>
+                <label>Wisconsin</label>
+            </value>
+            <value>
+                <fullName>Wyoming</fullName>
+                <default>false</default>
+                <label>Wyoming</label>
+            </value>
+            <value>
+                <fullName>Aberdeenshire</fullName>
+                <default>false</default>
+                <label>Aberdeenshire</label>
+            </value>
+            <value>
+                <fullName>Angus</fullName>
+                <default>false</default>
+                <label>Angus</label>
+            </value>
+            <value>
+                <fullName>Argyll</fullName>
+                <default>false</default>
+                <label>Argyll</label>
+            </value>
+            <value>
+                <fullName>Avon</fullName>
+                <default>false</default>
+                <label>Avon</label>
+            </value>
+            <value>
+                <fullName>Ayrshire</fullName>
+                <default>false</default>
+                <label>Ayrshire</label>
+            </value>
+            <value>
+                <fullName>Banffshire</fullName>
+                <default>false</default>
+                <label>Banffshire</label>
+            </value>
+            <value>
+                <fullName>Bedfordshire</fullName>
+                <default>false</default>
+                <label>Bedfordshire</label>
+            </value>
+            <value>
+                <fullName>Berkshire</fullName>
+                <default>false</default>
+                <label>Berkshire</label>
+            </value>
+            <value>
+                <fullName>Berwickshire</fullName>
+                <default>false</default>
+                <label>Berwickshire</label>
+            </value>
+            <value>
+                <fullName>Buckinghamshire</fullName>
+                <default>false</default>
+                <label>Buckinghamshire</label>
+            </value>
+            <value>
+                <fullName>Caithness</fullName>
+                <default>false</default>
+                <label>Caithness</label>
+            </value>
+            <value>
+                <fullName>Cambridgeshire</fullName>
+                <default>false</default>
+                <label>Cambridgeshire</label>
+            </value>
+            <value>
+                <fullName>Cheshire</fullName>
+                <default>false</default>
+                <label>Cheshire</label>
+            </value>
+            <value>
+                <fullName>Clackmannanshire</fullName>
+                <default>false</default>
+                <label>Clackmannanshire</label>
+            </value>
+            <value>
+                <fullName>Cleveland</fullName>
+                <default>false</default>
+                <label>Cleveland</label>
+            </value>
+            <value>
+                <fullName>Clwyd</fullName>
+                <default>false</default>
+                <label>Clwyd</label>
+            </value>
+            <value>
+                <fullName>Cornwall</fullName>
+                <default>false</default>
+                <label>Cornwall</label>
+            </value>
+            <value>
+                <fullName>County Antrim</fullName>
+                <default>false</default>
+                <label>County Antrim</label>
+            </value>
+            <value>
+                <fullName>County Armagh</fullName>
+                <default>false</default>
+                <label>County Armagh</label>
+            </value>
+            <value>
+                <fullName>County Down</fullName>
+                <default>false</default>
+                <label>County Down</label>
+            </value>
+            <value>
+                <fullName>County Durham</fullName>
+                <default>false</default>
+                <label>County Durham</label>
+            </value>
+            <value>
+                <fullName>County Fermanagh</fullName>
+                <default>false</default>
+                <label>County Fermanagh</label>
+            </value>
+            <value>
+                <fullName>County Londonderry</fullName>
+                <default>false</default>
+                <label>County Londonderry</label>
+            </value>
+            <value>
+                <fullName>County Tyrone</fullName>
+                <default>false</default>
+                <label>County Tyrone</label>
+            </value>
+            <value>
+                <fullName>Cumbria</fullName>
+                <default>false</default>
+                <label>Cumbria</label>
+            </value>
+            <value>
+                <fullName>Derbyshire</fullName>
+                <default>false</default>
+                <label>Derbyshire</label>
+            </value>
+            <value>
+                <fullName>Devon</fullName>
+                <default>false</default>
+                <label>Devon</label>
+            </value>
+            <value>
+                <fullName>Dorset</fullName>
+                <default>false</default>
+                <label>Dorset</label>
+            </value>
+            <value>
+                <fullName>Dumfriesshire</fullName>
+                <default>false</default>
+                <label>Dumfriesshire</label>
+            </value>
+            <value>
+                <fullName>Dunbartonshire</fullName>
+                <default>false</default>
+                <label>Dunbartonshire</label>
+            </value>
+            <value>
+                <fullName>Dyfed</fullName>
+                <default>false</default>
+                <label>Dyfed</label>
+            </value>
+            <value>
+                <fullName>East Lothian</fullName>
+                <default>false</default>
+                <label>East Lothian</label>
+            </value>
+            <value>
+                <fullName>East Sussex</fullName>
+                <default>false</default>
+                <label>East Sussex</label>
+            </value>
+            <value>
+                <fullName>Essex</fullName>
+                <default>false</default>
+                <label>Essex</label>
+            </value>
+            <value>
+                <fullName>Fife</fullName>
+                <default>false</default>
+                <label>Fife</label>
+            </value>
+            <value>
+                <fullName>Gloucestershire</fullName>
+                <default>false</default>
+                <label>Gloucestershire</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>Gwent</fullName>
+                <default>false</default>
+                <label>Gwent</label>
+            </value>
+            <value>
+                <fullName>Gwynedd</fullName>
+                <default>false</default>
+                <label>Gwynedd</label>
+            </value>
+            <value>
+                <fullName>Hampshire</fullName>
+                <default>false</default>
+                <label>Hampshire</label>
+            </value>
+            <value>
+                <fullName>Herefordshire</fullName>
+                <default>false</default>
+                <label>Herefordshire</label>
+            </value>
+            <value>
+                <fullName>Hertfordshire</fullName>
+                <default>false</default>
+                <label>Hertfordshire</label>
+            </value>
+            <value>
+                <fullName>Inverness-shire</fullName>
+                <default>false</default>
+                <label>Inverness-shire</label>
+            </value>
+            <value>
+                <fullName>Isle of Arran</fullName>
+                <default>false</default>
+                <label>Isle of Arran</label>
+            </value>
+            <value>
+                <fullName>Isle of Barra</fullName>
+                <default>false</default>
+                <label>Isle of Barra</label>
+            </value>
+            <value>
+                <fullName>Isle of Benbecula</fullName>
+                <default>false</default>
+                <label>Isle of Benbecula</label>
+            </value>
+            <value>
+                <fullName>Isle of Bute</fullName>
+                <default>false</default>
+                <label>Isle of Bute</label>
+            </value>
+            <value>
+                <fullName>Isle of Canna</fullName>
+                <default>false</default>
+                <label>Isle of Canna</label>
+            </value>
+            <value>
+                <fullName>Isle of Coll</fullName>
+                <default>false</default>
+                <label>Isle of Coll</label>
+            </value>
+            <value>
+                <fullName>Isle of Colonsay</fullName>
+                <default>false</default>
+                <label>Isle of Colonsay</label>
+            </value>
+            <value>
+                <fullName>Isle of Cumbrae</fullName>
+                <default>false</default>
+                <label>Isle of Cumbrae</label>
+            </value>
+            <value>
+                <fullName>Isle of Eigg</fullName>
+                <default>false</default>
+                <label>Isle of Eigg</label>
+            </value>
+            <value>
+                <fullName>Isle of Gigha</fullName>
+                <default>false</default>
+                <label>Isle of Gigha</label>
+            </value>
+            <value>
+                <fullName>Isle of Harris</fullName>
+                <default>false</default>
+                <label>Isle of Harris</label>
+            </value>
+            <value>
+                <fullName>Isle of Iona</fullName>
+                <default>false</default>
+                <label>Isle of Iona</label>
+            </value>
+            <value>
+                <fullName>Isle of Islay</fullName>
+                <default>false</default>
+                <label>Isle of Islay</label>
+            </value>
+            <value>
+                <fullName>Isle of Jura</fullName>
+                <default>false</default>
+                <label>Isle of Jura</label>
+            </value>
+            <value>
+                <fullName>Isle of Lewis</fullName>
+                <default>false</default>
+                <label>Isle of Lewis</label>
+            </value>
+            <value>
+                <fullName>Isle of Mull</fullName>
+                <default>false</default>
+                <label>Isle of Mull</label>
+            </value>
+            <value>
+                <fullName>Isle of North Uist</fullName>
+                <default>false</default>
+                <label>Isle of North Uist</label>
+            </value>
+            <value>
+                <fullName>Isle of Rum</fullName>
+                <default>false</default>
+                <label>Isle of Rum</label>
+            </value>
+            <value>
+                <fullName>Isle of Scalpay</fullName>
+                <default>false</default>
+                <label>Isle of Scalpay</label>
+            </value>
+            <value>
+                <fullName>Isle of Skye</fullName>
+                <default>false</default>
+                <label>Isle of Skye</label>
+            </value>
+            <value>
+                <fullName>Isle of South Uist</fullName>
+                <default>false</default>
+                <label>Isle of South Uist</label>
+            </value>
+            <value>
+                <fullName>Isle of Tiree</fullName>
+                <default>false</default>
+                <label>Isle of Tiree</label>
+            </value>
+            <value>
+                <fullName>Isle of Wight</fullName>
+                <default>false</default>
+                <label>Isle of Wight</label>
+            </value>
+            <value>
+                <fullName>Kent</fullName>
+                <default>false</default>
+                <label>Kent</label>
+            </value>
+            <value>
+                <fullName>Kincardineshire</fullName>
+                <default>false</default>
+                <label>Kincardineshire</label>
+            </value>
+            <value>
+                <fullName>Kinross-shire</fullName>
+                <default>false</default>
+                <label>Kinross-shire</label>
+            </value>
+            <value>
+                <fullName>Kirkcudbrightshire</fullName>
+                <default>false</default>
+                <label>Kirkcudbrightshire</label>
+            </value>
+            <value>
+                <fullName>Lanarkshire</fullName>
+                <default>false</default>
+                <label>Lanarkshire</label>
+            </value>
+            <value>
+                <fullName>Lancashire</fullName>
+                <default>false</default>
+                <label>Lancashire</label>
+            </value>
+            <value>
+                <fullName>Leicestershire</fullName>
+                <default>false</default>
+                <label>Leicestershire</label>
+            </value>
+            <value>
+                <fullName>Lincolnshire</fullName>
+                <default>false</default>
+                <label>Lincolnshire</label>
+            </value>
+            <value>
+                <fullName>Merseyside</fullName>
+                <default>false</default>
+                <label>Merseyside</label>
+            </value>
+            <value>
+                <fullName>Mid Glamorgan</fullName>
+                <default>false</default>
+                <label>Mid Glamorgan</label>
+            </value>
+            <value>
+                <fullName>Mid Lothian</fullName>
+                <default>false</default>
+                <label>Mid Lothian</label>
+            </value>
+            <value>
+                <fullName>Middlesex</fullName>
+                <default>false</default>
+                <label>Middlesex</label>
+            </value>
+            <value>
+                <fullName>Morayshire</fullName>
+                <default>false</default>
+                <label>Morayshire</label>
+            </value>
+            <value>
+                <fullName>Nairnshire</fullName>
+                <default>false</default>
+                <label>Nairnshire</label>
+            </value>
+            <value>
+                <fullName>Norfolk</fullName>
+                <default>false</default>
+                <label>Norfolk</label>
+            </value>
+            <value>
+                <fullName>North Humberside</fullName>
+                <default>false</default>
+                <label>North Humberside</label>
+            </value>
+            <value>
+                <fullName>North Yorkshire</fullName>
+                <default>false</default>
+                <label>North Yorkshire</label>
+            </value>
+            <value>
+                <fullName>Northamptonshire</fullName>
+                <default>false</default>
+                <label>Northamptonshire</label>
+            </value>
+            <value>
+                <fullName>Northumberland</fullName>
+                <default>false</default>
+                <label>Northumberland</label>
+            </value>
+            <value>
+                <fullName>Nottinghamshire</fullName>
+                <default>false</default>
+                <label>Nottinghamshire</label>
+            </value>
+            <value>
+                <fullName>Oxfordshire</fullName>
+                <default>false</default>
+                <label>Oxfordshire</label>
+            </value>
+            <value>
+                <fullName>Peeblesshire</fullName>
+                <default>false</default>
+                <label>Peeblesshire</label>
+            </value>
+            <value>
+                <fullName>Perthshire</fullName>
+                <default>false</default>
+                <label>Perthshire</label>
+            </value>
+            <value>
+                <fullName>Powys</fullName>
+                <default>false</default>
+                <label>Powys</label>
+            </value>
+            <value>
+                <fullName>Renfrewshire</fullName>
+                <default>false</default>
+                <label>Renfrewshire</label>
+            </value>
+            <value>
+                <fullName>Ross-shire</fullName>
+                <default>false</default>
+                <label>Ross-shire</label>
+            </value>
+            <value>
+                <fullName>Roxburghshire</fullName>
+                <default>false</default>
+                <label>Roxburghshire</label>
+            </value>
+            <value>
+                <fullName>Selkirkshire</fullName>
+                <default>false</default>
+                <label>Selkirkshire</label>
+            </value>
+            <value>
+                <fullName>Shropshire</fullName>
+                <default>false</default>
+                <label>Shropshire</label>
+            </value>
+            <value>
+                <fullName>Somerset</fullName>
+                <default>false</default>
+                <label>Somerset</label>
+            </value>
+            <value>
+                <fullName>South Glamorgan</fullName>
+                <default>false</default>
+                <label>South Glamorgan</label>
+            </value>
+            <value>
+                <fullName>South Humberside</fullName>
+                <default>false</default>
+                <label>South Humberside</label>
+            </value>
+            <value>
+                <fullName>South Yorkshire</fullName>
+                <default>false</default>
+                <label>South Yorkshire</label>
+            </value>
+            <value>
+                <fullName>Staffordshire</fullName>
+                <default>false</default>
+                <label>Staffordshire</label>
+            </value>
+            <value>
+                <fullName>Stirlingshire</fullName>
+                <default>false</default>
+                <label>Stirlingshire</label>
+            </value>
+            <value>
+                <fullName>Suffolk</fullName>
+                <default>false</default>
+                <label>Suffolk</label>
+            </value>
+            <value>
+                <fullName>Surrey</fullName>
+                <default>false</default>
+                <label>Surrey</label>
+            </value>
+            <value>
+                <fullName>Sutherland</fullName>
+                <default>false</default>
+                <label>Sutherland</label>
+            </value>
+            <value>
+                <fullName>Tyne and Wear</fullName>
+                <default>false</default>
+                <label>Tyne and Wear</label>
+            </value>
+            <value>
+                <fullName>Warwickshire</fullName>
+                <default>false</default>
+                <label>Warwickshire</label>
+            </value>
+            <value>
+                <fullName>West Glamorgan</fullName>
+                <default>false</default>
+                <label>West Glamorgan</label>
+            </value>
+            <value>
+                <fullName>West Lothian</fullName>
+                <default>false</default>
+                <label>West Lothian</label>
+            </value>
+            <value>
+                <fullName>West Midlands</fullName>
+                <default>false</default>
+                <label>West Midlands</label>
+            </value>
+            <value>
+                <fullName>West Sussex</fullName>
+                <default>false</default>
+                <label>West Sussex</label>
+            </value>
+            <value>
+                <fullName>West Yorkshire</fullName>
+                <default>false</default>
+                <label>West Yorkshire</label>
+            </value>
+            <value>
+                <fullName>Wigtownshire</fullName>
+                <default>false</default>
+                <label>Wigtownshire</label>
+            </value>
+            <value>
+                <fullName>Wiltshire</fullName>
+                <default>false</default>
+                <label>Wiltshire</label>
+            </value>
+            <value>
+                <fullName>Worcestershire</fullName>
+                <default>false</default>
+                <label>Worcestershire</label>
+            </value>
+            <value>
+                <fullName>Alberta</fullName>
+                <default>false</default>
+                <label>AB</label>
+            </value>
+            <value>
+                <fullName>British Columbia</fullName>
+                <default>false</default>
+                <label>BC</label>
+            </value>
+            <value>
+                <fullName>Manitoba</fullName>
+                <default>false</default>
+                <label>MB</label>
+            </value>
+            <value>
+                <fullName>New Brunswick</fullName>
+                <default>false</default>
+                <label>NB</label>
+            </value>
+            <value>
+                <fullName>Newfoundland</fullName>
+                <default>false</default>
+                <label>NL</label>
+            </value>
+            <value>
+                <fullName>Northwest Territories</fullName>
+                <default>false</default>
+                <label>NT</label>
+            </value>
+            <value>
+                <fullName>Nova Scotia</fullName>
+                <default>false</default>
+                <label>NS</label>
+            </value>
+            <value>
+                <fullName>Nunavut</fullName>
+                <default>false</default>
+                <label>NU</label>
+            </value>
+            <value>
+                <fullName>Ontario</fullName>
+                <default>false</default>
+                <label>ON</label>
+            </value>
+            <value>
+                <fullName>Prince Edward Island</fullName>
+                <default>false</default>
+                <label>PE</label>
+            </value>
+            <value>
+                <fullName>Quebec</fullName>
+                <default>false</default>
+                <label>QC</label>
+            </value>
+            <value>
+                <fullName>Saskatchewan</fullName>
+                <default>false</default>
+                <label>SK</label>
+            </value>
+            <value>
+                <fullName>Yukon</fullName>
+                <default>false</default>
+                <label>YK</label>
+            </value>
+            <value>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+                <label>Australian Capital Territory</label>
+            </value>
+            <value>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+                <label>New South Wales</label>
+            </value>
+            <value>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+                <label>Northern Territory</label>
+            </value>
+            <value>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+                <label>Queensland</label>
+            </value>
+            <value>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+                <label>South Australia</label>
+            </value>
+            <value>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+                <label>Tasmania</label>
+            </value>
+            <value>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+                <label>Victoria</label>
+            </value>
+            <value>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+                <label>Western Australia</label>
+            </value>
+            <value>
+                <fullName>Hokkaidō	北海道</fullName>
+                <default>false</default>
+                <label>Hokkaidō	北海道</label>
+            </value>
+            <value>
+                <fullName>Aomori	青森県</fullName>
+                <default>false</default>
+                <label>Aomori	青森県</label>
+            </value>
+            <value>
+                <fullName>Iwate	岩手県</fullName>
+                <default>false</default>
+                <label>Iwate	岩手県</label>
+            </value>
+            <value>
+                <fullName>Miyagi	宮城県</fullName>
+                <default>false</default>
+                <label>Miyagi	宮城県</label>
+            </value>
+            <value>
+                <fullName>Akita	秋田県</fullName>
+                <default>false</default>
+                <label>Akita	秋田県</label>
+            </value>
+            <value>
+                <fullName>Yamagata	山形県</fullName>
+                <default>false</default>
+                <label>Yamagata	山形県</label>
+            </value>
+            <value>
+                <fullName>Fukushima	福島県</fullName>
+                <default>false</default>
+                <label>Fukushima	福島県</label>
+            </value>
+            <value>
+                <fullName>Ibaraki	茨城県</fullName>
+                <default>false</default>
+                <label>Ibaraki	茨城県</label>
+            </value>
+            <value>
+                <fullName>Tochigi	栃木県</fullName>
+                <default>false</default>
+                <label>Tochigi	栃木県</label>
+            </value>
+            <value>
+                <fullName>Gunma	群馬県</fullName>
+                <default>false</default>
+                <label>Gunma	群馬県</label>
+            </value>
+            <value>
+                <fullName>Saitama	埼玉県</fullName>
+                <default>false</default>
+                <label>Saitama	埼玉県</label>
+            </value>
+            <value>
+                <fullName>Chiba	千葉県</fullName>
+                <default>false</default>
+                <label>Chiba	千葉県</label>
+            </value>
+            <value>
+                <fullName>Tokyo	東京都</fullName>
+                <default>false</default>
+                <label>Tokyo	東京都</label>
+            </value>
+            <value>
+                <fullName>Kanagawa	神奈川県</fullName>
+                <default>false</default>
+                <label>Kanagawa	神奈川県</label>
+            </value>
+            <value>
+                <fullName>Niigata	新潟県</fullName>
+                <default>false</default>
+                <label>Niigata	新潟県</label>
+            </value>
+            <value>
+                <fullName>Toyama	富山県</fullName>
+                <default>false</default>
+                <label>Toyama	富山県</label>
+            </value>
+            <value>
+                <fullName>Ishikawa	石川県</fullName>
+                <default>false</default>
+                <label>Ishikawa	石川県</label>
+            </value>
+            <value>
+                <fullName>Fukui	福井県</fullName>
+                <default>false</default>
+                <label>Fukui	福井県</label>
+            </value>
+            <value>
+                <fullName>Yamanashi	山梨県</fullName>
+                <default>false</default>
+                <label>Yamanashi	山梨県</label>
+            </value>
+            <value>
+                <fullName>Nagano	長野県</fullName>
+                <default>false</default>
+                <label>Nagano	長野県</label>
+            </value>
+            <value>
+                <fullName>Gifu	岐阜県</fullName>
+                <default>false</default>
+                <label>Gifu	岐阜県</label>
+            </value>
+            <value>
+                <fullName>Shizuoka	静岡県</fullName>
+                <default>false</default>
+                <label>Shizuoka	静岡県</label>
+            </value>
+            <value>
+                <fullName>Aichi	愛知県</fullName>
+                <default>false</default>
+                <label>Aichi	愛知県</label>
+            </value>
+            <value>
+                <fullName>Mie	三重県</fullName>
+                <default>false</default>
+                <label>Mie	三重県</label>
+            </value>
+            <value>
+                <fullName>Shiga	滋賀県</fullName>
+                <default>false</default>
+                <label>Shiga	滋賀県</label>
+            </value>
+            <value>
+                <fullName>Kyoto	京都府</fullName>
+                <default>false</default>
+                <label>Kyoto	京都府</label>
+            </value>
+            <value>
+                <fullName>Osaka	大阪府</fullName>
+                <default>false</default>
+                <label>Osaka	大阪府</label>
+            </value>
+            <value>
+                <fullName>Hyōgo	兵庫県</fullName>
+                <default>false</default>
+                <label>Hyōgo	兵庫県</label>
+            </value>
+            <value>
+                <fullName>Nara	奈良県</fullName>
+                <default>false</default>
+                <label>Nara	奈良県</label>
+            </value>
+            <value>
+                <fullName>Wakayama	和歌山県</fullName>
+                <default>false</default>
+                <label>Wakayama	和歌山県</label>
+            </value>
+            <value>
+                <fullName>Tottori	鳥取県</fullName>
+                <default>false</default>
+                <label>Tottori	鳥取県</label>
+            </value>
+            <value>
+                <fullName>Shimane	島根県</fullName>
+                <default>false</default>
+                <label>Shimane	島根県</label>
+            </value>
+            <value>
+                <fullName>Okayama	岡山県</fullName>
+                <default>false</default>
+                <label>Okayama	岡山県</label>
+            </value>
+            <value>
+                <fullName>Hiroshima	広島県</fullName>
+                <default>false</default>
+                <label>Hiroshima	広島県</label>
+            </value>
+            <value>
+                <fullName>Yamaguchi	山口県</fullName>
+                <default>false</default>
+                <label>Yamaguchi	山口県</label>
+            </value>
+            <value>
+                <fullName>Tokushima	徳島県</fullName>
+                <default>false</default>
+                <label>Tokushima	徳島県</label>
+            </value>
+            <value>
+                <fullName>Kagawa	香川県</fullName>
+                <default>false</default>
+                <label>Kagawa	香川県</label>
+            </value>
+            <value>
+                <fullName>Ehime	愛媛県</fullName>
+                <default>false</default>
+                <label>Ehime	愛媛県</label>
+            </value>
+            <value>
+                <fullName>Kochi	高知県</fullName>
+                <default>false</default>
+                <label>Kochi	高知県</label>
+            </value>
+            <value>
+                <fullName>Fukuoka	福岡県</fullName>
+                <default>false</default>
+                <label>Fukuoka	福岡県</label>
+            </value>
+            <value>
+                <fullName>Saga	佐賀県</fullName>
+                <default>false</default>
+                <label>Saga	佐賀県</label>
+            </value>
+            <value>
+                <fullName>Nagasaki	長崎県</fullName>
+                <default>false</default>
+                <label>Nagasaki	長崎県</label>
+            </value>
+            <value>
+                <fullName>Kumamoto	熊本県</fullName>
+                <default>false</default>
+                <label>Kumamoto	熊本県</label>
+            </value>
+            <value>
+                <fullName>Ōita	大分県</fullName>
+                <default>false</default>
+                <label>Ōita	大分県</label>
+            </value>
+            <value>
+                <fullName>Miyazaki	宮崎県</fullName>
+                <default>false</default>
+                <label>Miyazaki	宮崎県</label>
+            </value>
+            <value>
+                <fullName>Kagoshima	鹿児島県</fullName>
+                <default>false</default>
+                <label>Kagoshima	鹿児島県</label>
+            </value>
+            <value>
+                <fullName>Okinawa	沖縄県</fullName>
+                <default>false</default>
+                <label>Okinawa	沖縄県</label>
+            </value>
+            <value>
+                <fullName>AL</fullName>
+                <default>false</default>
+                <label>AL</label>
+            </value>
+            <value>
+                <fullName>AK</fullName>
+                <default>false</default>
+                <label>AK</label>
+            </value>
+            <value>
+                <fullName>AZ</fullName>
+                <default>false</default>
+                <label>AZ</label>
+            </value>
+            <value>
+                <fullName>AR</fullName>
+                <default>false</default>
+                <label>AR</label>
+            </value>
+            <value>
+                <fullName>AA</fullName>
+                <default>false</default>
+                <label>AA</label>
+            </value>
+            <value>
+                <fullName>AE</fullName>
+                <default>false</default>
+                <label>AE</label>
+            </value>
+            <value>
+                <fullName>AP</fullName>
+                <default>false</default>
+                <label>AP</label>
+            </value>
+            <value>
+                <fullName>CA</fullName>
+                <default>false</default>
+                <label>CA</label>
+            </value>
+            <value>
+                <fullName>CO</fullName>
+                <default>false</default>
+                <label>CO</label>
+            </value>
+            <value>
+                <fullName>CT</fullName>
+                <default>false</default>
+                <label>CT</label>
+            </value>
+            <value>
+                <fullName>DE</fullName>
+                <default>false</default>
+                <label>DE</label>
+            </value>
+            <value>
+                <fullName>DC</fullName>
+                <default>false</default>
+                <label>DC</label>
+            </value>
+            <value>
+                <fullName>FL</fullName>
+                <default>false</default>
+                <label>FL</label>
+            </value>
+            <value>
+                <fullName>GA</fullName>
+                <default>false</default>
+                <label>GA</label>
+            </value>
+            <value>
+                <fullName>HI</fullName>
+                <default>false</default>
+                <label>HI</label>
+            </value>
+            <value>
+                <fullName>ID</fullName>
+                <default>false</default>
+                <label>ID</label>
+            </value>
+            <value>
+                <fullName>IL</fullName>
+                <default>false</default>
+                <label>IL</label>
+            </value>
+            <value>
+                <fullName>IN</fullName>
+                <default>false</default>
+                <label>IN</label>
+            </value>
+            <value>
+                <fullName>IA</fullName>
+                <default>false</default>
+                <label>IA</label>
+            </value>
+            <value>
+                <fullName>KS</fullName>
+                <default>false</default>
+                <label>KS</label>
+            </value>
+            <value>
+                <fullName>KY</fullName>
+                <default>false</default>
+                <label>KY</label>
+            </value>
+            <value>
+                <fullName>LA</fullName>
+                <default>false</default>
+                <label>LA</label>
+            </value>
+            <value>
+                <fullName>ME</fullName>
+                <default>false</default>
+                <label>ME</label>
+            </value>
+            <value>
+                <fullName>MD</fullName>
+                <default>false</default>
+                <label>MD</label>
+            </value>
+            <value>
+                <fullName>MA</fullName>
+                <default>false</default>
+                <label>MA</label>
+            </value>
+            <value>
+                <fullName>MI</fullName>
+                <default>false</default>
+                <label>MI</label>
+            </value>
+            <value>
+                <fullName>MN</fullName>
+                <default>false</default>
+                <label>MN</label>
+            </value>
+            <value>
+                <fullName>MS</fullName>
+                <default>false</default>
+                <label>MS</label>
+            </value>
+            <value>
+                <fullName>MO</fullName>
+                <default>false</default>
+                <label>MO</label>
+            </value>
+            <value>
+                <fullName>MT</fullName>
+                <default>false</default>
+                <label>MT</label>
+            </value>
+            <value>
+                <fullName>NE</fullName>
+                <default>false</default>
+                <label>NE</label>
+            </value>
+            <value>
+                <fullName>NV</fullName>
+                <default>false</default>
+                <label>NV</label>
+            </value>
+            <value>
+                <fullName>NH</fullName>
+                <default>false</default>
+                <label>NH</label>
+            </value>
+            <value>
+                <fullName>NJ</fullName>
+                <default>false</default>
+                <label>NJ</label>
+            </value>
+            <value>
+                <fullName>NM</fullName>
+                <default>false</default>
+                <label>NM</label>
+            </value>
+            <value>
+                <fullName>NY</fullName>
+                <default>false</default>
+                <label>NY</label>
+            </value>
+            <value>
+                <fullName>NC</fullName>
+                <default>false</default>
+                <label>NC</label>
+            </value>
+            <value>
+                <fullName>ND</fullName>
+                <default>false</default>
+                <label>ND</label>
+            </value>
+            <value>
+                <fullName>OH</fullName>
+                <default>false</default>
+                <label>OH</label>
+            </value>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>OR</fullName>
+                <default>false</default>
+                <label>OR</label>
+            </value>
+            <value>
+                <fullName>PA</fullName>
+                <default>false</default>
+                <label>PA</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>PR</label>
+            </value>
+            <value>
+                <fullName>RI</fullName>
+                <default>false</default>
+                <label>RI</label>
+            </value>
+            <value>
+                <fullName>SC</fullName>
+                <default>false</default>
+                <label>SC</label>
+            </value>
+            <value>
+                <fullName>SD</fullName>
+                <default>false</default>
+                <label>SD</label>
+            </value>
+            <value>
+                <fullName>TN</fullName>
+                <default>false</default>
+                <label>TN</label>
+            </value>
+            <value>
+                <fullName>TX</fullName>
+                <default>false</default>
+                <label>TX</label>
+            </value>
+            <value>
+                <fullName>UT</fullName>
+                <default>false</default>
+                <label>UT</label>
+            </value>
+            <value>
+                <fullName>VT</fullName>
+                <default>false</default>
+                <label>VT</label>
+            </value>
+            <value>
+                <fullName>VA</fullName>
+                <default>false</default>
+                <label>VA</label>
+            </value>
+            <value>
+                <fullName>WA</fullName>
+                <default>false</default>
+                <label>WA</label>
+            </value>
+            <value>
+                <fullName>WV</fullName>
+                <default>false</default>
+                <label>WV</label>
+            </value>
+            <value>
+                <fullName>WI</fullName>
+                <default>false</default>
+                <label>WI</label>
+            </value>
+            <value>
+                <fullName>WY</fullName>
+                <default>false</default>
+                <label>WY</label>
+            </value>
+            <value>
+                <fullName>NSW</fullName>
+                <default>false</default>
+                <label>NSW</label>
+            </value>
+            <value>
+                <fullName>Gauteng</fullName>
+                <default>false</default>
+                <label>Gauteng</label>
+            </value>
+            <value>
+                <fullName>VIC</fullName>
+                <default>false</default>
+                <label>VIC</label>
+            </value>
+            <value>
+                <fullName>æ?±äº¬éƒ½</fullName>
+                <default>false</default>
+                <label>æ?±äº¬éƒ½</label>
+            </value>
+            <value>
+                <fullName>Pretoria</fullName>
+                <default>false</default>
+                <label>Pretoria</label>
+            </value>
+            <value>
+                <fullName>QLD</fullName>
+                <default>false</default>
+                <label>QLD</label>
+            </value>
+            <value>
+                <fullName>Hants.</fullName>
+                <default>false</default>
+                <label>Hants.</label>
+            </value>
+            <value>
+                <fullName>Ã–rebro</fullName>
+                <default>false</default>
+                <label>Ã–rebro</label>
+            </value>
+            <value>
+                <fullName>ç¥žå¥ˆå·?çœŒ</fullName>
+                <default>false</default>
+                <label>ç¥žå¥ˆå·?çœŒ</label>
+            </value>
+            <value>
+                <fullName>Oxon.</fullName>
+                <default>false</default>
+                <label>Oxon.</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>SA</label>
+            </value>
+            <value>
+                <fullName>Hokkaidō</fullName>
+                <default>false</default>
+                <label>Hokkaidō</label>
+            </value>
+            <value>
+                <fullName>Aomori</fullName>
+                <default>false</default>
+                <label>Aomori</label>
+            </value>
+            <value>
+                <fullName>Iwate</fullName>
+                <default>false</default>
+                <label>Iwate</label>
+            </value>
+            <value>
+                <fullName>Miyagi</fullName>
+                <default>false</default>
+                <label>Miyagi</label>
+            </value>
+            <value>
+                <fullName>Akita</fullName>
+                <default>false</default>
+                <label>Akita</label>
+            </value>
+            <value>
+                <fullName>Yamagata</fullName>
+                <default>false</default>
+                <label>Yamagata</label>
+            </value>
+            <value>
+                <fullName>Fukushima</fullName>
+                <default>false</default>
+                <label>Fukushima</label>
+            </value>
+            <value>
+                <fullName>Ibaraki</fullName>
+                <default>false</default>
+                <label>Ibaraki</label>
+            </value>
+            <value>
+                <fullName>Tochigi</fullName>
+                <default>false</default>
+                <label>Tochigi</label>
+            </value>
+            <value>
+                <fullName>Gunma</fullName>
+                <default>false</default>
+                <label>Gunma</label>
+            </value>
+            <value>
+                <fullName>Saitama</fullName>
+                <default>false</default>
+                <label>Saitama</label>
+            </value>
+            <value>
+                <fullName>Chiba</fullName>
+                <default>false</default>
+                <label>Chiba</label>
+            </value>
+            <value>
+                <fullName>Tokyo</fullName>
+                <default>false</default>
+                <label>Tokyo</label>
+            </value>
+            <value>
+                <fullName>Kanagawa</fullName>
+                <default>false</default>
+                <label>Kanagawa</label>
+            </value>
+            <value>
+                <fullName>Niigata</fullName>
+                <default>false</default>
+                <label>Niigata</label>
+            </value>
+            <value>
+                <fullName>Toyama</fullName>
+                <default>false</default>
+                <label>Toyama</label>
+            </value>
+            <value>
+                <fullName>Ishikawa</fullName>
+                <default>false</default>
+                <label>Ishikawa</label>
+            </value>
+            <value>
+                <fullName>Fukui</fullName>
+                <default>false</default>
+                <label>Fukui</label>
+            </value>
+            <value>
+                <fullName>Yamanashi</fullName>
+                <default>false</default>
+                <label>Yamanashi</label>
+            </value>
+            <value>
+                <fullName>Nagano</fullName>
+                <default>false</default>
+                <label>Nagano</label>
+            </value>
+            <value>
+                <fullName>Gifu</fullName>
+                <default>false</default>
+                <label>Gifu</label>
+            </value>
+            <value>
+                <fullName>Shizuoka</fullName>
+                <default>false</default>
+                <label>Shizuoka</label>
+            </value>
+            <value>
+                <fullName>Aichi</fullName>
+                <default>false</default>
+                <label>Aichi</label>
+            </value>
+            <value>
+                <fullName>Mie</fullName>
+                <default>false</default>
+                <label>Mie</label>
+            </value>
+            <value>
+                <fullName>Shiga</fullName>
+                <default>false</default>
+                <label>Shiga</label>
+            </value>
+            <value>
+                <fullName>Kyoto</fullName>
+                <default>false</default>
+                <label>Kyoto</label>
+            </value>
+            <value>
+                <fullName>Osaka</fullName>
+                <default>false</default>
+                <label>Osaka</label>
+            </value>
+            <value>
+                <fullName>Hyōgo</fullName>
+                <default>false</default>
+                <label>Hyōgo</label>
+            </value>
+            <value>
+                <fullName>Nara</fullName>
+                <default>false</default>
+                <label>Nara</label>
+            </value>
+            <value>
+                <fullName>Wakayama</fullName>
+                <default>false</default>
+                <label>Wakayama</label>
+            </value>
+            <value>
+                <fullName>Tottori</fullName>
+                <default>false</default>
+                <label>Tottori</label>
+            </value>
+            <value>
+                <fullName>Shimane</fullName>
+                <default>false</default>
+                <label>Shimane</label>
+            </value>
+            <value>
+                <fullName>Okayama</fullName>
+                <default>false</default>
+                <label>Okayama</label>
+            </value>
+            <value>
+                <fullName>Hiroshima</fullName>
+                <default>false</default>
+                <label>Hiroshima</label>
+            </value>
+            <value>
+                <fullName>Yamaguchi</fullName>
+                <default>false</default>
+                <label>Yamaguchi</label>
+            </value>
+            <value>
+                <fullName>Tokushima</fullName>
+                <default>false</default>
+                <label>Tokushima</label>
+            </value>
+            <value>
+                <fullName>Kagawa</fullName>
+                <default>false</default>
+                <label>Kagawa</label>
+            </value>
+            <value>
+                <fullName>Ehime</fullName>
+                <default>false</default>
+                <label>Ehime</label>
+            </value>
+            <value>
+                <fullName>Kochi</fullName>
+                <default>false</default>
+                <label>Kochi</label>
+            </value>
+            <value>
+                <fullName>Fukuoka</fullName>
+                <default>false</default>
+                <label>Fukuoka</label>
+            </value>
+            <value>
+                <fullName>Saga</fullName>
+                <default>false</default>
+                <label>Saga</label>
+            </value>
+            <value>
+                <fullName>Nagasaki</fullName>
+                <default>false</default>
+                <label>Nagasaki</label>
+            </value>
+            <value>
+                <fullName>Kumamoto</fullName>
+                <default>false</default>
+                <label>Kumamoto</label>
+            </value>
+            <value>
+                <fullName>Ōita</fullName>
+                <default>false</default>
+                <label>Ōita</label>
+            </value>
+            <value>
+                <fullName>Miyazaki</fullName>
+                <default>false</default>
+                <label>Miyazaki</label>
+            </value>
+            <value>
+                <fullName>Kagoshima</fullName>
+                <default>false</default>
+                <label>Kagoshima</label>
+            </value>
+            <value>
+                <fullName>Okinawa</fullName>
+                <default>false</default>
+                <label>Okinawa</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>æ?±äº¬éƒ½</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>ç¥žå¥ˆå·?çœŒ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Hokkaidō</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Aomori</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Iwate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Miyagi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Akita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Yamagata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Fukushima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Ibaraki</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Tochigi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Gunma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Saitama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Chiba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Tokyo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kanagawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Niigata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Toyama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Ishikawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Fukui</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Yamanashi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Nagano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Gifu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Shizuoka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Aichi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Mie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Shiga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kyoto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Osaka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Hyōgo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Nara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Wakayama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Tottori</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Shimane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Okayama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Hiroshima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Yamaguchi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Tokushima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kagawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Ehime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kochi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Fukuoka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Saga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Nagasaki</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kumamoto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Ōita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Miyazaki</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kagoshima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Okinawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Australian Capital Territory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>New South Wales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Northern Territory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Queensland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>South Australia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Tasmania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Victoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Western Australia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>NSW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>VIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>QLD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>SA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Aberdeenshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Angus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Argyll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Avon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Ayrshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Banffshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Bedfordshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Berkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Berwickshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Buckinghamshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Caithness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Cambridgeshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Cheshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Clackmannanshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Cleveland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Clwyd</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Cornwall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Antrim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Armagh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Durham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Fermanagh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Londonderry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>County Tyrone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Cumbria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Derbyshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Devon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Dorset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Dumfriesshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Dunbartonshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Dyfed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>East Lothian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>East Sussex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Essex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Fife</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Gloucestershire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Gwent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Gwynedd</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Hampshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Herefordshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Hertfordshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Inverness-shire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Arran</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Barra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Benbecula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Bute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Canna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Coll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Colonsay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Cumbrae</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Eigg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Gigha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Harris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Iona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Islay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Jura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Lewis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Mull</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of North Uist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Rum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Scalpay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Skye</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of South Uist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Tiree</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Isle of Wight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Kent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Kincardineshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Kinross-shire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Kirkcudbrightshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Lanarkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Lancashire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Leicestershire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Lincolnshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Merseyside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Mid Glamorgan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Mid Lothian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Middlesex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Morayshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Nairnshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Norfolk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>North Humberside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>North Yorkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Northamptonshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Northumberland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Nottinghamshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Oxfordshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Peeblesshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Perthshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Powys</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Renfrewshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Ross-shire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Roxburghshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Selkirkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Shropshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Somerset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>South Glamorgan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>South Humberside</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>South Yorkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Staffordshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Stirlingshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Suffolk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Surrey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Sutherland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Tyne and Wear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Warwickshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>West Glamorgan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>West Lothian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>West Midlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>West Sussex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>West Yorkshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Wigtownshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Wiltshire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Worcestershire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Hants.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <valueName>Oxon.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>AP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>CA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>CO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>CT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>DE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>DC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>FL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>HI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>IL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>IN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>IA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>KS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>KY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>LA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>ME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>NC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>ND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>OH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>OK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>OR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>RI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>SC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>SD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>TN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>TX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>UT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>VT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>VA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>WA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>WV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>WI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>WY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Alberta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>British Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Manitoba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>New Brunswick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Newfoundland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Northwest Territories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Nova Scotia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Nunavut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Ontario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Prince Edward Island</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Quebec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Saskatchewan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Yukon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Africa</controllingFieldValue>
+            <valueName>Gauteng</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Africa</controllingFieldValue>
+            <valueName>Pretoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Ã–rebro</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

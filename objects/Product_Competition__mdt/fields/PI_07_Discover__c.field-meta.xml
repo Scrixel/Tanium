@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PI_07_Discover__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Discover</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Competitor</fullName>
+                <default>true</default>
+                <label>No Competitor</label>
+            </value>
+            <value>
+                <fullName>1E</fullName>
+                <default>false</default>
+                <label>1E</label>
+            </value>
+            <value>
+                <fullName>BigFix</fullName>
+                <default>false</default>
+                <label>BigFix</label>
+            </value>
+            <value>
+                <fullName>Dell KACE</fullName>
+                <default>false</default>
+                <label>Dell KACE</label>
+            </value>
+            <value>
+                <fullName>LANDesk</fullName>
+                <default>false</default>
+                <label>LANDesk</label>
+            </value>
+            <value>
+                <fullName>Lumension</fullName>
+                <default>false</default>
+                <label>Lumension</label>
+            </value>
+            <value>
+                <fullName>McAfee</fullName>
+                <default>false</default>
+                <label>McAfee</label>
+            </value>
+            <value>
+                <fullName>McAfee (Active Response)</fullName>
+                <default>false</default>
+                <label>McAfee (Active Response)</label>
+            </value>
+            <value>
+                <fullName>Microsoft (SCCM)</fullName>
+                <default>false</default>
+                <label>Microsoft (SCCM)</label>
+            </value>
+            <value>
+                <fullName>Symantec (Altiris)</fullName>
+                <default>false</default>
+                <label>Symantec (Altiris)</label>
+            </value>
+            <value>
+                <fullName>Symantec Endpoint</fullName>
+                <default>false</default>
+                <label>Symantec Endpoint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

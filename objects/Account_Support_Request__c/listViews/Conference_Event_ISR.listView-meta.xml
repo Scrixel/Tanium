@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conference_Event_ISR</fullName>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>Estimate_Endpoint__c</columns>
+    <columns>Opportunity_NARR__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account_Support_Request__c.Conference_Meeting_Request</value>
+    </filters>
+    <label>Conference/Event ISR</label>
+    <sharedTo>
+        <group>Executive_Engagement_Group</group>
+    </sharedTo>
+</ListView>

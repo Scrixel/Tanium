@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Ops</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Server_Deployment__c</columns>
+    <columns>Product_Code__c</columns>
+    <columns>Dates__c</columns>
+    <columns>Subscription__c</columns>
+    <columns>Subscription_Quantity__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>contains</operation>
+        <value>stella</value>
+    </filters>
+    <filters>
+        <field>Account__c</field>
+        <operation>equals</operation>
+        <value>USTRANSCOM</value>
+    </filters>
+    <label>Order Ops</label>
+</ListView>

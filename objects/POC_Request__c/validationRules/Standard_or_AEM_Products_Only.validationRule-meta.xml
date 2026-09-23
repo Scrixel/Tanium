@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_or_AEM_Products_Only</fullName>
+    <active>true</active>
+    <description>You can only select Products from the traditional Product List or the AEM product list, but not both.</description>
+    <errorConditionFormula>AND(
+    OR(
+        Asset__c,
+        Risk__c,
+        Certificate_Manager__c,
+        Comply__c,
+        Core__c,
+        Deploy__c,
+        Discover__c,
+        Enforce__c,
+        Engage__c,
+        Impact__c,
+        Integrity_Monitor__c,
+        Investigate__c,
+        Map__c,
+        Patch__c,
+        Performance__c,
+        Provision__c,
+        Reveal__c,
+        Asset_SBOM__c,
+        Threat_Response__c
+    ),
+    OR(
+        Core_Plus__c,
+        Endpoint_Management_Plus__c,
+        Risk_Compliance_Plus__c,
+        Core_Standard__c,
+        Endpoint_Management_Plus__c,
+        Risk_Compliance_Plus__c,
+        Incident_Response__c,  
+        Tanium_EASM_Solution_Censys__c 
+    )
+)</errorConditionFormula>
+    <errorMessage>You cannot select options from both sets. If any of the following checkboxes are selected: Asset, Risk, Certificate Manager, Comply, Core, Deploy, Discover, Enforce, Engage, Impact, Integrity Monitor, Investigate, Map, Patch, Performance, Provision, ect..</errorMessage>
+</ValidationRule>

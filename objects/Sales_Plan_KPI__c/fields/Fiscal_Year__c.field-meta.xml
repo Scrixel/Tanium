@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fiscal_Year__c</fullName>
+    <description>A list of the current and future fiscal year values that will be used in the KPI name</description>
+    <inlineHelpText>Please select the fiscal year to which this KPI applies</inlineHelpText>
+    <label>Fiscal Year</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>FY23</fullName>
+                <default>false</default>
+                <label>FY23</label>
+            </value>
+            <value>
+                <fullName>FY24</fullName>
+                <default>false</default>
+                <label>FY24</label>
+            </value>
+            <value>
+                <fullName>FY25</fullName>
+                <default>false</default>
+                <label>FY25</label>
+            </value>
+            <value>
+                <fullName>FY26</fullName>
+                <default>false</default>
+                <label>FY26</label>
+            </value>
+            <value>
+                <fullName>FY27</fullName>
+                <default>false</default>
+                <label>FY27</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

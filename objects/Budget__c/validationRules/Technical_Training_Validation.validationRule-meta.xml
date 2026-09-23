@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technical_Training_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>Is_this_related_to_Technical_Training__c = TRUE &amp;&amp;
+ISPICKVAL(Technical_Training_Group__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Technical_Training_Group__c</errorDisplayField>
+    <errorMessage>Technical Training Group is required when Is this related to Technical Training? is marked</errorMessage>
+</ValidationRule>

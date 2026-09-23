@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closeout_Details_is_Required</fullName>
+    <active>true</active>
+    <description>SS-1676</description>
+    <errorConditionFormula>ISBLANK(Closeout_Details__c)
+&amp;&amp;
+OR(
+RecordType.Name = &quot;TAM Task&quot;,
+RecordType.Name = &quot;Support Center Task&quot;
+)
+&amp;&amp;
+ OR(
+ISPICKVAL( Status__c, &quot;Failed&quot;),
+ISPICKVAL( Status__c, &quot;Completed&quot;),
+ISPICKVAL( Status__c, &quot;Canceled&quot;))</errorConditionFormula>
+    <errorDisplayField>Closeout_Details__c</errorDisplayField>
+    <errorMessage>Closeout Details is Required!!</errorMessage>
+</ValidationRule>

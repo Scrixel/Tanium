@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NFR_Modules_1__c</fullName>
+    <description>A temporary formula which will be used for data loading Account Entitlement records from NFRs</description>
+    <externalId>false</externalId>
+    <formula>&quot;Account__c,Source_NFR__c,Module__c,Type__c,Quantity_Purchased__c,Start_Date__c,End_Date__c&quot; &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Asset&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnPQAU,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Benchmark&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnqQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Certificate Manager&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnbQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Comply&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZntQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Core&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZngQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Core for Operational Technology&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gPI000005rXkXYAU,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Deploy&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnQQAU,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Discover&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnrQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Endpoint Management for Mobile&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gPI000005rXnlYAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Enforce&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnzQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Engage&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnUQAU,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Exposure Management for Operational Technology&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gPI000005rXivYAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Impact&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZneQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Integrity Monitor&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnpQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Investigate&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnfQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Jump Gate&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gPI000005OzVhYAK,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NFR Modules 1</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

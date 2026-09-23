@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sr_Advisor_Requests_Larry_Godec</fullName>
+    <columns>Status_Bucketed__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>AVP__c</columns>
+    <columns>Estimate_Endpoint__c</columns>
+    <columns>Opportunity_NARR__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sr_Advisor_Text_2__c</field>
+        <operation>equals</operation>
+        <value>0030e00002VXyne</value>
+    </filters>
+    <filters>
+        <field>Status_Bucketed__c</field>
+        <operation>notEqual</operation>
+        <value>draft,on hold,rejected,request completed,submitted and under review</value>
+    </filters>
+    <label>Sr. Advisor Requests- Larry Godec</label>
+    <sharedTo>
+        <allCustomerPortalUsers></allCustomerPortalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Desk_Approval_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do we require deal desk approval to distribute to this country?</description>
+    <label>Deal Desk Approval Required</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

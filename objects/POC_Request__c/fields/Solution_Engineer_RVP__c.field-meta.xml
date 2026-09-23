@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Engineer_RVP__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Populates the Solution Engineer RVP from the Account</description>
+    <inlineHelpText>his field is updated from the Solution Engineer RVP field on the related Account and used in the approval process. If blank, update the Solution Engineer RVP field on the Account and edit/save the POC request to populate the field here.</inlineHelpText>
+    <label>Solution Engineer RVP</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>POC_Requests9wph</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Associated_Partner__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The partner account record to which this provider is associated</description>
+    <inlineHelpText>Select the partner for this provider</inlineHelpText>
+    <label>Associated Partner</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Integration Products</relationshipLabel>
+    <relationshipName>X3rd_Party_Providers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

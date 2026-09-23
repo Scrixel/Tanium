@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_for_Approval_Ext__c</fullName>
+    <description>INC0123192 2021-02-24 Missing approval assignment (due to missing user level).  Should only happen in new approvals, but just in case, adding here too.
+INC0137001 Opp Reg Approval Timestamp Calculations add &quot;Ext&quot;</description>
+    <externalId>false</externalId>
+    <formula>IF( Opp_Reg_Approval_Assignment__c =0,&quot;Please contact Channel Ops, Approval Assignment is missing. &quot;,&quot;&quot;) &amp;
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Extension Pending&quot;),LEN(TEXT(Opp_Reg_Approval_Assignment__c))=0),&quot;Missing Approval Assignment Group. &quot;,&quot;&quot;) +
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Extension Pending&quot;),or_New_Opp_Reg__c=TRUE),&quot;New Deal must be de-selected for extension Deal Reg approval. &quot;,&quot;&quot;)+
+
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Extension Pending&quot;),NOT(ISPICKVAL(or_Opp_Reg_Approval_Flow_Status__c,&quot;Approvals not started&quot;))),&quot;Approval Flow Status must be &apos;Approvals not started.&apos; &quot;,&quot;&quot;)+
+
+IF(AND(ISPICKVAL(or_Opp_Reg_Status__c,&quot;Extension Pending&quot;),Opp_Reg_Extension_Count__c&gt;=3),&quot;Maximum number of extensions have been reached.&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Field needs to be blank to Submit for Approval, Extensions</inlineHelpText>
+    <label>Missing for Approval - Ext</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

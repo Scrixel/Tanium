@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_Q_Public_Officials_Ownership_Int__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does any government entity, candidate for public office, party official, or government official, including any employee of a government-owned entity, any person acting in any capacity for the government or officer or employee of a public international organization (collectively, “Government Official”) have an ownership interest in your company?</description>
+    <inlineHelpText>Does any govt entity, candidate for public office, party official, or govt official, incl any employee of a govt-owned entity, any person actingfor the govt or officer or employee of a public intl org have an ownership interest in your company ?</inlineHelpText>
+    <label>Public Officials with Ownership Int?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

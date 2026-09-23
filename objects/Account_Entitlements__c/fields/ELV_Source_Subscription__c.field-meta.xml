@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Source_Subscription__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Links this entitlement to the customer&apos;s Subscription record. Jira ticket SS-10388. Requires automation/migration to populate.</description>
+    <inlineHelpText>Links this entitlement to the customer&apos;s Subscription record.</inlineHelpText>
+    <label>Source (Subscription)</label>
+    <referenceTo>Ruby__Subscription__c</referenceTo>
+    <relationshipLabel>Account Entitlements (Source Subscription)</relationshipLabel>
+    <relationshipName>Account_Entitlements_Source_Sub</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

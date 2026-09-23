@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A1_Is_Protected_Object</fullName>
+    <active>true</active>
+    <description>Certain objects have been identified as Protected (i.e., objects that should only be updated by the Sales Systems team). This rule will prevent changes to this object by those not authorized to edit protected objects</description>
+    <errorConditionFormula>NOT($Permission.Allowed_to_Edit_Protected_Objects)</errorConditionFormula>
+    <errorMessage>Sorry, you&apos;re not authorized to make changes to this object type. It is a protected object, which is only editable by the Salesforce administration team. Please submit a ServiceNow ticket to Sales Systems if you believe changes are needed.</errorMessage>
+</ValidationRule>

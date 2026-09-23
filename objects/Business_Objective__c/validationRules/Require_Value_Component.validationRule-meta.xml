@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Value_Component</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Value_Realized__c = True, ISPICKVAL( Value_Component__c , &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Value_Component__c</errorDisplayField>
+    <errorMessage>Value component(s) must be selected if Value Realized is checked.</errorMessage>
+</ValidationRule>

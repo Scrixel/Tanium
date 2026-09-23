@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Infrastructure__c</fullName>
+    <description>2020-08-26 Case 54755 Sophie Xu requested label and help text change</description>
+    <inlineHelpText>For TAM Reporting purposes</inlineHelpText>
+    <label>Tanium Infrastructure-TAM Reporting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cloud Template – AWS</fullName>
+                <default>false</default>
+                <label>Cloud Template – AWS</label>
+            </value>
+            <value>
+                <fullName>Cloud Template – Azure</fullName>
+                <default>false</default>
+                <label>Cloud Template – Azure</label>
+            </value>
+            <value>
+                <fullName>Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Tanium Cloud</label>
+            </value>
+            <value>
+                <fullName>Tanium – Physical Appliance</fullName>
+                <default>false</default>
+                <label>Tanium – Physical Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium - Virtual Appliance</fullName>
+                <default>false</default>
+                <label>Tanium - Virtual Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium – Cloud Appliance</fullName>
+                <default>false</default>
+                <label>Tanium – Cloud Appliance</label>
+            </value>
+            <value>
+                <fullName>Windows – Virtual</fullName>
+                <default>false</default>
+                <label>Windows – Virtual</label>
+            </value>
+            <value>
+                <fullName>Windows – Physical</fullName>
+                <default>false</default>
+                <label>Windows – Physical</label>
+            </value>
+            <value>
+                <fullName>Windows – Cloud</fullName>
+                <default>false</default>
+                <label>Windows – Cloud</label>
+            </value>
+            <value>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cloud</label>
+            </value>
+            <value>
+                <fullName>Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Physical</label>
+            </value>
+            <value>
+                <fullName>Tanium – Virtual Appliance (OVA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium – Virtual Appliance (OVA)</label>
+            </value>
+            <value>
+                <fullName>Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Virtual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

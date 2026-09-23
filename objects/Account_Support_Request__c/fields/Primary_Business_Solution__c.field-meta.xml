@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Business_Solution__c</fullName>
+    <description>Created this field upon Justin request to replace the field Initiative/Catalyst. FYI INC0189904</description>
+    <label>Primary Business Solution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Tanium</fullName>
+                <default>false</default>
+                <label>General Tanium</label>
+            </value>
+            <value>
+                <fullName>Asset Discovery &amp; Inventory</fullName>
+                <default>false</default>
+                <label>Asset Discovery &amp; Inventory</label>
+            </value>
+            <value>
+                <fullName>Client Management</fullName>
+                <default>false</default>
+                <label>Client Management</label>
+            </value>
+            <value>
+                <fullName>Risk &amp; Compliance Management</fullName>
+                <default>false</default>
+                <label>Risk &amp; Compliance Management</label>
+            </value>
+            <value>
+                <fullName>Sensitive Data Monitoring</fullName>
+                <default>false</default>
+                <label>Sensitive Data Monitoring</label>
+            </value>
+            <value>
+                <fullName>Threat Hunting</fullName>
+                <default>false</default>
+                <label>Threat Hunting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MainPointOfContact_Active_AccountCheck</fullName>
+    <active>true</active>
+    <description>The rule fires if the selected Contact is inactive OR not tied to the same Partner Account . JIRA SS-12685</description>
+    <errorConditionFormula>AND(
+
+    NOT($Permission.DisableValidationRules),
+    NOT(ISBLANK(Main_Point_of_Contact__c)),
+OR(
+    TEXT(Main_Point_of_Contact__r.Status__c) = &apos;Inactive&apos;,
+    Main_Point_of_Contact__r.AccountId &lt;&gt;  Partner_Account__c 
+))</errorConditionFormula>
+    <errorDisplayField>Main_Point_of_Contact__c</errorDisplayField>
+    <errorMessage>Main Point of Contact must be Active and belong to the related Partner Account.</errorMessage>
+</ValidationRule>

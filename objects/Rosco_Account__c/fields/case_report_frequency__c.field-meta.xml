@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>case_report_frequency__c</fullName>
+    <label>case_report_frequency</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>daily</fullName>
+                <default>false</default>
+                <label>daily</label>
+            </value>
+            <value>
+                <fullName>weekly</fullName>
+                <default>false</default>
+                <label>weekly</label>
+            </value>
+            <value>
+                <fullName>monthly</fullName>
+                <default>false</default>
+                <label>monthly</label>
+            </value>
+            <value>
+                <fullName>opt-out</fullName>
+                <default>false</default>
+                <label>opt-out</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

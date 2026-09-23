@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_of_Credits_for_the_Product__c</fullName>
+    <description>The Quantity of Credits that are granted for the product. This quantity will be replace the value in the Quantity Purchased field. Jira ticket SS-12597.</description>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Product__r.LicenseMetric__c) = &apos;Credits&apos;, Product__r.Quantity_of_Credits__c, NULL)</formula>
+    <inlineHelpText>The Quantity of Credits that are granted for the product. This quantity will be replace the value in the Quantity Purchased field. Jira ticket SS-12597.</inlineHelpText>
+    <label>Quantity of Credits for the Product</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

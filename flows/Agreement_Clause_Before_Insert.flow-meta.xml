@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Value</name>
+        <label>Assign Value</label>
+        <locationX>440</locationX>
+        <locationY>392</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Text_Contains_Keywords__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Text_contains_keywords</name>
+        <label>Text contains keywords?</label>
+        <locationX>279</locationX>
+        <locationY>393</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Contains_Keywords</name>
+            <conditionLogic>(1 OR 2) AND NOT(3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Apttus__Text__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Degrad</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Apttus__Text__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Diminish</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Apttus__Text__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Critical Error</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Value</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Agreement Clause - Before Insert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Agreement Clause - Before Insert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>161</locationX>
+        <locationY>108</locationY>
+        <connector>
+            <targetReference>Text_contains_keywords</targetReference>
+        </connector>
+        <object>Apttus__Agreement_Clause__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

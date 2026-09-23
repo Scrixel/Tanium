@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cloned_record_must_be_in_Draft</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCLONE() &amp;&amp; ISNEW() &amp;&amp; !ISPICKVAL(Status__c, &quot;Draft&quot;)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Please make sure Status is Draft before saving.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SQL_Server_Version__c</fullName>
+    <description>The version of SQL Server (e.g., &quot;SQL Server 2008R2 Express&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter full name of the database software, including Release and Service Pack levels when known, for example:  
+SQL Server 2008 R2 Express, SQL Server 2012 SP2, etc.</inlineHelpText>
+    <label>SQL Server Version</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

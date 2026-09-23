@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Request_Partner_Accounts_Check</fullName>
+    <active>true</active>
+    <description>We need existing record to have the correct new record types.
+custom label-Account_Record_Type_Client used.</description>
+    <errorConditionFormula>AND(
+OR(
+(RecordType.DeveloperName = &quot;Partner_On_Prem&quot;),
+(RecordType.Name=&quot;Partner: Tanium Cloud&quot;)
+),
+  Account__r.RecordType.DeveloperName  &lt;&gt; &quot;Partner&quot;, 
+NOT($Permission.DisableValidationRules)
+)
+
+/*
+AND(
+(RecordType.DeveloperName = &quot;Partner_On_Prem&quot;),
+
+(NOT(ISPICKVAL(Account__r.Type,&quot;MSP partner&quot;)))
+
+)
+*/</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>You are using a Partner POC record type. The Account must also be a Partner record type. The Account you’ve selected does not meet the requirement</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Expiry_Date_New_Opp_Reg__c</fullName>
+    <description>Expiry Date for new Opp Reg Approval.
+INC0161411- FLS changed..</description>
+    <inlineHelpText>Expiry Date for new Deal approval</inlineHelpText>
+    <label>Expiry Date - New Deal Reg</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

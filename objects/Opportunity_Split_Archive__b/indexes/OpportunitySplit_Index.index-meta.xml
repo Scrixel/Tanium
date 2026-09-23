@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Index xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpportunitySplit_Index</fullName>
+    <fields>
+        <name>SplitID__c</name>
+        <sortDirection>ASC</sortDirection>
+    </fields>
+    <fields>
+        <name>OpportunityID__c</name>
+        <sortDirection>ASC</sortDirection>
+    </fields>
+    <label>OpportunitySplit Index</label>
+</Index>

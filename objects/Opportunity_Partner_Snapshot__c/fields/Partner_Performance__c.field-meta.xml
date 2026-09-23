@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Performance__c</fullName>
+    <label>Partner Performance</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Over-Performing</fullName>
+                <default>false</default>
+                <label>Over-Performing</label>
+            </value>
+            <value>
+                <fullName>Performing</fullName>
+                <default>false</default>
+                <label>Performing</label>
+            </value>
+            <value>
+                <fullName>Under-Performing</fullName>
+                <default>false</default>
+                <label>Under-Performing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

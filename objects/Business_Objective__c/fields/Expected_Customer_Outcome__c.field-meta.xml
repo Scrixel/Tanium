@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Customer_Outcome__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <inlineHelpText>Describe the specific results your customer would like to achieve with Tanium eg: Reduce patch time to two weeks and improve patch efficacy to 98%.</inlineHelpText>
+    <label>DEPRECATED - Metrics/Customer Outcome</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

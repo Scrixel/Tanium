@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapped_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>If partner account already exist, please enter the info here.</inlineHelpText>
+    <label>Mapped Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Partner Inquiries</relationshipLabel>
+    <relationshipName>Partner_Inquiries_Mapped_Account</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

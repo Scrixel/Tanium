@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OTV_1__c</fullName>
+    <description>Used in SFDC/xactly integration. Populated by Boomi from SuccessFactor.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated from SuccessFactor by Boomi. This is not a user updated field.</inlineHelpText>
+    <label>Total OTV</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_Field_Label__c</fullName>
+    <description>The API name of the field on the POC Request form. This will be used for lookup in Apex</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The API name of the field on the POC Request form. This will be used for lookup in Apex</inlineHelpText>
+    <label>POC Field Label</label>
+    <length>50</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

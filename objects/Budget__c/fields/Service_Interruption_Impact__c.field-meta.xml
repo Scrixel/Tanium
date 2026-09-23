@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Interruption_Impact__c</fullName>
+    <inlineHelpText>How severe would the impact be if access to application (and our data within) was interrupted or unavailable for more than 24 hours? *</inlineHelpText>
+    <label>Service Interruption Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High (The most impact on the organization, mission, and other networks and systems. The business cannot function if the service is down for more than 24 hours.)</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium (A moderate problem to the organization and possibly other networks or systems. Affects a smaller subset of users.)</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low (Little impact, damage or disruption to the organization. No loss, but lost efficiency. Alternative software or manual process would exist.)</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

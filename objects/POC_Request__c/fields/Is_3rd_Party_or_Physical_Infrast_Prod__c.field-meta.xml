@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_3rd_Party_or_Physical_Infrast_Prod__c</fullName>
+    <description>Evaluates if Is 3rd party or Physical Infrastructure Product on POC. [This needs to be kept up to date with the product checkboxes.] This field is being used in the approval process to identify whether the product is 3rd party or Physical Infrastructure Product on POC on the section on the &apos;On-Prem page&apos; layout.</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(
+Chronicle__c = TRUE,
+Deep_Instinct__c = TRUE,
+NOT( ISBLANK( Tracking_Number__c )),
+
+VALUE(TAN_S_330_CP_Quantity__c) &gt;1,
+VALUE(TAN_S_335_FB_Quantity__c) &gt;1,
+VALUE(TAN_M_430_CP_Quantity__c) &gt;1,
+VALUE(TAN_M_435_FB_Quantity__c) &gt;1,
+VALUE(TAN_L_730_CP_Quantity__c) &gt;1,
+VALUE(TAN_L_735_FB_Quantity__c) &gt;1,
+VALUE(TAN_XL_930_CP_Quantity__c) &gt;1, 
+VALUE(TAN_XL_935_FB_Quantity__c) &gt;1), &quot;TRUE &quot;,&quot;&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is 3rd Party or Physical Infrast Prod?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

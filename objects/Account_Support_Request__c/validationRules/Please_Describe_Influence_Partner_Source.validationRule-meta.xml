@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Please_Describe_Influence_Partner_Source</fullName>
+    <active>true</active>
+    <description>If &quot;Influence Partner Sourced&quot; field = &quot;Yes&quot;, THEN &quot;Please describe&quot; field is required</description>
+    <errorConditionFormula>ISPICKVAL(Influence_Partner_Sourced__c, &apos;Yes&apos;)&amp;&amp;
+ISBLANK( Please_describe__c )</errorConditionFormula>
+    <errorDisplayField>Please_describe__c</errorDisplayField>
+    <errorMessage>If &quot;Influence Partner Sourced&quot; field = &quot;Yes&quot;, THEN &quot;Please describe&quot; field is required</errorMessage>
+</ValidationRule>

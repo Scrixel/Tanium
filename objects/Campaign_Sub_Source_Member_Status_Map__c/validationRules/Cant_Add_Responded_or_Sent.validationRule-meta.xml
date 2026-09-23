@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Add_Responded_or_Sent</fullName>
+    <active>true</active>
+    <description>Responded and Sent are default campaign member statuses, so there&apos;s no need to create a record for them</description>
+    <errorConditionFormula>OR(
+     ISPICKVAL(Member_Status_Label__c,&quot;Sent&quot;),
+     ISPICKVAL(Member_Status_Label__c,&quot;Responded&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Member_Status_Label__c</errorDisplayField>
+    <errorMessage>Responded and Sent are standard Salesforce Campaign Member Statuses. You do not need to create a record for them.</errorMessage>
+</ValidationRule>

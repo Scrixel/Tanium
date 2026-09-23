@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approximate_Displacement_Date__c</fullName>
+    <description>https://tanium.lightning.force.com/lightning/r/Case/5000e00001mr199AAA/view
+Date is required when the user chooses “Partial” or “Full” from *Displacement Stage* dropdown.</description>
+    <label>Approximate Displacement Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

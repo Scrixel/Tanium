@@ -1,0 +1,1797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Contract_Partner_Owner_Management</fullName>
+    <active>true</active>
+    <description>Record Type for Oppty Contract / Partner Owner Management Assignments</description>
+    <label>Oppty Contract / Partner Owner Management</label>
+    <picklistValues>
+        <picklist>Booked_ARR_Scale__c</picklist>
+        <values>
+            <fullName>%3C 250 K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%3E%3D 250 K</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Geo__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS SLED and PS Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_MM_COMM and WW_Channel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_2__c</picklist>
+        <values>
+            <fullName>APJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global HQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US%2FUK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS SLED</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_3__c</picklist>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASEAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alliances %26 Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Southern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global MSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM%3A Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Emerging Enterprises</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Northwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Southwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US%2FUK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_4__c</picklist>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANZ%3A Emerging Enterprises</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANZ%3A Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANZ%3A Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASEAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alliances %26 Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benelux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central%3A Great Lakes Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central%3A Heartland Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central%3A Midwest Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central%3A Ohio Valley Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA FSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA Global Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA National Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Emerging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Middle East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA%3A Southern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA-R</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Enterprises%3A Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Enterprises%3A Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Enterprises%3A Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Enterprises%3A West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fed%3A Civilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fed%3A DOD-IC-FSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France %26 Iberia Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France %26 Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan - Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Globals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Mid Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A New England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A New York Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Northeast Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast%3A Vertical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest%3A Great Lakes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest%3A Heartland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest%3A Midwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northwest%3A Pacific Northwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED%3A Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED%3A Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED%3A Northeast PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED%3A Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED%3A West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South%3A Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Blue Ridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Central Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Ohio Valley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A South Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Southeast Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Southeast Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A Southern Coastal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast%3A TOLA Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest%3A NorCal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest%3A SoCalMTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwest%3A TAO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Major %2B Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Mid-Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Commercial%3A East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Commercial%3A West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Emerging Enterprises</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MSP East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MSP West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market%3A Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market%3A Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market%3A Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market%3A Southwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Northwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Southwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada National Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada Partner Tech Alliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US%2FUK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Enterprise%3A California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Enterprise%3A MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Enterprise%3A PNW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Focus%3A California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Focus%3A PNW %26 MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Focus%3A TOLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Focus%3A Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Type__c</picklist>
+        <values>
+            <fullName>Expansion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HFPOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal %26 Change Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New MSP End User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ramp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Split</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training %26 Tanium Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_APAC HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_Japan HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Emerging Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Southern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_Global MSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_MSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US Federal and Sled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada_MM-Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada_Maj-Ent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK_MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-UK MM and Commercial HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS Federal HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS SLED and PS Canada HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Mid-Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 1K Account Records</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Route_Based_on_RVP_or_AVP__c</picklist>
+        <values>
+            <fullName>AVP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RVP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Region__c</picklist>
+        <values>
+            <fullName>ALPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC_ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC_ASEAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC_South Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_APAC HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APJ_Japan HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASEAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benelux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brasil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brasil_Rio_Gov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe_North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe_South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel_US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA Central MSP PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA EM_Central and East Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA EM_Middle East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA EM_North Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA EM_South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA EM_Sub-Saharan Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA National Partners PAM_1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA National Partners PAM_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA North MSP PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Central Europe Channel PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Northern Europe Benelux Channel PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Northern Europe UK Channel PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Southern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Southern Europe France Channel PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA_Southern Europe Spain Channel PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fed_Civilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fed_DOD-IC-FSI 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fed_DOD-IC-FSI 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France and Iberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France and Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI PAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI PAM EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI PAM US and Canada_1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global GSI PAM US and Canada_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Sales HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global _GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_GB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_SA1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_SA2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_SA3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan_SA4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America PFS Brasil Gov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America PFS Brasil_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America PFS LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America PFS MX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America PFS Non MX_Brasil_Rio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non MX_Brasil_Rio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast_FinServ-NY Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast_Great Lakes-Ohio Valley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast_New England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast_Tri-State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe_Benelux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe_UK Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe_UK Major and Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe_UK Public Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_GSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_Global MSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US Federal and Sled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada_MM-Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner_US and Canada_Maj-Ent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_Central PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_East PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLED_West PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast_Central Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast_Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast_South Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast_TAO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Europe_France and Iberia Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Europe_France and Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Customer and Nordics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK MM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Mid-Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Public Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK Strategic Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central_Great Lakes Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central_North Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central_North Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central_South Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Central_South Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Commercial_East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Commercial_West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East_Mid-Atlantic Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East_Northeast Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East_Northeast Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East_Southeast Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US East_Southeast Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal PFS_1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal PFS_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal PFS_3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal_Civilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Federal_DOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MM and Commercial HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MSP East PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MSP West PFS_1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US MSP West PFS_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market_Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market_Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market_Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mid-Market_Southwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US SLED West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Canada Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Canada_PS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_East Canada Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_East Canada MM and Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_East Canada_PS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Northwest Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Northwest Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Southwest Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_Southwest Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_West Canada Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_West Canada MM and Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West_West Canada_PS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada National Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada National Partners PAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and Canada Velocity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-UK MM and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-UK MM and Commercial HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS Federal HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS SLED and PS Canada HA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Central_Maj-Ent PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_MM_COM_PFS_1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_MM_COM_PFS_2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_MM_COM_PFS_3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_MM_COM_PFS_4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_Southeast_PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US_West_PFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 1K Account Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West_Heartland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West_NorCal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West_North Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West_PNW-MTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West_Southwest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>old_Opportunity_Type__c</picklist>
+        <values>
+            <fullName>Add-on</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add-on %26 Upsell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HFPOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Module Add-on</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Named MSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Named Resale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ramp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal %26 Add-on</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal %26 Add-on %26 Upsell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal %26 Upsell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncommitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upsell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

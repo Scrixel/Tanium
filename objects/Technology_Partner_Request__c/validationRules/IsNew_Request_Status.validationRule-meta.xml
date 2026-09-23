@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsNew_Request_Status</fullName>
+    <active>true</active>
+    <description>If the record ISNEW, a validation rule should only allow the record to be created with a “Request Status” value of “Draft” or “Pending Assignment”.</description>
+    <errorConditionFormula>ISNEW() &amp;&amp;
+NOT($Permission.DisableValidationRules) &amp;&amp;
+NOT(
+  ISPICKVAL(Request_Status__c, &quot;Draft&quot;) || 
+  ISPICKVAL(Request_Status__c, &quot;Pending Assignment&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Request_Status__c</errorDisplayField>
+    <errorMessage>Only &quot;Draft&quot; or &quot;Pending Assignment&quot; can be selected as the Request Status for new records.</errorMessage>
+</ValidationRule>

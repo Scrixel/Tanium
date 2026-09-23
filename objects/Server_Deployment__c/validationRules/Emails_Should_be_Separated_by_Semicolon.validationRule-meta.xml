@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Emails_Should_be_Separated_by_Semicolon</fullName>
+    <active>true</active>
+    <description>SS-1008: Server Deployment Field Addition</description>
+    <errorConditionFormula>NOT( ISBLANK(License_delivery_email_tertiary__c) ) &amp;&amp;
+NOT( REGEX(substitute(trim(License_delivery_email_tertiary__c ),&apos; &apos;,&apos;&apos;), &quot;^([a-zA-Z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+(\\.[a-zA-Z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.([a-zA-Z]{2,})){1}(;[a-zA-Z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+(\\.[a-zA-Z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.([a-zA-Z]{2,}))*$&quot; )) &amp;&amp;
+NOT($Permission.DisableValidationRules)
+
+
+
+
+
+/*
+NOT( ISBLANK(License_delivery_email_tertiary__c) ) &amp;&amp;
+NOT( REGEX(substitute(trim(License_delivery_email_tertiary__c ),&apos; &apos;,&apos;&apos;), &quot;^([a-z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+(\\.[a-z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*\\.([a-z]{2,})){1}(;[a-z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+(\\.[a-z0-9,!#\\$%&amp;&apos;\\*\\+/=\\?\\^_`\\{\\|}~-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*\\.([a-z]{2,}))*$&quot; ))
+*/</errorConditionFormula>
+    <errorMessage>License delivery email (tertiary) should be separated by a semicolon &quot;;&quot;</errorMessage>
+</ValidationRule>

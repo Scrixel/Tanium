@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TRA_Not_in_Use_Detail_Required</fullName>
+    <active>true</active>
+    <description>If the TRA In Use? flag is not checked, the reason field is required.</description>
+    <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Tanium System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;API Only Integration Admin&quot;,
+$Profile.Name &lt;&gt; &quot;API Only Integration&quot;,
+
+RecordType.Name &lt;&gt; &quot;Live Lab Environment POC&quot;,
+				
+ISNEW(),
+
+NOT(TRA_In_Use__c),
+
+ISBLANK(TRA_Not_in_Use_Detail__c))</errorConditionFormula>
+    <errorMessage>Reason must be supplied if TRA is not in use.</errorMessage>
+</ValidationRule>

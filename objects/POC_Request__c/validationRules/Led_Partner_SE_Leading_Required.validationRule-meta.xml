@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Led_Partner_SE_Leading_Required</fullName>
+    <active>true</active>
+    <description>The Contact of Partner SE Leading is required when the POC is being led by a partner.</description>
+    <errorConditionFormula>(RecordType.DeveloperName = &quot;Standard&quot; || RecordType.DeveloperName = &quot;TaaS&quot;) &amp;&amp; ISPICKVAL(POC_Led_By__c, &quot;Partner&quot;) &amp;&amp; ISBLANK(Contact_of_Partner_SE_Leading__c) &amp;&amp; (isNew() || DATEVALUE( CreatedDate ) &gt; DATEVALUE(&quot;2023-08-10&quot;))</errorConditionFormula>
+    <errorDisplayField>Contact_of_Partner_SE_Leading__c</errorDisplayField>
+    <errorMessage>Please specify Contact of Partner SE Leading</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_Allocated__c</fullName>
+    <defaultValue>(0)</defaultValue>
+    <description>The amount of modules that have been licensed to the customer.  Jira ticket SS-10388</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The amount of modules that have been licensed to the customer.</inlineHelpText>
+    <label>Quantity Allocated</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

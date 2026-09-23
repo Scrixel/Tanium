@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Entry_DateTime__c</fullName>
+    <description>The Date and Time that the record entered the Contact Stage. Jira ticket   SS-12159</description>
+    <inlineHelpText>The Date and Time that the record entered the Contact Stage.</inlineHelpText>
+    <label>Stage Entry DateTime</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

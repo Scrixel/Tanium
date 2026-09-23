@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_with</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Uplift_Percent__c</columns>
+    <columns>Approval_Uplift_Percent__c</columns>
+    <columns>First_Renewal_Uplift__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Segment with %</label>
+    <language>en_US</language>
+</ListView>

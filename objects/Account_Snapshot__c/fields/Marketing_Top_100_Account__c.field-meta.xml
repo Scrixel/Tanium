@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Top_100_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identified as a Top 100 account for Marketing to target</description>
+    <inlineHelpText>Identified as a Top 100 account for Marketing to target</inlineHelpText>
+    <label>Marketing Top 100 Account</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

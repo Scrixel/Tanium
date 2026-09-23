@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UserOrGroupId__c</fullName>
+    <description>Public Group or User ID (use a comma-delimited list for multiple Ids)</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enter the share ID - Public Group or User ID (use a comma-delimited list for multiple IDs)</inlineHelpText>
+    <label>UserOrGroupId</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

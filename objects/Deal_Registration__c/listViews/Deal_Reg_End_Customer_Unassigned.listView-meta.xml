@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Reg_End_Customer_Unassigned</fullName>
+    <columns>NAME</columns>
+    <columns>Company_Name__c</columns>
+    <columns>OR_Created_Date__c</columns>
+    <columns>wi_Associated_Partner__c</columns>
+    <columns>Countries__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>or_Opp_Reg_Status__c</field>
+        <operation>equals</operation>
+        <value>New,Pending</value>
+    </filters>
+    <label>Deal Reg End Customer Unassigned</label>
+</ListView>

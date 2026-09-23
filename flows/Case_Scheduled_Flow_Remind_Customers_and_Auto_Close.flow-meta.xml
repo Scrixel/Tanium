@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Korea_Send_reminder_12d</name>
+        <label>Korea Send reminder 12d</label>
+        <locationX>1050</locationX>
+        <locationY>516</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Mark_as_Solved</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>senderAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Follow up on Tanium Case #{!$Record.CaseNumber} </stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>KoreaDay12TextTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Korea_Send_reminder_4d_8d</name>
+        <label>Korea Send reminder 4d &amp;8d</label>
+        <locationX>437</locationX>
+        <locationY>512</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Case_Record</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>senderAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Follow up on Tanium Case #{!$Record.CaseNumber} </stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>KoreaDays4and8TextTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_reminder_12d</name>
+        <label>Send reminder 12d</label>
+        <locationX>1293</locationX>
+        <locationY>438</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Mark_as_Solved</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>senderAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Follow up on Tanium Case #{!$Record.CaseNumber} </stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>day12texttemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_reminder_4d_and_8d</name>
+        <label>Send reminder 4d &amp;8d</label>
+        <locationX>287</locationX>
+        <locationY>437</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Case_Record</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>senderAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Follow up on Tanium Case #{!$Record.CaseNumber} </stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>days4and8texttemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>Email sender address</description>
+        <name>senderAddress</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>support@tanium.com</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Check_Last_Customer_Response_Date</name>
+        <label>Check Last Customer Response Date</label>
+        <locationX>768</locationX>
+        <locationY>447</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Last_Customer_Response_Date_4_or_8</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>4.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>8.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Case_Feed.CreatedDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Customer_Response_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LastResponseDate_count</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_IsSupportModelKorea</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_reminder_4d_and_8d</targetReference>
+            </connector>
+            <label>Last Response = 4d or 8d</label>
+        </rules>
+        <rules>
+            <name>Korea_Last_Response_4d_or_8d</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>4.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>8.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Case_Feed.CreatedDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Customer_Response_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LastResponseDate_count</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_IsSupportModelKorea</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Korea_Send_reminder_4d_8d</targetReference>
+            </connector>
+            <label>Korea Last Response = 4d or 8d</label>
+        </rules>
+        <rules>
+            <name>Check_Last_Customer_Response_Date_12</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>12.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Case_Feed.CreatedDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Customer_Response_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LastResponseDate_count</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_IsSupportModelKorea</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_reminder_12d</targetReference>
+            </connector>
+            <label>Last Response = 12d</label>
+        </rules>
+        <rules>
+            <name>Korea_Last_Response_12d</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Formula_LastCustomerResponseDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>12.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Case_Feed.CreatedDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_Customer_Response_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LastResponseDate_count</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_IsSupportModelKorea</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Korea_Send_reminder_12d</targetReference>
+            </connector>
+            <label>Korea Last Response = 12d</label>
+        </rules>
+    </decisions>
+    <description>09.10.25: SS-11030 - Auto-close, auto-response in Korean Language for Korean Support Models
+09.09.25: SS-11344 - Update Last Response Date field after sending of email.
+08.14.24: SS-8784 - Revise initial start of countdown.
+08.14.24: SS-8711 - Set Resolution code to non-responsive customer when a case is auto closed.
+Nightly run that reminds customers of stale cases at day3, day6, &amp; day 9. Then closes case after day9 reminder.
+08.14.24: SS-8711 - Set Resolution code to non-responsive customer when a case is auto closed.
+11.07.24:   SS-8831 - senderAddress moved to constant variable</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_IsSupportModelKorea</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(CONTAINS({!$Record.Support_Model__c},&quot;Korea&quot;),TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>Formula_LastCustomerResponseDate</name>
+        <dataType>Number</dataType>
+        <expression>TODAY()-DATEVALUE({!$Record.Last_Customer_Response_Date__c})</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_LastResponseDate_count</name>
+        <dataType>Number</dataType>
+        <expression>TODAY()-DATEVALUE({!$Record.Last_Response_Date__c})</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>Now_Val</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>Case - Scheduled Flow - Remind Customers and Auto Close {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Scheduled Flow - Remind Customers and Auto Close</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Case_Feed</name>
+        <label>Get Case Feed</label>
+        <locationX>776</locationX>
+        <locationY>300</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Last_Customer_Response_Date</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CaseFeed</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Mark the Case as Solved after not hearing from the customer for 9 days</description>
+        <name>Mark_as_Solved</name>
+        <label>Mark as Solved</label>
+        <locationX>1150</locationX>
+        <locationY>723</locationY>
+        <inputAssignments>
+            <field>Last_Response_Date__c</field>
+            <value>
+                <elementReference>Now_Val</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Resolution_Code__c</field>
+            <value>
+                <stringValue>Non-responsive customer</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Solved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_Record</name>
+        <label>Update Case Record</label>
+        <locationX>340</locationX>
+        <locationY>729</locationY>
+        <inputAssignments>
+            <field>Last_Response_Date__c</field>
+            <value>
+                <elementReference>Now_Val</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_Case_Feed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Send_Reminder_Auto_Close__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>First_Assigned_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>First_Response_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <dateTimeValue>2024-07-19T04:00:00.000Z</dateTimeValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2024-06-09</startDate>
+            <startTime>17:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>CaseFeedUpdate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Automated email reminder sent to customer.&lt;/p&gt;&lt;p&gt;Case hasn&apos;t been updated since {!$Record.Last_Customer_Response_Date__c}&lt;/p&gt;&lt;p&gt;We&apos;ll close the Case at 9 days after Last Customer Response Date if there&apos;s no further interaction.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>day12texttemplate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Contact.FirstName},
+We are reaching out regarding your Tanium Support Case #{!$Record.CaseNumber} - {!$Record.Subject}.
+We have not heard from you since {!$Record.Last_Customer_Response_Date__c} and this case will be closed today as we can take no further action at this time.
+Should you still need assistance after the case is closed you have seven days to reply and reopen the case. After the seven days the case will permanently close and a new case will need to be opened.
+Kindest regards,
+Tanium Support</text>
+    </textTemplates>
+    <textTemplates>
+        <name>days4and8texttemplate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Contact.FirstName},
+We are reaching out regarding your Tanium Support Case {!$Record.CaseNumber} – {!$Record.Subject}.
+We have not heard from you since {!$Record.Last_Customer_Response_Date__c}. Please login to help.tanium.com and open the Tanium Support Portal to review the case thread and reply accordingly or if the issue no longer persists let us know and we will resolve the case.
+If we don’t hear from you soon this case will automatically be closed as we can take no further action on it. Should you still need assistance after the case is closed you have seven (7) days to reply and reopen the case. After the seven (7) days the case will permanently close and a new case will need to be opened.
+Thank you for your prompt attention to this case.
+Kindest regards,
+Tanium Support</text>
+    </textTemplates>
+    <textTemplates>
+        <name>KoreaDay12TextTemplate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>안녕하세요. {!$Record.Contact.FirstName}님.
+
+Tanium Support Case {!$Record.CaseNumber} – {!$Record.Subject} 와 관련하여 연락 드립니다.
+
+해당 Case 는 {!$Record.Last_Customer_Response_Date__c} 이후 추가 업데이트를 받지 못하였으므로 추가 업데이트가 없을 경우 오늘 자동 Close 됨을 알려 드립니다.
+Case 가 자동 Close 되더라도 7일 이내 추가 업데이트를 주시면 해당 Case 를 이어서 지원 드릴 수 있으며, 7일 후에는 신규 Case 를 Open 하여 지원을 받으실 수 있습니다.
+관련하여 추가 문의가 있으면 회신 주시기 바랍니다.
+
+감사합니다.
+Tanium Global Support 드림.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>KoreaDays4and8TextTemplate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>안녕하세요. {!$Record.Contact.FirstName}님.
+
+Tanium Support Case {!$Record.CaseNumber} – {!$Record.Subject} 와 관련하여 연락 드립니다.
+
+해당 Case 는 {!$Record.Last_Customer_Response_Date__c} 이후 추가 업데이트를 받지 못하였으므로 추가 업데이트가 없을 경우 조만간 자동 Close 됨을 알려 드립니다.
+Case 가 자동 Close 되더라도 7일 이내 추가 업데이트를 주시면 해당 Case 를 이어서 지원 드릴 수 있으며, 7일 후에는 신규 Case 를 Open 하여 지원을 받으실 수 있습니다.
+관련하여 추가 문의가 있으면 회신 주시기 바랍니다.
+
+감사합니다.
+Tanium Global Support 드림.</text>
+    </textTemplates>
+    <variables>
+        <description>Used to store the email template ID of the email template</description>
+        <name>EmailTemplateID</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>EmailTemplate</objectType>
+    </variables>
+    <variables>
+        <name>recordID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Record.Id</elementReference>
+        </value>
+    </variables>
+</Flow>

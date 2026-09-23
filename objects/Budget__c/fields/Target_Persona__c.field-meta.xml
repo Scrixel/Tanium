@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Persona__c</fullName>
+    <inlineHelpText>Please indicate how many attendees you expect to address with this initiative</inlineHelpText>
+    <label>Target Persona(s)</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CISO</fullName>
+                <default>false</default>
+                <label>CISO</label>
+            </value>
+            <value>
+                <fullName>CIO</fullName>
+                <default>false</default>
+                <label>CIO</label>
+            </value>
+            <value>
+                <fullName>CxO</fullName>
+                <default>false</default>
+                <label>CxO</label>
+            </value>
+            <value>
+                <fullName>VP IT Ops</fullName>
+                <default>false</default>
+                <label>VP IT Ops</label>
+            </value>
+            <value>
+                <fullName>Practitioners</fullName>
+                <default>false</default>
+                <label>Practitioners</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

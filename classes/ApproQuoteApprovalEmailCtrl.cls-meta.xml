@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <packageVersions>
+        <majorNumber>10</majorNumber>
+        <minorNumber>38</minorNumber>
+        <packageId>033KA000000XZIq</packageId>
+    </packageVersions>
+    <status>Active</status>
+</ApexClass>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Course_Name__c</fullName>
+    <description>Training Request ISR
+
+07.10.23 - Changed the field type from number to picklist per SS-4631</description>
+    <inlineHelpText>For New Hire and Partner Training</inlineHelpText>
+    <label>Training Course Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Getting Started with Tanium</fullName>
+                <default>false</default>
+                <label>Getting Started with Tanium</label>
+            </value>
+            <value>
+                <fullName>Tanium Administration</fullName>
+                <default>false</default>
+                <label>Tanium Administration</label>
+            </value>
+            <value>
+                <fullName>Tanium Advanced Install &amp; Config</fullName>
+                <default>false</default>
+                <label>Tanium Advanced Install &amp; Config</label>
+            </value>
+            <value>
+                <fullName>Tanium Cloud Deployment</fullName>
+                <default>false</default>
+                <label>Tanium Cloud Deployment</label>
+            </value>
+            <value>
+                <fullName>Tanium Custom Content</fullName>
+                <default>false</default>
+                <label>Tanium Custom Content</label>
+            </value>
+            <value>
+                <fullName>Tanium Essentials</fullName>
+                <default>false</default>
+                <label>Tanium Essentials</label>
+            </value>
+            <value>
+                <fullName>Tanium Threat Response Analyst</fullName>
+                <default>false</default>
+                <label>Tanium Threat Response Analyst</label>
+            </value>
+            <value>
+                <fullName>Working with Tanium: Core</fullName>
+                <default>false</default>
+                <label>Working with Tanium: Core</label>
+            </value>
+            <value>
+                <fullName>Working with Tanium: Endpoint Management</fullName>
+                <default>false</default>
+                <label>Working with Tanium: Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Working with Tanium: Risk &amp; Security</fullName>
+                <default>false</default>
+                <label>Working with Tanium: Risk &amp; Security</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

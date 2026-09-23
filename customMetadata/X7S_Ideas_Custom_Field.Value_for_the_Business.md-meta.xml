@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Value for the Business</label>
+    <protected>false</protected>
+    <values>
+        <field>API_Name__c</field>
+        <value xsi:type="xsd:string">Value_for_the_Business__c</value>
+    </values>
+    <values>
+        <field>Alignment__c</field>
+        <value xsi:type="xsd:string">left</value>
+    </values>
+    <values>
+        <field>Data__c</field>
+        <value xsi:type="xsd:string">Decrease Costs, Decrease Risk, Improve Efficiency, Improve Employee Experience, Improve Security, Enable Data-Driven Decision Making, Meet Compliance Requirements, Maximize Value of IT Investments, Enable Business Growth, Enable Digital Innovation</value>
+    </values>
+    <values>
+        <field>Field_Label__c</field>
+        <value xsi:type="xsd:string">Value for the Business</value>
+    </values>
+    <values>
+        <field>Info__c</field>
+        <value xsi:type="xsd:string">How would this playbook help achieve organizational goals?</value>
+    </values>
+    <values>
+        <field>Required__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">Picklist</value>
+    </values>
+</CustomMetadata>

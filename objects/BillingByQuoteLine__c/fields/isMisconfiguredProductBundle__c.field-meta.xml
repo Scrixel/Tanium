@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isMisconfiguredProductBundle__c</fullName>
+    <description>Contact COE for this misconfigured product in the bundle</description>
+    <formula>NOT(ISBLANK( TEXT(ELV_QuoteLine__r.ELV_OptionType__c ))) &amp;&amp; NOT(isBundleParent__c) &amp;&amp; NOT ( isBundledProduct__c ) &amp;&amp;  ELV_QuoteLine__r.Ruby__TotalAmount__c &gt; 0</formula>
+    <inlineHelpText>Contact COE for this misconfigured product in the bundle</inlineHelpText>
+    <label>isMisconfiguredProductBundle</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

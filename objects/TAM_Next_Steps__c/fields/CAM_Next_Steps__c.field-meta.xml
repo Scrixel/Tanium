@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAM_Next_Steps__c</fullName>
+    <description>Label change from &quot;Partner Next Steps&quot; KB-9469, Case 44152 2020-04-06</description>
+    <inlineHelpText>Label change from &quot;Partner Next Steps&quot; KB-9469, Case 44152 2020-04-06</inlineHelpText>
+    <label>Internal Partner Next Steps</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

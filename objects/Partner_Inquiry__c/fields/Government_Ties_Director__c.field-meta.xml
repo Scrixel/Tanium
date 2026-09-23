@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Government_Ties_Director__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Company director(s) has government role</description>
+    <inlineHelpText>Does any current or former director or executive officer of your company, or any employee of your company who will be involved with Tanium business, have a role as a Government Official?</inlineHelpText>
+    <label>Company director(s) has government role</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

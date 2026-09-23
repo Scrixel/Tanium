@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Case_Description__c</fullName>
+    <inlineHelpText>Longer description of the use case that provides more detailed information about what is needed to successfully implement this use case and/or the value the use case provides.</inlineHelpText>
+    <label>Use Case Description</label>
+    <length>32000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Article_Number_Visible__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether the &quot;Article Number&quot; is visible on the custom Knowledge Article Detail component</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Indicates whether the &quot;Article Number&quot; is visible on the custom Knowledge Article Detail component</inlineHelpText>
+    <label>Article Number Visible?</label>
+    <type>Checkbox</type>
+</CustomField>

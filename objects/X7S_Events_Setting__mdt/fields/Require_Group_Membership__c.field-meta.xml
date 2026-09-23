@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Group_Membership__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Require group membership for all group-related Event items</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>When creating or editing an event, a group must be selected. Posting without group assignment (general) can be enabled by assigning the 7S Event Post to General custom permission or the Post to General Permission Set name specified in CMT.</inlineHelpText>
+    <label>Require Group Membership</label>
+    <type>Checkbox</type>
+</CustomField>

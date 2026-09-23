@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Create_Opportunity_Partner</fullName>
+    <active>true</active>
+    <description>All Profiles, except “Tanium Partner Portal Admin”, should NOT be able to create a record if in the field of “Partner Role”, the value of “Influencer” is selected. Sales System ID-0050e000005czlJAAQ</description>
+    <errorConditionFormula>NOT( $Permission.DisableValidationRules ) &amp;&amp;
+Opportunity__r.RecordType.Name != &apos;Ramp&apos; &amp;&amp;
+(
+NOT( $Profile.Name = &apos;Tanium Partner Portal Admin&apos;)&amp;&amp; ISNEW() &amp;&amp;
+ISPICKVAL(Partner_Role__c, &apos;Influencer&apos;)
+)
+
+&amp;&amp;
+(
+NOT( CreatedBy.X18D_ID__c = &quot;0050e000005czlJAAQ&quot;) &amp;&amp; ISNEW() &amp;&amp;
+ISPICKVAL(Partner_Role__c, &apos;Influencer&apos;)
+)</errorConditionFormula>
+    <errorMessage>Please submit an Influence Partner Registration ISR in order to add this Influencer. Contact ChannelOps@tanium.com for any questions.</errorMessage>
+</ValidationRule>

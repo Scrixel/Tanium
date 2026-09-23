@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaaS_Region__c</fullName>
+    <description>Case 56132 Sophie Xu, Mo Patel:  Move TaaS fields from Opp to Server Deployment</description>
+    <label>DEPRECATED - Cloud Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>US-West-2</fullName>
+                <default>true</default>
+                <label>US-West-2</label>
+            </value>
+            <value>
+                <fullName>us-gov-west-1 (United States)</fullName>
+                <default>false</default>
+                <label>us-gov-west-1 (United States)</label>
+            </value>
+            <value>
+                <fullName>AP-Northeast-1 (Japan)</fullName>
+                <default>false</default>
+                <label>AP-Northeast-1 (Japan)</label>
+            </value>
+            <value>
+                <fullName>EU-Central-1 (Germany)</fullName>
+                <default>false</default>
+                <label>EU-Central-1 (Germany)</label>
+            </value>
+            <value>
+                <fullName>ap-southeast-2 (Australia)</fullName>
+                <default>false</default>
+                <label>ap-southeast-2 (Australia)</label>
+            </value>
+            <value>
+                <fullName>eu-west-2 (England)</fullName>
+                <default>false</default>
+                <label>eu-west-2 (England)</label>
+            </value>
+            <value>
+                <fullName>sa-east-1 (Brazil)</fullName>
+                <default>false</default>
+                <label>sa-east-1 (Brazil)</label>
+            </value>
+            <value>
+                <fullName>ca-central-1 (Canada)</fullName>
+                <default>false</default>
+                <label>ca-central-1 (Canada)</label>
+            </value>
+            <value>
+                <fullName>AP-Northeast-1 (Tokyo)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AP-Northeast-1 (Tokyo)</label>
+            </value>
+            <value>
+                <fullName>EU-Central-1 (Frankfurt)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EU-Central-1 (Frankfurt)</label>
+            </value>
+            <value>
+                <fullName>US-West-2 (Oregon)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>US-West-2 (Oregon)</label>
+            </value>
+            <value>
+                <fullName>US-West-2 (United States)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>US-West-2 (United States)</label>
+            </value>
+            <value>
+                <fullName>ap-southeast-1 (Singapore)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ap-southeast-1 (Singapore)</label>
+            </value>
+            <value>
+                <fullName>ap-southeast-2 (Sydney)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ap-southeast-2 (Sydney)</label>
+            </value>
+            <value>
+                <fullName>au (Australia)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>au (Australia)</label>
+            </value>
+            <value>
+                <fullName>br (Brazil)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>br (Brazil)</label>
+            </value>
+            <value>
+                <fullName>ca (Canada)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ca (Canada)</label>
+            </value>
+            <value>
+                <fullName>de (Germany)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>de (Germany)</label>
+            </value>
+            <value>
+                <fullName>gb (England)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>gb (England)</label>
+            </value>
+            <value>
+                <fullName>gov (United States)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>gov (United States)</label>
+            </value>
+            <value>
+                <fullName>jp (Japan)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>jp (Japan)</label>
+            </value>
+            <value>
+                <fullName>us (United States)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>us (United States)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Visit_Meeting_Type_Required</fullName>
+    <active>true</active>
+    <description>Upon completing Onsite Visits, the Meeting Type is required.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Sub_Type__c,&quot;Sustainability - Onsite Visit&quot;)
+&amp;&amp;
+ISPICKVAL(Status__c,&quot;Completed&quot;)
+&amp;&amp;
+ISPICKVAL(Meeting_Type__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Meeting_Type__c</errorDisplayField>
+    <errorMessage>Upon completing Onsite Visits, the Meeting Type is required.</errorMessage>
+</ValidationRule>

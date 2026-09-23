@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELV_Source__c</fullName>
+    <description>A hyperlink to the source record from which the Account Entitlement was created SS-13765</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Account_Entitlement__r.Source_NFR__c)), &quot;NFR: &quot; &amp; HYPERLINK(&quot;/&quot; &amp; Account_Entitlement__r.Source_NFR__c, Account_Entitlement__r.Source_NFR__r.Name), IF(NOT(ISBLANK(Account_Entitlement__r.Source_POC_Request__c)), &quot;POC: &quot; &amp; HYPERLINK(&quot;/&quot; &amp; Account_Entitlement__r.Source_POC_Request__c, Account_Entitlement__r.Source_POC_Request__r.Name), IF(NOT(ISBLANK(Account_Entitlement__r.ELV_Source_Subscription__c)), &quot;Subscription: &quot; &amp; HYPERLINK(&quot;/&quot; &amp; Account_Entitlement__r.ELV_Source_Subscription__c, Account_Entitlement__r.ELV_Source_Subscription__r.Name), NULL)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>A hyperlink to the source record from which the Account Entitlement was created</inlineHelpText>
+    <label>Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

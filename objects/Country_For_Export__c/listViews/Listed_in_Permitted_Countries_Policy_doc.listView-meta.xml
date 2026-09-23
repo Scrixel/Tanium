@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listed_in_Permitted_Countries_Policy_doc</fullName>
+    <columns>NAME</columns>
+    <columns>Business_Allowed__c</columns>
+    <columns>Partner_Permitted__c</columns>
+    <columns>License_Approved__c</columns>
+    <columns>Business_Travel_Approved__c</columns>
+    <columns>Country_Restrictions__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Listed_in_Permitted_Countries_Policy_Doc__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Listed in Permitted Countries Policy doc</label>
+</ListView>

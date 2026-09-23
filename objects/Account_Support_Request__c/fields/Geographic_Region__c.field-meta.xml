@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geographic_Region__c</fullName>
+    <label>Geographic Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Americas &amp; LATAM</fullName>
+                <default>false</default>
+                <label>Americas &amp; LATAM</label>
+            </value>
+            <value>
+                <fullName>Asia North</fullName>
+                <default>false</default>
+                <label>Asia North</label>
+            </value>
+            <value>
+                <fullName>Asia South</fullName>
+                <default>false</default>
+                <label>Asia South</label>
+            </value>
+            <value>
+                <fullName>Dach</fullName>
+                <default>false</default>
+                <label>Dach</label>
+            </value>
+            <value>
+                <fullName>EMEA North</fullName>
+                <default>false</default>
+                <label>EMEA North</label>
+            </value>
+            <value>
+                <fullName>EMEA South</fullName>
+                <default>false</default>
+                <label>EMEA South</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

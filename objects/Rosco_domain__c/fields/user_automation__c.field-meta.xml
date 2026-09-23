@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>user_automation__c</fullName>
+    <label>User Registration Automation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Automation</fullName>
+                <default>false</default>
+                <label>No Automation</label>
+            </value>
+            <value>
+                <fullName>Account Only</fullName>
+                <default>false</default>
+                <label>Account Only</label>
+            </value>
+            <value>
+                <fullName>Support KB</fullName>
+                <default>false</default>
+                <label>Support KB</label>
+            </value>
+            <value>
+                <fullName>Support Case</fullName>
+                <default>false</default>
+                <label>Support Case</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

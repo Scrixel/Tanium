@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Influence_Partner_activities__c</fullName>
+    <inlineHelpText>Select all relevant options (multi-select). What activities has the Influence Partner committed to for this opportunity?</inlineHelpText>
+    <label>Influence Partner activities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales - Intro to decision makers in target acct</fullName>
+                <default>false</default>
+                <label>Sales - Intro to decision makers in target acct</label>
+            </value>
+            <value>
+                <fullName>Sales - Position as part of integrated product/service/project</fullName>
+                <default>false</default>
+                <label>Sales - Position as part of integrated product/service/project</label>
+            </value>
+            <value>
+                <fullName>Sales - Transact business: resell, managed services</fullName>
+                <default>false</default>
+                <label>Sales - Transact business: resell, managed services</label>
+            </value>
+            <value>
+                <fullName>Sales - Provide critical endorsements to gain advantage</fullName>
+                <default>false</default>
+                <label>Sales - Provide critical endorsements to gain advantage</label>
+            </value>
+            <value>
+                <fullName>Sales – POC Support/Lead</fullName>
+                <default>false</default>
+                <label>Sales – POC Support/Lead</label>
+            </value>
+            <value>
+                <fullName>Sales – Transact business: Resell</fullName>
+                <default>false</default>
+                <label>Sales – Transact business: Resell</label>
+            </value>
+            <value>
+                <fullName>Marketing - drive interest via events/programs/promos</fullName>
+                <default>false</default>
+                <label>Marketing - drive interest via events/programs/promos</label>
+            </value>
+            <value>
+                <fullName>Marketing – Account Based Marketing/Investment</fullName>
+                <default>false</default>
+                <label>Marketing – Account Based Marketing/Investment</label>
+            </value>
+            <value>
+                <fullName>Services - adopt/operationalize/expand use cases</fullName>
+                <default>false</default>
+                <label>Services - adopt/operationalize/expand use cases</label>
+            </value>
+            <value>
+                <fullName>Services – Strategy &amp; Transformation</fullName>
+                <default>false</default>
+                <label>Services – Strategy &amp; Transformation</label>
+            </value>
+            <value>
+                <fullName>Services – Security/Health Assessment</fullName>
+                <default>false</default>
+                <label>Services – Security/Health Assessment</label>
+            </value>
+            <value>
+                <fullName>Services – Technical Consulting/Integration</fullName>
+                <default>false</default>
+                <label>Services – Technical Consulting/Integration</label>
+            </value>
+            <value>
+                <fullName>Services – Outsourcing/Managed Services</fullName>
+                <default>false</default>
+                <label>Services – Outsourcing/Managed Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

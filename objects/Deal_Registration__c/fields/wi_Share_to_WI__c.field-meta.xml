@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wi_Share_to_WI__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>With the implementation of Zift, this WebInfinity field has been deprecated</inlineHelpText>
+    <label>DEPRECATED - Share to WI</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Active_Modules__c</fullName>
+    <description>SS-10585 Domain ISR is submitted to have a Domain Architect specialist assigned for the Required Active Modules selected. Displays all module options, and user will select those required for the ISR. Laura N or Tom M. can provide updated Module values when needed.</description>
+    <inlineHelpText>Review Active Modules field and then select the required modules for this Domain Request.</inlineHelpText>
+    <label>Required Active Modules</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Tanium_Modules</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

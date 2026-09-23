@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_info_for_Approval_Submission__c</fullName>
+    <description>Information missing for Approval Submission</description>
+    <externalId>false</externalId>
+    <formula>IF( !ISBLANK( Topics_to_Avoid__c),&quot;&quot;,&quot; Topics to Avoid; &quot;)&amp;
+/*IF( !ISBLANK( Meeting_Call_or_Email_Objective__c),&quot;&quot;,&quot; Meeting, call  or email Objective; &quot;)&amp;*/
+IF( !ISBLANK( Tanium_Sr_Advisor_Invited__c ),&quot;&quot;,&quot; Sr. Advisor&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Information missing for Approval Submission</inlineHelpText>
+    <label>Missing info for Approval Submission</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recent_Compelling_Event__c</fullName>
+    <description>Has the prospect/customer had a significant security event recently?</description>
+    <inlineHelpText>If the prospect/customer has had a significant security event recently please select all that have occurred.</inlineHelpText>
+    <label>Recent Compelling Event</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Data Breach</fullName>
+                <default>false</default>
+                <label>Data Breach</label>
+            </value>
+            <value>
+                <fullName>MRA (Matters Requiring Attention)</fullName>
+                <default>false</default>
+                <label>MRA (Matters Requiring Attention)</label>
+            </value>
+            <value>
+                <fullName>Outage</fullName>
+                <default>false</default>
+                <label>Outage</label>
+            </value>
+            <value>
+                <fullName>Ransomware Attack</fullName>
+                <default>false</default>
+                <label>Ransomware Attack</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

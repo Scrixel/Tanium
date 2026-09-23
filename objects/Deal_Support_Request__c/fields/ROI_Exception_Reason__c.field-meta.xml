@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROI_Exception_Reason__c</fullName>
+    <label>ROI Exception Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current customer (ROI already completed)</fullName>
+                <default>false</default>
+                <label>Current customer (ROI already completed)</label>
+            </value>
+            <value>
+                <fullName>Compelling event, no time prior to purchase</fullName>
+                <default>false</default>
+                <label>Compelling event, no time prior to purchase</label>
+            </value>
+            <value>
+                <fullName>Customer unwilling to participate</fullName>
+                <default>false</default>
+                <label>Customer unwilling to participate</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SR_Advisor_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Status__c,&quot;Sent to Sr. Advisor/E-Staff&quot;) || (ISPICKVAL( Status__c,&quot;Request Sent to Contact&quot;)),&quot;Sr. Advisor Introduction in Process&quot;,
+
+IF(ISPICKVAL( Status__c,&quot;Acknowledged by Contact&quot;) &amp;&amp;  ISBLANK(TEXT( Substatus__c )), &quot;Sr. Advisor Introduction in Process&quot;,
+
+IF(ISPICKVAL( Status__c,&quot;Acknowledged by Contact&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;Call or Meeting Pending&quot;), &quot;Sr. Advisor Introduction in Process&quot;,
+
+IF(ISPICKVAL( Status__c,&quot;Acknowledged by Contact&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;No Current Interest&quot;), &quot;Closed - No Current Opportunity&quot;,
+
+
+IF(ISPICKVAL( Status__c,&quot;Call or Meeting Completed&quot;) &amp;&amp;  ISBLANK(TEXT( Substatus__c )), &quot;Intro made - Active Opportunity&quot;, 
+IF(ISPICKVAL( Status__c,&quot;Call or Meeting Completed&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;Opportunity Exists&quot;), &quot;Intro made - Active Opportunity&quot;,
+IF(ISPICKVAL( Status__c,&quot;Call or Meeting Completed&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;No Current Interest&quot;), &quot;Closed - No Current Opportunity&quot;,
+
+
+IF(ISPICKVAL( Status__c,&quot;Request Completed&quot;) &amp;&amp;  ISBLANK(TEXT( Substatus__c )), &quot;Closed Won&quot;,
+
+IF(ISPICKVAL( Status__c,&quot;Request Completed&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;Closed Won&quot;),&quot;Closed Won&quot;,
+IF(ISPICKVAL( Status__c,&quot;Recalled&quot;), &quot;On Hold&quot;,
+ 
+IF(ISPICKVAL( Status__c,&quot;Request Completed&quot;) &amp;&amp;  ISPICKVAL( Substatus__c, &quot;Closed Lost&quot;), &quot;Closed - No Current Opportunity&quot;, &quot;&quot;)))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SR. Advisor Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

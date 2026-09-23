@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_User_Accepted_Phone__c</fullName>
+    <description>TAN-958: Phone number of the person accepting the disclaimer that applies to non-US delivery location countries.</description>
+    <externalId>false</externalId>
+    <label>End User Accepted Phone</label>
+    <length>20</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

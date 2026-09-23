@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dates__c</fullName>
+    <description>Formula field use to concatenate the Subscription Start Date and Subscription End Date so that we can use the field on the Right Rail Related List</description>
+    <externalId>false</externalId>
+    <formula>TEXT(MONTH(Subscription_Start_Date__c)) &amp; &quot;/&quot; &amp; TEXT(DAY(Subscription_Start_Date__c)) &amp; &quot;/&quot; &amp; TEXT(YEAR(Subscription_Start_Date__c)) &amp; &quot; to &quot; &amp; TEXT(MONTH(Subscription_End_Date__c)) &amp; &quot;/&quot; &amp; TEXT(DAY(Subscription_End_Date__c)) &amp; &quot;/&quot; &amp; TEXT(YEAR(Subscription_End_Date__c))
+
+
+/*TEXT(Subscription_Start_Date__c) &amp; &quot; to &quot; &amp; TEXT(Subscription_End_Date__c)*/</formula>
+    <label>CPQ Dates</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

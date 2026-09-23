@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Topic__c</fullName>
+    <description>The topic to apply to posts relating to the event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this topic to search for related content.</inlineHelpText>
+    <label>Event Topic</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

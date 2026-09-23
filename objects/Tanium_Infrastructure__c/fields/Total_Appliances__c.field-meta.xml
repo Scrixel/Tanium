@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Appliances__c</fullName>
+    <externalId>false</externalId>
+    <formula>TAN_220_DEV_Copper_Quantity__c + TAN_220_DEV_Fiber_Quantity__c + TAN_320_S_Copper_Quantity__c + TAN_320_S_Fiber_Quantity__c + TAN_420_M_Copper__c + TAN_420_M_FB__c + TAN_720_L_Copper_Quantity__c + TAN_720_L_Fiber_Quantity__c + TAN_920_XL_Copper__c + TAN_920_XL_Fiber_Quantity__c + TAN_CLOUD_Quantity__c + TAN_VIRTUAL_Quantity__c + TAN_S_330_CP_Quantity__c	+ TAN_M_430_CP_Quantity__c + TAN_L_730_CP_Quantity__c + TAN_XL_930_CP_Quantity__c + TAN_S_335_FB_Quantity__c + TAN_M_435_FB_Quantity__c + TAN_L_735_FB_Quantity__c + TAN_XL_935_FB_Quantity__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Appliances</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

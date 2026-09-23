@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_Staff_and_Advisor_ISRs_SLED</fullName>
+    <columns>Tanium_Sr_Advisor_Invited__c</columns>
+    <columns>Status_Bucketed__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_Type_For__c</columns>
+    <columns>Estimate_Endpoint__c</columns>
+    <columns>Opportunity_NARR__c</columns>
+    <columns>Sr_Advisor_Monthly_Updates__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Tanium_Sr_Advisor_Invited__c</field>
+        <operation>contains</operation>
+    </filters>
+    <filters>
+        <field>ISR_Owner_CIO_Strategist__c</field>
+        <operation>contains</operation>
+    </filters>
+    <label>E-Staff and Advisor ISRs | SLED</label>
+</ListView>

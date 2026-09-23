@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audience__c</fullName>
+    <label>Audience</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Executive Team (CISO, CIO, etc)</fullName>
+                <default>false</default>
+                <label>Executive Team (CISO, CIO, etc)</label>
+            </value>
+            <value>
+                <fullName>Senior Management (Director, VP, etc)</fullName>
+                <default>false</default>
+                <label>Senior Management (Director, VP, etc)</label>
+            </value>
+            <value>
+                <fullName>Analysts</fullName>
+                <default>false</default>
+                <label>Analysts</label>
+            </value>
+            <value>
+                <fullName>Team Leaders</fullName>
+                <default>false</default>
+                <label>Team Leaders</label>
+            </value>
+            <value>
+                <fullName>Administrators and Engineers</fullName>
+                <default>false</default>
+                <label>Administrators and Engineers</label>
+            </value>
+            <value>
+                <fullName>Other (please specify in objective)</fullName>
+                <default>false</default>
+                <label>Other (please specify in objective)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

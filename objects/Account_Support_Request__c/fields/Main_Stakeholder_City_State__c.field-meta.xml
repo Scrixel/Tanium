@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Stakeholder_City_State__c</fullName>
+    <description>Where are the main offices of the key stakeholders. This helps CSM allocation</description>
+    <inlineHelpText>To help with CSM allocation, list the City/State of the main office where the primary operating team is located and where the CSM will need to be located.</inlineHelpText>
+    <label>CSM Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inquiry Submitted</fullName>
+                <default>true</default>
+                <label>Inquiry Submitted</label>
+            </value>
+            <value>
+                <fullName>Inquiry Approved</fullName>
+                <default>false</default>
+                <label>Inquiry Approved</label>
+            </value>
+            <value>
+                <fullName>Inquiry Rejected</fullName>
+                <default>false</default>
+                <label>Inquiry Rejected</label>
+            </value>
+            <value>
+                <fullName>Inquiry Canceled</fullName>
+                <default>false</default>
+                <label>Inquiry Canceled</label>
+            </value>
+            <value>
+                <fullName>Account Shared to WI</fullName>
+                <default>false</default>
+                <label>Account Shared to WI</label>
+            </value>
+            <value>
+                <fullName>Enrollment WIP</fullName>
+                <default>false</default>
+                <label>Enrollment WIP</label>
+            </value>
+            <value>
+                <fullName>Enrollment Submitted</fullName>
+                <default>false</default>
+                <label>Enrollment Submitted</label>
+            </value>
+            <value>
+                <fullName>Enrollment Approved</fullName>
+                <default>false</default>
+                <label>Enrollment Approved</label>
+            </value>
+            <value>
+                <fullName>Enrollment Rejected</fullName>
+                <default>false</default>
+                <label>Enrollment Rejected</label>
+            </value>
+            <value>
+                <fullName>Partner Terminated</fullName>
+                <default>false</default>
+                <label>Partner Terminated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

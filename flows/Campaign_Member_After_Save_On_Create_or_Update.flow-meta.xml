@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Responded_Date_Blank</name>
+        <label>Responded Date Blank?</label>
+        <locationX>777</locationX>
+        <locationY>418</locationY>
+        <defaultConnector>
+            <targetReference>Update_Contact_Stage1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_RespondedDateBlank</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HasResponded</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HasResponded</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Responded_Date__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Campaign_Member</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Update_Contact_Stage1</name>
+        <label>Update Contact Stage?</label>
+        <locationX>779</locationX>
+        <locationY>623</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Contact_Meeting_Booked</name>
+            <conditionLogic>((1 OR 2) AND (3 OR 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_ContactMeetingBooked</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_ContactSuccessResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_Stage_Working</targetReference>
+            </connector>
+            <label>Contact Meeting Booked</label>
+        </rules>
+        <rules>
+            <name>Yes_Lead_Meeting_Booked</name>
+            <conditionLogic>((1 OR 2) AND (3 OR 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LeadMeetingBooked</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LeadSuccessResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact_Stage_0</targetReference>
+            </connector>
+            <label>Lead Meeting Booked</label>
+        </rules>
+        <rules>
+            <name>Contact_Unsuccessful_Response</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_ContactUnsuccessfulResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_Stage_Recycle</targetReference>
+            </connector>
+            <label>Contact - Unsuccessful Response</label>
+        </rules>
+        <rules>
+            <name>Lead_Unsuccessful_Response</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>formula_LeadUnsuccessfulResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Contact_Stage_Recycle</targetReference>
+            </connector>
+            <label>Lead - Unsuccessful Response</label>
+        </rules>
+    </decisions>
+    <description>SS-13102: Remove dependencies for uninstalled managed package; Populate Responded Date field OnCreate or Status changed and Status is Responded
+Refined flow with SS-13102
+Migrated from Campaign Member - After Insert - Related Objects and Actions
+SS-12572: Additional Decision logic and updates for Contact Stage updates
+SS-12163: Adding decision to check if the Status has changed to Meeting Booked, then update Contact/Lead Stage</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Contact on Campaign Member meets Meeting Booked criteria.</description>
+        <name>formula_ContactMeetingBooked</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Meeting Booked&quot;,
+NOT(ISBLANK({!$Record.ContactId})),
+OR(
+ISBLANK({!$Record.Contact.StageNumber__c}),
+{!$Record.Contact.StageNumber__c} = 1,
+{!$Record.Contact.StageNumber__c} = 2,
+{!$Record.Contact.StageNumber__c} = 3,
+{!$Record.Contact.StageNumber__c} = 4,
+{!$Record.Contact.StageNumber__c} = 9,
+{!$Record.Contact.StageNumber__c} = 111
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Contact on Campaign Member meeting Success Response criteria.</description>
+        <name>formula_ContactSuccessResponse</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Success&quot;,
+CONTAINS({!$Record.Campaign.Name}, &quot;AI_Global_Qualified_AI-Email&quot;),
+NOT(ISBLANK({!$Record.ContactId}))
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Contact on Campaign Member meets Unsuccessful Response criteria.</description>
+        <name>formula_ContactUnsuccessfulResponse</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Unsuccessful&quot;,
+CONTAINS({!$Record.Campaign.Name}, &quot;AI_Global_Qualified_AI-Email&quot;),
+NOT(ISBLANK({!$Record.ContactId}))
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>isnew()</expression>
+    </formulas>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Lead on Campaign Member meets Meeting Booked criteria.</description>
+        <name>formula_LeadMeetingBooked</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Meeting Booked&quot;,
+NOT(ISBLANK({!$Record.LeadId})),
+OR(
+ISBLANK({!$Record.Lead.StageNumber__c}),
+{!$Record.Lead.StageNumber__c} = 1,
+{!$Record.Lead.StageNumber__c} = 2,
+{!$Record.Lead.StageNumber__c} = 3,
+{!$Record.Lead.StageNumber__c} = 4,
+{!$Record.Lead.StageNumber__c} = 111
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Lead on Campaign Member meets Success Response criteria.</description>
+        <name>formula_LeadSuccessResponse</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Success&quot;,
+CONTAINS({!$Record.Campaign.Name}, &quot;AI_Global_Qualified_AI-Email&quot;),
+NOT(ISBLANK({!$Record.LeadId}))
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Boolean formula to evaluate whether a Lead on Campaign Member meets Unsuccessful Response criteria.</description>
+        <name>formula_LeadUnsuccessfulResponse</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!$Record.Status}) = &quot;Unsuccessful&quot;,
+CONTAINS({!$Record.Campaign.Name}, &quot;AI_Global_Qualified_AI-Email&quot;),
+NOT(ISBLANK({!$Record.LeadId}))
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_Now</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>Campaign Member - After Save - On Create or Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign Member - After Save - On Create or Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Contact_Stage_Recycle</name>
+        <label>Contact Stage - Recycle</label>
+        <locationX>670</locationX>
+        <locationY>843</locationY>
+        <inputAssignments>
+            <field>Contact_Stage__c</field>
+            <value>
+                <stringValue>Recycle</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Contact_Stage_Working</name>
+        <label>Contact Stage - Working</label>
+        <locationX>413</locationX>
+        <locationY>751</locationY>
+        <inputAssignments>
+            <field>Contact_Stage__c</field>
+            <value>
+                <stringValue>Working</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Lead_Contact_Stage_Recycle</name>
+        <label>Lead Contact Stage - Recycle</label>
+        <locationX>1150</locationX>
+        <locationY>740</locationY>
+        <inputAssignments>
+            <field>Contact_Stage__c</field>
+            <value>
+                <stringValue>Recycle</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Campaign_Member</name>
+        <label>Update Campaign Member</label>
+        <locationX>535</locationX>
+        <locationY>507</locationY>
+        <connector>
+            <targetReference>Update_Contact_Stage1</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Responded_Date__c</field>
+            <value>
+                <elementReference>formula_Now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact_Stage_0</name>
+        <label>Lead Contact Stage - Working</label>
+        <locationX>914</locationX>
+        <locationY>843</locationY>
+        <inputAssignments>
+            <field>Contact_Stage__c</field>
+            <value>
+                <stringValue>Working</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Lead</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>658</locationX>
+        <locationY>11</locationY>
+        <connector>
+            <targetReference>Responded_Date_Blank</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>CampaignMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vote_Show_Alternate_Message__c</fullName>
+    <defaultValue>false</defaultValue>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enable to display the alternate Idea voted message for a user who has already voted (custom label)</inlineHelpText>
+    <label>Show Alternate Voted Message</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Slack_Message_Account_Slack_Channel</name>
+        <label>Send Slack Message - Account Slack Channel</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T024F7PBP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <elementReference>$Record.Account.Slack_Channel_Id__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>txtTemp_AccountSlackChannelNotification</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Slack_Message_Support_Center_Tickets_Korea</name>
+        <label>Send Slack Message - Support Center Tickets Korea</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <connector>
+            <targetReference>Account_Have_Slack_Channel_Id</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T024F7PBP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C088YH5Q0TW</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>txtTemp_SupportCenterKoreaChannelNotification</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Account_Have_Slack_Channel_Id</name>
+        <label>Account Have Slack Channel Id?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Account_Has_Slack_Channel_Id</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Slack_Channel_Id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Slack_Message_Account_Slack_Channel</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>10.28.25 AT: SS-10602: Send Slack Notifications to Korea Support Center Slack Channel and Customer Slack Channel.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula used in text Templates to verify if Case&apos;s Account has a Slack Channel Id, and output specific text for Slack notifications.</description>
+        <name>formula_AccountSlackChannelIdText</name>
+        <dataType>String</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.Account.Slack_Channel_Id__c})),
+&quot;*Customer Channel:*&quot; &amp; BR() &amp;
+&quot;&gt;&lt;#&quot; &amp; {!$Record.Account.Slack_Channel_Id__c} &amp; &quot;&gt;&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_OrgURL</name>
+        <dataType>String</dataType>
+        <expression>LEFT($Api.Enterprise_Server_URL_510, FIND( &apos;/services&apos;, $Api.Enterprise_Server_URL_510)) &amp;{!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>Case - Slack Notification - Korea Support Model {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Slack Notification - Korea Support Model</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterFormula>AND(
+NOT({!$Permission.DisableFlows}),
+CONTAINS(TEXT({!$Record.Account.Support_Model__c}), &apos;Korea&apos;)
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Send_Slack_Message_Support_Center_Tickets_Korea</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Slack markup language is used in text template to show as formatted text in slack.</description>
+        <name>txtTemp_AccountSlackChannelNotification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>New Sev *{!$Record.Severity_Community__c}* Case *{!$Record.CaseNumber}* for *{!$Record.Contact.Email}* (via {!$Record.Origin})
+&gt;*{!$Record.Subject}*
+&gt;{!formula_OrgURL}</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Slack markup language is used in text template to show as formatted text in slack.</description>
+        <name>txtTemp_SupportCenterKoreaChannelNotification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>New Sev *{!$Record.Severity_Community__c}* Case *{!$Record.CaseNumber}* for *{!$Record.Contact.Email}* (via {!$Record.Origin})
+&gt;*{!$Record.Subject}*
+&gt;{!formula_OrgURL}
+&gt;{!formula_AccountSlackChannelIdText}</text>
+    </textTemplates>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limited_Support__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tanium is launching a Limited Support offering for on-premise customers ONLY, that begins after the end of our Standard Support terms, which are defined against the software versions in our semi-annual release (SAR) bundles. SAR bundles are released every 6 months and have names such as 2024H1, 2024H2, 2025H1, etc.
+
+When an on-premise customer purchases Limited Support, they can only purchase Limited Support against a subset of their endpoints (not their entire enterprise quantity), and it must be pinned to a specific SAR version for the duration of the Limited Support term).
+Business Owner: Jeff Kopp</description>
+    <inlineHelpText>When an on-premise customer purchases Limited Support, they can only purchase Limited Support against a subset of their endpoints (not their entire enterprise quantity), and it must be pinned to a specific SAR version for the duration of the Limited Support term).</inlineHelpText>
+    <label>Limited Support</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

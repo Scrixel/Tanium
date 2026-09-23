@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reached_Capacity</fullName>
+    <active>true</active>
+    <description>The sign up is disabled or not there if the task has reached capacity</description>
+    <errorConditionFormula>Volunteer_Need__r.Volunteers_Registered__c &gt;= Volunteer_Need__r.Volunteers_Needed__c</errorConditionFormula>
+    <errorMessage>There are already enough volunteers for this task!</errorMessage>
+</ValidationRule>

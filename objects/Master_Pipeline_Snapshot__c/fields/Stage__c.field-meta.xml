@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>Demo Given</fullName>
+                <default>false</default>
+                <label>Demo Given</label>
+            </value>
+            <value>
+                <fullName>Pilot Scheduled</fullName>
+                <default>false</default>
+                <label>Pilot Scheduled</label>
+            </value>
+            <value>
+                <fullName>Pilot Deployment</fullName>
+                <default>false</default>
+                <label>Pilot Deployment</label>
+            </value>
+            <value>
+                <fullName>Production Pilot</fullName>
+                <default>false</default>
+                <label>Production Pilot</label>
+            </value>
+            <value>
+                <fullName>Price/Contract Negotiation</fullName>
+                <default>false</default>
+                <label>Price/Contract Negotiation</label>
+            </value>
+            <value>
+                <fullName>Waiting for Signature</fullName>
+                <default>false</default>
+                <label>Waiting for Signature</label>
+            </value>
+            <value>
+                <fullName>Signed - Waiting for PO</fullName>
+                <default>false</default>
+                <label>Signed - Waiting for PO</label>
+            </value>
+            <value>
+                <fullName>Signed - PO Received</fullName>
+                <default>false</default>
+                <label>Signed - PO Received</label>
+            </value>
+            <value>
+                <fullName>Signed &amp; Invoiced</fullName>
+                <default>false</default>
+                <label>Signed &amp; Invoiced</label>
+            </value>
+            <value>
+                <fullName>Signed &amp; Paid</fullName>
+                <default>false</default>
+                <label>Signed &amp; Paid</label>
+            </value>
+            <value>
+                <fullName>Committed Renewal</fullName>
+                <default>false</default>
+                <label>Committed Renewal</label>
+            </value>
+            <value>
+                <fullName>Uncommitted Renewal</fullName>
+                <default>false</default>
+                <label>Uncommitted Renewal</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Signed - No PO Required</fullName>
+                <default>false</default>
+                <label>Signed - No PO Required</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Validating Benefits &amp; Value</fullName>
+                <default>false</default>
+                <label>Validating Benefits &amp; Value</label>
+            </value>
+            <value>
+                <fullName>Pilot &amp; Value Validated</fullName>
+                <default>false</default>
+                <label>Pilot &amp; Value Validated</label>
+            </value>
+            <value>
+                <fullName>Tech Win &amp; Negotiations</fullName>
+                <default>false</default>
+                <label>Tech Win &amp; Negotiations</label>
+            </value>
+            <value>
+                <fullName>Signed - Paperwork received</fullName>
+                <default>false</default>
+                <label>Signed - Paperwork received</label>
+            </value>
+            <value>
+                <fullName>CLOSED WON</fullName>
+                <default>false</default>
+                <label>CLOSED WON</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zift_Lead_Sales_Rep__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Indicates the partner user to whom the Deal should be assigned to. Created as a part of the Zift integration project. Jira ticket SS-8969</description>
+    <inlineHelpText>Indicates the partner user to whom the Deal should be assigned.</inlineHelpText>
+    <label>Zift Lead Sales Rep</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Deal Registration (Zift Lead Sales Rep)</relationshipLabel>
+    <relationshipName>Deal_Registration_Zift_Lead_Sales_Rep</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAM_Compact_Layout</fullName>
+    <fields>RecordTypeId</fields>
+    <fields>Account__c</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Meeting_Type_Picklist__c</fields>
+    <fields>Onsite_Contact__c</fields>
+    <fields>Meeting_Type__c</fields>
+    <fields>Status__c</fields>
+    <fields>POD__c</fields>
+    <fields>Date_of_Meeting__c</fields>
+    <fields>Missing_for_Approval_submission_TAM__c</fields>
+    <label>TAM Compact Layout</label>
+</CompactLayout>

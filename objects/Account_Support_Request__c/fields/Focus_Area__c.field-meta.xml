@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_Area__c</fullName>
+    <description>Ref: Jack Coates</description>
+    <label>Focus Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core Platform</fullName>
+                <default>false</default>
+                <label>Core Platform</label>
+            </value>
+            <value>
+                <fullName>Autonomous Endpoint Management</fullName>
+                <default>false</default>
+                <label>Autonomous Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Endpoint Management</fullName>
+                <default>false</default>
+                <label>Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Investigate and Respond</fullName>
+                <default>false</default>
+                <label>Investigate and Respond</label>
+            </value>
+            <value>
+                <fullName>Digital Employee Experience</fullName>
+                <default>false</default>
+                <label>Digital Employee Experience</label>
+            </value>
+            <value>
+                <fullName>Microsoft</fullName>
+                <default>false</default>
+                <label>Microsoft</label>
+            </value>
+            <value>
+                <fullName>ServiceNow</fullName>
+                <default>false</default>
+                <label>ServiceNow</label>
+            </value>
+            <value>
+                <fullName>Risk</fullName>
+                <default>false</default>
+                <label>Risk and Compliance</label>
+            </value>
+            <value>
+                <fullName>Exposure Management</fullName>
+                <default>false</default>
+                <label>Exposure Management</label>
+            </value>
+            <value>
+                <fullName>Security Operations</fullName>
+                <default>false</default>
+                <label>Security Operations</label>
+            </value>
+            <value>
+                <fullName>Endpoint Management for OT</fullName>
+                <default>false</default>
+                <label>Endpoint Management for OT</label>
+            </value>
+            <value>
+                <fullName>Endpoint Management for Mobile</fullName>
+                <default>false</default>
+                <label>Endpoint Management for Mobile</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Risk and Compliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Risk and Compliance</label>
+            </value>
+            <value>
+                <fullName>Salesforce ITSC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Salesforce ITSC</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Security</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

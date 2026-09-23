@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Successfactors_Status__c</fullName>
+    <description>Formula field to verify if Funding, POC Plan &amp; Executive Sponsor identified in Opportunity</description>
+    <formula>AND(Opportunity__r.Funding_Approval__c , Opportunity__r.POC_plan_agreed_TAM__c)</formula>
+    <inlineHelpText>Formula field to verify if Funding, POC Plan &amp; Executive Sponsor identified in Opportunity</inlineHelpText>
+    <label>Oppty Successfactors Status</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

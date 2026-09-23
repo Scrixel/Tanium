@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_User_Accepted_Title__c</fullName>
+    <description>TAN-958: Title of the person agreeing to the disclaimers that apply to non-US delivery location countries.</description>
+    <externalId>false</externalId>
+    <label>End User Accepted Title</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

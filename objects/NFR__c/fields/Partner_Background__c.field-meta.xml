@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Background__c</fullName>
+    <inlineHelpText>Provide company context; employee count, annual revenue. What products/services do they sell? What is their main source(s) of revenue? What is their GTM strategy?</inlineHelpText>
+    <label>Partner Background</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

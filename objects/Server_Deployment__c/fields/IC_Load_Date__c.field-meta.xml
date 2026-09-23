@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IC_Load_Date__c</fullName>
+    <inlineHelpText>Set to date of Initial Content (IC) load.  If a new version of the IC is imported, reset this date accordingly.</inlineHelpText>
+    <label>IC Load Date (Delete Me)</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

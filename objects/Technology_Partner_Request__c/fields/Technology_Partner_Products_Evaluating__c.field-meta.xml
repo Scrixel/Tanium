@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology_Partner_Products_Evaluating__c</fullName>
+    <label>Technology Partner Products Evaluating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Now Assist/AI</fullName>
+                <default>false</default>
+                <label>Now Assist/AI</label>
+            </value>
+            <value>
+                <fullName>Hardware Asset Management (HAM)</fullName>
+                <default>false</default>
+                <label>Hardware Asset Management (HAM)</label>
+            </value>
+            <value>
+                <fullName>Software Asset Management (SAM)</fullName>
+                <default>false</default>
+                <label>Software Asset Management (SAM)</label>
+            </value>
+            <value>
+                <fullName>IT Operations Management (ITOM)</fullName>
+                <default>false</default>
+                <label>IT Operations Management (ITOM)</label>
+            </value>
+            <value>
+                <fullName>Vulnerability Response (VR)</fullName>
+                <default>false</default>
+                <label>Vulnerability Response (VR)</label>
+            </value>
+            <value>
+                <fullName>Security Incident Response (SIR)</fullName>
+                <default>false</default>
+                <label>Security Incident Response (SIR)</label>
+            </value>
+            <value>
+                <fullName>Configuration Compliance (CC)</fullName>
+                <default>false</default>
+                <label>Configuration Compliance (CC)</label>
+            </value>
+            <value>
+                <fullName>Integrated Risk Management (IRM)</fullName>
+                <default>false</default>
+                <label>Integrated Risk Management (IRM)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

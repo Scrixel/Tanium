@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDR_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The SDR Manager will be automatically populated based on the Field Sales selection. Manual updates will be overwritten.</inlineHelpText>
+    <label>SDR Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Territory_Assignments2</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

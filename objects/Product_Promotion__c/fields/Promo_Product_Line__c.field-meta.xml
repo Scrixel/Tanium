@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo_Product_Line__c</fullName>
+    <inlineHelpText>You can either choose a product or a product line for this promo. By selecting a product line you will not be able to select a product</inlineHelpText>
+    <label>Promo Product Line</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Product Lines</fullName>
+                <default>false</default>
+                <label>All Product Lines</label>
+            </value>
+            <value>
+                <fullName>Appliance</fullName>
+                <default>false</default>
+                <label>Appliance</label>
+            </value>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>Asset Discovery &amp; Inventory</fullName>
+                <default>false</default>
+                <label>Asset Discovery &amp; Inventory</label>
+            </value>
+            <value>
+                <fullName>Asset Discovery &amp; Inventory MM</fullName>
+                <default>false</default>
+                <label>Asset Discovery &amp; Inventory MM</label>
+            </value>
+            <value>
+                <fullName>Authoring</fullName>
+                <default>false</default>
+                <label>Authoring</label>
+            </value>
+            <value>
+                <fullName>Bundle</fullName>
+                <default>false</default>
+                <label>Bundle</label>
+            </value>
+            <value>
+                <fullName>Chronicle</fullName>
+                <default>false</default>
+                <label>Chronicle</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>Client Management</fullName>
+                <default>false</default>
+                <label>Client Management</label>
+            </value>
+            <value>
+                <fullName>Client Software Management</fullName>
+                <default>false</default>
+                <label>Client Software Management</label>
+            </value>
+            <value>
+                <fullName>Client Software Management MM</fullName>
+                <default>false</default>
+                <label>Client Software Management MM</label>
+            </value>
+            <value>
+                <fullName>Comply</fullName>
+                <default>false</default>
+                <label>Comply</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Connect</fullName>
+                <default>false</default>
+                <label>Connect</label>
+            </value>
+            <value>
+                <fullName>Connection Manager</fullName>
+                <default>false</default>
+                <label>Connection Manager</label>
+            </value>
+            <value>
+                <fullName>Converge</fullName>
+                <default>false</default>
+                <label>Converge</label>
+            </value>
+            <value>
+                <fullName>Core-LTD</fullName>
+                <default>false</default>
+                <label>Core-LTD</label>
+            </value>
+            <value>
+                <fullName>Core-SLP</fullName>
+                <default>false</default>
+                <label>Core-SLP</label>
+            </value>
+            <value>
+                <fullName>Core-UPG</fullName>
+                <default>false</default>
+                <label>Core-UPG</label>
+            </value>
+            <value>
+                <fullName>Cyware</fullName>
+                <default>false</default>
+                <label>Cyware</label>
+            </value>
+            <value>
+                <fullName>Deep Instinct</fullName>
+                <default>false</default>
+                <label>Deep Instinct</label>
+            </value>
+            <value>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+                <label>Deploy</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>ELA</fullName>
+                <default>false</default>
+                <label>ELA</label>
+            </value>
+            <value>
+                <fullName>Enforce</fullName>
+                <default>false</default>
+                <label>Enforce</label>
+            </value>
+            <value>
+                <fullName>ESR</fullName>
+                <default>false</default>
+                <label>ESR</label>
+            </value>
+            <value>
+                <fullName>FIM</fullName>
+                <default>false</default>
+                <label>FIM</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Impact</fullName>
+                <default>false</default>
+                <label>Impact</label>
+            </value>
+            <value>
+                <fullName>Index</fullName>
+                <default>false</default>
+                <label>Index</label>
+            </value>
+            <value>
+                <fullName>Initial Content</fullName>
+                <default>false</default>
+                <label>Initial Content</label>
+            </value>
+            <value>
+                <fullName>Interact</fullName>
+                <default>false</default>
+                <label>Interact</label>
+            </value>
+            <value>
+                <fullName>IOC Detect</fullName>
+                <default>false</default>
+                <label>IOC Detect</label>
+            </value>
+            <value>
+                <fullName>IOC Funnel</fullName>
+                <default>false</default>
+                <label>IOC Funnel</label>
+            </value>
+            <value>
+                <fullName>IR</fullName>
+                <default>false</default>
+                <label>IR</label>
+            </value>
+            <value>
+                <fullName>Map</fullName>
+                <default>false</default>
+                <label>Map</label>
+            </value>
+            <value>
+                <fullName>MODLELA</fullName>
+                <default>false</default>
+                <label>MODLELA</label>
+            </value>
+            <value>
+                <fullName>Onsite Support</fullName>
+                <default>false</default>
+                <label>Onsite Support</label>
+            </value>
+            <value>
+                <fullName>Operations Suite</fullName>
+                <default>false</default>
+                <label>Operations Suite</label>
+            </value>
+            <value>
+                <fullName>Patch</fullName>
+                <default>false</default>
+                <label>Patch</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Platform</fullName>
+                <default>false</default>
+                <label>Platform</label>
+            </value>
+            <value>
+                <fullName>Premium Support</fullName>
+                <default>false</default>
+                <label>Premium Support</label>
+            </value>
+            <value>
+                <fullName>Protect</fullName>
+                <default>false</default>
+                <label>Protect</label>
+            </value>
+            <value>
+                <fullName>Provision Limited Availability</fullName>
+                <default>false</default>
+                <label>Provision Limited Availability</label>
+            </value>
+            <value>
+                <fullName>Reveal</fullName>
+                <default>false</default>
+                <label>Reveal</label>
+            </value>
+            <value>
+                <fullName>RiskRisk &amp; Compliance Assessment</fullName>
+                <default>false</default>
+                <label>RiskRisk &amp; Compliance Assessment</label>
+            </value>
+            <value>
+                <fullName>Risk &amp; Compliance Enforcement</fullName>
+                <default>false</default>
+                <label>Risk &amp; Compliance Enforcement</label>
+            </value>
+            <value>
+                <fullName>Risk &amp; Compliance Management</fullName>
+                <default>false</default>
+                <label>Risk &amp; Compliance Management</label>
+            </value>
+            <value>
+                <fullName>RRR</fullName>
+                <default>false</default>
+                <label>RRR</label>
+            </value>
+            <value>
+                <fullName>RTC</fullName>
+                <default>false</default>
+                <label>RTC</label>
+            </value>
+            <value>
+                <fullName>Security Suite</fullName>
+                <default>false</default>
+                <label>Security Suite</label>
+            </value>
+            <value>
+                <fullName>Sensitive Data Monitoring</fullName>
+                <default>false</default>
+                <label>Sensitive Data Monitoring</label>
+            </value>
+            <value>
+                <fullName>Server</fullName>
+                <default>false</default>
+                <label>Server</label>
+            </value>
+            <value>
+                <fullName>SFDC</fullName>
+                <default>false</default>
+                <label>SFDC</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Risk Mitigation</fullName>
+                <default>false</default>
+                <label>Supply Chain Risk Mitigation</label>
+            </value>
+            <value>
+                <fullName>Support Center</fullName>
+                <default>false</default>
+                <label>Support Center</label>
+            </value>
+            <value>
+                <fullName>Tanium Endpoint Management</fullName>
+                <default>false</default>
+                <label>Tanium Endpoint Management</label>
+            </value>
+            <value>
+                <fullName>Tanium Endpoint Management + Security</fullName>
+                <default>false</default>
+                <label>Tanium Endpoint Management + Security</label>
+            </value>
+            <value>
+                <fullName>Tanium Endpoint Security</fullName>
+                <default>false</default>
+                <label>Tanium Endpoint Security</label>
+            </value>
+            <value>
+                <fullName>Tanium Threat Response</fullName>
+                <default>false</default>
+                <label>Tanium Threat Response</label>
+            </value>
+            <value>
+                <fullName>Threat Hunting: Investigate</fullName>
+                <default>false</default>
+                <label>Threat Hunting: Investigate</label>
+            </value>
+            <value>
+                <fullName>Threat Hunting: Remediate</fullName>
+                <default>false</default>
+                <label>Threat Hunting: Remediate</label>
+            </value>
+            <value>
+                <fullName>Trace</fullName>
+                <default>false</default>
+                <label>Trace</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Trends</fullName>
+                <default>false</default>
+                <label>Trends</label>
+            </value>
+            <value>
+                <fullName>VIrtual</fullName>
+                <default>false</default>
+                <label>VIrtual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

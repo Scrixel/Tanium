@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Government_Ties_Owner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Company owner(s) has government ties</description>
+    <inlineHelpText>Does any “Government Official” have an ownership interest in your company?</inlineHelpText>
+    <label>Company owner(s) has government ties</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

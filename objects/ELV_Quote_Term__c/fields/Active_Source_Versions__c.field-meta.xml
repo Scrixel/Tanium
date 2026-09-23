@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Source_Versions__c</fullName>
+    <label>Active Source Versions</label>
+    <summaryFilterItems>
+        <field>ELV_Quote_Term_Version__c.Active__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>ELV_Quote_Term_Version__c.Version_Type__c</field>
+        <operation>equals</operation>
+        <value>Source</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ELV_Quote_Term_Version__c.Quote_Term__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Account_Filter_Permission_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Account_Limit_Message__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Account_Votes_per_Idea__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Allow_Down_Voting__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Auto_subscribe_Idea_Creators__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Auto_subscribe_Idea_Requestors__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Chatter_Permission_List__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Chatter_Profile_List__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Date_Display_Format__c</field>
+        <value xsi:type="xsd:string">Actual</value>
+    </values>
+    <values>
+        <field>Debug_Mode__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Default_Test_Community_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Default_Test_Profile__c</field>
+        <value xsi:type="xsd:string">Customer Community Login User</value>
+    </values>
+    <values>
+        <field>Disable_Read_Only_Users__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Enable_Idea_Extension_Functionality__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Idea_Submission_Email_Template__c</field>
+        <value xsi:type="xsd:string">X7S_Ideas_Submission_Notification</value>
+    </values>
+    <values>
+        <field>Ignore_Vote_Limit_Field__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>LEX_Nickname_Display__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>New_Comment_Email_Template__c</field>
+        <value xsi:type="xsd:string">X7S_Ideas_New_Comment_Notification</value>
+    </values>
+    <values>
+        <field>OrgWide_Email_Sender__c</field>
+        <value xsi:type="xsd:string">community@tanium.com</value>
+    </values>
+    <values>
+        <field>Status_Change_Email_Template__c</field>
+        <value xsi:type="xsd:string">X7S_Ideas_Status_Change_Notification</value>
+    </values>
+    <values>
+        <field>Use_Nickname__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>User_Custom_FieldValues__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Vote_Disable_Status__c</field>
+        <value xsi:type="xsd:string">Available as a Tanium Managed Playbook</value>
+    </values>
+    <values>
+        <field>Vote_Show_Alternate_Message__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>X7S_Ideas_Default_Custom_Field_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>X7S_Ideas_Field_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>X7S_Shr_Custom_Field_Set__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

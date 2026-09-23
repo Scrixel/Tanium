@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Owner_Diff__c</fullName>
+    <description>If Rep 1 is diff from Account Owner then TRUE, else FALSE</description>
+    <formula>IF( Rep_1__r.Id  =  Account_and_Splits__r.OwnerId  ,FALSE,TRUE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Rep 1 is diff from Account Owner then TRUE, else FALSE</inlineHelpText>
+    <label>Account Owner Diff</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

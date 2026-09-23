@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Sr_Advisor_Invited__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>03/26/2021 - Updated to &quot;Tanium Advisor or E-Staff&quot; upon Justin&apos;s request.</description>
+    <inlineHelpText>Select Sr. Advisor/Estaff for outreach.</inlineHelpText>
+    <label>Tanium Advisor or E-Staff</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Internal Support Requests (Tanium Sr. Advisor Invited)</relationshipLabel>
+    <relationshipName>Account_Support_Requests5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

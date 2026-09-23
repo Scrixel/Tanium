@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Delivery_Portal__c</fullName>
+    <description>Formula to populate the Invoice Delivery Portal field from the Account SS-13386</description>
+    <externalId>false</externalId>
+    <formula>Opportunity__r.SBQQ__PrimaryQuote__r.SBQQ__Account__r.Invoice_Delivery_Portal__c</formula>
+    <inlineHelpText>Formula to populate the Invoice Delivery Portal field from the Account SS-13386</inlineHelpText>
+    <label>Invoice Delivery Portal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

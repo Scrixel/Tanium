@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteLineNetTotal__c</fullName>
+    <description>Formula - QuoteLine__r.SBQQ__NetTotal__c</description>
+    <formula>ELV_QuoteLine__r.Ruby__SellerTotalAmount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>QuoteLine__r.SBQQ__NetTotal__c</inlineHelpText>
+    <label>Quote Line Net Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

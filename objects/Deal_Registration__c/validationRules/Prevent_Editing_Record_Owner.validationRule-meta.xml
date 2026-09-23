@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Editing_Record_Owner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISCHANGED( OwnerId ) ,
+  $Profile.Name != &apos;Super User&apos;,
+  $Profile.Name != &apos;Tanium Partner Portal Admin&apos;,
+  NOT($Permission.Deal_Registration_Manager), 
+  NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>The Owner field is locked for Deal Registrations. Contact ChannelOps@tanium.com with any questions.</errorMessage>
+</ValidationRule>

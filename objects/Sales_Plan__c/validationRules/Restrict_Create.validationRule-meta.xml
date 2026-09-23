@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Create</fullName>
+    <active>true</active>
+    <description>Limit Sales Plan create access to System Administrator, Commissions, and API
+Role: Finance=00E60000001jU9k
+$Profile.Id &apos;00e320000016C0i&apos; = API Only Integration Admin</description>
+    <errorConditionFormula>ISNEW() &amp;&amp;
+NOT(CONTAINS($Profile.Name, &apos;API&apos;))&amp;&amp;
+$Profile.Name  &lt;&gt;  &quot;Tanium System Administrator&quot;  &amp;&amp; 
+$Profile.Name  &lt;&gt;  &quot;System Administrator&quot;  &amp;&amp; 
+$UserRole.Id &lt;&gt; &apos;00E60000001jU9k&apos;
+
+
+
+/*
+ISNEW() &amp;&amp;
+$Profile.Id &lt;&gt; &apos;00e320000016C0i&apos; &amp;&amp;
+ $Profile.Id &lt;&gt; &apos;00e6000000135bM&apos; &amp;&amp; 
+$UserRole.Id &lt;&gt; &apos;00E60000001jU9k&apos;
+*/</errorConditionFormula>
+    <errorMessage>Please contact commissions@tanium.com if you need help creating a Sales Plan record.</errorMessage>
+</ValidationRule>

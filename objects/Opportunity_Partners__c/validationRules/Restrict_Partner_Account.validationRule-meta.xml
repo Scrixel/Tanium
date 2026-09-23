@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Partner_Account</fullName>
+    <active>true</active>
+    <description>SS-8401 : Lock Ability to Change Opportunity Partner &quot;Partner Account&quot; field (post Fulcrum project)</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Account__c) ,
+  OR(
+     ISPICKVAL( Partner_Role__c , &quot;Referral&quot;),
+     ISPICKVAL( Partner_Role__c , &quot;Partner Creator&quot;),
+     ISPICKVAL( Partner_Role__c , &quot;Partner Co-Sell&quot;)
+  ),
+NOT($Profile.Name = &quot;Tanium Partner Portal Admin&quot;),
+NOT($User.Department = &quot;Sales Operations&quot;),
+NOT($Profile.Name = &quot;Tanium System Administrator&quot;),
+NOT($Profile.Name = &quot;System Administrator&quot;),
+NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>You do not have the required permissions to update the “Partner Account” when Partner Role = &quot;Partner Co-Sell&quot;, &quot;Partner Creator&quot;, or &quot;Referral&quot;. Please reach out to ChannelOps@tanium.com to request a change.</errorMessage>
+</ValidationRule>

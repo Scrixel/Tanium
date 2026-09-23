@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Please do not reorder the Status Values. This can cause misalignment in Path Value used by different ISRs
+This should be Read Only for Sales Profiles</description>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Planned</fullName>
+                <default>false</default>
+                <label>Planned</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Training Submitted</fullName>
+                <default>false</default>
+                <label>Training Submitted</label>
+            </value>
+            <value>
+                <fullName>Pending Assignment</fullName>
+                <default>false</default>
+                <label>Pending Assignment</label>
+            </value>
+            <value>
+                <fullName>Resources Assigned</fullName>
+                <default>false</default>
+                <label>Resources Assigned</label>
+            </value>
+            <value>
+                <fullName>Submitted and Under Review</fullName>
+                <default>false</default>
+                <label>Submitted and Under Review</label>
+            </value>
+            <value>
+                <fullName>Approved and Under Review</fullName>
+                <default>false</default>
+                <label>Approved and Under Review</label>
+            </value>
+            <value>
+                <fullName>Sent to Sr. Advisor/E-Staff</fullName>
+                <default>false</default>
+                <label>Sent to Sr. Advisor/E-Staff</label>
+            </value>
+            <value>
+                <fullName>Request sent to contact</fullName>
+                <default>false</default>
+                <label>Request sent to contact</label>
+            </value>
+            <value>
+                <fullName>Acknowledged by Contact</fullName>
+                <default>false</default>
+                <label>Acknowledged by Contact</label>
+            </value>
+            <value>
+                <fullName>Call or Meeting Completed</fullName>
+                <default>false</default>
+                <label>Call or Meeting Completed</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Request Completed</fullName>
+                <default>false</default>
+                <label>Request Completed</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>Assigned to Deal Desk</fullName>
+                <default>false</default>
+                <label>Assigned to Deal Desk</label>
+            </value>
+            <value>
+                <fullName>Call or Meeting Completed - No Current Interest</fullName>
+                <default>false</default>
+                <label>Call or Meeting Completed - No Current Interest</label>
+            </value>
+            <value>
+                <fullName>Entered</fullName>
+                <default>false</default>
+                <label>Entered</label>
+            </value>
+            <value>
+                <fullName>ESO Draft</fullName>
+                <default>false</default>
+                <label>ESO Draft</label>
+            </value>
+            <value>
+                <fullName>ESO Submitted and Under Review</fullName>
+                <default>false</default>
+                <label>ESO Submitted and Under Review</label>
+            </value>
+            <value>
+                <fullName>ESO Approved</fullName>
+                <default>false</default>
+                <label>ESO Approved</label>
+            </value>
+            <value>
+                <fullName>ESO Approved Partner</fullName>
+                <default>false</default>
+                <label>ESO Approved Partner</label>
+            </value>
+            <value>
+                <fullName>ESE Active</fullName>
+                <default>false</default>
+                <label>ESO Active</label>
+            </value>
+            <value>
+                <fullName>ESO Closed</fullName>
+                <default>false</default>
+                <label>ESO Closed</label>
+            </value>
+            <value>
+                <fullName>ESO Recalled</fullName>
+                <default>false</default>
+                <label>ESO Recalled</label>
+            </value>
+            <value>
+                <fullName>ESO Failed</fullName>
+                <default>false</default>
+                <label>ESO Failed</label>
+            </value>
+            <value>
+                <fullName>ESO Approved for Quote</fullName>
+                <default>false</default>
+                <label>ESO Approved OTAM Quote</label>
+            </value>
+            <value>
+                <fullName>Executives Engaged - Active Opportunity</fullName>
+                <default>false</default>
+                <label>Executives Engaged - Active Opportunity</label>
+            </value>
+            <value>
+                <fullName>Executives Engaged - No immediate interest</fullName>
+                <default>false</default>
+                <label>Executives Engaged - No immediate interest</label>
+            </value>
+            <value>
+                <fullName>Executives not Engaged</fullName>
+                <default>false</default>
+                <label>Executives not Engaged</label>
+            </value>
+            <value>
+                <fullName>In-flight/Approved</fullName>
+                <default>false</default>
+                <label>In-flight/Approved</label>
+            </value>
+            <value>
+                <fullName>Info Security Approval</fullName>
+                <default>false</default>
+                <label>Info Security Approval</label>
+            </value>
+            <value>
+                <fullName>Legal Approval</fullName>
+                <default>false</default>
+                <label>Legal Approval</label>
+            </value>
+            <value>
+                <fullName>Manager Approval</fullName>
+                <default>false</default>
+                <label>Manager Approval</label>
+            </value>
+            <value>
+                <fullName>Manager Approved</fullName>
+                <default>false</default>
+                <label>Manager Approved</label>
+            </value>
+            <value>
+                <fullName>No Sr. Advisor Connection</fullName>
+                <default>false</default>
+                <label>No Sr. Advisor Connection</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Check</fullName>
+                <default>false</default>
+                <label>Pending Credit Check</label>
+            </value>
+            <value>
+                <fullName>Pending Mgr Approval</fullName>
+                <default>false</default>
+                <label>Pending Mgr Approval</label>
+            </value>
+            <value>
+                <fullName>Pending response from Sr. Advisor contact</fullName>
+                <default>false</default>
+                <label>Pending response from Sr. Advisor contact</label>
+            </value>
+            <value>
+                <fullName>Physical Security Approval</fullName>
+                <default>false</default>
+                <label>Physical Security Approval</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Request Completed - CLOSED LOST</fullName>
+                <default>false</default>
+                <label>Request Completed - CLOSED LOST</label>
+            </value>
+            <value>
+                <fullName>Request Completed - Request Acknowledged by Sr. Advisor Contact - No Current Interest</fullName>
+                <default>false</default>
+                <label>Request Completed - Request Acknowledged by Sr. Advisor Contact - No Current Interest</label>
+            </value>
+            <value>
+                <fullName>Requested</fullName>
+                <default>true</default>
+                <label>Requested</label>
+            </value>
+            <value>
+                <fullName>Request in Process</fullName>
+                <default>false</default>
+                <label>Request in Process</label>
+            </value>
+            <value>
+                <fullName>Request Sent</fullName>
+                <default>false</default>
+                <label>Request Sent</label>
+            </value>
+            <value>
+                <fullName>Review in Process</fullName>
+                <default>false</default>
+                <label>Review in Process</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Tax Approval</fullName>
+                <default>false</default>
+                <label>Tax Approval</label>
+            </value>
+            <value>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+                <label>Abandoned</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>ESO Engagement Complete</fullName>
+                <default>false</default>
+                <label>ESO Engagement Complete</label>
+            </value>
+            <value>
+                <fullName>ESO Presales Assessment</fullName>
+                <default>false</default>
+                <label>ESO Presales Assessment</label>
+            </value>
+            <value>
+                <fullName>Identified</fullName>
+                <default>false</default>
+                <label>Identified</label>
+            </value>
+            <value>
+                <fullName>ESE Expired</fullName>
+                <default>false</default>
+                <label>ESO Expired</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Prep Meeting Completed</fullName>
+                <default>false</default>
+                <label>Prep Meeting Completed</label>
+            </value>
+            <value>
+                <fullName>Forwarded to CIO Advisor</fullName>
+                <default>false</default>
+                <label>Forwarded to CIO Advisor</label>
+            </value>
+            <value>
+                <fullName>Sent to Vertical CIO</fullName>
+                <default>false</default>
+                <label>Sent to Vertical CIO</label>
+            </value>
+            <value>
+                <fullName>Delivered/Presented</fullName>
+                <default>false</default>
+                <label>Delivered/Presented</label>
+            </value>
+            <value>
+                <fullName>On-going (Ex Sponsor)</fullName>
+                <default>false</default>
+                <label>On-going (Ex Sponsor)</label>
+            </value>
+            <value>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+                <label>Recalled</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>ESO Rejected</fullName>
+                <default>false</default>
+                <label>ESO Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

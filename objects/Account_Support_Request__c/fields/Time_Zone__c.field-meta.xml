@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Zone__c</fullName>
+    <label>Time Zone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(GMT-05:00) Eastern Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-05:00) Eastern Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-06:00) Central Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-06:00) Central Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-07:00) Mountain Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-07:00) Mountain Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-08:00) Pacific Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-08:00) Pacific Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-09:00) Alaska Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-09:00) Alaska Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-10:00) Hawaii-Aleutian Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-10:00) Hawaii-Aleutian Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+11:00) Australian Eastern Daylight Time</fullName>
+                <default>false</default>
+                <label>(GMT+11:00) Australian Eastern Daylight Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+10:30) Australian Central Daylight Time</fullName>
+                <default>false</default>
+                <label>(GMT+10:30) Australian Central Daylight Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+09:30) Australian Central Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+09:30) Australian Central Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+08:00) Australian Western Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+08:00) Australian Western Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+09:00) Japan Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+09:00) Japan Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+08:00) Singapore Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+08:00) Singapore Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+05:30) India Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+05:30) India Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+03:00) Further-eastern European Time</fullName>
+                <default>false</default>
+                <label>(GMT+03:00) Further-eastern European Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+02:00) Eastern European Time</fullName>
+                <default>false</default>
+                <label>(GMT+02:00) Eastern European Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+02:00) South Africa Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+02:00) South Africa Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+02:00) Israel Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT+02:00) Israel Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+01:00) Central European Time</fullName>
+                <default>false</default>
+                <label>(GMT+01:00) Central European Time</label>
+            </value>
+            <value>
+                <fullName>(GMT+00:00) Greenwich Mean Time</fullName>
+                <default>false</default>
+                <label>(GMT+00:00) Greenwich Mean Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-03:30) Newfoundland Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-03:30) Newfoundland Standard Time</label>
+            </value>
+            <value>
+                <fullName>(GMT-04:00) Atlantic Standard Time</fullName>
+                <default>false</default>
+                <label>(GMT-04:00) Atlantic Standard Time</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

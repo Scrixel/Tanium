@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Budget__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>This can be left blank or you can map your request to an existing parent budget (see drop down)</inlineHelpText>
+    <label>Parent Budget</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <filterItems>
+            <field>Budget__c.Program_Name__c</field>
+            <operation>equals</operation>
+            <value>TAM Week 2018,CISO Program 2018, CIO Program 2018, Ops Program 2018, User Groups 2018,Customer Advisory Board 2018,Converge 2018, RSA 2018,Blackhat 2018,Gartner 2018,Gartner - EMEA 2018,Les Assies - EMEA 2018,</value>
+        </filterItems>
+        <filterItems>
+            <field>Budget__c.Program_Name__c</field>
+            <operation>equals</operation>
+            <value>Event 20180618 CAB - NYC - Four Seasons - Parent, Event 20181112 Conference - Washington DC - CONVERGE - Parent,TAM / POD Week 2018</value>
+        </filterItems>
+        <filterItems>
+            <field>Budget__c.Is_this_a_New_Parent_Budget__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Budget__c</referenceTo>
+    <relationshipLabel>Budgets</relationshipLabel>
+    <relationshipName>Budgets</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

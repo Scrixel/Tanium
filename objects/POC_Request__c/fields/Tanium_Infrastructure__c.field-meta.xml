@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tanium_Infrastructure__c</fullName>
+    <inlineHelpText>Is Tanium Infrastructure needed for this POC? If No, then select &quot;No-Customer Provided&quot;</inlineHelpText>
+    <label>Tanium Infrastructure Required</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On-Prem</fullName>
+                <default>false</default>
+                <label>On-Prem</label>
+            </value>
+            <value>
+                <fullName>Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Tanium as a Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

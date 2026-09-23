@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_attendees_EBC__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How many total people will be in attendance? Include counts for external guests, as well as HQ and non-HQ based employees. Do not include anyone who will be joining virtually.</inlineHelpText>
+    <label>EBC Number of Attendees</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

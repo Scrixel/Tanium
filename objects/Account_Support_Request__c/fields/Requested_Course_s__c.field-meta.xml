@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Course_s__c</fullName>
+    <description>Training Request</description>
+    <inlineHelpText>Select the course(s) that the customer wishes to schedule.</inlineHelpText>
+    <label>Requested Course(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tanium Operations and Security Essentials</fullName>
+                <default>false</default>
+                <label>Tanium Operations and Security Essentials</label>
+            </value>
+            <value>
+                <fullName>Tanium Advanced Content</fullName>
+                <default>false</default>
+                <label>Tanium Advanced Content</label>
+            </value>
+            <value>
+                <fullName>Tanium Advanced Installation &amp; Configuration</fullName>
+                <default>false</default>
+                <label>Tanium Advanced Installation &amp; Configuration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

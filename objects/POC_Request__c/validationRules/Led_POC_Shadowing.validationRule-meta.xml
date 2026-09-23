@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Led_POC_Shadowing</fullName>
+    <active>true</active>
+    <description>If Led by Tanium only Partner (or None) is valid value (or vice versa)</description>
+    <errorConditionFormula>(RecordType.DeveloperName = &quot;Standard&quot; || RecordType.DeveloperName = &quot;TaaS&quot;) &amp;&amp; ISPICKVAL(POC_Led_By__c, &quot;Partner&quot;) &amp;&amp; ISPICKVAL(POC_Shadowing__c, &quot;Partner&quot;) || ISPICKVAL(POC_Led_By__c, &quot;Tanium&quot;) &amp;&amp; ISPICKVAL(POC_Shadowing__c, &quot;Tanium&quot;) &amp;&amp; (isNew() || DATEVALUE( CreatedDate ) &gt; DATEVALUE(&quot;2023-08-10&quot;))</errorConditionFormula>
+    <errorDisplayField>POC_Shadowing__c</errorDisplayField>
+    <errorMessage>If Led by Tanium only Partner (or None) is valid value (or vice versa)</errorMessage>
+</ValidationRule>

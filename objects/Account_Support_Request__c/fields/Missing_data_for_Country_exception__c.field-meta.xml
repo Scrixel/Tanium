@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_data_for_Country_exception__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK( Potential_Opportunity_details__c),&quot;&quot;,&quot;Potential Opportunity Details ;&quot;) &amp; 
+IF(!ISBLANK(Current_Tanium_Partner_support__c),&quot;&quot;,&quot;Tanium Partner Support;&quot;)&amp; 
+IF(!ISBLANK(Is_additional_training_needed__c),&quot;&quot;,&quot;Additional Training needed ?;&quot;)&amp; 
+IF(!ISBLANK( Has_the_Customer_committed_to_a_POC__c),&quot;&quot;,&quot;Has customer committed for POC?;&quot;)&amp; 
+IF(!ISBLANK(Potential_close_timeframe__c),&quot;&quot;,&quot;Potential Close timeframe?;&quot;)&amp; 
+IF(!ISBLANK( How_did_we_find_out_about_Opportunity__c),&quot;&quot;,&quot;How did we find Opportunity?;&quot;)&amp; 
+IF(!ISPICKVAL(Business_justification__c,&quot;&quot;),&quot;&quot;,&quot;Business justification?;&quot;)&amp; 
+IF(!ISBLANK(Business_justification_Details__c),&quot;&quot;,&quot;Business justification Details?;&quot;)&amp; 
+IF(!ISBLANK(Expected_challenges__c),&quot;&quot;,&quot;Expected challenges?;&quot;)&amp; 
+IF(Expected_Annual_Recurring_Revenue__c=0,&quot;Expected ARR;&quot;,&quot;&quot;)&amp; 
+IF(!ISPICKVAL (Customer_has_budget_funding__c,&quot;&quot;),&quot;&quot;,&quot;Customer has budget/funding?;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Missing data for Country exception</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

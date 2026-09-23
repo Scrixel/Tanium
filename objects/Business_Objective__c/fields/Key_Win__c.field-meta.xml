@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_Win__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS-11088: Deprecated.</description>
+    <inlineHelpText>Check this box if the business objective had significant strategic or financial implications for the customer or if it has wide visibility and/or impact to the organization.  e.g. Solving an issue that has board-level visibility; affects a broad spectrum of the customer&apos;s user base; delivers significant risk reduction or cost savings (this can also be the case of improving a process such that far less manual effort is required to complete)</inlineHelpText>
+    <label>DEPRECATED - Key Win</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

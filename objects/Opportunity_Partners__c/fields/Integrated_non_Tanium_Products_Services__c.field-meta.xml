@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrated_non_Tanium_Products_Services__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Deprecated from SS-12659</description>
+    <inlineHelpText>Which Partner brought together other (non-Tanium) critical products/ services to complete the solution for the customer</inlineHelpText>
+    <label>DEPRECATED - Integrated non-Tanium Prod</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>current__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates this CS Benchmark is the current one.</description>
+    <label>current</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

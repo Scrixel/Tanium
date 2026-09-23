@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ddq_List_Other_Management_Staff__c</fullName>
+    <description>Name any other individuals or entities currently exercising management control over your company.</description>
+    <inlineHelpText>Name any other individuals or entities currently exercising management control over your company.</inlineHelpText>
+    <label>List Other Management Staff</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

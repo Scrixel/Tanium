@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ISR_Type__c</fullName>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sr. Advisor Engagement</fullName>
+                <default>false</default>
+                <label>Sr. Advisor Engagement</label>
+            </value>
+            <value>
+                <fullName>e-Staff Meeting</fullName>
+                <default>false</default>
+                <label>e-Staff Meeting</label>
+            </value>
+            <value>
+                <fullName>e-Staff Outreach</fullName>
+                <default>false</default>
+                <label>e-Staff Outreach</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pod__c</fullName>
+    <label>Pod</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asia North</fullName>
+                <default>false</default>
+                <label>Asia North</label>
+            </value>
+            <value>
+                <fullName>Asia South</fullName>
+                <default>false</default>
+                <label>Asia South</label>
+            </value>
+            <value>
+                <fullName>EMEA Dach</fullName>
+                <default>false</default>
+                <label>EMEA Dach</label>
+            </value>
+            <value>
+                <fullName>EMEA North</fullName>
+                <default>false</default>
+                <label>EMEA North</label>
+            </value>
+            <value>
+                <fullName>EMEA South</fullName>
+                <default>false</default>
+                <label>EMEA South</label>
+            </value>
+            <value>
+                <fullName>US Central</fullName>
+                <default>false</default>
+                <label>US Central</label>
+            </value>
+            <value>
+                <fullName>US East</fullName>
+                <default>false</default>
+                <label>US East</label>
+            </value>
+            <value>
+                <fullName>US Federal</fullName>
+                <default>false</default>
+                <label>US PubSec</label>
+            </value>
+            <value>
+                <fullName>US Northeast</fullName>
+                <default>false</default>
+                <label>US Northeast</label>
+            </value>
+            <value>
+                <fullName>US Southeast</fullName>
+                <default>false</default>
+                <label>US Southeast</label>
+            </value>
+            <value>
+                <fullName>US West</fullName>
+                <default>false</default>
+                <label>US West</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

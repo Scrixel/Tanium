@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Partner</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunity Partner Snapshots</relationshipLabel>
+    <relationshipName>Opportunity_Partner_Snapshots</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

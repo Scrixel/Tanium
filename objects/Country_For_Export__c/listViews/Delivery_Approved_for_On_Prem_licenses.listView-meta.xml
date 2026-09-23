@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Approved_for_On_Prem_licenses</fullName>
+    <columns>NAME</columns>
+    <columns>Country_Code__c</columns>
+    <columns>Country_Restrictions__c</columns>
+    <columns>Business_Allowed__c</columns>
+    <columns>Partner_Permitted__c</columns>
+    <columns>License_Approved__c</columns>
+    <columns>Business_Travel_Approved__c</columns>
+    <columns>Deal_Desk_Approval_Required__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>License_Approved__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Delivery Approved for On-Prem licenses</label>
+</ListView>

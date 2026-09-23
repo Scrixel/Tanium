@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_cannot_be_less_than_Start_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>ESO_Actual_Reported_for_Duty_Date__c &gt; ESO_Est_End_Date__c</errorConditionFormula>
+    <errorMessage>Reported for Duty Date cannot be greater than Contract End Date</errorMessage>
+</ValidationRule>

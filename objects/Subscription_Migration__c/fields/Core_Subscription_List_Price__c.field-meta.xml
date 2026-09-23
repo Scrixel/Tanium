@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Subscription_List_Price__c</fullName>
+    <description>Core Subscription List Price</description>
+    <label>Core Subscription List Price</label>
+    <summarizedField>Module_Migration__c.Allocation_List_Price__c</summarizedField>
+    <summaryFilterItems>
+        <field>Module_Migration__c.AEM_Product_Group__c</field>
+        <operation>equals</operation>
+        <value>Core Subscription</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Module_Migration__c.Subscription_Migration__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deliverables_Requested_2__c</fullName>
+    <description>Requirement was to switch &quot;Deliverables Requested&quot; from multi select to picklist. Stake holder Roy Shuster wanted to preserve and be able to view historical data in reports. This new field was created with the same label. Older field removed from Page Layout
+Case: https://tanium.lightning.force.com/lightning/r/Case/5000e00001kKyR8AAK/view</description>
+    <inlineHelpText>Preliminary Business Value Analysis - Teaser; can be turned around quickly without customer input
+Full Business Case (ROI Model) - Will require customer collaboration to complete
+Other - Please specify in the Other Deliverables Requested</inlineHelpText>
+    <label>Deliverables Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preliminary Business Value Analysis</fullName>
+                <default>false</default>
+                <label>Preliminary Business Value Analysis</label>
+            </value>
+            <value>
+                <fullName>Full Business Case (ROI Model)</fullName>
+                <default>false</default>
+                <label>Full Business Case (ROI Model)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

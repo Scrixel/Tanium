@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Reseller_Company_Name__c</fullName>
+    <description>[INC0144925] Being used in Webinfinity integration. Distributor submitted the OppReg on behalf of this Reseller.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Distributor submitted the OppReg on behalf of this Reseller</inlineHelpText>
+    <label>Reseller Company Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

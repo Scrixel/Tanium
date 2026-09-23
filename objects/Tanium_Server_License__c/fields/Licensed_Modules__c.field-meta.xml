@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licensed_Modules__c</fullName>
+    <description>Modules that are licensed against the server deployment record.</description>
+    <inlineHelpText>Modules that are licensed against the server deployment record.</inlineHelpText>
+    <label>Licensed Modules</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

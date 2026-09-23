@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Fields_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Optional - way to make all fields required.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Optional - way to make all fields required.</inlineHelpText>
+    <label>All Fields Required</label>
+    <type>Checkbox</type>
+</CustomField>

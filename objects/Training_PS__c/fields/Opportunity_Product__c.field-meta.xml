@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Replace existing Product Lookup(Product) field to create a direct relationship to the product that created the record.</description>
+    <label>Opportunity Product</label>
+    <referenceTo>OpportunityLineItem</referenceTo>
+    <relationshipLabel>Training &amp; PS</relationshipLabel>
+    <relationshipName>Training_PS</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

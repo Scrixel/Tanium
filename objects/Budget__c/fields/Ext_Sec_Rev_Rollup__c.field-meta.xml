@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ext_Sec_Rev_Rollup__c</fullName>
+    <label>Ext Sec Rev Rollup</label>
+    <summarizedField>Budget_Line_Item__c.Sec_Review_Required_NUm__c</summarizedField>
+    <summaryForeignKey>Budget_Line_Item__c.Budget__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Recursion_Control__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Turns off Recursion Control for TriggerHandler</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Turns off Recursion Control for TriggerHandler</inlineHelpText>
+    <label>Disable Recursion Control</label>
+    <type>Checkbox</type>
+</CustomField>

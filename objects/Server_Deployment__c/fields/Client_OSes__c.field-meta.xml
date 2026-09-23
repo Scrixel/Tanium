@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_OSes__c</fullName>
+    <description>2014 | JR:  This field is deprecated
+
+Because the target application server can have clients reporting in from multiple operating systems, this field is deprecated and replaced by the new Client Object which allows a TAM to create a separate entry for each managed OS reporting to a server.
+
+AP 1/20/2023: Removing the help text directing users to the related object. Jira SS-2405.</description>
+    <inlineHelpText>Client&apos;s OS&apos;es deployed.</inlineHelpText>
+    <label>Client OSes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Windows</fullName>
+                <default>false</default>
+                <label>Windows</label>
+            </value>
+            <value>
+                <fullName>Mac</fullName>
+                <default>false</default>
+                <label>Mac</label>
+            </value>
+            <value>
+                <fullName>Red Hat</fullName>
+                <default>false</default>
+                <label>Red Hat</label>
+            </value>
+            <value>
+                <fullName>Debian/Ubuntu</fullName>
+                <default>false</default>
+                <label>Debian/Ubuntu</label>
+            </value>
+            <value>
+                <fullName>SUSE</fullName>
+                <default>false</default>
+                <label>SUSE</label>
+            </value>
+            <value>
+                <fullName>Solaris</fullName>
+                <default>false</default>
+                <label>Solaris</label>
+            </value>
+            <value>
+                <fullName>AIX</fullName>
+                <default>false</default>
+                <label>AIX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Companion_KPI</name>
+        <label>Assign Companion KPI</label>
+        <locationX>842</locationX>
+        <locationY>583</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Companion_Sales_Plan_KPI__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Companion_KPI.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Rate_Preview</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Rate_Preview</name>
+        <label>Update Rate Preview</label>
+        <locationX>842</locationX>
+        <locationY>383</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Rate_Preview__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_RatePreview</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_the_KPI_Name</name>
+        <label>Update the KPI Name</label>
+        <locationX>388</locationX>
+        <locationY>384</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.KPI_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_KPIName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Match_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_MatchName</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Companion_KPI_empty</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Companion_KPI_empty</name>
+        <label>Companion KPI empty?</label>
+        <locationX>535</locationX>
+        <locationY>386</locationY>
+        <defaultConnector>
+            <targetReference>Update_Rate_Preview</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Companion_KPI_IsEmpty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Companion_Sales_Plan_KPI__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Companion_KPI</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Companion_KPI_returned</name>
+        <label>Companion KPI returned?</label>
+        <locationX>694</locationX>
+        <locationY>585</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Companion_KPI_Returned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Companion_KPI</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Companion_KPI</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Performs updates on the Sales Plan KPI object before the record has been inserted to the database
+
+6/28/23: Added Entry Criteria for NOT({!$Permission.DisableFlows})</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_CompanionKPIType</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT({!$Record.KPI_Type__c}) = &quot;OTV&quot;, &quot;Quota&quot;, &quot;OTV&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>Concatenates three of the Sales Plan KPI fields to create the KPI name</description>
+        <name>formula_KPIName</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Fiscal_Year__c}) + &quot; - &quot; + TEXT({!$Record.KPI_Label__c}) + &quot; - &quot; + TEXT({!$Record.KPI_Type__c})</expression>
+    </formulas>
+    <formulas>
+        <description>Concatenation of a number of fields to be used in matching rule</description>
+        <name>formula_MatchName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Sales_Plan__c} + TEXT({!$Record.Fiscal_Year__c}) + TEXT({!$Record.KPI_Label__c}) +  TEXT({!$Record.KPI_Type__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_RatePreview</name>
+        <dataType>Number</dataType>
+        <expression>IF(TEXT({!$Record.KPI_Type__c}) = &quot;OTV&quot;, ({!$Record.Amount__c}/{!$Record.Companion_Sales_Plan_KPI__r.Amount__c})*100, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Sales Plan KPI - Before Insert - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales Plan KPI - Before Insert - Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Companion_KPI</name>
+        <label>Get Companion KPI</label>
+        <locationX>545</locationX>
+        <locationY>583</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Companion_KPI_returned</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Sales_Plan__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Sales_Plan__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>KPI_Label__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.KPI_Label__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>KPI_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>formula_CompanionKPIType</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Sales_Plan_KPI__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>262</locationX>
+        <locationY>93</locationY>
+        <connector>
+            <targetReference>Update_the_KPI_Name</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Sales_Plan_KPI__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

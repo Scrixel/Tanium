@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignActive</name>
+        <label>Assign Active</label>
+        <locationX>471</locationX>
+        <locationY>343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.IsActive</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>This decision branch can be used if updates are needed on a new record</description>
+        <name>New_Record</name>
+        <label>New Record?</label>
+        <locationX>677</locationX>
+        <locationY>338</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_New_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolean_IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignActive</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>SS-13076: Remove dependencies from Full Circle Insights managed package (FCI).
+Migrated from Campaign - Before Insert - Fast Field Updates</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>boolean_IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>IF (ISNEW(), TRUE, FALSE)</expression>
+    </formulas>
+    <formulas>
+        <description>Generates a new name for the campaign based on field values within the campaign record. As new values are added to picklists like the Campaign Sub Source field, this formula would need to be updated</description>
+        <name>formula_CampaignNameGenerator</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(LEFT(CASE(Text({!$Record.Campaign_Sub_Source__c}),
+&quot;Appointment Setting&quot;, &quot;APT&quot;,
+&quot;Partner Enablement&quot;, &quot;PE&quot;,
+&quot;Partner System&quot;, &quot;PSYS&quot;,
+&quot;Tanium-Hosted Event&quot;, &quot;THE&quot;,
+&quot;Partner-Hosted Event&quot;, &quot;PHE&quot;,
+&quot;3rd Party Event&quot;,&quot;3RD&quot;,
+&quot;Demand Creation Advertising&quot;,&quot;DCA&quot;,
+&quot;Direct Mail&quot;,&quot;DM&quot;,
+&quot;Email&quot;,&quot;EM&quot;,
+&quot;Outbound (Sales)&quot;,&quot;OB-S&quot;,
+&quot;Outbound (Sales) Cyber Hygiene&quot;,&quot;OB-SCH&quot;,
+&quot;Outbound (Sales) Risk&amp;Compliance&quot;,&quot;OB-SRC&quot;,
+&quot;Outbound (SDR)&quot;,&quot;OB-SDR&quot;,
+&quot;Outbound (SDR) Cyber Hygiene&quot;,&quot;OB-SDRCH&quot;,
+&quot;Outbound (SDR) Risk&amp;Compliance&quot;,&quot;OB-SDRRC&quot;,
+&quot;Owned Media - Contact&quot;,&quot;OMC&quot;,
+&quot;Reputation Advertising&quot;,&quot;RA&quot;,
+&quot;System&quot;,&quot;SYS&quot;,
+&quot;Website&quot;,&quot;WEB&quot;,
+&quot;Webinar&quot;, &quot;WBR&quot;,
+&quot;Membership&quot;,&quot;MEM&quot;,
+&quot;NULL&quot;)&amp; &quot;-&quot; &amp;
+
+CASE(TEXT({!$Record.Global_Campaign__c}),
+&quot;Global&quot;,&quot;01-GBL-&quot;,
+&quot;Global Partner Development&quot;, &quot;07-GBL-PARDEV-&quot;,
+&quot;Global Partner Sales&quot;, &quot;07-GBL-PARSAL-&quot;,
+&quot;&quot;) &amp;
+IF(TEXT({!$Record.Global_Campaign__c}) != &quot;N/A&quot;, &quot;&quot;,
+CASE(TEXT({!$Record.Geo__c}),
+&quot;APJ&quot;,&quot;06-&quot;,
+&quot;APJ_APAC&quot;,&quot;12-&quot;,
+&quot;APJ_Japan&quot;,&quot;13-&quot;,
+&quot;EMEA&quot;,&quot;05-&quot;,
+&quot;Global Sales&quot;,&quot;08-&quot;,
+&quot;Global Sales HA&quot;,&quot;09-&quot;,
+&quot;LATAM&quot;,&quot;14-&quot;,
+&quot;Partner&quot;,&quot;10-&quot;,
+&quot;US and Canada&quot;,&quot;02-&quot;,
+&quot;USPS Federal&quot;,&quot;03-&quot;,
+&quot;USPS SLED and PS Canada&quot;,&quot;04-&quot;,
+&quot;US-UK MM and Commercial&quot;,&quot;11-&quot;,
+&quot;NULL-&quot;)&amp; 
+
+CASE(Text({!$Record.Region2__c}),
+&quot;APJ&quot;, &quot;APJ-&quot;,
+&quot;APJ_APAC&quot;, &quot;APJ-APAC-&quot;,
+&quot;APJ_APAC HA&quot;, &quot;APJ-APAC-HA-&quot;,
+&quot;APJ_Japan&quot;,&quot;APJ-JPN-&quot;,
+&quot;APJ_Japan HA&quot;, &quot;APJ-JPN-HA-&quot;,
+&quot;APJ HA&quot;, &quot;APJHA-&quot;,
+&quot;EMEA&quot;, &quot;EMEA-&quot;,
+&quot;EMEA_Central Europe&quot;,&quot;EMEA-CEN-&quot;,
+&quot;EMEA_Northern Europe&quot;,&quot;EMEA-N-&quot;,
+&quot;EMEA_Southern Europe&quot;,&quot;EMEA-S-&quot;,
+&quot;EMEA HA&quot;,&quot;EMEA-HA-&quot;,
+&quot;Global Sales&quot;, &quot;GBL-SAL-&quot;,
+&quot;Global Sales HA&quot;,&quot;GBL-SALHA-&quot;,
+&quot;Partner&quot;, &quot;PAR-&quot;,
+&quot;Partner_EMEA&quot;, &quot;PAR-EMEA-&quot;,
+&quot;Partner_Global MSP&quot;, &quot;PAR-GBLMSP-&quot;,
+&quot;Partner_GSI&quot;, &quot;PAR-GSI-&quot;,
+&quot;Partner_LATAM&quot;, &quot;PAR-LATAM-&quot;,
+&quot;Partner_MSP&quot;, &quot;PAR-MSP-&quot;,
+&quot;Partner_US and Canada&quot;, &quot;PAR-USCAN-&quot;,
+&quot;Partner_US and Canada_Maj-Ent&quot;, &quot;PAR-USCANMAJ-&quot;,
+&quot;Partner_US and Canada_MM-Comm&quot;, &quot;PAR-USCANMM-&quot;,
+&quot;Partner_US Federal and Sled&quot;, &quot;PAR-USFEDSLED-&quot;,
+&quot;Partner HA&quot;, &quot;PAR-HA-&quot;,
+&quot;PS Canada&quot;, &quot;PS-CAN-&quot;,
+&quot;UK_MM and Commercial&quot;, &quot;UK-MM-&quot;,
+&quot;Under 1K Account Records&quot;, &quot;UND-1KACCT-&quot;,
+&quot;US_Commercial&quot;, &quot;US-COM-&quot;,
+&quot;US_Mid-Market&quot;, &quot;US-MID-&quot;,
+&quot;US_Northeast&quot;, &quot;US-NE-&quot;,
+&quot;US_Southeast&quot;, &quot;US-SE-&quot;,
+&quot;US_West&quot;, &quot;US-W-&quot;,
+&quot;US and Canada&quot;, &quot;US-CAN-&quot;,
+&quot;US and Canada HA&quot;, &quot;US-CANHA-&quot;,
+&quot;US Federal&quot;, &quot;US-FED-&quot;,
+&quot;USPS Federal HA&quot;, &quot;US-FEDHA-&quot;,
+&quot;USPS SLED and PS Canada HA&quot;, &quot;US-CANSLEDHA-&quot;,
+&quot;US SLED&quot;, &quot;US-SLED-&quot;,
+&quot;US SLED HA&quot;, &quot;US-SLEDHA-&quot;,
+&quot;US-UK MM and Commercial&quot;, &quot;US-UKMM-&quot;,
+&quot;US-UK MM and Commercial HA&quot;, &quot;US-UKMMHA-&quot;,
+&quot;NULL-&quot;))&amp;
+
+&quot;FY&quot;&amp;&quot;&quot;&amp; RIGHT(IF( MONTH({!$Record.StartDate})&gt;=2, TEXT(Year({!$Record.StartDate})+1),TEXT(Year({!$Record.StartDate})) ),2) &amp; &quot;-&quot; &amp;
+
+Text(DAY( {!$Record.StartDate} ))&amp; &quot;-&quot; &amp;
+CASE( MONTH( {!$Record.StartDate} ) , 1, &quot;JAN&quot;, 2, &quot;FEB&quot;, 3, &quot;MAR&quot;, 4, &quot;APR&quot;, 5, &quot;MAY&quot;, 6, &quot;JUN&quot;, 7, &quot;JUL&quot;, 8, &quot;AUG&quot;, 9, &quot;SEP&quot;, 10, &quot;OCT&quot;, 11, &quot;NOV&quot;, &quot;DEC&quot;)&amp; &quot;-&quot; &amp;
+
+Text({!$Record.Campaign_Sub_Type__c})&amp; &quot;-&quot; &amp;
+
+CASE(Text
+({!$Record.Campaign_Source__c}),
+&quot;Marketing&quot;,&quot;M&quot;,
+&quot;Marketing OB&quot;,&quot;MOB&quot;,
+&quot;Partner - Direct&quot;,&quot;PD&quot;,
+&quot;Partner - Indirect&quot;,&quot;PI&quot;,
+&quot;Sales&quot;,&quot;S&quot;,
+&quot;SDR&quot;,&quot;SDR&quot;,
+&quot;NULL&quot;)&amp; &quot;-&quot; &amp;
+
+{!$Record.Campaign_Type_Detail__c}, 80),&quot; &quot;,&quot;-&quot;)</expression>
+    </formulas>
+    <interviewLabel>Campaign - Before Save - Fast Field Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign - Before Save - Fast Field Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>559</locationX>
+        <locationY>52</locationY>
+        <connector>
+            <targetReference>New_Record</targetReference>
+        </connector>
+        <filterFormula>NOT({!$Permission.DisableFlows})</filterFormula>
+        <object>Campaign</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>coll_CampaignMemberStatus</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>CampaignMemberStatus</objectType>
+    </variables>
+    <variables>
+        <name>int_RecordCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>record_CampaignMemberStatus</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>CampaignMemberStatus</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support_Model__c</fullName>
+    <description>SS-10016 - New Field to support automation to set Support Model on Accounts based on Account Segment.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Support Model</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Field TAM</fullName>
+                <default>true</default>
+                <label>Field TAM</label>
+            </value>
+            <value>
+                <fullName>Field TAM (Japan Bypass Triage)</fullName>
+                <default>false</default>
+                <label>Field TAM (Japan Bypass Triage)</label>
+            </value>
+            <value>
+                <fullName>Field TAM (Korea Bypass Triage)</fullName>
+                <default>false</default>
+                <label>Field TAM (Korea Bypass Triage)</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>Hybrid (Japan Bypass)</fullName>
+                <default>false</default>
+                <label>Hybrid (Japan Bypass)</label>
+            </value>
+            <value>
+                <fullName>Hybrid - Pubsec</fullName>
+                <default>false</default>
+                <label>Hybrid - Pubsec</label>
+            </value>
+            <value>
+                <fullName>Hybrid - South Korea</fullName>
+                <default>false</default>
+                <label>Hybrid - South Korea</label>
+            </value>
+            <value>
+                <fullName>Partner Supported (SC)</fullName>
+                <default>false</default>
+                <label>Partner Supported (SC)</label>
+            </value>
+            <value>
+                <fullName>Partner Supported (SC Japan Bypass)</fullName>
+                <default>false</default>
+                <label>Partner Supported (SC Japan Bypass)</label>
+            </value>
+            <value>
+                <fullName>Partner Supported - South Korea</fullName>
+                <default>false</default>
+                <label>Partner Supported - South Korea</label>
+            </value>
+            <value>
+                <fullName>SC-Exempt</fullName>
+                <default>false</default>
+                <label>SC-Exempt</label>
+            </value>
+            <value>
+                <fullName>SC-Exempt (Japan Bypass Triage)</fullName>
+                <default>false</default>
+                <label>SC-Exempt (Japan Bypass Triage)</label>
+            </value>
+            <value>
+                <fullName>SC-Exempt (Korea Bypass Triage)</fullName>
+                <default>false</default>
+                <label>SC-Exempt (Korea Bypass Triage)</label>
+            </value>
+            <value>
+                <fullName>Support Center</fullName>
+                <default>false</default>
+                <label>Support Center</label>
+            </value>
+            <value>
+                <fullName>Support Center (Japan Bypass)</fullName>
+                <default>false</default>
+                <label>Support Center (Japan Bypass)</label>
+            </value>
+            <value>
+                <fullName>Support Center (Poland)</fullName>
+                <default>false</default>
+                <label>Support Center (Poland)</label>
+            </value>
+            <value>
+                <fullName>Support Center - Pubsec</fullName>
+                <default>false</default>
+                <label>Support Center - Pubsec</label>
+            </value>
+            <value>
+                <fullName>Support Center - South Korea</fullName>
+                <default>false</default>
+                <label>Support Center - South Korea</label>
+            </value>
+            <value>
+                <fullName>Support Center Special Restrictions</fullName>
+                <default>false</default>
+                <label>Support Center Special Restrictions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

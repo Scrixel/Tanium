@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialty_Group__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Support Specialty Group is an umbrella group that contains individual SME teams.</description>
+    <label>Specialty Group</label>
+    <referenceTo>TAM_Team__c</referenceTo>
+    <relationshipLabel>TAM Teams</relationshipLabel>
+    <relationshipName>TAM_Teams</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

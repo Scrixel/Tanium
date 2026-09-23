@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make_Hostname_as_a_required_field</fullName>
+    <active>false</active>
+    <description>If Tanium Platform Version is not &quot;7.4.6+&quot;, then make Hostnames a required field
+If Tanium Infrastructure Required is not &quot;Yes – Tanium as a Service&quot; then make Hostname a required field</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Tanium_Infrastructure__c, &apos;Yes – Tanium as a Service&apos;)),
+NOT(ISPICKVAL(License_Version_6_5_or_7_x__c, &apos;7.4.6+&apos;)),
+ISBLANK(Server_Names__c))</errorConditionFormula>
+    <errorMessage>If Tanium Platform Version is not &quot;7.4.6+&quot; (OR)
+If Tanium Infrastructure Required is not &quot;Yes - Tanium as a Service&quot;, Please enter a value in the Hostnames field</errorMessage>
+</ValidationRule>

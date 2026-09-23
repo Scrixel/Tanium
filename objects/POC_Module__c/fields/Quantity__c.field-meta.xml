@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity__c</fullName>
+    <description>If Screen Sharing is true, this is the Screen Sharing Number of Operators, else its the Number of POC Endpoints.</description>
+    <externalId>false</externalId>
+    <formula>IF( Module_Name__c =&quot;Screen Sharing&quot;, POC_Request__r.Screen_Sharing_Number_of_Operators__c, POC_Request__r.Quantity__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Screen Sharing is true, this is the Screen Sharing Number of Operators, else its the Number of POC Endpoints.</inlineHelpText>
+    <label>Quantity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

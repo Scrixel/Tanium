@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Sales_Next_Step</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Sales Next Step</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a07/e?CF00N600000032cE5={!Opportunity.Name}&amp;CF00N600000032cE5_lkid={!Opportunity.Id}&amp; CF00N600000032cEA_lkid={!Opportunity.OwnerId}&amp;CF00N600000032cEA={!Opportunity.OwnerFullName}&amp;RecordType=01260000000cVnK&amp;retURL={!Opportunity.Id}&amp;saveURL={!Opportunity.Id}</url>
+</WebLink>

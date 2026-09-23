@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_and_Agree_to_NDA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>By checking this box, Partner Prospect agrees that he/she has read Tanium’s NDA and agrees to the stated terms.</description>
+    <label>NDA</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

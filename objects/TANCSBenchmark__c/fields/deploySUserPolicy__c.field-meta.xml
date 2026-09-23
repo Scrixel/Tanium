@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>deploySUserPolicy__c</fullName>
+    <description>DEFINITION: A workshop and policy / flowchart output that determines how new users are validated and which Platform roles they are assigned
+
+IMPORTANCE: Demonstrable control over the Platform. Clarity. Risk management</description>
+    <externalId>false</externalId>
+    <label>deploySUserPolicy</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

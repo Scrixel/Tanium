@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7S_Event__c</fullName>
+    <label>7S Event</label>
+    <referenceTo>X7S_Event__c</referenceTo>
+    <relationshipLabel>7S Event Speakers</relationshipLabel>
+    <relationshipName>X7S_Event_Speakers</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

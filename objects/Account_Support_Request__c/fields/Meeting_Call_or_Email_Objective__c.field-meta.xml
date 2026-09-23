@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Call_or_Email_Objective__c</fullName>
+    <description>List top 2 – 3 meeting objectives. Be as specific, include any deadlines.
+Renamed from Meeting/Call Objective → Goal of this meeting as part of SS-13320.</description>
+    <inlineHelpText>List top 2 – 3 meeting objectives. Be as specific, include any deadlines.</inlineHelpText>
+    <label>Goal of this meeting</label>
+    <length>5000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Rights__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>this will be filled out by Channel ops to track if Demo Rights have been granted.</description>
+    <inlineHelpText>This will be filled out by Channel ops to track if Demo Rights have been granted.</inlineHelpText>
+    <label>Demo Rights</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Server_Device_Type__c</fullName>
+    <description>2014-10-14 | JR
+2020-08-26 Case 54755 Sophie Xu requested label and help text change</description>
+    <inlineHelpText>Indicate whether the application server is installed to a physical or virtual device, for license key purpose.</inlineHelpText>
+    <label>Infrastructure-License Key Purpose</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On-Prem</fullName>
+                <default>false</default>
+                <label>On-Prem</label>
+            </value>
+            <value>
+                <fullName>Tanium Cloud for U.S. Government</fullName>
+                <default>false</default>
+                <label>Tanium Cloud for U.S. Government</label>
+            </value>
+            <value>
+                <fullName>Tanium as a Service</fullName>
+                <default>false</default>
+                <label>Tanium Cloud</label>
+            </value>
+            <value>
+                <fullName>? object:null ?</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>? object:null ?</label>
+            </value>
+            <value>
+                <fullName>Appliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Appliance</label>
+            </value>
+            <value>
+                <fullName>Chronical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chronical</label>
+            </value>
+            <value>
+                <fullName>Chronicle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chronicle</label>
+            </value>
+            <value>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cloud</label>
+            </value>
+            <value>
+                <fullName>Customer  - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer - Physical</label>
+            </value>
+            <value>
+                <fullName>Customer - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer - Physical</label>
+            </value>
+            <value>
+                <fullName>Customer - Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer - Virtual</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Provided</label>
+            </value>
+            <value>
+                <fullName>Customer Provided</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Provided</label>
+            </value>
+            <value>
+                <fullName>Customer Provided - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Provided - Physical</label>
+            </value>
+            <value>
+                <fullName>Customer Provided - Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Provided - Virtual</label>
+            </value>
+            <value>
+                <fullName>Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Physical</label>
+            </value>
+            <value>
+                <fullName>Tanium - Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Cloud</label>
+            </value>
+            <value>
+                <fullName>Tanium - Cloud Appliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Cloud Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium - Physical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Physical</label>
+            </value>
+            <value>
+                <fullName>Tanium - Physical Appliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Physical Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium - Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Virtual</label>
+            </value>
+            <value>
+                <fullName>Tanium - Virtual Appliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Virtual Appliance</label>
+            </value>
+            <value>
+                <fullName>Tanium - Virtual Appliance (OVA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tanium - Virtual Appliance (OVA)</label>
+            </value>
+            <value>
+                <fullName>Virtual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Virtual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

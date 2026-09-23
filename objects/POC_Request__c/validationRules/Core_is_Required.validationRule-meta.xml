@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_is_Required</fullName>
+    <active>true</active>
+    <description>As part of the Licensing Project, Core is required.</description>
+    <errorConditionFormula>AND(OR(ISNEW(),
+ISCLONE()),
+Core__c = False,
+Core_Plus__c = False,
+Core_Standard__c = False,
+ISPICKVAL(Account__r.Type,&apos;Prospect&apos;))</errorConditionFormula>
+    <errorDisplayField>Core__c</errorDisplayField>
+    <errorMessage>Core platform is required for all licenses, please verify all appropriate modules which need to be included on the POC license are selected”, and can only proceed once “Core” is checked.</errorMessage>
+</ValidationRule>

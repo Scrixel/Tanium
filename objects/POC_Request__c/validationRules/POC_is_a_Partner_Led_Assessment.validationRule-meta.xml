@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POC_is_a_Partner_Led_Assessment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+Is_this_a_Partner_led_assessment__c = TRUE,
+ISBLANK( Related_Partner_Account__c ) 
+
+)</errorConditionFormula>
+    <errorDisplayField>Related_Partner_Account__c</errorDisplayField>
+    <errorMessage>Related Partner Account is required for Partner Led assessment.</errorMessage>
+</ValidationRule>

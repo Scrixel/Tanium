@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Outcome__c</fullName>
+    <description>SS-11088: Deprecated.</description>
+    <inlineHelpText>Select the measurable value that Tanium will drive to help the customer achieve their desired Business Objectives and solve a pain point. NOTE: Hover over selection to see full text</inlineHelpText>
+    <label>DEPRECATED - Customer Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Objective__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accelerate threat response, investigation, and remediation at scale</fullName>
+                <default>false</default>
+                <label>Accelerate threat response, investigation, and remediation at scale</label>
+            </value>
+            <value>
+                <fullName>Accurate and real-time CVE management reports</fullName>
+                <default>false</default>
+                <label>Accurate and real-time CVE management reports</label>
+            </value>
+            <value>
+                <fullName>Accurate real-time Software Inventory Usage (SIU)</fullName>
+                <default>false</default>
+                <label>Accurate real-time Software Inventory Usage (SIU)</label>
+            </value>
+            <value>
+                <fullName>Achieve Patch efficacy in the 90th+ percentile to meet SLA or other compliance requirements</fullName>
+                <default>false</default>
+                <label>Achieve Patch efficacy in the 90th+ percentile to meet SLA or other compliance requirements</label>
+            </value>
+            <value>
+                <fullName>All PII and sensitive data is found and monitored</fullName>
+                <default>false</default>
+                <label>All PII and sensitive data is found and monitored</label>
+            </value>
+            <value>
+                <fullName>Analyze both direct control and indirect control when evaluating the potential movement of an endpoint, user or group</fullName>
+                <default>false</default>
+                <label>Analyze both direct control and indirect control when evaluating the potential movement of an endpoint, user or group</label>
+            </value>
+            <value>
+                <fullName>Answer any question about an endpoints current or historical state on demand in real-time</fullName>
+                <default>false</default>
+                <label>Answer any question about an endpoints current or historical state on demand in real-time</label>
+            </value>
+            <value>
+                <fullName>Apply and enforce a unified policy configuration across all endpoints</fullName>
+                <default>false</default>
+                <label>Apply and enforce a unified policy configuration across all endpoints</label>
+            </value>
+            <value>
+                <fullName>Assign impact ratings to users/groups/endpoints to easily prioritize the endpoints and user accounts pose cyber risk</fullName>
+                <default>false</default>
+                <label>Assign impact ratings to users/groups/endpoints to easily prioritize the endpoints and user accounts pose cyber risk</label>
+            </value>
+            <value>
+                <fullName>Automate endpoint management tasks such as patching and software deployment</fullName>
+                <default>false</default>
+                <label>Automate endpoint management tasks such as patching and software deployment</label>
+            </value>
+            <value>
+                <fullName>Automate manual tasks at real-time speed and scale.</fullName>
+                <default>false</default>
+                <label>Automate manual tasks at real-time speed and scale.</label>
+            </value>
+            <value>
+                <fullName>Complete inventory of managed and unmanaged endpoints</fullName>
+                <default>false</default>
+                <label>Complete inventory of managed and unmanaged endpoints</label>
+            </value>
+            <value>
+                <fullName>Comply with relevant regulatory requirements related to incident response</fullName>
+                <default>false</default>
+                <label>Comply with relevant regulatory requirements related to incident response</label>
+            </value>
+            <value>
+                <fullName>Create custom solutions leveraging platform extensibility.</fullName>
+                <default>false</default>
+                <label>Create custom solutions leveraging platform extensibility.</label>
+            </value>
+            <value>
+                <fullName>CVEs are remediated in minutes instead of days or weeks</fullName>
+                <default>false</default>
+                <label>CVEs are remediated in minutes instead of days or weeks</label>
+            </value>
+            <value>
+                <fullName>Detailed inventory of certificates with expire and cryptographic data</fullName>
+                <default>false</default>
+                <label>Detailed inventory of certificates with expire and cryptographic data</label>
+            </value>
+            <value>
+                <fullName>Discover and reduce lateral movement paths</fullName>
+                <default>false</default>
+                <label>Discover and reduce lateral movement paths</label>
+            </value>
+            <value>
+                <fullName>Enrich external systems with accurate highly extensible real-time data.</fullName>
+                <default>false</default>
+                <label>Enrich external systems with accurate highly extensible real-time data.</label>
+            </value>
+            <value>
+                <fullName>Establish and Enforce a standardized patching policy</fullName>
+                <default>false</default>
+                <label>Establish and Enforce a standardized patching policy</label>
+            </value>
+            <value>
+                <fullName>Establish an enterprise-wide, automated scheduled 3rd party software update methodology</fullName>
+                <default>false</default>
+                <label>Establish an enterprise-wide, automated scheduled 3rd party software update methodology</label>
+            </value>
+            <value>
+                <fullName>Exploits and vulnerabilities are managed in accordance with regulatory compliance frameworks</fullName>
+                <default>false</default>
+                <label>Exploits and vulnerabilities are managed in accordance with regulatory compliance frameworks</label>
+            </value>
+            <value>
+                <fullName>Improve collaboration across teams with a integrated IT and Sec Ops platform.</fullName>
+                <default>false</default>
+                <label>Improve collaboration across teams with a integrated IT and Sec Ops platform.</label>
+            </value>
+            <value>
+                <fullName>Improve delivery on IT&apos;s SLAs/SLOs to the business</fullName>
+                <default>false</default>
+                <label>Improve delivery on IT&apos;s SLAs/SLOs to the business</label>
+            </value>
+            <value>
+                <fullName>Improve efficiency by migrating to Tanium Cloud.</fullName>
+                <default>false</default>
+                <label>Improve efficiency by migrating to Tanium Cloud.</label>
+            </value>
+            <value>
+                <fullName>Improve remote employees productivity while using endpoints and applications</fullName>
+                <default>false</default>
+                <label>Improve remote employees productivity while using endpoints and applications</label>
+            </value>
+            <value>
+                <fullName>Increase employee satisfaction and retention by self-resolving technical issues</fullName>
+                <default>false</default>
+                <label>Increase employee satisfaction and retention by self-resolving technical issues</label>
+            </value>
+            <value>
+                <fullName>Increase visibility into performance issues and resources usage</fullName>
+                <default>false</default>
+                <label>Increase visibility into performance issues and resources usage</label>
+            </value>
+            <value>
+                <fullName>Instantaneous alerts and/or detailed reporting of privileged access anomalies</fullName>
+                <default>false</default>
+                <label>Instantaneous alerts and/or detailed reporting of privileged access anomalies</label>
+            </value>
+            <value>
+                <fullName>IT and Sec Ops tools consolidation.</fullName>
+                <default>false</default>
+                <label>IT and Sec Ops tools consolidation.</label>
+            </value>
+            <value>
+                <fullName>Keep endpoints up to date with a highly efficient and scalable patching solution capable of attaining high levels of patching efficacy.</fullName>
+                <default>false</default>
+                <label>Keep endpoints up to date with a highly efficient and scalable patching solution capable of attaining high levels of patching efficacy.</label>
+            </value>
+            <value>
+                <fullName>Meet internal and external compliance requirements, pass audits, and avoid fines.</fullName>
+                <default>false</default>
+                <label>Meet internal and external compliance requirements, pass audits, and avoid fines.</label>
+            </value>
+            <value>
+                <fullName>Mitigated costs and fines associated with data breaches</fullName>
+                <default>false</default>
+                <label>Mitigated costs and fines associated with data breaches</label>
+            </value>
+            <value>
+                <fullName>Mitigate Software Supply Chain Vulnerabilities</fullName>
+                <default>false</default>
+                <label>Mitigate Software Supply Chain Vulnerabilities</label>
+            </value>
+            <value>
+                <fullName>Mitigation of regulatory fines</fullName>
+                <default>false</default>
+                <label>Mitigation of regulatory fines</label>
+            </value>
+            <value>
+                <fullName>More favorable Cyberinsurance premiums and policies</fullName>
+                <default>false</default>
+                <label>More favorable Cyberinsurance premiums and policies</label>
+            </value>
+            <value>
+                <fullName>Other (Details Below)</fullName>
+                <default>false</default>
+                <label>Other (Details Below)</label>
+            </value>
+            <value>
+                <fullName>Prioritize cyber hygiene and posture improvements</fullName>
+                <default>false</default>
+                <label>Prioritize cyber hygiene and posture improvements</label>
+            </value>
+            <value>
+                <fullName>Provide end users the capability to initiate the installation of patches</fullName>
+                <default>false</default>
+                <label>Provide end users the capability to initiate the installation of patches</label>
+            </value>
+            <value>
+                <fullName>Provide users with a self-service portal to allow end-users to initiate the installation, update, or removal of 3rd party software</fullName>
+                <default>false</default>
+                <label>Provide users with a self-service portal to allow end-users to initiate the installation, update, or removal of 3rd party software</label>
+            </value>
+            <value>
+                <fullName>Quickly and easily install software at scale by utilizing a pre-packaged gallery of hundreds of common enterprise applications.</fullName>
+                <default>false</default>
+                <label>Quickly and easily install software at scale by utilizing a pre-packaged gallery of hundreds of common enterprise applications.</label>
+            </value>
+            <value>
+                <fullName>Quickly provision devices wherever they may be to company standards</fullName>
+                <default>false</default>
+                <label>Quickly provision devices wherever they may be to company standards</label>
+            </value>
+            <value>
+                <fullName>Real time CVE and OS, app, log, and Win Reg change data fed to Automation and event management tools</fullName>
+                <default>false</default>
+                <label>Real time CVE and OS, app, log, and Win Reg change data fed to Automation and event management tools</label>
+            </value>
+            <value>
+                <fullName>Real-time endpoint and software inventory with accurate high fidelity details</fullName>
+                <default>false</default>
+                <label>Real-time endpoint and software inventory with accurate high fidelity details</label>
+            </value>
+            <value>
+                <fullName>Realtime visibility and prioritization of CVEs with remediation paths</fullName>
+                <default>false</default>
+                <label>Realtime visibility and prioritization of CVEs with remediation paths</label>
+            </value>
+            <value>
+                <fullName>Reduce mean time to remediation/resolution</fullName>
+                <default>false</default>
+                <label>Reduce mean time to remediation/resolution</label>
+            </value>
+            <value>
+                <fullName>Reduce security risk with real-time visibility into cyber hygiene and posture</fullName>
+                <default>false</default>
+                <label>Reduce security risk with real-time visibility into cyber hygiene and posture</label>
+            </value>
+            <value>
+                <fullName>Reduce time to risk mitigation with real-time visiblity and control.</fullName>
+                <default>false</default>
+                <label>Reduce time to risk mitigation with real-time visiblity and control.</label>
+            </value>
+            <value>
+                <fullName>Reduce unmanaged endpoint population</fullName>
+                <default>false</default>
+                <label>Reduce unmanaged endpoint population</label>
+            </value>
+            <value>
+                <fullName>Remediate vulnerabilities uncovered by vulnerability management process</fullName>
+                <default>false</default>
+                <label>Remediate vulnerabilities uncovered by vulnerability management process</label>
+            </value>
+            <value>
+                <fullName>Robust real-time views and reporting on state of entire environment (Windows, Mac, Linux, Containers).</fullName>
+                <default>false</default>
+                <label>Robust real-time views and reporting on state of entire environment (Windows, Mac, Linux, Containers).</label>
+            </value>
+            <value>
+                <fullName>Seamlessly integrate with existing security solutions and infrastructure</fullName>
+                <default>false</default>
+                <label>Seamlessly integrate with existing security solutions and infrastructure</label>
+            </value>
+            <value>
+                <fullName>Streamline investigation and analysis using a single platform</fullName>
+                <default>false</default>
+                <label>Streamline investigation and analysis using a single platform</label>
+            </value>
+            <value>
+                <fullName>Streamline processes and and optimize resource utilization to reduce overall cybersecurity expenses</fullName>
+                <default>false</default>
+                <label>Streamline processes and and optimize resource utilization to reduce overall cybersecurity expenses</label>
+            </value>
+            <value>
+                <fullName>Strengthen operational resilience and minimize downtime in the face of cybersecurity incidents</fullName>
+                <default>false</default>
+                <label>Strengthen operational resilience and minimize downtime in the face of cybersecurity incidents</label>
+            </value>
+            <value>
+                <fullName>Swift and comprehensive visibility and management of CVEs, digital certificates, and sensitive data during corporate restructuring &amp; M&amp;A.</fullName>
+                <default>false</default>
+                <label>Swift and comprehensive visibility and management of CVEs, digital certificates, and sensitive data during corporate restructuring &amp; M&amp;A.</label>
+            </value>
+            <value>
+                <fullName>The ability to image and re-image systems on domain or off, local or remote at speed and scale</fullName>
+                <default>false</default>
+                <label>The ability to image and re-image systems on domain or off, local or remote at speed and scale</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Accelerate threat response, investigation, and remediation at scale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <valueName>Accurate and real-time CVE management reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Maximize Value of IT Investments</controllingFieldValue>
+            <valueName>Accurate real-time Software Inventory Usage (SIU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Achieve Patch efficacy in the 90th+ percentile to meet SLA or other compliance requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>All PII and sensitive data is found and monitored</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Analyze both direct control and indirect control when evaluating the potential movement of an endpoint, user or group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Answer any question about an endpoints current or historical state on demand in real-time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Apply and enforce a unified policy configuration across all endpoints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Assign impact ratings to users/groups/endpoints to easily prioritize the endpoints and user accounts pose cyber risk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <valueName>Automate endpoint management tasks such as patching and software deployment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <valueName>Automate manual tasks at real-time speed and scale.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Complete inventory of managed and unmanaged endpoints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Comply with relevant regulatory requirements related to incident response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Create custom solutions leveraging platform extensibility.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>CVEs are remediated in minutes instead of days or weeks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <valueName>Detailed inventory of certificates with expire and cryptographic data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Discover and reduce lateral movement paths</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Enrich external systems with accurate highly extensible real-time data.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Establish and Enforce a standardized patching policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Establish an enterprise-wide, automated scheduled 3rd party software update methodology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Exploits and vulnerabilities are managed in accordance with regulatory compliance frameworks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Improve collaboration across teams with a integrated IT and Sec Ops platform.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Improve delivery on IT&apos;s SLAs/SLOs to the business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Improve efficiency by migrating to Tanium Cloud.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Improve remote employees productivity while using endpoints and applications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <valueName>Increase employee satisfaction and retention by self-resolving technical issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Maximize Value of IT Investments</controllingFieldValue>
+            <valueName>Increase visibility into performance issues and resources usage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Instantaneous alerts and/or detailed reporting of privileged access anomalies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>IT and Sec Ops tools consolidation.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Keep endpoints up to date with a highly efficient and scalable patching solution capable of attaining high levels of patching efficacy.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Meet internal and external compliance requirements, pass audits, and avoid fines.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Mitigated costs and fines associated with data breaches</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Mitigate Software Supply Chain Vulnerabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Mitigation of regulatory fines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <valueName>More favorable Cyberinsurance premiums and policies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Enable Business Growth</controllingFieldValue>
+            <controllingFieldValue>Enable Digital Innovation</controllingFieldValue>
+            <valueName>Other (Details Below)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Prioritize cyber hygiene and posture improvements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <valueName>Provide end users the capability to initiate the installation of patches</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <valueName>Provide users with a self-service portal to allow end-users to initiate the installation, update, or removal of 3rd party software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <valueName>Quickly and easily install software at scale by utilizing a pre-packaged gallery of hundreds of common enterprise applications.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Quickly provision devices wherever they may be to company standards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Maximize Value of IT Investments</controllingFieldValue>
+            <valueName>Real time CVE and OS, app, log, and Win Reg change data fed to Automation and event management tools</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Real-time endpoint and software inventory with accurate high fidelity details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <valueName>Realtime visibility and prioritization of CVEs with remediation paths</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Reduce mean time to remediation/resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Maximize Value of IT Investments</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Reduce security risk with real-time visibility into cyber hygiene and posture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Reduce time to risk mitigation with real-time visiblity and control.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Reduce unmanaged endpoint population</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Remediate vulnerabilities uncovered by vulnerability management process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Enable Data-driven Decision Making</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Robust real-time views and reporting on state of entire environment (Windows, Mac, Linux, Containers).</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Maximize Value of IT Investments</controllingFieldValue>
+            <valueName>Seamlessly integrate with existing security solutions and infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Streamline investigation and analysis using a single platform</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>Streamline processes and and optimize resource utilization to reduce overall cybersecurity expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <controllingFieldValue>Meet Compliance Requirements</controllingFieldValue>
+            <valueName>Strengthen operational resilience and minimize downtime in the face of cybersecurity incidents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <valueName>Swift and comprehensive visibility and management of CVEs, digital certificates, and sensitive data during corporate restructuring &amp; M&amp;A.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other (Details Below)</controllingFieldValue>
+            <controllingFieldValue>Decrease Cost</controllingFieldValue>
+            <controllingFieldValue>Decrease Risk</controllingFieldValue>
+            <controllingFieldValue>Improve Efficiency</controllingFieldValue>
+            <controllingFieldValue>Improve Employee Experience and Productivity</controllingFieldValue>
+            <controllingFieldValue>Improve Security</controllingFieldValue>
+            <valueName>The ability to image and re-image systems on domain or off, local or remote at speed and scale</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NFR_Modules_2__c</fullName>
+    <description>A temporary formula which will be used for data loading Account Entitlement records from NFRs</description>
+    <externalId>false</externalId>
+    <formula>&quot;Account__c,Source_NFR__c,Module__c,Type__c,Quantity_Purchased__c,Start_Date__c,End_Date__c&quot; &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Map&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gRO000004dWIjYAM,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Patch&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnyQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Performance&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnZQAU,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Provision&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnaQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Reveal&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnoQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;SBOM&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZncQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Screen Sharing&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gRO000004XT7NYAW,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Tanium Connector for Microsoft Intune&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0gRO00000AR6YLYA1,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR() &amp;
+IF(INCLUDES(Select_Tanium_Product__c, &apos;Threat Response&apos;), Account__c &amp; &quot;,&quot; &amp; Id &amp; &quot;,a0g7V00000qaZnjQAE,NFR,&quot; &amp; TEXT(Number_of_Endpoints__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Issued_Date__c) &amp; &quot;,&quot; &amp; TEXT(NFR_Expiration_Date__c),&quot;&quot;) &amp; BR()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NFR Modules 2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Overview__c</fullName>
+    <inlineHelpText>Brief high-level overview of the account, status of relationship, and progress/activity to date.</inlineHelpText>
+    <label>Account Engagement Overview</label>
+    <length>100000</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

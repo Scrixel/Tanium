@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7S_Shr_Custom_Field__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Custom field to relate to the field set</inlineHelpText>
+    <label>7S Shr Custom Field</label>
+    <referenceTo>X7S_Shr_Custom_Field__mdt</referenceTo>
+    <relationshipName>X7S_Shr_Custom_Field_Set_Items</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

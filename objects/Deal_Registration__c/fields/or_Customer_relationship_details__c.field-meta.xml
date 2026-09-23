@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>or_Customer_relationship_details__c</fullName>
+    <inlineHelpText>Portal Prompt: Describe main point of contact, projects being consulted on, meeting cadence with End Customer and influence position</inlineHelpText>
+    <label>Customer relationship details</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

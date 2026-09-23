@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology_Partner_Request_Compact_Layout</fullName>
+    <fields>Account__c</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Primary_Contact__c</fields>
+    <fields>Request_Type__c</fields>
+    <fields>Services_Partner__c</fields>
+    <label>Technology Partner Request Compact Layout</label>
+</CompactLayout>

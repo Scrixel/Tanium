@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>serviceSProcessIntegration__c</fullName>
+    <description>DEFINITION: How is Tanium embedded into documented business processes and controls
+
+IMPORTANCE: As above. Tanium needs to be embedded everywhere. We need to be at the centre of people&apos;s day to day activities and core processes</description>
+    <externalId>false</externalId>
+    <label>serviceSProcessIntegration</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

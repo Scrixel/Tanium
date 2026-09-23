@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Country_Restriction</fullName>
+    <active>true</active>
+    <description>Account has a restricted country. Cannot create Server Deployment</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    Account__r.Country_Exception_Approved__c = FALSE,
+    TEXT(Account__r.Type) = &apos;Prospect&apos;,
+    OR(
+        TEXT(Account__r.Country_Restrictions__c) = &apos;Restricted&apos;,
+        TEXT(Account__r.Country_Restrictions__c) = &apos;Embargo or DNS&apos;
+    ),
+    NOT($Permission.DisableValidationRules)
+)</errorConditionFormula>
+    <errorMessage>The Server Deployment Account currently has a selected country that is restricted.
+Please first submit a Restricted Country Exception ISR request at the account level. Once
+fully approved, the Server Deployment can be created.</errorMessage>
+</ValidationRule>

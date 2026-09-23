@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo_Churn_Account_Validation</fullName>
+    <active>true</active>
+    <description>This VR checks that the Promo code chosen is valid based on the picklist value on the Account.</description>
+    <errorConditionFormula>ISPICKVAL(Promotion__c , &quot;Benchmark Churn POC&quot;) &amp;&amp;
+NOT ISPICKVAL(Account__r.Churn_Buster_Promotion__c , &apos;Benchmark Churn POC&apos;)</errorConditionFormula>
+    <errorDisplayField>Promotion__c</errorDisplayField>
+    <errorMessage>This account is currently not eligible for the Benchmark Churn POC promo. Please reach out to Todd Brydon to qualify the account.</errorMessage>
+</ValidationRule>

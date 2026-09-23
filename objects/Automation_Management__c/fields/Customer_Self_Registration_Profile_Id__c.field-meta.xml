@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Self_Registration_Profile_Id__c</fullName>
+    <description>Store the id of the default profile for customer community self registration users. TAN-784</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Run this query to get the value: 
+select id, name from profile where name =&apos;Tanium Community Login Unknown&apos;</inlineHelpText>
+    <label>Customer Self Registration Profile Id</label>
+    <length>18</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

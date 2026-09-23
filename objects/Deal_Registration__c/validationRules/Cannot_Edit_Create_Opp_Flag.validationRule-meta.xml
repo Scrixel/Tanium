@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Create_Opp_Flag</fullName>
+    <active>true</active>
+    <description>Approvals are in progress, cannot unselect Create Opp Upon Approval</description>
+    <errorConditionFormula>AND(
+   TEXT(or_Opp_Reg_Approval_Flow_Status__c) = &apos;Approvals in progress&apos;,
+   ISCHANGED(or_Create_Opportunity_upon_Approval__c),
+   NOT(or_Create_Opportunity_upon_Approval__c),
+   ISBLANK(Mapped_Opportunity__c)
+)</errorConditionFormula>
+    <errorDisplayField>or_Create_Opportunity_upon_Approval__c</errorDisplayField>
+    <errorMessage>While approvals are in progress you cannot uncheck Create Opp Upon Approval</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Focus_Services_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created based upon on the request of Justin. For more information refer to INC0123864.</description>
+    <label>Deal Focus Services Requested</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

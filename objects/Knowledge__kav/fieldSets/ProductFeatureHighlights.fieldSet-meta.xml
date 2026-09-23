@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductFeatureHighlights</fullName>
+    <description>Show knowledge fields in the Tanium Community. Used by AC Communities installed package. Name must match the Knowledge Record Type to display correctly.</description>
+    <displayedFields>
+        <field>FirstPublishedDate</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Blog_Author__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Article_Body__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Product Feature Highlights</label>
+</FieldSet>

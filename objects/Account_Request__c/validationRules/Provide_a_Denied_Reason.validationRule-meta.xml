@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provide_a_Denied_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+ISPICKVAL(Request_Status__c, &quot;Denied&quot;),
+ISBLANK(Denied_Reason__c)
+)</errorConditionFormula>
+    <errorMessage>If request is Denied please provide a reason.</errorMessage>
+</ValidationRule>

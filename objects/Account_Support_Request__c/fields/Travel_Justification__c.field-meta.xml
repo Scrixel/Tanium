@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Justification__c</fullName>
+    <description>include a description of the alternatives you&apos;ve attempted to conduct this business remotely, perform the interaction via partners vs having a Tanium employee travel to a restricted country?</description>
+    <inlineHelpText>Include a description of the alternatives you&apos;ve attempted to conduct this business remotely, perform the interaction via partners vs having a Tanium employee travel to a restricted country?</inlineHelpText>
+    <label>Travel Justification</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

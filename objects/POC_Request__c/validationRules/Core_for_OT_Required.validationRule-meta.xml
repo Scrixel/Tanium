@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_for_OT_Required</fullName>
+    <active>true</active>
+    <description>SS-12270: Validation to ensure that if &quot;Exposure Management for Operational Tech” is selected, then “Core for Operational Technology” must also be selected.</description>
+    <errorConditionFormula>AND(
+    Exposure_Management_for_Operational_Tech__c = True,
+    Core_for_Operational_Technology__c = False,
+    Today() &lt;= End_Date__c ,
+    NOT($Permission.DisableValidationRules)
+)
+
+
+
+
+
+
+/* 04-15-26 SS-13060: Removed Start_Date from the criteria
+*/</errorConditionFormula>
+    <errorDisplayField>Core_for_Operational_Technology__c</errorDisplayField>
+    <errorMessage>If Exposure Management for Operational Tech is selected, then Core for Operational Technology must also be selected.</errorMessage>
+</ValidationRule>

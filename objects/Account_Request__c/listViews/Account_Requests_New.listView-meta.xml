@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Requests_New</fullName>
+    <columns>NAME</columns>
+    <columns>Level_3_Sub_Area__c</columns>
+    <columns>Level_4_Region__c</columns>
+    <columns>Total_Addressable_Seats__c</columns>
+    <columns>HQ_State__c</columns>
+    <columns>HQ_Country__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Request_Status__c</columns>
+    <columns>BOA_Assigned_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>equals</operation>
+        <value>New Request</value>
+    </filters>
+    <label>Account Requests - New</label>
+</ListView>

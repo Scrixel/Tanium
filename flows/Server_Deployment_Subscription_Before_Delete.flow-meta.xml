@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>12/08/25: SS-11540 Flow creation. Returns the allocated quantity from a Server Deployment Module to the associated Account Entitlement record</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_UpdatedAllocation</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Account_Entitlement__r.Quantity_Allocated__c} - {!$Record.Subscription_Quantity__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Server Deployment Subscription - Before Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Server Deployment Subscription - Before Delete</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Returns the allocated quantity to the Account Entitlement record</description>
+        <name>Update_Account_Entitlement</name>
+        <label>Update Account Entitlement</label>
+        <locationX>422</locationX>
+        <locationY>346</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account_Entitlement__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Quantity_Allocated__c</field>
+            <value>
+                <elementReference>formula_UpdatedAllocation</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account_Entitlements__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>296</locationX>
+        <locationY>37</locationY>
+        <connector>
+            <targetReference>Update_Account_Entitlement</targetReference>
+        </connector>
+        <object>Server_Deployment_Subscriptions__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

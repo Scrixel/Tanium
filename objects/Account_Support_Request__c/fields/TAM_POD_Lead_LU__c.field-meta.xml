@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAM_POD_Lead_LU__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>TAM POD Leader Look Up to User 
+Added only to be updated for ESO RT to add it to the ESO Email Alerts 
+Updated on ISR from Account by PB: ISR ESO RT POD Lead Field Autofill</description>
+    <label>TAM POD Leader</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Internal_Support_Requests7</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

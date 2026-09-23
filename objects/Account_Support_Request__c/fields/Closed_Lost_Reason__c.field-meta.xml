@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Reason__c</fullName>
+    <description>INC0189904 - E-Staff and Advisors want to track the reason we are losing deals after their intro meetings. It also helps us correct these issues by strengthening our internal operations and external messaging.</description>
+    <label>Closed Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Interested in Tanium Product</fullName>
+                <default>false</default>
+                <label>Not Interested in Tanium Product</label>
+            </value>
+            <value>
+                <fullName>Cost-Prohibitive / No Budget</fullName>
+                <default>false</default>
+                <label>Cost-Prohibitive / No Budget</label>
+            </value>
+            <value>
+                <fullName>Target Company Turnover</fullName>
+                <default>false</default>
+                <label>Target Company Turnover</label>
+            </value>
+            <value>
+                <fullName>Tanium Turnover</fullName>
+                <default>false</default>
+                <label>Tanium Turnover</label>
+            </value>
+            <value>
+                <fullName>No Interest After Intro Meeting (General)</fullName>
+                <default>false</default>
+                <label>No Interest After Intro Meeting (General)</label>
+            </value>
+            <value>
+                <fullName>Communication Stopped after Response</fullName>
+                <default>false</default>
+                <label>Communication Stopped after Response</label>
+            </value>
+            <value>
+                <fullName>No Response to Intro Request</fullName>
+                <default>false</default>
+                <label>No Response to Intro Request</label>
+            </value>
+            <value>
+                <fullName>Intro Request Unsuccessful</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Intro Request Unsuccessful</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

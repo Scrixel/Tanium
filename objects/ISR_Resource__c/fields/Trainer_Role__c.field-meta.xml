@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trainer_Role__c</fullName>
+    <label>Trainer Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Time Leading</fullName>
+                <default>false</default>
+                <label>1st Time Leading</label>
+            </value>
+            <value>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+                <label>Assistant</label>
+            </value>
+            <value>
+                <fullName>EDR</fullName>
+                <default>false</default>
+                <label>EDR</label>
+            </value>
+            <value>
+                <fullName>Observer</fullName>
+                <default>false</default>
+                <label>Observer</label>
+            </value>
+            <value>
+                <fullName>Shadow</fullName>
+                <default>false</default>
+                <label>Shadow</label>
+            </value>
+            <value>
+                <fullName>Solo Trainer</fullName>
+                <default>false</default>
+                <label>Solo Trainer</label>
+            </value>
+            <value>
+                <fullName>Veteran Trainer</fullName>
+                <default>false</default>
+                <label>Veteran Trainer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanity_URL__c</fullName>
+    <description>Only alphanumeric text. No special characters besides “-“
+INC0146084: Label Change</description>
+    <inlineHelpText>Vanity should typically be the customer name and will be in the link to the TaaS instance:
+[vanity].cloud.tanium.com, for example
+abccompany.cloud.tanium.com. Please enter only the vanity portion in this field.
+Do not include values with &quot;poc&quot; or &quot;test&quot; in the vanity
+Alphanumeric text ONLY. No special characters besides hyphen are allowed.</inlineHelpText>
+    <label>Vanity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>
