@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_Do_Not_Show_Dates__c</fullName>
-    <defaultValue>false</defaultValue>
-    <label>Lock in Dates &amp; Display on Quote</label>
-    <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

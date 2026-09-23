@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_Opportunity_Quote_Amount_Diff__c</fullName>
-    <formula>IF( ABS(Ruby__SellerTotalAmount__c - Opportunity.Amount)&lt;1 ,FALSE,TRUE)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Opportunity &amp; Quote Amount Diff</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

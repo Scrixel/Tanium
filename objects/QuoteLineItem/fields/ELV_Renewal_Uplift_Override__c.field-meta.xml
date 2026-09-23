@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_Renewal_Uplift_Override__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>When selected, preserves the user-entered native Renewal Uplift Percent on this Quote Line Item during automated uplift recalculation.</description>
-    <label>Renewal Uplift Override</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

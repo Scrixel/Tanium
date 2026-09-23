@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Ruby__Credit_Pool_Readonly_After_Activation</fullName>
-    <active>true</active>
-    <description>RIM-21956: Credit Pool is read-only once the order line is activated (keyed on PRIORVALUE so activation and draft edits pass).</description>
-    <errorConditionFormula>AND(ISCHANGED(Ruby__Credit_Pool__c), ISPICKVAL(PRIORVALUE(Ruby__Status__c), &apos;Activated&apos;))</errorConditionFormula>
-    <errorDisplayField>Ruby__Credit_Pool__c</errorDisplayField>
-    <errorMessage>Credit Pool cannot be changed after the order is activated.</errorMessage>
-</ValidationRule>

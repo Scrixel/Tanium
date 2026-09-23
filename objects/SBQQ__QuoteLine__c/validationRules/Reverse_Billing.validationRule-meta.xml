@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Reverse_Billing</fullName>
-    <active>false</active>
-    <description>Reverse billing is not possible with H/W &amp; Perp and SKU where End date is null</description>
-    <errorConditionFormula>AND( Reverse_Billing__c = TRUE , SBQQ__Product__r.Do_Not_Show_End_Date__c = TRUE)</errorConditionFormula>
-    <errorMessage>The Product selected has no End Date and Reverse billing will not work</errorMessage>
-</ValidationRule>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_CustomerQuote__c</fullName>
-    <formula>IF(ELV_Partner__c = NULL, TRUE, FALSE)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Customer Quote</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

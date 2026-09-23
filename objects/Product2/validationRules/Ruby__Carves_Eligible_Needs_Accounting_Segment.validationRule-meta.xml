@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Ruby__Carves_Eligible_Needs_Accounting_Segment</fullName>
-    <active>true</active>
-    <description>When “Eligible to include in Carves Allocation” is enabled, values are required in the following fields: Contract Liability Segment, Contract Revenue Segment, Carves Liability Segment and Carves Revenue Segment.</description>
-    <errorConditionFormula>Ruby__CarvesEligible__c = true  &amp;&amp;  ( Ruby__CarvesLiabilitySegment__c  = null || Ruby__CarvesRevenueSegment__c = null ||
-Ruby__ContractLiabilitySegment__c = null || Ruby__ContractRevenueSegment__c = null )</errorConditionFormula>
-    <errorMessage>When Eligible to include in Carves Allocation is selected, values are required in the following fields: Contract Liability Segment, Contract Revenue Segment, Carves Liability Segment and Carves Revenue Segment.</errorMessage>
-</ValidationRule>

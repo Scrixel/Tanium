@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Ruby__templace_cannot_be_primary</fullName>
-    <active>true</active>
-    <errorConditionFormula>Ruby__Is_Template_Quote__c = True &amp;&amp; Ruby__IsPrimaryQuote__c  = True</errorConditionFormula>
-    <errorDisplayField>Ruby__Is_Template_Quote__c</errorDisplayField>
-    <errorMessage>A template quote cannot be used as a primary quote</errorMessage>
-</ValidationRule>

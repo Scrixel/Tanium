@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Ruby__Cannot_Activate_Order_With_Error_Message</fullName>
-    <active>true</active>
-    <errorConditionFormula>AND(NOT(ISNULL(Ruby__ErrorCount__c)), Ruby__ErrorCount__c &gt; 0, ISPICKVAL(PRIORVALUE(StatusCode),&apos;Draft&apos;), ISPICKVAL(StatusCode,&apos;Activated&apos;))</errorConditionFormula>
-    <errorMessage>There is at least one error message associated with the order.</errorMessage>
-</ValidationRule>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_PoT_Software__c</fullName>
-    <defaultValue>false</defaultValue>
-    <label>Percent of Total Software</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

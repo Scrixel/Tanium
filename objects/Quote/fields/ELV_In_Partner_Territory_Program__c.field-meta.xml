@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_In_Partner_Territory_Program__c</fullName>
-    <formula>IF(AND(ELV_Business_Motion_Oppty__c = &apos;MSP&apos;, NOT(ISBLANK(ELV_End_User_Account__c))), ELV_End_User_Account__r.In_Partner_Territory_Program__c, Opportunity.Account.In_Partner_Territory_Program__c)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>In Partner Territory Program</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

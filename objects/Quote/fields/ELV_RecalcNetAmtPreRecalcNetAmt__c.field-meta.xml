@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_RecalcNetAmtPreRecalcNetAmt__c</fullName>
-    <formula>Ruby__SellerTotalAmount__c = ELV_NetAmountpriortoMarch3ARRrecalc__c</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Recalc Net Amount = PreRecalc Net Amount</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

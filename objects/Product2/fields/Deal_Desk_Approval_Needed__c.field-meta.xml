@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Deal_Desk_Approval_Needed__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>Twin field on Quote Line. Used to distinguish if Deal Desk approval is needed on the specific product.</description>
-    <label>Deal Desk Approval Needed</label>
-    <trackHistory>true</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

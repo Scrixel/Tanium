@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Tanium_Partner_Discount_Compact_Layout</fullName>
-    <fields>Name</fields>
-    <fields>Partner_Level__c</fields>
-    <fields>Program_Bucket__c</fields>
-    <fields>Total_Discount__c</fields>
-    <label>Tanium Partner Discount Compact Layout</label>
-</CompactLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_Eligible_ESR_Count__c</fullName>
-    <formula>IF(AND(Ruby__ProductSKU__c &lt;&gt; &apos;TAN-ESR-DEPLMT-EE&apos;, Ruby__ProductSKU__c &lt;&gt; &apos;TAN-PREM-ESR-1W&apos;, ELV_Is_ESR_Product__c, Ruby__ActualQuantity__c &lt;&gt; 0), TRUE, FALSE)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Eligible ESR Count</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>

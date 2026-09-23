@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Quote_must_have_an_opportunity</fullName>
-    <active>true</active>
-    <errorConditionFormula>ISBLANK( SBQQ__Opportunity2__c) &amp;&amp; NOT($Permission.DisableValidationRules)</errorConditionFormula>
-    <errorMessage>Associate the Quote to an Opportunity.</errorMessage>
-</ValidationRule>

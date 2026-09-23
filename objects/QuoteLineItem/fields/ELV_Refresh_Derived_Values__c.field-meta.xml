@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>ELV_Refresh_Derived_Values__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>System-managed one-time request to recompute deterministic, system-owned quote line values.</description>
-    <label>Refresh Derived Values</label>
-    <trackHistory>false</trackHistory>
-    <type>Checkbox</type>
-</CustomField>
